@@ -176,7 +176,7 @@ export default function ProjectTable({
         <div className="flex flex-wrap items-center gap-3">
           {/* Search */}
           <div className="relative flex-1 min-w-[240px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-faint" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
             <input
               type="text"
               placeholder="Search companies..."
@@ -314,8 +314,8 @@ export default function ProjectTable({
             {filteredProjects.length === 0 ? (
               <tr>
                 <td colSpan={7} className="px-4 py-12 text-center">
-                  <p className="text-text-muted">No companies found</p>
-                  <p className="text-sm text-text-faint mt-1">Try adjusting your filters</p>
+                  <p className="text-text-secondary">No companies found</p>
+                  <p className="text-sm text-text-muted mt-1">Try adjusting your filters</p>
                 </td>
               </tr>
             ) : (
@@ -338,7 +338,7 @@ export default function ProjectTable({
                         <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
                           {project.name}
                         </span>
-                        <p className="text-xs text-text-faint mt-0.5 line-clamp-1 max-w-xs">
+                        <p className="text-xs text-text-muted mt-0.5 line-clamp-1 max-w-xs">
                           {project.tagline}
                         </p>
                       </Link>
@@ -403,7 +403,7 @@ export default function ProjectTable({
                     </td>
                     <td className="px-4 py-3">
                       {project.stage && (
-                        <span className="text-xs text-text-faint">
+                        <span className="text-xs text-text-muted">
                           {formatStage(project.stage)}
                         </span>
                       )}
@@ -419,7 +419,7 @@ export default function ProjectTable({
                     </td>
                     <td className="px-4 py-3 text-center">
                       {project.founded ? (
-                        <span className="text-xs tabular-nums text-text-faint">{project.founded}</span>
+                        <span className="text-xs tabular-nums text-text-muted">{project.founded}</span>
                       ) : (
                         <span className="text-xs text-text-faint">—</span>
                       )}

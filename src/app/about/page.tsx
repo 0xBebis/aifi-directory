@@ -15,7 +15,7 @@ export default function AboutPage() {
         </p>
 
         <div className="bg-surface border border-border rounded-lg p-6">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-4">
             Index Overview
           </h2>
           <div className="grid grid-cols-3 gap-6">
@@ -41,7 +41,7 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-3">
             How to Use
           </h2>
           <p className="text-text-secondary leading-relaxed">
@@ -56,7 +56,7 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-3">
             Submit a Company
           </h2>
           <p className="text-text-secondary leading-relaxed mb-4">

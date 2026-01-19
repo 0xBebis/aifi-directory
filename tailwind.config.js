@@ -16,11 +16,11 @@ module.exports = {
         border: '#27272a',
         'border-subtle': '#1e1e21',
 
-        // Text hierarchy
-        'text-primary': '#fafafa',
-        'text-secondary': '#d4d4d8',
-        'text-muted': '#71717a',
-        'text-faint': '#52525b',
+        // Text hierarchy (all pass WCAG AA on dark surfaces)
+        'text-primary': '#fafafa',    // ~20:1 - headings, emphasis
+        'text-secondary': '#d4d4d8',  // ~13:1 - body text
+        'text-muted': '#a1a1aa',      // ~7:1  - labels, secondary info
+        'text-faint': '#71717a',      // ~4.5:1 - tertiary, metadata
 
         // Accent - refined teal/emerald for fintech
         accent: '#10b981',

@@ -2,7 +2,7 @@ import { segments, layers } from '@/lib/data';
 import { STAGE_LABELS } from '@/types';
 
 export default function SubmitPage() {
-  const inputStyles = "w-full px-4 py-2.5 bg-surface-2 border border-border rounded-md text-sm text-text-primary placeholder:text-text-faint focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors";
+  const inputStyles = "w-full px-4 py-2.5 bg-surface-2 border border-border rounded-md text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors";
   const selectStyles = "w-full px-4 py-2.5 bg-surface-2 border border-border rounded-md text-sm text-text-secondary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors cursor-pointer";
   const labelStyles = "block text-sm font-medium text-text-secondary mb-2";
 
@@ -119,7 +119,7 @@ export default function SubmitPage() {
 
         <div>
           <label htmlFor="email" className={labelStyles}>
-            Your Email <span className="text-text-faint">(optional)</span>
+            Your Email <span className="text-text-muted">(optional)</span>
           </label>
           <input
             type="email"
@@ -128,7 +128,7 @@ export default function SubmitPage() {
             className={inputStyles}
             placeholder="you@example.com"
           />
-          <p className="text-xs text-text-faint mt-2">
+          <p className="text-xs text-text-muted mt-2">
             In case we have questions about your submission
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function SubmitPage() {
           Submit Company
         </button>
 
-        <p className="text-xs text-text-faint text-center">
+        <p className="text-xs text-text-muted text-center">
           Submissions are reviewed before being added to the directory.
         </p>
       </form>

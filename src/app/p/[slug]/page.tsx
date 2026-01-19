@@ -98,7 +98,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 pt-6 border-t border-border">
           {primarySegment && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
                 Segment
               </p>
               <p className="text-sm font-medium text-text-primary">
@@ -108,7 +108,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
           {primaryLayer && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
                 Layer
               </p>
               <p className="text-sm font-medium text-text-primary">
@@ -118,7 +118,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
           {project.stage && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
                 Stage
               </p>
               <p className="text-sm font-medium text-text-primary">
@@ -128,7 +128,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
           {project.funding && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
                 Funding
               </p>
               <p className="text-sm font-medium text-text-primary tabular-nums">
@@ -146,7 +146,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Description */}
           {project.description && (
             <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
                 About
               </h2>
               <p className="text-text-secondary leading-relaxed">
@@ -158,7 +158,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Team */}
           {project.team && project.team.length > 0 && (
             <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
                 Team
               </h2>
               <div className="grid grid-cols-2 gap-3">
@@ -181,7 +181,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="space-y-6">
           {/* Details */}
           <div className="bg-surface border border-border rounded-lg p-6">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
               Details
             </h2>
             <dl className="space-y-3">
@@ -217,7 +217,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Segments */}
           {allSegments.length > 0 && (
             <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
                 Market Segments
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -239,7 +239,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Layers */}
           {allLayers.length > 0 && (
             <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
                 Tech Stack Layers
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -263,7 +263,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       {/* Similar Companies */}
       {similarProjects.length > 0 && (
         <div className="mt-10 pt-10 border-t border-border">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-5">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-5">
             Similar Companies
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
@@ -279,7 +279,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
                     {p.name}
                   </p>
-                  <p className="text-xs text-text-faint mt-1 line-clamp-1">
+                  <p className="text-xs text-text-muted mt-1 line-clamp-1">
                     {p.tagline}
                   </p>
                   <div className="flex gap-2 mt-3">

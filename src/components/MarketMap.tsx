@@ -101,7 +101,7 @@ export default function MarketMap({
                   className={`text-2xs font-medium uppercase tracking-wider w-full px-1 py-2 rounded transition-colors ${
                     activeSegment === segment.slug
                       ? 'text-accent'
-                      : 'text-text-faint hover:text-text-muted'
+                      : 'text-text-muted hover:text-text-secondary'
                   }`}
                   title={segment.name}
                 >
@@ -127,7 +127,7 @@ export default function MarketMap({
                   className={`text-2xs font-medium uppercase tracking-wider text-right w-full py-2 rounded transition-colors ${
                     activeLayer === layer.slug
                       ? 'text-accent'
-                      : 'text-text-faint hover:text-text-muted'
+                      : 'text-text-muted hover:text-text-secondary'
                   }`}
                   title={layer.name}
                 >
@@ -160,11 +160,11 @@ export default function MarketMap({
                           : isExpanded || isActive
                             ? 'bg-accent text-white shadow-glow'
                             : tier === 1
-                              ? 'bg-surface-2 text-text-faint hover:bg-surface-3 hover:text-text-muted'
+                              ? 'bg-surface-2 text-text-muted hover:bg-surface-3 hover:text-text-secondary'
                               : tier === 2
-                                ? 'bg-surface-3 text-text-muted hover:bg-border hover:text-text-secondary'
+                                ? 'bg-surface-3 text-text-secondary hover:bg-border hover:text-text-primary'
                                 : tier === 3
-                                  ? 'bg-zinc-700/60 text-text-secondary hover:bg-zinc-600/60 hover:text-text-primary'
+                                  ? 'bg-zinc-700/60 text-text-primary hover:bg-zinc-600/60'
                                   : 'bg-zinc-600/70 text-text-primary hover:bg-zinc-500/70'
                         }`}
                       title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
