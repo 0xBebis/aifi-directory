@@ -10,6 +10,7 @@ import {
   ChevronDown,
   ExternalLink,
   ArrowUpDown,
+  X,
 } from 'lucide-react';
 import Fuse from 'fuse.js';
 
@@ -18,7 +19,7 @@ function Tooltip({ children, content }: { children: ReactNode; content: ReactNod
   return (
     <span className="relative group/tooltip inline-flex items-center">
       {children}
-      <span className="absolute left-full ml-1 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1 px-2 py-1.5 bg-surface-2 border border-border rounded shadow-lg text-xs whitespace-nowrap">
+      <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1.5 px-3 py-2 bg-surface-3 border border-border rounded-md shadow-medium text-xs whitespace-nowrap animate-fade-in">
         {content}
       </span>
     </span>
@@ -84,31 +85,26 @@ export default function ProjectTable({
   const filteredProjects = useMemo(() => {
     let result = projects;
 
-    // Search
     if (search) {
       result = fuse.search(search).map((r) => r.item);
     }
 
-    // Segment filter
     if (segmentFilter) {
       result = result.filter(
         (p) => p.segment === segmentFilter || p.segments?.includes(segmentFilter)
       );
     }
 
-    // Layer filter
     if (layerFilter) {
       result = result.filter(
         (p) => p.layer === layerFilter || p.layers?.includes(layerFilter)
       );
     }
 
-    // Stage filter
     if (stageFilter) {
       result = result.filter((p) => p.stage === stageFilter);
     }
 
-    // Sort
     result = [...result].sort((a, b) => {
       let comparison = 0;
 
@@ -154,12 +150,12 @@ export default function ProjectTable({
 
   const SortIcon = ({ column }: { column: SortKey }) => {
     if (sortKey !== column) {
-      return <ArrowUpDown className="w-3 h-3 opacity-30" />;
+      return <ArrowUpDown className="w-3 h-3 text-text-faint" />;
     }
     return sortDir === 'asc' ? (
-      <ChevronUp className="w-3 h-3" />
+      <ChevronUp className="w-3 h-3 text-accent" />
     ) : (
-      <ChevronDown className="w-3 h-3" />
+      <ChevronDown className="w-3 h-3 text-accent" />
     );
   };
 
@@ -171,184 +167,186 @@ export default function ProjectTable({
 
   const hasFilters = search || segmentFilter || layerFilter || stageFilter;
 
+  const selectStyles = "px-3 py-2 bg-surface-2 border border-border rounded-md text-sm text-text-secondary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors cursor-pointer hover:border-border";
+
   return (
-    <div className="bg-surface border border-border rounded-lg overflow-hidden">
+    <div className="bg-surface border border-border rounded-lg">
       {/* Toolbar */}
-      <div className="p-3 border-b border-border flex flex-wrap items-center gap-3">
-        {/* Search */}
-        <div className="relative flex-1 min-w-[200px]">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
-          <input
-            type="text"
-            placeholder="Search projects..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent"
-          />
-        </div>
+      <div className="p-4 border-b border-border">
+        <div className="flex flex-wrap items-center gap-3">
+          {/* Search */}
+          <div className="relative flex-1 min-w-[240px]">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-faint" />
+            <input
+              type="text"
+              placeholder="Search companies..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 bg-surface-2 border border-border rounded-md text-sm text-text-primary placeholder:text-text-faint focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors"
+            />
+          </div>
 
-        {/* Segment Filter */}
-        <select
-          value={segmentFilter || ''}
-          onChange={(e) => onFilterChange?.(e.target.value || null, layerFilter || null)}
-          className="px-3 py-1.5 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent"
-        >
-          <option value="">All Segments</option>
-          {segments.map((s) => (
-            <option key={s.slug} value={s.slug}>
-              {s.name}
-            </option>
-          ))}
-        </select>
-
-        {/* Layer Filter */}
-        <select
-          value={layerFilter || ''}
-          onChange={(e) => onFilterChange?.(segmentFilter || null, e.target.value || null)}
-          className="px-3 py-1.5 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent"
-        >
-          <option value="">All Layers</option>
-          {layers.map((l) => (
-            <option key={l.slug} value={l.slug}>
-              {l.name}
-            </option>
-          ))}
-        </select>
-
-        {/* Stage Filter */}
-        <select
-          value={stageFilter || ''}
-          onChange={(e) => setStageFilter(e.target.value || null)}
-          className="px-3 py-1.5 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent"
-        >
-          <option value="">All Stages</option>
-          {stages.map((s) => (
-            <option key={s} value={s}>
-              {STAGE_LABELS[s]}
-            </option>
-          ))}
-        </select>
-
-        {/* Clear */}
-        {hasFilters && (
-          <button
-            onClick={clearFilters}
-            className="px-3 py-1.5 text-sm text-text-muted hover:text-text-primary transition-colors"
+          {/* Filters */}
+          <select
+            value={segmentFilter || ''}
+            onChange={(e) => onFilterChange?.(e.target.value || null, layerFilter || null)}
+            className={selectStyles}
           >
-            Clear
-          </button>
-        )}
+            <option value="">All Segments</option>
+            {segments.map((s) => (
+              <option key={s.slug} value={s.slug}>
+                {s.name}
+              </option>
+            ))}
+          </select>
 
-        {/* Count */}
-        <span className="text-xs text-text-muted ml-auto">
-          {filteredProjects.length} of {projects.length}
-        </span>
+          <select
+            value={layerFilter || ''}
+            onChange={(e) => onFilterChange?.(segmentFilter || null, e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All Layers</option>
+            {layers.map((l) => (
+              <option key={l.slug} value={l.slug}>
+                {l.name}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={stageFilter || ''}
+            onChange={(e) => setStageFilter(e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All Stages</option>
+            {stages.map((s) => (
+              <option key={s} value={s}>
+                {STAGE_LABELS[s]}
+              </option>
+            ))}
+          </select>
+
+          {/* Clear & Count */}
+          <div className="flex items-center gap-3 ml-auto">
+            {hasFilters && (
+              <button
+                onClick={clearFilters}
+                className="flex items-center gap-1.5 px-3 py-2 text-sm text-text-muted hover:text-text-primary transition-colors"
+              >
+                <X className="w-3.5 h-3.5" />
+                Clear
+              </button>
+            )}
+            <span className="text-xs text-text-faint tabular-nums">
+              {filteredProjects.length} of {projects.length}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full">
           <thead>
-            <tr className="border-b border-border bg-background">
-              <th className="text-left p-3 font-medium">
+            <tr className="border-b border-border bg-surface-2/50">
+              <th className="text-left px-4 py-3">
                 <button
                   onClick={() => handleSort('name')}
-                  className="flex items-center gap-1 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Company
                   <SortIcon column="name" />
                 </button>
               </th>
-              <th className="text-left p-3 font-medium">
+              <th className="text-left px-4 py-3">
                 <button
                   onClick={() => handleSort('segment')}
-                  className="flex items-center gap-1 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Segment
                   <SortIcon column="segment" />
                 </button>
               </th>
-              <th className="text-left p-3 font-medium">
+              <th className="text-left px-4 py-3">
                 <button
                   onClick={() => handleSort('layer')}
-                  className="flex items-center gap-1 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Layer
                   <SortIcon column="layer" />
                 </button>
               </th>
-              <th className="text-left p-3 font-medium">
+              <th className="text-left px-4 py-3">
                 <button
                   onClick={() => handleSort('stage')}
-                  className="flex items-center gap-1 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Stage
                   <SortIcon column="stage" />
                 </button>
               </th>
-              <th className="text-right p-3 font-medium">
+              <th className="text-right px-4 py-3">
                 <button
                   onClick={() => handleSort('funding')}
-                  className="flex items-center gap-1 ml-auto hover:text-accent transition-colors"
+                  className="flex items-center gap-2 ml-auto text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Funding
                   <SortIcon column="funding" />
                 </button>
               </th>
-              <th className="text-center p-3 font-medium">
+              <th className="text-center px-4 py-3">
                 <button
                   onClick={() => handleSort('founded')}
-                  className="flex items-center gap-1 mx-auto hover:text-accent transition-colors"
+                  className="flex items-center gap-2 mx-auto text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
                 >
                   Year
                   <SortIcon column="founded" />
                 </button>
               </th>
-              <th className="text-center p-3 font-medium w-10">Link</th>
+              <th className="text-center px-4 py-3 w-12">
+                <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
+                  Link
+                </span>
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-border/50">
             {filteredProjects.length === 0 ? (
               <tr>
-                <td colSpan={7} className="p-8 text-center text-text-muted">
-                  No projects found
+                <td colSpan={7} className="px-4 py-12 text-center">
+                  <p className="text-text-muted">No companies found</p>
+                  <p className="text-sm text-text-faint mt-1">Try adjusting your filters</p>
                 </td>
               </tr>
             ) : (
               filteredProjects.map((project) => {
                 const segment = segmentMap[project.segment];
                 const layer = layerMap[project.layer];
-
-                // Get additional segments beyond the primary
                 const additionalSegments = project.segments?.filter(s => s !== project.segment) || [];
                 const additionalLayers = project.layers?.filter(l => l !== project.layer) || [];
 
                 return (
                   <tr
                     key={project.slug}
-                    className="border-b border-border hover:bg-surface-2/50 transition-colors"
+                    className="hover:bg-surface-2/30 transition-colors"
                   >
-                    <td className="p-3">
+                    <td className="px-4 py-3">
                       <Link
                         href={`/p/${project.slug}`}
-                        className="font-medium hover:text-accent transition-colors"
+                        className="group"
                       >
-                        {project.name}
+                        <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
+                          {project.name}
+                        </span>
+                        <p className="text-xs text-text-faint mt-0.5 line-clamp-1 max-w-xs">
+                          {project.tagline}
+                        </p>
                       </Link>
-                      <p className="text-xs text-text-muted truncate max-w-xs">
-                        {project.tagline}
-                      </p>
                     </td>
-                    <td className="p-3">
+                    <td className="px-4 py-3">
                       {segment && (
-                        <span className="inline-flex items-center gap-1">
-                          <span
-                            className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
-                            style={{
-                              backgroundColor: `${segment.color}20`,
-                              color: segment.color,
-                            }}
-                          >
+                        <span className="inline-flex items-center gap-1.5">
+                          <span className="text-xs text-text-muted">
                             {segment.name}
                           </span>
                           {additionalSegments.length > 0 && (
@@ -358,14 +356,7 @@ export default function ProjectTable({
                                   {additionalSegments.map(slug => {
                                     const s = segmentMap[slug];
                                     return s ? (
-                                      <span
-                                        key={slug}
-                                        className="px-2 py-0.5 rounded-full"
-                                        style={{
-                                          backgroundColor: `${s.color}20`,
-                                          color: s.color,
-                                        }}
-                                      >
+                                      <span key={slug} className="text-text-secondary">
                                         {s.name}
                                       </span>
                                     ) : null;
@@ -373,13 +364,7 @@ export default function ProjectTable({
                                 </>
                               }
                             >
-                              <span
-                                className="text-[10px] px-1.5 py-0.5 rounded-full cursor-help transition-colors"
-                                style={{
-                                  backgroundColor: `${segment.color}15`,
-                                  color: segment.color,
-                                }}
-                              >
+                              <span className="text-2xs px-1.5 py-0.5 rounded bg-surface-3 text-text-faint cursor-help">
                                 +{additionalSegments.length}
                               </span>
                             </Tooltip>
@@ -387,16 +372,10 @@ export default function ProjectTable({
                         </span>
                       )}
                     </td>
-                    <td className="p-3">
+                    <td className="px-4 py-3">
                       {layer && (
-                        <span className="inline-flex items-center gap-1">
-                          <span
-                            className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
-                            style={{
-                              backgroundColor: `${layer.color}20`,
-                              color: layer.color,
-                            }}
-                          >
+                        <span className="inline-flex items-center gap-1.5">
+                          <span className="text-xs text-text-muted">
                             {layer.name}
                           </span>
                           {additionalLayers.length > 0 && (
@@ -406,14 +385,7 @@ export default function ProjectTable({
                                   {additionalLayers.map(slug => {
                                     const l = layerMap[slug];
                                     return l ? (
-                                      <span
-                                        key={slug}
-                                        className="px-2 py-0.5 rounded-full"
-                                        style={{
-                                          backgroundColor: `${l.color}20`,
-                                          color: l.color,
-                                        }}
-                                      >
+                                      <span key={slug} className="text-text-secondary">
                                         {l.name}
                                       </span>
                                     ) : null;
@@ -421,13 +393,7 @@ export default function ProjectTable({
                                 </>
                               }
                             >
-                              <span
-                                className="text-[10px] px-1.5 py-0.5 rounded-full cursor-help transition-colors"
-                                style={{
-                                  backgroundColor: `${layer.color}15`,
-                                  color: layer.color,
-                                }}
-                              >
+                              <span className="text-2xs px-1.5 py-0.5 rounded bg-surface-3 text-text-faint cursor-help">
                                 +{additionalLayers.length}
                               </span>
                             </Tooltip>
@@ -435,38 +401,38 @@ export default function ProjectTable({
                         </span>
                       )}
                     </td>
-                    <td className="p-3">
+                    <td className="px-4 py-3">
                       {project.stage && (
-                        <span className="text-xs text-text-muted">
+                        <span className="text-xs text-text-faint">
                           {formatStage(project.stage)}
                         </span>
                       )}
                     </td>
-                    <td className="p-3 text-right">
+                    <td className="px-4 py-3 text-right">
                       {project.funding ? (
-                        <span className="text-xs font-mono">
+                        <span className="text-sm font-medium tabular-nums text-text-secondary">
                           {formatFunding(project.funding)}
                         </span>
                       ) : (
-                        <span className="text-xs text-text-muted">-</span>
+                        <span className="text-xs text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="px-4 py-3 text-center">
                       {project.founded ? (
-                        <span className="text-xs text-text-muted">{project.founded}</span>
+                        <span className="text-xs tabular-nums text-text-faint">{project.founded}</span>
                       ) : (
-                        <span className="text-xs text-text-muted">-</span>
+                        <span className="text-xs text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="px-4 py-3 text-center">
                       {project.website && (
                         <a
                           href={project.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-text-muted hover:text-accent transition-colors"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-md text-text-faint hover:text-accent hover:bg-accent/10 transition-colors"
                         >
-                          <ExternalLink className="w-3.5 h-3.5 inline" />
+                          <ExternalLink className="w-4 h-4" />
                         </a>
                       )}
                     </td>

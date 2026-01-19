@@ -58,12 +58,12 @@ export default function MarketMap({
   ), [segments, layers, projects]);
 
   return (
-    <div className="bg-surface border border-border rounded-lg overflow-hidden">
+    <div className="bg-surface border border-border rounded-lg">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-border flex items-center justify-between">
+      <div className="px-5 py-4 border-b border-border flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <h2 className="text-sm font-semibold">Market Map</h2>
-          <span className="text-xs text-text-muted">{projects.length} companies</span>
+          <h2 className="text-sm font-semibold text-text-primary">Market Map</h2>
+          <span className="text-xs text-text-faint">{projects.length} companies</span>
         </div>
         {expandedCell && (
           <button
@@ -71,20 +71,20 @@ export default function MarketMap({
               setExpandedCell(null);
               onCellClick?.(null, null);
             }}
-            className="text-xs text-text-muted hover:text-text-primary flex items-center gap-1"
+            className="text-xs text-text-muted hover:text-text-primary flex items-center gap-1.5 transition-colors"
           >
-            <X className="w-3 h-3" />
-            Clear
+            <X className="w-3.5 h-3.5" />
+            Clear selection
           </button>
         )}
       </div>
 
       {/* Map Grid */}
       <div className="overflow-x-auto">
-        <div className="min-w-[800px] p-4">
+        <div className="min-w-[800px] p-5">
           {/* Column Headers (Segments) */}
-          <div className="flex border-b border-border pb-2 mb-2">
-            <div className="w-24 shrink-0" />
+          <div className="flex mb-3">
+            <div className="w-28 shrink-0" />
             {segments.map((segment) => (
               <div
                 key={segment.slug}
@@ -98,10 +98,10 @@ export default function MarketMap({
                       onCellClick?.(segment.slug, null);
                     }
                   }}
-                  className={`text-[10px] font-medium w-full px-1 py-1 rounded transition-colors ${
+                  className={`text-2xs font-medium uppercase tracking-wider w-full px-1 py-2 rounded transition-colors ${
                     activeSegment === segment.slug
                       ? 'text-accent'
-                      : 'text-text-muted hover:text-text-primary'
+                      : 'text-text-faint hover:text-text-muted'
                   }`}
                   title={segment.name}
                 >
@@ -112,10 +112,10 @@ export default function MarketMap({
           </div>
 
           {/* Rows (Layers) */}
-          {layers.map((layer) => (
+          {layers.map((layer, layerIndex) => (
             <div key={layer.slug} className="flex items-center">
               {/* Row Header */}
-              <div className="w-24 shrink-0 pr-3 border-r border-border">
+              <div className="w-28 shrink-0 pr-4">
                 <button
                   onClick={() => {
                     if (activeLayer === layer.slug && !activeSegment) {
@@ -124,10 +124,10 @@ export default function MarketMap({
                       onCellClick?.(null, layer.slug);
                     }
                   }}
-                  className={`text-[10px] font-medium text-right w-full py-1 rounded transition-colors ${
+                  className={`text-2xs font-medium uppercase tracking-wider text-right w-full py-2 rounded transition-colors ${
                     activeLayer === layer.slug
                       ? 'text-accent'
-                      : 'text-text-muted hover:text-text-primary'
+                      : 'text-text-faint hover:text-text-muted'
                   }`}
                   title={layer.name}
                 >
@@ -146,26 +146,26 @@ export default function MarketMap({
                   (activeSegment === segment.slug && !activeLayer) ||
                   (activeLayer === layer.slug && !activeSegment);
 
-                // Calculate intensity tier (0-4) for stepped contrast
+                // Calculate intensity tier for stepped contrast
                 const tier = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 6 ? 3 : 4;
 
                 return (
-                  <div key={key} className="flex-1 px-0.5 py-0.5">
+                  <div key={key} className="flex-1 p-0.5">
                     <button
                       onClick={() => handleCellClick(segment.slug, layer.slug)}
                       disabled={count === 0}
-                      className={`w-full h-8 rounded-sm text-[11px] font-medium transition-all
+                      className={`w-full h-9 rounded text-xs font-medium transition-all duration-150
                         ${count === 0
-                          ? 'bg-white/[0.02] cursor-default'
+                          ? 'bg-surface-2/50 cursor-default'
                           : isExpanded || isActive
-                            ? 'bg-accent text-white ring-1 ring-accent'
+                            ? 'bg-accent text-white shadow-glow'
                             : tier === 1
-                              ? 'bg-white/[0.06] text-text-muted hover:bg-white/[0.1]'
+                              ? 'bg-surface-2 text-text-faint hover:bg-surface-3 hover:text-text-muted'
                               : tier === 2
-                                ? 'bg-white/[0.12] text-text-primary hover:bg-white/[0.16]'
+                                ? 'bg-surface-3 text-text-muted hover:bg-border hover:text-text-secondary'
                                 : tier === 3
-                                  ? 'bg-white/[0.20] text-text-primary hover:bg-white/[0.24]'
-                                  : 'bg-white/[0.30] text-white hover:bg-white/[0.35]'
+                                  ? 'bg-zinc-700/60 text-text-secondary hover:bg-zinc-600/60 hover:text-text-primary'
+                                  : 'bg-zinc-600/70 text-text-primary hover:bg-zinc-500/70'
                         }`}
                       title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
                     >
@@ -181,7 +181,7 @@ export default function MarketMap({
 
       {/* Expanded Cell Detail */}
       {expandedCell && (
-        <div className="border-t border-border p-4 bg-background">
+        <div className="border-t border-border p-5 bg-surface-2/50 animate-fade-in">
           {(() => {
             const [segSlug, laySlug] = expandedCell.split('-');
             const segment = segments.find(s => s.slug === segSlug);
@@ -190,22 +190,16 @@ export default function MarketMap({
 
             return (
               <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span
-                    className="text-xs px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: `${segment?.color}20`, color: segment?.color }}
-                  >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
                     {segment?.name}
                   </span>
-                  <span className="text-text-muted">×</span>
-                  <span
-                    className="text-xs px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: `${layer?.color}20`, color: layer?.color }}
-                  >
+                  <span className="text-text-faint">×</span>
+                  <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
                     {layer?.name}
                   </span>
-                  <span className="text-xs text-text-muted ml-auto">
-                    {cellProjects.length} project{cellProjects.length !== 1 ? 's' : ''}
+                  <span className="text-xs text-text-faint ml-auto">
+                    {cellProjects.length} {cellProjects.length === 1 ? 'company' : 'companies'}
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -213,7 +207,7 @@ export default function MarketMap({
                     <Link
                       key={project.slug}
                       href={`/p/${project.slug}`}
-                      className="text-xs px-2 py-1 bg-surface border border-border rounded hover:border-accent hover:text-accent transition-colors"
+                      className="text-sm px-3 py-1.5 bg-surface border border-border rounded-md text-text-secondary hover:border-accent hover:text-accent transition-colors"
                     >
                       {project.name}
                     </Link>

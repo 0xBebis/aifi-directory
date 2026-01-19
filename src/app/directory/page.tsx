@@ -20,17 +20,19 @@ export default function DirectoryPage() {
   };
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="max-w-6xl mx-auto px-6 py-8">
       {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold">AI + Finance Directory</h1>
-        <p className="text-text-muted text-sm mt-1">
-          {projects.length} companies building at the intersection of AI and Finance
+      <div className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-text-primary">
+          AI + Finance Directory
+        </h1>
+        <p className="text-text-muted mt-2">
+          {projects.length} companies building at the intersection of artificial intelligence and financial services.
         </p>
       </div>
 
       {/* Market Map */}
-      <div className="mb-6">
+      <div className="mb-8">
         <MarketMap
           projects={projects}
           segments={segments}

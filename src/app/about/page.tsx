@@ -3,55 +3,70 @@ import { projects, segments, layers } from '@/lib/data';
 
 export default function AboutPage() {
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold mb-6">About AIFI</h1>
+    <div className="max-w-2xl mx-auto px-6 py-12">
+      <h1 className="text-2xl font-semibold tracking-tight text-text-primary mb-8">
+        About AIFI
+      </h1>
 
-      <div className="space-y-6 text-text-muted">
-        <p className="text-lg">
+      <div className="space-y-8">
+        <p className="text-lg text-text-secondary leading-relaxed">
           AIFI (AI Finance Index) is a curated directory of companies building at the
           intersection of Artificial Intelligence and Finance.
         </p>
 
-        <div className="bg-surface border border-border rounded-lg p-5">
-          <h2 className="text-lg font-semibold text-text-primary mb-3">What We Track</h2>
-          <ul className="space-y-2">
-            <li>
-              <strong className="text-text-primary">{projects.length}</strong> companies indexed
-            </li>
-            <li>
-              <strong className="text-text-primary">{segments.length}</strong> market segments
-              <span className="text-xs ml-2">
-                (Trading, Lending, Insurance, Payments, Crypto, etc.)
-              </span>
-            </li>
-            <li>
-              <strong className="text-text-primary">{layers.length}</strong> technology layers
-              <span className="text-xs ml-2">
-                (Infrastructure to Application)
-              </span>
-            </li>
-          </ul>
+        <div className="bg-surface border border-border rounded-lg p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">
+            Index Overview
+          </h2>
+          <div className="grid grid-cols-3 gap-6">
+            <div>
+              <div className="text-2xl font-semibold text-text-primary">
+                {projects.length}
+              </div>
+              <div className="text-sm text-text-muted mt-1">Companies</div>
+            </div>
+            <div>
+              <div className="text-2xl font-semibold text-text-primary">
+                {segments.length}
+              </div>
+              <div className="text-sm text-text-muted mt-1">Segments</div>
+            </div>
+            <div>
+              <div className="text-2xl font-semibold text-text-primary">
+                {layers.length}
+              </div>
+              <div className="text-sm text-text-muted mt-1">Tech Layers</div>
+            </div>
+          </div>
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-text-primary mb-3">How to Use</h2>
-          <p>
-            The <Link href="/directory" className="text-accent hover:underline">Directory</Link> combines
-            a visual market map with a searchable, filterable table. Click any cell in the map to
-            filter the table, or use the dropdowns and search to find specific companies.
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">
+            How to Use
+          </h2>
+          <p className="text-text-secondary leading-relaxed">
+            The{' '}
+            <Link href="/directory" className="text-accent hover:underline">
+              Directory
+            </Link>{' '}
+            combines a visual market map with a searchable, filterable table. Click any cell
+            in the map to filter the table, or use the dropdowns and search to find specific
+            companies.
           </p>
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-text-primary mb-3">Submit a Company</h2>
-          <p className="mb-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-3">
+            Submit a Company
+          </h2>
+          <p className="text-text-secondary leading-relaxed mb-4">
             Know a company building AI + Finance products? Help us grow the directory.
           </p>
           <Link
             href="/submit"
-            className="inline-block px-4 py-2 bg-accent text-white rounded font-medium text-sm hover:bg-accent/90 transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent-muted transition-colors"
           >
-            Submit a Project
+            Submit a Company
           </Link>
         </div>
       </div>

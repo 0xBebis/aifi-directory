@@ -2,46 +2,61 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { projects } from '@/lib/data';
 
 export default function Nav() {
   const pathname = usePathname();
   const isDirectory = pathname === '/directory' || pathname?.startsWith('/p/');
 
   return (
-    <header className="border-b border-border bg-surface/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-lg font-bold text-accent">
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-center gap-2 group"
+          >
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <span className="text-accent font-bold text-sm">AI</span>
+            </div>
+            <span className="text-lg font-semibold tracking-tight text-text-primary">
               AIFI
+            </span>
+          </Link>
+
+          {/* Navigation */}
+          <nav className="flex items-center gap-1">
+            <Link
+              href="/directory"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isDirectory
+                  ? 'text-accent bg-accent/10'
+                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+              }`}
+            >
+              Directory
             </Link>
-            <nav className="flex items-center gap-1">
-              <Link
-                href="/directory"
-                className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                  isDirectory
-                    ? 'bg-accent/10 text-accent'
-                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-                }`}
-              >
-                Directory
-              </Link>
-              <Link
-                href="/about"
-                className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                  pathname === '/about'
-                    ? 'bg-accent/10 text-accent'
-                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-                }`}
-              >
-                About
-              </Link>
-            </nav>
-          </div>
-          <div className="text-xs text-text-muted">
-            {projects.length} projects indexed
-          </div>
+            <Link
+              href="/about"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                pathname === '/about'
+                  ? 'text-accent bg-accent/10'
+                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              href="/submit"
+              className={`ml-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
+                pathname === '/submit'
+                  ? 'text-accent border-accent/30 bg-accent/10'
+                  : 'text-text-muted border-border hover:text-text-primary hover:border-border hover:bg-surface-2'
+              }`}
+            >
+              Submit
+            </Link>
+          </nav>
         </div>
       </div>
     </header>

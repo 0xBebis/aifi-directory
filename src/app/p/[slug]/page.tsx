@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Globe, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Globe, ExternalLink, Twitter, Linkedin } from 'lucide-react';
 import {
   projects,
   getProject,
@@ -27,41 +27,45 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const primarySegment = getSegment(project.segment);
   const primaryLayer = getLayer(project.layer);
   const allLayers = project.layers?.map(getLayer).filter(Boolean) || [primaryLayer].filter(Boolean);
+  const allSegments = project.segments?.map(getSegment).filter(Boolean) || [primarySegment].filter(Boolean);
   const similarProjects = getSimilarProjects(project, 6);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-4xl mx-auto px-6 py-8">
       {/* Back Link */}
       <Link
         href="/directory"
-        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm"
+        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-8 text-sm"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Directory
       </Link>
 
-      {/* Header */}
+      {/* Header Card */}
       <div className="bg-surface border border-border rounded-lg p-6 mb-6">
         <div className="flex items-start gap-5">
-          <div className="w-16 h-16 rounded-lg bg-surface-2 flex items-center justify-center text-2xl font-bold text-text-muted shrink-0">
+          {/* Logo/Initial */}
+          <div className="w-14 h-14 rounded-lg bg-surface-2 border border-border flex items-center justify-center text-xl font-semibold text-text-muted shrink-0">
             {project.name.charAt(0)}
           </div>
-          <div className="flex-1 min-w-0">
-            <h1 className="text-2xl font-bold mb-1">{project.name}</h1>
-            <p className="text-text-muted">{project.tagline}</p>
 
-            {/* Links */}
+          <div className="flex-1 min-w-0">
+            <h1 className="text-2xl font-semibold tracking-tight text-text-primary">
+              {project.name}
+            </h1>
+            <p className="text-text-muted mt-1">{project.tagline}</p>
+
+            {/* Action Links */}
             <div className="flex flex-wrap gap-2 mt-4">
               {project.website && (
                 <a
                   href={project.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-2 rounded text-sm hover:bg-border transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent-muted transition-colors"
                 >
-                  <Globe className="w-3.5 h-3.5" />
-                  Website
-                  <ExternalLink className="w-3 h-3 opacity-50" />
+                  <Globe className="w-4 h-4" />
+                  Visit Website
                 </a>
               )}
               {project.twitter && (
@@ -69,10 +73,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   href={project.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-2 rounded text-sm hover:bg-border transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-md hover:bg-surface-3 hover:text-text-primary transition-colors"
                 >
+                  <Twitter className="w-4 h-4" />
                   Twitter
-                  <ExternalLink className="w-3 h-3 opacity-50" />
                 </a>
               )}
               {project.linkedin && (
@@ -80,88 +84,92 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   href={project.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-2 rounded text-sm hover:bg-border transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-md hover:bg-surface-3 hover:text-text-primary transition-colors"
                 >
+                  <Linkedin className="w-4 h-4" />
                   LinkedIn
-                  <ExternalLink className="w-3 h-3 opacity-50" />
                 </a>
               )}
             </div>
           </div>
         </div>
 
-        {/* Quick Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-border">
+        {/* Key Metrics */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 pt-6 border-t border-border">
           {primarySegment && (
             <div>
-              <p className="text-xs text-text-muted mb-1">Segment</p>
-              <span
-                className="inline-flex items-center gap-1.5 text-sm font-medium"
-                style={{ color: primarySegment.color }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: primarySegment.color }}
-                />
+              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+                Segment
+              </p>
+              <p className="text-sm font-medium text-text-primary">
                 {primarySegment.name}
-              </span>
+              </p>
             </div>
           )}
           {primaryLayer && (
             <div>
-              <p className="text-xs text-text-muted mb-1">Layer</p>
-              <span
-                className="inline-flex items-center gap-1.5 text-sm font-medium"
-                style={{ color: primaryLayer.color }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: primaryLayer.color }}
-                />
+              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+                Layer
+              </p>
+              <p className="text-sm font-medium text-text-primary">
                 {primaryLayer.name}
-              </span>
+              </p>
             </div>
           )}
           {project.stage && (
             <div>
-              <p className="text-xs text-text-muted mb-1">Stage</p>
-              <p className="text-sm font-medium">{formatStage(project.stage)}</p>
+              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+                Stage
+              </p>
+              <p className="text-sm font-medium text-text-primary">
+                {formatStage(project.stage)}
+              </p>
             </div>
           )}
           {project.funding && (
             <div>
-              <p className="text-xs text-text-muted mb-1">Funding</p>
-              <p className="text-sm font-medium">{formatFunding(project.funding)}</p>
+              <p className="text-xs font-medium uppercase tracking-wider text-text-faint mb-1">
+                Funding
+              </p>
+              <p className="text-sm font-medium text-text-primary tabular-nums">
+                {formatFunding(project.funding)}
+              </p>
             </div>
           )}
         </div>
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Content */}
-        <div className="md:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-6">
           {/* Description */}
           {project.description && (
-            <div className="bg-surface border border-border rounded-lg p-5">
-              <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+            <div className="bg-surface border border-border rounded-lg p-6">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
                 About
               </h2>
-              <p className="text-text-muted leading-relaxed">{project.description}</p>
+              <p className="text-text-secondary leading-relaxed">
+                {project.description}
+              </p>
             </div>
           )}
 
           {/* Team */}
           {project.team && project.team.length > 0 && (
-            <div className="bg-surface border border-border rounded-lg p-5">
-              <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+            <div className="bg-surface border border-border rounded-lg p-6">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
                 Team
               </h2>
               <div className="grid grid-cols-2 gap-3">
                 {project.team.map((member, i) => (
-                  <div key={i} className="bg-background rounded p-3">
-                    <p className="font-medium text-sm">{member.name}</p>
-                    <p className="text-xs text-text-muted">{member.role}</p>
+                  <div key={i} className="bg-surface-2 rounded-md p-4">
+                    <p className="font-medium text-sm text-text-primary">
+                      {member.name}
+                    </p>
+                    <p className="text-xs text-text-muted mt-0.5">
+                      {member.role}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -172,44 +180,66 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Sidebar */}
         <div className="space-y-6">
           {/* Details */}
-          <div className="bg-surface border border-border rounded-lg p-5">
-            <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+          <div className="bg-surface border border-border rounded-lg p-6">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
               Details
             </h2>
-            <dl className="space-y-2 text-sm">
+            <dl className="space-y-3">
               {project.founded && (
-                <div className="flex justify-between">
-                  <dt className="text-text-muted">Founded</dt>
-                  <dd>{project.founded}</dd>
+                <div className="flex justify-between items-center">
+                  <dt className="text-sm text-text-muted">Founded</dt>
+                  <dd className="text-sm text-text-primary tabular-nums">{project.founded}</dd>
                 </div>
               )}
               {project.hq_city && project.hq_country && (
-                <div className="flex justify-between">
-                  <dt className="text-text-muted">Location</dt>
-                  <dd>
+                <div className="flex justify-between items-center">
+                  <dt className="text-sm text-text-muted">Location</dt>
+                  <dd className="text-sm text-text-primary">
                     {project.hq_city}, {project.hq_country}
                   </dd>
                 </div>
               )}
               {project.stage && (
-                <div className="flex justify-between">
-                  <dt className="text-text-muted">Stage</dt>
-                  <dd>{formatStage(project.stage)}</dd>
+                <div className="flex justify-between items-center">
+                  <dt className="text-sm text-text-muted">Stage</dt>
+                  <dd className="text-sm text-text-primary">{formatStage(project.stage)}</dd>
                 </div>
               )}
               {project.funding && (
-                <div className="flex justify-between">
-                  <dt className="text-text-muted">Funding</dt>
-                  <dd>{formatFunding(project.funding)}</dd>
+                <div className="flex justify-between items-center">
+                  <dt className="text-sm text-text-muted">Funding</dt>
+                  <dd className="text-sm text-text-primary tabular-nums">{formatFunding(project.funding)}</dd>
                 </div>
               )}
             </dl>
           </div>
 
+          {/* Segments */}
+          {allSegments.length > 0 && (
+            <div className="bg-surface border border-border rounded-lg p-6">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
+                Market Segments
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {allSegments.map(
+                  (segment) =>
+                    segment && (
+                      <span
+                        key={segment.slug}
+                        className="text-xs px-3 py-1.5 rounded-md bg-surface-2 text-text-secondary"
+                      >
+                        {segment.name}
+                      </span>
+                    )
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Layers */}
           {allLayers.length > 0 && (
-            <div className="bg-surface border border-border rounded-lg p-5">
-              <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">
+            <div className="bg-surface border border-border rounded-lg p-6">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-4">
                 Tech Stack Layers
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -218,11 +248,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     layer && (
                       <span
                         key={layer.slug}
-                        className="text-xs px-2 py-1 rounded-full"
-                        style={{
-                          backgroundColor: `${layer.color}20`,
-                          color: layer.color,
-                        }}
+                        className="text-xs px-3 py-1.5 rounded-md bg-surface-2 text-text-secondary"
                       >
                         {layer.name}
                       </span>
@@ -234,13 +260,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Similar Projects */}
+      {/* Similar Companies */}
       {similarProjects.length > 0 && (
-        <div className="mt-8">
-          <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">
+        <div className="mt-10 pt-10 border-t border-border">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-5">
             Similar Companies
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {similarProjects.map((p) => {
               const seg = getSegment(p.segment);
               const lay = getLayer(p.layer);
@@ -248,29 +274,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={p.slug}
                   href={`/p/${p.slug}`}
-                  className="bg-surface border border-border rounded-lg p-4 hover:bg-surface-2 hover:border-border/60 transition-all"
+                  className="group bg-surface border border-border rounded-lg p-4 hover:border-accent/50 transition-colors"
                 >
-                  <p className="font-medium text-sm truncate">{p.name}</p>
-                  <div className="flex gap-2 mt-2">
+                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                    {p.name}
+                  </p>
+                  <p className="text-xs text-text-faint mt-1 line-clamp-1">
+                    {p.tagline}
+                  </p>
+                  <div className="flex gap-2 mt-3">
                     {seg && (
-                      <span
-                        className="text-[10px] px-1.5 py-0.5 rounded-full"
-                        style={{
-                          backgroundColor: `${seg.color}20`,
-                          color: seg.color,
-                        }}
-                      >
-                        {seg.name.split(' ')[0]}
+                      <span className="text-2xs px-2 py-1 rounded bg-surface-2 text-text-muted">
+                        {seg.name}
                       </span>
                     )}
                     {lay && (
-                      <span
-                        className="text-[10px] px-1.5 py-0.5 rounded-full"
-                        style={{
-                          backgroundColor: `${lay.color}20`,
-                          color: lay.color,
-                        }}
-                      >
+                      <span className="text-2xs px-2 py-1 rounded bg-surface-2 text-text-muted">
                         {lay.name}
                       </span>
                     )}

@@ -4,27 +4,117 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0a0a0b;
-  color: #fafafa;
+@layer base {
+  html {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-text-primary text-base;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-accent/30 text-text-primary;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent/50 ring-offset-2 ring-offset-background;
+  }
+
+  /* Remove default focus for mouse users */
+  :focus:not(:focus-visible) {
+    @apply outline-none ring-0;
+  }
+}
+
+@layer components {
+  /* Button base */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded transition-all duration-150;
+    @apply disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-muted active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply btn bg-surface-2 text-text-secondary border border-border hover:bg-surface-3 hover:text-text-primary active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-text-muted hover:bg-surface-2 hover:text-text-primary;
+  }
+
+  /* Input base */
+  .input {
+    @apply w-full px-3 py-2 bg-surface border border-border rounded text-sm text-text-primary placeholder:text-text-faint;
+    @apply transition-colors duration-150;
+    @apply hover:border-border focus:border-accent focus:ring-1 focus:ring-accent/30;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-surface border border-border rounded-lg overflow-hidden;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+}
+
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent;
+  }
+
+  /* Subtle border gradient */
+  .border-gradient {
+    border-image: linear-gradient(to right, transparent, theme('colors.border'), transparent) 1;
+  }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #141416;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2e;
-  border-radius: 4px;
+  background: #27272a;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3e;
+  background: #3f3f46;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a transparent;
 }
