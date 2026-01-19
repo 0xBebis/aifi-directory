@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   html {
@@ -33,6 +33,33 @@
 }
 
 @layer components {
+  /* Editorial Typography */
+  .headline-display {
+    @apply text-4xl sm:text-5xl font-extrabold tracking-tighter text-text-primary;
+    text-wrap: balance;
+  }
+
+  .headline-section {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight text-text-primary;
+    text-wrap: balance;
+  }
+
+  .headline-sub {
+    @apply text-xl font-semibold tracking-tight text-text-primary;
+  }
+
+  .body-editorial {
+    @apply text-base text-text-secondary leading-relaxed;
+  }
+
+  .label-refined {
+    @apply text-xs font-semibold uppercase tracking-widest text-text-muted;
+  }
+
+  .meta-text {
+    @apply text-sm text-text-muted tabular-nums;
+  }
+
   /* Button base */
   .btn {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded transition-all duration-150;
@@ -51,6 +78,12 @@
     @apply btn bg-transparent text-text-muted hover:bg-surface-2 hover:text-text-primary;
   }
 
+  /* Editorial button */
+  .btn-editorial {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-lg;
+    @apply transition-all duration-200 active:scale-[0.98];
+  }
+
   /* Input base */
   .input {
     @apply w-full px-3 py-2 bg-surface border border-border rounded text-sm text-text-primary placeholder:text-text-faint;
@@ -58,9 +91,23 @@
     @apply hover:border-border focus:border-accent focus:ring-1 focus:ring-accent/30;
   }
 
+  /* Editorial input */
+  .input-editorial {
+    @apply w-full px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg;
+    @apply text-base text-text-primary placeholder:text-text-faint;
+    @apply hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10;
+    @apply transition-all duration-200;
+  }
+
   /* Card */
   .card {
     @apply bg-surface border border-border rounded-lg overflow-hidden;
+  }
+
+  /* Editorial card */
+  .card-editorial {
+    @apply bg-surface border border-border rounded-xl overflow-hidden;
+    @apply transition-all duration-200;
   }
 
   /* Badge */
@@ -77,12 +124,24 @@
 
   /* Gradient text */
   .text-gradient {
-    @apply bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent to-teal-400 bg-clip-text text-transparent;
   }
 
   /* Subtle border gradient */
   .border-gradient {
     border-image: linear-gradient(to right, transparent, theme('colors.border'), transparent) 1;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

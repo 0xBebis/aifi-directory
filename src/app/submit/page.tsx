@@ -2,20 +2,25 @@ import { segments, layers } from '@/lib/data';
 import { STAGE_LABELS } from '@/types';
 
 export default function SubmitPage() {
-  const inputStyles = "w-full px-4 py-2.5 bg-surface-2 border border-border rounded-md text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors";
-  const selectStyles = "w-full px-4 py-2.5 bg-surface-2 border border-border rounded-md text-sm text-text-secondary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors cursor-pointer";
+  const inputStyles = "w-full px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-base text-text-primary placeholder:text-text-faint hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200";
+  const selectStyles = "w-full px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-base text-text-secondary hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
   const labelStyles = "block text-sm font-medium text-text-secondary mb-2";
 
   return (
-    <div className="max-w-lg mx-auto px-6 py-12">
-      <h1 className="text-2xl font-semibold tracking-tight text-text-primary mb-2">
+    <div className="max-w-lg mx-auto px-8 py-14">
+      {/* Eyebrow */}
+      <p className="label-refined mb-4 text-accent">
+        Contribute
+      </p>
+
+      <h1 className="headline-display mb-4">
         Submit a Company
       </h1>
-      <p className="text-text-muted mb-8">
+      <p className="text-lg text-text-muted mb-10 leading-relaxed">
         Know a company building AI + Finance products? Help us grow the directory.
       </p>
 
-      <form className="space-y-6">
+      <form className="space-y-8">
         <div>
           <label htmlFor="name" className={labelStyles}>
             Company Name <span className="text-accent">*</span>
@@ -59,7 +64,7 @@ export default function SubmitPage() {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-5">
           <div>
             <label htmlFor="segment" className={labelStyles}>
               Primary Segment <span className="text-accent">*</span>
@@ -119,7 +124,7 @@ export default function SubmitPage() {
 
         <div>
           <label htmlFor="email" className={labelStyles}>
-            Your Email <span className="text-text-muted">(optional)</span>
+            Your Email <span className="text-text-faint">(optional)</span>
           </label>
           <input
             type="email"
@@ -128,19 +133,19 @@ export default function SubmitPage() {
             className={inputStyles}
             placeholder="you@example.com"
           />
-          <p className="text-xs text-text-muted mt-2">
+          <p className="text-sm text-text-faint mt-3">
             In case we have questions about your submission
           </p>
         </div>
 
         <button
           type="submit"
-          className="w-full px-4 py-3 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent-muted transition-colors"
+          className="w-full px-5 py-4 bg-accent text-white text-base font-semibold rounded-lg hover:bg-accent-muted transition-all duration-200"
         >
           Submit Company
         </button>
 
-        <p className="text-xs text-text-muted text-center">
+        <p className="text-sm text-text-faint text-center">
           Submissions are reviewed before being added to the directory.
         </p>
       </form>

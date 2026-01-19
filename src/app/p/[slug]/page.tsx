@@ -31,38 +31,38 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const similarProjects = getSimilarProjects(project, 6);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-8">
+    <div className="max-w-4xl mx-auto px-8 py-10">
       {/* Back Link */}
       <Link
         href="/directory"
-        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-8 text-sm"
+        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-8 text-sm tracking-wide"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Directory
       </Link>
 
       {/* Header Card */}
-      <div className="bg-surface border border-border rounded-lg p-6 mb-6">
-        <div className="flex items-start gap-5">
+      <div className="bg-surface border border-border rounded-xl p-8 mb-8">
+        <div className="flex items-start gap-6">
           {/* Logo/Initial */}
-          <div className="w-14 h-14 rounded-lg bg-surface-2 border border-border flex items-center justify-center text-xl font-semibold text-text-muted shrink-0">
+          <div className="w-16 h-16 rounded-xl bg-surface-2 border border-border/50 flex items-center justify-center text-2xl font-bold text-text-muted shrink-0">
             {project.name.charAt(0)}
           </div>
 
           <div className="flex-1 min-w-0">
-            <h1 className="text-2xl font-semibold tracking-tight text-text-primary">
+            <h1 className="headline-section">
               {project.name}
             </h1>
-            <p className="text-text-muted mt-1">{project.tagline}</p>
+            <p className="text-lg text-text-secondary mt-2 leading-relaxed">{project.tagline}</p>
 
             {/* Action Links */}
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-3 mt-6">
               {project.website && (
                 <a
                   href={project.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent-muted transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-muted transition-all duration-200"
                 >
                   <Globe className="w-4 h-4" />
                   Visit Website
@@ -73,7 +73,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   href={project.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-md hover:bg-surface-3 hover:text-text-primary transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-all duration-200"
                 >
                   <Twitter className="w-4 h-4" />
                   Twitter
@@ -84,7 +84,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   href={project.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-md hover:bg-surface-3 hover:text-text-primary transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-all duration-200"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -95,43 +95,43 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 pt-6 border-t border-border">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-8 pt-8 border-t border-border/50">
           {primarySegment && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
+              <p className="label-refined mb-2">
                 Segment
               </p>
-              <p className="text-sm font-medium text-text-primary">
+              <p className="text-base font-medium text-text-primary">
                 {primarySegment.name}
               </p>
             </div>
           )}
           {primaryLayer && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
+              <p className="label-refined mb-2">
                 Layer
               </p>
-              <p className="text-sm font-medium text-text-primary">
+              <p className="text-base font-medium text-text-primary">
                 {primaryLayer.name}
               </p>
             </div>
           )}
           {project.stage && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
+              <p className="label-refined mb-2">
                 Stage
               </p>
-              <p className="text-sm font-medium text-text-primary">
+              <p className="text-base font-medium text-text-primary">
                 {formatStage(project.stage)}
               </p>
             </div>
           )}
           {project.funding && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-text-muted mb-1">
+              <p className="label-refined mb-2">
                 Funding
               </p>
-              <p className="text-sm font-medium text-text-primary tabular-nums">
+              <p className="text-base font-medium text-text-primary tabular-nums">
                 {formatFunding(project.funding)}
               </p>
             </div>
@@ -140,13 +140,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main Content */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-8">
           {/* Description */}
           {project.description && (
-            <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+            <div className="bg-surface border border-border rounded-xl p-8">
+              <h2 className="label-refined mb-5">
                 About
               </h2>
               <p className="text-text-secondary leading-relaxed">
@@ -157,17 +157,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
           {/* Team */}
           {project.team && project.team.length > 0 && (
-            <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+            <div className="bg-surface border border-border rounded-xl p-8">
+              <h2 className="label-refined mb-5">
                 Team
               </h2>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-4">
                 {project.team.map((member, i) => (
-                  <div key={i} className="bg-surface-2 rounded-md p-4">
-                    <p className="font-medium text-sm text-text-primary">
+                  <div key={i} className="bg-surface-2 rounded-lg p-5">
+                    <p className="font-medium text-text-primary">
                       {member.name}
                     </p>
-                    <p className="text-xs text-text-muted mt-0.5">
+                    <p className="text-sm text-text-muted mt-1">
                       {member.role}
                     </p>
                   </div>
@@ -178,13 +178,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-8">
           {/* Details */}
-          <div className="bg-surface border border-border rounded-lg p-6">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+          <div className="bg-surface border border-border rounded-xl p-8">
+            <h2 className="label-refined mb-5">
               Details
             </h2>
-            <dl className="space-y-3">
+            <dl className="space-y-4">
               {project.founded && (
                 <div className="flex justify-between items-center">
                   <dt className="text-sm text-text-muted">Founded</dt>
@@ -216,8 +216,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
           {/* Segments */}
           {allSegments.length > 0 && (
-            <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+            <div className="bg-surface border border-border rounded-xl p-8">
+              <h2 className="label-refined mb-5">
                 Market Segments
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -226,7 +226,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     segment && (
                       <span
                         key={segment.slug}
-                        className="text-xs px-3 py-1.5 rounded-md bg-surface-2 text-text-secondary"
+                        className="text-sm px-3 py-1.5 rounded-lg bg-surface-2 text-text-secondary"
                       >
                         {segment.name}
                       </span>
@@ -238,8 +238,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
           {/* Layers */}
           {allLayers.length > 0 && (
-            <div className="bg-surface border border-border rounded-lg p-6">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+            <div className="bg-surface border border-border rounded-xl p-8">
+              <h2 className="label-refined mb-5">
                 Tech Stack Layers
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -248,7 +248,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     layer && (
                       <span
                         key={layer.slug}
-                        className="text-xs px-3 py-1.5 rounded-md bg-surface-2 text-text-secondary"
+                        className="text-sm px-3 py-1.5 rounded-lg bg-surface-2 text-text-secondary"
                       >
                         {layer.name}
                       </span>
@@ -262,11 +262,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
       {/* Similar Companies */}
       {similarProjects.length > 0 && (
-        <div className="mt-10 pt-10 border-t border-border">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-5">
-            Similar Companies
-          </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-16 pt-12 border-t border-border/30">
+          <div className="flex items-baseline justify-between mb-8">
+            <h2 className="headline-sub">Related Companies</h2>
+            <span className="meta-text">{similarProjects.length} similar</span>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {similarProjects.map((p) => {
               const seg = getSegment(p.segment);
               const lay = getLayer(p.layer);
@@ -274,22 +275,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={p.slug}
                   href={`/p/${p.slug}`}
-                  className="group bg-surface border border-border rounded-lg p-4 hover:border-accent/50 transition-colors"
+                  className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all duration-200"
                 >
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                  <p className="font-medium text-text-primary group-hover:text-accent transition-colors truncate">
                     {p.name}
                   </p>
-                  <p className="text-xs text-text-muted mt-1 line-clamp-1">
+                  <p className="text-sm text-text-muted mt-1 line-clamp-1">
                     {p.tagline}
                   </p>
-                  <div className="flex gap-2 mt-3">
+                  <div className="flex gap-2 mt-4">
                     {seg && (
-                      <span className="text-2xs px-2 py-1 rounded bg-surface-2 text-text-muted">
+                      <span className="text-xs px-2.5 py-1 rounded-md bg-surface-2 text-text-muted">
                         {seg.name}
                       </span>
                     )}
                     {lay && (
-                      <span className="text-2xs px-2 py-1 rounded bg-surface-2 text-text-muted">
+                      <span className="text-xs px-2.5 py-1 rounded-md bg-surface-2 text-text-muted">
                         {lay.name}
                       </span>
                     )}

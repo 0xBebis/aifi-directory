@@ -58,12 +58,12 @@ export default function MarketMap({
   ), [segments, layers, projects]);
 
   return (
-    <div className="bg-surface border border-border rounded-lg">
+    <div className="bg-surface border border-border rounded-xl">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-border flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <h2 className="text-sm font-semibold text-text-primary">Market Map</h2>
-          <span className="text-xs text-text-faint">{projects.length} companies</span>
+      <div className="px-5 py-3.5 border-b border-border/50 flex items-center justify-between">
+        <div className="flex items-baseline gap-4">
+          <h2 className="headline-sub">Market Map</h2>
+          <span className="meta-text">{projects.length} companies</span>
         </div>
         {expandedCell && (
           <button
@@ -71,9 +71,9 @@ export default function MarketMap({
               setExpandedCell(null);
               onCellClick?.(null, null);
             }}
-            className="text-xs text-text-muted hover:text-text-primary flex items-center gap-1.5 transition-colors"
+            className="text-sm text-text-muted hover:text-text-primary flex items-center gap-2 transition-colors"
           >
-            <X className="w-3.5 h-3.5" />
+            <X className="w-4 h-4" />
             Clear selection
           </button>
         )}
@@ -81,14 +81,14 @@ export default function MarketMap({
 
       {/* Map Grid */}
       <div className="overflow-x-auto">
-        <div className="min-w-[800px] p-5">
+        <div className="min-w-[800px] p-4">
           {/* Column Headers (Segments) */}
-          <div className="flex mb-3">
-            <div className="w-28 shrink-0" />
+          <div className="flex mb-2">
+            <div className="w-32 shrink-0" />
             {segments.map((segment) => (
               <div
                 key={segment.slug}
-                className="flex-1 px-0.5 text-center"
+                className="flex-1 px-1 text-center"
               >
                 <button
                   onClick={() => {
@@ -98,10 +98,10 @@ export default function MarketMap({
                       onCellClick?.(segment.slug, null);
                     }
                   }}
-                  className={`text-2xs font-medium uppercase tracking-wider w-full px-1 py-2 rounded transition-colors ${
+                  className={`label-refined w-full px-1 py-1.5 rounded-lg transition-all duration-200 ${
                     activeSegment === segment.slug
-                      ? 'text-accent'
-                      : 'text-text-muted hover:text-text-secondary'
+                      ? 'text-accent bg-accent/5'
+                      : 'text-text-muted hover:text-text-secondary hover:bg-surface-2/50'
                   }`}
                   title={segment.name}
                 >
@@ -115,7 +115,7 @@ export default function MarketMap({
           {layers.map((layer, layerIndex) => (
             <div key={layer.slug} className="flex items-center">
               {/* Row Header */}
-              <div className="w-28 shrink-0 pr-4">
+              <div className="w-32 shrink-0 pr-4">
                 <button
                   onClick={() => {
                     if (activeLayer === layer.slug && !activeSegment) {
@@ -124,7 +124,7 @@ export default function MarketMap({
                       onCellClick?.(null, layer.slug);
                     }
                   }}
-                  className={`text-2xs font-medium uppercase tracking-wider text-right w-full py-2 rounded transition-colors ${
+                  className={`label-refined text-right w-full py-1.5 rounded-lg transition-all duration-200 ${
                     activeLayer === layer.slug
                       ? 'text-accent'
                       : 'text-text-muted hover:text-text-secondary'
@@ -150,22 +150,22 @@ export default function MarketMap({
                 const tier = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 6 ? 3 : 4;
 
                 return (
-                  <div key={key} className="flex-1 p-0.5">
+                  <div key={key} className="flex-1 px-1 py-0.5">
                     <button
                       onClick={() => handleCellClick(segment.slug, layer.slug)}
                       disabled={count === 0}
-                      className={`w-full h-9 rounded text-xs font-medium transition-all duration-150
+                      className={`w-full h-9 rounded-lg text-sm font-medium transition-all duration-200
                         ${count === 0
-                          ? 'bg-surface-2/50 cursor-default'
+                          ? 'bg-surface-2/30 cursor-default'
                           : isExpanded || isActive
-                            ? 'bg-accent text-white shadow-glow'
+                            ? 'bg-accent text-white shadow-glow scale-[1.02]'
                             : tier === 1
-                              ? 'bg-surface-2 text-text-muted hover:bg-surface-3 hover:text-text-secondary'
+                              ? 'bg-surface-2 text-text-muted hover:bg-surface-3 hover:text-text-secondary hover:scale-[1.02]'
                               : tier === 2
-                                ? 'bg-surface-3 text-text-secondary hover:bg-border hover:text-text-primary'
+                                ? 'bg-surface-3 text-text-secondary hover:bg-border hover:text-text-primary hover:scale-[1.02]'
                                 : tier === 3
-                                  ? 'bg-zinc-700/60 text-text-primary hover:bg-zinc-600/60'
-                                  : 'bg-zinc-600/70 text-text-primary hover:bg-zinc-500/70'
+                                  ? 'bg-zinc-700/60 text-text-primary hover:bg-zinc-600/60 hover:scale-[1.02]'
+                                  : 'bg-zinc-600/70 text-text-primary hover:bg-zinc-500/70 hover:scale-[1.02]'
                         }`}
                       title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
                     >
@@ -181,7 +181,7 @@ export default function MarketMap({
 
       {/* Expanded Cell Detail */}
       {expandedCell && (
-        <div className="border-t border-border p-5 bg-surface-2/50 animate-fade-in">
+        <div className="border-t border-border/50 p-6 bg-surface-2/30 animate-fade-in">
           {(() => {
             const [segSlug, laySlug] = expandedCell.split('-');
             const segment = segments.find(s => s.slug === segSlug);
@@ -190,15 +190,15 @@ export default function MarketMap({
 
             return (
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
+                <div className="flex items-baseline gap-4 mb-5">
+                  <span className="label-refined text-text-secondary">
                     {segment?.name}
                   </span>
-                  <span className="text-text-faint">×</span>
-                  <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
+                  <span className="text-text-faint text-lg font-light">/</span>
+                  <span className="label-refined text-text-secondary">
                     {layer?.name}
                   </span>
-                  <span className="text-xs text-text-faint ml-auto">
+                  <span className="meta-text ml-auto">
                     {cellProjects.length} {cellProjects.length === 1 ? 'company' : 'companies'}
                   </span>
                 </div>
@@ -207,7 +207,7 @@ export default function MarketMap({
                     <Link
                       key={project.slug}
                       href={`/p/${project.slug}`}
-                      className="text-sm px-3 py-1.5 bg-surface border border-border rounded-md text-text-secondary hover:border-accent hover:text-accent transition-colors"
+                      className="text-sm px-4 py-2 bg-surface border border-border rounded-lg text-text-secondary hover:border-accent/50 hover:text-accent transition-all duration-200"
                     >
                       {project.name}
                     </Link>

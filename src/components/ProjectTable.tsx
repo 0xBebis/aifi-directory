@@ -19,7 +19,7 @@ function Tooltip({ children, content }: { children: ReactNode; content: ReactNod
   return (
     <span className="relative group/tooltip inline-flex items-center">
       {children}
-      <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1.5 px-3 py-2 bg-surface-3 border border-border rounded-md shadow-medium text-xs whitespace-nowrap animate-fade-in">
+      <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1.5 px-3 py-2 bg-surface-3 border border-border rounded-lg shadow-medium text-xs whitespace-nowrap animate-fade-in">
         {content}
       </span>
     </span>
@@ -167,22 +167,22 @@ export default function ProjectTable({
 
   const hasFilters = search || segmentFilter || layerFilter || stageFilter;
 
-  const selectStyles = "px-3 py-2 bg-surface-2 border border-border rounded-md text-sm text-text-secondary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors cursor-pointer hover:border-border";
+  const selectStyles = "px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-secondary hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
 
   return (
-    <div className="bg-surface border border-border rounded-lg">
+    <div className="bg-surface border border-border rounded-xl">
       {/* Toolbar */}
-      <div className="p-4 border-b border-border">
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="p-5 border-b border-border/50">
+        <div className="flex flex-wrap items-center gap-4">
           {/* Search */}
-          <div className="relative flex-1 min-w-[240px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+          <div className="relative flex-1 min-w-[280px]">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
             <input
               type="text"
               placeholder="Search companies..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-surface-2 border border-border rounded-md text-sm text-text-primary placeholder:text-text-faint focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-colors"
+              className="w-full pl-11 pr-5 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-primary placeholder:text-text-faint hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200"
             />
           </div>
 
@@ -226,21 +226,23 @@ export default function ProjectTable({
             ))}
           </select>
 
-          {/* Clear & Count */}
-          <div className="flex items-center gap-3 ml-auto">
-            {hasFilters && (
-              <button
-                onClick={clearFilters}
-                className="flex items-center gap-1.5 px-3 py-2 text-sm text-text-muted hover:text-text-primary transition-colors"
-              >
-                <X className="w-3.5 h-3.5" />
-                Clear
-              </button>
-            )}
-            <span className="text-xs text-text-faint tabular-nums">
-              {filteredProjects.length} of {projects.length}
-            </span>
-          </div>
+          {/* Clear */}
+          {hasFilters && (
+            <button
+              onClick={clearFilters}
+              className="flex items-center gap-2 px-4 py-3 text-sm text-text-muted hover:text-text-primary transition-colors"
+            >
+              <X className="w-4 h-4" />
+              Clear
+            </button>
+          )}
+        </div>
+
+        {/* Result count */}
+        <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/30">
+          <span className="meta-text">
+            Showing <span className="text-text-primary font-medium">{filteredProjects.length}</span> of {projects.length} companies
+          </span>
         </div>
       </div>
 
@@ -248,74 +250,74 @@ export default function ProjectTable({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-border bg-surface-2/50">
-              <th className="text-left px-4 py-3">
+            <tr className="border-b border-border bg-surface-2/30">
+              <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('name')}
-                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Company
                   <SortIcon column="name" />
                 </button>
               </th>
-              <th className="text-left px-4 py-3">
+              <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('segment')}
-                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Segment
                   <SortIcon column="segment" />
                 </button>
               </th>
-              <th className="text-left px-4 py-3">
+              <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('layer')}
-                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Layer
                   <SortIcon column="layer" />
                 </button>
               </th>
-              <th className="text-left px-4 py-3">
+              <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('stage')}
-                  className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Stage
                   <SortIcon column="stage" />
                 </button>
               </th>
-              <th className="text-right px-4 py-3">
+              <th className="text-right px-5 py-4">
                 <button
                   onClick={() => handleSort('funding')}
-                  className="flex items-center gap-2 ml-auto text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 ml-auto label-refined hover:text-text-primary transition-colors"
                 >
                   Funding
                   <SortIcon column="funding" />
                 </button>
               </th>
-              <th className="text-center px-4 py-3">
+              <th className="text-center px-5 py-4">
                 <button
                   onClick={() => handleSort('founded')}
-                  className="flex items-center gap-2 mx-auto text-xs font-semibold uppercase tracking-wider text-text-muted hover:text-text-primary transition-colors"
+                  className="flex items-center gap-2 mx-auto label-refined hover:text-text-primary transition-colors"
                 >
                   Year
                   <SortIcon column="founded" />
                 </button>
               </th>
-              <th className="text-center px-4 py-3 w-12">
-                <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
+              <th className="text-center px-5 py-4 w-14">
+                <span className="label-refined">
                   Link
                 </span>
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-border/50">
+          <tbody className="divide-y divide-border/30">
             {filteredProjects.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-4 py-12 text-center">
-                  <p className="text-text-secondary">No companies found</p>
-                  <p className="text-sm text-text-muted mt-1">Try adjusting your filters</p>
+                <td colSpan={7} className="px-5 py-16 text-center">
+                  <p className="text-text-secondary text-lg">No companies found</p>
+                  <p className="text-sm text-text-muted mt-2">Try adjusting your filters</p>
                 </td>
               </tr>
             ) : (
@@ -328,25 +330,25 @@ export default function ProjectTable({
                 return (
                   <tr
                     key={project.slug}
-                    className="hover:bg-surface-2/30 transition-colors"
+                    className="hover:bg-surface-2/40 transition-colors duration-150"
                   >
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-4">
                       <Link
                         href={`/p/${project.slug}`}
-                        className="group"
+                        className="group block"
                       >
                         <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
                           {project.name}
                         </span>
-                        <p className="text-xs text-text-muted mt-0.5 line-clamp-1 max-w-xs">
+                        <p className="text-sm text-text-muted mt-0.5 line-clamp-1 max-w-xs">
                           {project.tagline}
                         </p>
                       </Link>
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-4">
                       {segment && (
-                        <span className="inline-flex items-center gap-1.5">
-                          <span className="text-xs text-text-muted">
+                        <span className="inline-flex items-center gap-2">
+                          <span className="text-sm text-text-muted">
                             {segment.name}
                           </span>
                           {additionalSegments.length > 0 && (
@@ -364,7 +366,7 @@ export default function ProjectTable({
                                 </>
                               }
                             >
-                              <span className="text-2xs px-1.5 py-0.5 rounded bg-surface-3 text-text-faint cursor-help">
+                              <span className="text-2xs px-1.5 py-0.5 rounded-md bg-surface-3 text-text-faint cursor-help">
                                 +{additionalSegments.length}
                               </span>
                             </Tooltip>
@@ -372,10 +374,10 @@ export default function ProjectTable({
                         </span>
                       )}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-4">
                       {layer && (
-                        <span className="inline-flex items-center gap-1.5">
-                          <span className="text-xs text-text-muted">
+                        <span className="inline-flex items-center gap-2">
+                          <span className="text-sm text-text-muted">
                             {layer.name}
                           </span>
                           {additionalLayers.length > 0 && (
@@ -393,7 +395,7 @@ export default function ProjectTable({
                                 </>
                               }
                             >
-                              <span className="text-2xs px-1.5 py-0.5 rounded bg-surface-3 text-text-faint cursor-help">
+                              <span className="text-2xs px-1.5 py-0.5 rounded-md bg-surface-3 text-text-faint cursor-help">
                                 +{additionalLayers.length}
                               </span>
                             </Tooltip>
@@ -401,36 +403,36 @@ export default function ProjectTable({
                         </span>
                       )}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-4">
                       {project.stage && (
-                        <span className="text-xs text-text-muted">
+                        <span className="text-sm text-text-muted">
                           {formatStage(project.stage)}
                         </span>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-right">
+                    <td className="px-5 py-4 text-right">
                       {project.funding ? (
                         <span className="text-sm font-medium tabular-nums text-text-secondary">
                           {formatFunding(project.funding)}
                         </span>
                       ) : (
-                        <span className="text-xs text-text-faint">—</span>
+                        <span className="text-sm text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-5 py-4 text-center">
                       {project.founded ? (
-                        <span className="text-xs tabular-nums text-text-muted">{project.founded}</span>
+                        <span className="text-sm tabular-nums text-text-muted">{project.founded}</span>
                       ) : (
-                        <span className="text-xs text-text-faint">—</span>
+                        <span className="text-sm text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-5 py-4 text-center">
                       {project.website && (
                         <a
                           href={project.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-md text-text-faint hover:text-accent hover:bg-accent/10 transition-colors"
+                          className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-text-faint hover:text-accent hover:bg-accent/10 transition-all duration-200"
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>
