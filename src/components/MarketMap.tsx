@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Project, Segment, Layer } from '@/types';
-import { ChevronDown, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import Link from 'next/link';
 
 interface MarketMapProps {
@@ -50,17 +50,21 @@ export default function MarketMap({
     }
   };
 
-  const maxCount = Math.max(
+  const maxCount = useMemo(() => Math.max(
+    1,
     ...segments.flatMap((s) =>
       layers.map((l) => getProjectsInCell(s.slug, l.slug).length)
     )
-  );
+  ), [segments, layers, projects]);
 
   return (
     <div className="bg-surface border border-border rounded-lg overflow-hidden">
       {/* Header */}
       <div className="px-4 py-3 border-b border-border flex items-center justify-between">
-        <h2 className="text-sm font-semibold">Market Map</h2>
+        <div className="flex items-center gap-3">
+          <h2 className="text-sm font-semibold">Market Map</h2>
+          <span className="text-xs text-text-muted">{projects.length} companies</span>
+        </div>
         {expandedCell && (
           <button
             onClick={() => {
@@ -70,7 +74,7 @@ export default function MarketMap({
             className="text-xs text-text-muted hover:text-text-primary flex items-center gap-1"
           >
             <X className="w-3 h-3" />
-            Clear selection
+            Clear
           </button>
         )}
       </div>
@@ -79,12 +83,12 @@ export default function MarketMap({
       <div className="overflow-x-auto">
         <div className="min-w-[800px] p-4">
           {/* Column Headers (Segments) */}
-          <div className="flex">
+          <div className="flex border-b border-border pb-2 mb-2">
             <div className="w-24 shrink-0" />
             {segments.map((segment) => (
               <div
                 key={segment.slug}
-                className="flex-1 px-1 text-center"
+                className="flex-1 px-0.5 text-center"
               >
                 <button
                   onClick={() => {
@@ -94,14 +98,14 @@ export default function MarketMap({
                       onCellClick?.(segment.slug, null);
                     }
                   }}
-                  className={`text-[10px] font-medium truncate w-full px-1 py-1 rounded transition-colors ${
+                  className={`text-[10px] font-medium w-full px-1 py-1 rounded transition-colors ${
                     activeSegment === segment.slug
-                      ? 'bg-accent/20 text-accent'
+                      ? 'text-accent'
                       : 'text-text-muted hover:text-text-primary'
                   }`}
                   title={segment.name}
                 >
-                  {segment.name.split(' ')[0]}
+                  {segment.name.length > 10 ? segment.name.split(' ')[0] : segment.name}
                 </button>
               </div>
             ))}
@@ -109,9 +113,9 @@ export default function MarketMap({
 
           {/* Rows (Layers) */}
           {layers.map((layer) => (
-            <div key={layer.slug} className="flex mt-1">
+            <div key={layer.slug} className="flex items-center">
               {/* Row Header */}
-              <div className="w-24 shrink-0 pr-2">
+              <div className="w-24 shrink-0 pr-3 border-r border-border">
                 <button
                   onClick={() => {
                     if (activeLayer === layer.slug && !activeSegment) {
@@ -120,9 +124,9 @@ export default function MarketMap({
                       onCellClick?.(null, layer.slug);
                     }
                   }}
-                  className={`text-[10px] font-medium text-right w-full truncate px-1 py-1 rounded transition-colors ${
+                  className={`text-[10px] font-medium text-right w-full py-1 rounded transition-colors ${
                     activeLayer === layer.slug
-                      ? 'bg-accent/20 text-accent'
+                      ? 'text-accent'
                       : 'text-text-muted hover:text-text-primary'
                   }`}
                   title={layer.name}
@@ -142,27 +146,28 @@ export default function MarketMap({
                   (activeSegment === segment.slug && !activeLayer) ||
                   (activeLayer === layer.slug && !activeSegment);
 
-                // Calculate opacity based on count
-                const opacity = count > 0 ? Math.max(0.2, count / maxCount) : 0;
+                // Calculate intensity tier (0-4) for stepped contrast
+                const tier = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 6 ? 3 : 4;
 
                 return (
-                  <div key={key} className="flex-1 px-0.5">
+                  <div key={key} className="flex-1 px-0.5 py-0.5">
                     <button
                       onClick={() => handleCellClick(segment.slug, layer.slug)}
                       disabled={count === 0}
-                      className={`w-full h-7 rounded text-[10px] font-medium transition-all ${
-                        count === 0
-                          ? 'bg-surface-2/30 cursor-default'
+                      className={`w-full h-8 rounded-sm text-[11px] font-medium transition-all
+                        ${count === 0
+                          ? 'bg-white/[0.02] cursor-default'
                           : isExpanded || isActive
-                          ? 'bg-accent text-white'
-                          : 'bg-surface-2 hover:bg-border text-text-muted hover:text-text-primary'
-                      }`}
-                      style={
-                        count > 0 && !isExpanded && !isActive
-                          ? { backgroundColor: `rgba(59, 130, 246, ${opacity * 0.3})` }
-                          : undefined
-                      }
-                      title={`${segment.name} × ${layer.name}: ${count} projects`}
+                            ? 'bg-accent text-white ring-1 ring-accent'
+                            : tier === 1
+                              ? 'bg-white/[0.06] text-text-muted hover:bg-white/[0.1]'
+                              : tier === 2
+                                ? 'bg-white/[0.12] text-text-primary hover:bg-white/[0.16]'
+                                : tier === 3
+                                  ? 'bg-white/[0.20] text-text-primary hover:bg-white/[0.24]'
+                                  : 'bg-white/[0.30] text-white hover:bg-white/[0.35]'
+                        }`}
+                      title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
                     >
                       {count > 0 ? count : ''}
                     </button>
