@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "trading",
+    "name": "Trading & Markets",
+    "description": "Algorithmic trading, market making, order execution, price prediction",
+    "color": "#3b82f6"
+  },
+  {
+    "slug": "wealth",
+    "name": "Wealth Management",
+    "description": "Robo-advisors, portfolio optimization, financial planning",
+    "color": "#8b5cf6"
+  },
+  {
+    "slug": "lending",
+    "name": "Lending & Credit",
+    "description": "Credit scoring, underwriting automation, loan origination",
+    "color": "#06b6d4"
+  },
+  {
+    "slug": "risk",
+    "name": "Risk & Compliance",
+    "description": "Fraud detection, AML/KYC, regulatory compliance, risk modeling",
+    "color": "#f59e0b"
+  },
+  {
+    "slug": "insurance",
+    "name": "Insurance",
+    "description": "Underwriting, claims processing, actuarial modeling",
+    "color": "#10b981"
+  },
+  {
+    "slug": "payments",
+    "name": "Payments & Banking",
+    "description": "Payment optimization, banking operations, financial infrastructure",
+    "color": "#ec4899"
+  },
+  {
+    "slug": "capital",
+    "name": "Capital Markets",
+    "description": "Investment banking, deal sourcing, market analysis",
+    "color": "#6366f1"
+  },
+  {
+    "slug": "crypto",
+    "name": "Crypto & DeFi",
+    "description": "Blockchain-native finance, digital asset management",
+    "color": "#f97316"
+  },
+  {
+    "slug": "research",
+    "name": "Research & Analytics",
+    "description": "Market research, alternative data, financial intelligence",
+    "color": "#14b8a6"
+  },
+  {
+    "slug": "personal",
+    "name": "Personal Finance",
+    "description": "Budgeting, saving, financial wellness tools",
+    "color": "#84cc16"
+  }
+]
