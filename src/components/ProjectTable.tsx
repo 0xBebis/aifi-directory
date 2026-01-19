@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, ReactNode } from 'react';
 import Link from 'next/link';
 import { Project, Segment, Layer, Stage, STAGE_LABELS } from '@/types';
 import { formatFunding, formatStage } from '@/lib/data';
@@ -12,6 +12,18 @@ import {
   ArrowUpDown,
 } from 'lucide-react';
 import Fuse from 'fuse.js';
+
+// Tooltip component for showing additional categories
+function Tooltip({ children, content }: { children: ReactNode; content: ReactNode }) {
+  return (
+    <span className="relative group/tooltip inline-flex items-center">
+      {children}
+      <span className="absolute left-full ml-1 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1 px-2 py-1.5 bg-surface-2 border border-border rounded shadow-lg text-xs whitespace-nowrap">
+        {content}
+      </span>
+    </span>
+  );
+}
 
 interface ProjectTableProps {
   projects: Project[];
@@ -307,6 +319,10 @@ export default function ProjectTable({
                 const segment = segmentMap[project.segment];
                 const layer = layerMap[project.layer];
 
+                // Get additional segments beyond the primary
+                const additionalSegments = project.segments?.filter(s => s !== project.segment) || [];
+                const additionalLayers = project.layers?.filter(l => l !== project.layer) || [];
+
                 return (
                   <tr
                     key={project.slug}
@@ -325,27 +341,97 @@ export default function ProjectTable({
                     </td>
                     <td className="p-3">
                       {segment && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
-                          style={{
-                            backgroundColor: `${segment.color}20`,
-                            color: segment.color,
-                          }}
-                        >
-                          {segment.name}
+                        <span className="inline-flex items-center gap-1">
+                          <span
+                            className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
+                            style={{
+                              backgroundColor: `${segment.color}20`,
+                              color: segment.color,
+                            }}
+                          >
+                            {segment.name}
+                          </span>
+                          {additionalSegments.length > 0 && (
+                            <Tooltip
+                              content={
+                                <>
+                                  {additionalSegments.map(slug => {
+                                    const s = segmentMap[slug];
+                                    return s ? (
+                                      <span
+                                        key={slug}
+                                        className="px-2 py-0.5 rounded-full"
+                                        style={{
+                                          backgroundColor: `${s.color}20`,
+                                          color: s.color,
+                                        }}
+                                      >
+                                        {s.name}
+                                      </span>
+                                    ) : null;
+                                  })}
+                                </>
+                              }
+                            >
+                              <span
+                                className="text-[10px] px-1.5 py-0.5 rounded-full cursor-help transition-colors"
+                                style={{
+                                  backgroundColor: `${segment.color}15`,
+                                  color: segment.color,
+                                }}
+                              >
+                                +{additionalSegments.length}
+                              </span>
+                            </Tooltip>
+                          )}
                         </span>
                       )}
                     </td>
                     <td className="p-3">
                       {layer && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
-                          style={{
-                            backgroundColor: `${layer.color}20`,
-                            color: layer.color,
-                          }}
-                        >
-                          {layer.name}
+                        <span className="inline-flex items-center gap-1">
+                          <span
+                            className="text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
+                            style={{
+                              backgroundColor: `${layer.color}20`,
+                              color: layer.color,
+                            }}
+                          >
+                            {layer.name}
+                          </span>
+                          {additionalLayers.length > 0 && (
+                            <Tooltip
+                              content={
+                                <>
+                                  {additionalLayers.map(slug => {
+                                    const l = layerMap[slug];
+                                    return l ? (
+                                      <span
+                                        key={slug}
+                                        className="px-2 py-0.5 rounded-full"
+                                        style={{
+                                          backgroundColor: `${l.color}20`,
+                                          color: l.color,
+                                        }}
+                                      >
+                                        {l.name}
+                                      </span>
+                                    ) : null;
+                                  })}
+                                </>
+                              }
+                            >
+                              <span
+                                className="text-[10px] px-1.5 py-0.5 rounded-full cursor-help transition-colors"
+                                style={{
+                                  backgroundColor: `${layer.color}15`,
+                                  color: layer.color,
+                                }}
+                              >
+                                +{additionalLayers.length}
+                              </span>
+                            </Tooltip>
+                          )}
                         </span>
                       )}
                     </td>
