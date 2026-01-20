@@ -2,61 +2,55 @@
   {
     "slug": "trading",
     "name": "Trading & Markets",
-    "description": "Algorithmic trading, market making, order execution, price prediction",
+    "description": "Algorithmic trading, market making, order execution, quantitative strategies",
     "color": "#3b82f6"
   },
   {
-    "slug": "wealth",
-    "name": "Wealth Management",
-    "description": "Robo-advisors, portfolio optimization, financial planning",
-    "color": "#8b5cf6"
+    "slug": "banking",
+    "name": "Banking & Payments",
+    "description": "Neobanks, payment processing, banking operations, financial infrastructure",
+    "color": "#ec4899"
   },
   {
     "slug": "lending",
     "name": "Lending & Credit",
-    "description": "Credit scoring, underwriting automation, loan origination",
+    "description": "Credit scoring, underwriting, loan origination, collections",
     "color": "#06b6d4"
   },
   {
-    "slug": "risk",
-    "name": "Risk & Compliance",
-    "description": "Fraud detection, AML/KYC, regulatory compliance, risk modeling",
-    "color": "#f59e0b"
+    "slug": "wealth",
+    "name": "Wealth Management",
+    "description": "Robo-advisors, portfolio optimization, financial planning, asset management",
+    "color": "#8b5cf6"
   },
   {
     "slug": "insurance",
     "name": "Insurance",
-    "description": "Underwriting, claims processing, actuarial modeling",
+    "description": "Underwriting, claims processing, actuarial modeling, risk assessment",
     "color": "#10b981"
   },
   {
-    "slug": "payments",
-    "name": "Payments & Banking",
-    "description": "Payment optimization, banking operations, financial infrastructure",
-    "color": "#ec4899"
+    "slug": "risk",
+    "name": "Risk & Compliance",
+    "description": "Fraud detection, AML/KYC, identity verification, regulatory compliance",
+    "color": "#f59e0b"
   },
   {
-    "slug": "capital",
-    "name": "Capital Markets",
-    "description": "Investment banking, deal sourcing, market analysis",
-    "color": "#6366f1"
+    "slug": "enterprise",
+    "name": "Enterprise Finance",
+    "description": "Treasury management, accounting automation, FP&A, corporate finance",
+    "color": "#84cc16"
   },
   {
     "slug": "crypto",
-    "name": "Crypto & DeFi",
-    "description": "Blockchain-native finance, digital asset management",
+    "name": "Crypto & Web3",
+    "description": "DeFi protocols, blockchain infrastructure, crypto trading, web3 AI agents",
     "color": "#f97316"
   },
   {
     "slug": "research",
-    "name": "Research & Analytics",
-    "description": "Market research, alternative data, financial intelligence",
+    "name": "Research & Data",
+    "description": "Market research, alternative data, financial intelligence, capital markets analytics",
     "color": "#14b8a6"
-  },
-  {
-    "slug": "personal",
-    "name": "Personal Finance",
-    "description": "Budgeting, saving, financial wellness tools",
-    "color": "#84cc16"
   }
 ]

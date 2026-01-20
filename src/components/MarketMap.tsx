@@ -1,9 +1,92 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { Project, Segment, Layer } from '@/types';
 import { X } from 'lucide-react';
 import Link from 'next/link';
+
+interface TooltipProps {
+  title: string;
+  description: string;
+  count?: number;
+  children: React.ReactNode;
+  position?: 'top' | 'bottom' | 'left' | 'right';
+}
+
+function Tooltip({ title, description, count, children, position = 'bottom' }: TooltipProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const showTooltip = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setShouldRender(true);
+      requestAnimationFrame(() => setIsVisible(true));
+    }, 200);
+  };
+
+  const hideTooltip = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsVisible(false);
+    timeoutRef.current = setTimeout(() => setShouldRender(false), 150);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const positionClasses = {
+    top: 'bottom-full left-1/2 -translate-x-1/2 mb-3',
+    bottom: 'top-full left-1/2 -translate-x-1/2 mt-3',
+    left: 'right-full top-1/2 -translate-y-1/2 mr-3',
+    right: 'left-full top-1/2 -translate-y-1/2 ml-3',
+  };
+
+  return (
+    <div
+      className="relative inline-block"
+      onMouseEnter={showTooltip}
+      onMouseLeave={hideTooltip}
+    >
+      {children}
+      {shouldRender && (
+        <div
+          className={`absolute z-50 ${positionClasses[position]} pointer-events-none transition-all duration-150 ${
+            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+          style={{
+            transformOrigin: position === 'bottom' ? 'top center' :
+                            position === 'top' ? 'bottom center' :
+                            position === 'left' ? 'right center' : 'left center'
+          }}
+        >
+          <div className="bg-[#1a1a1d] border border-white/10 rounded-xl shadow-2xl overflow-hidden min-w-[180px] max-w-[240px]">
+            {/* Header */}
+            <div className="px-3.5 py-2.5 border-b border-white/5 bg-white/[0.02]">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-[13px] font-medium text-text-primary">{title}</span>
+                {count !== undefined && (
+                  <span className="text-[11px] font-medium text-accent bg-accent/10 px-2 py-0.5 rounded-full">
+                    {count}
+                  </span>
+                )}
+              </div>
+            </div>
+            {/* Description */}
+            <div className="px-3.5 py-2.5">
+              <p className="text-[12px] leading-relaxed text-text-muted">
+                {description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface MarketMapProps {
   projects: Project[];
@@ -115,54 +198,71 @@ export default function MarketMap({
           {/* Column Headers (Segments) */}
           <div className="flex mb-2">
             <div className="w-32 shrink-0" />
-            {segments.map((segment) => (
-              <div
-                key={segment.slug}
-                className="flex-1 px-1 text-center"
-              >
-                <button
-                  onClick={() => {
-                    if (activeSegment === segment.slug && !activeLayer) {
-                      onCellClick?.(null, null);
-                    } else {
-                      onCellClick?.(segment.slug, null);
-                    }
-                  }}
-                  className={`label-refined w-full px-1 py-1.5 rounded-lg transition-all duration-200 ${
-                    activeSegment === segment.slug
-                      ? 'text-accent bg-accent/5'
-                      : 'text-text-muted hover:text-text-secondary hover:bg-surface-2/50'
-                  }`}
-                  title={segment.name}
+            {segments.map((segment) => {
+              const segmentCount = projects.filter(p => p.segment === segment.slug).length;
+              return (
+                <div
+                  key={segment.slug}
+                  className="flex-1 px-1 text-center"
                 >
-                  {segment.name.length > 10 ? segment.name.split(' ')[0] : segment.name}
-                </button>
-              </div>
-            ))}
+                  <Tooltip
+                    title={segment.name}
+                    description={segment.description}
+                    count={segmentCount}
+                    position="bottom"
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeSegment === segment.slug && !activeLayer) {
+                          onCellClick?.(null, null);
+                        } else {
+                          onCellClick?.(segment.slug, null);
+                        }
+                      }}
+                      className={`label-refined w-full px-1 py-1.5 rounded-lg transition-all duration-200 ${
+                        activeSegment === segment.slug
+                          ? 'text-accent bg-accent/5'
+                          : 'text-text-muted hover:text-text-secondary hover:bg-surface-2/50'
+                      }`}
+                    >
+                      {segment.name.length > 10 ? segment.name.split(' ')[0] : segment.name}
+                    </button>
+                  </Tooltip>
+                </div>
+              );
+            })}
           </div>
 
           {/* Rows (Layers) */}
-          {layers.map((layer, layerIndex) => (
+          {layers.map((layer, layerIndex) => {
+            const layerCount = projects.filter(p => p.layer === layer.slug).length;
+            return (
             <div key={layer.slug} className="flex items-center">
               {/* Row Header */}
-              <div className="w-32 shrink-0 pr-4">
-                <button
-                  onClick={() => {
-                    if (activeLayer === layer.slug && !activeSegment) {
-                      onCellClick?.(null, null);
-                    } else {
-                      onCellClick?.(null, layer.slug);
-                    }
-                  }}
-                  className={`label-refined text-right w-full py-1.5 rounded-lg transition-all duration-200 ${
-                    activeLayer === layer.slug
-                      ? 'text-accent'
-                      : 'text-text-muted hover:text-text-secondary'
-                  }`}
+              <div className="w-32 shrink-0 pr-4 flex justify-end">
+                <Tooltip
                   title={layer.name}
+                  description={layer.description}
+                  count={layerCount}
+                  position="right"
                 >
-                  {layer.name}
-                </button>
+                  <button
+                    onClick={() => {
+                      if (activeLayer === layer.slug && !activeSegment) {
+                        onCellClick?.(null, null);
+                      } else {
+                        onCellClick?.(null, layer.slug);
+                      }
+                    }}
+                    className={`label-refined text-right py-1.5 rounded-lg transition-all duration-200 ${
+                      activeLayer === layer.slug
+                        ? 'text-accent'
+                        : 'text-text-muted hover:text-text-secondary'
+                    }`}
+                  >
+                    {layer.name}
+                  </button>
+                </Tooltip>
               </div>
 
               {/* Cells */}
@@ -216,7 +316,8 @@ export default function MarketMap({
                 );
               })}
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

@@ -2,8 +2,18 @@
 
 import { useState, useMemo, ReactNode } from 'react';
 import Link from 'next/link';
-import { Project, Segment, Layer, Stage, STAGE_LABELS } from '@/types';
-import { formatFunding, formatStage } from '@/lib/data';
+import {
+  Project,
+  Segment,
+  Layer,
+  CompanyType,
+  FundingStage,
+  Region,
+  COMPANY_TYPE_LABELS,
+  FUNDING_STAGE_LABELS,
+  FUNDING_STAGE_ORDER,
+  REGION_LABELS,
+} from '@/types';
 import {
   Search,
   ChevronUp,
@@ -35,20 +45,12 @@ interface ProjectTableProps {
   onFilterChange?: (segment: string | null, layer: string | null) => void;
 }
 
-type SortKey = 'name' | 'segment' | 'layer' | 'stage' | 'funding' | 'founded';
+type SortKey = 'name' | 'segment' | 'layer' | 'type' | 'funding_stage' | 'region';
 type SortDir = 'asc' | 'desc';
 
-const stages: Stage[] = [
-  'pre_seed',
-  'seed',
-  'series_a',
-  'series_b',
-  'series_c_plus',
-  'growth',
-  'public',
-  'acquired',
-  'bootstrapped',
-];
+const companyTypes: CompanyType[] = ['private', 'public', 'acquired', 'token'];
+const fundingStages: FundingStage[] = ['pre-seed', 'seed', 'early', 'growth', 'late', 'public', 'fair-launch', 'undisclosed'];
+const regions: Region[] = ['americas', 'emea', 'apac'];
 
 export default function ProjectTable({
   projects,
@@ -59,7 +61,9 @@ export default function ProjectTable({
   onFilterChange,
 }: ProjectTableProps) {
   const [search, setSearch] = useState('');
-  const [stageFilter, setStageFilter] = useState<string | null>(null);
+  const [typeFilter, setTypeFilter] = useState<string | null>(null);
+  const [fundingFilter, setFundingFilter] = useState<string | null>(null);
+  const [regionFilter, setRegionFilter] = useState<string | null>(null);
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -101,8 +105,16 @@ export default function ProjectTable({
       );
     }
 
-    if (stageFilter) {
-      result = result.filter((p) => p.stage === stageFilter);
+    if (typeFilter) {
+      result = result.filter((p) => p.company_type === typeFilter);
+    }
+
+    if (fundingFilter) {
+      result = result.filter((p) => p.funding_stage === fundingFilter);
+    }
+
+    if (regionFilter) {
+      result = result.filter((p) => p.region === regionFilter);
     }
 
     result = [...result].sort((a, b) => {
@@ -120,16 +132,20 @@ export default function ProjectTable({
           const bPos = layerMap[b.layer]?.position || 0;
           comparison = bPos - aPos;
           break;
-        case 'stage':
-          const aStage = stages.indexOf(a.stage as Stage);
-          const bStage = stages.indexOf(b.stage as Stage);
-          comparison = aStage - bStage;
+        case 'type':
+          const aType = companyTypes.indexOf(a.company_type as CompanyType);
+          const bType = companyTypes.indexOf(b.company_type as CompanyType);
+          comparison = aType - bType;
           break;
-        case 'funding':
-          comparison = (b.funding || 0) - (a.funding || 0);
+        case 'funding_stage':
+          const aFunding = FUNDING_STAGE_ORDER[a.funding_stage as FundingStage] ?? -1;
+          const bFunding = FUNDING_STAGE_ORDER[b.funding_stage as FundingStage] ?? -1;
+          comparison = bFunding - aFunding;
           break;
-        case 'founded':
-          comparison = (b.founded || 0) - (a.founded || 0);
+        case 'region':
+          const aRegion = regions.indexOf(a.region as Region);
+          const bRegion = regions.indexOf(b.region as Region);
+          comparison = aRegion - bRegion;
           break;
       }
 
@@ -137,7 +153,7 @@ export default function ProjectTable({
     });
 
     return result;
-  }, [projects, search, segmentFilter, layerFilter, stageFilter, sortKey, sortDir, fuse, layerMap]);
+  }, [projects, search, segmentFilter, layerFilter, typeFilter, fundingFilter, regionFilter, sortKey, sortDir, fuse, layerMap]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -161,11 +177,13 @@ export default function ProjectTable({
 
   const clearFilters = () => {
     setSearch('');
-    setStageFilter(null);
+    setTypeFilter(null);
+    setFundingFilter(null);
+    setRegionFilter(null);
     onFilterChange?.(null, null);
   };
 
-  const hasFilters = search || segmentFilter || layerFilter || stageFilter;
+  const hasFilters = search || segmentFilter || layerFilter || typeFilter || fundingFilter || regionFilter;
 
   const selectStyles = "px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-secondary hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
 
@@ -214,14 +232,40 @@ export default function ProjectTable({
           </select>
 
           <select
-            value={stageFilter || ''}
-            onChange={(e) => setStageFilter(e.target.value || null)}
+            value={typeFilter || ''}
+            onChange={(e) => setTypeFilter(e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All Types</option>
+            {companyTypes.map((t) => (
+              <option key={t} value={t}>
+                {COMPANY_TYPE_LABELS[t]}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={fundingFilter || ''}
+            onChange={(e) => setFundingFilter(e.target.value || null)}
             className={selectStyles}
           >
             <option value="">All Stages</option>
-            {stages.map((s) => (
+            {fundingStages.map((s) => (
               <option key={s} value={s}>
-                {STAGE_LABELS[s]}
+                {FUNDING_STAGE_LABELS[s]}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={regionFilter || ''}
+            onChange={(e) => setRegionFilter(e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All Regions</option>
+            {regions.map((r) => (
+              <option key={r} value={r}>
+                {REGION_LABELS[r]}
               </option>
             ))}
           </select>
@@ -280,29 +324,29 @@ export default function ProjectTable({
               </th>
               <th className="text-left px-5 py-4">
                 <button
-                  onClick={() => handleSort('stage')}
+                  onClick={() => handleSort('type')}
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
+                >
+                  Type
+                  <SortIcon column="type" />
+                </button>
+              </th>
+              <th className="text-left px-5 py-4">
+                <button
+                  onClick={() => handleSort('funding_stage')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Stage
-                  <SortIcon column="stage" />
+                  <SortIcon column="funding_stage" />
                 </button>
               </th>
-              <th className="text-right px-5 py-4">
+              <th className="text-left px-5 py-4">
                 <button
-                  onClick={() => handleSort('funding')}
-                  className="flex items-center gap-2 ml-auto label-refined hover:text-text-primary transition-colors"
+                  onClick={() => handleSort('region')}
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
-                  Funding
-                  <SortIcon column="funding" />
-                </button>
-              </th>
-              <th className="text-center px-5 py-4">
-                <button
-                  onClick={() => handleSort('founded')}
-                  className="flex items-center gap-2 mx-auto label-refined hover:text-text-primary transition-colors"
-                >
-                  Year
-                  <SortIcon column="founded" />
+                  Region
+                  <SortIcon column="region" />
                 </button>
               </th>
               <th className="text-center px-5 py-4 w-14">
@@ -404,24 +448,26 @@ export default function ProjectTable({
                       )}
                     </td>
                     <td className="px-5 py-4">
-                      {project.stage && (
+                      {project.company_type && (
                         <span className="text-sm text-text-muted">
-                          {formatStage(project.stage)}
+                          {COMPANY_TYPE_LABELS[project.company_type as CompanyType]}
                         </span>
                       )}
                     </td>
-                    <td className="px-5 py-4 text-right">
-                      {project.funding ? (
-                        <span className="text-sm font-medium tabular-nums text-text-secondary">
-                          {formatFunding(project.funding)}
+                    <td className="px-5 py-4">
+                      {project.funding_stage ? (
+                        <span className="text-sm text-text-muted">
+                          {FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]}
                         </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="px-5 py-4 text-center">
-                      {project.founded ? (
-                        <span className="text-sm tabular-nums text-text-muted">{project.founded}</span>
+                    <td className="px-5 py-4">
+                      {project.region ? (
+                        <span className="text-sm text-text-muted">
+                          {REGION_LABELS[project.region as Region]}
+                        </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>
                       )}

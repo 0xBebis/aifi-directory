@@ -4,7 +4,7 @@
     "name": "Feedzai",
     "tagline": "AI-native fraud and financial crime prevention platform for major banks",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 282000000,
     "website": "https://feedzai.com",
@@ -12,21 +12,24 @@
     "hq_country": "US",
     "hq_city": "San Mateo",
     "segments": [
-      "payments",
+      "banking",
       "lending",
       "crypto"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "sardine",
     "name": "Sardine",
     "tagline": "AI risk platform for fraud, credit, and compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 75000000,
     "website": "https://www.sardine.ai",
@@ -34,73 +37,88 @@
     "hq_country": "US",
     "hq_city": "San Francisco",
     "segments": [
-      "payments",
+      "banking",
       "lending",
       "crypto"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "hawk-ai",
     "name": "Hawk AI",
     "tagline": "AI-powered AML and fraud detection for banks and fintechs",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://hawk.ai",
     "founded": 2018,
     "hq_country": "DE",
-    "hq_city": "Munich"
+    "hq_city": "Munich",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "resistant-ai",
     "name": "Resistant AI",
     "tagline": "AI models for document fraud and financial crime prevention",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 25000000,
     "website": "https://resistant.ai",
     "founded": 2019,
     "hq_country": "CZ",
-    "hq_city": "Prague"
+    "hq_city": "Prague",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "flagright",
     "name": "Flagright",
     "tagline": "AI-native transaction monitoring and AML compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://www.flagright.com",
     "founded": 2021,
     "hq_country": "DE",
-    "hq_city": "Berlin"
+    "hq_city": "Berlin",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "tookitaki",
     "name": "Tookitaki",
     "tagline": "AI with community-driven intelligence for AML and fraud",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://www.tookitaki.com",
     "founded": 2014,
     "hq_country": "SG",
-    "hq_city": "Singapore"
+    "hq_city": "Singapore",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "apac"
   },
   {
     "slug": "alloy",
     "name": "Alloy",
     "tagline": "Identity decisioning platform with 160+ data sources",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 1550000000,
     "website": "https://www.alloy.com",
@@ -109,19 +127,22 @@
     "hq_city": "New York",
     "segments": [
       "lending",
-      "payments"
+      "banking"
     ],
     "layers": [
       "data",
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "unit21",
     "name": "Unit21",
     "tagline": "AI-powered fraud and AML platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.unit21.ai",
@@ -129,21 +150,24 @@
     "hq_country": "US",
     "hq_city": "San Francisco",
     "segments": [
-      "payments",
+      "banking",
       "lending",
       "crypto"
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "trm-labs",
     "name": "TRM Labs",
     "tagline": "Blockchain analytics for crypto fraud/AML",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 150000000,
     "website": "https://www.trmlabs.com",
@@ -155,15 +179,18 @@
     ],
     "layers": [
       "data",
-      "application"
-    ]
+      "applications"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "chainalysis",
     "name": "Chainalysis",
     "tagline": "Blockchain analysis and crypto compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 8600000000,
     "website": "https://www.chainalysis.com",
@@ -175,15 +202,18 @@
     ],
     "layers": [
       "data",
-      "application"
-    ]
+      "applications"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "socure",
     "name": "Socure",
     "tagline": "Digital identity verification and fraud prevention",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 4500000000,
     "website": "https://www.socure.com",
@@ -192,38 +222,47 @@
     "hq_city": "New York",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "idenfy",
     "name": "iDenfy",
     "tagline": "AI-driven identity verification with 4D biometric detection",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://www.idenfy.com",
     "founded": 2017,
     "hq_country": "LT",
-    "hq_city": "Vilnius"
+    "hq_city": "Vilnius",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "darwinium",
     "name": "Darwinium",
     "tagline": "Real-time fraud detection across digital interactions",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 26000000,
     "website": "https://www.darwinium.com",
     "founded": 2021,
     "hq_country": "AU",
-    "hq_city": "Sydney"
+    "hq_city": "Sydney",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "apac"
   },
   {
     "slug": "greenlite",
@@ -235,33 +274,39 @@
     "website": "https://www.greenlite.ai",
     "founded": 2023,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "upstart",
     "name": "Upstart",
     "tagline": "AI lending platform using alternative data for credit decisions",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "website": "https://www.upstart.com",
     "founded": 2012,
     "hq_country": "US",
     "hq_city": "San Mateo",
     "segments": [
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "zest-ai",
     "name": "Zest AI",
     "tagline": "AI-automated underwriting for credit unions and banks",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 200000000,
     "website": "https://www.zest.ai",
@@ -269,108 +314,132 @@
     "hq_country": "US",
     "hq_city": "Burbank",
     "segments": [
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "pagaya",
     "name": "Pagaya",
     "tagline": "AI-driven financial network connecting banks to lending",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "website": "https://pagaya.com",
     "founded": 2016,
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "personal",
+      "enterprise",
       "wealth"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "scienaptic-ai",
     "name": "Scienaptic AI",
     "tagline": "AI credit decisioning platform for financial institutions",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.scienaptic.ai",
     "founded": 2014,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "underwriteai",
     "name": "Underwrite.ai",
     "tagline": "AI underwriting and credit risk modeling for lenders",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://www.underwrite.ai",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "finbotsai",
     "name": "FinbotsAI",
     "tagline": "AI credit scoring platform for emerging markets",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "funding": 5000000,
     "website": "https://www.finbots.ai",
     "hq_country": "SG",
-    "hq_city": "Singapore"
+    "hq_city": "Singapore",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "apac"
   },
   {
     "slug": "kaaj",
     "name": "Kaaj",
     "tagline": "Agentic AI for small-business lending automation",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "funding": 3800000,
     "website": "https://kaaj.ai",
     "founded": 2024,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "lendbuzz",
     "name": "Lendbuzz",
     "tagline": "AI auto financing for underserved populations",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 500000000,
     "website": "https://www.lendbuzz.com",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "credolab",
     "name": "CredoLab",
     "tagline": "Alternative credit scoring using smartphone data",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.credolab.com",
     "hq_country": "SG",
-    "hq_city": "Singapore"
+    "hq_city": "Singapore",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "apac"
   },
   {
     "slug": "ocrolus",
@@ -389,15 +458,18 @@
       "risk"
     ],
     "layers": [
-      "intelligence",
+      "models",
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "stripe",
     "name": "Stripe",
     "tagline": "AI-powered payments platform with fraud detection",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "infrastructure",
     "stage": "growth",
     "funding": 65000000000,
@@ -409,15 +481,18 @@
       "lending"
     ],
     "layers": [
-      "application"
-    ]
+      "applications"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "ramp",
     "name": "Ramp",
     "tagline": "AI-powered corporate cards and spend management",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "growth",
     "funding": 2300000000,
     "website": "https://ramp.com",
@@ -425,20 +500,23 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "personal",
+      "enterprise",
       "lending"
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "brex",
     "name": "Brex",
     "tagline": "AI corporate card and financial stack for startups",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "growth",
     "funding": 1500000000,
     "website": "https://www.brex.com",
@@ -446,12 +524,15 @@
     "hq_country": "US",
     "hq_city": "San Francisco",
     "segments": [
-      "personal",
+      "enterprise",
       "lending"
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "natural",
@@ -462,7 +543,10 @@
     "stage": "seed",
     "funding": 9800000,
     "website": "https://www.naturalfinance.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "catena-labs",
@@ -472,14 +556,17 @@
     "layer": "automation",
     "stage": "pre_seed",
     "website": "https://www.catena.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "betterment",
     "name": "Betterment",
     "tagline": "Pioneer robo-advisor with AI portfolio management",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 435000000,
     "website": "https://www.betterment.com",
@@ -487,19 +574,22 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "wealthfront",
     "name": "Wealthfront",
     "tagline": "Automated investment platform with tax optimization",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 200000000,
     "website": "https://www.wealthfront.com",
@@ -507,20 +597,23 @@
     "hq_country": "US",
     "hq_city": "Palo Alto",
     "segments": [
-      "personal",
+      "enterprise",
       "lending"
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "quantconnect",
     "name": "QuantConnect",
     "tagline": "Open-source algorithmic trading platform",
     "segment": "trading",
-    "layer": "harness",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://www.quantconnect.com",
@@ -531,16 +624,18 @@
       "research"
     ],
     "layers": [
-      "application",
       "infrastructure"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "composer",
     "name": "Composer",
     "tagline": "AI trading strategy builder without code",
     "segment": "trading",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.composer.trade",
@@ -552,28 +647,37 @@
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "trade-ideas",
     "name": "Trade Ideas",
     "tagline": "AI-powered trading signals with Holly AI",
     "segment": "trading",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.trade-ideas.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "portfoliopilot",
     "name": "PortfolioPilot",
     "tagline": "Fully automated AI financial advisor",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 20000000000,
     "website": "https://portfoliopilot.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "tegus",
@@ -586,14 +690,17 @@
     "website": "https://www.tegus.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "alphasense",
     "name": "AlphaSense",
     "tagline": "AI-powered market and search intelligence",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 4000000000,
     "website": "https://www.alpha-sense.com",
@@ -601,85 +708,105 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "capital",
       "trading",
       "wealth"
     ],
     "layers": [
-      "intelligence",
+      "models",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "sentieo-now-alphasense",
     "name": "Sentieo (Now AlphaSense)",
     "tagline": "AI financial data and research platform",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.sentieo.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "trumid",
     "name": "Trumid",
     "tagline": "AI-powered fixed income trading platform",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "stage": "series_c_plus",
     "funding": 208000000,
     "website": "https://www.trumid.com",
     "founded": 2014,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "tickeron",
     "name": "Tickeron",
     "tagline": "AI pattern recognition for trading",
     "segment": "trading",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://tickeron.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "trendspider",
     "name": "TrendSpider",
     "tagline": "Automated technical analysis with AI",
     "segment": "trading",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://trendspider.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "alphaai",
     "name": "alphaAI",
     "tagline": "AI robo-advisor with dynamic strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "website": "https://www.alphaai.capital",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "lemonade",
     "name": "Lemonade",
     "tagline": "AI-native insurance company",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.lemonade.com",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "shift-technology",
     "name": "Shift Technology",
     "tagline": "AI fraud detection for insurance claims",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 320000000,
     "website": "https://www.shift-technology.com",
@@ -692,108 +819,135 @@
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "akur8",
     "name": "Akur8",
     "tagline": "AI pricing and reserving for insurers",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 60000000,
     "website": "https://www.akur8.com",
     "founded": 2018,
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "corvus-travelers",
     "name": "Corvus (Travelers)",
     "tagline": "AI-driven cyber insurance",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "acquired",
     "website": "https://www.corvusinsurance.com",
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "next-insurance",
     "name": "NEXT Insurance",
     "tagline": "AI-powered small business insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://www.nextinsurance.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "coterie-insurance",
     "name": "Coterie Insurance",
     "tagline": "AI quotes for small business in 60 seconds",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.coterieinsurance.com",
     "founded": 2018,
     "hq_country": "US",
-    "hq_city": "Cincinnati"
+    "hq_city": "Cincinnati",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "coalition",
     "name": "Coalition",
     "tagline": "Active cyber insurance with AI risk monitoring",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 5000000000,
     "website": "https://www.coalitioninc.com",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "hippo",
     "name": "Hippo",
     "tagline": "AI-powered smart home insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.hippo.com",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "bestow",
     "name": "Bestow",
     "tagline": "AI-powered life insurance platform",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 2700000000,
     "website": "https://www.bestow.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "Dallas"
+    "hq_city": "Dallas",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "marshmallow",
     "name": "Marshmallow",
     "tagline": "AI pricing for immigrant auto insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 1200000000,
     "website": "https://www.marshmallow.com",
     "founded": 2017,
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "pibitai",
@@ -803,116 +957,146 @@
     "layer": "automation",
     "website": "https://www.pibit.ai",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "corgi-insurance",
     "name": "Corgi Insurance",
     "tagline": "AI-native full-stack carrier for startups",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 108000000,
     "website": "https://www.getcorgi.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "sixfold",
     "name": "Sixfold",
     "tagline": "AI agents for underwriting referrals",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "website": "https://www.sixfold.ai",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "puzzle",
     "name": "Puzzle",
     "tagline": "Generative accounting platform for startups",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.puzzle.io",
     "founded": 2019,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "pilot",
     "name": "Pilot",
     "tagline": "AI-assisted bookkeeping for startups",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 160000000,
     "website": "https://pilot.com",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "zeni",
     "name": "Zeni",
     "tagline": "Full-service AI bookkeeping platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://www.zeni.ai",
     "founded": 2020,
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "taxfix",
     "name": "Taxfix",
     "tagline": "AI-powered tax filing app",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 330000000,
     "website": "https://taxfix.de",
     "founded": 2016,
     "hq_country": "DE",
-    "hq_city": "Berlin"
+    "hq_city": "Berlin",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "pennylane",
     "name": "Pennylane",
     "tagline": "AI accounting for French market",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 213000000,
     "website": "https://www.pennylane.com",
     "founded": 2020,
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "blue-dot",
     "name": "Blue Dot",
     "tagline": "AI-driven tax compliance platform",
-    "segment": "personal",
-    "layer": "intelligence",
+    "segment": "enterprise",
+    "layer": "models",
     "stage": "series_b",
     "funding": 82000000,
     "website": "https://www.bluedotcorp.com",
     "founded": 2013,
     "hq_country": "IL",
-    "hq_city": "Tel Aviv"
+    "hq_city": "Tel Aviv",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "taxgpt",
     "name": "TaxGPT",
     "tagline": "AI copilot for tax professionals",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.taxgpt.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "uplinq",
@@ -925,7 +1109,10 @@
     "website": "https://www.uplinq.com",
     "founded": 2020,
     "hq_country": "US",
-    "hq_city": "Tempe"
+    "hq_city": "Tempe",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "complianceai",
@@ -936,7 +1123,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.compliance.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "finrege",
@@ -948,29 +1138,38 @@
     "funding": 20000000,
     "website": "https://www.finreg-e.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "leo-regtech",
     "name": "Leo RegTech",
     "tagline": "AI compliance platform with Eva assistant",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://leo.tech",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "saifr-fidelity",
     "name": "SAIFR (Fidelity)",
     "tagline": "AI marketing and content compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://saifr.ai",
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "ascent-regtech",
@@ -982,24 +1181,30 @@
     "funding": 30000000,
     "website": "https://www.ascentregtech.com",
     "founded": 2015,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "ayasdi",
     "name": "Ayasdi",
     "tagline": "ML for risk and AML compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "acquired",
     "website": "https://www.ayasdi.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "revolut",
     "name": "Revolut",
     "tagline": "AI-powered financial super app",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "growth",
     "funding": 75000000000,
     "website": "https://www.revolut.com",
@@ -1013,14 +1218,17 @@
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "nubank",
     "name": "Nubank",
     "tagline": "AI-driven digital bank for LatAm",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "public",
     "website": "https://nubank.com.br",
     "founded": 2013,
@@ -1033,14 +1241,17 @@
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "monzo",
     "name": "Monzo",
     "tagline": "AI fraud detection and budgeting",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://monzo.com",
@@ -1049,30 +1260,36 @@
     "hq_city": "London",
     "segments": [
       "lending",
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "kasisto",
     "name": "Kasisto",
     "tagline": "KAI-GPT banking-specific LLM",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "series_b",
     "funding": 56000000,
     "website": "https://kasisto.com",
     "founded": 2013,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "mx",
     "name": "MX",
     "tagline": "AI-powered financial data enhancement",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "data",
     "stage": "series_c_plus",
     "funding": 400000000,
@@ -1083,22 +1300,28 @@
     "segments": [
       "lending",
       "wealth",
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "infrastructure"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "virtuals-protocol-virtual",
     "name": "Virtuals Protocol (VIRTUAL)",
     "tagline": "AI agent creation and tokenization platform on Base",
     "segment": "crypto",
-    "layer": "orchestration",
+    "layer": "automation",
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://www.virtuals.io",
-    "hq_country": "SG"
+    "hq_country": "SG",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "apac"
   },
   {
     "slug": "aixbt",
@@ -1109,7 +1332,10 @@
     "stage": "series_c_plus",
     "funding": 200000000,
     "website": "https://aixbt.tech",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "vaderai",
@@ -1118,18 +1344,24 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://www.vader.fun",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "spectral-spec",
     "name": "Spectral (SPEC)",
     "tagline": "No-code AI agents for DeFi automation",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.spectral.finance",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "bittensor-tao",
@@ -1145,9 +1377,12 @@
       "research"
     ],
     "layers": [
-      "intelligence",
+      "models",
       "data"
-    ]
+    ],
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "targon-compute-sn4",
@@ -1158,7 +1393,10 @@
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://targon.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "hippius",
@@ -1167,16 +1405,22 @@
     "segment": "crypto",
     "layer": "infrastructure",
     "website": "https://hippius.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "general-tao-ventures",
     "name": "General TAO Ventures",
     "tagline": "Subnet incubation and Project Rubicon bridge",
     "segment": "crypto",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://generaltao.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "yuma",
@@ -1185,27 +1429,36 @@
     "segment": "crypto",
     "layer": "infrastructure",
     "website": "https://yuma.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "ai16zelizaos",
     "name": "ai16z/ElizaOS",
     "tagline": "AI-managed investment DAO on Solana",
     "segment": "crypto",
-    "layer": "orchestration",
+    "layer": "automation",
     "stage": "series_c_plus",
     "funding": 400000000,
     "website": "https://elizaos.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "eliza-framework",
     "name": "Eliza Framework",
     "tagline": "Open-source multi-agent simulation platform",
     "segment": "crypto",
-    "layer": "orchestration",
+    "layer": "automation",
     "website": "https://github.com/elizaos/eliza",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "fetchai-fet",
@@ -1225,8 +1478,11 @@
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "singularitynet-agixfet",
@@ -1243,7 +1499,10 @@
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "ocean-protocol-oceanfet",
@@ -1259,7 +1518,10 @@
     ],
     "layers": [
       "infrastructure"
-    ]
+    ],
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "apac"
   },
   {
     "slug": "render-render",
@@ -1278,30 +1540,39 @@
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "autonolas-olas",
     "name": "Autonolas (OLAS)",
     "tagline": "Autonomous agent services framework",
     "segment": "crypto",
-    "layer": "orchestration",
+    "layer": "automation",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://olas.network",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "chaingpt",
     "name": "ChainGPT",
     "tagline": "AI tools for blockchain analysis",
     "segment": "crypto",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.chaingpt.org",
-    "hq_country": "AE"
+    "hq_country": "AE",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "emea"
   },
   {
     "slug": "paal-ai",
@@ -1312,7 +1583,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.paal.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "freysa-ai",
@@ -1321,18 +1595,24 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://www.freysa.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "arc-ai-rig-complex",
     "name": "ARC (AI Rig Complex)",
     "tagline": "AI marketplace for model deployment",
     "segment": "crypto",
-    "layer": "orchestration",
+    "layer": "automation",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.arc.fun",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "truth-terminal",
@@ -1341,7 +1621,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://x.com/truth_terminal",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "idegen",
@@ -1352,14 +1635,17 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.idegen.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "openai",
     "name": "OpenAI",
     "tagline": "ChatGPT powers many fintech applications",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 500000000000,
     "website": "https://openai.com",
@@ -1371,23 +1657,25 @@
       "risk",
       "lending",
       "insurance",
-      "payments",
+      "banking",
       "wealth",
-      "capital",
       "crypto",
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "infrastructure",
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "anthropic",
     "name": "Anthropic",
     "tagline": "Claude used in finance applications",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 183000000000,
     "website": "https://www.anthropic.com",
@@ -1399,23 +1687,25 @@
       "risk",
       "lending",
       "insurance",
-      "payments",
+      "banking",
       "wealth",
-      "capital",
       "crypto",
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "infrastructure",
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "google-deepmind",
     "name": "Google DeepMind",
     "tagline": "AlphaFold methodology applied to finance",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://deepmind.google",
     "founded": 2010,
     "hq_country": "GB",
@@ -1425,16 +1715,18 @@
       "risk",
       "lending",
       "insurance",
-      "payments",
+      "banking",
       "wealth",
-      "capital",
       "crypto",
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "infrastructure",
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "bloomberg-ai",
@@ -1448,13 +1740,15 @@
     "hq_city": "New York",
     "segments": [
       "trading",
-      "capital",
       "wealth"
     ],
     "layers": [
-      "application",
-      "intelligence"
-    ]
+      "applications",
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "refinitiv-lseg",
@@ -1467,32 +1761,37 @@
     "hq_city": "London",
     "segments": [
       "trading",
-      "capital",
       "risk"
     ],
     "layers": [
-      "application",
-      "intelligence"
-    ]
+      "applications",
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "affirm",
     "name": "Affirm",
     "tagline": "AI-driven buy now pay later",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.affirm.com",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "klarna",
     "name": "Klarna",
     "tagline": "AI-powered BNPL with agent features",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "public",
     "funding": 87000000000,
     "website": "https://www.klarna.com",
@@ -1504,72 +1803,90 @@
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "harvey",
     "name": "Harvey",
     "tagline": "AI for legal and financial document analysis",
-    "segment": "capital",
-    "layer": "application",
+    "segment": "research",
+    "layer": "applications",
     "stage": "growth",
     "funding": 5000000000,
     "website": "https://www.harvey.ai",
     "founded": 2022,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "hebbia",
     "name": "Hebbia",
     "tagline": "AI for financial document analysis",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 130000000,
     "website": "https://www.hebbia.ai",
     "founded": 2020,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "auquan",
     "name": "Auquan",
     "tagline": "AI agents for financial research workflows",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://auquan.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "fira",
     "name": "Fira",
     "tagline": "AI financial research for analysts",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.fira.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "aumni-jpmorgan",
     "name": "Aumni (JPMorgan)",
     "tagline": "AI deal analytics platform",
-    "segment": "capital",
+    "segment": "research",
     "layer": "data",
     "stage": "acquired",
     "website": "https://www.aumni.fund",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "Salt Lake City"
+    "hq_city": "Salt Lake City",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "highradius",
     "name": "Highradius",
     "tagline": "AI treasury and receivables platform",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_c_plus",
     "funding": 400000000,
@@ -1578,39 +1895,45 @@
     "hq_country": "US",
     "hq_city": "Houston",
     "segments": [
-      "payments"
+      "banking"
     ],
     "layers": [
-      "application",
-      "intelligence"
-    ]
+      "applications",
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "kyriba",
     "name": "Kyriba",
     "tagline": "AI-powered treasury management",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "growth",
     "funding": 500000000,
     "website": "https://www.kyriba.com",
     "hq_country": "US",
     "hq_city": "San Diego",
     "segments": [
-      "payments",
+      "banking",
       "risk"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "trovata",
     "name": "Trovata",
     "tagline": "AI cash management platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 80000000,
     "website": "https://trovata.io",
@@ -1618,32 +1941,41 @@
     "hq_country": "US",
     "hq_city": "San Diego",
     "segments": [
-      "payments"
+      "banking"
     ],
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "tesorio",
     "name": "Tesorio",
     "tagline": "AI accounts receivable platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.tesorio.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "campfire",
     "name": "Campfire",
     "tagline": "AI-powered ERP replacement",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.campfire.co",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "xelix",
@@ -1655,63 +1987,81 @@
     "funding": 30000000,
     "website": "https://www.xelix.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "borderlessalberni",
     "name": "Borderless/Alberni",
     "tagline": "AI agent for global employment automation",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.borderlessai.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "niural",
     "name": "Niural",
     "tagline": "EMMA AI agent runs payroll across 150 countries",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.niural.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "cleo",
     "name": "Cleo",
     "tagline": "AI financial assistant for Gen Z",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_c_plus",
     "funding": 200000000,
     "website": "https://www.meetcleo.com",
     "founded": 2016,
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "albert",
     "name": "Albert",
     "tagline": "AI financial guidance and banking",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 250000000,
     "website": "https://albert.com",
     "hq_country": "US",
-    "hq_city": "Los Angeles"
+    "hq_city": "Los Angeles",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "copilot-money",
     "name": "Copilot Money",
     "tagline": "AI-powered budgeting app",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://www.copilot.money",
     "founded": 2020,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "earnest-research",
@@ -1726,12 +2076,14 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "trading",
-      "capital"
+      "trading"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "thinknum",
@@ -1745,12 +2097,14 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "trading",
-      "capital"
+      "trading"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "yipitdata",
@@ -1764,12 +2118,14 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "trading",
-      "capital"
+      "trading"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "quandl-nasdaq",
@@ -1781,19 +2137,25 @@
     "website": "https://www.quandl.com",
     "founded": 2012,
     "hq_country": "CA",
-    "hq_city": "Toronto"
+    "hq_city": "Toronto",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "ribbon-home",
     "name": "Ribbon Home",
     "tagline": "AI-powered cash offers for homes",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 400000000,
     "website": "https://www.ribbonhome.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "cape-analytics",
@@ -1810,136 +2172,169 @@
       "insurance"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "citadel-securities",
     "name": "Citadel Securities",
     "tagline": "AI-powered market making",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "website": "https://www.citadelsecurities.com",
     "founded": 2002,
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "two-sigma",
     "name": "Two Sigma",
     "tagline": "AI-driven quantitative hedge fund",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 60000000000,
     "website": "https://www.twosigma.com",
     "founded": 2001,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "de-shaw",
     "name": "D.E. Shaw",
     "tagline": "AI quantitative strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 60000000000,
     "website": "https://www.deshaw.com",
     "founded": 1988,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "renaissance-technologies",
     "name": "Renaissance Technologies",
     "tagline": "Medallion Fund AI strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 130000000000,
     "website": "https://www.rentec.com",
     "founded": 1982,
     "hq_country": "US",
-    "hq_city": "East Setauket"
+    "hq_city": "East Setauket",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "jane-street",
     "name": "Jane Street",
     "tagline": "AI-powered trading firm",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.janestreet.com",
     "founded": 2000,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "bridgewater",
     "name": "Bridgewater",
     "tagline": "AI-enhanced macro strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 160000000000,
     "website": "https://www.bridgewater.com",
     "founded": 1975,
     "hq_country": "US",
-    "hq_city": "Westport"
+    "hq_city": "Westport",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "man-ahl",
     "name": "Man AHL",
     "tagline": "AI systematic strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 70000000000,
     "website": "https://www.man.com/ahl",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "worldquant",
     "name": "WorldQuant",
     "tagline": "Crowdsourced quant strategies",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 7000000000,
     "website": "https://www.worldquant.com",
     "founded": 2007,
     "hq_country": "US",
-    "hq_city": "Old Greenwich"
+    "hq_city": "Old Greenwich",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "high-flyer",
     "name": "High-Flyer",
     "tagline": "Chinese AI quant fund",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 10000000000,
     "website": "https://www.high-flyer.cn",
     "hq_country": "CN",
-    "hq_city": "Hangzhou"
+    "hq_city": "Hangzhou",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "apac"
   },
   {
     "slug": "ubiquity-china",
     "name": "Ubiquity (China)",
     "tagline": "Chinese AI lab for trading",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.ubiquant.com",
     "hq_country": "CN",
-    "hq_city": "Beijing"
+    "hq_city": "Beijing",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "apac"
   },
   {
     "slug": "onfido",
     "name": "Onfido",
     "tagline": "AI document and biometric verification",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "acquired",
     "website": "https://onfido.com",
     "founded": 2012,
@@ -1947,19 +2342,22 @@
     "hq_city": "London",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "jumio",
     "name": "Jumio",
     "tagline": "AI-powered identity proofing",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 150000000,
     "website": "https://www.jumio.com",
@@ -1968,19 +2366,22 @@
     "hq_city": "Palo Alto",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "persona",
     "name": "Persona",
     "tagline": "AI identity infrastructure platform",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 1500000000,
     "website": "https://withpersona.com",
@@ -1989,19 +2390,22 @@
     "hq_city": "San Francisco",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "veriff",
     "name": "Veriff",
     "tagline": "AI identity verification",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.veriff.com",
@@ -2010,19 +2414,22 @@
     "hq_city": "Tallinn",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "sumsub",
     "name": "Sumsub",
     "tagline": "AI all-in-one verification platform",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 80000000,
     "website": "https://sumsub.com",
@@ -2031,79 +2438,96 @@
     "hq_city": "London",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "kensho-sp-global",
     "name": "Kensho (S&P Global)",
     "tagline": "AI analytics for finance",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://kensho.com",
     "hq_country": "US",
     "hq_city": "Cambridge",
     "segments": [
       "trading",
-      "capital",
       "risk"
     ],
     "layers": [
       "data",
       "automation"
-    ]
+    ],
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "symphony-ayasdiai",
     "name": "Symphony AyasdiAI",
     "tagline": "AI risk and compliance analytics",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.symphony.com",
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "datarobot",
     "name": "DataRobot",
     "tagline": "AutoML platform for finance",
     "segment": "research",
-    "layer": "harness",
+    "layer": "applications",
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://www.datarobot.com",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "h2oai",
     "name": "H2O.ai",
     "tagline": "AI/ML platform for finance",
     "segment": "research",
-    "layer": "harness",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 250000000,
     "website": "https://h2o.ai",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "Mountain View"
+    "hq_city": "Mountain View",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "c3ai",
     "name": "C3.ai",
     "tagline": "AI applications for enterprises",
     "segment": "research",
-    "layer": "harness",
+    "layer": "applications",
     "stage": "public",
     "website": "https://c3.ai",
     "founded": 2009,
     "hq_country": "US",
-    "hq_city": "Redwood City"
+    "hq_city": "Redwood City",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "palantir",
@@ -2119,13 +2543,15 @@
     "segments": [
       "trading",
       "risk",
-      "capital",
       "insurance"
     ],
     "layers": [
-      "application",
+      "applications",
       "automation"
-    ]
+    ],
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "snowflake",
@@ -2142,12 +2568,14 @@
       "trading",
       "risk",
       "lending",
-      "insurance",
-      "capital"
+      "insurance"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "public",
+    "funding_stage": "public",
+    "region": "americas"
   },
   {
     "slug": "databricks",
@@ -2169,67 +2597,85 @@
     ],
     "layers": [
       "data",
-      "harness"
-    ]
+      "applications"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "gauntlet",
     "name": "Gauntlet",
     "tagline": "AI risk management for DeFi",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://www.gauntlet.xyz",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "chaos-labs",
     "name": "Chaos Labs",
     "tagline": "AI risk simulation for DeFi",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 55000000,
     "website": "https://chaoslabs.xyz",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "risk-harbor",
     "name": "Risk Harbor",
     "tagline": "AI-powered DeFi insurance",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://www.riskharbor.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "credora",
     "name": "Credora",
     "tagline": "AI credit assessment for crypto",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://credora.io",
     "founded": 2019,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "goldfinch",
     "name": "Goldfinch",
     "tagline": "AI credit scoring for emerging markets",
     "segment": "crypto",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://goldfinch.finance",
     "founded": 2020,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "arturo",
@@ -2241,14 +2687,17 @@
     "funding": 25000000,
     "website": "https://www.arturo.ai",
     "founded": 2018,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "tractable",
     "name": "Tractable",
     "tagline": "AI for auto insurance claims",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.tractable.ai",
@@ -2261,7 +2710,10 @@
     "layers": [
       "automation",
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "snapsheet",
@@ -2273,130 +2725,163 @@
     "funding": 100000000,
     "website": "https://www.snapsheetclaims.com",
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "ccc-intelligent",
     "name": "CCC Intelligent",
     "tagline": "AI auto claims solutions",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "website": "https://www.cccis.com",
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "personetics",
     "name": "Personetics",
     "tagline": "AI engagement platform for banks",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://personetics.com",
     "founded": 2011,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "posh-technologies",
     "name": "Posh Technologies",
     "tagline": "AI assistants for credit unions",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.posh.ai",
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "glia",
     "name": "Glia",
     "tagline": "AI-powered digital customer service",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "series_c_plus",
     "funding": 150000000,
     "website": "https://www.glia.com",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "finn-ai-glia",
     "name": "Finn AI (Glia)",
     "tagline": "AI chatbot for banking",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "acquired",
     "website": "https://www.finn.ai",
     "founded": 2014,
     "hq_country": "CA",
-    "hq_city": "Vancouver"
+    "hq_city": "Vancouver",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "abe-ai",
     "name": "Abe AI",
     "tagline": "AI voice assistant for finance",
-    "segment": "payments",
-    "layer": "application",
+    "segment": "banking",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://www.abe.ai",
     "hq_country": "US",
-    "hq_city": "Orlando"
+    "hq_city": "Orlando",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "numerai",
     "name": "Numerai",
     "tagline": "AI-powered crowdsourced hedge fund",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://numer.ai",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "quantopian-closed",
     "name": "Quantopian (Closed)",
     "tagline": "Crowdsourced quant platform",
     "segment": "trading",
-    "layer": "harness",
+    "layer": "applications",
     "website": "https://www.quantopian.com",
     "founded": 2011,
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "sigfig",
     "name": "SigFig",
     "tagline": "White-label robo-advisor",
     "segment": "wealth",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 130000000,
     "website": "https://www.sigfig.com",
     "founded": 2007,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "riskalyze",
     "name": "Riskalyze",
     "tagline": "AI risk tolerance assessment",
     "segment": "wealth",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.riskalyze.com",
     "founded": 2011,
     "hq_country": "US",
-    "hq_city": "Auburn"
+    "hq_city": "Auburn",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "nansen",
@@ -2409,70 +2894,88 @@
     "website": "https://www.nansen.ai",
     "founded": 2019,
     "hq_country": "SG",
-    "hq_city": "Singapore"
+    "hq_city": "Singapore",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "apac"
   },
   {
     "slug": "kabbage-amex",
     "name": "Kabbage (Amex)",
     "tagline": "AI small business lending",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.kabbage.com",
     "founded": 2009,
     "hq_country": "US",
-    "hq_city": "Atlanta"
+    "hq_city": "Atlanta",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "ondeck-enova",
     "name": "OnDeck (Enova)",
     "tagline": "AI small business lending",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.ondeck.com",
     "founded": 2006,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "fundbox",
     "name": "Fundbox",
     "tagline": "AI-powered B2B payments and credit",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 433000000,
     "website": "https://www.fundbox.com",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "clearco",
     "name": "Clearco",
     "tagline": "AI revenue-based financing",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 600000000,
     "website": "https://clear.co",
     "founded": 2015,
     "hq_country": "CA",
-    "hq_city": "Toronto"
+    "hq_city": "Toronto",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "petal",
     "name": "Petal",
     "tagline": "AI credit cards for thin-file",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 300000000,
     "website": "https://www.petalcard.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "argyle",
@@ -2485,7 +2988,10 @@
     "website": "https://argyle.com",
     "founded": 2018,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "truework",
@@ -2498,7 +3004,10 @@
     "website": "https://www.truework.com",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "hive-ai-crypto",
@@ -2507,7 +3016,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://hive.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "zerebro",
@@ -2516,7 +3028,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://www.zerebro.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "cookie-dao",
@@ -2527,7 +3042,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.cookie.fun",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "sekoia",
@@ -2536,7 +3054,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://sekoia.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "griffain",
@@ -2545,47 +3066,59 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://www.griffain.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "murphy-debt",
     "name": "Murphy (Debt)",
     "tagline": "AI agents for debt recovery",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "website": "https://www.murphyai.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "motive-formerly-keeptruckin",
     "name": "Motive (Formerly KeepTruckin)",
     "tagline": "AI fleet finance and management",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "growth",
     "funding": 2850000000,
     "website": "https://gomotive.com",
     "founded": 2013,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "magnifi",
     "name": "Magnifi",
     "tagline": "Conversational AI copilot for portfolio auditing and thematic investment discovery",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://magnifi.com",
     "founded": 2018,
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "personal-capital",
     "name": "Personal Capital",
     "tagline": "AI-powered wealth management with human advisors (acquired by Empower)",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "acquired",
     "funding": 1000000000,
     "website": "https://www.personalcapital.com",
@@ -2593,82 +3126,103 @@
     "hq_country": "US",
     "hq_city": "Redwood Shores",
     "segments": [
-      "personal"
+      "enterprise"
     ],
     "layers": [
       "automation",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "blooom",
     "name": "Blooom",
     "tagline": "AI-powered 401k optimization and management",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 17500000,
     "website": "https://www.blooom.com",
     "hq_country": "US",
-    "hq_city": "Kansas City"
+    "hq_city": "Kansas City",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "titan",
     "name": "Titan",
     "tagline": "AI-powered active investing with hedge fund strategies",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.titan.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "black-ore",
     "name": "Black Ore",
     "tagline": "AI tax prep platform for CPAs with 90% time savings",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.blackore.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "filed",
     "name": "Filed",
     "tagline": "AI automates tax prep within existing software",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.filedd.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "flyfin",
     "name": "FlyFin",
     "tagline": "AI finds deductions for freelancers and 1099 workers",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://flyfin.tax",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "inkle",
     "name": "Inkle",
     "tagline": "Tax and compliance automation for US startups",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.inkle.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "datasnipper",
     "name": "DataSnipper",
     "tagline": "AI audit automation platform for auditors",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_b",
     "funding": 1000000000,
@@ -2682,32 +3236,41 @@
     ],
     "layers": [
       "data",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "stampli",
     "name": "Stampli",
     "tagline": "AI-powered accounts payable with Billy the Bot",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_c_plus",
     "funding": 61000000,
     "website": "https://www.stampli.com",
     "hq_country": "US",
-    "hq_city": "Mountain View"
+    "hq_city": "Mountain View",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "trullion",
     "name": "Trullion",
     "tagline": "AI-powered auditing and accounting platform",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_b",
     "funding": 15000000,
     "website": "https://www.trullion.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "salient",
@@ -2718,16 +3281,22 @@
     "stage": "growth",
     "funding": 500000000,
     "website": "https://www.salient.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "january",
     "name": "January",
     "tagline": "AI-driven humane debt collection platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.january.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "skitai",
@@ -2736,7 +3305,10 @@
     "segment": "lending",
     "layer": "automation",
     "website": "https://www.skit.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "pair-finance",
@@ -2746,7 +3318,10 @@
     "layer": "automation",
     "website": "https://www.pairfinance.com",
     "hq_country": "DE",
-    "hq_city": "Berlin"
+    "hq_city": "Berlin",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "trueaccord",
@@ -2759,7 +3334,10 @@
     "website": "https://www.trueaccord.com",
     "founded": 2013,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "symend",
@@ -2772,7 +3350,10 @@
     "website": "https://www.symend.com",
     "founded": 2016,
     "hq_country": "CA",
-    "hq_city": "Calgary"
+    "hq_city": "Calgary",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "indebted",
@@ -2784,7 +3365,10 @@
     "funding": 65000000,
     "website": "https://www.indebted.co",
     "hq_country": "AU",
-    "hq_city": "Sydney"
+    "hq_city": "Sydney",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "apac"
   },
   {
     "slug": "collbox",
@@ -2794,7 +3378,10 @@
     "layer": "automation",
     "stage": "seed",
     "website": "https://www.collbox.co",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "attunely",
@@ -2805,7 +3392,10 @@
     "stage": "series_a",
     "funding": 12000000,
     "website": "https://www.attunely.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "cr-software",
@@ -2814,40 +3404,52 @@
     "segment": "lending",
     "layer": "automation",
     "website": "https://www.crsoftwareinc.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "kiavi",
     "name": "Kiavi",
     "tagline": "AI-powered loans for real estate investors (formerly LendingHome)",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 167000000,
     "website": "https://www.kiavi.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "beeline-magicblocks",
     "name": "Beeline (MagicBlocks)",
     "tagline": "Bob AI for mortgage sales automation",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.beeline.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "metropolis",
     "name": "Metropolis",
     "tagline": "AI computer vision for checkout-free parking",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "automation",
     "stage": "acquired",
     "website": "https://www.metropolis.io",
     "hq_country": "US",
-    "hq_city": "Los Angeles"
+    "hq_city": "Los Angeles",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "eliseai",
@@ -2859,48 +3461,63 @@
     "funding": 2200000000,
     "website": "https://www.eliseai.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "keyway",
     "name": "Keyway",
     "tagline": "AI-powered real estate investment manager",
-    "segment": "capital",
-    "layer": "application",
+    "segment": "research",
+    "layer": "applications",
     "website": "https://www.keyway.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "home365",
     "name": "Home365",
     "tagline": "AI-powered predictive property management",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.home365.co",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "casavo",
     "name": "Casavo",
     "tagline": "AI-powered instant home buying in Europe",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 480000000,
     "website": "https://casavo.com",
     "hq_country": "IT",
-    "hq_city": "Milan"
+    "hq_city": "Milan",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "entera",
     "name": "Entera",
     "tagline": "AI for real estate investment decisions",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.entera.ai",
     "hq_country": "US",
-    "hq_city": "Austin"
+    "hq_city": "Austin",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "compstak",
@@ -2914,12 +3531,14 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "lending",
-      "capital"
+      "lending"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "mapped",
@@ -2929,64 +3548,79 @@
     "layer": "data",
     "website": "https://www.mapped.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "rocket-money",
     "name": "Rocket Money",
     "tagline": "AI finds and cancels unused subscriptions",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.rocketmoney.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "origin-financial",
     "name": "Origin Financial",
     "tagline": "AI financial advisor with CFP access",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://useorigin.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "digit",
     "name": "Digit",
     "tagline": "AI-powered automatic savings app",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://digit.co",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "au10tix",
     "name": "AU10TIX",
     "tagline": "AI-powered ID authentication and fraud prevention",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.au10tix.com",
     "hq_country": "IL",
     "hq_city": "Tel Aviv",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "incode",
     "name": "Incode",
     "tagline": "AI identity verification with deepfake detection",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 200000000,
     "website": "https://incode.com",
@@ -2994,44 +3628,56 @@
     "hq_city": "San Francisco",
     "segments": [
       "lending",
-      "payments",
+      "banking",
       "crypto"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "shufti-pro",
     "name": "Shufti Pro",
     "tagline": "AI-powered KYC and AML compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://shuftipro.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "didit",
     "name": "Didit",
     "tagline": "AI-native identity verification with free tier",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.didit.me",
     "hq_country": "ES",
-    "hq_city": "Madrid"
+    "hq_city": "Madrid",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "identomat",
     "name": "Identomat",
     "tagline": "AI-powered video KYC with biometrics",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://identomat.com",
     "hq_country": "GE",
-    "hq_city": "Tbilisi"
+    "hq_city": "Tbilisi",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "near-protocol",
@@ -3042,7 +3688,10 @@
     "stage": "growth",
     "funding": 3000000000,
     "website": "https://near.org",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "internet-computer-icp",
@@ -3054,7 +3703,10 @@
     "funding": 4000000000,
     "website": "https://internetcomputer.org",
     "hq_country": "CH",
-    "hq_city": "Zurich"
+    "hq_city": "Zurich",
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "akash-network",
@@ -3071,18 +3723,24 @@
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "singularitydao-sdao",
     "name": "SingularityDAO (SDAO)",
     "tagline": "AI-managed crypto portfolios (Dynasets)",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://singularitydao.ai",
-    "hq_country": "NL"
+    "hq_country": "NL",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "emea"
   },
   {
     "slug": "oraichain",
@@ -3094,18 +3752,24 @@
     "funding": 100000000,
     "website": "https://orai.io",
     "hq_country": "VN",
-    "hq_city": "Ho Chi Minh City"
+    "hq_city": "Ho Chi Minh City",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "apac"
   },
   {
     "slug": "cortex-ctxc",
     "name": "Cortex (CTXC)",
     "tagline": "Blockchain for on-chain machine learning",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.cortexlabs.ai",
-    "hq_country": "CN"
+    "hq_country": "CN",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "apac"
   },
   {
     "slug": "botto",
@@ -3116,7 +3780,10 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.botto.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "story-protocol-ip",
@@ -3125,7 +3792,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://www.story.foundation",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "qubic",
@@ -3136,7 +3806,10 @@
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://qubic.org",
-    "hq_country": "NL"
+    "hq_country": "NL",
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "origintrail-trac",
@@ -3148,7 +3821,10 @@
     "funding": 200000000,
     "website": "https://origintrail.io",
     "hq_country": "SI",
-    "hq_city": "Ljubljana"
+    "hq_city": "Ljubljana",
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "alethea-ai-ali",
@@ -3159,70 +3835,91 @@
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://alethea.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "ginimachine",
     "name": "GiniMachine",
     "tagline": "No-code AI credit scoring platform",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://ginimachine.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "peratera",
     "name": "Peratera",
     "tagline": "GenAI-driven cross-border banking",
     "segment": "crypto",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.peratera.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "finpilot",
     "name": "Finpilot",
     "tagline": "ChatGPT for financial questions",
-    "segment": "capital",
-    "layer": "application",
+    "segment": "research",
+    "layer": "applications",
     "website": "https://www.finpilot.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "9fin",
     "name": "9fin",
     "tagline": "AI-powered debt capital markets intelligence",
-    "segment": "capital",
+    "segment": "research",
     "layer": "data",
     "stage": "series_b",
     "funding": 88000000,
     "website": "https://9fin.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "rogo",
     "name": "Rogo",
     "tagline": "AI chatbot for investment banking research",
-    "segment": "capital",
-    "layer": "application",
+    "segment": "research",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 75000000,
     "website": "https://rogo.ai",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "daloopa",
     "name": "Daloopa",
     "tagline": "AI-driven financial data extraction",
-    "segment": "capital",
+    "segment": "research",
     "layer": "data",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.daloopa.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "dataminr",
@@ -3241,8 +3938,11 @@
       "risk"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "visible-alpha",
@@ -3253,264 +3953,333 @@
     "stage": "acquired",
     "website": "https://www.visiblealpha.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "koyfin",
     "name": "Koyfin",
     "tagline": "Financial data and analytics platform",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.koyfin.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "tabs",
     "name": "Tabs",
     "tagline": "AI-powered accounts receivable automation",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.tabs.inc",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "cube",
     "name": "Cube",
     "tagline": "AI-powered FP&A and budgeting platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.cubesoftware.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "datarails",
     "name": "Datarails",
     "tagline": "Conversational AI for FP&A",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.datarails.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "mosaic-tech",
     "name": "Mosaic Tech",
     "tagline": "AI for FP&A and scenario modeling",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://www.mosaic.tech",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "jirav",
     "name": "Jirav",
     "tagline": "AI-driven financial planning platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.jirav.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "prophix",
     "name": "Prophix",
     "tagline": "AI-powered corporate performance management",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.prophix.com",
     "hq_country": "CA",
-    "hq_city": "Mississauga"
+    "hq_city": "Mississauga",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "orum",
     "name": "Orum",
     "tagline": "AI-optimized instant money movement",
-    "segment": "payments",
+    "segment": "banking",
     "layer": "infrastructure",
     "stage": "series_b",
     "funding": 82000000,
     "website": "https://orum.io",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "ampla",
     "name": "Ampla",
     "tagline": "AI lending for consumer brands",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.ampla.io",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "wayflyer",
     "name": "Wayflyer",
     "tagline": "Revenue-based financing for ecommerce",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 300000000,
     "website": "https://www.wayflyer.com",
     "founded": 2019,
     "hq_country": "IE",
-    "hq_city": "Dublin"
+    "hq_city": "Dublin",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "vicarious",
     "name": "Vicarious",
     "tagline": "AI-powered music royalty financing",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.vicarious.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "gabi-experian",
     "name": "Gabi (Experian)",
     "tagline": "AI finds better insurance rates",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.gabi.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "acquired",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "jerry",
     "name": "Jerry",
     "tagline": "AI car insurance and car buying app",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 180000000,
     "website": "https://getjerry.com",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "ethos",
     "name": "Ethos",
     "tagline": "AI-powered instant life insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 2000000000,
     "website": "https://www.ethoslife.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "newfront",
     "name": "Newfront",
     "tagline": "AI-powered commercial insurance brokerage",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 240000000,
     "website": "https://www.newfront.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "at-bay",
     "name": "At-Bay",
     "tagline": "AI-powered cyber insurance for SMBs",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 292000000,
     "website": "https://www.at-bay.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "kin",
     "name": "Kin",
     "tagline": "AI-first home insurance for risky areas",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 250000000,
     "website": "https://www.kin.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "clearcover",
     "name": "Clearcover",
     "tagline": "AI-first auto insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 300000000,
     "website": "https://clearcover.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "openly",
     "name": "Openly",
     "tagline": "AI-powered premium home insurance",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.openly.com",
     "hq_country": "US",
-    "hq_city": "Boston"
+    "hq_city": "Boston",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "cowbell-cyber",
     "name": "Cowbell Cyber",
     "tagline": "AI-powered cyber insurance for SMBs",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 120000000,
     "website": "https://www.cowbell.insure",
     "hq_country": "US",
-    "hq_city": "Pleasanton"
+    "hq_city": "Pleasanton",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "covergenius",
     "name": "CoverGenius",
     "tagline": "AI-powered embedded insurance platform",
     "segment": "insurance",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 70000000,
     "website": "https://www.covergenius.com",
     "hq_country": "AU",
-    "hq_city": "Sydney"
+    "hq_city": "Sydney",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "apac"
   },
   {
     "slug": "cytora",
     "name": "Cytora",
     "tagline": "AI for commercial insurance underwriting",
     "segment": "insurance",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.cytora.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "planck",
@@ -3522,177 +4291,222 @@
     "funding": 70000000,
     "website": "https://www.planckdata.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "virtu-financial",
     "name": "Virtu Financial",
     "tagline": "AI-driven market making firm",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "stage": "public",
     "website": "https://www.virtu.com",
     "founded": 2008,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "hudson-river-trading",
     "name": "Hudson River Trading",
     "tagline": "AI-driven high-frequency trading",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "website": "https://www.hudsonrivertrading.com",
     "founded": 2002,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "optiver",
     "name": "Optiver",
     "tagline": "AI-powered market making",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "website": "https://www.optiver.com",
     "founded": 1986,
     "hq_country": "NL",
-    "hq_city": "Amsterdam"
+    "hq_city": "Amsterdam",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "flow-traders",
     "name": "Flow Traders",
     "tagline": "AI-driven ETF market maker",
     "segment": "trading",
-    "layer": "execution",
+    "layer": "automation",
     "stage": "public",
     "website": "https://www.flowtraders.com",
     "founded": 2004,
     "hq_country": "NL",
-    "hq_city": "Amsterdam"
+    "hq_city": "Amsterdam",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "aqr-capital",
     "name": "AQR Capital",
     "tagline": "Quantitative investment management",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 100000000000,
     "website": "https://www.aqr.com",
     "founded": 1998,
     "hq_country": "US",
-    "hq_city": "Greenwich"
+    "hq_city": "Greenwich",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "point72",
     "name": "Point72",
     "tagline": "AI-enhanced multi-strategy hedge fund",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 30000000000,
     "website": "https://www.point72.com",
     "founded": 2014,
     "hq_country": "US",
-    "hq_city": "Stamford"
+    "hq_city": "Stamford",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "man-group",
     "name": "Man Group",
     "tagline": "AI and quant-driven asset manager",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "funding": 150000000000,
     "website": "https://www.man.com",
     "founded": 1783,
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "pdt-partners",
     "name": "PDT Partners",
     "tagline": "Quantitative systematic trading",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 10000000000,
     "website": "https://www.pdtpartners.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "millennium-management",
     "name": "Millennium Management",
     "tagline": "AI-enhanced multi-strategy fund",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 60000000000,
     "website": "https://www.mlp.com",
     "founded": 1989,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "balyasny-asset-mgmt",
     "name": "Balyasny Asset Mgmt",
     "tagline": "AI-enhanced multi-strategy",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 20000000000,
     "website": "https://www.bamfunds.com",
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "marshall-wace",
     "name": "Marshall Wace",
     "tagline": "AI-driven systematic equity",
     "segment": "trading",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 60000000000,
     "website": "https://www.mwam.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "moneylion",
     "name": "MoneyLion",
     "tagline": "AI-powered financial membership",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.moneylion.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "addepar",
     "name": "Addepar",
     "tagline": "AI-powered wealth management platform",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "growth",
     "funding": 2200000000,
     "website": "https://addepar.com",
     "founded": 2009,
     "hq_country": "US",
-    "hq_city": "Mountain View"
+    "hq_city": "Mountain View",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "ethic",
     "name": "Ethic",
     "tagline": "AI-powered sustainable investing",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.ethic.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "snappy-kraken",
@@ -3701,31 +4515,40 @@
     "segment": "wealth",
     "layer": "automation",
     "website": "https://snappykraken.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "tifin",
     "name": "TIFIN",
     "tagline": "AI-powered wealth management solutions",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 148000000,
     "website": "https://www.tifin.com",
     "hq_country": "US",
-    "hq_city": "Boulder"
+    "hq_city": "Boulder",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "pontera",
     "name": "Pontera",
     "tagline": "ML platform for held-away accounts",
     "segment": "wealth",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 120000000,
     "website": "https://www.pontera.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "finny-ai",
@@ -3736,31 +4559,40 @@
     "stage": "series_a",
     "funding": 21000000,
     "website": "https://www.finny.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "hummingbird",
     "name": "Hummingbird",
     "tagline": "AI-powered AML and compliance",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.hummingbird.co",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "lucinity",
     "name": "Lucinity",
     "tagline": "AI for anti-money laundering",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 35000000,
     "website": "https://www.lucinity.com",
     "hq_country": "IS",
-    "hq_city": "Reykjavik"
+    "hq_city": "Reykjavik",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "quantexa",
@@ -3775,13 +4607,16 @@
     "hq_country": "GB",
     "hq_city": "London",
     "segments": [
-      "payments",
+      "banking",
       "lending",
       "insurance"
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "emea"
   },
   {
     "slug": "complyadvantage",
@@ -3796,134 +4631,170 @@
     "hq_country": "GB",
     "hq_city": "London",
     "segments": [
-      "payments",
+      "banking",
       "lending",
       "crypto",
       "wealth"
     ],
     "layers": [
       "automation"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "symphonyai-ayasdi",
     "name": "SymphonyAI (Ayasdi)",
     "tagline": "AI for financial crime detection",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.symphonyai.com",
     "hq_country": "US",
-    "hq_city": "Palo Alto"
+    "hq_city": "Palo Alto",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "napier-ai",
     "name": "Napier AI",
     "tagline": "AI anti-money laundering platform",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.napier.ai",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "silent-eight",
     "name": "Silent Eight",
     "tagline": "AI for sanctions and name screening",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://silenteight.com",
     "hq_country": "SG",
-    "hq_city": "Singapore"
+    "hq_city": "Singapore",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "apac"
   },
   {
     "slug": "kount",
     "name": "Kount",
     "tagline": "AI fraud prevention (Equifax)",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://kount.com",
     "hq_country": "US",
-    "hq_city": "Boise"
+    "hq_city": "Boise",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "riskified",
     "name": "Riskified",
     "tagline": "AI fraud prevention for ecommerce",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "website": "https://www.riskified.com",
     "founded": 2012,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "forter",
     "name": "Forter",
     "tagline": "AI identity and fraud prevention",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "growth",
     "funding": 525000000,
     "website": "https://www.forter.com",
     "founded": 2013,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "heron-finance",
     "name": "Heron Finance",
     "tagline": "AI-powered private credit",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.heronfinance.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "instead",
     "name": "Instead",
     "tagline": "AI-powered tax platform for accountants, automating tax preparation",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.instead.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "fyle",
     "name": "Fyle",
     "tagline": "AI-powered expense management and GST compliance",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 17000000,
     "website": "https://www.fylehq.com",
     "hq_country": "US",
-    "hq_city": "San Jose"
+    "hq_city": "San Jose",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "april-tax-solutions",
     "name": "April Tax Solutions",
     "tagline": "AI-powered embedded tax engine for fintech platforms",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "website": "https://www.getapril.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "heard-technologies",
     "name": "Heard Technologies",
     "tagline": "AI bookkeeping and tax prep for therapists",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://www.joinheard.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "reducto",
@@ -3937,80 +4808,97 @@
     "hq_city": "San Francisco",
     "segments": [
       "lending",
-      "insurance",
-      "capital"
+      "insurance"
     ],
     "layers": [
       "data",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "affinda",
     "name": "Affinda",
     "tagline": "AI document extraction for HR and finance",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_a",
     "funding": 23000000,
     "website": "https://www.affinda.com",
     "hq_country": "AU",
-    "hq_city": "Sydney"
+    "hq_city": "Sydney",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "apac"
   },
   {
     "slug": "klippa",
     "name": "Klippa",
     "tagline": "AI-powered invoice and document processing",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_a",
     "website": "https://www.klippa.com",
     "hq_country": "NL",
-    "hq_city": "Groningen"
+    "hq_city": "Groningen",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "docsumo",
     "name": "Docsumo",
     "tagline": "AI for bank statements and invoice extraction",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "seed",
     "funding": 5000000,
     "website": "https://www.docsumo.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "rossum",
     "name": "Rossum",
     "tagline": "AI document understanding without templates",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://rossum.ai",
     "founded": 2017,
     "hq_country": "CZ",
-    "hq_city": "Prague"
+    "hq_city": "Prague",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "instabase",
     "name": "Instabase",
     "tagline": "GenAI-powered document extraction",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://instabase.com",
     "founded": 2015,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "nanonets",
     "name": "Nanonets",
     "tagline": "Trainable AI OCR for finance documents",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_b",
     "funding": 30000000,
@@ -4023,146 +4911,185 @@
     ],
     "layers": [
       "data",
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "veryfi",
     "name": "Veryfi",
     "tagline": "AI expense and receipt capture",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.veryfi.com",
     "hq_country": "US",
-    "hq_city": "San Mateo"
+    "hq_city": "San Mateo",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "docuclipper",
     "name": "DocuClipper",
     "tagline": "AI for bank statements and reconciliation",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "bootstrapped",
     "website": "https://www.docuclipper.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "heron-data",
     "name": "Heron Data",
     "tagline": "AI document intake for lending and insurance",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://www.herondata.io",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "mindee",
     "name": "Mindee",
     "tagline": "AI document parsing with open-source docTR",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://mindee.com",
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "abbyy",
     "name": "ABBYY",
     "tagline": "Enterprise intelligent document processing",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "automation",
     "stage": "growth",
     "funding": 1000000000,
     "website": "https://www.abbyy.com",
     "hq_country": "US",
-    "hq_city": "Milpitas"
+    "hq_city": "Milpitas",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "hyperscience",
     "name": "Hyperscience",
     "tagline": "AI-powered document processing platform",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.hyperscience.com",
     "founded": 2014,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "eigen-technologies",
     "name": "Eigen Technologies",
     "tagline": "AI for complex financial document extraction",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "series_b",
     "funding": 55000000,
     "website": "https://www.eigentech.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "kofax",
     "name": "Kofax",
     "tagline": "Intelligent automation for document processing",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "acquired",
     "website": "https://www.kofax.com",
     "hq_country": "US",
-    "hq_city": "Irvine"
+    "hq_city": "Irvine",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "extract-systems",
     "name": "Extract Systems",
     "tagline": "AI document data extraction",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "acquired",
     "website": "https://extractsystems.com",
     "hq_country": "US",
-    "hq_city": "Madison"
+    "hq_city": "Madison",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "parascript",
     "name": "Parascript",
     "tagline": "AI for check and payment processing",
-    "segment": "personal",
-    "layer": "execution",
+    "segment": "enterprise",
+    "layer": "automation",
     "website": "https://www.parascript.com",
     "hq_country": "US",
-    "hq_city": "Boulder"
+    "hq_city": "Boulder",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "workfusion",
     "name": "WorkFusion",
     "tagline": "AI-powered intelligent automation",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "stage": "series_c_plus",
     "funding": 340000000,
     "website": "https://www.workfusion.com",
     "founded": 2010,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "idaciti",
     "name": "idaciti",
     "tagline": "AI for SEC filing extraction and analysis",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://idaciti.com",
     "hq_country": "US",
-    "hq_city": "Seattle"
+    "hq_city": "Seattle",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "tidalwave",
@@ -4173,52 +5100,67 @@
     "stage": "series_a",
     "funding": 22000000,
     "website": "https://www.tidalwave.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "ridley",
     "name": "Ridley",
     "tagline": "AI platform for selling homes without commission",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "funding": 6400000,
     "website": "https://www.ridley.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "openspace",
     "name": "OpenSpace",
     "tagline": "AI for construction documentation",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 155000000,
     "website": "https://www.openspace.ai",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "infogrid",
     "name": "Infogrid",
     "tagline": "AI-powered building sustainability",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 38000000,
     "website": "https://www.infogrid.io",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "lofty-ai",
     "name": "Lofty AI",
     "tagline": "AI for neighborhood growth prediction",
     "segment": "trading",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "website": "https://www.lofty.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "ojo-labs",
@@ -4230,28 +5172,37 @@
     "funding": 100000000,
     "website": "https://www.ojolabs.com",
     "hq_country": "US",
-    "hq_city": "Austin"
+    "hq_city": "Austin",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "vero",
     "name": "Vero",
     "tagline": "AI fraud screening for leasing",
     "segment": "lending",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "acquired",
     "website": "https://www.vero.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "prop-ai",
     "name": "Prop-AI",
     "tagline": "AI for real estate decision-making",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "pre_seed",
     "funding": 1500000,
     "website": "https://www.prop.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "pre-seed",
+    "region": "americas"
   },
   {
     "slug": "leaseai",
@@ -4262,18 +5213,24 @@
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.leaseai.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "constructify",
     "name": "Constructify",
     "tagline": "AI-powered construction project management",
     "segment": "lending",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 70000000,
     "website": "https://constructify.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "rentlytics",
@@ -4283,7 +5240,10 @@
     "layer": "data",
     "stage": "acquired",
     "website": "https://www.rentlytics.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "reonomy",
@@ -4297,12 +5257,14 @@
     "hq_country": "US",
     "hq_city": "New York",
     "segments": [
-      "lending",
-      "capital"
+      "lending"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "cherre",
@@ -4317,12 +5279,14 @@
     "hq_city": "New York",
     "segments": [
       "lending",
-      "capital",
       "insurance"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "receeve",
@@ -4334,7 +5298,10 @@
     "funding": 50000000,
     "website": "https://www.receeve.com",
     "hq_country": "DE",
-    "hq_city": "Berlin"
+    "hq_city": "Berlin",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "collectwise",
@@ -4343,7 +5310,10 @@
     "segment": "lending",
     "layer": "automation",
     "website": "https://www.collectwise.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "collectly",
@@ -4354,107 +5324,137 @@
     "stage": "series_b",
     "funding": 35000000,
     "website": "https://www.collectly.co",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "livevox",
     "name": "Livevox",
     "tagline": "AI contact center for collections",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.livevox.com",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "fico-debt-manager",
     "name": "FICO Debt Manager",
     "tagline": "AI-powered collections optimization",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.fico.com",
     "hq_country": "US",
-    "hq_city": "Bozeman"
+    "hq_city": "Bozeman",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "beyond-arm",
     "name": "Beyond ARM",
     "tagline": "AI receivables management automation",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.beyondarm.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "my-dso-manager",
     "name": "My DSO Manager",
     "tagline": "AI-powered DSO and cash forecasting",
-    "segment": "personal",
+    "segment": "enterprise",
     "layer": "data",
     "website": "https://www.mydsomanager.com",
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "yaypay",
     "name": "YayPay",
     "tagline": "AI-powered accounts receivable",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.yaypay.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "esker",
     "name": "Esker",
     "tagline": "AI document automation for AR/AP",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.esker.com",
     "founded": 1985,
     "hq_country": "FR",
-    "hq_city": "Lyon"
+    "hq_city": "Lyon",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "versapay",
     "name": "Versapay",
     "tagline": "AI-powered AR collaboration platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.versapay.com",
     "hq_country": "CA",
-    "hq_city": "Toronto"
+    "hq_city": "Toronto",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "gaviti",
     "name": "Gaviti",
     "tagline": "AI collection automation for B2B",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://www.gaviti.com",
     "hq_country": "IL",
-    "hq_city": "Tel Aviv"
+    "hq_city": "Tel Aviv",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "sylvera",
     "name": "Sylvera",
     "tagline": "AI-powered carbon credit ratings",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 97000000,
     "website": "https://www.sylvera.com",
     "founded": 2020,
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "briink",
@@ -4466,30 +5466,39 @@
     "funding": 10000000,
     "website": "https://www.briink.com",
     "hq_country": "NL",
-    "hq_city": "Amsterdam"
+    "hq_city": "Amsterdam",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "zevero",
     "name": "Zevero",
     "tagline": "AI ESG disclosure and carbon accounting",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "funding": 7000000,
     "website": "https://www.zevero.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "treefera",
     "name": "Treefera",
     "tagline": "AI for forest carbon verification",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 42000000,
     "website": "https://www.treefera.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "arabesque",
@@ -4499,136 +5508,172 @@
     "layer": "data",
     "website": "https://www.arabesque.com",
     "hq_country": "DE",
-    "hq_city": "Frankfurt"
+    "hq_city": "Frankfurt",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "clarity-ai",
     "name": "Clarity AI",
     "tagline": "AI sustainability analytics platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://clarity.ai",
     "founded": 2017,
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "persefoni",
     "name": "Persefoni",
     "tagline": "AI climate management platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 101000000,
     "website": "https://persefoni.com",
     "founded": 2020,
     "hq_country": "US",
-    "hq_city": "Tempe"
+    "hq_city": "Tempe",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "watershed",
     "name": "Watershed",
     "tagline": "AI enterprise climate platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://watershed.com",
     "founded": 2019,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "greenly",
     "name": "Greenly",
     "tagline": "AI carbon accounting for SMBs",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 52000000,
     "website": "https://greenly.earth",
     "founded": 2019,
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "sweep",
     "name": "Sweep",
     "tagline": "AI enterprise carbon management",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.sweep.net",
     "founded": 2020,
     "hq_country": "FR",
-    "hq_city": "Paris"
+    "hq_city": "Paris",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "plan-a",
     "name": "Plan A",
     "tagline": "AI decarbonization platform",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 27000000,
     "website": "https://plana.earth",
     "hq_country": "DE",
-    "hq_city": "Berlin"
+    "hq_city": "Berlin",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "normative",
     "name": "Normative",
     "tagline": "AI-powered carbon accounting",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_a",
     "funding": 19000000,
     "website": "https://www.normative.io",
     "hq_country": "SE",
-    "hq_city": "Stockholm"
+    "hq_city": "Stockholm",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "sust",
     "name": "Sust",
     "tagline": "AI climate risk analytics for supply chains",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "website": "https://www.sust.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "carbon-bright",
     "name": "Carbon Bright",
     "tagline": "AI product lifecycle analysis",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.carbonbright.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "key-esg",
     "name": "KEY ESG",
     "tagline": "AI-driven ESG management platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.key.esg",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "sphera",
     "name": "Sphera",
     "tagline": "AI-powered ESG and risk management",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://sphera.com",
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "entelligent",
@@ -4639,17 +5684,23 @@
     "stage": "acquired",
     "website": "https://www.entelligent.com",
     "hq_country": "US",
-    "hq_city": "Denver"
+    "hq_city": "Denver",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "aiprise",
     "name": "AiPrise",
     "tagline": "AI-powered KYB compliance",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "website": "https://www.aiprise.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "notabene",
@@ -4661,89 +5712,113 @@
     "funding": 20000000,
     "website": "https://notabene.id",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "regula",
     "name": "Regula",
     "tagline": "AI document and face verification SDK",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 35000000,
     "website": "https://regulaforensics.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "ekata",
     "name": "Ekata",
     "tagline": "AI identity verification engine",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "acquired",
     "website": "https://ekata.com",
     "hq_country": "US",
-    "hq_city": "Seattle"
+    "hq_city": "Seattle",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "mitek",
     "name": "Mitek",
     "tagline": "AI mobile document capture and verification",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "stage": "public",
     "website": "https://www.miteksystems.com",
     "founded": 1986,
     "hq_country": "US",
-    "hq_city": "San Diego"
+    "hq_city": "San Diego",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "idnow",
     "name": "IDnow",
     "tagline": "AI identity verification for EU",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://www.idnow.io",
     "hq_country": "DE",
-    "hq_city": "Munich"
+    "hq_city": "Munich",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "iproov",
     "name": "iProov",
     "tagline": "AI facial biometric authentication",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_b",
     "funding": 70000000,
     "website": "https://www.iproov.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "trulioo",
     "name": "Trulioo",
     "tagline": "AI global identity verification network",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_c_plus",
     "funding": 475000000,
     "website": "https://www.trulioo.com",
     "founded": 2011,
     "hq_country": "CA",
-    "hq_city": "Vancouver"
+    "hq_city": "Vancouver",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "gbg",
     "name": "GBG",
     "tagline": "AI identity data intelligence",
     "segment": "risk",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "public",
     "website": "https://www.gbgplc.com",
     "hq_country": "GB",
-    "hq_city": "Chester"
+    "hq_city": "Chester",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "lexisnexis-risk-solutions",
@@ -4753,7 +5828,10 @@
     "layer": "data",
     "website": "https://risk.lexisnexis.com",
     "hq_country": "US",
-    "hq_city": "Atlanta"
+    "hq_city": "Atlanta",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "equifax-workforce-solutions",
@@ -4763,153 +5841,194 @@
     "layer": "data",
     "website": "https://workforce.equifax.com",
     "hq_country": "US",
-    "hq_city": "Atlanta"
+    "hq_city": "Atlanta",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "gtreasury",
     "name": "GTreasury",
     "tagline": "AI-enhanced treasury management system",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://gtreasury.com",
     "hq_country": "US",
-    "hq_city": "Chicago"
+    "hq_city": "Chicago",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "nomentia",
     "name": "Nomentia",
     "tagline": "AI-powered cash flow forecasting",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 60000000,
     "website": "https://www.nomentia.com",
     "hq_country": "FI",
-    "hq_city": "Helsinki"
+    "hq_city": "Helsinki",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "embat",
     "name": "Embat",
     "tagline": "AI corporate treasury platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_a",
     "website": "https://www.embat.io",
     "hq_country": "ES",
-    "hq_city": "Madrid"
+    "hq_city": "Madrid",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "nilus",
     "name": "Nilus",
     "tagline": "AI-powered treasury platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "seed",
     "website": "https://www.nilus.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "cashforce",
     "name": "Cashforce",
     "tagline": "AI cash flow forecasting and working capital",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://www.cashforce.com",
     "hq_country": "BE",
-    "hq_city": "Antwerp"
+    "hq_city": "Antwerp",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "tis-treasury-intelligence",
     "name": "TIS (Treasury Intelligence)",
     "tagline": "AI corporate payments and treasury",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "acquired",
     "website": "https://www.tis.biz",
     "hq_country": "DE",
-    "hq_city": "Walldorf"
+    "hq_city": "Walldorf",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "serrala",
     "name": "Serrala",
     "tagline": "AI-powered financial operations",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://www.serrala.com",
     "hq_country": "DE",
-    "hq_city": "Hamburg"
+    "hq_city": "Hamburg",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea"
   },
   {
     "slug": "refinitiv-eikon",
     "name": "Refinitiv Eikon",
     "tagline": "AI market data and analytics",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.refinitiv.com/eikon",
     "hq_country": "GB",
     "hq_city": "London",
     "segments": [
-      "trading",
-      "capital"
+      "trading"
     ],
     "layers": [
       "data"
-    ]
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "bloomberg-treasury",
     "name": "Bloomberg Treasury",
     "tagline": "AI treasury and risk analytics",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "website": "https://www.bloomberg.com/professional/product/treasury/",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "hazeltree",
     "name": "Hazeltree",
     "tagline": "AI treasury for hedge funds",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.hazeltree.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "adenza",
     "name": "Adenza",
     "tagline": "AI risk and trading platform",
     "segment": "risk",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.adenza.com",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "finbar",
     "name": "Finbar",
     "tagline": "AI investment analyst for hedge funds",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.finbar.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "keye",
     "name": "Keye",
     "tagline": "AI for private equity due diligence",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "website": "https://www.keye.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "trata",
@@ -4918,7 +6037,10 @@
     "segment": "research",
     "layer": "data",
     "website": "https://www.trata.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "fundguard",
@@ -4930,7 +6052,10 @@
     "funding": 100000000,
     "website": "https://www.fundguard.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "orbital-insight",
@@ -4948,8 +6073,11 @@
       "insurance"
     ],
     "layers": [
-      "intelligence"
-    ]
+      "models"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "quiver-quantitative",
@@ -4959,19 +6087,25 @@
     "layer": "data",
     "stage": "seed",
     "website": "https://www.quiverquant.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "atom-finance",
     "name": "Atom Finance",
     "tagline": "AI investment research for retail",
     "segment": "research",
-    "layer": "application",
+    "layer": "applications",
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://atom.finance",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "factset",
@@ -4983,7 +6117,10 @@
     "website": "https://www.factset.com",
     "founded": 1978,
     "hq_country": "US",
-    "hq_city": "Norwalk"
+    "hq_city": "Norwalk",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "sp-capital-iq",
@@ -4993,20 +6130,26 @@
     "layer": "data",
     "website": "https://www.spglobal.com/marketintelligence",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "rippling",
     "name": "Rippling",
     "tagline": "AI HR and payroll platform",
-    "segment": "personal",
-    "layer": "application",
+    "segment": "enterprise",
+    "layer": "applications",
     "stage": "series_c_plus",
     "funding": 450000000,
     "website": "https://www.rippling.com",
     "founded": 2016,
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "kaito-ai",
@@ -5017,29 +6160,38 @@
     "stage": "series_b",
     "funding": 85000000,
     "website": "https://www.kaito.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "modulus-labs",
     "name": "Modulus Labs",
     "tagline": "Zero-knowledge ML for DeFi",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "funding": 6300000,
     "website": "https://www.moduluslabs.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "eqty-lab",
     "name": "EQTY Lab",
     "tagline": "AI model verification on blockchain",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 12000000,
     "website": "https://www.eqtylab.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "sentient",
@@ -5050,7 +6202,10 @@
     "stage": "series_b",
     "funding": 85000000,
     "website": "https://sentient.foundation",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "vana",
@@ -5061,7 +6216,10 @@
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://www.vana.org",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "gensyn",
@@ -5073,7 +6231,10 @@
     "funding": 43000000,
     "website": "https://www.gensyn.ai",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "emea"
   },
   {
     "slug": "together-ai",
@@ -5085,7 +6246,10 @@
     "funding": 225000000,
     "website": "https://www.together.ai",
     "hq_country": "US",
-    "hq_city": "San Francisco"
+    "hq_city": "San Francisco",
+    "company_type": "private",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "prime-intellect",
@@ -5096,7 +6260,10 @@
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://www.primeintellect.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "grass",
@@ -5107,7 +6274,10 @@
     "stage": "seed",
     "funding": 4500000,
     "website": "https://www.getgrass.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "ionet",
@@ -5118,7 +6288,10 @@
     "stage": "series_a",
     "funding": 40000000,
     "website": "https://io.net",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "morpheus-mor",
@@ -5129,7 +6302,10 @@
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://mor.org",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "masa",
@@ -5140,7 +6316,10 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.masa.finance",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "ritual",
@@ -5151,7 +6330,10 @@
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://ritual.net",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "pond",
@@ -5162,7 +6344,10 @@
     "stage": "seed",
     "funding": 7500000,
     "website": "https://www.pond.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "allora",
@@ -5173,7 +6358,10 @@
     "stage": "series_b",
     "funding": 35000000,
     "website": "https://www.allora.network",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "0g-labs",
@@ -5184,7 +6372,10 @@
     "stage": "pre_seed",
     "funding": 35000000,
     "website": "https://0g.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "sahara-ai",
@@ -5195,18 +6386,24 @@
     "stage": "seed",
     "funding": 43000000,
     "website": "https://www.saharalabs.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "aligned-layer",
     "name": "Aligned Layer",
     "tagline": "ZK verification layer for AI",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://alignedlayer.com",
-    "hq_country": "AR"
+    "hq_country": "AR",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "hey-anon",
@@ -5217,7 +6414,10 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://www.heyanon.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "fair-launch",
+    "region": "americas"
   },
   {
     "slug": "bankr",
@@ -5228,7 +6428,10 @@
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://bankr.fi",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "hotkeyswap",
@@ -5239,7 +6442,10 @@
     "stage": "series_a",
     "funding": 12000000,
     "website": "https://hotkeyswap.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "orbit",
@@ -5250,7 +6456,10 @@
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://orbit.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "neur",
@@ -5261,7 +6470,10 @@
     "stage": "series_b",
     "funding": 45000000,
     "website": "https://neur.sh",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "heyelsa",
@@ -5272,7 +6484,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://heyelsa.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "cod3x",
@@ -5283,7 +6498,10 @@
     "stage": "seed",
     "funding": 7000000,
     "website": "https://cod3x.org",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "project-plutus",
@@ -5294,7 +6512,10 @@
     "stage": "seed",
     "funding": 8000000,
     "website": "https://projectplutus.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "aipump",
@@ -5305,7 +6526,10 @@
     "stage": "series_a",
     "funding": 10000000,
     "website": "https://aipump.fun",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "taocat",
@@ -5316,7 +6540,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://taocat.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "pippin",
@@ -5327,7 +6554,10 @@
     "stage": "series_a",
     "funding": 25000000,
     "website": "https://pippin.to",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "swarmnodeai",
@@ -5338,7 +6568,10 @@
     "stage": "series_b",
     "funding": 40000000,
     "website": "https://swarmnode.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "mode-network",
@@ -5349,7 +6582,10 @@
     "stage": "growth",
     "funding": 500000000,
     "website": "https://www.mode.network",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "late",
+    "region": "americas"
   },
   {
     "slug": "layer-ai",
@@ -5360,7 +6596,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://layer.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "ark-defai",
@@ -5371,40 +6610,52 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://ark.defai.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "hapi-protocol",
     "name": "HAPI Protocol",
     "tagline": "On-chain threat detection, 200K+ daily security requests",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "funding": 2000000,
     "website": "https://www.hapi.one",
-    "hq_country": "UA"
+    "hq_country": "UA",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "anti-rug-agent",
     "name": "Anti Rug Agent",
     "tagline": "AI-powered rug pull scanner with Chrome extension",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "funding": 5000000,
     "website": "https://antirug.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "soul-scanner",
     "name": "Soul Scanner",
     "tagline": "Telegram bot for smart contract vulnerability analysis",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "stage": "seed",
     "funding": 3000000,
     "website": "https://soulscanner.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "moby-ai",
@@ -5415,7 +6666,10 @@
     "stage": "series_b",
     "funding": 50000000,
     "website": "https://moby.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "slate",
@@ -5426,7 +6680,10 @@
     "stage": "series_a",
     "funding": 15000000,
     "website": "https://slate.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "subbd",
@@ -5437,7 +6694,10 @@
     "stage": "pre_seed",
     "funding": 1450000,
     "website": "https://subbd.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "pre-seed",
+    "region": "americas"
   },
   {
     "slug": "agentfunai",
@@ -5448,7 +6708,10 @@
     "stage": "series_a",
     "funding": 20000000,
     "website": "https://agentfun.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "chutes",
@@ -5459,7 +6722,10 @@
     "stage": "seed",
     "funding": 8000000,
     "website": "https://chutes.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "hermes-subquery",
@@ -5470,7 +6736,10 @@
     "stage": "seed",
     "funding": 5000000,
     "website": "https://hermessubquery.com",
-    "hq_country": "AU"
+    "hq_country": "AU",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "apac"
   },
   {
     "slug": "phala-network",
@@ -5481,7 +6750,10 @@
     "stage": "series_c_plus",
     "funding": 150000000,
     "website": "https://phala.network",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "dolion-bully",
@@ -5492,7 +6764,10 @@
     "stage": "series_b",
     "funding": 45000000,
     "website": "https://dolion.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "delysium",
@@ -5503,7 +6778,10 @@
     "stage": "series_b",
     "funding": 30000000,
     "website": "https://www.delysium.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "early",
+    "region": "americas"
   },
   {
     "slug": "cysic",
@@ -5514,7 +6792,10 @@
     "stage": "series_c_plus",
     "funding": 100000000,
     "website": "https://cysic.xyz",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "growth",
+    "region": "americas"
   },
   {
     "slug": "griffin-ai-gain",
@@ -5523,26 +6804,35 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://griffin.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "nous-research",
     "name": "Nous Research",
     "tagline": "Open-source LLM org (models + infra); finance is not core",
     "segment": "research",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://nousresearch.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "flockio",
     "name": "FLock.io",
     "tagline": "Federated learning + blockchain verification platform (not finance-first)",
     "segment": "crypto",
-    "layer": "intelligence",
+    "layer": "models",
     "website": "https://www.flock.io",
     "hq_country": "GB",
-    "hq_city": "London"
+    "hq_city": "London",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "gigabrain",
@@ -5551,7 +6841,10 @@
     "segment": "crypto",
     "layer": "data",
     "website": "https://gigabrain.so",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "elfa-ai",
@@ -5560,7 +6853,10 @@
     "segment": "crypto",
     "layer": "data",
     "website": "https://elfa.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "lunarcrush",
@@ -5569,7 +6865,10 @@
     "segment": "crypto",
     "layer": "data",
     "website": "https://lunarcrush.com",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "giza-arma-giza-tech-arma",
@@ -5581,7 +6880,10 @@
     "funding": 12000000,
     "website": "https://gizatech.xyz",
     "hq_country": "ES",
-    "hq_city": "Madrid"
+    "hq_city": "Madrid",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "emea"
   },
   {
     "slug": "truenorth",
@@ -5592,7 +6894,10 @@
     "stage": "seed",
     "funding": 3000000,
     "website": "https://truenorth.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "americas"
   },
   {
     "slug": "zyfai",
@@ -5601,7 +6906,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://zyf.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "almanak",
@@ -5610,7 +6918,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://almanak.co",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "wayfinder",
@@ -5619,18 +6930,24 @@
     "segment": "crypto",
     "layer": "infrastructure",
     "website": "https://wayfinder.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "velvet-capital",
     "name": "Velvet Capital",
     "tagline": "Intent-based DeFi trading & portfolio OS + “multi-agent AI” framework",
     "segment": "crypto",
-    "layer": "application",
+    "layer": "applications",
     "stage": "seed",
     "funding": 3700000,
     "website": "https://www.velvet.capital",
-    "hq_country": "SG"
+    "hq_country": "SG",
+    "company_type": "token",
+    "funding_stage": "seed",
+    "region": "apac"
   },
   {
     "slug": "billybets",
@@ -5639,7 +6956,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://billybets.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "symphony-symphonyio",
@@ -5648,7 +6968,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://symphony.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "shekel-agentic",
@@ -5657,7 +6980,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://shekel.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "edwin-edwinfinance",
@@ -5666,16 +6992,22 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://edwin.finance",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "kvants-ai",
     "name": "Kvants AI",
     "tagline": "AI-driven asset management platform; quant strategies + automation",
     "segment": "crypto",
-    "layer": "execution",
+    "layer": "automation",
     "website": "https://kvants.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "arkham",
@@ -5685,7 +7017,10 @@
     "layer": "data",
     "website": "https://www.arkhamintelligence.com",
     "hq_country": "US",
-    "hq_city": "New York"
+    "hq_city": "New York",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "cambrian-network",
@@ -5694,16 +7029,22 @@
     "segment": "crypto",
     "layer": "data",
     "website": "https://cambrian.network",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "iaesir-fund",
     "name": "IAESIR Fund",
     "tagline": "“AI-powered crypto hedge fund” marketing + tokenomics",
     "segment": "crypto",
-    "layer": "execution",
+    "layer": "automation",
     "website": "https://iaesir.fund",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "mamo-lending-agent",
@@ -5712,7 +7053,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://mamo.finance",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "axal",
@@ -5721,7 +7065,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://axal.io",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "defi-saver",
@@ -5731,7 +7078,10 @@
     "layer": "automation",
     "website": "https://defisaver.com",
     "hq_country": "HR",
-    "hq_city": "Zagreb"
+    "hq_city": "Zagreb",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "emea"
   },
   {
     "slug": "sail-ai-agents",
@@ -5740,7 +7090,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://sail.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "lulo",
@@ -5749,7 +7102,10 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://lulo.fi",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   },
   {
     "slug": "askjimmy",
@@ -5758,6 +7114,9 @@
     "segment": "crypto",
     "layer": "automation",
     "website": "https://askjimmy.ai",
-    "hq_country": "US"
+    "hq_country": "US",
+    "company_type": "token",
+    "funding_stage": "undisclosed",
+    "region": "americas"
   }
 ]
