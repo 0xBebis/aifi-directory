@@ -50,12 +50,42 @@ export default function MarketMap({
     }
   };
 
-  const maxCount = useMemo(() => Math.max(
-    1,
-    ...segments.flatMap((s) =>
+  // Calculate min (non-zero) and max counts for relative scaling
+  const { minCount, maxCount } = useMemo(() => {
+    const counts = segments.flatMap((s) =>
       layers.map((l) => getProjectsInCell(s.slug, l.slug).length)
-    )
-  ), [segments, layers, projects]);
+    ).filter(c => c > 0);
+
+    return {
+      minCount: Math.min(...counts, 1),
+      maxCount: Math.max(...counts, 1)
+    };
+  }, [segments, layers, projects]);
+
+  // Get normalized intensity (0-1) based on count relative to min/max
+  const getIntensity = (count: number): number => {
+    if (count === 0) return 0;
+    if (maxCount === minCount) return 0.5;
+    return (count - minCount) / (maxCount - minCount);
+  };
+
+  // Get background color based on intensity (black to white)
+  const getCellColor = (intensity: number): string => {
+    const value = Math.round(intensity * 255);
+    return `rgb(${value}, ${value}, ${value})`;
+  };
+
+  // Get text color based on intensity (white for dark bg, black for light bg)
+  const getTextColor = (intensity: number): string => {
+    return intensity > 0.45 ? 'rgb(0, 0, 0)' : 'rgb(200, 200, 200)';
+  };
+
+  // Get hover background color (slightly lighter/darker)
+  const getHoverColor = (intensity: number): string => {
+    const adjusted = intensity > 0.5 ? intensity - 0.1 : intensity + 0.15;
+    const value = Math.round(Math.min(1, Math.max(0, adjusted)) * 255);
+    return `rgb(${value}, ${value}, ${value})`;
+  };
 
   return (
     <div className="bg-surface border border-border rounded-xl">
@@ -146,27 +176,38 @@ export default function MarketMap({
                   (activeSegment === segment.slug && !activeLayer) ||
                   (activeLayer === layer.slug && !activeSegment);
 
-                // Calculate intensity tier for stepped contrast
-                const tier = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 6 ? 3 : 4;
+                const intensity = getIntensity(count);
+                const bgColor = getCellColor(intensity);
+                const textColor = getTextColor(intensity);
+                const hoverColor = getHoverColor(intensity);
 
                 return (
                   <div key={key} className="flex-1 px-1 py-0.5">
                     <button
                       onClick={() => handleCellClick(segment.slug, layer.slug)}
                       disabled={count === 0}
-                      className={`w-full h-9 rounded-lg text-sm font-medium transition-all duration-200
+                      className={`w-full h-9 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]
                         ${count === 0
-                          ? 'bg-surface-2/30 cursor-default'
+                          ? 'bg-black/40 cursor-default'
                           : isExpanded || isActive
-                            ? 'bg-accent text-white shadow-glow scale-[1.02]'
-                            : tier === 1
-                              ? 'bg-surface-2 text-text-muted hover:bg-surface-3 hover:text-text-secondary hover:scale-[1.02]'
-                              : tier === 2
-                                ? 'bg-surface-3 text-text-secondary hover:bg-border hover:text-text-primary hover:scale-[1.02]'
-                                : tier === 3
-                                  ? 'bg-zinc-700/60 text-text-primary hover:bg-zinc-600/60 hover:scale-[1.02]'
-                                  : 'bg-zinc-600/70 text-text-primary hover:bg-zinc-500/70 hover:scale-[1.02]'
+                            ? 'bg-accent text-white shadow-glow'
+                            : ''
                         }`}
+                      style={count > 0 && !isExpanded && !isActive ? {
+                        backgroundColor: bgColor,
+                        color: textColor,
+                        '--hover-bg': hoverColor,
+                      } as React.CSSProperties : undefined}
+                      onMouseEnter={(e) => {
+                        if (count > 0 && !isExpanded && !isActive) {
+                          e.currentTarget.style.backgroundColor = hoverColor;
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (count > 0 && !isExpanded && !isActive) {
+                          e.currentTarget.style.backgroundColor = bgColor;
+                        }
+                      }}
                       title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
                     >
                       {count > 0 ? count : ''}
