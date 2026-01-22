@@ -346,12 +346,12 @@ export default function ProjectTable({
                   <SortIcon column="ai_type" />
                 </button>
               </th>
-              <th className="text-center px-5 py-4">
+              <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('funding')}
-                  className="flex items-center justify-center gap-2 label-refined hover:text-text-primary transition-colors mx-auto"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors mx-auto"
                 >
-                  Funds Raised
+                  Raised
                   <SortIcon column="funding" />
                 </button>
               </th>
@@ -511,7 +511,7 @@ export default function ProjectTable({
                         <span className="text-sm text-text-faint">—</span>
                       )}
                     </td>
-                    <td className="px-5 py-4 text-center">
+                    <td className="px-5 py-4 text-left">
                       {project.funding ? (
                         <span className="text-sm font-medium text-accent tabular-nums">
                           {formatFunding(project.funding)}
