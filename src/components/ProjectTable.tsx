@@ -36,14 +36,34 @@ function Tooltip({ children, content }: { children: ReactNode; content: ReactNod
 }
 
 // Colored badge component for categories
-function CategoryBadge({ label, color }: { label: string; color: string }) {
+function CategoryBadge({
+  label,
+  color,
+  onClick,
+  isActive = false,
+}: {
+  label: string;
+  color: string;
+  onClick?: () => void;
+  isActive?: boolean;
+}) {
+  const isClickable = !!onClick;
   return (
     <span
-      className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium transition-colors"
+      onClick={(e) => {
+        if (onClick) {
+          e.stopPropagation();
+          onClick();
+        }
+      }}
+      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium transition-all ${
+        isClickable ? 'cursor-pointer hover:scale-105' : ''
+      } ${isActive ? 'ring-1 ring-offset-1 ring-offset-surface' : ''}`}
       style={{
-        backgroundColor: `${color}15`,
+        backgroundColor: isActive ? `${color}25` : `${color}15`,
         color: color,
-        border: `1px solid ${color}30`,
+        border: `1px solid ${isActive ? color : `${color}30`}`,
+        ringColor: isActive ? color : undefined,
       }}
     >
       {label}
@@ -387,7 +407,12 @@ export default function ProjectTable({
                     <td className="px-5 py-4">
                       {segment && (
                         <span className="inline-flex items-center gap-2">
-                          <CategoryBadge label={segment.name} color={segment.color} />
+                          <CategoryBadge
+                            label={segment.name}
+                            color={segment.color}
+                            onClick={() => onFilterChange?.(segment.slug, layerFilter || null)}
+                            isActive={segmentFilter === segment.slug}
+                          />
                           {additionalSegments.length > 0 && (
                             <Tooltip
                               content={
@@ -395,7 +420,13 @@ export default function ProjectTable({
                                   {additionalSegments.map(slug => {
                                     const s = segmentMap[slug];
                                     return s ? (
-                                      <CategoryBadge key={slug} label={s.name} color={s.color} />
+                                      <CategoryBadge
+                                        key={slug}
+                                        label={s.name}
+                                        color={s.color}
+                                        onClick={() => onFilterChange?.(slug, layerFilter || null)}
+                                        isActive={segmentFilter === slug}
+                                      />
                                     ) : null;
                                   })}
                                 </>
@@ -412,7 +443,12 @@ export default function ProjectTable({
                     <td className="px-5 py-4">
                       {layer && (
                         <span className="inline-flex items-center gap-2">
-                          <CategoryBadge label={layer.name} color={layer.color} />
+                          <CategoryBadge
+                            label={layer.name}
+                            color={layer.color}
+                            onClick={() => onFilterChange?.(segmentFilter || null, layer.slug)}
+                            isActive={layerFilter === layer.slug}
+                          />
                           {additionalLayers.length > 0 && (
                             <Tooltip
                               content={
@@ -420,7 +456,13 @@ export default function ProjectTable({
                                   {additionalLayers.map(slug => {
                                     const l = layerMap[slug];
                                     return l ? (
-                                      <CategoryBadge key={slug} label={l.name} color={l.color} />
+                                      <CategoryBadge
+                                        key={slug}
+                                        label={l.name}
+                                        color={l.color}
+                                        onClick={() => onFilterChange?.(segmentFilter || null, slug)}
+                                        isActive={layerFilter === slug}
+                                      />
                                     ) : null;
                                   })}
                                 </>
@@ -439,6 +481,8 @@ export default function ProjectTable({
                         <CategoryBadge
                           label={AI_TYPE_LABELS[project.ai_type]}
                           color={AI_TYPE_COLORS[project.ai_type]}
+                          onClick={() => setAiTypeFilter(aiTypeFilter === project.ai_type ? null : project.ai_type!)}
+                          isActive={aiTypeFilter === project.ai_type}
                         />
                       ) : (
                         <span className="text-sm text-text-faint">—</span>
@@ -455,7 +499,14 @@ export default function ProjectTable({
                     </td>
                     <td className="px-5 py-4">
                       {project.region ? (
-                        <span className="text-sm text-text-muted">
+                        <span
+                          className={`text-sm cursor-pointer transition-colors ${
+                            regionFilter === project.region
+                              ? 'text-accent font-medium'
+                              : 'text-text-muted hover:text-text-primary'
+                          }`}
+                          onClick={() => setRegionFilter(regionFilter === project.region ? null : project.region!)}
+                        >
                           {REGION_LABELS[project.region as Region]}
                         </span>
                       ) : (
