@@ -185,7 +185,7 @@ export default function ProjectTable({
 
   const hasFilters = search || segmentFilter || layerFilter || typeFilter || fundingFilter || regionFilter;
 
-  const selectStyles = "px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-secondary hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
+  const selectStyles = "select-glass px-4 py-3 bg-[#18181b]/80 backdrop-blur-xl border border-white/10 rounded-lg text-sm text-text-primary hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
 
   return (
     <div className="bg-surface border border-border rounded-xl">

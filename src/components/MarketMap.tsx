@@ -88,6 +88,8 @@ function Tooltip({ title, description, count, children, position = 'bottom' }: T
   );
 }
 
+type CryptoFilter = 'all' | 'crypto' | 'traditional';
+
 interface MarketMapProps {
   projects: Project[];
   segments: Segment[];
@@ -95,6 +97,8 @@ interface MarketMapProps {
   onCellClick?: (segmentSlug: string | null, layerSlug: string | null) => void;
   activeSegment?: string | null;
   activeLayer?: string | null;
+  cryptoFilter?: CryptoFilter;
+  onCryptoFilterChange?: (filter: CryptoFilter) => void;
 }
 
 export default function MarketMap({
@@ -104,6 +108,8 @@ export default function MarketMap({
   onCellClick,
   activeSegment,
   activeLayer,
+  cryptoFilter = 'all',
+  onCryptoFilterChange,
 }: MarketMapProps) {
   const [expandedCell, setExpandedCell] = useState<string | null>(null);
 
@@ -178,33 +184,76 @@ export default function MarketMap({
           <h2 className="headline-sub">Market Map</h2>
           <span className="meta-text">{projects.length} companies</span>
         </div>
-        {expandedCell && (
-          <button
-            onClick={() => {
-              setExpandedCell(null);
-              onCellClick?.(null, null);
-            }}
-            className="text-sm text-text-muted hover:text-text-primary flex items-center gap-2 transition-colors"
-          >
-            <X className="w-4 h-4" />
-            Clear selection
-          </button>
-        )}
+        <div className="flex items-center gap-4">
+          {/* Crypto Toggle */}
+          {onCryptoFilterChange && (
+            <div className="flex items-center bg-surface-2/50 rounded-lg p-0.5">
+              <button
+                onClick={() => onCryptoFilterChange('all')}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all duration-200 ${
+                  cryptoFilter === 'all'
+                    ? 'bg-surface text-text-primary shadow-sm'
+                    : 'text-text-muted hover:text-text-secondary'
+                }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => onCryptoFilterChange('crypto')}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all duration-200 ${
+                  cryptoFilter === 'crypto'
+                    ? 'bg-surface text-text-primary shadow-sm'
+                    : 'text-text-muted hover:text-text-secondary'
+                }`}
+              >
+                Crypto
+              </button>
+              <button
+                onClick={() => onCryptoFilterChange('traditional')}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all duration-200 ${
+                  cryptoFilter === 'traditional'
+                    ? 'bg-surface text-text-primary shadow-sm'
+                    : 'text-text-muted hover:text-text-secondary'
+                }`}
+              >
+                Traditional
+              </button>
+            </div>
+          )}
+          {expandedCell && (
+            <button
+              onClick={() => {
+                setExpandedCell(null);
+                onCellClick?.(null, null);
+              }}
+              className="text-sm text-text-muted hover:text-text-primary flex items-center gap-2 transition-colors"
+            >
+              <X className="w-4 h-4" />
+              Clear selection
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Map Grid */}
       <div className="overflow-x-auto">
         <div className="min-w-[800px] p-4">
-          {/* Column Headers (Segments) */}
-          <div className="flex mb-2">
-            <div className="w-32 shrink-0" />
+          {/* CSS Grid Layout */}
+          <div
+            className="grid gap-x-1 gap-y-1"
+            style={{
+              gridTemplateColumns: `120px repeat(${segments.length}, 1fr)`,
+              gridTemplateRows: `auto repeat(${layers.length}, 40px)`,
+            }}
+          >
+            {/* Empty top-left cell */}
+            <div />
+
+            {/* Column Headers (Segments) */}
             {segments.map((segment) => {
               const segmentCount = projects.filter(p => p.segment === segment.slug).length;
               return (
-                <div
-                  key={segment.slug}
-                  className="flex-1 px-1 text-center"
-                >
+                <div key={segment.slug} className="flex items-center justify-center">
                   <Tooltip
                     title={segment.name}
                     description={segment.description}
@@ -219,7 +268,7 @@ export default function MarketMap({
                           onCellClick?.(segment.slug, null);
                         }
                       }}
-                      className={`label-refined w-full px-1 py-1.5 rounded-lg transition-all duration-200 ${
+                      className={`label-refined px-2 py-1.5 rounded-lg transition-all duration-200 ${
                         activeSegment === segment.slug
                           ? 'text-accent bg-accent/5'
                           : 'text-text-muted hover:text-text-secondary hover:bg-surface-2/50'
@@ -231,93 +280,92 @@ export default function MarketMap({
                 </div>
               );
             })}
-          </div>
 
-          {/* Rows (Layers) */}
-          {layers.map((layer, layerIndex) => {
-            const layerCount = projects.filter(p => p.layer === layer.slug).length;
-            return (
-            <div key={layer.slug} className="flex items-center">
-              {/* Row Header */}
-              <div className="w-32 shrink-0 pr-4 flex justify-end">
-                <Tooltip
-                  title={layer.name}
-                  description={layer.description}
-                  count={layerCount}
-                  position="right"
-                >
-                  <button
-                    onClick={() => {
-                      if (activeLayer === layer.slug && !activeSegment) {
-                        onCellClick?.(null, null);
-                      } else {
-                        onCellClick?.(null, layer.slug);
-                      }
-                    }}
-                    className={`label-refined text-right py-1.5 rounded-lg transition-all duration-200 ${
-                      activeLayer === layer.slug
-                        ? 'text-accent'
-                        : 'text-text-muted hover:text-text-secondary'
-                    }`}
-                  >
-                    {layer.name}
-                  </button>
-                </Tooltip>
-              </div>
-
-              {/* Cells */}
-              {segments.map((segment) => {
-                const cellProjects = getProjectsInCell(segment.slug, layer.slug);
-                const count = cellProjects.length;
-                const key = getCellKey(segment.slug, layer.slug);
-                const isExpanded = expandedCell === key;
-                const isActive =
-                  (activeSegment === segment.slug && activeLayer === layer.slug) ||
-                  (activeSegment === segment.slug && !activeLayer) ||
-                  (activeLayer === layer.slug && !activeSegment);
-
-                const intensity = getIntensity(count);
-                const bgColor = getCellColor(intensity);
-                const textColor = getTextColor(intensity);
-                const hoverColor = getHoverColor(intensity);
-
-                return (
-                  <div key={key} className="flex-1 px-1 py-0.5">
-                    <button
-                      onClick={() => handleCellClick(segment.slug, layer.slug)}
-                      disabled={count === 0}
-                      className={`w-full h-9 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]
-                        ${count === 0
-                          ? 'bg-black/40 cursor-default'
-                          : isExpanded || isActive
-                            ? 'bg-accent text-white shadow-glow'
-                            : ''
-                        }`}
-                      style={count > 0 && !isExpanded && !isActive ? {
-                        backgroundColor: bgColor,
-                        color: textColor,
-                        '--hover-bg': hoverColor,
-                      } as React.CSSProperties : undefined}
-                      onMouseEnter={(e) => {
-                        if (count > 0 && !isExpanded && !isActive) {
-                          e.currentTarget.style.backgroundColor = hoverColor;
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (count > 0 && !isExpanded && !isActive) {
-                          e.currentTarget.style.backgroundColor = bgColor;
-                        }
-                      }}
-                      title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
+            {/* Rows (Layers) with their cells */}
+            {layers.map((layer) => {
+              const layerCount = projects.filter(p => p.layer === layer.slug).length;
+              return (
+                <>
+                  {/* Row Header */}
+                  <div key={`${layer.slug}-header`} className="flex items-center justify-end pr-3">
+                    <Tooltip
+                      title={layer.name}
+                      description={layer.description}
+                      count={layerCount}
+                      position="right"
                     >
-                      {count > 0 ? count : ''}
-                    </button>
+                      <button
+                        onClick={() => {
+                          if (activeLayer === layer.slug && !activeSegment) {
+                            onCellClick?.(null, null);
+                          } else {
+                            onCellClick?.(null, layer.slug);
+                          }
+                        }}
+                        className={`label-refined text-right py-1.5 rounded-lg transition-all duration-200 ${
+                          activeLayer === layer.slug
+                            ? 'text-accent'
+                            : 'text-text-muted hover:text-text-secondary'
+                        }`}
+                      >
+                        {layer.name}
+                      </button>
+                    </Tooltip>
                   </div>
-                );
-              })}
-            </div>
-            );
-          })}
+
+                  {/* Cells for this row */}
+                  {segments.map((segment) => {
+                    const cellProjects = getProjectsInCell(segment.slug, layer.slug);
+                    const count = cellProjects.length;
+                    const key = getCellKey(segment.slug, layer.slug);
+                    const isExpanded = expandedCell === key;
+                    const isActive =
+                      (activeSegment === segment.slug && activeLayer === layer.slug) ||
+                      (activeSegment === segment.slug && !activeLayer) ||
+                      (activeLayer === layer.slug && !activeSegment);
+
+                    const intensity = getIntensity(count);
+                    const bgColor = getCellColor(intensity);
+                    const textColor = getTextColor(intensity);
+                    const hoverColor = getHoverColor(intensity);
+
+                    return (
+                      <div key={key} className="flex items-center justify-center">
+                        <button
+                          onClick={() => handleCellClick(segment.slug, layer.slug)}
+                          disabled={count === 0}
+                          className={`w-full h-9 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]
+                            ${count === 0
+                              ? 'bg-black/40 cursor-default'
+                              : isExpanded || isActive
+                                ? 'bg-accent text-white shadow-glow'
+                                : ''
+                            }`}
+                          style={count > 0 && !isExpanded && !isActive ? {
+                            backgroundColor: bgColor,
+                            color: textColor,
+                          } as React.CSSProperties : undefined}
+                          onMouseEnter={(e) => {
+                            if (count > 0 && !isExpanded && !isActive) {
+                              e.currentTarget.style.backgroundColor = hoverColor;
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (count > 0 && !isExpanded && !isActive) {
+                              e.currentTarget.style.backgroundColor = bgColor;
+                            }
+                          }}
+                          title={`${segment.name} × ${layer.name}: ${count} project${count !== 1 ? 's' : ''}`}
+                        >
+                          {count > 0 ? count : ''}
+                        </button>
+                      </div>
+                    );
+                  })}
+                </>
+              );
+            })}
+          </div>
         </div>
       </div>
 

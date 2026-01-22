@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Globe, ExternalLink, Twitter, Linkedin } from 'lucide-react';
+import { ArrowLeft, Globe, ExternalLink, Twitter, Linkedin, Pencil } from 'lucide-react';
 import {
   projects,
   getProject,
@@ -35,239 +35,177 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       {/* Back Link */}
       <Link
         href="/directory"
-        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-8 text-sm tracking-wide"
+        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm tracking-wide"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Directory
       </Link>
 
-      {/* Header Card */}
-      <div className="bg-surface border border-border rounded-xl p-8 mb-8">
-        <div className="flex items-start gap-6">
+      {/* Header */}
+      <div className="bg-surface border border-border rounded-xl p-6 mb-6">
+        <div className="flex items-start gap-5">
           {/* Logo/Initial */}
-          <div className="w-16 h-16 rounded-xl bg-surface-2 border border-border/50 flex items-center justify-center text-2xl font-bold text-text-muted shrink-0">
+          <div className="w-14 h-14 rounded-lg bg-surface-2 border border-border/50 flex items-center justify-center text-xl font-bold text-text-muted shrink-0">
             {project.name.charAt(0)}
           </div>
 
           <div className="flex-1 min-w-0">
-            <h1 className="headline-section">
-              {project.name}
-            </h1>
-            <p className="text-lg text-text-secondary mt-2 leading-relaxed">{project.tagline}</p>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h1 className="text-2xl font-semibold text-text-primary">
+                  {project.name}
+                </h1>
+                <p className="text-text-secondary mt-1">{project.tagline}</p>
+              </div>
 
-            {/* Action Links */}
-            <div className="flex flex-wrap gap-3 mt-6">
-              {project.website && (
-                <a
-                  href={project.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-muted transition-all duration-200"
+              {/* Action Links */}
+              <div className="flex gap-2 shrink-0">
+                {project.website && (
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-muted transition-colors"
+                  >
+                    <Globe className="w-3.5 h-3.5" />
+                    Website
+                  </a>
+                )}
+                <Link
+                  href={`/submit/update/${project.slug}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-colors"
                 >
-                  <Globe className="w-4 h-4" />
-                  Visit Website
-                </a>
+                  <Pencil className="w-3.5 h-3.5" />
+                  Request Update
+                </Link>
+                {project.twitter && (
+                  <a
+                    href={project.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-8 h-8 bg-surface-2 border border-border text-text-muted rounded-lg hover:text-text-primary transition-colors"
+                  >
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                )}
+                {project.linkedin && (
+                  <a
+                    href={project.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-8 h-8 bg-surface-2 border border-border text-text-muted rounded-lg hover:text-text-primary transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Info Row */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm">
+              {project.hq_city && project.hq_country && (
+                <span className="text-text-muted">
+                  {project.hq_city}, {project.hq_country}
+                </span>
               )}
-              {project.twitter && (
-                <a
-                  href={project.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-all duration-200"
-                >
-                  <Twitter className="w-4 h-4" />
-                  Twitter
-                </a>
+              {project.founded && (
+                <span className="text-text-muted">
+                  Founded {project.founded}
+                </span>
               )}
-              {project.linkedin && (
-                <a
-                  href={project.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-all duration-200"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
-                </a>
+              {project.funding && (
+                <span className="text-text-muted tabular-nums">
+                  {formatFunding(project.funding)} raised
+                </span>
+              )}
+              {project.stage && (
+                <span className="px-2 py-0.5 rounded bg-surface-2 text-text-secondary text-xs">
+                  {formatStage(project.stage)}
+                </span>
               )}
             </div>
           </div>
-        </div>
-
-        {/* Key Metrics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-8 pt-8 border-t border-border/50">
-          {primarySegment && (
-            <div>
-              <p className="label-refined mb-2">
-                Segment
-              </p>
-              <p className="text-base font-medium text-text-primary">
-                {primarySegment.name}
-              </p>
-            </div>
-          )}
-          {primaryLayer && (
-            <div>
-              <p className="label-refined mb-2">
-                Layer
-              </p>
-              <p className="text-base font-medium text-text-primary">
-                {primaryLayer.name}
-              </p>
-            </div>
-          )}
-          {project.stage && (
-            <div>
-              <p className="label-refined mb-2">
-                Stage
-              </p>
-              <p className="text-base font-medium text-text-primary">
-                {formatStage(project.stage)}
-              </p>
-            </div>
-          )}
-          {project.funding && (
-            <div>
-              <p className="label-refined mb-2">
-                Funding
-              </p>
-              <p className="text-base font-medium text-text-primary tabular-nums">
-                {formatFunding(project.funding)}
-              </p>
-            </div>
-          )}
         </div>
       </div>
 
-      {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Main Content */}
-        <div className="lg:col-span-2 space-y-8">
-          {/* Description */}
-          {project.description && (
-            <div className="bg-surface border border-border rounded-xl p-8">
-              <h2 className="label-refined mb-5">
-                About
-              </h2>
-              <p className="text-text-secondary leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-          )}
-
-          {/* Team */}
-          {project.team && project.team.length > 0 && (
-            <div className="bg-surface border border-border rounded-xl p-8">
-              <h2 className="label-refined mb-5">
-                Team
-              </h2>
-              <div className="grid grid-cols-2 gap-4">
-                {project.team.map((member, i) => (
-                  <div key={i} className="bg-surface-2 rounded-lg p-5">
-                    <p className="font-medium text-text-primary">
-                      {member.name}
-                    </p>
-                    <p className="text-sm text-text-muted mt-1">
-                      {member.role}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+      {/* Summary */}
+      {project.summary && (
+        <div className="bg-surface border border-border rounded-xl p-6 mb-6">
+          <p className="text-text-secondary leading-relaxed">
+            {project.summary}
+          </p>
         </div>
+      )}
 
-        {/* Sidebar */}
-        <div className="space-y-8">
-          {/* Details */}
-          <div className="bg-surface border border-border rounded-xl p-8">
-            <h2 className="label-refined mb-5">
-              Details
-            </h2>
-            <dl className="space-y-4">
-              {project.founded && (
-                <div className="flex justify-between items-center">
-                  <dt className="text-sm text-text-muted">Founded</dt>
-                  <dd className="text-sm text-text-primary tabular-nums">{project.founded}</dd>
+      {/* Info Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Classification */}
+        <div className="bg-surface border border-border rounded-xl p-6">
+          <h2 className="label-refined mb-4">Classification</h2>
+          <div className="space-y-3">
+            {allSegments.length > 0 && (
+              <div>
+                <p className="text-xs text-text-muted mb-2">Market Segments</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {allSegments.map(
+                    (segment) =>
+                      segment && (
+                        <span
+                          key={segment.slug}
+                          className="text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary"
+                        >
+                          {segment.name}
+                        </span>
+                      )
+                  )}
                 </div>
-              )}
-              {project.hq_city && project.hq_country && (
-                <div className="flex justify-between items-center">
-                  <dt className="text-sm text-text-muted">Location</dt>
-                  <dd className="text-sm text-text-primary">
-                    {project.hq_city}, {project.hq_country}
-                  </dd>
+              </div>
+            )}
+            {allLayers.length > 0 && (
+              <div>
+                <p className="text-xs text-text-muted mb-2">Tech Stack</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {allLayers.map(
+                    (layer) =>
+                      layer && (
+                        <span
+                          key={layer.slug}
+                          className="text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary"
+                        >
+                          {layer.name}
+                        </span>
+                      )
+                  )}
                 </div>
-              )}
-              {project.stage && (
-                <div className="flex justify-between items-center">
-                  <dt className="text-sm text-text-muted">Stage</dt>
-                  <dd className="text-sm text-text-primary">{formatStage(project.stage)}</dd>
-                </div>
-              )}
-              {project.funding && (
-                <div className="flex justify-between items-center">
-                  <dt className="text-sm text-text-muted">Funding</dt>
-                  <dd className="text-sm text-text-primary tabular-nums">{formatFunding(project.funding)}</dd>
-                </div>
-              )}
-            </dl>
+              </div>
+            )}
           </div>
-
-          {/* Segments */}
-          {allSegments.length > 0 && (
-            <div className="bg-surface border border-border rounded-xl p-8">
-              <h2 className="label-refined mb-5">
-                Market Segments
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {allSegments.map(
-                  (segment) =>
-                    segment && (
-                      <span
-                        key={segment.slug}
-                        className="text-sm px-3 py-1.5 rounded-lg bg-surface-2 text-text-secondary"
-                      >
-                        {segment.name}
-                      </span>
-                    )
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Layers */}
-          {allLayers.length > 0 && (
-            <div className="bg-surface border border-border rounded-xl p-8">
-              <h2 className="label-refined mb-5">
-                Tech Stack Layers
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {allLayers.map(
-                  (layer) =>
-                    layer && (
-                      <span
-                        key={layer.slug}
-                        className="text-sm px-3 py-1.5 rounded-lg bg-surface-2 text-text-secondary"
-                      >
-                        {layer.name}
-                      </span>
-                    )
-                )}
-              </div>
-            </div>
-          )}
         </div>
+
+        {/* Team */}
+        {project.team && project.team.length > 0 && (
+          <div className="bg-surface border border-border rounded-xl p-6">
+            <h2 className="label-refined mb-4">Team</h2>
+            <div className="space-y-2">
+              {project.team.map((member, i) => (
+                <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
+                  <span className="font-medium text-text-primary text-sm">{member.name}</span>
+                  <span className="text-sm text-text-muted">{member.role}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Similar Companies */}
       {similarProjects.length > 0 && (
-        <div className="mt-16 pt-12 border-t border-border/30">
-          <div className="flex items-baseline justify-between mb-8">
-            <h2 className="headline-sub">Related Companies</h2>
-            <span className="meta-text">{similarProjects.length} similar</span>
+        <div className="mt-10 pt-8 border-t border-border/30">
+          <div className="flex items-baseline justify-between mb-5">
+            <h2 className="text-lg font-medium text-text-primary">Related Companies</h2>
+            <span className="text-sm text-text-muted">{similarProjects.length} similar</span>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {similarProjects.map((p) => {
               const seg = getSegment(p.segment);
               const lay = getLayer(p.layer);
@@ -275,22 +213,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={p.slug}
                   href={`/p/${p.slug}`}
-                  className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all duration-200"
+                  className="group bg-surface border border-border rounded-lg p-4 hover:border-accent/30 transition-colors"
                 >
-                  <p className="font-medium text-text-primary group-hover:text-accent transition-colors truncate">
+                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
                     {p.name}
                   </p>
-                  <p className="text-sm text-text-muted mt-1 line-clamp-1">
+                  <p className="text-xs text-text-muted mt-1 line-clamp-1">
                     {p.tagline}
                   </p>
-                  <div className="flex gap-2 mt-4">
+                  <div className="flex gap-1.5 mt-3">
                     {seg && (
-                      <span className="text-xs px-2.5 py-1 rounded-md bg-surface-2 text-text-muted">
+                      <span className="text-xs px-2 py-0.5 rounded bg-surface-2 text-text-muted">
                         {seg.name}
                       </span>
                     )}
                     {lay && (
-                      <span className="text-xs px-2.5 py-1 rounded-md bg-surface-2 text-text-muted">
+                      <span className="text-xs px-2 py-0.5 rounded bg-surface-2 text-text-muted">
                         {lay.name}
                       </span>
                     )}

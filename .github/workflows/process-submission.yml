@@ -1,0 +1,334 @@
+name: Process Company Submission
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  process-new-submission:
+    # Only run when "submission" label is added
+    if: github.event.label.name == 'submission'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Extract submission data
+        id: extract
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+            const issueTitle = context.payload.issue.title;
+            const issueNumber = context.payload.issue.number;
+
+            // Extract company name from title "[Submission] Company Name"
+            const titleMatch = issueTitle.match(/\[Submission\]\s*(.+)/i);
+            const companyName = titleMatch ? titleMatch[1].trim() : 'unknown-company';
+
+            // Create slug from company name
+            const slug = companyName
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, '-')
+              .replace(/^-|-$/g, '');
+
+            // Extract JSON from code block
+            const jsonMatch = issueBody.match(/```json\s*([\s\S]*?)\s*```/);
+
+            if (!jsonMatch) {
+              core.setFailed('Could not find JSON code block in issue body');
+              return;
+            }
+
+            let projectData;
+            try {
+              projectData = JSON.parse(jsonMatch[1]);
+            } catch (e) {
+              core.setFailed(`Invalid JSON in issue body: ${e.message}`);
+              return;
+            }
+
+            // Validate required fields
+            const required = ['slug', 'name', 'tagline', 'segment', 'layer'];
+            const missing = required.filter(f => !projectData[f]);
+
+            if (missing.length > 0) {
+              core.setFailed(`Missing required fields: ${missing.join(', ')}`);
+              return;
+            }
+
+            core.setOutput('slug', slug);
+            core.setOutput('company_name', companyName);
+            core.setOutput('project_json', JSON.stringify(projectData));
+            core.setOutput('issue_number', issueNumber);
+
+      - name: Add project to projects.json
+        id: add-project
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+
+          const projectsPath = 'src/data/projects.json';
+          const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf8'));
+          const newProject = JSON.parse(process.env.PROJECT_JSON);
+
+          // Check if slug already exists
+          const existingIndex = projects.findIndex(p => p.slug === newProject.slug);
+
+          if (existingIndex !== -1) {
+            console.log(`Project with slug "${newProject.slug}" already exists at index ${existingIndex}`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'status=duplicate\n');
+            process.exit(0);
+          }
+
+          // Add to the end of the array
+          projects.push(newProject);
+
+          // Write back with nice formatting
+          fs.writeFileSync(projectsPath, JSON.stringify(projects, null, 2) + '\n');
+
+          console.log(`Added project: ${newProject.name}`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'status=added\n');
+          EOF
+        env:
+          PROJECT_JSON: ${{ steps.extract.outputs.project_json }}
+
+      - name: Create Pull Request
+        if: steps.add-project.outputs.status == 'added'
+        id: create-pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add ${{ steps.extract.outputs.company_name }} to directory"
+          branch: submission/${{ steps.extract.outputs.slug }}
+          delete-branch: true
+          title: "Add ${{ steps.extract.outputs.company_name }} to directory"
+          body: |
+            ## New Company Submission
+
+            This PR adds **${{ steps.extract.outputs.company_name }}** to the AIFI directory.
+
+            Closes #${{ steps.extract.outputs.issue_number }}
+
+            ---
+
+            ### Review Checklist
+            - [ ] Company is relevant to AI + Finance
+            - [ ] Segment and layer are appropriate
+            - [ ] Information is accurate
+            - [ ] No duplicate entry exists
+
+            ---
+
+            *Auto-generated from issue #${{ steps.extract.outputs.issue_number }}*
+          labels: |
+            submission
+            automated-pr
+
+      - name: Comment on issue with PR link
+        if: steps.create-pr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = '${{ steps.create-pr.outputs.pull-request-number }}';
+            const prUrl = '${{ steps.create-pr.outputs.pull-request-url }}';
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `Thanks for your submission! A pull request has been automatically created: #${prNumber}\n\nOnce reviewed and merged, the company will appear in the directory.\n\n[View Pull Request](${prUrl})`
+            });
+
+      - name: Handle duplicate
+        if: steps.add-project.outputs.status == 'duplicate'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `This company appears to already exist in the directory (duplicate slug: \`${{ steps.extract.outputs.slug }}\`).\n\nIf this is an error, please update the company name or contact a maintainer.`
+            });
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['duplicate']
+            });
+
+  process-update-request:
+    # Only run when "update-request" label is added
+    if: github.event.label.name == 'update-request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Extract update data
+        id: extract
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+            const issueTitle = context.payload.issue.title;
+            const issueNumber = context.payload.issue.number;
+
+            // Extract company name from title "[Update] Company Name"
+            const titleMatch = issueTitle.match(/\[Update\]\s*(.+)/i);
+            const companyName = titleMatch ? titleMatch[1].trim() : 'unknown-company';
+
+            // Extract slug from issue body
+            const slugMatch = issueBody.match(/\*\*Slug:\*\*\s*`([^`]+)`/);
+            const slug = slugMatch ? slugMatch[1] : companyName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+            // Extract JSON from code block
+            const jsonMatch = issueBody.match(/```json\s*([\s\S]*?)\s*```/);
+
+            if (!jsonMatch) {
+              core.setFailed('Could not find JSON code block in issue body');
+              return;
+            }
+
+            let projectData;
+            try {
+              projectData = JSON.parse(jsonMatch[1]);
+            } catch (e) {
+              core.setFailed(`Invalid JSON in issue body: ${e.message}`);
+              return;
+            }
+
+            core.setOutput('slug', slug);
+            core.setOutput('company_name', companyName);
+            core.setOutput('project_json', JSON.stringify(projectData));
+            core.setOutput('issue_number', issueNumber);
+
+      - name: Update project in projects.json
+        id: update-project
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+
+          const projectsPath = 'src/data/projects.json';
+          const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf8'));
+          const updatedProject = JSON.parse(process.env.PROJECT_JSON);
+          const slug = process.env.SLUG;
+
+          // Find existing project
+          const existingIndex = projects.findIndex(p => p.slug === slug);
+
+          if (existingIndex === -1) {
+            console.log(`Project with slug "${slug}" not found`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'status=not-found\n');
+            process.exit(0);
+          }
+
+          // Merge updates with existing project (preserve fields not in update)
+          const existingProject = projects[existingIndex];
+          const mergedProject = { ...existingProject };
+
+          // Update only fields that are present in the update
+          for (const [key, value] of Object.entries(updatedProject)) {
+            if (value !== null && value !== undefined && value !== '') {
+              mergedProject[key] = value;
+            }
+          }
+
+          // Replace in array
+          projects[existingIndex] = mergedProject;
+
+          // Write back with nice formatting
+          fs.writeFileSync(projectsPath, JSON.stringify(projects, null, 2) + '\n');
+
+          console.log(`Updated project: ${mergedProject.name}`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, 'status=updated\n');
+          EOF
+        env:
+          PROJECT_JSON: ${{ steps.extract.outputs.project_json }}
+          SLUG: ${{ steps.extract.outputs.slug }}
+
+      - name: Create Pull Request
+        if: steps.update-project.outputs.status == 'updated'
+        id: create-pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update ${{ steps.extract.outputs.company_name }}"
+          branch: update/${{ steps.extract.outputs.slug }}
+          delete-branch: true
+          title: "Update ${{ steps.extract.outputs.company_name }}"
+          body: |
+            ## Update Request
+
+            This PR updates **${{ steps.extract.outputs.company_name }}** in the AIFI directory.
+
+            Closes #${{ steps.extract.outputs.issue_number }}
+
+            ---
+
+            ### Review Checklist
+            - [ ] Changes are accurate
+            - [ ] No data was incorrectly removed
+
+            ---
+
+            *Auto-generated from issue #${{ steps.extract.outputs.issue_number }}*
+          labels: |
+            update-request
+            automated-pr
+
+      - name: Comment on issue with PR link
+        if: steps.create-pr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = '${{ steps.create-pr.outputs.pull-request-number }}';
+            const prUrl = '${{ steps.create-pr.outputs.pull-request-url }}';
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `Thanks for the update request! A pull request has been automatically created: #${prNumber}\n\nOnce reviewed and merged, the changes will appear in the directory.\n\n[View Pull Request](${prUrl})`
+            });
+
+      - name: Handle not found
+        if: steps.update-project.outputs.status == 'not-found'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `Could not find a project with slug \`${{ steps.extract.outputs.slug }}\` in the directory.\n\nIf you're trying to add a new company, please use the [submission form](https://aifi.directory/submit) instead.`
+            });
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['invalid']
+            });

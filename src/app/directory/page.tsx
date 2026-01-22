@@ -1,13 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { projects, segments, layers } from '@/lib/data';
 import MarketMap from '@/components/MarketMap';
 import ProjectTable from '@/components/ProjectTable';
 
+export type CryptoFilter = 'all' | 'crypto' | 'traditional';
+
 export default function DirectoryPage() {
   const [segmentFilter, setSegmentFilter] = useState<string | null>(null);
   const [layerFilter, setLayerFilter] = useState<string | null>(null);
+  const [cryptoFilter, setCryptoFilter] = useState<CryptoFilter>('all');
+
+  // Filter projects based on crypto toggle
+  const filteredProjects = useMemo(() => {
+    if (cryptoFilter === 'all') return projects;
+    if (cryptoFilter === 'crypto') return projects.filter(p => p.crypto === true);
+    return projects.filter(p => !p.crypto);
+  }, [cryptoFilter]);
 
   const handleMapCellClick = (segment: string | null, layer: string | null) => {
     setSegmentFilter(segment);
@@ -45,18 +55,20 @@ export default function DirectoryPage() {
       {/* Market Map */}
       <div className="mb-10">
         <MarketMap
-          projects={projects}
+          projects={filteredProjects}
           segments={segments}
           layers={layers}
           onCellClick={handleMapCellClick}
           activeSegment={segmentFilter}
           activeLayer={layerFilter}
+          cryptoFilter={cryptoFilter}
+          onCryptoFilterChange={setCryptoFilter}
         />
       </div>
 
       {/* Project Table */}
       <ProjectTable
-        projects={projects}
+        projects={filteredProjects}
         segments={segments}
         layers={layers}
         segmentFilter={segmentFilter}

@@ -22,6 +22,8 @@ export interface Project {
   hq_country?: string;
   hq_city?: string;
   team?: TeamMember[];
+  summary?: string;
+  crypto?: boolean; // Flag for Web3/crypto companies (allows filtering while using functional segments)
 }
 
 export interface TeamMember {

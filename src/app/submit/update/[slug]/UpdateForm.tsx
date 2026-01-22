@@ -1,34 +1,34 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import { segments, layers } from '@/lib/data';
-import { COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, CompanyType, FundingStage } from '@/types';
+import { COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, CompanyType, FundingStage, Project } from '@/types';
 
 const GITHUB_REPO = '0xBebis/aifi-directory';
 
-function slugify(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+interface UpdateFormProps {
+  project: Project;
 }
 
-export default function SubmitPage() {
+export default function UpdateForm({ project }: UpdateFormProps) {
   const [formData, setFormData] = useState({
-    name: '',
-    website: '',
-    tagline: '',
-    description: '',
-    segment: '',
-    layer: '',
-    company_type: '' as CompanyType | '',
-    funding_stage: '' as FundingStage | '',
-    founded: '',
-    hq_country: '',
-    hq_city: '',
-    crypto: false,
-    twitter: '',
-    linkedin: '',
+    website: project.website || '',
+    tagline: project.tagline || '',
+    description: project.description || '',
+    summary: project.summary || '',
+    segment: project.segment || '',
+    layer: project.layer || '',
+    company_type: (project.company_type || '') as CompanyType | '',
+    funding_stage: (project.funding_stage || '') as FundingStage | '',
+    founded: project.founded?.toString() || '',
+    hq_country: project.hq_country || '',
+    hq_city: project.hq_city || '',
+    crypto: project.crypto || false,
+    twitter: project.twitter || '',
+    linkedin: project.linkedin || '',
+    updateReason: '',
     email: '',
   });
 
@@ -47,52 +47,74 @@ export default function SubmitPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const slug = slugify(formData.name);
-
-    // Build the project JSON
-    const project: Record<string, unknown> = {
-      slug,
-      name: formData.name,
-      tagline: formData.tagline,
-      segment: formData.segment,
-      layer: formData.layer,
+    // Build the changes object - only include fields that differ from original
+    const changes: Record<string, { from: unknown; to: unknown }> = {};
+    const updatedProject: Record<string, unknown> = {
+      slug: project.slug,
+      name: project.name,
     };
 
-    // Add optional fields
-    if (formData.website) project.website = formData.website;
-    if (formData.description) project.description = formData.description;
-    if (formData.company_type) project.company_type = formData.company_type;
-    if (formData.funding_stage) project.funding_stage = formData.funding_stage;
-    if (formData.founded) project.founded = parseInt(formData.founded);
-    if (formData.hq_country) project.hq_country = formData.hq_country;
-    if (formData.hq_city) project.hq_city = formData.hq_city;
-    if (formData.crypto) project.crypto = true;
-    if (formData.twitter) project.twitter = formData.twitter.replace(/^@/, '');
-    if (formData.linkedin) project.linkedin = formData.linkedin;
+    // Check each field for changes
+    const checkField = (key: string, originalValue: unknown, newValue: unknown) => {
+      // Normalize empty strings and undefined
+      const normalizedOriginal = originalValue === undefined || originalValue === '' ? null : originalValue;
+      const normalizedNew = newValue === '' ? null : newValue;
+
+      if (normalizedOriginal !== normalizedNew) {
+        changes[key] = { from: normalizedOriginal, to: normalizedNew };
+      }
+
+      // Always include in updated project if has value
+      if (normalizedNew !== null) {
+        updatedProject[key] = newValue;
+      }
+    };
+
+    checkField('website', project.website, formData.website);
+    checkField('tagline', project.tagline, formData.tagline);
+    checkField('description', project.description, formData.description);
+    checkField('summary', project.summary, formData.summary);
+    checkField('segment', project.segment, formData.segment);
+    checkField('layer', project.layer, formData.layer);
+    checkField('company_type', project.company_type, formData.company_type);
+    checkField('funding_stage', project.funding_stage, formData.funding_stage);
+    checkField('founded', project.founded, formData.founded ? parseInt(formData.founded) : null);
+    checkField('hq_country', project.hq_country, formData.hq_country);
+    checkField('hq_city', project.hq_city, formData.hq_city);
+    checkField('crypto', project.crypto, formData.crypto || null);
+    checkField('twitter', project.twitter, formData.twitter.replace(/^@/, '') || null);
+    checkField('linkedin', project.linkedin, formData.linkedin);
+
+    // Ensure required fields are in the updated project
+    updatedProject.tagline = formData.tagline;
+    updatedProject.segment = formData.segment;
+    updatedProject.layer = formData.layer;
+
+    // Build changes summary
+    const changesList = Object.entries(changes).map(([field, { from, to }]) => {
+      const fromStr = from === null ? '(empty)' : String(from);
+      const toStr = to === null ? '(empty)' : String(to);
+      return `- **${field}**: ${fromStr} → ${toStr}`;
+    }).join('\n');
 
     // Format JSON nicely
-    const jsonStr = JSON.stringify(project, null, 2);
+    const jsonStr = JSON.stringify(updatedProject, null, 2);
 
     // Build issue body
-    const segmentName = segments.find(s => s.slug === formData.segment)?.name || formData.segment;
-    const layerName = layers.find(l => l.slug === formData.layer)?.name || formData.layer;
+    const issueBody = `## Update Request: ${project.name}
 
-    const issueBody = `## Company Submission
+**Project:** [${project.name}](/p/${project.slug})
+**Slug:** \`${project.slug}\`
 
-**Company:** ${formData.name}
-**Website:** ${formData.website || 'Not provided'}
-**Segment:** ${segmentName}
-**Layer:** ${layerName}
-${formData.crypto ? '**Type:** Web3/Crypto\n' : ''}${formData.company_type ? `**Company Type:** ${COMPANY_TYPE_LABELS[formData.company_type]}\n` : ''}${formData.funding_stage ? `**Funding Stage:** ${FUNDING_STAGE_LABELS[formData.funding_stage]}\n` : ''}${formData.founded ? `**Founded:** ${formData.founded}\n` : ''}${formData.hq_country ? `**Location:** ${formData.hq_city ? formData.hq_city + ', ' : ''}${formData.hq_country}\n` : ''}
-### Description
-${formData.tagline}
-${formData.description ? `\n${formData.description}` : ''}
+### Reason for Update
+${formData.updateReason || 'Not specified'}
 
-### Social Links
-${formData.twitter ? `- Twitter: [@${formData.twitter.replace(/^@/, '')}](https://twitter.com/${formData.twitter.replace(/^@/, '')})\n` : ''}${formData.linkedin ? `- LinkedIn: ${formData.linkedin}\n` : ''}${!formData.twitter && !formData.linkedin ? 'None provided\n' : ''}
+### Requested Changes
+${changesList || 'No changes detected'}
+
 ---
 
-### JSON for \`projects.json\`
+### Updated JSON for \`projects.json\`
 
 \`\`\`json
 ${jsonStr}
@@ -100,12 +122,12 @@ ${jsonStr}
 
 ---
 ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
-*Submitted via AIFI directory form*`;
+*Submitted via AIFI directory update form*`;
 
     // Build GitHub issue URL
-    const issueTitle = encodeURIComponent(`[Submission] ${formData.name}`);
+    const issueTitle = encodeURIComponent(`[Update] ${project.name}`);
     const issueBodyEncoded = encodeURIComponent(issueBody);
-    const labels = encodeURIComponent('submission');
+    const labels = encodeURIComponent('update-request');
 
     const githubUrl = `https://github.com/${GITHUB_REPO}/issues/new?title=${issueTitle}&body=${issueBodyEncoded}&labels=${labels}`;
 
@@ -113,44 +135,58 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
     window.open(githubUrl, '_blank');
   };
 
-  const isFormValid = formData.name && formData.tagline && formData.segment && formData.layer;
-
   return (
     <div className="max-w-2xl mx-auto px-8 py-14">
+      {/* Back Link */}
+      <Link
+        href={`/p/${project.slug}`}
+        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm"
+      >
+        <ArrowLeft className="w-4 h-4" />
+        Back to {project.name}
+      </Link>
+
       {/* Eyebrow */}
       <p className="label-refined mb-4 text-accent">
-        Contribute
+        Request Update
       </p>
 
       <h1 className="headline-display mb-4">
-        Submit a Company
+        Update {project.name}
       </h1>
       <p className="text-lg text-text-muted mb-10 leading-relaxed">
-        Know a company building AI + Finance products? Help us grow the directory by submitting it here.
+        Help us keep the directory accurate by suggesting updates to this company&apos;s information.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-8">
+        {/* Update Reason */}
+        <div className="space-y-6">
+          <h2 className="text-lg font-semibold text-text-primary border-b border-border/50 pb-2">
+            What needs updating?
+          </h2>
+
+          <div>
+            <label htmlFor="updateReason" className={labelStyles}>
+              Reason for Update <span className="text-accent">*</span>
+            </label>
+            <textarea
+              id="updateReason"
+              name="updateReason"
+              rows={2}
+              required
+              value={formData.updateReason}
+              onChange={handleChange}
+              className={inputStyles}
+              placeholder="e.g., Company raised a new funding round, website changed, incorrect information..."
+            />
+          </div>
+        </div>
+
         {/* Basic Info */}
         <div className="space-y-6">
           <h2 className="text-lg font-semibold text-text-primary border-b border-border/50 pb-2">
             Basic Information
           </h2>
-
-          <div>
-            <label htmlFor="name" className={labelStyles}>
-              Company Name <span className="text-accent">*</span>
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className={inputStyles}
-              placeholder="Acme AI"
-            />
-          </div>
 
           <div>
             <label htmlFor="website" className={labelStyles}>
@@ -169,13 +205,12 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
 
           <div>
             <label htmlFor="tagline" className={labelStyles}>
-              One-Line Description <span className="text-accent">*</span>
+              One-Line Description
             </label>
             <input
               type="text"
               id="tagline"
               name="tagline"
-              required
               maxLength={140}
               value={formData.tagline}
               onChange={handleChange}
@@ -186,17 +221,17 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
           </div>
 
           <div>
-            <label htmlFor="description" className={labelStyles}>
-              Full Description
+            <label htmlFor="summary" className={labelStyles}>
+              Summary
             </label>
             <textarea
-              id="description"
-              name="description"
+              id="summary"
+              name="summary"
               rows={3}
-              value={formData.description}
+              value={formData.summary}
               onChange={handleChange}
               className={inputStyles}
-              placeholder="A more detailed description of what the company does..."
+              placeholder="A detailed description of the company..."
             />
           </div>
         </div>
@@ -210,12 +245,11 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
           <div className="grid grid-cols-2 gap-5">
             <div>
               <label htmlFor="segment" className={labelStyles}>
-                Primary Segment <span className="text-accent">*</span>
+                Primary Segment
               </label>
               <select
                 id="segment"
                 name="segment"
-                required
                 value={formData.segment}
                 onChange={handleChange}
                 className={selectStyles}
@@ -231,12 +265,11 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
 
             <div>
               <label htmlFor="layer" className={labelStyles}>
-                Primary Layer <span className="text-accent">*</span>
+                Primary Layer
               </label>
               <select
                 id="layer"
                 name="layer"
-                required
                 value={formData.layer}
                 onChange={handleChange}
                 className={selectStyles}
@@ -423,7 +456,7 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
               placeholder="you@example.com"
             />
             <p className="text-sm text-text-faint mt-2">
-              In case we have questions about your submission
+              In case we have questions about your update request
             </p>
           </div>
         </div>
@@ -431,10 +464,10 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
         <div className="pt-4 space-y-4">
           <button
             type="submit"
-            disabled={!isFormValid}
+            disabled={!formData.updateReason}
             className="w-full px-5 py-4 bg-accent text-white text-base font-semibold rounded-lg hover:bg-accent-muted transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit via GitHub
+            Submit Update Request
           </button>
 
           <p className="text-sm text-text-faint text-center">
