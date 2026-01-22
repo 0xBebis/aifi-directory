@@ -6,10 +6,8 @@ import {
   Project,
   Segment,
   Layer,
-  CompanyType,
   FundingStage,
   Region,
-  COMPANY_TYPE_LABELS,
   FUNDING_STAGE_LABELS,
   FUNDING_STAGE_ORDER,
   REGION_LABELS,
@@ -45,10 +43,9 @@ interface ProjectTableProps {
   onFilterChange?: (segment: string | null, layer: string | null) => void;
 }
 
-type SortKey = 'name' | 'segment' | 'layer' | 'type' | 'funding_stage' | 'region';
+type SortKey = 'name' | 'segment' | 'layer' | 'funding_stage' | 'region';
 type SortDir = 'asc' | 'desc';
 
-const companyTypes: CompanyType[] = ['private', 'public', 'acquired', 'token'];
 const fundingStages: FundingStage[] = ['pre-seed', 'seed', 'early', 'growth', 'late', 'public', 'fair-launch', 'undisclosed'];
 const regions: Region[] = ['americas', 'emea', 'apac'];
 
@@ -61,7 +58,6 @@ export default function ProjectTable({
   onFilterChange,
 }: ProjectTableProps) {
   const [search, setSearch] = useState('');
-  const [typeFilter, setTypeFilter] = useState<string | null>(null);
   const [fundingFilter, setFundingFilter] = useState<string | null>(null);
   const [regionFilter, setRegionFilter] = useState<string | null>(null);
   const [sortKey, setSortKey] = useState<SortKey>('name');
@@ -105,10 +101,6 @@ export default function ProjectTable({
       );
     }
 
-    if (typeFilter) {
-      result = result.filter((p) => p.company_type === typeFilter);
-    }
-
     if (fundingFilter) {
       result = result.filter((p) => p.funding_stage === fundingFilter);
     }
@@ -132,11 +124,6 @@ export default function ProjectTable({
           const bPos = layerMap[b.layer]?.position || 0;
           comparison = bPos - aPos;
           break;
-        case 'type':
-          const aType = companyTypes.indexOf(a.company_type as CompanyType);
-          const bType = companyTypes.indexOf(b.company_type as CompanyType);
-          comparison = aType - bType;
-          break;
         case 'funding_stage':
           const aFunding = FUNDING_STAGE_ORDER[a.funding_stage as FundingStage] ?? -1;
           const bFunding = FUNDING_STAGE_ORDER[b.funding_stage as FundingStage] ?? -1;
@@ -153,7 +140,7 @@ export default function ProjectTable({
     });
 
     return result;
-  }, [projects, search, segmentFilter, layerFilter, typeFilter, fundingFilter, regionFilter, sortKey, sortDir, fuse, layerMap]);
+  }, [projects, search, segmentFilter, layerFilter, fundingFilter, regionFilter, sortKey, sortDir, fuse, layerMap]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -177,13 +164,12 @@ export default function ProjectTable({
 
   const clearFilters = () => {
     setSearch('');
-    setTypeFilter(null);
     setFundingFilter(null);
     setRegionFilter(null);
     onFilterChange?.(null, null);
   };
 
-  const hasFilters = search || segmentFilter || layerFilter || typeFilter || fundingFilter || regionFilter;
+  const hasFilters = search || segmentFilter || layerFilter || fundingFilter || regionFilter;
 
   const selectStyles = "select-glass px-4 py-3 bg-[#18181b]/80 backdrop-blur-xl border border-white/10 rounded-lg text-sm text-text-primary hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
 
@@ -227,19 +213,6 @@ export default function ProjectTable({
             {layers.map((l) => (
               <option key={l.slug} value={l.slug}>
                 {l.name}
-              </option>
-            ))}
-          </select>
-
-          <select
-            value={typeFilter || ''}
-            onChange={(e) => setTypeFilter(e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All Types</option>
-            {companyTypes.map((t) => (
-              <option key={t} value={t}>
-                {COMPANY_TYPE_LABELS[t]}
               </option>
             ))}
           </select>
@@ -324,15 +297,6 @@ export default function ProjectTable({
               </th>
               <th className="text-left px-5 py-4">
                 <button
-                  onClick={() => handleSort('type')}
-                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
-                >
-                  Type
-                  <SortIcon column="type" />
-                </button>
-              </th>
-              <th className="text-left px-5 py-4">
-                <button
                   onClick={() => handleSort('funding_stage')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
@@ -359,7 +323,7 @@ export default function ProjectTable({
           <tbody className="divide-y divide-border/30">
             {filteredProjects.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-5 py-16 text-center">
+                <td colSpan={6} className="px-5 py-16 text-center">
                   <p className="text-text-secondary text-lg">No companies found</p>
                   <p className="text-sm text-text-muted mt-2">Try adjusting your filters</p>
                 </td>
@@ -444,13 +408,6 @@ export default function ProjectTable({
                               </span>
                             </Tooltip>
                           )}
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-5 py-4">
-                      {project.company_type && (
-                        <span className="text-sm text-text-muted">
-                          {COMPANY_TYPE_LABELS[project.company_type as CompanyType]}
                         </span>
                       )}
                     </td>
