@@ -2,67 +2,66 @@
 
 import { useState, useMemo } from 'react';
 import { projects, segments, layers } from '@/lib/data';
-import MarketMap from '@/components/MarketMap';
+import MarketMatrix from '@/components/MarketMatrix';
 import ProjectTable from '@/components/ProjectTable';
-
-export type CryptoFilter = 'all' | 'crypto' | 'traditional';
+import { AIType } from '@/types';
 
 export default function DirectoryPage() {
-  const [segmentFilter, setSegmentFilter] = useState<string | null>(null);
-  const [layerFilter, setLayerFilter] = useState<string | null>(null);
-  const [cryptoFilter, setCryptoFilter] = useState<CryptoFilter>('all');
+  const [segmentFilters, setSegmentFilters] = useState<string[]>([]);
+  const [layerFilters, setLayerFilters] = useState<string[]>([]);
+  const [aiTypeFilters, setAiTypeFilters] = useState<AIType[]>([]);
 
-  // Filter projects based on crypto toggle
+  // Filter projects based on selections
   const filteredProjects = useMemo(() => {
-    if (cryptoFilter === 'all') return projects;
-    if (cryptoFilter === 'crypto') return projects.filter(p => p.crypto === true);
-    return projects.filter(p => !p.crypto);
-  }, [cryptoFilter]);
+    let result = projects;
 
-  const handleMapCellClick = (segment: string | null, layer: string | null) => {
-    setSegmentFilter(segment);
-    setLayerFilter(layer);
+    // Filter by AI types
+    if (aiTypeFilters.length > 0) {
+      result = result.filter(p => p.ai_type && aiTypeFilters.includes(p.ai_type));
+    }
+
+    return result;
+  }, [aiTypeFilters]);
+
+  const handleMatrixFilterChange = (segs: string[], lays: string[], ais: AIType[]) => {
+    setSegmentFilters(segs);
+    setLayerFilters(lays);
+    setAiTypeFilters(ais);
   };
 
-  const handleFilterChange = (segment: string | null, layer: string | null) => {
-    setSegmentFilter(segment);
-    setLayerFilter(layer);
+  // For ProjectTable compatibility (single segment/layer filter)
+  const segmentFilter = segmentFilters.length === 1 ? segmentFilters[0] : segmentFilters.length > 0 ? segmentFilters[0] : null;
+  const layerFilter = layerFilters.length === 1 ? layerFilters[0] : layerFilters.length > 0 ? layerFilters[0] : null;
+
+  const handleTableFilterChange = (segment: string | null, layer: string | null) => {
+    setSegmentFilters(segment ? [segment] : []);
+    setLayerFilters(layer ? [layer] : []);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-8 py-10">
       {/* Editorial Header */}
       <div className="mb-8">
-        {/* Eyebrow */}
         <p className="label-refined mb-3 text-accent">
           The Index
         </p>
-
-        {/* Main headline */}
         <h1 className="headline-display mb-4">
           AIFi Directory
         </h1>
-
-        {/* Subtitle */}
         <p className="text-lg text-text-secondary max-w-xl leading-relaxed">
           Tracking {projects.length} companies building at the intersection of
           artificial intelligence and financial services.
         </p>
-
-
       </div>
 
-      {/* Market Map */}
+      {/* Market Matrix */}
       <div className="mb-10">
-        <MarketMap
+        <MarketMatrix
           projects={filteredProjects}
-          segments={segments}
-          layers={layers}
-          onCellClick={handleMapCellClick}
-          activeSegment={segmentFilter}
-          activeLayer={layerFilter}
-          cryptoFilter={cryptoFilter}
-          onCryptoFilterChange={setCryptoFilter}
+          onFilterChange={handleMatrixFilterChange}
+          activeSegments={segmentFilters}
+          activeLayers={layerFilters}
+          activeAiTypes={aiTypeFilters}
         />
       </div>
 
@@ -73,7 +72,7 @@ export default function DirectoryPage() {
         layers={layers}
         segmentFilter={segmentFilter}
         layerFilter={layerFilter}
-        onFilterChange={handleFilterChange}
+        onFilterChange={handleTableFilterChange}
       />
     </div>
   );
