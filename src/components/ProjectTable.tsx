@@ -220,18 +220,6 @@ export default function ProjectTable({
       {/* Toolbar */}
       <div className="p-5 border-b border-border/50">
         <div className="flex flex-wrap items-center gap-4">
-          {/* Search */}
-          <div className="relative flex-1 min-w-[280px]">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
-            <input
-              type="text"
-              placeholder="Search companies..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-11 pr-5 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-primary placeholder:text-text-faint hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200"
-            />
-          </div>
-
           {/* Filters */}
           <select
             value={segmentFilter || ''}
@@ -260,19 +248,6 @@ export default function ProjectTable({
           </select>
 
           <select
-            value={regionFilter || ''}
-            onChange={(e) => setRegionFilter(e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All Regions</option>
-            {regions.map((r) => (
-              <option key={r} value={r}>
-                {REGION_LABELS[r]}
-              </option>
-            ))}
-          </select>
-
-          <select
             value={aiTypeFilter || ''}
             onChange={(e) => setAiTypeFilter(e.target.value || null)}
             className={selectStyles}
@@ -281,6 +256,19 @@ export default function ProjectTable({
             {aiTypes.map((t) => (
               <option key={t} value={t}>
                 {AI_TYPE_LABELS[t]}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={regionFilter || ''}
+            onChange={(e) => setRegionFilter(e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All Regions</option>
+            {regions.map((r) => (
+              <option key={r} value={r}>
+                {REGION_LABELS[r]}
               </option>
             ))}
           </select>
@@ -295,6 +283,18 @@ export default function ProjectTable({
               Clear
             </button>
           )}
+
+          {/* Search - right aligned */}
+          <div className="relative flex-1 min-w-[280px]">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+            <input
+              type="text"
+              placeholder="Search companies..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-11 pr-5 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-sm text-text-primary placeholder:text-text-faint hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200"
+            />
+          </div>
         </div>
 
         {/* Result count */}
@@ -381,10 +381,21 @@ export default function ProjectTable({
               </tr>
             ) : (
               filteredProjects.map((project) => {
-                const segment = segmentMap[project.segment];
-                const layer = layerMap[project.layer];
-                const additionalSegments = project.segments?.filter(s => s !== project.segment) || [];
-                const additionalLayers = project.layers?.filter(l => l !== project.layer) || [];
+                // Determine which segment to show as primary (prefer filtered one)
+                const allSegments = [project.segment, ...(project.segments || [])].filter((v, i, a) => a.indexOf(v) === i);
+                const primarySegmentSlug = segmentFilter && allSegments.includes(segmentFilter)
+                  ? segmentFilter
+                  : project.segment;
+                const segment = segmentMap[primarySegmentSlug];
+                const additionalSegments = allSegments.filter(s => s !== primarySegmentSlug);
+
+                // Determine which layer to show as primary (prefer filtered one)
+                const allLayers = [project.layer, ...(project.layers || [])].filter((v, i, a) => a.indexOf(v) === i);
+                const primaryLayerSlug = layerFilter && allLayers.includes(layerFilter)
+                  ? layerFilter
+                  : project.layer;
+                const layer = layerMap[primaryLayerSlug];
+                const additionalLayers = allLayers.filter(l => l !== primaryLayerSlug);
 
                 return (
                   <tr
@@ -410,8 +421,11 @@ export default function ProjectTable({
                           <CategoryBadge
                             label={segment.name}
                             color={segment.color}
-                            onClick={() => onFilterChange?.(segment.slug, layerFilter || null)}
-                            isActive={segmentFilter === segment.slug}
+                            onClick={() => onFilterChange?.(
+                              segmentFilter === primarySegmentSlug ? null : primarySegmentSlug,
+                              layerFilter || null
+                            )}
+                            isActive={segmentFilter === primarySegmentSlug}
                           />
                           {additionalSegments.length > 0 && (
                             <Tooltip
@@ -424,7 +438,10 @@ export default function ProjectTable({
                                         key={slug}
                                         label={s.name}
                                         color={s.color}
-                                        onClick={() => onFilterChange?.(slug, layerFilter || null)}
+                                        onClick={() => onFilterChange?.(
+                                          segmentFilter === slug ? null : slug,
+                                          layerFilter || null
+                                        )}
                                         isActive={segmentFilter === slug}
                                       />
                                     ) : null;
@@ -446,8 +463,11 @@ export default function ProjectTable({
                           <CategoryBadge
                             label={layer.name}
                             color={layer.color}
-                            onClick={() => onFilterChange?.(segmentFilter || null, layer.slug)}
-                            isActive={layerFilter === layer.slug}
+                            onClick={() => onFilterChange?.(
+                              segmentFilter || null,
+                              layerFilter === primaryLayerSlug ? null : primaryLayerSlug
+                            )}
+                            isActive={layerFilter === primaryLayerSlug}
                           />
                           {additionalLayers.length > 0 && (
                             <Tooltip
@@ -460,7 +480,10 @@ export default function ProjectTable({
                                         key={slug}
                                         label={l.name}
                                         color={l.color}
-                                        onClick={() => onFilterChange?.(segmentFilter || null, slug)}
+                                        onClick={() => onFilterChange?.(
+                                          segmentFilter || null,
+                                          layerFilter === slug ? null : slug
+                                        )}
                                         isActive={layerFilter === slug}
                                       />
                                     ) : null;
