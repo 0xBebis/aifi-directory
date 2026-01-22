@@ -292,12 +292,12 @@ export default function MarketMap({
             })}
 
             {/* Rows (Layers) with their cells */}
-            {layers.map((layer) => {
+            {layers.map((layer, layerIndex) => {
               const layerCount = projects.filter(p => p.layer === layer.slug).length;
               return (
-                <>
+                <div key={`${layer.slug}-${layerIndex}`} className="contents">
                   {/* Row Header */}
-                  <div key={`${layer.slug}-header`} className="flex items-center justify-end pr-3">
+                  <div className="flex items-center justify-end pr-3">
                     <Tooltip
                       title={layer.name}
                       description={layer.description}
@@ -372,7 +372,7 @@ export default function MarketMap({
                       </div>
                     );
                   })}
-                </>
+                </div>
               );
             })}
           </div>
