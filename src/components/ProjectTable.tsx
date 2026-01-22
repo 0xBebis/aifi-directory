@@ -6,12 +6,13 @@ import {
   Project,
   Segment,
   Layer,
-  FundingStage,
   Region,
-  FUNDING_STAGE_LABELS,
-  FUNDING_STAGE_ORDER,
+  AIType,
   REGION_LABELS,
+  AI_TYPE_LABELS,
+  AI_TYPE_COLORS,
 } from '@/types';
+import { formatFunding } from '@/lib/data';
 import {
   Search,
   ChevronUp,
@@ -34,6 +35,22 @@ function Tooltip({ children, content }: { children: ReactNode; content: ReactNod
   );
 }
 
+// Colored badge component for categories
+function CategoryBadge({ label, color }: { label: string; color: string }) {
+  return (
+    <span
+      className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium transition-colors"
+      style={{
+        backgroundColor: `${color}15`,
+        color: color,
+        border: `1px solid ${color}30`,
+      }}
+    >
+      {label}
+    </span>
+  );
+}
+
 interface ProjectTableProps {
   projects: Project[];
   segments: Segment[];
@@ -43,11 +60,11 @@ interface ProjectTableProps {
   onFilterChange?: (segment: string | null, layer: string | null) => void;
 }
 
-type SortKey = 'name' | 'segment' | 'layer' | 'funding_stage' | 'region';
+type SortKey = 'name' | 'segment' | 'layer' | 'ai_type' | 'funding' | 'region';
 type SortDir = 'asc' | 'desc';
 
-const fundingStages: FundingStage[] = ['pre-seed', 'seed', 'early', 'growth', 'late', 'public', 'fair-launch', 'undisclosed'];
 const regions: Region[] = ['americas', 'emea', 'apac'];
+const aiTypes: AIType[] = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'multi-modal', 'data-platform', 'infrastructure'];
 
 export default function ProjectTable({
   projects,
@@ -58,8 +75,8 @@ export default function ProjectTable({
   onFilterChange,
 }: ProjectTableProps) {
   const [search, setSearch] = useState('');
-  const [fundingFilter, setFundingFilter] = useState<string | null>(null);
   const [regionFilter, setRegionFilter] = useState<string | null>(null);
+  const [aiTypeFilter, setAiTypeFilter] = useState<string | null>(null);
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
@@ -101,12 +118,12 @@ export default function ProjectTable({
       );
     }
 
-    if (fundingFilter) {
-      result = result.filter((p) => p.funding_stage === fundingFilter);
-    }
-
     if (regionFilter) {
       result = result.filter((p) => p.region === regionFilter);
+    }
+
+    if (aiTypeFilter) {
+      result = result.filter((p) => p.ai_type === aiTypeFilter);
     }
 
     result = [...result].sort((a, b) => {
@@ -124,9 +141,14 @@ export default function ProjectTable({
           const bPos = layerMap[b.layer]?.position || 0;
           comparison = bPos - aPos;
           break;
-        case 'funding_stage':
-          const aFunding = FUNDING_STAGE_ORDER[a.funding_stage as FundingStage] ?? -1;
-          const bFunding = FUNDING_STAGE_ORDER[b.funding_stage as FundingStage] ?? -1;
+        case 'ai_type':
+          const aType = a.ai_type || '';
+          const bType = b.ai_type || '';
+          comparison = aType.localeCompare(bType);
+          break;
+        case 'funding':
+          const aFunding = a.funding || 0;
+          const bFunding = b.funding || 0;
           comparison = bFunding - aFunding;
           break;
         case 'region':
@@ -140,7 +162,7 @@ export default function ProjectTable({
     });
 
     return result;
-  }, [projects, search, segmentFilter, layerFilter, fundingFilter, regionFilter, sortKey, sortDir, fuse, layerMap]);
+  }, [projects, search, segmentFilter, layerFilter, regionFilter, aiTypeFilter, sortKey, sortDir, fuse, layerMap]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -164,12 +186,12 @@ export default function ProjectTable({
 
   const clearFilters = () => {
     setSearch('');
-    setFundingFilter(null);
     setRegionFilter(null);
+    setAiTypeFilter(null);
     onFilterChange?.(null, null);
   };
 
-  const hasFilters = search || segmentFilter || layerFilter || fundingFilter || regionFilter;
+  const hasFilters = search || segmentFilter || layerFilter || regionFilter || aiTypeFilter;
 
   const selectStyles = "select-glass px-4 py-3 bg-[#18181b]/80 backdrop-blur-xl border border-white/10 rounded-lg text-sm text-text-primary hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
 
@@ -218,19 +240,6 @@ export default function ProjectTable({
           </select>
 
           <select
-            value={fundingFilter || ''}
-            onChange={(e) => setFundingFilter(e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All Stages</option>
-            {fundingStages.map((s) => (
-              <option key={s} value={s}>
-                {FUNDING_STAGE_LABELS[s]}
-              </option>
-            ))}
-          </select>
-
-          <select
             value={regionFilter || ''}
             onChange={(e) => setRegionFilter(e.target.value || null)}
             className={selectStyles}
@@ -239,6 +248,19 @@ export default function ProjectTable({
             {regions.map((r) => (
               <option key={r} value={r}>
                 {REGION_LABELS[r]}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={aiTypeFilter || ''}
+            onChange={(e) => setAiTypeFilter(e.target.value || null)}
+            className={selectStyles}
+          >
+            <option value="">All AI Types</option>
+            {aiTypes.map((t) => (
+              <option key={t} value={t}>
+                {AI_TYPE_LABELS[t]}
               </option>
             ))}
           </select>
@@ -297,11 +319,20 @@ export default function ProjectTable({
               </th>
               <th className="text-left px-5 py-4">
                 <button
-                  onClick={() => handleSort('funding_stage')}
+                  onClick={() => handleSort('ai_type')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
-                  Stage
-                  <SortIcon column="funding_stage" />
+                  AI Type
+                  <SortIcon column="ai_type" />
+                </button>
+              </th>
+              <th className="text-left px-5 py-4">
+                <button
+                  onClick={() => handleSort('funding')}
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
+                >
+                  Funds Raised
+                  <SortIcon column="funding" />
                 </button>
               </th>
               <th className="text-left px-5 py-4">
@@ -323,7 +354,7 @@ export default function ProjectTable({
           <tbody className="divide-y divide-border/30">
             {filteredProjects.length === 0 ? (
               <tr>
-                <td colSpan={6} className="px-5 py-16 text-center">
+                <td colSpan={7} className="px-5 py-16 text-center">
                   <p className="text-text-secondary text-lg">No companies found</p>
                   <p className="text-sm text-text-muted mt-2">Try adjusting your filters</p>
                 </td>
@@ -356,9 +387,7 @@ export default function ProjectTable({
                     <td className="px-5 py-4">
                       {segment && (
                         <span className="inline-flex items-center gap-2">
-                          <span className="text-sm text-text-muted">
-                            {segment.name}
-                          </span>
+                          <CategoryBadge label={segment.name} color={segment.color} />
                           {additionalSegments.length > 0 && (
                             <Tooltip
                               content={
@@ -366,9 +395,7 @@ export default function ProjectTable({
                                   {additionalSegments.map(slug => {
                                     const s = segmentMap[slug];
                                     return s ? (
-                                      <span key={slug} className="text-text-secondary">
-                                        {s.name}
-                                      </span>
+                                      <CategoryBadge key={slug} label={s.name} color={s.color} />
                                     ) : null;
                                   })}
                                 </>
@@ -385,9 +412,7 @@ export default function ProjectTable({
                     <td className="px-5 py-4">
                       {layer && (
                         <span className="inline-flex items-center gap-2">
-                          <span className="text-sm text-text-muted">
-                            {layer.name}
-                          </span>
+                          <CategoryBadge label={layer.name} color={layer.color} />
                           {additionalLayers.length > 0 && (
                             <Tooltip
                               content={
@@ -395,9 +420,7 @@ export default function ProjectTable({
                                   {additionalLayers.map(slug => {
                                     const l = layerMap[slug];
                                     return l ? (
-                                      <span key={slug} className="text-text-secondary">
-                                        {l.name}
-                                      </span>
+                                      <CategoryBadge key={slug} label={l.name} color={l.color} />
                                     ) : null;
                                   })}
                                 </>
@@ -412,9 +435,19 @@ export default function ProjectTable({
                       )}
                     </td>
                     <td className="px-5 py-4">
-                      {project.funding_stage ? (
-                        <span className="text-sm text-text-muted">
-                          {FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]}
+                      {project.ai_type ? (
+                        <CategoryBadge
+                          label={AI_TYPE_LABELS[project.ai_type]}
+                          color={AI_TYPE_COLORS[project.ai_type]}
+                        />
+                      ) : (
+                        <span className="text-sm text-text-faint">—</span>
+                      )}
+                    </td>
+                    <td className="px-5 py-4">
+                      {project.funding ? (
+                        <span className="text-sm font-medium text-accent tabular-nums">
+                          {formatFunding(project.funding)}
                         </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>

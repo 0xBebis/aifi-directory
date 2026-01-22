@@ -86,3 +86,53 @@ export function getCountryName(code: string): string {
   };
   return countries[code] || code;
 }
+
+// Homepage data helpers
+
+export function getTotalFunding(): number {
+  return projects.reduce((sum, p) => sum + (p.funding || 0), 0);
+}
+
+export function getTopCompanies(limit: number = 10): Project[] {
+  return [...projects]
+    .filter(p => p.funding && p.funding > 0)
+    .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+    .slice(0, limit);
+}
+
+export function getTopCompaniesBySegment(segmentSlug: string, limit: number = 3): Project[] {
+  return getProjectsBySegment(segmentSlug)
+    .filter(p => p.funding && p.funding > 0)
+    .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+    .slice(0, limit);
+}
+
+export function getFundingStageDistribution(): Record<string, number> {
+  const distribution: Record<string, number> = {};
+  projects.forEach(p => {
+    const stage = p.funding_stage || 'undisclosed';
+    distribution[stage] = (distribution[stage] || 0) + 1;
+  });
+  return distribution;
+}
+
+export function getRegionDistribution(): Record<string, number> {
+  const distribution: Record<string, number> = {};
+  projects.forEach(p => {
+    const region = p.region || 'unknown';
+    distribution[region] = (distribution[region] || 0) + 1;
+  });
+  return distribution;
+}
+
+export function getSegmentStats(): Array<{
+  segment: Segment;
+  count: number;
+  topCompanies: Project[];
+}> {
+  return segments.map(segment => ({
+    segment,
+    count: getProjectsBySegment(segment.slug).length,
+    topCompanies: getTopCompaniesBySegment(segment.slug, 3),
+  }));
+}

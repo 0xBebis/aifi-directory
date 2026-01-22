@@ -158,22 +158,32 @@ export default function MarketMap({
     return (count - minCount) / (maxCount - minCount);
   };
 
-  // Get background color based on intensity (black to white)
+  // Get background color based on intensity (dark to accent teal)
+  // Accent color is #0d9488 = rgb(13, 148, 136)
   const getCellColor = (intensity: number): string => {
-    const value = Math.round(intensity * 255);
-    return `rgb(${value}, ${value}, ${value})`;
+    // Interpolate from dark (#1a1a1d) to accent (#0d9488)
+    const r = Math.round(26 + (13 - 26) * intensity);
+    const g = Math.round(26 + (148 - 26) * intensity);
+    const b = Math.round(29 + (136 - 29) * intensity);
+    return `rgb(${r}, ${g}, ${b})`;
   };
 
-  // Get text color based on intensity (white for dark bg, black for light bg)
+  // Get text color based on intensity (always light text since bg is dark-ish)
   const getTextColor = (intensity: number): string => {
-    return intensity > 0.45 ? 'rgb(0, 0, 0)' : 'rgb(200, 200, 200)';
+    // For low intensity, use muted text; for high intensity, use bright white
+    const value = Math.round(160 + intensity * 95);
+    return `rgb(${value}, ${value}, ${value})`;
   };
 
-  // Get hover background color (slightly lighter/darker)
+  // Get hover background color (brighter version)
   const getHoverColor = (intensity: number): string => {
-    const adjusted = intensity > 0.5 ? intensity - 0.1 : intensity + 0.15;
-    const value = Math.round(Math.min(1, Math.max(0, adjusted)) * 255);
-    return `rgb(${value}, ${value}, ${value})`;
+    // Slightly brighter/more saturated version
+    const boost = 0.15;
+    const adjusted = Math.min(1, intensity + boost);
+    const r = Math.round(26 + (20 - 26) * adjusted);
+    const g = Math.round(26 + (184 - 26) * adjusted);
+    const b = Math.round(29 + (166 - 29) * adjusted);
+    return `rgb(${r}, ${g}, ${b})`;
   };
 
   return (

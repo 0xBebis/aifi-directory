@@ -24,6 +24,7 @@ export interface Project {
   team?: TeamMember[];
   summary?: string;
   crypto?: boolean; // Flag for Web3/crypto companies (allows filtering while using functional segments)
+  ai_type?: AIType; // Classification of AI/ML technology used
 }
 
 export interface TeamMember {
@@ -124,6 +125,54 @@ export const REGION_LABELS: Record<Region, string> = {
 };
 
 // Country to region mapping
+// AI/ML technology type classification
+export type AIType =
+  | 'llm'                  // Large Language Models - NLP, chat, document understanding
+  | 'predictive-ml'        // Traditional ML - classification, regression, scoring
+  | 'computer-vision'      // Image/video processing, OCR, document extraction
+  | 'graph-analytics'      // Graph neural networks, network analysis, blockchain analytics
+  | 'reinforcement-learning' // RL for trading, portfolio optimization
+  | 'agentic'              // Autonomous AI agents that execute actions
+  | 'multi-modal'          // Combines multiple AI types significantly
+  | 'data-platform'        // Data aggregation/enrichment, minimal ML
+  | 'infrastructure';      // AI/ML infrastructure, compute, not application
+
+export const AI_TYPE_LABELS: Record<AIType, string> = {
+  'llm': 'LLM / NLP',
+  'predictive-ml': 'Predictive ML',
+  'computer-vision': 'Computer Vision',
+  'graph-analytics': 'Graph Analytics',
+  'reinforcement-learning': 'Reinforcement Learning',
+  'agentic': 'Agentic AI',
+  'multi-modal': 'Multi-Modal',
+  'data-platform': 'Data Platform',
+  'infrastructure': 'Infrastructure',
+};
+
+export const AI_TYPE_DESCRIPTIONS: Record<AIType, string> = {
+  'llm': 'Large language models for NLP, chat, document understanding, and text generation',
+  'predictive-ml': 'Traditional ML algorithms for classification, regression, and scoring models',
+  'computer-vision': 'Image and video processing, OCR, and document extraction',
+  'graph-analytics': 'Graph neural networks for network analysis and relationship detection',
+  'reinforcement-learning': 'Reinforcement learning for trading and portfolio optimization',
+  'agentic': 'Autonomous AI agents that execute actions independently',
+  'multi-modal': 'Systems combining multiple AI approaches (LLM + vision + etc.)',
+  'data-platform': 'Data aggregation and enrichment platforms with minimal ML',
+  'infrastructure': 'AI/ML infrastructure, compute networks, and tooling',
+};
+
+export const AI_TYPE_COLORS: Record<AIType, string> = {
+  'llm': '#8b5cf6',              // Purple - language/text
+  'predictive-ml': '#3b82f6',    // Blue - traditional ML
+  'computer-vision': '#06b6d4',  // Cyan - vision
+  'graph-analytics': '#f97316',  // Orange - graphs/networks
+  'reinforcement-learning': '#ec4899', // Pink - RL/trading
+  'agentic': '#22c55e',          // Green - autonomous agents
+  'multi-modal': '#a855f7',      // Violet - multi-modal
+  'data-platform': '#64748b',    // Slate - data
+  'infrastructure': '#71717a',   // Gray - infra
+};
+
 export const COUNTRY_TO_REGION: Record<string, Region> = {
   // Americas
   'US': 'americas', 'USA': 'americas', 'United States': 'americas',

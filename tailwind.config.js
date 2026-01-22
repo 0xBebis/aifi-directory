@@ -79,7 +79,11 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.2s ease-out',
         'fade-in-up': 'fadeInUp 0.25s ease-out',
+        'fade-in-up-slow': 'fadeInUp 0.5s ease-out',
         'scale-in': 'scaleIn 0.2s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 8s ease infinite',
       },
       keyframes: {
         fadeIn: {
@@ -93,6 +97,18 @@ module.exports = {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.98)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.7' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },
