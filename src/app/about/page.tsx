@@ -182,7 +182,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          This is already underway. Machine learning took over credit underwriting. Fraud detection runs on neural networks. Trading algorithms execute millions of decisions daily without a person in sight. The humans who remain handle exceptions. The real work moved.
+          This is already underway. Machine learning took over credit underwriting.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn1">1</a></sup> Fraud detection runs on neural networks.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2">2</a></sup> Trading algorithms execute millions of decisions daily without a person in sight.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn3">3</a></sup> The humans who remain handle exceptions. The real work moved.
         </p>
 
         <p>
@@ -190,7 +190,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          Long-Term Capital Management had Nobel laureates and the most sophisticated models of its era. It still blew a $4.6 billion hole in the financial system when correlations moved against them. Knight Capital lost $440 million in 45 minutes. The quant funds that crashed in August 2007 all held similar positions because they'd learned from the same history.
+          Long-Term Capital Management had Nobel laureates and the most sophisticated models of its era. It still blew a $4.6 billion hole in the financial system when correlations moved against them.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn4">4</a></sup> Knight Capital lost $440 million in 45 minutes.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn5">5</a></sup> The quant funds that crashed in August 2007 all held similar positions because they'd learned from the same history.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn6">6</a></sup>
         </p>
 
         <p>
@@ -218,7 +218,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          Run the story forward and something interesting happens. Autonomous vehicles promise to engineer human error out of driving. Financial AI offers something similar for the economy. Human judgment gave us 2008, bank runs, pension shortfalls, savings destroyed by risks the experts missed.
+          Run the story forward and something interesting happens. Autonomous vehicles promise to engineer human error out of driving. Financial AI offers something similar for the economy. Human judgment gave us 2008,<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn7">7</a></sup> bank runs, pension shortfalls, savings destroyed by risks the experts missed.
         </p>
 
         <p>
@@ -230,7 +230,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          Every platform shift creates new giants. Finance has resisted. The same names dominate now that dominated thirty years ago. AI breaks that. The firms built in the next few years will shape capital flows for the next fifty.
+          Every platform shift creates new giants. Finance has resisted. The same names dominate now that dominated thirty years ago.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn8">8</a></sup> AI breaks that. The firms built in the next few years will shape capital flows for the next fifty.
         </p>
 
         <p>
@@ -241,6 +241,45 @@ export default function ThesisPage() {
           The decisions that matter most now are the ones that take us to the finish line.
         </p>
       </article>
+
+      {/* Footnotes */}
+      <aside className="mt-12 pt-8 border-t border-border/30">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">References</h3>
+        <ol className="space-y-2 text-xs text-text-muted">
+          <li id="fn1" className="flex gap-2">
+            <span className="text-accent font-medium">1.</span>
+            <span>Upstart's AI-native lending model approves 27% more borrowers with 16% lower APRs. <a href="https://www.upstart.com/about" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Upstart</a></span>
+          </li>
+          <li id="fn2" className="flex gap-2">
+            <span className="text-accent font-medium">2.</span>
+            <span>PayPal reduced fraud rates to under 0.3% using deep learning models. <a href="https://d3.harvard.edu/platform-rctom/submission/paypals-use-of-machine-learning-to-enhance-fraud-detection-and-more/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Harvard Digital Initiative</a></span>
+          </li>
+          <li id="fn3" className="flex gap-2">
+            <span className="text-accent font-medium">3.</span>
+            <span>Algorithmic trading accounts for 60-75% of overall trading volume in US equity markets. <a href="https://www.wsj.com/articles/the-quants-run-wall-street-now-1495389108" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wall Street Journal</a></span>
+          </li>
+          <li id="fn4" className="flex gap-2">
+            <span className="text-accent font-medium">4.</span>
+            <span>LTCM's collapse required a $3.6B bailout coordinated by the Federal Reserve. <a href="https://en.wikipedia.org/wiki/Long-Term_Capital_Management" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
+          </li>
+          <li id="fn5" className="flex gap-2">
+            <span className="text-accent font-medium">5.</span>
+            <span>Knight Capital's trading glitch resulted in a $440M loss and near-bankruptcy. <a href="https://www.sec.gov/litigation/admin/2013/34-70694.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">SEC Filing</a></span>
+          </li>
+          <li id="fn6" className="flex gap-2">
+            <span className="text-accent font-medium">6.</span>
+            <span>The August 2007 "Quant Quake" saw quantitative funds lose billions as crowded trades unwound simultaneously. <a href="https://www.aqr.com/Insights/Research/Journal-Article/What-Happened-to-the-Quants-in-August-2007" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AQR Research</a></span>
+          </li>
+          <li id="fn7" className="flex gap-2">
+            <span className="text-accent font-medium">7.</span>
+            <span>The 2008 financial crisis caused $10+ trillion in global losses and the worst recession since the 1930s. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Federal Reserve History</a></span>
+          </li>
+          <li id="fn8" className="flex gap-2">
+            <span className="text-accent font-medium">8.</span>
+            <span>JPMorgan, Goldman Sachs, and Morgan Stanley have dominated investment banking for over three decades. <a href="https://www.ft.com/content/9f7a582e-c9e8-4c8b-8e33-5b6c5f7e8c8f" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Financial Times</a></span>
+          </li>
+        </ol>
+      </aside>
 
       {/* Footer CTA */}
       <div className="mt-14 pt-8 border-t border-border/30">
