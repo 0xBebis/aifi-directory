@@ -175,6 +175,16 @@
     animation-fill-mode: both;
   }
 
+  /* Glow pulse animation for emphasis */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px -5px rgba(13, 148, 136, 0.3), 0 0 40px -10px rgba(13, 148, 136, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 30px -5px rgba(13, 148, 136, 0.4), 0 0 50px -10px rgba(13, 148, 136, 0.25);
+    }
+  }
+
   /* Hero headline extra large */
   .text-display {
     @apply text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tighter text-text-primary;
