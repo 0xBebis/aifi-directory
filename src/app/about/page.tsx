@@ -5,7 +5,7 @@ const eras = [
   { id: 'quant', label: 'Quant Era', start: 1982, end: 2011, color: '#60a5fa', description: 'Statistical arbitrage and systematic trading' },
   { id: 'deep-learning', label: 'Deep Learning', start: 2012, end: 2018, color: '#a78bfa', description: 'Neural networks transform credit and fraud' },
   { id: 'nlp', label: 'NLP Era', start: 2019, end: 2022, color: '#4ade80', description: 'Language models read financial text' },
-  { id: 'foundation', label: 'Foundation Models', start: 2023, end: 2024, color: '#14b8a6', description: 'LLMs enter the enterprise' },
+  { id: 'foundation', label: 'Foundation Models', start: 2023, end: 2024, color: '#f59e0b', description: 'LLMs enter the enterprise' },
   { id: 'emergence', label: 'Emergence', start: 2025, end: 2026, color: '#14b8a6', description: 'AI makes consequential decisions', featured: true },
 ];
 
@@ -39,7 +39,7 @@ const milestones = [
   {
     year: 2025,
     event: 'Labs target finance',
-    detail: 'OpenAI and Anthropic invest in financial pre-training. Models understand markets, risk, and capital allocation at expert level.',
+    detail: 'OpenAI and Anthropic invest in financial pre-training & build RLHF pipelines. Financial capabilities start to accelerate.',
     era: 'emergence',
     sources: [
       { label: 'OpenAI Finance', url: 'https://openai.com/solutions/industries/financial-services/' },
@@ -67,7 +67,7 @@ export default function ThesisPage() {
           Evolution
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-text-primary leading-[1.1] mb-2">
-          AI in Finance: A Technical History
+          A Brief History of Financial AI
         </h2>
         <p className="text-text-muted text-sm mb-8">
           From statistical arbitrage to financial emergence
@@ -106,44 +106,49 @@ export default function ThesisPage() {
                     return (
                       <div key={i} className="group/row">
                         {/* Standard row - same for all eras */}
-                        <div className="flex items-center gap-3">
-                          <span className={`text-xs font-mono w-10 flex-shrink-0 ${isFeatured ? 'text-accent font-semibold' : 'text-text-muted'}`}>{m.year}</span>
-                          <span className={`text-sm font-medium ${isFeatured ? 'text-text-primary' : 'text-text-primary'}`}>{m.event}</span>
-                          <span className="text-xs text-text-muted hidden sm:block">—</span>
-                          <span className={`text-xs hidden sm:block flex-1 ${isFeatured ? 'text-text-secondary' : 'text-text-muted'}`}>{m.detail}</span>
-                          {/* Single source - hover reveal */}
-                          {hasSource && (
-                            <a
-                              href={m.source.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="opacity-0 group-hover/row:opacity-100 text-xs text-text-faint hover:text-accent transition-all flex-shrink-0"
-                            >
-                              [{m.source.label}]
-                            </a>
-                          )}
-                          {/* Multiple sources - always visible, subtle */}
-                          {hasSources && (
-                            <div className="flex gap-1.5 flex-shrink-0">
-                              {m.sources.map((source: { label: string; url: string }, j: number) => (
+                        <div className="flex items-start gap-3">
+                          <span className={`text-xs font-mono w-10 flex-shrink-0 mt-0.5 ${isFeatured ? 'text-accent font-semibold' : 'text-text-muted'}`}>{m.year}</span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className={`text-sm font-medium ${isFeatured ? 'text-text-primary' : 'text-text-primary'}`}>{m.event}</span>
+                              {/* Single source - hover reveal */}
+                              {hasSource && (
                                 <a
-                                  key={j}
-                                  href={source.url}
+                                  href={m.source.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-xs text-text-faint hover:text-accent transition-colors"
+                                  className="opacity-0 group-hover/row:opacity-100 text-xs text-text-faint hover:text-accent transition-all flex-shrink-0"
                                 >
-                                  [{source.label}]
+                                  [{m.source.label}]
                                 </a>
-                              ))}
+                              )}
                             </div>
-                          )}
+                            <span className={`text-xs block mt-0.5 ${isFeatured ? 'text-text-secondary' : 'text-text-muted'}`}>{m.detail}</span>
+                            {/* Multiple sources - displayed as button row underneath */}
+                            {hasSources && (
+                              <div className="flex flex-wrap gap-2 mt-2">
+                                {m.sources.map((source: { label: string; url: string }, j: number) => (
+                                  <a
+                                    key={j}
+                                    href={source.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-2.5 py-1 text-xs font-medium text-text-muted bg-surface-2/50 border border-border/50 rounded-md hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-colors"
+                                  >
+                                    {source.label}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
-                        {/* Tagline - simple emphasized line */}
+                        {/* Tagline - the big conclusion */}
                         {hasTagline && (
-                          <div className="flex items-center gap-3 mt-3 pt-3 border-t border-border/50">
+                          <div className="flex gap-3 mt-4 pt-4 border-t border-accent/20">
                             <span className="w-10 flex-shrink-0" />
-                            <span className="text-sm font-semibold text-accent">{m.tagline}</span>
+                            <p className="text-base sm:text-lg font-bold bg-gradient-to-r from-accent to-teal-400 bg-clip-text text-transparent tracking-tight">
+                              {m.tagline}
+                            </p>
                           </div>
                         )}
                       </div>

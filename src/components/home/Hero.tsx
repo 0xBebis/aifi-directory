@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   companyCount: number;
@@ -11,42 +11,39 @@ interface HeroProps {
   totalFunding: number;
 }
 
-function AnimatedNumber({ value, suffix = '', prefix = '' }: { value: number; suffix?: string; prefix?: string }) {
-  const [displayed, setDisplayed] = useState(0);
-
-  useEffect(() => {
-    const duration = 1500;
-    const steps = 60;
-    const increment = value / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= value) {
-        setDisplayed(value);
-        clearInterval(timer);
-      } else {
-        setDisplayed(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [value]);
-
-  return (
-    <span className="tabular-nums">
-      {prefix}{displayed.toLocaleString()}{suffix}
-    </span>
-  );
-}
-
 function formatFundingShort(amount: number): string {
   if (amount >= 1_000_000_000) {
-    return `$${(amount / 1_000_000_000).toFixed(0)}B+`;
+    return `$${(amount / 1_000_000_000).toFixed(1)}B`;
   }
   if (amount >= 1_000_000) {
-    return `$${(amount / 1_000_000).toFixed(0)}M+`;
+    return `$${(amount / 1_000_000).toFixed(0)}M`;
   }
   return `$${amount}`;
+}
+
+function Counter({ value, duration = 2000 }: { value: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number;
+    let animationId: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * value));
+
+      if (progress < 1) {
+        animationId = requestAnimationFrame(animate);
+      }
+    };
+
+    animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [value, duration]);
+
+  return <span className="tabular-nums">{count.toLocaleString()}</span>;
 }
 
 export default function Hero({ companyCount, segmentCount, layerCount, totalFunding }: HeroProps) {
@@ -57,101 +54,107 @@ export default function Hero({ companyCount, segmentCount, layerCount, totalFund
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute inset-0 bg-glow" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-glow-center opacity-50" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
 
-      {/* Floating orbs - subtle background elements */}
-      <div className="absolute top-20 left-[15%] w-64 h-64 rounded-full bg-accent/5 blur-3xl animate-float" />
-      <div className="absolute bottom-32 right-[10%] w-96 h-96 rounded-full bg-accent/3 blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-8 text-center">
-        {/* Eyebrow */}
-        <div
-          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-border/50 mb-8 transition-all duration-700 ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          <Sparkles className="w-4 h-4 text-accent" />
-          <span className="text-sm text-text-secondary">The definitive AI + Finance index</span>
-        </div>
-
-        {/* Main headline */}
-        <h1
-          className={`text-display mb-6 transition-all duration-700 delay-100 ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          The AI + Finance{' '}
-          <span className="text-gradient">Landscape</span>
-        </h1>
-
-        {/* Subheadline */}
-        <p
-          className={`text-xl sm:text-2xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed transition-all duration-700 delay-200 ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          Explore {companyCount} companies building the future of financial services with artificial intelligence
-        </p>
-
-        {/* Stats row */}
-        <div
-          className={`flex flex-wrap justify-center gap-8 sm:gap-12 mb-12 transition-all duration-700 delay-300 ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          <div className="text-center">
-            <div className="text-4xl sm:text-5xl font-bold text-text-primary mb-1">
-              {mounted ? <AnimatedNumber value={companyCount} /> : '0'}
-            </div>
-            <div className="text-sm text-text-muted uppercase tracking-wide">Companies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl sm:text-5xl font-bold text-text-primary mb-1">
-              {mounted ? <AnimatedNumber value={segmentCount} /> : '0'}
-            </div>
-            <div className="text-sm text-text-muted uppercase tracking-wide">Segments</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl sm:text-5xl font-bold text-text-primary mb-1">
-              {mounted ? <AnimatedNumber value={layerCount} /> : '0'}
-            </div>
-            <div className="text-sm text-text-muted uppercase tracking-wide">Tech Layers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl sm:text-5xl font-bold text-accent mb-1">
-              {formatFundingShort(totalFunding)}
-            </div>
-            <div className="text-sm text-text-muted uppercase tracking-wide">Total Raised</div>
-          </div>
-        </div>
-
-        {/* CTAs */}
-        <div
-          className={`flex flex-wrap justify-center gap-4 transition-all duration-700 delay-400 ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          <Link
-            href="/directory"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all duration-200 shadow-glow hover:shadow-[0_0_30px_-5px_rgba(13,148,136,0.5)]"
-          >
-            Explore Directory
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="/submit"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-surface border border-border text-text-primary font-semibold rounded-xl hover:bg-surface-2 hover:border-border transition-all duration-200"
-          >
-            Submit a Company
-          </Link>
+      {/* Accent glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[700px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent/20 via-accent/5 to-transparent blur-[100px]" />
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8">
+        <div className="flex flex-col items-center text-center">
+
+          {/* Main headline */}
+          <h1
+            className={`mb-6 transition-all duration-1000 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <span className="block text-[clamp(2.75rem,8vw,6.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-text-primary">
+              The Financial AI
+            </span>
+            <span className="block text-[clamp(2.75rem,8vw,6.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em]">
+              <span className="bg-gradient-to-r from-accent to-teal-400 bg-clip-text text-transparent pr-[0.05em]">
+                Landscape
+              </span>
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p
+            className={`text-lg sm:text-xl text-text-muted max-w-xl leading-relaxed mb-10 transition-all duration-1000 delay-100 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            A comprehensive directory of companies building the future of finance with AI
+          </p>
+
+          {/* Stats - minimal inline */}
+          <div
+            className={`flex items-center gap-6 sm:gap-8 mb-12 text-sm sm:text-base text-text-muted transition-all duration-1000 delay-200 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-text-primary font-semibold text-lg sm:text-xl">
+                {mounted ? <Counter value={companyCount} /> : '0'}
+              </span>
+              <span>companies</span>
+            </div>
+            <div className="w-px h-4 bg-border" />
+            <div className="flex items-center gap-2">
+              <span className="text-text-primary font-semibold text-lg sm:text-xl">
+                {mounted ? <Counter value={segmentCount} /> : '0'}
+              </span>
+              <span>segments</span>
+            </div>
+            <div className="w-px h-4 bg-border" />
+            <div className="flex items-center gap-2">
+              <span className="text-accent font-semibold text-lg sm:text-xl">
+                {formatFundingShort(totalFunding)}
+              </span>
+              <span>raised</span>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div
+            className={`flex flex-col sm:flex-row items-center gap-4 transition-all duration-1000 delay-300 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <Link
+              href="/directory"
+              className="group relative inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {/* Button background with gradient border effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-teal-500" />
+              <div className="absolute inset-[1px] rounded-full bg-gradient-to-r from-accent to-teal-600 group-hover:from-accent-hover group-hover:to-teal-500 transition-all duration-300" />
+
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-full bg-accent/50 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
+
+              <span className="relative">Explore Directory</span>
+              <ArrowRight className="relative w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </Link>
+
+            <Link
+              href="/submit"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-medium text-text-secondary hover:text-text-primary transition-colors duration-200"
+            >
+              Submit a Company
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
 }
