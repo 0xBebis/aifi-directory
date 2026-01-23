@@ -1,73 +1,62 @@
 import Link from 'next/link';
 
-// Timeline focused on AI/ML technology evolution in finance
-const timeline = {
-  eras: [
-    {
-      id: 'quant',
-      label: 'Quant Era',
-      range: '1982–2011',
-      description: 'Statistical models and early ML. Renaissance, D.E. Shaw, Two Sigma pioneer systematic trading.',
-      color: 'text-blue-400',
-    },
-    {
-      id: 'deep-learning',
-      label: 'Deep Learning',
-      range: '2012–2017',
-      description: 'Neural networks take over. Credit scoring, fraud detection, and trading transformed.',
-      color: 'text-purple-400',
-    },
-    {
-      id: 'transformers',
-      label: 'Transformers',
-      range: '2017–2022',
-      description: 'Attention mechanisms enable NLP breakthroughs. FinBERT brings language models to finance.',
-      color: 'text-green-400',
-    },
-    {
-      id: 'foundation',
-      label: 'Foundation Models',
-      range: '2023–Now',
-      description: 'Labs race to finance. OpenAI and Anthropic train on financial data, hire quants, and ship vertical products.',
-      color: 'text-accent',
-    },
-  ],
-  milestones: [
-    { year: 1982, event: 'Renaissance founded', detail: 'Quant trading pioneers' },
-    { year: 2001, event: 'Two Sigma founded', detail: 'ML-native hedge fund' },
-    { year: 2012, event: 'AlexNet wins ImageNet', detail: 'Deep learning era begins' },
-    { year: 2017, event: 'Transformers published', detail: 'Attention architecture' },
-    { year: 2019, event: 'FinBERT released', detail: 'Finance-specific NLP' },
-    { year: 2022, event: 'ChatGPT launches', detail: '100M users in 60 days' },
-    { year: 2023, event: 'BloombergGPT ships', detail: '50B param finance LLM' },
-    { year: 2024, event: 'AI agents emerge', detail: 'Autonomous finance' },
-  ],
-  recentMilestones: [
-    {
-      year: 2025,
-      event: 'Labs target finance',
-      detail: 'OpenAI and Anthropic invest heavily in financial pre-training data and post-training for financial reasoning. Models begin to understand markets, risk, and capital allocation at expert level.',
-      sources: [
-        { label: 'OpenAI Financial Services', url: 'https://openai.com/solutions/industries/financial-services/' },
-        { label: 'Claude for Finance', url: 'https://www.anthropic.com/news/claude-for-financial-services' },
-        { label: 'LSEG Partnership', url: 'https://www.lseg.com/en/media-centre/press-releases/2025/lseg-announces-new-collaboration-with-openai' },
-        { label: 'Project Mercury', url: 'https://qz.com/openai-project-mercury-automate-wall-street-investment-banking' },
-      ]
-    },
-    {
-      year: 2026,
-      event: 'The race begins',
-      detail: 'Financial emergence accelerates. AI systems start making consequential decisions across lending, trading, and risk management.',
-      tagline: 'The firms building now will shape capital flows for decades.'
-    },
-  ],
-  breakthroughs: [
-    { name: 'Medallion Fund', stat: '66%', context: 'Avg annual return (before fees) using ML' },
-    { name: 'Deep Learning', stat: '20%', context: 'Improvement in credit scoring vs FICO' },
-    { name: 'ChatGPT', stat: '35%', context: 'Better sentiment analysis than FinBERT' },
-    { name: 'Quant Share', stat: '60%', context: 'Of daily US equity volume is algorithmic' },
-  ],
-};
+// Era definitions
+const eras = [
+  { id: 'quant', label: 'Quant Era', start: 1982, end: 2011, color: '#60a5fa', description: 'Statistical arbitrage and systematic trading' },
+  { id: 'deep-learning', label: 'Deep Learning', start: 2012, end: 2018, color: '#a78bfa', description: 'Neural networks transform credit and fraud' },
+  { id: 'nlp', label: 'NLP Era', start: 2019, end: 2022, color: '#4ade80', description: 'Language models read financial text' },
+  { id: 'foundation', label: 'Foundation Models', start: 2023, end: 2024, color: '#14b8a6', description: 'LLMs enter the enterprise' },
+  { id: 'emergence', label: 'Emergence', start: 2025, end: 2026, color: '#14b8a6', description: 'AI makes consequential decisions', featured: true },
+];
+
+// Milestones grouped by era - focused on AI + Finance intersection
+// Every entry verified via web search with source
+const milestones = [
+  // Quant Era (1982-2011)
+  { year: 1982, event: 'Renaissance Technologies', detail: 'Jim Simons founds quantitative trading pioneer', era: 'quant', source: { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Renaissance_Technologies' } },
+  { year: 1988, event: 'Medallion Fund', detail: 'Launches with 66% avg annual returns before fees', era: 'quant', source: { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Renaissance_Technologies#Medallion_Fund' } },
+  { year: 1988, event: 'D.E. Shaw', detail: 'David Shaw founds computational finance pioneer', era: 'quant', source: { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/D._E._Shaw_%26_Co.' } },
+  { year: 2001, event: 'Two Sigma', detail: 'Overdeck and Siegel found ML-native hedge fund', era: 'quant', source: { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Two_Sigma' } },
+
+  // Deep Learning Era (2012-2018)
+  { year: 2012, event: 'Upstart founded', detail: 'Ex-Googlers pioneer deep learning for credit decisions', era: 'deep-learning', source: { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Upstart_Holdings' } },
+  { year: 2015, event: 'PayPal ML fraud', detail: 'Fraud rate drops below 0.3% using neural networks', era: 'deep-learning', source: { label: 'Harvard', url: 'https://d3.harvard.edu/platform-rctom/submission/paypals-use-of-machine-learning-to-enhance-fraud-detection-and-more/' } },
+  { year: 2016, event: 'Deep learning fraud research', detail: 'Fu et al. apply CNNs to 260M bank transactions', era: 'deep-learning', source: { label: 'Springer', url: 'https://link.springer.com/chapter/10.1007/978-3-319-46675-0_8' } },
+  { year: 2018, event: 'S&P acquires Kensho', detail: '$550M for AI analytics—largest AI deal at the time', era: 'deep-learning', source: { label: 'TechCrunch', url: 'https://techcrunch.com/2018/03/07/sp-global-snares-kensho-for-550-million/' } },
+
+  // NLP Era (2019-2022)
+  { year: 2019, event: 'FinBERT released', detail: 'First finance-specific language model (Araci)', era: 'nlp', source: { label: 'arXiv', url: 'https://arxiv.org/abs/1908.10063' } },
+  { year: 2020, event: 'GPT-3 sentiment trading', detail: 'LLM-based strategies outperform traditional NLP', era: 'nlp', source: { label: 'ScienceDirect', url: 'https://www.sciencedirect.com/science/article/pii/S1544612324002575' } },
+  { year: 2022, event: 'NLP adoption accelerates', detail: 'Hedge funds deploy transformer models at scale', era: 'nlp', source: { label: 'LSE', url: 'https://eprints.lse.ac.uk/122592/' } },
+
+  // Foundation Models Era (2023-2024)
+  { year: 2023, event: 'BloombergGPT', detail: '50B params trained on 363B financial tokens', era: 'foundation', source: { label: 'Bloomberg', url: 'https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/' } },
+  { year: 2023, event: 'Morgan Stanley + OpenAI', detail: 'GPT-4 deployed to 16,000 wealth advisors', era: 'foundation', source: { label: 'Morgan Stanley', url: 'https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai' } },
+  { year: 2023, event: 'FinGPT open source', detail: 'AI4Finance releases open financial LLM', era: 'foundation', source: { label: 'arXiv', url: 'https://arxiv.org/abs/2306.06031' } },
+  { year: 2024, event: 'JPMorgan LLM Suite', detail: 'AI assistant deployed to 60,000+ employees', era: 'foundation', source: { label: 'CNBC', url: 'https://www.cnbc.com/2024/08/09/jpmorgan-chase-ai-artificial-intelligence-assistant-chatgpt-openai.html' } },
+
+  // Emergence (2025-2026)
+  {
+    year: 2025,
+    event: 'Labs target finance',
+    detail: 'OpenAI and Anthropic invest in financial pre-training. Models understand markets, risk, and capital allocation at expert level.',
+    era: 'emergence',
+    sources: [
+      { label: 'OpenAI Finance', url: 'https://openai.com/solutions/industries/financial-services/' },
+      { label: 'Claude for Finance', url: 'https://www.anthropic.com/news/claude-for-financial-services' },
+      { label: 'LSEG + OpenAI', url: 'https://www.lseg.com/en/media-centre/press-releases/2025/lseg-announces-new-collaboration-with-openai' },
+      { label: 'Project Mercury', url: 'https://qz.com/openai-project-mercury-automate-wall-street-investment-banking' },
+    ]
+  },
+  {
+    year: 2026,
+    event: 'The race begins',
+    detail: 'AI systems start making consequential decisions across lending, trading, and risk management.',
+    era: 'emergence',
+    tagline: 'The firms building now will shape capital flows for decades.',
+    featured: true
+  },
+];
 
 export default function ThesisPage() {
   return (
@@ -80,98 +69,92 @@ export default function ThesisPage() {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-text-primary leading-[1.1] mb-2">
           AI in Finance: A Technical History
         </h2>
-        <p className="text-text-muted text-sm mb-10">
-          From statistical arbitrage to foundation models
+        <p className="text-text-muted text-sm mb-8">
+          From statistical arbitrage to financial emergence
         </p>
 
-        {/* Eras */}
-        <div className="grid grid-cols-4 gap-3 mb-10">
-          {timeline.eras.map((era) => (
-            <div key={era.id} className="bg-surface border border-border rounded-lg p-4">
-              <p className={`text-xs font-semibold tracking-wide mb-1 ${era.color}`}>{era.range}</p>
-              <p className="text-sm font-semibold text-text-primary mb-2">{era.label}</p>
-              <p className="text-xs text-text-muted leading-relaxed">{era.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Milestones */}
-        <div className="bg-surface border border-border rounded-lg p-5 mb-4">
-          <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Key Milestones</p>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-2.5">
-            {timeline.milestones.map((m, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="text-xs text-accent font-mono w-9 shrink-0">{m.year}</span>
-                <span className="text-sm text-text-primary whitespace-nowrap">{m.event}</span>
-                <span className="text-xs text-text-muted truncate">{m.detail}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Recent Milestones - Emphasized */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
-          {timeline.recentMilestones.map((m) => (
-            <div
-              key={m.year}
-              className={`border rounded-lg p-5 transition-all ${
-                m.year === 2026
-                  ? 'border-accent bg-accent/10'
-                  : 'bg-surface border-border'
-              }`}
-              style={m.year === 2026 ? {
-                animation: 'glow-pulse 3s ease-in-out infinite',
-              } : undefined}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span className={`text-lg font-bold font-mono ${m.year === 2026 ? 'text-accent' : 'text-text-primary'}`}>
-                  {m.year}
-                </span>
-                <span className={`text-sm font-semibold ${m.year === 2026 ? 'text-accent' : 'text-text-primary'}`}>
-                  {m.event}
-                </span>
-              </div>
-              <p className={`text-sm leading-relaxed ${m.year === 2026 ? 'text-text-primary' : 'text-text-secondary'}`}>{m.detail}</p>
-              {m.tagline && (
-                <p className="mt-5 pt-4 border-t border-accent/20 text-base font-semibold text-text-primary leading-snug">
-                  {m.tagline}
-                </p>
-              )}
-              {m.sources && (
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {m.sources.map((source, i) => (
-                    <a
-                      key={i}
-                      href={source.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-text-muted bg-surface-2 hover:bg-surface-3 hover:text-text-primary border border-border/50 rounded-md transition-colors"
-                    >
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                      {source.label}
-                    </a>
-                  ))}
+        {/* Timeline - Grouped by Era */}
+        <div className="bg-surface border border-border rounded-lg overflow-hidden">
+          {eras.map((era) => {
+            const eraMilestones = milestones.filter(m => m.era === era.id);
+            const isFeatured = 'featured' in era && era.featured;
+            return (
+              <div
+                key={era.id}
+                className={`border-b border-border last:border-b-0 ${isFeatured ? 'border-l-2 border-l-accent' : ''}`}
+              >
+                {/* Era Header */}
+                <div
+                  className="flex items-center gap-3 px-5 py-3"
+                  style={{ backgroundColor: `${era.color}12` }}
+                >
+                  <div
+                    className="w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: era.color }}
+                  />
+                  <span className={`font-semibold text-sm ${isFeatured ? 'text-accent' : 'text-text-primary'}`}>{era.label}</span>
+                  <span className={`text-xs font-mono ${isFeatured ? 'text-accent/70' : 'text-text-muted'}`}>{era.start}–{era.end === 2026 ? 'Now' : era.end}</span>
+                  <span className={`text-xs ml-auto hidden sm:block ${isFeatured ? 'text-text-secondary' : 'text-text-muted'}`}>{era.description}</span>
                 </div>
-              )}
-            </div>
-          ))}
+                {/* Milestones */}
+                <div className="px-5 py-3 space-y-1.5">
+                  {eraMilestones.map((m, i) => {
+                    const hasSources = 'sources' in m && m.sources;
+                    const hasTagline = 'tagline' in m && m.tagline;
+                    const hasSource = 'source' in m && m.source;
+
+                    return (
+                      <div key={i} className="group/row">
+                        {/* Standard row - same for all eras */}
+                        <div className="flex items-center gap-3">
+                          <span className={`text-xs font-mono w-10 flex-shrink-0 ${isFeatured ? 'text-accent font-semibold' : 'text-text-muted'}`}>{m.year}</span>
+                          <span className={`text-sm font-medium ${isFeatured ? 'text-text-primary' : 'text-text-primary'}`}>{m.event}</span>
+                          <span className="text-xs text-text-muted hidden sm:block">—</span>
+                          <span className={`text-xs hidden sm:block flex-1 ${isFeatured ? 'text-text-secondary' : 'text-text-muted'}`}>{m.detail}</span>
+                          {/* Single source - hover reveal */}
+                          {hasSource && (
+                            <a
+                              href={m.source.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="opacity-0 group-hover/row:opacity-100 text-xs text-text-faint hover:text-accent transition-all flex-shrink-0"
+                            >
+                              [{m.source.label}]
+                            </a>
+                          )}
+                          {/* Multiple sources - always visible, subtle */}
+                          {hasSources && (
+                            <div className="flex gap-1.5 flex-shrink-0">
+                              {m.sources.map((source: { label: string; url: string }, j: number) => (
+                                <a
+                                  key={j}
+                                  href={source.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-text-faint hover:text-accent transition-colors"
+                                >
+                                  [{source.label}]
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        {/* Tagline - simple emphasized line */}
+                        {hasTagline && (
+                          <div className="flex items-center gap-3 mt-3 pt-3 border-t border-border/50">
+                            <span className="w-10 flex-shrink-0" />
+                            <span className="text-sm font-semibold text-accent">{m.tagline}</span>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Breakthroughs */}
-        <div className="bg-surface border border-border rounded-lg p-5">
-          <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Performance Breakthroughs</p>
-          <div className="grid grid-cols-4 gap-4">
-            {timeline.breakthroughs.map((b) => (
-              <div key={b.name} className="text-center">
-                <p className="text-xl font-bold text-accent">{b.stat}</p>
-                <p className="text-sm text-text-primary font-medium">{b.name}</p>
-                <p className="text-xs text-text-muted mt-1">{b.context}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Divider */}

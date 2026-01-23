@@ -63,7 +63,7 @@ function CategoryBadge({
         backgroundColor: isActive ? `${color}25` : `${color}15`,
         color: color,
         border: `1px solid ${isActive ? color : `${color}30`}`,
-        ringColor: isActive ? color : undefined,
+        ['--tw-ring-color' as string]: isActive ? color : undefined,
       }}
     >
       {label}

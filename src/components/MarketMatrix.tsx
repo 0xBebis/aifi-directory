@@ -304,7 +304,7 @@ export default function MarketMatrix({
                     transform: mounted ? 'translateY(0)' : 'translateY(-6px)',
                     backgroundColor: isSelected ? `${segment.color}25` : 'transparent',
                     color: segment.color,
-                    ringColor: segment.color,
+                    ['--tw-ring-color' as string]: segment.color,
                     transition: `all 0.25s ease-out ${i * 25}ms`,
                   }}
                 >
@@ -328,7 +328,7 @@ export default function MarketMatrix({
                       transform: mounted ? 'translateX(0)' : 'translateX(-6px)',
                       backgroundColor: isLayerSelected ? `${layer.color}25` : 'transparent',
                       color: layer.color,
-                      ringColor: layer.color,
+                      ['--tw-ring-color' as string]: layer.color,
                       transition: `all 0.25s ease-out ${layerIdx * 25}ms`,
                     }}
                   >
@@ -459,7 +459,7 @@ export default function MarketMatrix({
                     transition: `all 0.25s ease-out ${i * 30}ms`,
                     backgroundColor: isActive ? `${color}20` : 'transparent',
                     border: `1px solid ${isActive ? color : 'transparent'}`,
-                    ringColor: color,
+                    ['--tw-ring-color' as string]: color,
                   }}
                 >
                   <div className="flex items-center justify-between relative z-10">
