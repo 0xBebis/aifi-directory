@@ -3,6 +3,7 @@ import projectsData from '@/data/projects.json';
 import segmentsData from '@/data/segments.json';
 import layersData from '@/data/layers.json';
 
+// Projects data - reload on JSON changes
 export const projects: Project[] = projectsData as Project[];
 export const segments: Segment[] = segmentsData as Segment[];
 export const layers: Layer[] = (layersData as Layer[]).sort((a, b) => b.position - a.position);

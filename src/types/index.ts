@@ -25,6 +25,7 @@ export interface Project {
   summary?: string;
   crypto?: boolean; // Flag for Web3/crypto companies (allows filtering while using functional segments)
   ai_type?: AIType; // Classification of AI/ML technology used
+  defunct?: boolean; // True if company is no longer in business
 }
 
 export interface TeamMember {

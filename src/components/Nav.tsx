@@ -44,7 +44,7 @@ export default function Nav() {
                   : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
               }`}
             >
-              About
+              Thesis
             </Link>
             <Link
               href="/submit"

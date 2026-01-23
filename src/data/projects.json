@@ -2741,21 +2741,6 @@
     "ai_type": "llm"
   },
   {
-    "slug": "symphony-ayasdiai",
-    "name": "Symphony AyasdiAI",
-    "tagline": "AI risk and compliance analytics",
-    "segment": "risk",
-    "layer": "models",
-    "website": "https://www.symphony.com",
-    "hq_country": "US",
-    "hq_city": "Palo Alto",
-    "company_type": "private",
-    "funding_stage": "seed",
-    "region": "americas",
-    "summary": "Symphony AyasdiAI (now SymphonyAI Sensa) provides AI-powered AML and financial crime detection for banks. Uses Topological Data Analysis and ML to uncover hidden money laundering patterns. Reduces false positives by up to 77%; HSBC cut investigation volume 20%+. Increases risk coverage 20%+. Part of SymphonyAI portfolio. Partners with Treliant and Sionic for implementation.",
-    "ai_type": "predictive-ml"
-  },
-  {
     "slug": "datarobot",
     "name": "DataRobot",
     "tagline": "AutoML platform for finance",
@@ -5176,21 +5161,6 @@
     "funding_stage": "growth",
     "region": "emea",
     "summary": "ComplyAdvantage provides AI-driven AML screening and transaction monitoring via its Mesh platform. Serves 1,000+ clients across 80+ countries including Santander UK and OakNorth Bank. Raised $88M including $50M Series C. Acquired Golden Recursion in 2024 to expand knowledge-graph capabilities. API-first architecture enables real-time payment screening and customer monitoring. Santander reported 50% faster onboarding after implementation.",
-    "ai_type": "predictive-ml"
-  },
-  {
-    "slug": "symphonyai-ayasdi",
-    "name": "SymphonyAI (Ayasdi)",
-    "tagline": "AI for financial crime detection",
-    "segment": "risk",
-    "layer": "models",
-    "website": "https://www.symphonyai.com",
-    "hq_country": "US",
-    "hq_city": "Palo Alto",
-    "company_type": "private",
-    "funding_stage": "seed",
-    "region": "americas",
-    "summary": "SymphonyAI Sensa (formerly Ayasdi) is an AI platform for financial crime detection. Backed by $1B+ commitment. Customers achieve 81x risk-to-alert ratio improvement, 263% increase in SARs, up to 77% false positive reduction. Named 2024 RegTech Company of Year. Launched SensaAI for Sanctions (April 2024). Strategic partnership with TCS for predictive and generative AI applications.",
     "ai_type": "predictive-ml"
   },
   {
@@ -8001,6 +7971,30 @@
     "region": "americas",
     "summary": "AskJimmy is a chat-based voice and text advisor connected to real-time market data. Provides conversational interface for crypto market insights and trading guidance. Part of the AI-powered financial assistant wave enabling natural language queries about market conditions. Limited public information available on specific data sources, model architecture, or traction metrics.",
     "crypto": true,
+    "ai_type": "llm"
+  },
+  {
+    "slug": "uv",
+    "name": "UV",
+    "tagline": "Frontier Intelligence for Financial Markets",
+    "segment": "research",
+    "layer": "data",
+    "stage": "seed",
+    "website": "https://www.uv.finance",
+    "hq_country": "US",
+    "company_type": "private",
+    "funding_stage": "seed",
+    "region": "americas",
+    "segments": [
+      "trading",
+      "crypto"
+    ],
+    "layers": [
+      "models",
+      "infrastructure"
+    ],
+    "summary": "UV is the missing data layer for financial AI: post-training decision sequences with human feedback. UV provides a harness, environment, and dataset that allows AI labs to teach their models how to use financial tools, make good financial decisions, and even generate alpha. If you believe that AI will need to handle money in the future, then you believe in a future where UV data is vital.",
+    "funding": 0,
     "ai_type": "llm"
   }
 ]

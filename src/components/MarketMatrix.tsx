@@ -11,7 +11,7 @@ import {
   AI_TYPE_COLORS,
 } from '@/lib/data';
 import { AIType, Project } from '@/types';
-import { X, Building2, DollarSign } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface MarketMatrixProps {
   projects: Project[];
@@ -253,15 +253,15 @@ export default function MarketMatrix({
         </div>
 
         {/* Stats */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-2/30 rounded-lg">
-            <Building2 className="w-4 h-4 text-accent" />
-            <span className="text-sm font-bold text-text-primary">{displayedStats.count}</span>
-            <span className="text-xs text-text-muted">companies</span>
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-extrabold text-text-primary tracking-tight">{displayedStats.count}</span>
+            <span className="text-sm text-text-muted font-medium">companies</span>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-2/30 rounded-lg">
-            <DollarSign className="w-4 h-4 text-green-400" />
-            <span className="text-sm font-bold text-green-400">{formatFunding(displayedStats.funding)}</span>
+          <div className="w-px h-6 bg-border/50" />
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-extrabold text-green-400 tracking-tight">{formatFunding(displayedStats.funding)}</span>
+            <span className="text-sm text-text-muted font-medium">raised</span>
           </div>
           {hasSelection && (
             <button
@@ -549,12 +549,11 @@ function CellDetail({
               href={`/p/${project.slug}`}
               className="group flex items-center gap-1.5 px-2 py-1 bg-surface border border-border rounded text-xs hover:border-accent/50 transition-all"
             >
-              {project.ai_type && (
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: AI_TYPE_COLORS[project.ai_type] }}
-                />
-              )}
+              <span
+                className="w-2 h-2 rounded-full flex-shrink-0"
+                style={{ backgroundColor: project.defunct ? '#ef4444' : '#22c55e' }}
+                title={project.defunct ? 'Defunct' : 'Active'}
+              />
               <span className="text-text-secondary group-hover:text-accent transition-colors">
                 {project.name}
               </span>
