@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import Nav from '@/components/Nav';
 
@@ -22,12 +23,12 @@ export default function RootLayout({
             <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
               {/* Brand */}
               <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
+                <Link href="/" className="flex items-center gap-3 mb-3 group">
+                  <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center group-hover:bg-accent/25 transition-colors">
                     <span className="text-accent font-bold text-xs">AI</span>
                   </div>
                   <span className="font-semibold text-text-primary">AIFI</span>
-                </div>
+                </Link>
                 <p className="text-sm text-text-muted max-w-xs leading-relaxed">
                   The definitive index of companies building at the intersection of AI and Finance.
                 </p>
@@ -35,18 +36,18 @@ export default function RootLayout({
 
               {/* Links */}
               <div className="flex items-center gap-8 text-sm">
-                <a
+                <Link
                   href="/about"
                   className="text-text-muted hover:text-text-primary transition-colors tracking-wide"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/submit"
                   className="text-text-muted hover:text-text-primary transition-colors tracking-wide"
                 >
                   Submit
-                </a>
+                </Link>
                 <a
                   href="https://github.com/0xBebis/aifi-directory"
                   target="_blank"
@@ -61,7 +62,7 @@ export default function RootLayout({
             {/* Bottom bar */}
             <div className="mt-10 pt-6 border-t border-border/20 flex items-center justify-between">
               <span className="text-xs text-text-faint">
-                2024 AIFI. All rights reserved.
+                2025 AIFI. All rights reserved.
               </span>
               <span className="text-xs text-text-faint">
                 Built for the AI + Finance ecosystem

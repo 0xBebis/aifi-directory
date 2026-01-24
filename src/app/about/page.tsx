@@ -165,80 +165,67 @@ export default function ThesisPage() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-16" />
 
-      {/* Header */}
+      {/* Thesis Header */}
       <header className="mb-12">
         <p className="label-refined mb-4 text-accent">
           Thesis
         </p>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-text-primary leading-[1.1]">
-          Toward Financial Emergence
+          The Future of Financial AI
         </h1>
       </header>
 
-      {/* Essay Content */}
       <article className="space-y-5 text-text-secondary leading-relaxed">
         <p className="text-lg text-text-primary">
-          Sometime in the next decade, a human will make the last consequential financial decision. Not the last transaction. People will still sign papers and shake hands. But the last one where human judgment was the critical input rather than ceremony.
+          Sometime in the next decade, a human will make the last consequential financial decision. People will still click buttons and sign papers, but the areas where a human's judgment was better than machine's are becoming fewer and further between.
         </p>
 
         <p>
-          This is already underway. Machine learning took over credit underwriting.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn1">1</a></sup> Fraud detection runs on neural networks.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2">2</a></sup> Trading algorithms execute millions of decisions daily without a person in sight.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn3">3</a></sup> The humans who remain handle exceptions. The real work moved.
+          The first wave of financial AI proved both the promise and the limits. Machine learning now dominates credit underwriting. AI-native lenders like Upstart approve 27% more borrowers at 16% lower rates.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-1">1</a></sup> Neural networks run fraud detection. PayPal cut fraud below 0.3%.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-2">2</a></sup> Algorithmic trading accounts for 60-75% of US equity volume.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-3">3</a></sup> The automation is real, and it works.
         </p>
 
         <p>
-          Traditional ML has a fatal flaw though. It decays. Models trained on historical patterns lose their grip as markets evolve. Regimes shift. Correlations break.
+          But traditional ML has a fatal flaw: it's fragile. Models trained on historical patterns degrade as markets evolve. Researchers call this concept drift.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-4">4</a></sup> The quant funds that crashed in August 2007 held similar positions because they'd learned from the same history.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-5">5</a></sup> Knight Capital lost $440 million in 45 minutes when its algorithms hit conditions they weren't built for.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-6">6</a></sup> Long-Term Capital Management had Nobel laureates and still blew a $4.6 billion hole in the system.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-7">7</a></sup>
         </p>
 
         <p>
-          Long-Term Capital Management had Nobel laureates and the most sophisticated models of its era. It still blew a $4.6 billion hole in the financial system when correlations moved against them.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn4">4</a></sup> Knight Capital lost $440 million in 45 minutes.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn5">5</a></sup> The quant funds that crashed in August 2007 all held similar positions because they'd learned from the same history.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn6">6</a></sup>
+          This is why traditional ML needs humans today. Not because humans are smarter; in data-rich domains, they're not. But ML systems can't handle the unprecedented. They ask: have I seen this before? When the answer is no, they fail. Humans stayed in the loop as a backstop against novelty.
         </p>
 
         <p>
-          Entropy eats every static model. The question is not if, but when.
+          Large language models change this equation. They reason across domains, interpret ambiguity, and adapt to contexts they've never explicitly seen. Where traditional ML pattern-matches, LLMs understand. They ask: what is this and what should I do?
         </p>
 
         <p>
-          LLMs are different. They reason across domains, interpret ambiguity, adapt without retraining. Traditional ML asks: have I seen this before? LLMs ask: what is this and what should I do? Previous automation handled routine. This generation handles the unprecedented.
+          In 2026, production systems have largely solved problems like hallucination through context engineering, domain-specific fine-tuning, and multi-model consensus architectures.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-8">8</a></sup> Morgan Stanley deployed GPT-4 to 16,000 wealth advisors.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-9">9</a></sup> JPMorgan's LLM suite now serves 60,000+ employees.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-10">10</a></sup> Bloomberg built a 50-billion parameter model trained on 363 billion financial tokens.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-11">11</a></sup> Financial LLMs are quickly moving beyond experimentation.
         </p>
 
         <p>
-          Finance is just decision-making under uncertainty. Every role exists because someone must decide how risk moves between parties. For decades humans made these calls with better and better tools. But the human stayed in the loop.
+          The implications are profound. Traditional ML automated the routine and left humans to handle exceptions. LLMs can handle these exceptions too, but faster and at a greater scale. They read earnings calls, parse regulatory filings, synthesize market sentiment, and can share their reasoning across myriad systems and stakeholders within seconds. The constraints separating human and machine intelligence are dissolving.
         </p>
 
         <p>
-          That's ending. Properly built AI doesn't just automate decisions. It improves by making them. Every loan, every trade, every claim generates signal. The system learns from thousands of decisions daily. Humans make dozens yearly. The gap widens until human judgment becomes a bottleneck.
+          Agentic AI accelerates this further. Gartner predicts 15% of day-to-day work decisions will be made autonomously by AI agents by 2028, up from zero in 2024.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-12">12</a></sup> One financial services firm already runs 60 autonomous agents in production with plans for 200 more by 2026.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-13">13</a></sup> Citi Research predicts Agentic AI will have a bigger impact on finance than the internet.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-14">14</a></sup>
         </p>
 
         <p>
-          Most AI efforts stall at the model. A model without distribution is an experiment. With distribution, every decision becomes training. Better performance attracts capital. More capital means more decisions. More decisions mean faster learning. Once this flywheel spins up, you cannot catch it from outside.
+          The risks are real but manageable. Concentration could create correlated failures, what researchers call "risk monoculture."<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-15">15</a></sup> Speed could amplify crises.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-16">16</a></sup> But these are engineering problems, not fundamental limits. The same was said about algorithmic trading, and we developed circuit breakers and safeguards. Financial AI will evolve the same way. Through deployment, learning, and iteration.
         </p>
 
         <p>
-          The constraint is trust. Financial automation fails spectacularly and people remember. AI earns trust slowly by operating within limits and building a track record through crisis. Whoever cracks this owns something nearly impossible to replicate.
+          Every platform shift creates new giants. The PC era created Microsoft. The internet created Google. Mobile created Apple's modern incarnation. Finance has resisted. The same names dominate now that dominated thirty years ago. AI breaks that. The firms built in the next few years will shape capital flows for the next fifty.
         </p>
 
         <p>
-          Run the story forward and something interesting happens. Autonomous vehicles promise to engineer human error out of driving. Financial AI offers something similar for the economy. Human judgment gave us 2008,<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn7">7</a></sup> bank runs, pension shortfalls, savings destroyed by risks the experts missed.
+          Run the story forward. AI-mediated finance could be genuinely safer. Risk priced right. Bubbles spotted early. Crises contained. Human judgment gave us 2008.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-17">17</a></sup> The experts missed the risks that destroyed trillions in savings. AI systems that learn from every decision, improve continuously, and operate without ego or fatigue offer something different. Not perfection, but systematic improvement at scale.
         </p>
 
         <p>
-          AI-mediated finance could be safer. Risk priced right. Bubbles spotted early. Crises contained.
-        </p>
-
-        <p>
-          The result is a flattening. Alpha vanishes because mispricings correct instantly. Volatility dampens because risk gets managed continuously across the whole system. Finance becomes infrastructure. Boring and reliable. The edge stops going to whoever is smartest. It goes to whoever is most connected.
-        </p>
-
-        <p>
-          Every platform shift creates new giants. Finance has resisted. The same names dominate now that dominated thirty years ago.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn8">8</a></sup> AI breaks that. The firms built in the next few years will shape capital flows for the next fifty.
-        </p>
-
-        <p>
-          The race isn't to build the best model. It's to build the machine that builds the best models.
+          The race isn't to build the best model. It's to build the machine that builds the best models. And to deploy it before incumbents wake up.
         </p>
 
         <p className="text-lg text-text-primary">
-          The decisions that matter most now are the ones that take us to the finish line.
+          The firms building now will shape capital flows for decades. The rest will be their customers.
         </p>
       </article>
 
@@ -246,37 +233,73 @@ export default function ThesisPage() {
       <aside className="mt-12 pt-8 border-t border-border/30">
         <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">References</h3>
         <ol className="space-y-2 text-xs text-text-muted">
-          <li id="fn1" className="flex gap-2">
+          <li id="fn-1" className="flex gap-2">
             <span className="text-accent font-medium">1.</span>
-            <span>Upstart's AI-native lending model approves 27% more borrowers with 16% lower APRs. <a href="https://www.upstart.com/about" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Upstart</a></span>
+            <span>Upstart's AI approves 27% more borrowers with 16% lower APRs. <a href="https://www.upstart.com/about" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Upstart</a></span>
           </li>
-          <li id="fn2" className="flex gap-2">
+          <li id="fn-2" className="flex gap-2">
             <span className="text-accent font-medium">2.</span>
-            <span>PayPal reduced fraud rates to under 0.3% using deep learning models. <a href="https://d3.harvard.edu/platform-rctom/submission/paypals-use-of-machine-learning-to-enhance-fraud-detection-and-more/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Harvard Digital Initiative</a></span>
+            <span>PayPal reduced fraud rates to under 0.3% using deep learning. <a href="https://d3.harvard.edu/platform-rctom/submission/paypals-use-of-machine-learning-to-enhance-fraud-detection-and-more/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Harvard Digital Initiative</a></span>
           </li>
-          <li id="fn3" className="flex gap-2">
+          <li id="fn-3" className="flex gap-2">
             <span className="text-accent font-medium">3.</span>
-            <span>Algorithmic trading accounts for 60-75% of overall trading volume in US equity markets. <a href="https://www.wsj.com/articles/the-quants-run-wall-street-now-1495389108" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wall Street Journal</a></span>
+            <span>Algorithmic trading accounts for 60-75% of US equity volume. <a href="https://www.wsj.com/articles/the-quants-run-wall-street-now-1495389108" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wall Street Journal</a></span>
           </li>
-          <li id="fn4" className="flex gap-2">
+          <li id="fn-4" className="flex gap-2">
             <span className="text-accent font-medium">4.</span>
+            <span>Concept drift causes ML model performance to degrade over time. <a href="https://en.wikipedia.org/wiki/Concept_drift" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
+          </li>
+          <li id="fn-5" className="flex gap-2">
+            <span className="text-accent font-medium">5.</span>
+            <span>August 2007 "Quant Quake" saw funds lose billions from crowded trades. <a href="https://www.aqr.com/Insights/Research/Journal-Article/What-Happened-to-the-Quants-in-August-2007" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AQR Research</a></span>
+          </li>
+          <li id="fn-6" className="flex gap-2">
+            <span className="text-accent font-medium">6.</span>
+            <span>Knight Capital lost $440M in 45 minutes from algorithmic failure. <a href="https://www.sec.gov/litigation/admin/2013/34-70694.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">SEC Filing</a></span>
+          </li>
+          <li id="fn-7" className="flex gap-2">
+            <span className="text-accent font-medium">7.</span>
             <span>LTCM's collapse required a $3.6B bailout coordinated by the Federal Reserve. <a href="https://en.wikipedia.org/wiki/Long-Term_Capital_Management" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
           </li>
-          <li id="fn5" className="flex gap-2">
-            <span className="text-accent font-medium">5.</span>
-            <span>Knight Capital's trading glitch resulted in a $440M loss and near-bankruptcy. <a href="https://www.sec.gov/litigation/admin/2013/34-70694.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">SEC Filing</a></span>
-          </li>
-          <li id="fn6" className="flex gap-2">
-            <span className="text-accent font-medium">6.</span>
-            <span>The August 2007 "Quant Quake" saw quantitative funds lose billions as crowded trades unwound simultaneously. <a href="https://www.aqr.com/Insights/Research/Journal-Article/What-Happened-to-the-Quants-in-August-2007" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AQR Research</a></span>
-          </li>
-          <li id="fn7" className="flex gap-2">
-            <span className="text-accent font-medium">7.</span>
-            <span>The 2008 financial crisis caused $10+ trillion in global losses and the worst recession since the 1930s. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Federal Reserve History</a></span>
-          </li>
-          <li id="fn8" className="flex gap-2">
+          <li id="fn-8" className="flex gap-2">
             <span className="text-accent font-medium">8.</span>
-            <span>JPMorgan, Goldman Sachs, and Morgan Stanley have dominated investment banking for over three decades. <a href="https://www.ft.com/content/9f7a582e-c9e8-4c8b-8e33-5b6c5f7e8c8f" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Financial Times</a></span>
+            <span>RAG and multi-model consensus greatly reduce hallucination in production. <a href="https://blog.chain.link/the-trust-dilemma/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Chainlink Blog</a></span>
+          </li>
+          <li id="fn-9" className="flex gap-2">
+            <span className="text-accent font-medium">9.</span>
+            <span>Morgan Stanley deployed GPT-4 to 16,000 wealth advisors. <a href="https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Morgan Stanley</a></span>
+          </li>
+          <li id="fn-10" className="flex gap-2">
+            <span className="text-accent font-medium">10.</span>
+            <span>JPMorgan's AI assistant deployed to 60,000+ employees. <a href="https://www.cnbc.com/2024/08/09/jpmorgan-chase-ai-artificial-intelligence-assistant-chatgpt-openai.html" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">CNBC</a></span>
+          </li>
+          <li id="fn-11" className="flex gap-2">
+            <span className="text-accent font-medium">11.</span>
+            <span>BloombergGPT: 50B parameters trained on 363B financial tokens. <a href="https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Bloomberg</a></span>
+          </li>
+          <li id="fn-12" className="flex gap-2">
+            <span className="text-accent font-medium">12.</span>
+            <span>Gartner: 15% of work decisions will be made by AI agents by 2028. <a href="https://aws.amazon.com/blogs/awsmarketplace/agentic-ai-solutions-in-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AWS</a></span>
+          </li>
+          <li id="fn-13" className="flex gap-2">
+            <span className="text-accent font-medium">13.</span>
+            <span>One financial firm has 60 AI agents in production, plans 200 more by 2026. <a href="https://www.jbs.cam.ac.uk/2025/from-automation-to-autonomy-the-agentic-ai-era-of-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Cambridge Judge Business School</a></span>
+          </li>
+          <li id="fn-14" className="flex gap-2">
+            <span className="text-accent font-medium">14.</span>
+            <span>Citi Research: 2025 is "the year of Agentic AI" with bigger impact than the internet. <a href="https://www.citiwarrants.com/home/upload/citi_research/rsch_pdf_30305836.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Citi Research</a></span>
+          </li>
+          <li id="fn-15" className="flex gap-2">
+            <span className="text-accent font-medium">15.</span>
+            <span>AI concentration creates "risk monoculture" with correlated failures. <a href="https://cepr.org/voxeu/columns/ai-financial-crises" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">CEPR</a></span>
+          </li>
+          <li id="fn-16" className="flex gap-2">
+            <span className="text-accent font-medium">16.</span>
+            <span>IMF: AI could amplify financial crises. <a href="https://www.imf.org/en/blogs/articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">IMF Blog</a></span>
+          </li>
+          <li id="fn-17" className="flex gap-2">
+            <span className="text-accent font-medium">17.</span>
+            <span>The 2008 financial crisis caused $10+ trillion in global losses. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Federal Reserve History</a></span>
           </li>
         </ol>
       </aside>
@@ -293,176 +316,6 @@ export default function ThesisPage() {
           Browse the Directory
         </Link>
       </div>
-
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
-      {/* REVISED THESIS */}
-      <header className="mb-12">
-        <p className="label-refined mb-4 text-amber-500">
-          Revised Draft
-        </p>
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-text-primary leading-[1.1]">
-          The Case for Financial AI
-        </h1>
-      </header>
-
-      <article className="space-y-5 text-text-secondary leading-relaxed">
-        <p className="text-lg text-text-primary">
-          Sometime in the next decade, a human will make the last consequential financial decision. Not the last transaction. People will still click buttons and sign papers. But the last one where human judgment was genuinely better than what a machine could do.
-        </p>
-
-        <p>
-          The first wave of financial AI proved both the promise and the limits. Machine learning now dominates credit underwriting. AI-native lenders like Upstart approve 27% more borrowers at 16% lower rates.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-1">1</a></sup> Neural networks run fraud detection. PayPal cut fraud below 0.3%.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-2">2</a></sup> Algorithmic trading accounts for 60-75% of US equity volume.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-3">3</a></sup> The automation is real, and it works.
-        </p>
-
-        <p>
-          But traditional ML has a fatal flaw: it's fragile. Models trained on historical patterns degrade as markets evolve. Researchers call this concept drift.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-4">4</a></sup> The quant funds that crashed in August 2007 held similar positions because they'd learned from the same history.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-5">5</a></sup> Knight Capital lost $440 million in 45 minutes when its algorithms hit conditions they weren't built for.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-6">6</a></sup> Long-Term Capital Management had Nobel laureates and still blew a $4.6 billion hole in the system.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-7">7</a></sup>
-        </p>
-
-        <p>
-          This is why traditional ML needs humans. Not because humans are smarter. In data-rich domains, they're not. But ML systems can't handle the unprecedented. They ask: have I seen this before? When the answer is no, they fail. Humans stayed in the loop as a backstop against novelty.
-        </p>
-
-        <p>
-          Large language models change this equation. They reason across domains, interpret ambiguity, and adapt to contexts they've never explicitly seen. Where traditional ML pattern-matches, LLMs understand. They ask: what is this and what should I do?
-        </p>
-
-        <p>
-          The early concerns were valid. First-generation financial LLMs hallucinated frequently. Early studies found error rates up to 41% on finance queries.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-8">8</a></sup> But production systems have largely solved this through retrieval-augmented generation, domain-specific fine-tuning, and multi-model consensus architectures.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-9">9</a></sup> Morgan Stanley deployed GPT-4 to 16,000 wealth advisors.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-10">10</a></sup> JPMorgan's LLM suite now serves 60,000+ employees.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-11">11</a></sup> Bloomberg built a 50-billion parameter model trained on 363 billion financial tokens.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-12">12</a></sup> These aren't experiments. They're infrastructure.
-        </p>
-
-        <p>
-          The implications are profound. Traditional ML automated the routine and left humans to handle exceptions. LLMs can handle the exceptions too. They read earnings calls, parse regulatory filings, synthesize market sentiment, and explain their reasoning. Tasks that required expensive human analysts. The constraint that kept humans in the loop is dissolving.
-        </p>
-
-        <p>
-          The competitive dynamics are already shifting. Fintech revenues grew 21% in 2024 versus 6% for incumbents.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-13">13</a></sup> Digital distribution cuts cost-to-serve by up to 85%.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-14">14</a></sup> But the real gap is opening in intelligence, not just efficiency. AI-native firms don't just serve customers cheaper. They understand them better. Every interaction generates signal. Better models attract more users. More users generate more data. The flywheel spins.
-        </p>
-
-        <p>
-          Agentic AI accelerates this further. Gartner predicts 15% of day-to-day work decisions will be made autonomously by AI agents by 2028, up from zero in 2024.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-15">15</a></sup> One financial services firm already runs 60 autonomous agents in production with plans for 200 more by 2026.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-16">16</a></sup> Citi Research calls 2025 "the year of Agentic AI" and predicts it will have a bigger impact on finance than the internet.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-17">17</a></sup>
-        </p>
-
-        <p>
-          The risks are real but manageable. Concentration could create correlated failures, what researchers call "risk monoculture."<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-18">18</a></sup> Speed could amplify crises.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-19">19</a></sup> But these are engineering problems, not fundamental limits. The same was said about algorithmic trading, and we developed circuit breakers and safeguards. Financial AI will evolve the same way. Through deployment, learning, and iteration.
-        </p>
-
-        <p>
-          The talent constraint is temporary. Yes, 73% of financial services leaders cite AI talent scarcity as critical today.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-20">20</a></sup> But the tools are democratizing rapidly. Fine-tuning costs dropped 99% in two years. Open-source financial models like FinGPT are proliferating.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-21">21</a></sup> The barrier is shifting from "can you build it" to "can you deploy it responsibly."
-        </p>
-
-        <p>
-          Every platform shift creates new giants. The PC era created Microsoft. The internet created Google. Mobile created Apple's modern incarnation. Finance has resisted. The same names dominate now that dominated thirty years ago. AI breaks that. The firms built in the next few years will shape capital flows for the next fifty.
-        </p>
-
-        <p>
-          Run the story forward. AI-mediated finance could be genuinely safer. Risk priced right. Bubbles spotted early. Crises contained. Human judgment gave us 2008.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn2-22">22</a></sup> The experts missed the risks that destroyed trillions in savings. AI systems that learn from every decision, improve continuously, and operate without ego or fatigue offer something different. Not perfection, but systematic improvement at scale.
-        </p>
-
-        <p>
-          The race isn't to build the best model. It's to build the machine that builds the best models. And to deploy it before incumbents wake up.
-        </p>
-
-        <p className="text-lg text-text-primary">
-          The firms building now will shape capital flows for decades. The rest will be their customers.
-        </p>
-      </article>
-
-      {/* Revised Thesis Footnotes */}
-      <aside className="mt-12 pt-8 border-t border-border/30">
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">References</h3>
-        <ol className="space-y-2 text-xs text-text-muted">
-          <li id="fn2-1" className="flex gap-2">
-            <span className="text-accent font-medium">1.</span>
-            <span>Upstart's AI approves 27% more borrowers with 16% lower APRs. <a href="https://www.upstart.com/about" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Upstart</a></span>
-          </li>
-          <li id="fn2-2" className="flex gap-2">
-            <span className="text-accent font-medium">2.</span>
-            <span>PayPal reduced fraud rates to under 0.3% using deep learning. <a href="https://d3.harvard.edu/platform-rctom/submission/paypals-use-of-machine-learning-to-enhance-fraud-detection-and-more/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Harvard Digital Initiative</a></span>
-          </li>
-          <li id="fn2-3" className="flex gap-2">
-            <span className="text-accent font-medium">3.</span>
-            <span>Algorithmic trading accounts for 60-75% of US equity volume. <a href="https://www.wsj.com/articles/the-quants-run-wall-street-now-1495389108" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wall Street Journal</a></span>
-          </li>
-          <li id="fn2-4" className="flex gap-2">
-            <span className="text-accent font-medium">4.</span>
-            <span>Concept drift causes ML model performance to degrade over time. <a href="https://en.wikipedia.org/wiki/Concept_drift" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
-          </li>
-          <li id="fn2-5" className="flex gap-2">
-            <span className="text-accent font-medium">5.</span>
-            <span>August 2007 "Quant Quake" saw funds lose billions from crowded trades. <a href="https://www.aqr.com/Insights/Research/Journal-Article/What-Happened-to-the-Quants-in-August-2007" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AQR Research</a></span>
-          </li>
-          <li id="fn2-6" className="flex gap-2">
-            <span className="text-accent font-medium">6.</span>
-            <span>Knight Capital lost $440M in 45 minutes from algorithmic failure. <a href="https://www.sec.gov/litigation/admin/2013/34-70694.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">SEC Filing</a></span>
-          </li>
-          <li id="fn2-7" className="flex gap-2">
-            <span className="text-accent font-medium">7.</span>
-            <span>LTCM's collapse required a $3.6B bailout coordinated by the Federal Reserve. <a href="https://en.wikipedia.org/wiki/Long-Term_Capital_Management" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
-          </li>
-          <li id="fn2-8" className="flex gap-2">
-            <span className="text-accent font-medium">8.</span>
-            <span>Early LLMs hallucinated on up to 41% of finance-related queries. <a href="https://biztechmagazine.com/article/2025/08/llm-hallucinations-what-are-implications-financial-institutions" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">BizTech Magazine</a></span>
-          </li>
-          <li id="fn2-9" className="flex gap-2">
-            <span className="text-accent font-medium">9.</span>
-            <span>RAG and multi-model consensus greatly reduce hallucination in production. <a href="https://blog.chain.link/the-trust-dilemma/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Chainlink Blog</a></span>
-          </li>
-          <li id="fn2-10" className="flex gap-2">
-            <span className="text-accent font-medium">10.</span>
-            <span>Morgan Stanley deployed GPT-4 to 16,000 wealth advisors. <a href="https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Morgan Stanley</a></span>
-          </li>
-          <li id="fn2-11" className="flex gap-2">
-            <span className="text-accent font-medium">11.</span>
-            <span>JPMorgan's AI assistant deployed to 60,000+ employees. <a href="https://www.cnbc.com/2024/08/09/jpmorgan-chase-ai-artificial-intelligence-assistant-chatgpt-openai.html" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">CNBC</a></span>
-          </li>
-          <li id="fn2-12" className="flex gap-2">
-            <span className="text-accent font-medium">12.</span>
-            <span>BloombergGPT: 50B parameters trained on 363B financial tokens. <a href="https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Bloomberg</a></span>
-          </li>
-          <li id="fn2-13" className="flex gap-2">
-            <span className="text-accent font-medium">13.</span>
-            <span>Fintech revenues grew 21% in 2024 vs 6% for incumbents. <a href="https://www.bcg.com/publications/2025/fintechs-scaled-winners-emerging-disruptors" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">BCG</a></span>
-          </li>
-          <li id="fn2-14" className="flex gap-2">
-            <span className="text-accent font-medium">14.</span>
-            <span>Digital distribution cuts cost-to-serve by up to 85% (Nubank). <a href="https://www.qedinvestors.com/blog/fintechs-next-chapter-scaled-winners-and-emerging-disruptors-2" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">QED Investors</a></span>
-          </li>
-          <li id="fn2-15" className="flex gap-2">
-            <span className="text-accent font-medium">15.</span>
-            <span>Gartner: 15% of work decisions will be made by AI agents by 2028. <a href="https://aws.amazon.com/blogs/awsmarketplace/agentic-ai-solutions-in-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">AWS</a></span>
-          </li>
-          <li id="fn2-16" className="flex gap-2">
-            <span className="text-accent font-medium">16.</span>
-            <span>One financial firm has 60 AI agents in production, plans 200 more by 2026. <a href="https://www.jbs.cam.ac.uk/2025/from-automation-to-autonomy-the-agentic-ai-era-of-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Cambridge Judge Business School</a></span>
-          </li>
-          <li id="fn2-17" className="flex gap-2">
-            <span className="text-accent font-medium">17.</span>
-            <span>Citi Research: 2025 is "the year of Agentic AI" with bigger impact than the internet. <a href="https://www.citiwarrants.com/home/upload/citi_research/rsch_pdf_30305836.pdf" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Citi Research</a></span>
-          </li>
-          <li id="fn2-18" className="flex gap-2">
-            <span className="text-accent font-medium">18.</span>
-            <span>AI concentration creates "risk monoculture" with correlated failures. <a href="https://cepr.org/voxeu/columns/ai-financial-crises" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">CEPR</a></span>
-          </li>
-          <li id="fn2-19" className="flex gap-2">
-            <span className="text-accent font-medium">19.</span>
-            <span>IMF: AI could amplify financial crises. <a href="https://www.imf.org/en/blogs/articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">IMF Blog</a></span>
-          </li>
-          <li id="fn2-20" className="flex gap-2">
-            <span className="text-accent font-medium">20.</span>
-            <span>73% of financial services leaders cite AI talent scarcity as critical. <a href="https://www.weforum.org/stories/2024/12/agentic-ai-financial-services-autonomy-efficiency-and-inclusion/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">World Economic Forum</a></span>
-          </li>
-          <li id="fn2-21" className="flex gap-2">
-            <span className="text-accent font-medium">21.</span>
-            <span>FinGPT: Open-source financial LLM released by AI4Finance. <a href="https://arxiv.org/abs/2306.06031" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">arXiv</a></span>
-          </li>
-          <li id="fn2-22" className="flex gap-2">
-            <span className="text-accent font-medium">22.</span>
-            <span>The 2008 financial crisis caused $10+ trillion in global losses. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Federal Reserve History</a></span>
-          </li>
-        </ol>
-      </aside>
     </div>
   );
 }

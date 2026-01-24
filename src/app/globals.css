@@ -99,6 +99,30 @@
     @apply transition-all duration-200;
   }
 
+  /* Form input - standard form field */
+  .form-input {
+    @apply w-full px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg;
+    @apply text-base text-text-primary placeholder:text-text-faint;
+    @apply hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10;
+    @apply transition-all duration-200;
+  }
+
+  /* Form select - glassmorphic dropdown */
+  .form-select {
+    @apply w-full px-4 py-3 rounded-lg text-base text-text-primary cursor-pointer;
+    @apply hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10;
+    @apply transition-all duration-200;
+    background-color: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Form label */
+  .form-label {
+    @apply block text-sm font-medium text-text-secondary mb-2;
+  }
+
   /* Card */
   .card {
     @apply bg-surface border border-border rounded-lg overflow-hidden;

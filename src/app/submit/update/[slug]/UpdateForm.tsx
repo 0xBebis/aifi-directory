@@ -32,9 +32,9 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     email: '',
   });
 
-  const inputStyles = "w-full px-4 py-3 bg-surface-2/50 border border-border/50 rounded-lg text-base text-text-primary placeholder:text-text-faint hover:border-border focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200";
-  const selectStyles = "select-glass w-full px-4 py-3 bg-[#18181b]/80 backdrop-blur-xl border border-white/10 rounded-lg text-base text-text-primary hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
-  const labelStyles = "block text-sm font-medium text-text-secondary mb-2";
+  const inputStyles = "form-input";
+  const selectStyles = "form-select select-glass";
+  const labelStyles = "form-label";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;

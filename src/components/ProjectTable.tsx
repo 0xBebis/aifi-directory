@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, ReactNode } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import {
   Project,
@@ -13,6 +13,7 @@ import {
   AI_TYPE_COLORS,
 } from '@/types';
 import { formatFunding } from '@/lib/data';
+import { Tooltip, CategoryBadge } from '@/components/ui';
 import {
   Search,
   ChevronUp,
@@ -22,54 +23,6 @@ import {
   X,
 } from 'lucide-react';
 import Fuse from 'fuse.js';
-
-// Tooltip component for showing additional categories
-function Tooltip({ children, content }: { children: ReactNode; content: ReactNode }) {
-  return (
-    <span className="relative group/tooltip inline-flex items-center">
-      {children}
-      <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 z-50 hidden group-hover/tooltip:flex flex-col gap-1.5 px-3 py-2 bg-surface-3 border border-border rounded-lg shadow-medium text-xs whitespace-nowrap animate-fade-in">
-        {content}
-      </span>
-    </span>
-  );
-}
-
-// Colored badge component for categories
-function CategoryBadge({
-  label,
-  color,
-  onClick,
-  isActive = false,
-}: {
-  label: string;
-  color: string;
-  onClick?: () => void;
-  isActive?: boolean;
-}) {
-  const isClickable = !!onClick;
-  return (
-    <span
-      onClick={(e) => {
-        if (onClick) {
-          e.stopPropagation();
-          onClick();
-        }
-      }}
-      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium transition-all ${
-        isClickable ? 'cursor-pointer hover:scale-105' : ''
-      } ${isActive ? 'ring-1 ring-offset-1 ring-offset-surface' : ''}`}
-      style={{
-        backgroundColor: isActive ? `${color}25` : `${color}15`,
-        color: color,
-        border: `1px solid ${isActive ? color : `${color}30`}`,
-        ['--tw-ring-color' as string]: isActive ? color : undefined,
-      }}
-    >
-      {label}
-    </span>
-  );
-}
 
 interface ProjectTableProps {
   projects: Project[];
@@ -213,7 +166,7 @@ export default function ProjectTable({
 
   const hasFilters = search || segmentFilter || layerFilter || regionFilter || aiTypeFilter;
 
-  const selectStyles = "select-glass px-4 py-3 bg-[#18181b]/80 backdrop-blur-xl border border-white/10 rounded-lg text-sm text-text-primary hover:border-white/20 focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-all duration-200 cursor-pointer";
+  const selectStyles = "form-select select-glass text-sm w-auto";
 
   return (
     <div className="bg-surface border border-border rounded-xl">
