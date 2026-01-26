@@ -56,3 +56,6 @@ coverage
 *.temp
 tmpclaude-*
 nul
+
+# Script output artifacts
+scripts/*/results.json

@@ -1,52 +1,56 @@
 # AIFI Development Guide
 
-This document defines the architectural constraints, conventions, and guidelines for maintaining and extending the AIFI codebase. Follow these rules to ensure consistency and quality across iterations.
+Architectural constraints, conventions, and reference for the AIFI codebase. All changes must follow these rules.
 
 ---
 
 ## Project Identity
 
-**AIFI** is a curated directory of AI + Finance companies. It is:
-- A **static site** with no backend
-- **Data-driven** from JSON files
-- **Simple to maintain** by non-technical users
-- **Fast and reliable** with minimal dependencies
+**AIFI** is a curated directory and market map of AI + Finance companies and AI agents. It combines:
+
+1. **Company Directory** — ~450 companies classified by market segment, tech layer, and AI type
+2. **Market Matrix** — Interactive heatmap showing company density at segment × layer intersections
+3. **Agent Registry** — EIP-8004 AI agents filtered by finance category and protocol
 
 ### Core Principles
 
-1. **Simplicity over features** - Resist adding complexity. Every feature must justify its existence.
-2. **Data as the source of truth** - All content comes from `/src/data/*.json`. No hardcoded content in components.
-3. **Static first** - The site must build to static HTML. No runtime server required.
-4. **Zero external services** - No databases, no APIs, no auth providers. Everything runs client-side.
+1. **Simplicity over features** — Resist adding complexity. Every feature must justify its existence.
+2. **Data as the source of truth** — All content comes from `/src/data/*.json`. No hardcoded content in components.
+3. **Static first** — The site builds to static HTML. No runtime server required.
+4. **Zero external services** — No databases, no APIs, no auth providers. Everything runs client-side.
 
 ---
 
-## Architecture Constraints
+## Architecture
 
-### What We Use
-| Layer | Technology | Reason |
-|-------|------------|--------|
-| Framework | Next.js 14 (App Router) | Static export, file-based routing |
-| Styling | Tailwind CSS | Utility-first, no CSS files to manage |
-| Search | Fuse.js | Client-side fuzzy search, no backend |
-| Icons | Lucide React | Lightweight, tree-shakeable |
-| Types | TypeScript | Type safety, better DX |
+### Tech Stack
+
+| Layer | Technology | Version | Reason |
+|-------|------------|---------|--------|
+| Framework | Next.js (App Router) | 14 | Static export, file-based routing |
+| Styling | Tailwind CSS | 3 | Utility-first, no CSS files to manage |
+| Search | Fuse.js | 7 | Client-side fuzzy search, no backend |
+| Icons | Lucide React | 0.441 | Lightweight, tree-shakeable |
+| Types | TypeScript | 5 | Type safety, better DX |
 
 ### What We DON'T Use
-- **No database** - Data lives in JSON files
-- **No CMS** - Edit JSON directly
-- **No authentication** - Public read-only site
-- **No analytics services** - Add only if explicitly requested
-- **No state management libraries** - React useState is sufficient
-- **No CSS-in-JS** - Tailwind only
-- **No API routes** - Static export doesn't support them
+
+- **No database** — Data lives in JSON files
+- **No CMS** — Edit JSON directly
+- **No authentication** — Public read-only site
+- **No analytics services** — Add only if explicitly requested
+- **No state management libraries** — React `useState` is sufficient
+- **No CSS-in-JS** — Tailwind only
+- **No API routes** — Static export doesn't support them
 
 ### Forbidden Patterns
-- Server components that fetch external data
+
+- Server components that fetch external data at runtime
 - Environment variables for runtime config
 - Dynamic imports for data files
-- localStorage for persistent state
+- `localStorage` for persistent state
 - External image hosts (use local `/public`)
+- `getServerSideProps` (incompatible with static export)
 
 ---
 
@@ -54,362 +58,385 @@ This document defines the architectural constraints, conventions, and guidelines
 
 ```
 src/
-├── app/                    # Pages only - minimal logic
-│   ├── page.tsx           # Homepage
-│   ├── layout.tsx         # Root layout (nav, footer)
-│   ├── globals.css        # Tailwind imports + minimal global styles
-│   ├── not-found.tsx      # 404 page
-│   ├── [feature]/         # Feature routes
-│   │   ├── page.tsx       # List/index page
-│   │   └── [slug]/        # Detail pages
-│   │       └── page.tsx
-├── components/            # Reusable UI components
-│   ├── Nav.tsx           # Navigation (single file)
-│   ├── ProjectCard.tsx   # Project card component
-│   └── [Component].tsx   # One component per file
-├── data/                  # JSON data files (source of truth)
-│   ├── projects.json     # All projects
-│   ├── segments.json     # Market segments
-│   └── layers.json       # Tech stack layers
-├── lib/                   # Utilities and helpers
-│   └── data.ts           # Data loading and transformation
-└── types/                 # TypeScript definitions
-    └── index.ts          # All types in one file
+├── app/                              # Pages (minimal logic)
+│   ├── page.tsx                      # / — Homepage
+│   ├── layout.tsx                    # Root layout (Nav, footer)
+│   ├── globals.css                   # Tailwind imports + scrollbar
+│   ├── not-found.tsx                 # 404 page
+│   ├── about/page.tsx                # /about — Thesis & methodology
+│   ├── directory/page.tsx            # /directory — Company directory + market matrix
+│   ├── p/[slug]/page.tsx             # /p/:slug — Company detail
+│   ├── agents/page.tsx               # /agents — Agent registry
+│   ├── agents/[id]/page.tsx          # /agents/:id — Agent detail
+│   ├── submit/page.tsx               # /submit — Submit a new company
+│   └── submit/update/[slug]/
+│       ├── page.tsx                  # /submit/update/:slug — Update existing company
+│       └── UpdateForm.tsx            # Client component for update form
+│
+├── components/                       # Reusable UI
+│   ├── Nav.tsx                       # Site navigation
+│   ├── ProjectTable.tsx              # Sortable/filterable company table
+│   ├── CompanyLogo.tsx               # Logo with fallback
+│   ├── MarketMatrix.tsx              # Interactive segment × layer heatmap
+│   ├── AgentCard.tsx                 # Agent card for listing
+│   ├── AgentFilters.tsx              # Category/protocol filter bar
+│   ├── AgentImage.tsx                # Agent avatar with fallback
+│   ├── ProtocolBadge.tsx             # Protocol tag (MCP, A2A, etc.)
+│   ├── CapabilitySection.tsx         # Collapsible tools/skills list
+│   ├── ReputationBadge.tsx           # Score display with color coding
+│   ├── EndpointList.tsx              # Agent endpoint URLs
+│   ├── ui/index.tsx                  # Shared UI primitives
+│   └── home/                         # Homepage-specific components
+│       ├── Hero.tsx                  # Hero section with stats
+│       ├── SegmentShowcase.tsx       # Segment cards grid
+│       ├── TechStack.tsx             # Layer visualization
+│       ├── FeaturedCompanies.tsx     # Top-funded companies
+│       └── CallToAction.tsx          # CTA banner
+│
+├── data/                             # JSON data files (source of truth)
+│   ├── projects.json                 # ~450 companies
+│   ├── segments.json                 # 9 market segments
+│   ├── layers.json                   # 5 tech layers
+│   └── agents.json                   # EIP-8004 agents (from pipeline)
+│
+├── lib/
+│   └── data.ts                       # All data loading, helpers, formatting
+│
+└── types/
+    └── index.ts                      # All TypeScript interfaces and enums
+
+scripts/
+├── validate-data.js                  # Data integrity validator
+├── funding-scraper/                  # One-off: scraped funding data
+│   ├── scraper.js                    # Main scraper
+│   ├── review.json                   # Manual review queue
+│   ├── show-updates.js               # Display pending updates
+│   ├── get-remaining.js              # Find unscraped projects
+│   ├── save-batch.js                 # Save scraper results
+│   ├── add-remaining.js              # Add new projects
+│   ├── update-projects.js            # Apply updates to projects.json
+│   └── classify-ai-type.js           # AI type classification
+├── logo-downloader/                  # One-off: downloaded company logos
+│   ├── download-logos.js             # Download logos to /public/logos/
+│   ├── update-projects.js            # Update logo paths in projects.json
+│   └── generate-review.js            # Generate review of downloads
+└── agent-pipeline/                   # Active: EIP-8004 agent ingestion
+    ├── fetch-agents.js               # Fetch from The Graph subgraph
+    ├── finance-classifier.js         # Score + categorize for finance relevance
+    ├── spam-filter.js                # Remove test/spam agents, deduplicate
+    ├── config.js                     # Keywords, thresholds, weights
+    └── overrides.json                # Manual include/exclude overrides
 ```
 
 ### Naming Conventions
-- **Files**: kebab-case for routes, PascalCase for components
-- **Components**: PascalCase (`ProjectCard.tsx`)
-- **Utilities**: camelCase (`formatFunding`)
-- **Types**: PascalCase (`Project`, `Segment`)
-- **Slugs**: lowercase-with-hyphens (`two-sigma`)
+
+- **Routes**: kebab-case directories (`submit/update`)
+- **Components**: PascalCase (`ProjectTable.tsx`)
+- **Utilities**: camelCase functions (`formatFunding`, `getAgent`)
+- **Types**: PascalCase (`Project`, `Agent`, `FinanceCategory`)
+- **Slugs**: lowercase-with-hyphens (`two-sigma`, `11155111-462`)
 
 ---
 
 ## Data Model
 
-### Projects (`/src/data/projects.json`)
+### Project
+
+Every company in the directory. ~30 fields, 5 required.
+
 ```typescript
 interface Project {
   // Required
-  slug: string;        // URL identifier, unique
-  name: string;        // Display name
-  tagline: string;     // Max 140 chars
-  segment: string;     // Primary segment slug
-  layer: string;       // Primary layer slug
+  slug: string;              // Unique URL identifier
+  name: string;              // Display name
+  tagline: string;           // Max ~140 chars
+  segment: string;           // Primary segment slug
+  layer: string;             // Primary tech layer slug
 
-  // Optional
-  description?: string;
+  // Classification
+  segments?: string[];       // Additional segment slugs
+  layers?: string[];         // Additional layer slugs
+  ai_type?: AIType;          // AI/ML technology classification
+  crypto?: boolean;          // Web3/crypto flag
+
+  // Company info
+  logo?: string;             // Path relative to /public/
+  description?: string;      // Long-form description
+  summary?: string;          // Editorial summary
   website?: string;
   twitter?: string;
   linkedin?: string;
-  segments?: string[]; // Additional segments
-  layers?: string[];   // Additional layers
-  stage?: Stage;
-  funding?: number;    // USD, no formatting
-  founded?: number;    // Year only
-  hq_country?: string; // ISO 3166-1 alpha-2
+  founded?: number;          // Year (e.g. 2019)
+  hq_country?: string;       // ISO 3166-1 alpha-2
   hq_city?: string;
-  team?: TeamMember[];
+  defunct?: boolean;          // No longer in business
+
+  // Financial
+  company_type?: CompanyType;    // private | public | acquired | token
+  funding_stage?: FundingStage;  // pre-seed | seed | early | growth | late | public | fair-launch | undisclosed
+  region?: Region;               // americas | emea | apac
+  funding?: number;              // Total funding in USD (raw number)
+  stage?: Stage;                 // Legacy — deprecated in favor of funding_stage
+  valuation?: number;            // Latest known valuation in USD
+  revenue?: number;              // Annual revenue/ARR in USD
+  last_funding_date?: string;    // Year or YYYY-MM
+  acquirer?: string;             // Acquiring company name
+  acquired_date?: string;        // Year or YYYY-MM
+
+  // People
+  employees?: EmployeeRange;     // '1-10' | '11-50' | ... | '5000+'
+  founders?: Founder[];          // Key executives
+  team?: TeamMember[];           // Legacy team members
+  customers?: string[];          // Key customer names
+  job_openings?: number;         // Current open positions
 }
 ```
 
-### Validation Rules
-1. Every `slug` must be unique across all projects
-2. Every `segment` must reference a valid segment slug
-3. Every `layer` must reference a valid layer slug
-4. `funding` is stored as raw number (e.g., `170000000` not `"$170M"`)
-5. `founded` is a 4-digit year (e.g., `2015` not `"2015"`)
+### Agent (EIP-8004)
 
-### Adding New Data Fields
-1. Add to TypeScript interface in `/src/types/index.ts`
-2. Add to data utility functions in `/src/lib/data.ts`
-3. Update relevant components to display the field
-4. Document the field in this file
+AI agents from the on-chain registry. Fetched via The Graph subgraph and classified by the agent pipeline.
+
+```typescript
+interface Agent {
+  id: string;                    // "{chainId}:{agentId}" (e.g. "11155111:462")
+  agentId: number;               // On-chain numeric ID
+  chainId: number;               // EVM chain ID (11155111 = Sepolia)
+  name: string;
+  description: string;
+  image: string | null;
+  owner: string;                 // Ethereum address
+  agentWallet: string | null;    // Agent's own wallet address
+  active: boolean;
+  x402Support: boolean;          // HTTP 402 payment support
+
+  // Protocols & Endpoints
+  protocols: AgentProtocol[];    // ['mcp', 'a2a', 'oasf', 'web', 'email']
+  mcpEndpoint: string | null;
+  mcpTools: string[];
+  mcpPrompts: string[];
+  mcpResources: string[];
+  a2aEndpoint: string | null;
+  a2aSkills: string[];
+  oasfEndpoint: string | null;
+  oasfSkills: string[];
+  oasfDomains: string[];
+  webEndpoint: string | null;
+
+  // Identity
+  ens: string | null;            // ENS name
+  did: string | null;            // Decentralized identifier
+  supportedTrust: string[];      // Trust framework references
+
+  // Reputation
+  reputationScore: number | null;
+  feedbackCount: number;
+  validationCount: number;
+  completedValidations: number;
+  recentFeedback: FeedbackEntry[];
+
+  // Classification (assigned by pipeline)
+  financeCategory: FinanceCategory;
+  financeScore: number;          // 0–1 relevance score
+
+  // Timestamps (Unix seconds)
+  createdAt: number;
+  updatedAt: number;
+  lastActivity: number;
+}
+```
+
+### Segment
+
+9 market segments defining where in finance a company operates.
+
+| Slug | Name | Color |
+|------|------|-------|
+| `trading` | Trading & Markets | `#3b82f6` |
+| `banking` | Banking & Payments | `#ec4899` |
+| `lending` | Lending & Credit | `#06b6d4` |
+| `wealth` | Wealth Management | `#8b5cf6` |
+| `insurance` | Insurance | `#10b981` |
+| `risk` | Risk & Compliance | `#f59e0b` |
+| `enterprise` | Enterprise Finance | `#84cc16` |
+| `crypto` | Crypto & Web3 | `#f97316` |
+| `research` | Research & Data | `#14b8a6` |
+
+### Layer
+
+5 tech layers defining what kind of technology a company builds.
+
+| Slug | Name | Position | Color |
+|------|------|----------|-------|
+| `infrastructure` | Infrastructure | 1 | `#64748b` |
+| `data` | Data | 2 | `#0ea5e9` |
+| `models` | Models | 3 | `#a855f7` |
+| `automation` | Automation | 4 | `#22c55e` |
+| `applications` | Applications | 5 | `#3b82f6` |
+
+### Enum Types
+
+**AIType** (9 values): `llm`, `predictive-ml`, `computer-vision`, `graph-analytics`, `reinforcement-learning`, `agentic`, `multi-modal`, `data-platform`, `infrastructure`
+
+**CompanyType** (4 values): `private`, `public`, `acquired`, `token`
+
+**FundingStage** (8 values): `pre-seed`, `seed`, `early`, `growth`, `late`, `public`, `fair-launch`, `undisclosed`
+
+**Region** (3 values): `americas`, `emea`, `apac`
+
+**EmployeeRange** (7 values): `1-10`, `11-50`, `51-200`, `201-500`, `501-1000`, `1001-5000`, `5000+`
+
+**FinanceCategory** (9 values): `trading`, `risk-compliance`, `payments`, `lending`, `wealth`, `insurance`, `research`, `defi`, `general-finance`
+
+**AgentProtocol** (5 values): `mcp`, `a2a`, `oasf`, `web`, `email`
+
+### Validation Rules
+
+1. Every `slug` must be unique across all projects
+2. Every `segment` and `layer` must reference a valid slug from their respective JSON files
+3. `funding`, `valuation`, `revenue` are raw numbers (e.g. `170000000` not `"$170M"`)
+4. `founded` is a 4-digit year
+5. Agent `id` format: `{chainId}:{agentId}` (e.g. `11155111:462`)
 
 ---
 
 ## Component Patterns
 
-### Page Components (`/src/app/**/page.tsx`)
-- Fetch data at the top of the component
-- Pass data down to child components
-- Keep pages thin - delegate to components
-- Use `generateStaticParams` for dynamic routes
+### Pages fetch, components render
 
 ```typescript
-// Good: Page fetches data and delegates
-export default function SegmentPage({ params }: { params: { slug: string } }) {
-  const segment = getSegment(params.slug);
-  if (!segment) notFound();
-
-  const projects = getProjectsBySegment(segment.slug);
-  return <SegmentView segment={segment} projects={projects} />;
+// Page: thin, data at the top, delegates to components
+export default function AgentsPage() {
+  return <AgentDirectoryView agents={agents} />;
 }
 
-// Bad: Business logic in page
-export default function SegmentPage({ params }) {
-  // Don't do complex filtering/sorting here
-}
-```
-
-### UI Components (`/src/components/*.tsx`)
-- Single responsibility - one component, one job
-- Props-driven - no internal data fetching
-- Stateless when possible
-- Co-locate styles with Tailwind classes
-
-```typescript
-// Good: Props in, JSX out
-interface ProjectCardProps {
-  project: Project;
-  segment: Segment | undefined;
-  layer: Layer | undefined;
-}
-
-export default function ProjectCard({ project, segment, layer }: ProjectCardProps) {
+// Component: props in, JSX out
+export default function AgentCard({ agent }: { agent: Agent }) {
   return <div>...</div>;
 }
-
-// Bad: Component fetches its own data
-export default function ProjectCard({ slug }: { slug: string }) {
-  const project = getProject(slug); // Don't do this
-}
 ```
 
-### Client Components
-- Only use `'use client'` when necessary:
-  - `useState`, `useEffect`, `useRef`
-  - Event handlers (onClick, onChange)
-  - Browser APIs
-- Keep client components small and leaf-level
-- Never make a page component a client component if avoidable
+### Client components are leaf-level
+
+Only use `'use client'` when necessary (`useState`, `useEffect`, event handlers, browser APIs). Keep client components small and at the leaf level. Never make a page component a client component if avoidable.
+
+### Data loading
+
+All data is imported from JSON at build time via `src/lib/data.ts`. No runtime fetching. No loading states needed.
 
 ---
 
-## Styling Rules
+## Styling
 
-### Tailwind Classes
-- Use design tokens from `tailwind.config.js`:
-  - `bg-background`, `bg-surface`, `bg-surface-2`
-  - `text-text-primary`, `text-text-muted`
-  - `border-border`
-  - `text-accent`
-- Prefer semantic color names over raw values
-- Group classes logically: layout → spacing → typography → colors → effects
+### Design Tokens
 
-```typescript
-// Good: Semantic, organized
-<div className="flex items-center gap-4 p-4 bg-surface border border-border rounded-lg hover:bg-surface-2 transition-colors">
+Use semantic token names from `tailwind.config.js`, never raw hex values.
 
-// Bad: Raw values, disorganized
-<div className="hover:bg-[#1c1c1f] border p-4 flex gap-4 border-[#2a2a2e] rounded-lg items-center bg-[#141416]">
+| Token | Value | Usage |
+|-------|-------|-------|
+| `background` | `#09090b` | Page background |
+| `surface` | `#111113` | Card background |
+| `surface-2` | `#18181b` | Hover/secondary surface |
+| `surface-3` | `#1f1f23` | Elevated surface |
+| `border` | `#27272a` | Borders |
+| `border-subtle` | `#1e1e21` | Subtle dividers |
+| `text-primary` | `#fafafa` | Main text |
+| `text-secondary` | `#d4d4d8` | Secondary text |
+| `text-muted` | `#a1a1aa` | Muted text |
+| `text-faint` | `#71717a` | Faintest text |
+| `accent` | `#0d9488` | Interactive elements (teal) |
+| `accent-hover` | `#14b8a6` | Hover state |
+| `positive` | `#22c55e` | Success/positive |
+| `negative` | `#ef4444` | Error/negative |
+| `warning` | `#f59e0b` | Warning |
+
+### Rules
+
+- Group Tailwind classes: layout > spacing > typography > colors > effects
+- Desktop-first; use `md:`, `lg:` responsive prefixes as needed
+- No `.module.css` files; `globals.css` is for fonts and scrollbar only
+- Prefer semantic tokens (`bg-surface`) over raw values (`bg-[#111113]`)
+
+---
+
+## Agent Pipeline
+
+The agent pipeline (`scripts/agent-pipeline/`) fetches EIP-8004 agents from The Graph and produces `src/data/agents.json`.
+
+### How it works
+
+1. **fetch-agents.js** — Queries the subgraph (paginated), downloads all registered agents
+2. **spam-filter.js** — Removes test/spam agents using name/description pattern matching and deduplication
+3. **finance-classifier.js** — Scores each agent for finance relevance (0–1) using keyword matching across name, description, domains, and tools. Assigns a `FinanceCategory` based on the best-matching keyword cluster.
+4. **config.js** — Central configuration: subgraph ID, finance keywords, category keyword sets, scoring weights, spam patterns
+
+### Running the pipeline
+
+```bash
+node scripts/agent-pipeline/fetch-agents.js
 ```
 
-### Responsive Design
-- Mobile-first is NOT required (desktop-first is fine for this project)
-- Use responsive prefixes when needed: `md:`, `lg:`
-- Test at 3 breakpoints: mobile (375px), tablet (768px), desktop (1280px)
+This writes to `src/data/agents.json`. The output `results.json` is gitignored.
 
-### No Custom CSS
-- Everything in Tailwind classes
-- Exception: `globals.css` for fonts and scrollbar only
-- Never create `.module.css` files
+### Configuration
+
+- **Finance threshold**: 0.25 (agents scoring below are excluded)
+- **Scoring weights**: name (0.20), description (0.30), domains (0.25), tools (0.15)
+- **Chain**: Ethereum Sepolia (chain ID 11155111) — only deployment as of now
+- **Manual overrides**: `overrides.json` can force-include or force-exclude agents
 
 ---
 
-## State Management
+## Build & Quality
 
-### Local State Only
-- Use `useState` for component-level state
-- Use URL params for shareable state (filters, search)
-- No global state libraries
+### Commands
 
-### URL as State
-The directory page uses URL search params for filters:
-```
-/directory?segment=trading&layer=intelligence&stage=seed
+```bash
+npm run dev       # Development server (localhost:3000)
+npm run build     # Production build (static export to /out)
+npm run start     # Serve production build
+npm run lint      # ESLint
+npm run validate  # Data integrity checks (slugs, refs, required fields)
 ```
 
-This makes filtered views shareable and bookmarkable.
-
----
-
-## Performance Guidelines
-
-### Data Loading
-- All data loaded at build time via JSON imports
-- No runtime fetching
-- No loading states needed (data is always available)
-
-### Bundle Size
-- Import only what you need from lucide-react
-- No barrel exports in components
-- Avoid large dependencies
-
-### Images
-- Store logos in `/public/logos/`
-- Use descriptive filenames (`stripe.svg`, not `logo-001.svg`)
-- Prefer SVG for logos, PNG/WebP for photos
-- No external image URLs
-
----
-
-## Adding Features
-
-### Before Adding Anything
-Ask these questions:
-1. Does this align with the core purpose (directory/discovery)?
-2. Can this be done without adding dependencies?
-3. Does this require a backend? (If yes, reconsider)
-4. Will this complicate maintenance?
-
-### Feature Checklist
-- [ ] Types defined in `/src/types/index.ts`
-- [ ] Data utilities in `/src/lib/data.ts`
-- [ ] Components in `/src/components/`
-- [ ] Pages in `/src/app/`
-- [ ] No new dependencies unless absolutely necessary
-- [ ] Works with static export (`npm run build`)
-- [ ] Responsive at all breakpoints
-
-### Extending the Data Model
-1. Add field to TypeScript interface
-2. Add to JSON files (can be optional)
-3. Add helper functions if needed
-4. Update components to display
-5. Update CLAUDE.md to document
-
----
-
-## Quality Checklist
+### Quality Checklist
 
 Before considering any change complete:
 
-### Code Quality
-- [ ] No TypeScript errors (`npm run build` passes)
-- [ ] No console errors or warnings
+- [ ] `npm run build` passes (no TypeScript errors)
+- [ ] `npm run validate` passes (data integrity)
 - [ ] No hardcoded data in components
-- [ ] Consistent naming conventions
+- [ ] No console errors or warnings
 - [ ] No dead code or unused imports
+- [ ] All slugs unique, all segment/layer references valid
+- [ ] All links work, filters clear properly, 404 shows for invalid routes
 
-### Data Integrity
-- [ ] All slugs are unique
-- [ ] All references (segment, layer) are valid
-- [ ] Numbers stored as numbers, not strings
-- [ ] No HTML in JSON data
+### Adding a New Project
 
-### UX Quality
-- [ ] All links work
-- [ ] All pages have proper titles
-- [ ] Filters clear properly
-- [ ] Back navigation works
-- [ ] 404 page shows for invalid routes
+1. Edit `src/data/projects.json`
+2. Include required fields: `slug`, `name`, `tagline`, `segment`, `layer`
+3. Verify segment/layer slugs exist in their JSON files
+4. Run `npm run build`
 
-### Build Verification
-```bash
-npm run build  # Must complete without errors
-npm run start  # Verify static export works
-```
+### Extending the Data Model
+
+1. Add field to TypeScript interface in `src/types/index.ts`
+2. Add helper functions in `src/lib/data.ts` if needed
+3. Update components to display the field
+4. Update this file to document
 
 ---
 
-## Common Tasks
+## Key Files
 
-### Add a New Project
-1. Edit `/src/data/projects.json`
-2. Add project object with required fields
-3. Verify segment/layer slugs exist
-4. Run `npm run build` to verify
-
-### Add a New Segment or Layer
-1. Edit `/src/data/segments.json` or `/src/data/layers.json`
-2. Use unique slug
-3. Pick a distinct color (hex format)
-4. For layers, set correct `position` (1-9)
-
-### Fix a Bug
-1. Identify the affected component
-2. Make minimal change to fix
-3. Verify no regressions
-4. Run full build
-
-### Refactor
-1. Only refactor when explicitly requested
-2. Maintain all existing functionality
-3. Don't change data structures without discussion
-4. Keep changes atomic and reviewable
-
----
-
-## What NOT to Do
-
-### Never
-- Add a database or external API
-- Add authentication
-- Add server-side rendering for data
-- Use `getServerSideProps` (doesn't work with static export)
-- Store secrets or API keys
-- Add tracking/analytics without explicit request
-- Create unnecessary abstractions
-- Add features "for the future"
-
-### Avoid
-- Large dependencies for small tasks
-- Premature optimization
-- Over-engineering simple features
-- Breaking changes to data structure
-- Removing existing functionality
-
----
-
-## Versioning & Changes
-
-### Data Changes
-- Projects can be added/updated without version bump
-- Schema changes require discussion
-
-### Code Changes
-- Bug fixes: patch version
-- New features: minor version
-- Breaking changes: major version
-
-### Changelog
-Document significant changes in commit messages:
-- `feat:` - New feature
-- `fix:` - Bug fix
-- `data:` - Data updates
-- `refactor:` - Code restructure
-- `docs:` - Documentation
-
----
-
-## Quick Reference
-
-### Build Commands
-```bash
-npm run dev      # Development server
-npm run build    # Production build (static)
-npm run start    # Serve production build
-npm run lint     # Run linter
-```
-
-### Key Files to Know
 | File | Purpose |
 |------|---------|
-| `src/data/projects.json` | All project data |
-| `src/lib/data.ts` | Data utilities |
-| `src/types/index.ts` | TypeScript types |
-| `tailwind.config.js` | Design tokens |
-| `next.config.js` | Build config |
-
-### Design Tokens
-| Token | Value | Usage |
-|-------|-------|-------|
-| `background` | `#0a0a0b` | Page background |
-| `surface` | `#141416` | Card background |
-| `surface-2` | `#1c1c1f` | Hover states |
-| `border` | `#2a2a2e` | Borders |
-| `text-primary` | `#fafafa` | Main text |
-| `text-muted` | `#a1a1aa` | Secondary text |
-| `accent` | `#3b82f6` | Interactive elements |
+| `src/data/projects.json` | All company data (~450 entries) |
+| `src/data/segments.json` | 9 market segments |
+| `src/data/layers.json` | 5 tech layers |
+| `src/data/agents.json` | EIP-8004 agents |
+| `src/types/index.ts` | All TypeScript interfaces and enums |
+| `src/lib/data.ts` | Data loading, helpers, formatting |
+| `tailwind.config.js` | Design tokens and theme |
+| `next.config.js` | Static export config (`output: 'export'`) |
+| `scripts/validate-data.js` | Data integrity validator |
+| `scripts/agent-pipeline/` | Agent ingestion pipeline |

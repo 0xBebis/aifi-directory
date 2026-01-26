@@ -14,7 +14,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:thegraph.com)",
       "WebFetch(domain:sdk.ag0.xyz)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "Bash(npm run validate:*)"
     ]
   }
 }
