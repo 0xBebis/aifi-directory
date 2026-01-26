@@ -26,6 +26,16 @@ export interface Project {
   crypto?: boolean; // Flag for Web3/crypto companies (allows filtering while using functional segments)
   ai_type?: AIType; // Classification of AI/ML technology used
   defunct?: boolean; // True if company is no longer in business
+  // Extended company data
+  employees?: EmployeeRange; // Employee count range
+  valuation?: number; // Latest known valuation in USD
+  revenue?: number; // Annual revenue/ARR in USD (if known)
+  customers?: string[]; // Key customer names
+  founders?: Founder[]; // Founders and key executives
+  last_funding_date?: string; // Year or YYYY-MM of most recent funding
+  acquirer?: string; // Name of acquiring company (if acquired)
+  acquired_date?: string; // Year or YYYY-MM of acquisition
+  job_openings?: number; // Current open positions
 }
 
 export interface TeamMember {
@@ -33,6 +43,31 @@ export interface TeamMember {
   role: string;
   linkedin?: string;
 }
+
+export interface Founder {
+  name: string;
+  title?: string; // CEO, CTO, Co-founder, etc.
+  linkedin?: string;
+}
+
+export type EmployeeRange =
+  | '1-10'
+  | '11-50'
+  | '51-200'
+  | '201-500'
+  | '501-1000'
+  | '1001-5000'
+  | '5000+';
+
+export const EMPLOYEE_RANGE_LABELS: Record<EmployeeRange, string> = {
+  '1-10': '1-10',
+  '11-50': '11-50',
+  '51-200': '51-200',
+  '201-500': '201-500',
+  '501-1000': '501-1,000',
+  '1001-5000': '1,001-5,000',
+  '5000+': '5,000+',
+};
 
 export interface Segment {
   slug: string;
