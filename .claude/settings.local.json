@@ -8,7 +8,13 @@
       "WebFetch(domain:tracxn.com)",
       "WebFetch(domain:clearbit.com)",
       "WebFetch(domain:logo.dev)",
-      "WebFetch(domain:docs.logo.dev)"
+      "WebFetch(domain:docs.logo.dev)",
+      "WebFetch(domain:eips.ethereum.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:thegraph.com)",
+      "WebFetch(domain:sdk.ag0.xyz)",
+      "WebFetch(domain:api.github.com)"
     ]
   }
 }

@@ -209,6 +209,107 @@ export const AI_TYPE_COLORS: Record<AIType, string> = {
   'infrastructure': '#71717a',   // Gray - infra
 };
 
+// ── Agent Registry Types (EIP-8004) ──
+
+export type FinanceCategory =
+  | 'trading'
+  | 'risk-compliance'
+  | 'payments'
+  | 'lending'
+  | 'wealth'
+  | 'insurance'
+  | 'research'
+  | 'defi'
+  | 'general-finance';
+
+export const FINANCE_CATEGORY_LABELS: Record<FinanceCategory, string> = {
+  'trading': 'Trading & Markets',
+  'risk-compliance': 'Risk & Compliance',
+  'payments': 'Payments & Banking',
+  'lending': 'Lending & Credit',
+  'wealth': 'Wealth Management',
+  'insurance': 'Insurance',
+  'research': 'Research & Data',
+  'defi': 'DeFi & Crypto',
+  'general-finance': 'General Finance',
+};
+
+export const FINANCE_CATEGORY_COLORS: Record<FinanceCategory, string> = {
+  'trading': '#3b82f6',
+  'risk-compliance': '#f59e0b',
+  'payments': '#ec4899',
+  'lending': '#06b6d4',
+  'wealth': '#8b5cf6',
+  'insurance': '#10b981',
+  'research': '#14b8a6',
+  'defi': '#f97316',
+  'general-finance': '#64748b',
+};
+
+export type AgentProtocol = 'mcp' | 'a2a' | 'oasf' | 'web' | 'email';
+
+export const PROTOCOL_LABELS: Record<AgentProtocol, string> = {
+  mcp: 'MCP',
+  a2a: 'A2A',
+  oasf: 'OASF',
+  web: 'Web',
+  email: 'Email',
+};
+
+export const PROTOCOL_COLORS: Record<AgentProtocol, string> = {
+  mcp: '#8b5cf6',
+  a2a: '#3b82f6',
+  oasf: '#14b8a6',
+  web: '#64748b',
+  email: '#71717a',
+};
+
+export interface FeedbackEntry {
+  score: number;
+  tag1: string | null;
+  tag2: string | null;
+  reviewer: string;
+  text: string | null;
+  createdAt: number;
+}
+
+export interface Agent {
+  id: string;
+  agentId: number;
+  chainId: number;
+  name: string;
+  description: string;
+  image: string | null;
+  owner: string;
+  agentWallet: string | null;
+  active: boolean;
+  x402Support: boolean;
+  protocols: AgentProtocol[];
+  mcpEndpoint: string | null;
+  mcpTools: string[];
+  mcpPrompts: string[];
+  mcpResources: string[];
+  a2aEndpoint: string | null;
+  a2aSkills: string[];
+  oasfEndpoint: string | null;
+  oasfSkills: string[];
+  oasfDomains: string[];
+  webEndpoint: string | null;
+  ens: string | null;
+  did: string | null;
+  supportedTrust: string[];
+  reputationScore: number | null;
+  feedbackCount: number;
+  validationCount: number;
+  completedValidations: number;
+  recentFeedback: FeedbackEntry[];
+  financeCategory: FinanceCategory;
+  financeScore: number;
+  createdAt: number;
+  updatedAt: number;
+  lastActivity: number;
+}
+
 export const COUNTRY_TO_REGION: Record<string, Region> = {
   // Americas
   'US': 'americas', 'USA': 'americas', 'United States': 'americas',

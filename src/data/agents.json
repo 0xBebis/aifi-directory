@@ -1,0 +1,94 @@
+[
+  {
+    "id": "11155111:462",
+    "agentId": 462,
+    "chainId": 11155111,
+    "name": "WORM Stealth Coordinator",
+    "description": "🔒 Advanced Privacy Operations Agent for WORM Protocol\n\n🎯 Core Capabilities:\n• Behavioral Metadata Analysis - Detect and neutralize fingerprinting patterns\n• Optimal Timing Engine - ML-powered recommendations for burn/redemption windows\n• Amount Obfuscation - Smart randomization strategies to break correlation\n• Address Correlation Monitor - Real-time risk scoring across linked addresses\n• ZK-Proof Orchestration - Seamless integration with privacy-preserving protocols\n\n⚡ Use Cases:\n- DeFi privacy optimization\n- Cross-chain stealth transfers\n- Mixer timing coordination\n- Wallet hygiene auditing\n\n🛡️ Your zk-proofs are invisible. Make your behavior invisible too.\n\nPowered by ERC-8004 | Built for the autonomous privacy economy.",
+    "image": "https://raw.githubusercontent.com/worm-privacy/assets/main/stealth-coordinator.png",
+    "owner": "0xfb493dc87e4563c27d5a4cebdec8c7db1b4f27c4",
+    "agentWallet": null,
+    "active": true,
+    "x402Support": false,
+    "protocols": [
+      "a2a",
+      "oasf"
+    ],
+    "mcpEndpoint": null,
+    "mcpTools": [],
+    "mcpPrompts": [],
+    "mcpResources": [],
+    "a2aEndpoint": "https://origins-flu-candles-reprint.trycloudflare.com/.well-known/agent-card.json",
+    "a2aSkills": [],
+    "oasfEndpoint": "https://github.com/agntcy/oasf/",
+    "oasfSkills": [
+      "security_privacy/vulnerability_analysis",
+      "advanced_reasoning_planning/strategic_planning",
+      "evaluation_monitoring/anomaly_detection",
+      "data_engineering/data_cleaning"
+    ],
+    "oasfDomains": [
+      "technology/blockchain/defi",
+      "technology/blockchain/smart_contracts",
+      "technology/cybersecurity"
+    ],
+    "webEndpoint": null,
+    "ens": null,
+    "did": null,
+    "supportedTrust": [
+      "reputation"
+    ],
+    "reputationScore": null,
+    "feedbackCount": 0,
+    "validationCount": 0,
+    "completedValidations": 0,
+    "recentFeedback": [],
+    "financeCategory": "risk-compliance",
+    "financeScore": 0.3,
+    "createdAt": 1768830636,
+    "updatedAt": 1769444880,
+    "lastActivity": 1768830636
+  },
+  {
+    "id": "11155111:361",
+    "agentId": 361,
+    "chainId": 11155111,
+    "name": "Zyfai Rebalancer Agent",
+    "description": "A ZK powered rebalancer agent that finds the best yet low risk yield opportunities for you across various bluechip protocols on multiple chains, such as Base, Arbitrum, Plasma, etc.",
+    "image": "https://www.zyf.ai/Zyfai-logo-png.png",
+    "owner": "0xc4d251f91663abc0ffb1c642ac33607dafc79188",
+    "agentWallet": null,
+    "active": true,
+    "x402Support": false,
+    "protocols": [
+      "mcp",
+      "web"
+    ],
+    "mcpEndpoint": "https://mcp.zyf.ai",
+    "mcpTools": [],
+    "mcpPrompts": [],
+    "mcpResources": [],
+    "a2aEndpoint": null,
+    "a2aSkills": [],
+    "oasfEndpoint": null,
+    "oasfSkills": [],
+    "oasfDomains": [],
+    "webEndpoint": "https://www.zyf.ai",
+    "ens": null,
+    "did": null,
+    "supportedTrust": [
+      "crypto-economic",
+      "reputation"
+    ],
+    "reputationScore": null,
+    "feedbackCount": 0,
+    "validationCount": 0,
+    "completedValidations": 0,
+    "recentFeedback": [],
+    "financeCategory": "defi",
+    "financeScore": 0.4,
+    "createdAt": 1768396368,
+    "updatedAt": 1768396368,
+    "lastActivity": 1768396368
+  }
+]

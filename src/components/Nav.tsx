@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 export default function Nav() {
   const pathname = usePathname();
   const isDirectory = pathname === '/directory' || pathname?.startsWith('/p/');
+  const isAgents = pathname === '/agents' || pathname?.startsWith('/agents/');
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/30 bg-background/95 backdrop-blur-xl">
@@ -35,6 +36,16 @@ export default function Nav() {
               }`}
             >
               Directory
+            </Link>
+            <Link
+              href="/agents"
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
+                isAgents
+                  ? 'text-accent bg-accent/10'
+                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+              }`}
+            >
+              Agents
             </Link>
             <Link
               href="/about"

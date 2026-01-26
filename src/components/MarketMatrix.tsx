@@ -159,25 +159,31 @@ export default function MarketMatrix({
   const getIntensity = (count: number) => count === 0 ? 0 : Math.pow(count / maxCount, 0.6);
 
   const handleSegmentClick = (segmentSlug: string) => {
+    // When transitioning from a cell selection, start fresh —
+    // the current segment/layer filters belong to the cell, not header selections.
+    const wasCell = selectedCell !== null;
     setSelectedCell(null);
-    const next = new Set(selectedSegments);
+
+    const next = wasCell ? new Set<string>() : new Set(selectedSegments);
     if (next.has(segmentSlug)) {
       next.delete(segmentSlug);
     } else {
       next.add(segmentSlug);
     }
-    onFilterChange?.(Array.from(next), Array.from(selectedLayers), Array.from(selectedAiTypes));
+    onFilterChange?.(Array.from(next), wasCell ? [] : Array.from(selectedLayers), Array.from(selectedAiTypes));
   };
 
   const handleLayerClick = (layerSlug: string) => {
+    const wasCell = selectedCell !== null;
     setSelectedCell(null);
-    const next = new Set(selectedLayers);
+
+    const next = wasCell ? new Set<string>() : new Set(selectedLayers);
     if (next.has(layerSlug)) {
       next.delete(layerSlug);
     } else {
       next.add(layerSlug);
     }
-    onFilterChange?.(Array.from(selectedSegments), Array.from(next), Array.from(selectedAiTypes));
+    onFilterChange?.(wasCell ? [] : Array.from(selectedSegments), Array.from(next), Array.from(selectedAiTypes));
   };
 
   const handleAiTypeClick = (aiType: AIType) => {

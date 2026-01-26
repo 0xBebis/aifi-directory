@@ -3,10 +3,14 @@ import {
   AI_TYPE_LABELS, AI_TYPE_COLORS, AI_TYPE_DESCRIPTIONS,
   CompanyType, COMPANY_TYPE_LABELS, FundingStage, FUNDING_STAGE_LABELS,
   Region, REGION_LABELS, EMPLOYEE_RANGE_LABELS, EmployeeRange,
+  Agent, FinanceCategory, AgentProtocol,
+  FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS,
+  PROTOCOL_LABELS, PROTOCOL_COLORS,
 } from '@/types';
 import projectsData from '@/data/projects.json';
 import segmentsData from '@/data/segments.json';
 import layersData from '@/data/layers.json';
+import agentsData from '@/data/agents.json';
 
 // Projects data - reload on JSON changes
 export const projects: Project[] = projectsData as Project[];
@@ -289,6 +293,8 @@ export const aiTypes: AIType[] = [
 export {
   AI_TYPE_LABELS, AI_TYPE_COLORS, AI_TYPE_DESCRIPTIONS,
   COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, REGION_LABELS, EMPLOYEE_RANGE_LABELS,
+  FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS,
+  PROTOCOL_LABELS, PROTOCOL_COLORS,
 };
 
 // Project page helpers
@@ -338,4 +344,128 @@ export function getFundingStageColor(stage: FundingStage): string {
     'undisclosed': '#71717a',
   };
   return colors[stage] || '#71717a';
+}
+
+// ── Agent Data Utilities ──
+
+export const agents: Agent[] = agentsData as Agent[];
+
+/** Convert agent ID (11155111:462) to URL-safe slug (11155111-462) */
+export function agentSlug(id: string): string {
+  return id.replace(':', '-');
+}
+
+/** Convert URL slug (11155111-462) back to agent ID (11155111:462) */
+export function agentIdFromSlug(slug: string): string {
+  return slug.replace('-', ':');
+}
+
+export function getAgent(id: string): Agent | undefined {
+  return agents.find(a => a.id === id);
+}
+
+export function getAgentsByCategory(category: FinanceCategory): Agent[] {
+  return agents.filter(a => a.financeCategory === category);
+}
+
+export function getAgentsByProtocol(protocol: AgentProtocol): Agent[] {
+  return agents.filter(a => a.protocols.includes(protocol));
+}
+
+export function getActiveAgents(): Agent[] {
+  return agents.filter(a => a.active);
+}
+
+export function formatReputationScore(score: number | null): string {
+  if (score === null) return 'N/A';
+  return score.toFixed(1);
+}
+
+export function formatTimestamp(unix: number): string {
+  return new Date(unix * 1000).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
+export function formatRelativeTime(unix: number): string {
+  const now = Math.floor(Date.now() / 1000);
+  const diff = now - unix;
+  if (diff < 60) return 'just now';
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  if (diff < 2592000) return `${Math.floor(diff / 86400)}d ago`;
+  return formatTimestamp(unix);
+}
+
+export function truncateAddress(address: string): string {
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+}
+
+export function getAgentCategoryStats(): Array<{
+  category: FinanceCategory;
+  label: string;
+  color: string;
+  count: number;
+}> {
+  const categories = Object.keys(FINANCE_CATEGORY_LABELS) as FinanceCategory[];
+  return categories
+    .map(cat => ({
+      category: cat,
+      label: FINANCE_CATEGORY_LABELS[cat],
+      color: FINANCE_CATEGORY_COLORS[cat],
+      count: agents.filter(a => a.financeCategory === cat).length,
+    }))
+    .filter(c => c.count > 0)
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getAgentProtocolStats(): Array<{
+  protocol: AgentProtocol;
+  label: string;
+  color: string;
+  count: number;
+}> {
+  const protocols: AgentProtocol[] = ['mcp', 'a2a', 'oasf', 'web', 'email'];
+  return protocols
+    .map(p => ({
+      protocol: p,
+      label: PROTOCOL_LABELS[p],
+      color: PROTOCOL_COLORS[p],
+      count: agents.filter(a => a.protocols.includes(p)).length,
+    }))
+    .filter(s => s.count > 0)
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getScoreColorClass(score: number | null): string {
+  if (score === null) return 'text-text-faint';
+  if (score < 0) return 'text-negative';
+  if (score >= 80) return 'text-positive';
+  if (score >= 50) return 'text-warning';
+  return 'text-text-muted';
+}
+
+export function getAgentEndpoints(agent: Agent): Array<{ label: string; url: string }> {
+  const endpoints: Array<{ label: string; url: string }> = [];
+  if (agent.mcpEndpoint) endpoints.push({ label: 'MCP Endpoint', url: agent.mcpEndpoint });
+  if (agent.a2aEndpoint) endpoints.push({ label: 'A2A Endpoint', url: agent.a2aEndpoint });
+  if (agent.oasfEndpoint) endpoints.push({ label: 'OASF Endpoint', url: agent.oasfEndpoint });
+  if (agent.webEndpoint) endpoints.push({ label: 'Web Endpoint', url: agent.webEndpoint });
+  return endpoints;
+}
+
+export function getSimilarAgents(agent: Agent, limit: number = 3): Agent[] {
+  return agents
+    .filter(a => a.id !== agent.id && a.financeCategory === agent.financeCategory)
+    .sort((a, b) => {
+      if (a.reputationScore !== null && b.reputationScore !== null) {
+        return b.reputationScore - a.reputationScore;
+      }
+      if (a.reputationScore !== null) return -1;
+      if (b.reputationScore !== null) return 1;
+      return b.lastActivity - a.lastActivity;
+    })
+    .slice(0, limit);
 }

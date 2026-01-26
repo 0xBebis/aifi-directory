@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "fetchedAt": "2026-01-26T19:45:10.713Z",
+    "durationMs": 3213,
+    "totalInRegistry": 519,
+    "withMetadata": 114,
+    "spamRejected": 100,
+    "passedSpamFilter": 14,
+    "passedFinanceFilter": 3,
+    "duplicatesRemoved": 1,
+    "outputCount": 2,
+    "threshold": 0.25,
+    "includeAllMode": false
+  },
+  "agents": {
+    "11155111:518": {
+      "name": "OpenMID Semantic Search",
+      "score": 0,
+      "category": "general-finance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:481": {
+      "name": "WORM Stealth Coordinator",
+      "score": 0,
+      "category": "risk-compliance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:480": {
+      "name": "WORM Stealth Coordinator",
+      "score": 0,
+      "category": "risk-compliance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:469": {
+      "name": "Chamba",
+      "score": 0,
+      "category": "general-finance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:462": {
+      "name": "WORM Stealth Coordinator",
+      "score": 0.3,
+      "category": "risk-compliance",
+      "included": true,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 1,
+        "descMatches": 3,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:461": {
+      "name": "DataAnalyst Pro",
+      "score": 0,
+      "category": "wealth",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:460": {
+      "name": "DataAnalyst Pro",
+      "score": 0,
+      "category": "research",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:458": {
+      "name": "Hetu Agent",
+      "score": 0.2,
+      "category": "payments",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0.6666666666666666,
+        "descMatches": 2,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:427": {
+      "name": "asdcghj",
+      "score": 0,
+      "category": "general-finance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:416": {
+      "name": "Bardiel – Trust Oracle",
+      "score": 0,
+      "category": "trading",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:412": {
+      "name": "sfasfsd",
+      "score": 0,
+      "category": "general-finance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:361": {
+      "name": "Zyfai Rebalancer Agent",
+      "score": 0.4,
+      "category": "defi",
+      "included": true,
+      "signals": {
+        "nameScore": 1,
+        "nameMatches": 1,
+        "descScore": 0.6666666666666666,
+        "descMatches": 2,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:323": {
+      "name": "Zyfai Rebalancer Agent",
+      "score": 0.4,
+      "category": "defi",
+      "included": false,
+      "signals": {
+        "nameScore": 1,
+        "nameMatches": 1,
+        "descScore": 0.6666666666666666,
+        "descMatches": 2,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    },
+    "11155111:275": {
+      "name": "Echo Agent",
+      "score": 0,
+      "category": "general-finance",
+      "included": false,
+      "signals": {
+        "nameScore": 0,
+        "nameMatches": 0,
+        "descScore": 0,
+        "descMatches": 0,
+        "domainScore": 0,
+        "toolScore": 0,
+        "toolMatches": 0
+      },
+      "forceInclude": false,
+      "forceExclude": false
+    }
+  }
+}
