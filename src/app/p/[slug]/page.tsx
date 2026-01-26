@@ -49,9 +49,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const companyTypeColor = project.company_type ? getCompanyTypeColor(project.company_type as CompanyType) : null;
   const fundingStageColor = project.funding_stage ? getFundingStageColor(project.funding_stage as FundingStage) : null;
-  const aiTypeColor = project.ai_type ? AI_TYPE_COLORS[project.ai_type as AIType] : null;
-  const aiTypeLabel = project.ai_type ? AI_TYPE_LABELS[project.ai_type as AIType] : null;
-  const aiTypeDesc = project.ai_type ? AI_TYPE_DESCRIPTIONS[project.ai_type as AIType] : null;
+  const primaryAiType = project.ai_types?.[0] || null;
+  const aiTypeColor = primaryAiType ? AI_TYPE_COLORS[primaryAiType] : null;
 
   const hasFinancials = project.funding || project.valuation || project.revenue;
   const hasFounders = project.founders && project.founders.length > 0;
@@ -197,19 +196,23 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     {FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]}
                   </span>
                 )}
-                {project.ai_type && (
-                  <span
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border"
-                    style={{
-                      borderColor: `${aiTypeColor}33`,
-                      background: `${aiTypeColor}0d`,
-                      color: aiTypeColor || undefined,
-                    }}
-                  >
-                    <Cpu className="w-3 h-3" />
-                    {aiTypeLabel}
-                  </span>
-                )}
+                {project.ai_types?.map(t => {
+                  const color = AI_TYPE_COLORS[t];
+                  return (
+                    <span
+                      key={t}
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border"
+                      style={{
+                        borderColor: `${color}33`,
+                        background: `${color}0d`,
+                        color: color,
+                      }}
+                    >
+                      <Cpu className="w-3 h-3" />
+                      {AI_TYPE_LABELS[t]}
+                    </span>
+                  );
+                })}
                 {project.region && (
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-border bg-surface-2/50 text-text-muted">
                     {REGION_LABELS[project.region]}
@@ -326,23 +329,30 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Sidebar - takes 1 col */}
         <div className="space-y-6">
           {/* AI Technology Card */}
-          {project.ai_type && (
+          {project.ai_types && project.ai_types.length > 0 && (
             <div className="bg-surface border border-border rounded-xl p-6">
               <h2 className="label-refined mb-3">AI Technology</h2>
-              <div className="flex items-start gap-3">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                  style={{
-                    background: `${aiTypeColor}1a`,
-                    border: `1px solid ${aiTypeColor}33`,
-                  }}
-                >
-                  <Cpu className="w-5 h-5" style={{ color: aiTypeColor || undefined }} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-text-primary">{aiTypeLabel}</p>
-                  <p className="text-xs text-text-muted mt-1 leading-relaxed">{aiTypeDesc}</p>
-                </div>
+              <div className="space-y-3">
+                {project.ai_types.map(t => {
+                  const color = AI_TYPE_COLORS[t];
+                  return (
+                    <div key={t} className="flex items-start gap-3">
+                      <div
+                        className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                        style={{
+                          background: `${color}1a`,
+                          border: `1px solid ${color}33`,
+                        }}
+                      >
+                        <Cpu className="w-5 h-5" style={{ color }} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-text-primary">{AI_TYPE_LABELS[t]}</p>
+                        <p className="text-xs text-text-muted mt-1 leading-relaxed">{AI_TYPE_DESCRIPTIONS[t]}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -483,7 +493,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             {similarProjects.map((p) => {
               const seg = getSegment(p.segment);
               const lay = getLayer(p.layer);
-              const pAiColor = p.ai_type ? AI_TYPE_COLORS[p.ai_type as AIType] : null;
+              const pAiColor = p.ai_types?.[0] ? AI_TYPE_COLORS[p.ai_types[0]] : null;
               return (
                 <Link
                   key={p.slug}

@@ -156,7 +156,7 @@ interface Project {
   // Classification
   segments?: string[];       // Additional segment slugs
   layers?: string[];         // Additional layer slugs
-  ai_type?: AIType;          // AI/ML technology classification
+  ai_types?: AIType[];        // AI/ML technologies used (supports multiple)
   crypto?: boolean;          // Web3/crypto flag
 
   // Company info
@@ -275,7 +275,7 @@ interface Agent {
 
 ### Enum Types
 
-**AIType** (9 values): `llm`, `predictive-ml`, `computer-vision`, `graph-analytics`, `reinforcement-learning`, `agentic`, `multi-modal`, `data-platform`, `infrastructure`
+**AIType** (8 values): `llm`, `predictive-ml`, `computer-vision`, `graph-analytics`, `reinforcement-learning`, `agentic`, `data-platform`, `infrastructure`
 
 **CompanyType** (4 values): `private`, `public`, `acquired`, `token`
 

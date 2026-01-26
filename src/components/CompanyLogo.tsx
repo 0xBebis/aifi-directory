@@ -1,7 +1,7 @@
 import { Project, AIType, AI_TYPE_COLORS } from '@/types';
 
 interface CompanyLogoProps {
-  project: Pick<Project, 'name' | 'logo' | 'ai_type'>;
+  project: Pick<Project, 'name' | 'logo' | 'ai_types'>;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
@@ -13,7 +13,7 @@ const sizeClasses = {
 };
 
 export default function CompanyLogo({ project, size = 'md', className = '' }: CompanyLogoProps) {
-  const aiTypeColor = project.ai_type ? AI_TYPE_COLORS[project.ai_type as AIType] : null;
+  const aiTypeColor = project.ai_types?.[0] ? AI_TYPE_COLORS[project.ai_types[0]] : null;
   const accentColor = aiTypeColor || '#0d9488';
   const s = sizeClasses[size];
 

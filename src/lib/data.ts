@@ -173,7 +173,7 @@ export interface MarketMapData {
 export function getMarketMapData(aiTypeFilter?: AIType | null): MarketMapData {
   // Filter projects by AI type if specified
   const filteredProjects = aiTypeFilter
-    ? projects.filter(p => p.ai_type === aiTypeFilter)
+    ? projects.filter(p => p.ai_types?.includes(aiTypeFilter))
     : projects;
 
   // Initialize the grid
@@ -200,9 +200,11 @@ export function getMarketMapData(aiTypeFilter?: AIType | null): MarketMapData {
       cell.count++;
       cell.totalFunding += project.funding || 0;
 
-      // Track AI type breakdown
-      const aiType = project.ai_type || 'unknown';
-      cell.aiTypeBreakdown[aiType] = (cell.aiTypeBreakdown[aiType] || 0) + 1;
+      // Track AI type breakdown (count each type, but project already counted once above)
+      const types = project.ai_types?.length ? project.ai_types : ['unknown'];
+      for (const aiType of types) {
+        cell.aiTypeBreakdown[aiType] = (cell.aiTypeBreakdown[aiType] || 0) + 1;
+      }
     }
   });
 
@@ -243,14 +245,17 @@ export function getMarketMapData(aiTypeFilter?: AIType | null): MarketMapData {
   });
 
   // Calculate AI type totals
+  // Each project counts once per type it belongs to, but funding is only counted once per project
   const aiTypeTotals: Record<string, { count: number; funding: number }> = {};
   filteredProjects.forEach(project => {
-    const aiType = project.ai_type || 'unknown';
-    if (!aiTypeTotals[aiType]) {
-      aiTypeTotals[aiType] = { count: 0, funding: 0 };
+    const types = project.ai_types?.length ? project.ai_types : ['unknown'];
+    for (const aiType of types) {
+      if (!aiTypeTotals[aiType]) {
+        aiTypeTotals[aiType] = { count: 0, funding: 0 };
+      }
+      aiTypeTotals[aiType].count++;
+      aiTypeTotals[aiType].funding += project.funding || 0;
     }
-    aiTypeTotals[aiType].count++;
-    aiTypeTotals[aiType].funding += project.funding || 0;
   });
 
   return {
@@ -273,7 +278,7 @@ export function getProjectsAtIntersection(
   return projects.filter(p => {
     const matchesSegment = p.segment === segmentSlug || p.segments?.includes(segmentSlug);
     const matchesLayer = p.layer === layerSlug || p.layers?.includes(layerSlug);
-    const matchesAiType = !aiTypeFilter || p.ai_type === aiTypeFilter;
+    const matchesAiType = !aiTypeFilter || p.ai_types?.includes(aiTypeFilter);
     return matchesSegment && matchesLayer && matchesAiType;
   });
 }
@@ -285,7 +290,6 @@ export const aiTypes: AIType[] = [
   'graph-analytics',
   'reinforcement-learning',
   'agentic',
-  'multi-modal',
   'data-platform',
   'infrastructure',
 ];

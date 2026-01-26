@@ -50,9 +50,9 @@ What kind of technology a company builds. Ordered bottom-up from infrastructure 
 
 ---
 
-## AI Types (9)
+## AI Types (8)
 
-Classification of the primary AI/ML technology a company uses. Optional field (`ai_type`) on each project.
+Classification of AI/ML technologies a company uses. Array field (`ai_types`) on each project — companies may have multiple types.
 
 | Slug | Label | Description | Color |
 |------|-------|-------------|-------|
@@ -62,7 +62,6 @@ Classification of the primary AI/ML technology a company uses. Optional field (`
 | `graph-analytics` | Graph Analytics | Graph neural networks for network analysis, relationship detection | `#f97316` |
 | `reinforcement-learning` | Reinforcement Learning | RL for trading, portfolio optimization | `#ec4899` |
 | `agentic` | Agentic AI | Autonomous AI agents that execute actions independently | `#22c55e` |
-| `multi-modal` | Multi-Modal | Systems combining multiple AI approaches (LLM + vision + etc.) | `#a855f7` |
 | `data-platform` | Data Platform | Data aggregation/enrichment with minimal ML | `#64748b` |
 | `infrastructure` | Infrastructure | AI/ML infrastructure, compute networks, tooling | `#71717a` |
 
@@ -139,7 +138,7 @@ Ask: **Where does the core technology sit in the stack?**
 
 ### Choosing an AI Type
 
-Ask: **What is the primary AI/ML technology powering the product?**
+Ask: **What AI/ML technologies power the product?** Assign all that apply.
 
 - Most NLP/chatbot/document companies → `llm`
 - Credit scoring, risk models → `predictive-ml`
@@ -147,6 +146,6 @@ Ask: **What is the primary AI/ML technology powering the product?**
 - Fraud graphs, network analysis → `graph-analytics`
 - Trading optimization via RL → `reinforcement-learning`
 - Autonomous agent systems → `agentic`
-- Companies using multiple AI types equally → `multi-modal`
 - Data aggregators with minimal ML → `data-platform`
 - AI tooling/compute providers → `infrastructure`
+- Companies using multiple AI types → assign all applicable (e.g. `["llm", "computer-vision"]`)

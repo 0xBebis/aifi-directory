@@ -5,13 +5,14 @@ const projectsPath = path.join(__dirname, '../../src/data/projects.json');
 const projects = require(projectsPath);
 
 // Manual overrides for known companies (most accurate)
+// Values can be a single string or an array for multi-type companies
 const manualClassifications = {
-  // Foundation model providers - multi-modal
-  'openai': 'multi-modal',
-  'anthropic': 'multi-modal',
-  'google-deepmind': 'multi-modal',
-  'databricks': 'multi-modal',
-  'c3ai': 'multi-modal',
+  // Foundation model / multi-type providers
+  'openai': ['llm', 'computer-vision', 'reinforcement-learning'],
+  'anthropic': ['llm'],
+  'google-deepmind': ['llm', 'reinforcement-learning'],
+  'databricks': ['data-platform', 'llm'],
+  'c3ai': ['predictive-ml', 'llm'],
 
   // LLM-focused applications
   'kasisto': 'llm',
@@ -230,7 +231,7 @@ const manualClassifications = {
   // Specific corrections
   'workfusion': 'llm',
   'kensho-sp-global': 'llm',
-  'palantir': 'multi-modal',
+  'palantir': ['data-platform', 'llm'],
 };
 
 // Keyword-based classification rules (fallback)
@@ -312,18 +313,22 @@ const stats = {};
 let classified = 0;
 
 projects.forEach(project => {
-  let aiType;
+  let aiTypes;
 
   // Check manual overrides first
   if (manualClassifications[project.slug]) {
-    aiType = manualClassifications[project.slug];
+    const override = manualClassifications[project.slug];
+    aiTypes = Array.isArray(override) ? override : [override];
   } else {
-    // Use keyword-based classification
-    aiType = classifyByKeywords(project);
+    // Use keyword-based classification (returns single type)
+    aiTypes = [classifyByKeywords(project)];
   }
 
-  project.ai_type = aiType;
-  stats[aiType] = (stats[aiType] || 0) + 1;
+  project.ai_types = aiTypes;
+  delete project.ai_type; // Remove legacy field if present
+  for (const t of aiTypes) {
+    stats[t] = (stats[t] || 0) + 1;
+  }
   classified++;
 });
 
@@ -333,19 +338,18 @@ fs.writeFileSync(projectsPath, JSON.stringify(projects, null, 2));
 // Output summary
 console.log('\n=== AI Type Classification Summary ===\n');
 console.log(`Total projects classified: ${classified}\n`);
-console.log('Distribution:');
+console.log('Distribution (projects may appear in multiple types):');
 Object.entries(stats)
   .sort((a, b) => b[1] - a[1])
   .forEach(([type, count]) => {
-    const pct = ((count / classified) * 100).toFixed(1);
-    console.log(`  ${type}: ${count} (${pct}%)`);
+    console.log(`  ${type}: ${count}`);
   });
 
 // Show samples of each type
 console.log('\n=== Samples by Type ===\n');
-const types = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'multi-modal', 'data-platform', 'infrastructure'];
+const types = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'data-platform', 'infrastructure'];
 types.forEach(type => {
-  const samples = projects.filter(p => p.ai_type === type).slice(0, 5);
+  const samples = projects.filter(p => p.ai_types?.includes(type)).slice(0, 5);
   if (samples.length > 0) {
     console.log(`${type}:`);
     samples.forEach(p => console.log(`  - ${p.name}`));

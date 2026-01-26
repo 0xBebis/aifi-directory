@@ -17,7 +17,7 @@ export default function DirectoryPage() {
 
     // Filter by AI types
     if (aiTypeFilters.length > 0) {
-      result = result.filter(p => p.ai_type && aiTypeFilters.includes(p.ai_type));
+      result = result.filter(p => p.ai_types?.some(t => aiTypeFilters.includes(t)));
     }
 
     return result;

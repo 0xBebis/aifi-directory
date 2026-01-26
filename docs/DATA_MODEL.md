@@ -31,7 +31,7 @@ interface Project {
   // ── Classification ──
   segments?: string[];       // Additional segment slugs
   layers?: string[];         // Additional layer slugs
-  ai_type?: AIType;          // AI/ML technology classification
+  ai_types?: AIType[];        // AI/ML technologies used (supports multiple)
   crypto?: boolean;          // Web3/crypto flag (for filtering)
 
   // ── Company Info ──
@@ -268,7 +268,6 @@ Values: `1-10`, `11-50`, `51-200`, `201-500`, `501-1000`, `1001-5000`, `5000+`
 | `graph-analytics` | Graph Analytics |
 | `reinforcement-learning` | Reinforcement Learning |
 | `agentic` | Agentic AI |
-| `multi-modal` | Multi-Modal |
 | `data-platform` | Data Platform |
 | `infrastructure` | Infrastructure |
 

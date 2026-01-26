@@ -44,7 +44,7 @@ export default function MarketMatrix({
   // Filter projects by selected AI types
   const filteredProjects = useMemo(() => {
     if (selectedAiTypes.size === 0) return projects;
-    return projects.filter(p => p.ai_type && selectedAiTypes.has(p.ai_type));
+    return projects.filter(p => p.ai_types?.some(t => selectedAiTypes.has(t)));
   }, [selectedAiTypes, projects]);
 
   // Calculate cell data based on filtered projects
@@ -84,10 +84,12 @@ export default function MarketMatrix({
   const aiTypeStats = useMemo(() => {
     const stats: Record<string, { count: number; funding: number }> = {};
     projects.forEach(p => {
-      const type = p.ai_type || 'unknown';
-      if (!stats[type]) stats[type] = { count: 0, funding: 0 };
-      stats[type].count++;
-      stats[type].funding += p.funding || 0;
+      const types = p.ai_types?.length ? p.ai_types : ['unknown'];
+      for (const type of types) {
+        if (!stats[type]) stats[type] = { count: 0, funding: 0 };
+        stats[type].count++;
+        stats[type].funding += p.funding || 0;
+      }
     });
     return stats;
   }, [projects]);

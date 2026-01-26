@@ -37,7 +37,7 @@ type SortKey = 'name' | 'segment' | 'layer' | 'ai_type' | 'funding' | 'region';
 type SortDir = 'asc' | 'desc';
 
 const regions: Region[] = ['americas', 'emea', 'apac'];
-const aiTypes: AIType[] = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'multi-modal', 'data-platform', 'infrastructure'];
+const aiTypes: AIType[] = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'data-platform', 'infrastructure'];
 
 export default function ProjectTable({
   projects,
@@ -96,7 +96,7 @@ export default function ProjectTable({
     }
 
     if (aiTypeFilter) {
-      result = result.filter((p) => p.ai_type === aiTypeFilter);
+      result = result.filter((p) => p.ai_types?.includes(aiTypeFilter as AIType));
     }
 
     result = [...result].sort((a, b) => {
@@ -115,8 +115,8 @@ export default function ProjectTable({
           comparison = bPos - aPos;
           break;
         case 'ai_type':
-          const aType = a.ai_type || '';
-          const bType = b.ai_type || '';
+          const aType = a.ai_types?.[0] || '';
+          const bType = b.ai_types?.[0] || '';
           comparison = aType.localeCompare(bType);
           break;
         case 'funding':
@@ -453,13 +453,18 @@ export default function ProjectTable({
                       )}
                     </td>
                     <td className="px-5 py-4">
-                      {project.ai_type ? (
-                        <CategoryBadge
-                          label={AI_TYPE_LABELS[project.ai_type]}
-                          color={AI_TYPE_COLORS[project.ai_type]}
-                          onClick={() => setAiTypeFilter(aiTypeFilter === project.ai_type ? null : project.ai_type!)}
-                          isActive={aiTypeFilter === project.ai_type}
-                        />
+                      {project.ai_types && project.ai_types.length > 0 ? (
+                        <span className="inline-flex flex-wrap gap-1">
+                          {project.ai_types.map(t => (
+                            <CategoryBadge
+                              key={t}
+                              label={AI_TYPE_LABELS[t]}
+                              color={AI_TYPE_COLORS[t]}
+                              onClick={() => setAiTypeFilter(aiTypeFilter === t ? null : t)}
+                              isActive={aiTypeFilter === t}
+                            />
+                          ))}
+                        </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>
                       )}

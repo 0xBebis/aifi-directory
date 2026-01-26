@@ -24,7 +24,7 @@ export interface Project {
   team?: TeamMember[];
   summary?: string;
   crypto?: boolean; // Flag for Web3/crypto companies (allows filtering while using functional segments)
-  ai_type?: AIType; // Classification of AI/ML technology used
+  ai_types?: AIType[]; // Classification of AI/ML technologies used
   defunct?: boolean; // True if company is no longer in business
   // Extended company data
   employees?: EmployeeRange; // Employee count range
@@ -169,7 +169,6 @@ export type AIType =
   | 'graph-analytics'      // Graph neural networks, network analysis, blockchain analytics
   | 'reinforcement-learning' // RL for trading, portfolio optimization
   | 'agentic'              // Autonomous AI agents that execute actions
-  | 'multi-modal'          // Combines multiple AI types significantly
   | 'data-platform'        // Data aggregation/enrichment, minimal ML
   | 'infrastructure';      // AI/ML infrastructure, compute, not application
 
@@ -180,7 +179,6 @@ export const AI_TYPE_LABELS: Record<AIType, string> = {
   'graph-analytics': 'Graph Analytics',
   'reinforcement-learning': 'Reinforcement Learning',
   'agentic': 'Agentic AI',
-  'multi-modal': 'Multi-Modal',
   'data-platform': 'Data Platform',
   'infrastructure': 'Infrastructure',
 };
@@ -192,7 +190,6 @@ export const AI_TYPE_DESCRIPTIONS: Record<AIType, string> = {
   'graph-analytics': 'Graph neural networks for network analysis and relationship detection',
   'reinforcement-learning': 'Reinforcement learning for trading and portfolio optimization',
   'agentic': 'Autonomous AI agents that execute actions independently',
-  'multi-modal': 'Systems combining multiple AI approaches (LLM + vision + etc.)',
   'data-platform': 'Data aggregation and enrichment platforms with minimal ML',
   'infrastructure': 'AI/ML infrastructure, compute networks, and tooling',
 };
@@ -204,7 +201,6 @@ export const AI_TYPE_COLORS: Record<AIType, string> = {
   'graph-analytics': '#f97316',  // Orange - graphs/networks
   'reinforcement-learning': '#ec4899', // Pink - RL/trading
   'agentic': '#22c55e',          // Green - autonomous agents
-  'multi-modal': '#a855f7',      // Violet - multi-modal
   'data-platform': '#64748b',    // Slate - data
   'infrastructure': '#71717a',   // Gray - infra
 };
