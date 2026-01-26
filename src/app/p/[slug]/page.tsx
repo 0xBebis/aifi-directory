@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Globe, ExternalLink, Twitter, Linkedin, Pencil } from 'lucide-react';
+import {
+  ArrowLeft, Globe, Twitter, Linkedin, Pencil,
+  Building2, Calendar, MapPin, Users, DollarSign, TrendingUp,
+  Briefcase, Cpu, Award, ExternalLink, ChevronRight,
+} from 'lucide-react';
 import {
   projects,
   getProject,
@@ -9,7 +13,20 @@ import {
   getSimilarProjects,
   formatFunding,
   formatStage,
+  getCountryName,
+  getCountryFlag,
+  getCompanyTypeColor,
+  getFundingStageColor,
+  AI_TYPE_LABELS,
+  AI_TYPE_COLORS,
+  AI_TYPE_DESCRIPTIONS,
+  COMPANY_TYPE_LABELS,
+  FUNDING_STAGE_LABELS,
+  REGION_LABELS,
+  EMPLOYEE_RANGE_LABELS,
 } from '@/lib/data';
+import { CompanyType, FundingStage, EmployeeRange, AIType } from '@/types';
+import CompanyLogo from '@/components/CompanyLogo';
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -26,12 +43,46 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const primarySegment = getSegment(project.segment);
   const primaryLayer = getLayer(project.layer);
-  const allLayers = project.layers?.map(getLayer).filter(Boolean) || [primaryLayer].filter(Boolean);
-  const allSegments = project.segments?.map(getSegment).filter(Boolean) || [primarySegment].filter(Boolean);
+  const allLayers = [primaryLayer, ...(project.layers?.map(getLayer) || [])].filter(Boolean);
+  const allSegments = [primarySegment, ...(project.segments?.map(getSegment) || [])].filter(Boolean);
   const similarProjects = getSimilarProjects(project, 6);
 
+  const companyTypeColor = project.company_type ? getCompanyTypeColor(project.company_type as CompanyType) : null;
+  const fundingStageColor = project.funding_stage ? getFundingStageColor(project.funding_stage as FundingStage) : null;
+  const aiTypeColor = project.ai_type ? AI_TYPE_COLORS[project.ai_type as AIType] : null;
+  const aiTypeLabel = project.ai_type ? AI_TYPE_LABELS[project.ai_type as AIType] : null;
+  const aiTypeDesc = project.ai_type ? AI_TYPE_DESCRIPTIONS[project.ai_type as AIType] : null;
+
+  const hasFinancials = project.funding || project.valuation || project.revenue;
+  const hasFounders = project.founders && project.founders.length > 0;
+  const hasCustomers = project.customers && project.customers.length > 0;
+  const isAcquired = project.company_type === 'acquired';
+  const isDefunct = project.defunct;
+
+  // Build metrics for the stats bar
+  const metrics: Array<{ label: string; value: string; icon: React.ReactNode }> = [];
+  if (project.founded) {
+    metrics.push({ label: 'Founded', value: String(project.founded), icon: <Calendar className="w-3.5 h-3.5" /> });
+  }
+  if (project.hq_city && project.hq_country) {
+    const flag = getCountryFlag(project.hq_country);
+    metrics.push({ label: 'Headquarters', value: `${flag} ${project.hq_city}`, icon: <MapPin className="w-3.5 h-3.5" /> });
+  }
+  if (project.employees) {
+    metrics.push({ label: 'Employees', value: EMPLOYEE_RANGE_LABELS[project.employees as EmployeeRange] || project.employees, icon: <Users className="w-3.5 h-3.5" /> });
+  }
+  if (project.funding) {
+    metrics.push({ label: 'Total Raised', value: formatFunding(project.funding), icon: <DollarSign className="w-3.5 h-3.5" /> });
+  }
+  if (project.valuation) {
+    metrics.push({ label: 'Valuation', value: formatFunding(project.valuation), icon: <TrendingUp className="w-3.5 h-3.5" /> });
+  }
+  if (project.revenue) {
+    metrics.push({ label: 'Revenue', value: formatFunding(project.revenue), icon: <Award className="w-3.5 h-3.5" /> });
+  }
+
   return (
-    <div className="max-w-4xl mx-auto px-8 py-10">
+    <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       {/* Back Link */}
       <Link
         href="/directory"
@@ -41,195 +92,432 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         Back to Directory
       </Link>
 
-      {/* Header */}
-      <div className="bg-surface border border-border rounded-xl p-6 mb-6">
-        <div className="flex items-start gap-5">
-          {/* Logo/Initial */}
-          <div className="w-14 h-14 rounded-lg bg-surface-2 border border-border/50 flex items-center justify-center text-xl font-bold text-text-muted shrink-0">
-            {project.name.charAt(0)}
-          </div>
+      {/* ── Hero Header ── */}
+      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
+        {/* Accent gradient bar at top */}
+        <div
+          className="h-1"
+          style={{
+            background: aiTypeColor
+              ? `linear-gradient(90deg, ${aiTypeColor}, ${aiTypeColor}66, transparent)`
+              : primarySegment?.color
+                ? `linear-gradient(90deg, ${primarySegment.color}, ${primarySegment.color}66, transparent)`
+                : 'linear-gradient(90deg, #0d9488, transparent)',
+          }}
+        />
 
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h1 className="text-2xl font-semibold text-text-primary">
-                  {project.name}
-                </h1>
-                <p className="text-text-secondary mt-1">{project.tagline}</p>
+        <div className="p-6 sm:p-8">
+          {/* Status banner for acquired/defunct */}
+          {(isAcquired || isDefunct) && (
+            <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium mb-4 ${
+              isDefunct
+                ? 'bg-negative/10 text-negative border border-negative/20'
+                : 'bg-warning/10 text-warning border border-warning/20'
+            }`}>
+              <Building2 className="w-3.5 h-3.5" />
+              {isDefunct
+                ? 'No Longer Operating'
+                : `Acquired by ${project.acquirer || 'Unknown'}`}
+              {project.acquired_date && ` (${project.acquired_date})`}
+            </div>
+          )}
+
+          <div className="flex items-start gap-5">
+            {/* Logo/Initial */}
+            <CompanyLogo project={project} size="lg" />
+
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                <div>
+                  <h1 className="text-2xl sm:text-3xl font-semibold text-text-primary tracking-tight">
+                    {project.name}
+                  </h1>
+                  <p className="text-text-secondary mt-1.5 text-base leading-relaxed max-w-2xl">
+                    {project.tagline}
+                  </p>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-2 shrink-0">
+                  {project.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary text-sm gap-1.5"
+                    >
+                      <Globe className="w-3.5 h-3.5" />
+                      Website
+                    </a>
+                  )}
+                  <Link
+                    href={`/submit/update/${project.slug}`}
+                    className="btn-secondary text-sm gap-1.5"
+                  >
+                    <Pencil className="w-3.5 h-3.5" />
+                    Update
+                  </Link>
+                  {project.twitter && (
+                    <a href={project.twitter} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
+                      <Twitter className="w-4 h-4" />
+                    </a>
+                  )}
+                  {project.linkedin && (
+                    <a href={project.linkedin} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
               </div>
 
-              {/* Action Links */}
-              <div className="flex gap-2 shrink-0">
-                {project.website && (
+              {/* Status Pills */}
+              <div className="flex flex-wrap items-center gap-2 mt-4">
+                {project.company_type && (
+                  <span
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border"
+                    style={{
+                      borderColor: `${companyTypeColor}33`,
+                      background: `${companyTypeColor}0d`,
+                      color: companyTypeColor || undefined,
+                    }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ background: companyTypeColor || undefined }} />
+                    {COMPANY_TYPE_LABELS[project.company_type as CompanyType]}
+                  </span>
+                )}
+                {project.funding_stage && (
+                  <span
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border"
+                    style={{
+                      borderColor: `${fundingStageColor}33`,
+                      background: `${fundingStageColor}0d`,
+                      color: fundingStageColor || undefined,
+                    }}
+                  >
+                    {FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]}
+                  </span>
+                )}
+                {project.ai_type && (
+                  <span
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border"
+                    style={{
+                      borderColor: `${aiTypeColor}33`,
+                      background: `${aiTypeColor}0d`,
+                      color: aiTypeColor || undefined,
+                    }}
+                  >
+                    <Cpu className="w-3 h-3" />
+                    {aiTypeLabel}
+                  </span>
+                )}
+                {project.region && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-border bg-surface-2/50 text-text-muted">
+                    {REGION_LABELS[project.region]}
+                  </span>
+                )}
+                {project.crypto && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-purple-500/30 bg-purple-500/10 text-purple-400">
+                    Web3
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Metrics Strip ── */}
+      {metrics.length > 0 && (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border rounded-xl overflow-hidden mb-6">
+          {metrics.map((m, i) => (
+            <div
+              key={i}
+              className="bg-surface px-4 py-3.5 flex flex-col gap-1"
+            >
+              <span className="text-2xs uppercase tracking-wider text-text-faint flex items-center gap-1.5">
+                {m.icon}
+                {m.label}
+              </span>
+              <span className="text-sm font-semibold text-text-primary tabular-nums">
+                {m.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* ── Main Content Grid ── */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        {/* Summary - takes 2 cols */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* About */}
+          {project.summary && (
+            <div className="bg-surface border border-border rounded-xl p-6">
+              <h2 className="label-refined mb-3">About</h2>
+              <p className="text-text-secondary leading-relaxed text-[0.9375rem]">
+                {project.summary}
+              </p>
+            </div>
+          )}
+
+          {/* Founders */}
+          {hasFounders && (
+            <div className="bg-surface border border-border rounded-xl p-6">
+              <h2 className="label-refined mb-4">
+                {project.founders!.length === 1 ? 'Founder' : 'Founders'}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {project.founders!.map((founder, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-surface-2/50 border border-border/50"
+                  >
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold shrink-0"
+                      style={{
+                        background: `linear-gradient(135deg, ${aiTypeColor || '#0d9488'}33, ${aiTypeColor || '#0d9488'}11)`,
+                        color: aiTypeColor || '#0d9488',
+                      }}
+                    >
+                      {founder.name.charAt(0)}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-text-primary truncate">
+                        {founder.name}
+                      </p>
+                      {founder.title && (
+                        <p className="text-xs text-text-muted truncate">{founder.title}</p>
+                      )}
+                    </div>
+                    {founder.linkedin && (
+                      <a
+                        href={founder.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto shrink-0 text-text-faint hover:text-accent transition-colors"
+                      >
+                        <Linkedin className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Customers */}
+          {hasCustomers && (
+            <div className="bg-surface border border-border rounded-xl p-6">
+              <h2 className="label-refined mb-3">Key Customers & Partners</h2>
+              <div className="flex flex-wrap gap-2">
+                {project.customers!.map((customer, i) => (
+                  <span
+                    key={i}
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-surface-2 border border-border/50 text-sm text-text-secondary"
+                  >
+                    {customer}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Sidebar - takes 1 col */}
+        <div className="space-y-6">
+          {/* AI Technology Card */}
+          {project.ai_type && (
+            <div className="bg-surface border border-border rounded-xl p-6">
+              <h2 className="label-refined mb-3">AI Technology</h2>
+              <div className="flex items-start gap-3">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                  style={{
+                    background: `${aiTypeColor}1a`,
+                    border: `1px solid ${aiTypeColor}33`,
+                  }}
+                >
+                  <Cpu className="w-5 h-5" style={{ color: aiTypeColor || undefined }} />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-text-primary">{aiTypeLabel}</p>
+                  <p className="text-xs text-text-muted mt-1 leading-relaxed">{aiTypeDesc}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Classification */}
+          <div className="bg-surface border border-border rounded-xl p-6">
+            <h2 className="label-refined mb-4">Classification</h2>
+            <div className="space-y-4">
+              {allSegments.length > 0 && (
+                <div>
+                  <p className="text-2xs uppercase tracking-wider text-text-faint mb-2">Market Segments</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {allSegments.map(
+                      (segment) =>
+                        segment && (
+                          <Link
+                            key={segment.slug}
+                            href={`/directory?segment=${segment.slug}`}
+                            className="group inline-flex items-center gap-1.5 text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary hover:text-text-primary transition-colors border border-transparent hover:border-border"
+                          >
+                            <span
+                              className="w-2 h-2 rounded-full shrink-0"
+                              style={{ background: segment.color }}
+                            />
+                            {segment.name}
+                          </Link>
+                        )
+                    )}
+                  </div>
+                </div>
+              )}
+              {allLayers.length > 0 && (
+                <div>
+                  <p className="text-2xs uppercase tracking-wider text-text-faint mb-2">Tech Stack Layers</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {allLayers.map(
+                      (layer) =>
+                        layer && (
+                          <Link
+                            key={layer.slug}
+                            href={`/directory?layer=${layer.slug}`}
+                            className="group inline-flex items-center gap-1.5 text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary hover:text-text-primary transition-colors border border-transparent hover:border-border"
+                          >
+                            <span
+                              className="w-2 h-2 rounded-full shrink-0"
+                              style={{ background: layer.color }}
+                            />
+                            {layer.name}
+                          </Link>
+                        )
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Quick Facts */}
+          <div className="bg-surface border border-border rounded-xl p-6">
+            <h2 className="label-refined mb-4">Details</h2>
+            <div className="space-y-3">
+              {project.last_funding_date && (
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-text-muted">Last Funding</span>
+                  <span className="text-text-primary font-medium tabular-nums">{project.last_funding_date}</span>
+                </div>
+              )}
+              {project.stage && (
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-text-muted">Funding Round</span>
+                  <span className="text-text-primary font-medium">{formatStage(project.stage)}</span>
+                </div>
+              )}
+              {project.founded && (
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-text-muted">Age</span>
+                  <span className="text-text-primary font-medium tabular-nums">
+                    {new Date().getFullYear() - project.founded} years
+                  </span>
+                </div>
+              )}
+              {project.hq_country && (
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-text-muted">Country</span>
+                  <span className="text-text-primary font-medium">
+                    {getCountryFlag(project.hq_country)} {getCountryName(project.hq_country)}
+                  </span>
+                </div>
+              )}
+              {project.website && (
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-text-muted">Website</span>
                   <a
                     href={project.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-muted transition-colors"
+                    className="text-accent hover:text-accent-hover transition-colors truncate max-w-[180px] inline-flex items-center gap-1"
                   >
-                    <Globe className="w-3.5 h-3.5" />
-                    Website
+                    {project.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+                    <ExternalLink className="w-3 h-3 shrink-0" />
                   </a>
-                )}
-                <Link
-                  href={`/submit/update/${project.slug}`}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-2 border border-border text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-3 hover:text-text-primary transition-colors"
-                >
-                  <Pencil className="w-3.5 h-3.5" />
-                  Request Update
-                </Link>
-                {project.twitter && (
-                  <a
-                    href={project.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-8 h-8 bg-surface-2 border border-border text-text-muted rounded-lg hover:text-text-primary transition-colors"
-                  >
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                )}
-                {project.linkedin && (
-                  <a
-                    href={project.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-8 h-8 bg-surface-2 border border-border text-text-muted rounded-lg hover:text-text-primary transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                )}
-              </div>
-            </div>
-
-            {/* Quick Info Row */}
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm">
-              {project.hq_city && project.hq_country && (
-                <span className="text-text-muted">
-                  {project.hq_city}, {project.hq_country}
-                </span>
-              )}
-              {project.founded && (
-                <span className="text-text-muted">
-                  Founded {project.founded}
-                </span>
-              )}
-              {project.funding && (
-                <span className="text-text-muted tabular-nums">
-                  {formatFunding(project.funding)} raised
-                </span>
-              )}
-              {project.stage && (
-                <span className="px-2 py-0.5 rounded bg-surface-2 text-text-secondary text-xs">
-                  {formatStage(project.stage)}
-                </span>
+                </div>
               )}
             </div>
           </div>
+
+          {/* Team (legacy field) */}
+          {project.team && project.team.length > 0 && (
+            <div className="bg-surface border border-border rounded-xl p-6">
+              <h2 className="label-refined mb-4">Team</h2>
+              <div className="space-y-2">
+                {project.team.map((member, i) => (
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
+                    <span className="font-medium text-text-primary text-sm">{member.name}</span>
+                    <span className="text-xs text-text-muted">{member.role}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Summary */}
-      {project.summary && (
-        <div className="bg-surface border border-border rounded-xl p-6 mb-6">
-          <p className="text-text-secondary leading-relaxed">
-            {project.summary}
-          </p>
-        </div>
-      )}
-
-      {/* Info Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Classification */}
-        <div className="bg-surface border border-border rounded-xl p-6">
-          <h2 className="label-refined mb-4">Classification</h2>
-          <div className="space-y-3">
-            {allSegments.length > 0 && (
-              <div>
-                <p className="text-xs text-text-muted mb-2">Market Segments</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {allSegments.map(
-                    (segment) =>
-                      segment && (
-                        <span
-                          key={segment.slug}
-                          className="text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary"
-                        >
-                          {segment.name}
-                        </span>
-                      )
-                  )}
-                </div>
-              </div>
-            )}
-            {allLayers.length > 0 && (
-              <div>
-                <p className="text-xs text-text-muted mb-2">Tech Stack</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {allLayers.map(
-                    (layer) =>
-                      layer && (
-                        <span
-                          key={layer.slug}
-                          className="text-sm px-2.5 py-1 rounded-md bg-surface-2 text-text-secondary"
-                        >
-                          {layer.name}
-                        </span>
-                      )
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Team */}
-        {project.team && project.team.length > 0 && (
-          <div className="bg-surface border border-border rounded-xl p-6">
-            <h2 className="label-refined mb-4">Team</h2>
-            <div className="space-y-2">
-              {project.team.map((member, i) => (
-                <div key={i} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
-                  <span className="font-medium text-text-primary text-sm">{member.name}</span>
-                  <span className="text-sm text-text-muted">{member.role}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Similar Companies */}
+      {/* ── Similar Companies ── */}
       {similarProjects.length > 0 && (
-        <div className="mt-10 pt-8 border-t border-border/30">
+        <div className="mt-8 pt-8 border-t border-border/30">
           <div className="flex items-baseline justify-between mb-5">
             <h2 className="text-lg font-medium text-text-primary">Related Companies</h2>
-            <span className="text-sm text-text-muted">{similarProjects.length} similar</span>
+            <Link
+              href={`/directory?segment=${project.segment}`}
+              className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
+            >
+              View all in {primarySegment?.name}
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {similarProjects.map((p) => {
               const seg = getSegment(p.segment);
               const lay = getLayer(p.layer);
+              const pAiColor = p.ai_type ? AI_TYPE_COLORS[p.ai_type as AIType] : null;
               return (
                 <Link
                   key={p.slug}
                   href={`/p/${p.slug}`}
-                  className="group bg-surface border border-border rounded-lg p-4 hover:border-accent/30 transition-colors"
+                  className="group bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-all hover:shadow-soft"
                 >
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
-                    {p.name}
-                  </p>
-                  <p className="text-xs text-text-muted mt-1 line-clamp-1">
-                    {p.tagline}
-                  </p>
-                  <div className="flex gap-1.5 mt-3">
+                  <div className="flex items-start gap-3">
+                    <CompanyLogo project={p} size="sm" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                        {p.name}
+                      </p>
+                      <p className="text-xs text-text-muted mt-0.5 line-clamp-2 leading-relaxed">
+                        {p.tagline}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-3 flex-wrap">
                     {seg && (
-                      <span className="text-xs px-2 py-0.5 rounded bg-surface-2 text-text-muted">
+                      <span
+                        className="inline-flex items-center gap-1 text-2xs px-2 py-0.5 rounded bg-surface-2 text-text-muted"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: seg.color }} />
                         {seg.name}
                       </span>
                     )}
                     {lay && (
-                      <span className="text-xs px-2 py-0.5 rounded bg-surface-2 text-text-muted">
+                      <span className="text-2xs px-2 py-0.5 rounded bg-surface-2 text-text-muted">
                         {lay.name}
+                      </span>
+                    )}
+                    {p.funding && p.funding > 0 && (
+                      <span className="text-2xs text-text-faint ml-auto tabular-nums">
+                        {formatFunding(p.funding)}
                       </span>
                     )}
                   </div>

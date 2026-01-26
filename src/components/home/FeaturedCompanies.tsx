@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { Project, Segment, Layer, FUNDING_STAGE_LABELS, FundingStage } from '@/types';
 import { formatFunding } from '@/lib/data';
+import CompanyLogo from '@/components/CompanyLogo';
 
 interface FeaturedCompanyCardProps {
   project: Project;
@@ -18,10 +19,7 @@ function FeaturedCompanyCard({ project, segment, layer, index }: FeaturedCompany
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-4">
-          {/* Logo placeholder */}
-          <div className="w-12 h-12 rounded-lg bg-surface-2 border border-border/50 flex items-center justify-center text-lg font-bold text-text-muted shrink-0">
-            {project.name.charAt(0)}
-          </div>
+          <CompanyLogo project={project} size="md" />
           <div>
             <Link
               href={`/p/${project.slug}`}

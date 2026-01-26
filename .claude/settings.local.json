@@ -5,7 +5,10 @@
       "WebSearch",
       "Bash(node:*)",
       "Bash(npm run build:*)",
-      "WebFetch(domain:tracxn.com)"
+      "WebFetch(domain:tracxn.com)",
+      "WebFetch(domain:clearbit.com)",
+      "WebFetch(domain:logo.dev)",
+      "WebFetch(domain:docs.logo.dev)"
     ]
   }
 }

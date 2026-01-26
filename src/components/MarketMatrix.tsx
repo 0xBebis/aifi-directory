@@ -29,28 +29,17 @@ export default function MarketMatrix({
   activeAiTypes = [],
 }: MarketMatrixProps) {
   const [selectedCell, setSelectedCell] = useState<string | null>(null);
-  const [selectedSegments, setSelectedSegments] = useState<Set<string>>(new Set(activeSegments));
-  const [selectedLayers, setSelectedLayers] = useState<Set<string>>(new Set(activeLayers));
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
-  const [selectedAiTypes, setSelectedAiTypes] = useState<Set<AIType>>(new Set(activeAiTypes));
   const [mounted, setMounted] = useState(false);
+
+  // Derive selection sets from props (single source of truth: parent state)
+  const selectedSegments = useMemo(() => new Set(activeSegments), [activeSegments]);
+  const selectedLayers = useMemo(() => new Set(activeLayers), [activeLayers]);
+  const selectedAiTypes = useMemo(() => new Set(activeAiTypes), [activeAiTypes]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  // Sync external props
-  useEffect(() => {
-    setSelectedSegments(new Set(activeSegments));
-  }, [activeSegments]);
-
-  useEffect(() => {
-    setSelectedLayers(new Set(activeLayers));
-  }, [activeLayers]);
-
-  useEffect(() => {
-    setSelectedAiTypes(new Set(activeAiTypes));
-  }, [activeAiTypes]);
 
   // Filter projects by selected AI types
   const filteredProjects = useMemo(() => {
@@ -169,72 +158,53 @@ export default function MarketMatrix({
 
   const getIntensity = (count: number) => count === 0 ? 0 : Math.pow(count / maxCount, 0.6);
 
-  // Notify parent of filter changes
-  const notifyFilterChange = (segs: Set<string>, lays: Set<string>, ais: Set<AIType>) => {
-    onFilterChange?.(Array.from(segs), Array.from(lays), Array.from(ais));
-  };
-
   const handleSegmentClick = (segmentSlug: string) => {
     setSelectedCell(null);
-    setSelectedSegments(prev => {
-      const next = new Set(prev);
-      if (next.has(segmentSlug)) {
-        next.delete(segmentSlug);
-      } else {
-        next.add(segmentSlug);
-      }
-      notifyFilterChange(next, selectedLayers, selectedAiTypes);
-      return next;
-    });
+    const next = new Set(selectedSegments);
+    if (next.has(segmentSlug)) {
+      next.delete(segmentSlug);
+    } else {
+      next.add(segmentSlug);
+    }
+    onFilterChange?.(Array.from(next), Array.from(selectedLayers), Array.from(selectedAiTypes));
   };
 
   const handleLayerClick = (layerSlug: string) => {
     setSelectedCell(null);
-    setSelectedLayers(prev => {
-      const next = new Set(prev);
-      if (next.has(layerSlug)) {
-        next.delete(layerSlug);
-      } else {
-        next.add(layerSlug);
-      }
-      notifyFilterChange(selectedSegments, next, selectedAiTypes);
-      return next;
-    });
+    const next = new Set(selectedLayers);
+    if (next.has(layerSlug)) {
+      next.delete(layerSlug);
+    } else {
+      next.add(layerSlug);
+    }
+    onFilterChange?.(Array.from(selectedSegments), Array.from(next), Array.from(selectedAiTypes));
   };
 
   const handleAiTypeClick = (aiType: AIType) => {
-    setSelectedAiTypes(prev => {
-      const next = new Set(prev);
-      if (next.has(aiType)) {
-        next.delete(aiType);
-      } else {
-        next.add(aiType);
-      }
-      notifyFilterChange(selectedSegments, selectedLayers, next);
-      return next;
-    });
+    const next = new Set(selectedAiTypes);
+    if (next.has(aiType)) {
+      next.delete(aiType);
+    } else {
+      next.add(aiType);
+    }
+    onFilterChange?.(Array.from(selectedSegments), Array.from(selectedLayers), Array.from(next));
   };
 
   const handleCellClick = (key: string, count: number) => {
     if (count === 0) return;
     const [segSlug, laySlug] = key.split('-');
-    setSelectedSegments(new Set());
-    setSelectedLayers(new Set());
     if (selectedCell === key) {
       setSelectedCell(null);
-      notifyFilterChange(new Set(), new Set(), selectedAiTypes);
+      onFilterChange?.([], [], Array.from(selectedAiTypes));
     } else {
       setSelectedCell(key);
-      notifyFilterChange(new Set([segSlug]), new Set([laySlug]), selectedAiTypes);
+      onFilterChange?.([segSlug], [laySlug], Array.from(selectedAiTypes));
     }
   };
 
   const clearSelection = () => {
     setSelectedCell(null);
-    setSelectedSegments(new Set());
-    setSelectedLayers(new Set());
-    setSelectedAiTypes(new Set());
-    notifyFilterChange(new Set(), new Set(), new Set());
+    onFilterChange?.([], [], []);
   };
 
   const hasSelection = selectedCell || selectedSegments.size > 0 || selectedLayers.size > 0 || selectedAiTypes.size > 0;
@@ -408,7 +378,7 @@ export default function MarketMatrix({
               cell={cellData[selectedCell]}
               onClose={() => {
                 setSelectedCell(null);
-                notifyFilterChange(new Set(), new Set(), selectedAiTypes);
+                onFilterChange?.([], [], Array.from(selectedAiTypes));
               }}
             />
           )}
@@ -422,8 +392,7 @@ export default function MarketMatrix({
 
           <button
             onClick={() => {
-              setSelectedAiTypes(new Set());
-              notifyFilterChange(selectedSegments, selectedLayers, new Set());
+              onFilterChange?.(Array.from(selectedSegments), Array.from(selectedLayers), []);
             }}
             className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs font-medium transition-all ${
               selectedAiTypes.size === 0

@@ -1,0 +1,3581 @@
+{
+  "meta": {
+    "started": "2026-01-26T16:55:40.652Z",
+    "lastRun": "2026-01-26T16:55:40.652Z",
+    "completed": 362,
+    "failed": 84,
+    "skipped": 0,
+    "overridden": 0,
+    "finishedAt": "2026-01-26T16:59:41.781Z"
+  },
+  "companies": {
+    "feedzai": {
+      "source": "google-favicon",
+      "filename": "feedzai.png",
+      "fileSize": 744,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:41.141Z"
+    },
+    "sardine": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "hawk-ai": {
+      "source": "google-favicon",
+      "filename": "hawk-ai.png",
+      "fileSize": 1674,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:41.985Z"
+    },
+    "resistant-ai": {
+      "source": "google-favicon",
+      "filename": "resistant-ai.png",
+      "fileSize": 1454,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:42.435Z"
+    },
+    "flagright": {
+      "source": "google-favicon",
+      "filename": "flagright.png",
+      "fileSize": 2322,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:42.872Z"
+    },
+    "tookitaki": {
+      "source": "google-favicon",
+      "filename": "tookitaki.png",
+      "fileSize": 2144,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:43.210Z"
+    },
+    "alloy": {
+      "source": "google-favicon",
+      "filename": "alloy.png",
+      "fileSize": 1889,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:43.565Z"
+    },
+    "unit21": {
+      "source": "google-favicon",
+      "filename": "unit21.png",
+      "fileSize": 987,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:43.910Z"
+    },
+    "trm-labs": {
+      "source": "google-favicon",
+      "filename": "trm-labs.png",
+      "fileSize": 1282,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:44.249Z"
+    },
+    "chainalysis": {
+      "source": "google-favicon",
+      "filename": "chainalysis.png",
+      "fileSize": 3365,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:44.593Z"
+    },
+    "socure": {
+      "source": "google-favicon",
+      "filename": "socure.png",
+      "fileSize": 742,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:44.934Z"
+    },
+    "idenfy": {
+      "source": "google-favicon",
+      "filename": "idenfy.png",
+      "fileSize": 1847,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:45.279Z"
+    },
+    "darwinium": {
+      "source": "google-favicon",
+      "filename": "darwinium.png",
+      "fileSize": 2614,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:45.638Z"
+    },
+    "greenlite": {
+      "source": "google-favicon",
+      "filename": "greenlite.png",
+      "fileSize": 924,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:45.996Z"
+    },
+    "upstart": {
+      "source": "google-favicon",
+      "filename": "upstart.png",
+      "fileSize": 1492,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:46.336Z"
+    },
+    "zest-ai": {
+      "source": "google-favicon",
+      "filename": "zest-ai.png",
+      "fileSize": 2280,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:46.678Z"
+    },
+    "pagaya": {
+      "source": "google-favicon",
+      "filename": "pagaya.png",
+      "fileSize": 2438,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:47.022Z"
+    },
+    "scienaptic-ai": {
+      "source": "google-favicon",
+      "filename": "scienaptic-ai.png",
+      "fileSize": 1522,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:47.411Z"
+    },
+    "underwriteai": {
+      "source": "google-favicon",
+      "filename": "underwriteai.png",
+      "fileSize": 1099,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:47.876Z"
+    },
+    "finbotsai": {
+      "source": "google-favicon",
+      "filename": "finbotsai.png",
+      "fileSize": 2400,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:48.245Z"
+    },
+    "kaaj": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "lendbuzz": {
+      "source": "google-favicon",
+      "filename": "lendbuzz.png",
+      "fileSize": 642,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:50.114Z"
+    },
+    "credolab": {
+      "source": "google-favicon",
+      "filename": "credolab.png",
+      "fileSize": 1272,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:50.502Z"
+    },
+    "ocrolus": {
+      "source": "google-favicon",
+      "filename": "ocrolus.png",
+      "fileSize": 2114,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:50.846Z"
+    },
+    "stripe": {
+      "source": "google-favicon",
+      "filename": "stripe.png",
+      "fileSize": 574,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:51.218Z"
+    },
+    "ramp": {
+      "source": "google-favicon",
+      "filename": "ramp.png",
+      "fileSize": 2113,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:51.546Z"
+    },
+    "brex": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "natural": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "catena-labs": {
+      "source": "google-favicon",
+      "filename": "catena-labs.png",
+      "fileSize": 1841,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:53.847Z"
+    },
+    "betterment": {
+      "source": "google-favicon",
+      "filename": "betterment.png",
+      "fileSize": 963,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:54.190Z"
+    },
+    "wealthfront": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "quantconnect": {
+      "source": "google-favicon",
+      "filename": "quantconnect.png",
+      "fileSize": 630,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:54.878Z"
+    },
+    "composer": {
+      "source": "google-favicon",
+      "filename": "composer.png",
+      "fileSize": 774,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:55.209Z"
+    },
+    "trade-ideas": {
+      "source": "google-favicon",
+      "filename": "trade-ideas.png",
+      "fileSize": 403,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:55.581Z"
+    },
+    "portfoliopilot": {
+      "source": "google-favicon",
+      "filename": "portfoliopilot.png",
+      "fileSize": 1316,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:55.923Z"
+    },
+    "tegus": {
+      "source": "google-favicon",
+      "filename": "tegus.png",
+      "fileSize": 781,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:56.343Z"
+    },
+    "alphasense": {
+      "source": "google-favicon",
+      "filename": "alphasense.png",
+      "fileSize": 844,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:56.701Z"
+    },
+    "sentieo-now-alphasense": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "trumid": {
+      "source": "google-favicon",
+      "filename": "trumid.png",
+      "fileSize": 401,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:58.561Z"
+    },
+    "tickeron": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "trendspider": {
+      "source": "google-favicon",
+      "filename": "trendspider.png",
+      "fileSize": 4375,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:59.257Z"
+    },
+    "alphaai": {
+      "source": "google-favicon",
+      "filename": "alphaai.png",
+      "fileSize": 2887,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:55:59.627Z"
+    },
+    "lemonade": {
+      "source": "google-favicon",
+      "filename": "lemonade.png",
+      "fileSize": 821,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:00.035Z"
+    },
+    "shift-technology": {
+      "source": "google-favicon",
+      "filename": "shift-technology.png",
+      "fileSize": 412,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:00.389Z"
+    },
+    "akur8": {
+      "source": "google-favicon",
+      "filename": "akur8.png",
+      "fileSize": 1328,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:00.776Z"
+    },
+    "corvus-travelers": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "next-insurance": {
+      "source": "google-favicon",
+      "filename": "next-insurance.png",
+      "fileSize": 1208,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:01.564Z"
+    },
+    "coterie-insurance": {
+      "source": "google-favicon",
+      "filename": "coterie-insurance.png",
+      "fileSize": 660,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:01.906Z"
+    },
+    "coalition": {
+      "source": "google-favicon",
+      "filename": "coalition.png",
+      "fileSize": 640,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:02.293Z"
+    },
+    "hippo": {
+      "source": "google-favicon",
+      "filename": "hippo.png",
+      "fileSize": 709,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:02.636Z"
+    },
+    "bestow": {
+      "source": "google-favicon",
+      "filename": "bestow.png",
+      "fileSize": 1053,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:02.978Z"
+    },
+    "marshmallow": {
+      "source": "google-favicon",
+      "filename": "marshmallow.png",
+      "fileSize": 894,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:03.337Z"
+    },
+    "pibitai": {
+      "source": "google-favicon",
+      "filename": "pibitai.png",
+      "fileSize": 2166,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:03.695Z"
+    },
+    "corgi-insurance": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "sixfold": {
+      "source": "google-favicon",
+      "filename": "sixfold.png",
+      "fileSize": 2025,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:05.573Z"
+    },
+    "puzzle": {
+      "source": "google-favicon",
+      "filename": "puzzle.png",
+      "fileSize": 1353,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:05.964Z"
+    },
+    "pilot": {
+      "source": "google-favicon",
+      "filename": "pilot.png",
+      "fileSize": 614,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:06.318Z"
+    },
+    "zeni": {
+      "source": "google-favicon",
+      "filename": "zeni.png",
+      "fileSize": 1370,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:06.675Z"
+    },
+    "taxfix": {
+      "source": "google-favicon",
+      "filename": "taxfix.png",
+      "fileSize": 1237,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:07.064Z"
+    },
+    "pennylane": {
+      "source": "google-favicon",
+      "filename": "pennylane.png",
+      "fileSize": 2326,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:07.407Z"
+    },
+    "blue-dot": {
+      "source": "google-favicon",
+      "filename": "blue-dot.png",
+      "fileSize": 1397,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:07.811Z"
+    },
+    "taxgpt": {
+      "source": "google-favicon",
+      "filename": "taxgpt.png",
+      "fileSize": 1330,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:08.151Z"
+    },
+    "uplinq": {
+      "source": "google-favicon",
+      "filename": "uplinq.png",
+      "fileSize": 608,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:08.506Z"
+    },
+    "complianceai": {
+      "source": "google-favicon",
+      "filename": "complianceai.png",
+      "fileSize": 1933,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:08.849Z"
+    },
+    "finrege": {
+      "source": "google-favicon",
+      "filename": "finrege.png",
+      "fileSize": 1002,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:09.205Z"
+    },
+    "leo-regtech": {
+      "source": "google-favicon",
+      "filename": "leo-regtech.png",
+      "fileSize": 1244,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:09.578Z"
+    },
+    "saifr-fidelity": {
+      "source": "google-favicon",
+      "filename": "saifr-fidelity.png",
+      "fileSize": 660,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:09.936Z"
+    },
+    "ascent-regtech": {
+      "source": "google-favicon",
+      "filename": "ascent-regtech.png",
+      "fileSize": 1474,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:10.343Z"
+    },
+    "ayasdi": {
+      "source": "google-favicon",
+      "filename": "ayasdi.png",
+      "fileSize": 2080,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:10.805Z"
+    },
+    "revolut": {
+      "source": "google-favicon",
+      "filename": "revolut.png",
+      "fileSize": 859,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:11.164Z"
+    },
+    "nubank": {
+      "source": "google-favicon",
+      "filename": "nubank.png",
+      "fileSize": 2554,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:11.522Z"
+    },
+    "monzo": {
+      "source": "google-favicon",
+      "filename": "monzo.png",
+      "fileSize": 1775,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:11.877Z"
+    },
+    "kasisto": {
+      "source": "google-favicon",
+      "filename": "kasisto.png",
+      "fileSize": 938,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:12.235Z"
+    },
+    "mx": {
+      "source": "google-favicon",
+      "filename": "mx.png",
+      "fileSize": 1253,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:12.582Z"
+    },
+    "virtuals-protocol-virtual": {
+      "source": "google-favicon",
+      "filename": "virtuals-protocol-virtual.png",
+      "fileSize": 483,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:12.922Z"
+    },
+    "aixbt": {
+      "source": "google-favicon",
+      "filename": "aixbt.png",
+      "fileSize": 1099,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:13.262Z"
+    },
+    "vaderai": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "spectral-spec": {
+      "source": "google-favicon",
+      "filename": "spectral-spec.png",
+      "fileSize": 1412,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:15.310Z"
+    },
+    "bittensor-tao": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "targon-compute-sn4": {
+      "source": "google-favicon",
+      "filename": "targon-compute-sn4.png",
+      "fileSize": 1230,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:16.320Z"
+    },
+    "hippius": {
+      "source": "google-favicon",
+      "filename": "hippius.png",
+      "fileSize": 3184,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:16.787Z"
+    },
+    "general-tao-ventures": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "yuma": {
+      "source": "google-favicon",
+      "filename": "yuma.png",
+      "fileSize": 559,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:18.807Z"
+    },
+    "ai16zelizaos": {
+      "source": "google-favicon",
+      "filename": "ai16zelizaos.png",
+      "fileSize": 2920,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:19.276Z"
+    },
+    "eliza-framework": {
+      "source": "google-favicon",
+      "filename": "eliza-framework.png",
+      "fileSize": 519,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:19.666Z"
+    },
+    "fetchai-fet": {
+      "source": "google-favicon",
+      "filename": "fetchai-fet.png",
+      "fileSize": 4271,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:20.089Z"
+    },
+    "singularitynet-agixfet": {
+      "source": "google-favicon",
+      "filename": "singularitynet-agixfet.png",
+      "fileSize": 1802,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:20.460Z"
+    },
+    "ocean-protocol-oceanfet": {
+      "source": "google-favicon",
+      "filename": "ocean-protocol-oceanfet.png",
+      "fileSize": 2428,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:20.830Z"
+    },
+    "render-render": {
+      "source": "google-favicon",
+      "filename": "render-render.png",
+      "fileSize": 1830,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:21.235Z"
+    },
+    "autonolas-olas": {
+      "source": "google-favicon",
+      "filename": "autonolas-olas.png",
+      "fileSize": 1504,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:21.639Z"
+    },
+    "chaingpt": {
+      "source": "google-favicon",
+      "filename": "chaingpt.png",
+      "fileSize": 2132,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:22.012Z"
+    },
+    "paal-ai": {
+      "source": "google-favicon",
+      "filename": "paal-ai.png",
+      "fileSize": 3642,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:22.543Z"
+    },
+    "arc-ai-rig-complex": {
+      "source": "google-favicon",
+      "filename": "arc-ai-rig-complex.png",
+      "fileSize": 1000,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:22.933Z"
+    },
+    "openai": {
+      "source": "google-favicon",
+      "filename": "openai.png",
+      "fileSize": 1829,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:23.276Z"
+    },
+    "anthropic": {
+      "source": "google-favicon",
+      "filename": "anthropic.png",
+      "fileSize": 948,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:23.618Z"
+    },
+    "google-deepmind": {
+      "source": "google-favicon",
+      "filename": "google-deepmind.png",
+      "fileSize": 1456,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:23.977Z"
+    },
+    "bloomberg-ai": {
+      "source": "google-favicon",
+      "filename": "bloomberg-ai.png",
+      "fileSize": 2412,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:24.307Z"
+    },
+    "refinitiv-lseg": {
+      "source": "google-favicon",
+      "filename": "refinitiv-lseg.png",
+      "fileSize": 401,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:24.650Z"
+    },
+    "affirm": {
+      "source": "google-favicon",
+      "filename": "affirm.png",
+      "fileSize": 2808,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:24.992Z"
+    },
+    "klarna": {
+      "source": "google-favicon",
+      "filename": "klarna.png",
+      "fileSize": 736,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:25.317Z"
+    },
+    "harvey": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "hebbia": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "auquan": {
+      "source": "google-favicon",
+      "filename": "auquan.png",
+      "fileSize": 1807,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:26.376Z"
+    },
+    "fira": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "aumni-jpmorgan": {
+      "source": "google-favicon",
+      "filename": "aumni-jpmorgan.png",
+      "fileSize": 1088,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:28.461Z"
+    },
+    "highradius": {
+      "source": "google-favicon",
+      "filename": "highradius.png",
+      "fileSize": 401,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:28.808Z"
+    },
+    "kyriba": {
+      "source": "google-favicon",
+      "filename": "kyriba.png",
+      "fileSize": 3010,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:29.152Z"
+    },
+    "trovata": {
+      "source": "google-favicon",
+      "filename": "trovata.png",
+      "fileSize": 1671,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:29.492Z"
+    },
+    "tesorio": {
+      "source": "google-favicon",
+      "filename": "tesorio.png",
+      "fileSize": 1168,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:29.882Z"
+    },
+    "campfire": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "xelix": {
+      "source": "google-favicon",
+      "filename": "xelix.png",
+      "fileSize": 1386,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:31.840Z"
+    },
+    "borderlessalberni": {
+      "source": "google-favicon",
+      "filename": "borderlessalberni.png",
+      "fileSize": 1963,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:32.260Z"
+    },
+    "niural": {
+      "source": "google-favicon",
+      "filename": "niural.png",
+      "fileSize": 1914,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:32.634Z"
+    },
+    "cleo": {
+      "source": "google-favicon",
+      "filename": "cleo.png",
+      "fileSize": 1120,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:33.009Z"
+    },
+    "albert": {
+      "source": "google-favicon",
+      "filename": "albert.png",
+      "fileSize": 1155,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:33.351Z"
+    },
+    "copilot-money": {
+      "source": "google-favicon",
+      "filename": "copilot-money.png",
+      "fileSize": 1202,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:33.692Z"
+    },
+    "earnest-research": {
+      "source": "google-favicon",
+      "filename": "earnest-research.png",
+      "fileSize": 600,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:34.067Z"
+    },
+    "thinknum": {
+      "source": "google-favicon",
+      "filename": "thinknum.png",
+      "fileSize": 940,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:34.409Z"
+    },
+    "yipitdata": {
+      "source": "google-favicon",
+      "filename": "yipitdata.png",
+      "fileSize": 998,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:34.752Z"
+    },
+    "quandl-nasdaq": {
+      "source": "google-favicon",
+      "filename": "quandl-nasdaq.png",
+      "fileSize": 648,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:35.095Z"
+    },
+    "ribbon-home": {
+      "source": "google-favicon",
+      "filename": "ribbon-home.png",
+      "fileSize": 1072,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:35.451Z"
+    },
+    "cape-analytics": {
+      "source": "google-favicon",
+      "filename": "cape-analytics.png",
+      "fileSize": 1253,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:35.794Z"
+    },
+    "citadel-securities": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "two-sigma": {
+      "source": "google-favicon",
+      "filename": "two-sigma.png",
+      "fileSize": 1307,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:36.460Z"
+    },
+    "de-shaw": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "renaissance-technologies": {
+      "source": "google-favicon",
+      "filename": "renaissance-technologies.png",
+      "fileSize": 1299,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:37.222Z"
+    },
+    "jane-street": {
+      "source": "google-favicon",
+      "filename": "jane-street.png",
+      "fileSize": 2554,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:37.565Z"
+    },
+    "bridgewater": {
+      "source": "google-favicon",
+      "filename": "bridgewater.png",
+      "fileSize": 1868,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:37.907Z"
+    },
+    "man-ahl": {
+      "source": "google-favicon",
+      "filename": "man-ahl.png",
+      "fileSize": 1374,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:38.277Z"
+    },
+    "worldquant": {
+      "source": "google-favicon",
+      "filename": "worldquant.png",
+      "fileSize": 1538,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:38.621Z"
+    },
+    "high-flyer": {
+      "source": "google-favicon",
+      "filename": "high-flyer.png",
+      "fileSize": 1458,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:38.994Z"
+    },
+    "ubiquity-china": {
+      "source": "google-favicon",
+      "filename": "ubiquity-china.png",
+      "fileSize": 3896,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:39.447Z"
+    },
+    "onfido": {
+      "source": "google-favicon",
+      "filename": "onfido.png",
+      "fileSize": 1016,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:39.807Z"
+    },
+    "jumio": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "persona": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "veriff": {
+      "source": "google-favicon",
+      "filename": "veriff.png",
+      "fileSize": 1399,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:41.986Z"
+    },
+    "sumsub": {
+      "source": "google-favicon",
+      "filename": "sumsub.png",
+      "fileSize": 991,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:42.327Z"
+    },
+    "kensho-sp-global": {
+      "source": "google-favicon",
+      "filename": "kensho-sp-global.png",
+      "fileSize": 1306,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:42.702Z"
+    },
+    "datarobot": {
+      "source": "google-favicon",
+      "filename": "datarobot.png",
+      "fileSize": 651,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:43.046Z"
+    },
+    "h2oai": {
+      "source": "google-favicon",
+      "filename": "h2oai.png",
+      "fileSize": 1166,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:43.388Z"
+    },
+    "c3ai": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "palantir": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "snowflake": {
+      "source": "google-favicon",
+      "filename": "snowflake.png",
+      "fileSize": 1446,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:44.411Z"
+    },
+    "databricks": {
+      "source": "google-favicon",
+      "filename": "databricks.png",
+      "fileSize": 2307,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:44.738Z"
+    },
+    "gauntlet": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "chaos-labs": {
+      "source": "google-favicon",
+      "filename": "chaos-labs.png",
+      "fileSize": 1914,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:45.906Z"
+    },
+    "risk-harbor": {
+      "source": "google-favicon",
+      "filename": "risk-harbor.png",
+      "fileSize": 4722,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:46.880Z"
+    },
+    "credora": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "goldfinch": {
+      "source": "google-favicon",
+      "filename": "goldfinch.png",
+      "fileSize": 1878,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:47.706Z"
+    },
+    "arturo": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "tractable": {
+      "source": "google-favicon",
+      "filename": "tractable.png",
+      "fileSize": 1491,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:49.685Z"
+    },
+    "snapsheet": {
+      "source": "google-favicon",
+      "filename": "snapsheet.png",
+      "fileSize": 1913,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:50.030Z"
+    },
+    "ccc-intelligent": {
+      "source": "google-favicon",
+      "filename": "ccc-intelligent.png",
+      "fileSize": 1390,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:50.421Z"
+    },
+    "personetics": {
+      "source": "google-favicon",
+      "filename": "personetics.png",
+      "fileSize": 1048,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:50.761Z"
+    },
+    "posh-technologies": {
+      "source": "google-favicon",
+      "filename": "posh-technologies.png",
+      "fileSize": 2188,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:51.554Z"
+    },
+    "glia": {
+      "source": "google-favicon",
+      "filename": "glia.png",
+      "fileSize": 3466,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:51.894Z"
+    },
+    "finn-ai-glia": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "abe-ai": {
+      "source": "google-favicon",
+      "filename": "abe-ai.png",
+      "fileSize": 1532,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:54.229Z"
+    },
+    "numerai": {
+      "source": "google-favicon",
+      "filename": "numerai.png",
+      "fileSize": 2037,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:54.695Z"
+    },
+    "quantopian-closed": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "sigfig": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "riskalyze": {
+      "source": "google-favicon",
+      "filename": "riskalyze.png",
+      "fileSize": 1385,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:58.183Z"
+    },
+    "nansen": {
+      "source": "google-favicon",
+      "filename": "nansen.png",
+      "fileSize": 1380,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:58.522Z"
+    },
+    "kabbage-amex": {
+      "source": "google-favicon",
+      "filename": "kabbage-amex.png",
+      "fileSize": 3261,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:58.911Z"
+    },
+    "ondeck-enova": {
+      "source": "google-favicon",
+      "filename": "ondeck-enova.png",
+      "fileSize": 682,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:56:59.255Z"
+    },
+    "fundbox": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "clearco": {
+      "source": "google-favicon",
+      "filename": "clearco.png",
+      "fileSize": 2391,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:00.010Z"
+    },
+    "petal": {
+      "source": "google-favicon",
+      "filename": "petal.png",
+      "fileSize": 1057,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:00.364Z"
+    },
+    "argyle": {
+      "source": "google-favicon",
+      "filename": "argyle.png",
+      "fileSize": 1581,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:00.817Z"
+    },
+    "truework": {
+      "source": "google-favicon",
+      "filename": "truework.png",
+      "fileSize": 882,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:01.161Z"
+    },
+    "hive-ai-crypto": {
+      "source": "google-favicon",
+      "filename": "hive-ai-crypto.png",
+      "fileSize": 1195,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:01.612Z"
+    },
+    "zerebro": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "cookie-dao": {
+      "source": "google-favicon",
+      "filename": "cookie-dao.png",
+      "fileSize": 868,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:04.067Z"
+    },
+    "sekoia": {
+      "source": "google-favicon",
+      "filename": "sekoia.png",
+      "fileSize": 2721,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:04.579Z"
+    },
+    "griffain": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "murphy-debt": {
+      "source": "google-favicon",
+      "filename": "murphy-debt.png",
+      "fileSize": 1963,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:05.975Z"
+    },
+    "motive-formerly-keeptruckin": {
+      "source": "google-favicon",
+      "filename": "motive-formerly-keeptruckin.png",
+      "fileSize": 1122,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:06.316Z"
+    },
+    "magnifi": {
+      "source": "google-favicon",
+      "filename": "magnifi.png",
+      "fileSize": 789,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:06.705Z"
+    },
+    "personal-capital": {
+      "source": "google-favicon",
+      "filename": "personal-capital.png",
+      "fileSize": 615,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:07.046Z"
+    },
+    "blooom": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "titan": {
+      "source": "google-favicon",
+      "filename": "titan.png",
+      "fileSize": 1466,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:08.928Z"
+    },
+    "black-ore": {
+      "source": "google-favicon",
+      "filename": "black-ore.png",
+      "fileSize": 813,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:09.395Z"
+    },
+    "filed": {
+      "source": "google-favicon",
+      "filename": "filed.png",
+      "fileSize": 486,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:09.782Z"
+    },
+    "flyfin": {
+      "source": "google-favicon",
+      "filename": "flyfin.png",
+      "fileSize": 1160,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:10.142Z"
+    },
+    "inkle": {
+      "source": "google-favicon",
+      "filename": "inkle.png",
+      "fileSize": 1842,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:10.503Z"
+    },
+    "datasnipper": {
+      "source": "google-favicon",
+      "filename": "datasnipper.png",
+      "fileSize": 985,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:10.846Z"
+    },
+    "stampli": {
+      "source": "google-favicon",
+      "filename": "stampli.png",
+      "fileSize": 2065,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:11.190Z"
+    },
+    "trullion": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "salient": {
+      "source": "google-favicon",
+      "filename": "salient.png",
+      "fileSize": 1691,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:12.029Z"
+    },
+    "january": {
+      "source": "google-favicon",
+      "filename": "january.png",
+      "fileSize": 722,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:12.387Z"
+    },
+    "skitai": {
+      "source": "google-favicon",
+      "filename": "skitai.png",
+      "fileSize": 3109,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:12.745Z"
+    },
+    "pair-finance": {
+      "source": "google-favicon",
+      "filename": "pair-finance.png",
+      "fileSize": 945,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:13.323Z"
+    },
+    "trueaccord": {
+      "source": "google-favicon",
+      "filename": "trueaccord.png",
+      "fileSize": 817,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:13.666Z"
+    },
+    "symend": {
+      "source": "google-favicon",
+      "filename": "symend.png",
+      "fileSize": 2342,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:14.007Z"
+    },
+    "indebted": {
+      "source": "google-favicon",
+      "filename": "indebted.png",
+      "fileSize": 1345,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:14.331Z"
+    },
+    "collbox": {
+      "source": "google-favicon",
+      "filename": "collbox.png",
+      "fileSize": 1211,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:14.802Z"
+    },
+    "attunely": {
+      "source": "google-favicon",
+      "filename": "attunely.png",
+      "fileSize": 1684,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:15.392Z"
+    },
+    "cr-software": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "kiavi": {
+      "source": "google-favicon",
+      "filename": "kiavi.png",
+      "fileSize": 2507,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:17.654Z"
+    },
+    "beeline-magicblocks": {
+      "source": "google-favicon",
+      "filename": "beeline-magicblocks.png",
+      "fileSize": 3401,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:17.996Z"
+    },
+    "metropolis": {
+      "source": "google-favicon",
+      "filename": "metropolis.png",
+      "fileSize": 409,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:18.401Z"
+    },
+    "eliseai": {
+      "source": "google-favicon",
+      "filename": "eliseai.png",
+      "fileSize": 3350,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:18.794Z"
+    },
+    "keyway": {
+      "source": "google-favicon",
+      "filename": "keyway.png",
+      "fileSize": 1539,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:19.319Z"
+    },
+    "home365": {
+      "source": "google-favicon",
+      "filename": "home365.png",
+      "fileSize": 1579,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:19.675Z"
+    },
+    "casavo": {
+      "source": "google-favicon",
+      "filename": "casavo.png",
+      "fileSize": 1504,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:20.219Z"
+    },
+    "entera": {
+      "source": "google-favicon",
+      "filename": "entera.png",
+      "fileSize": 1881,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:20.575Z"
+    },
+    "compstak": {
+      "source": "google-favicon",
+      "filename": "compstak.png",
+      "fileSize": 998,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:20.916Z"
+    },
+    "mapped": {
+      "source": "google-favicon",
+      "filename": "mapped.png",
+      "fileSize": 4556,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:21.274Z"
+    },
+    "rocket-money": {
+      "source": "google-favicon",
+      "filename": "rocket-money.png",
+      "fileSize": 2626,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:21.601Z"
+    },
+    "origin-financial": {
+      "source": "google-favicon",
+      "filename": "origin-financial.png",
+      "fileSize": 1193,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:21.943Z"
+    },
+    "digit": {
+      "source": "google-favicon",
+      "filename": "digit.png",
+      "fileSize": 1719,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:22.304Z"
+    },
+    "au10tix": {
+      "source": "google-favicon",
+      "filename": "au10tix.png",
+      "fileSize": 3500,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:22.660Z"
+    },
+    "incode": {
+      "source": "google-favicon",
+      "filename": "incode.png",
+      "fileSize": 2439,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:23.002Z"
+    },
+    "shufti-pro": {
+      "source": "google-favicon",
+      "filename": "shufti-pro.png",
+      "fileSize": 848,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:23.358Z"
+    },
+    "didit": {
+      "source": "google-favicon",
+      "filename": "didit.png",
+      "fileSize": 2085,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:23.698Z"
+    },
+    "identomat": {
+      "source": "google-favicon",
+      "filename": "identomat.png",
+      "fileSize": 2275,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:24.055Z"
+    },
+    "near-protocol": {
+      "source": "google-favicon",
+      "filename": "near-protocol.png",
+      "fileSize": 908,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:24.416Z"
+    },
+    "internet-computer-icp": {
+      "source": "google-favicon",
+      "filename": "internet-computer-icp.png",
+      "fileSize": 1955,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:24.759Z"
+    },
+    "akash-network": {
+      "source": "google-favicon",
+      "filename": "akash-network.png",
+      "fileSize": 744,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:25.100Z"
+    },
+    "singularitydao-sdao": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "oraichain": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "cortex-ctxc": {
+      "source": "google-favicon",
+      "filename": "cortex-ctxc.png",
+      "fileSize": 2381,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:29.092Z"
+    },
+    "qubic": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "ginimachine": {
+      "source": "google-favicon",
+      "filename": "ginimachine.png",
+      "fileSize": 2444,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:29.952Z"
+    },
+    "peratera": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "finpilot": {
+      "source": "google-favicon",
+      "filename": "finpilot.png",
+      "fileSize": 5425,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:32.161Z"
+    },
+    "9fin": {
+      "source": "google-favicon",
+      "filename": "9fin.png",
+      "fileSize": 1440,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:32.585Z"
+    },
+    "rogo": {
+      "source": "google-favicon",
+      "filename": "rogo.png",
+      "fileSize": 971,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:32.944Z"
+    },
+    "daloopa": {
+      "source": "google-favicon",
+      "filename": "daloopa.png",
+      "fileSize": 1417,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:33.333Z"
+    },
+    "dataminr": {
+      "source": "google-favicon",
+      "filename": "dataminr.png",
+      "fileSize": 661,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:33.673Z"
+    },
+    "visible-alpha": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "koyfin": {
+      "source": "google-favicon",
+      "filename": "koyfin.png",
+      "fileSize": 794,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:34.515Z"
+    },
+    "tabs": {
+      "source": "google-favicon",
+      "filename": "tabs.png",
+      "fileSize": 807,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:34.859Z"
+    },
+    "cube": {
+      "source": "google-favicon",
+      "filename": "cube.png",
+      "fileSize": 1102,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:35.229Z"
+    },
+    "datarails": {
+      "source": "google-favicon",
+      "filename": "datarails.png",
+      "fileSize": 1078,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:35.574Z"
+    },
+    "mosaic-tech": {
+      "source": "google-favicon",
+      "filename": "mosaic-tech.png",
+      "fileSize": 748,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:35.914Z"
+    },
+    "jirav": {
+      "source": "google-favicon",
+      "filename": "jirav.png",
+      "fileSize": 1482,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:36.256Z"
+    },
+    "prophix": {
+      "source": "google-favicon",
+      "filename": "prophix.png",
+      "fileSize": 3123,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:36.599Z"
+    },
+    "orum": {
+      "source": "google-favicon",
+      "filename": "orum.png",
+      "fileSize": 574,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:36.972Z"
+    },
+    "ampla": {
+      "source": "google-favicon",
+      "filename": "ampla.png",
+      "fileSize": 1963,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:37.357Z"
+    },
+    "wayflyer": {
+      "source": "google-favicon",
+      "filename": "wayflyer.png",
+      "fileSize": 668,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:37.699Z"
+    },
+    "vicarious": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "gabi-experian": {
+      "source": "google-favicon",
+      "filename": "gabi-experian.png",
+      "fileSize": 1473,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:39.821Z"
+    },
+    "jerry": {
+      "source": "google-favicon",
+      "filename": "jerry.png",
+      "fileSize": 750,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:40.161Z"
+    },
+    "ethos": {
+      "source": "google-favicon",
+      "filename": "ethos.png",
+      "fileSize": 3113,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:40.500Z"
+    },
+    "newfront": {
+      "source": "google-favicon",
+      "filename": "newfront.png",
+      "fileSize": 1538,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:40.827Z"
+    },
+    "at-bay": {
+      "source": "google-favicon",
+      "filename": "at-bay.png",
+      "fileSize": 864,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:41.228Z"
+    },
+    "kin": {
+      "source": "google-favicon",
+      "filename": "kin.png",
+      "fileSize": 708,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:41.602Z"
+    },
+    "clearcover": {
+      "source": "google-favicon",
+      "filename": "clearcover.png",
+      "fileSize": 1209,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:41.956Z"
+    },
+    "openly": {
+      "source": "google-favicon",
+      "filename": "openly.png",
+      "fileSize": 2009,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:42.297Z"
+    },
+    "cowbell-cyber": {
+      "source": "google-favicon",
+      "filename": "cowbell-cyber.png",
+      "fileSize": 1511,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:42.624Z"
+    },
+    "covergenius": {
+      "source": "google-favicon",
+      "filename": "covergenius.png",
+      "fileSize": 1185,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:42.963Z"
+    },
+    "cytora": {
+      "source": "google-favicon",
+      "filename": "cytora.png",
+      "fileSize": 1074,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:43.306Z"
+    },
+    "planck": {
+      "source": "google-favicon",
+      "filename": "planck.png",
+      "fileSize": 4906,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:43.695Z"
+    },
+    "virtu-financial": {
+      "source": "google-favicon",
+      "filename": "virtu-financial.png",
+      "fileSize": 918,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:44.041Z"
+    },
+    "hudson-river-trading": {
+      "source": "google-favicon",
+      "filename": "hudson-river-trading.png",
+      "fileSize": 489,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:44.396Z"
+    },
+    "optiver": {
+      "source": "google-favicon",
+      "filename": "optiver.png",
+      "fileSize": 904,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:44.756Z"
+    },
+    "flow-traders": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "aqr-capital": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "point72": {
+      "source": "google-favicon",
+      "filename": "point72.png",
+      "fileSize": 1661,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:46.933Z"
+    },
+    "man-group": {
+      "source": "google-favicon",
+      "filename": "man-group.png",
+      "fileSize": 1374,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:47.271Z"
+    },
+    "pdt-partners": {
+      "source": "google-favicon",
+      "filename": "pdt-partners.png",
+      "fileSize": 2838,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:47.867Z"
+    },
+    "millennium-management": {
+      "source": "google-favicon",
+      "filename": "millennium-management.png",
+      "fileSize": 771,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:48.223Z"
+    },
+    "balyasny-asset-mgmt": {
+      "source": "google-favicon",
+      "filename": "balyasny-asset-mgmt.png",
+      "fileSize": 4556,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:48.564Z"
+    },
+    "marshall-wace": {
+      "source": "google-favicon",
+      "filename": "marshall-wace.png",
+      "fileSize": 1060,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:49.382Z"
+    },
+    "moneylion": {
+      "source": "google-favicon",
+      "filename": "moneylion.png",
+      "fileSize": 1236,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:49.755Z"
+    },
+    "addepar": {
+      "source": "google-favicon",
+      "filename": "addepar.png",
+      "fileSize": 857,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:50.113Z"
+    },
+    "ethic": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "snappy-kraken": {
+      "source": "google-favicon",
+      "filename": "snappy-kraken.png",
+      "fileSize": 2228,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:50.827Z"
+    },
+    "tifin": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "pontera": {
+      "source": "google-favicon",
+      "filename": "pontera.png",
+      "fileSize": 1379,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:51.527Z"
+    },
+    "finny-ai": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "hummingbird": {
+      "source": "google-favicon",
+      "filename": "hummingbird.png",
+      "fileSize": 1611,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:53.659Z"
+    },
+    "lucinity": {
+      "source": "google-favicon",
+      "filename": "lucinity.png",
+      "fileSize": 1210,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:54.002Z"
+    },
+    "quantexa": {
+      "source": "google-favicon",
+      "filename": "quantexa.png",
+      "fileSize": 621,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:54.393Z"
+    },
+    "complyadvantage": {
+      "source": "google-favicon",
+      "filename": "complyadvantage.png",
+      "fileSize": 1614,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:54.744Z"
+    },
+    "napier-ai": {
+      "source": "google-favicon",
+      "filename": "napier-ai.png",
+      "fileSize": 1274,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:55.098Z"
+    },
+    "silent-eight": {
+      "source": "google-favicon",
+      "filename": "silent-eight.png",
+      "fileSize": 2799,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:55.460Z"
+    },
+    "kount": {
+      "source": "google-favicon",
+      "filename": "kount.png",
+      "fileSize": 1115,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:55.846Z"
+    },
+    "riskified": {
+      "source": "google-favicon",
+      "filename": "riskified.png",
+      "fileSize": 621,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:56.189Z"
+    },
+    "forter": {
+      "source": "google-favicon",
+      "filename": "forter.png",
+      "fileSize": 1889,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:56.560Z"
+    },
+    "heron-finance": {
+      "source": "google-favicon",
+      "filename": "heron-finance.png",
+      "fileSize": 1284,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:56.903Z"
+    },
+    "instead": {
+      "source": "google-favicon",
+      "filename": "instead.png",
+      "fileSize": 1001,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:57.262Z"
+    },
+    "fyle": {
+      "source": "google-favicon",
+      "filename": "fyle.png",
+      "fileSize": 1006,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:57.605Z"
+    },
+    "april-tax-solutions": {
+      "source": "google-favicon",
+      "filename": "april-tax-solutions.png",
+      "fileSize": 549,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:57.945Z"
+    },
+    "heard-technologies": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "reducto": {
+      "source": "google-favicon",
+      "filename": "reducto.png",
+      "fileSize": 419,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:58.627Z"
+    },
+    "affinda": {
+      "source": "google-favicon",
+      "filename": "affinda.png",
+      "fileSize": 1052,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:58.983Z"
+    },
+    "klippa": {
+      "source": "google-favicon",
+      "filename": "klippa.png",
+      "fileSize": 935,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:59.323Z"
+    },
+    "docsumo": {
+      "source": "google-favicon",
+      "filename": "docsumo.png",
+      "fileSize": 1252,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:59.649Z"
+    },
+    "rossum": {
+      "source": "google-favicon",
+      "filename": "rossum.png",
+      "fileSize": 1795,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:57:59.977Z"
+    },
+    "instabase": {
+      "source": "google-favicon",
+      "filename": "instabase.png",
+      "fileSize": 956,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:00.334Z"
+    },
+    "nanonets": {
+      "source": "google-favicon",
+      "filename": "nanonets.png",
+      "fileSize": 1107,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:00.680Z"
+    },
+    "veryfi": {
+      "source": "google-favicon",
+      "filename": "veryfi.png",
+      "fileSize": 1438,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:01.051Z"
+    },
+    "docuclipper": {
+      "source": "google-favicon",
+      "filename": "docuclipper.png",
+      "fileSize": 1273,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:01.456Z"
+    },
+    "heron-data": {
+      "source": "google-favicon",
+      "filename": "heron-data.png",
+      "fileSize": 3448,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:01.924Z"
+    },
+    "mindee": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "abbyy": {
+      "source": "google-favicon",
+      "filename": "abbyy.png",
+      "fileSize": 1052,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:02.622Z"
+    },
+    "hyperscience": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "eigen-technologies": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "kofax": {
+      "source": "google-favicon",
+      "filename": "kofax.png",
+      "fileSize": 1420,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:05.014Z"
+    },
+    "extract-systems": {
+      "source": "google-favicon",
+      "filename": "extract-systems.png",
+      "fileSize": 2465,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:05.480Z"
+    },
+    "parascript": {
+      "source": "google-favicon",
+      "filename": "parascript.png",
+      "fileSize": 2627,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:05.825Z"
+    },
+    "workfusion": {
+      "source": "google-favicon",
+      "filename": "workfusion.png",
+      "fileSize": 2183,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:06.276Z"
+    },
+    "idaciti": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "tidalwave": {
+      "source": "google-favicon",
+      "filename": "tidalwave.png",
+      "fileSize": 1762,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:08.271Z"
+    },
+    "ridley": {
+      "source": "google-favicon",
+      "filename": "ridley.png",
+      "fileSize": 2112,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:08.830Z"
+    },
+    "openspace": {
+      "source": "google-favicon",
+      "filename": "openspace.png",
+      "fileSize": 883,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:09.202Z"
+    },
+    "infogrid": {
+      "source": "google-favicon",
+      "filename": "infogrid.png",
+      "fileSize": 628,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:09.560Z"
+    },
+    "lofty-ai": {
+      "source": "google-favicon",
+      "filename": "lofty-ai.png",
+      "fileSize": 1691,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:09.922Z"
+    },
+    "ojo-labs": {
+      "source": "google-favicon",
+      "filename": "ojo-labs.png",
+      "fileSize": 839,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:10.430Z"
+    },
+    "vero": {
+      "source": "google-favicon",
+      "filename": "vero.png",
+      "fileSize": 1564,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:10.899Z"
+    },
+    "prop-ai": {
+      "source": "google-favicon",
+      "filename": "prop-ai.png",
+      "fileSize": 1298,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:11.256Z"
+    },
+    "leaseai": {
+      "source": "google-favicon",
+      "filename": "leaseai.png",
+      "fileSize": 2121,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:12.063Z"
+    },
+    "constructify": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "rentlytics": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "reonomy": {
+      "source": "google-favicon",
+      "filename": "reonomy.png",
+      "fileSize": 1538,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:15.646Z"
+    },
+    "cherre": {
+      "source": "google-favicon",
+      "filename": "cherre.png",
+      "fileSize": 1551,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:16.202Z"
+    },
+    "receeve": {
+      "source": "google-favicon",
+      "filename": "receeve.png",
+      "fileSize": 1345,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:16.683Z"
+    },
+    "collectwise": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "collectly": {
+      "source": "google-favicon",
+      "filename": "collectly.png",
+      "fileSize": 2619,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:18.684Z"
+    },
+    "livevox": {
+      "source": "google-favicon",
+      "filename": "livevox.png",
+      "fileSize": 1288,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:19.074Z"
+    },
+    "fico-debt-manager": {
+      "source": "google-favicon",
+      "filename": "fico-debt-manager.png",
+      "fileSize": 1291,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:19.418Z"
+    },
+    "beyond-arm": {
+      "source": "google-favicon",
+      "filename": "beyond-arm.png",
+      "fileSize": 1143,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:19.900Z"
+    },
+    "my-dso-manager": {
+      "source": "google-favicon",
+      "filename": "my-dso-manager.png",
+      "fileSize": 2252,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:20.352Z"
+    },
+    "yaypay": {
+      "source": "google-favicon",
+      "filename": "yaypay.png",
+      "fileSize": 1101,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:20.771Z"
+    },
+    "esker": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "versapay": {
+      "source": "google-favicon",
+      "filename": "versapay.png",
+      "fileSize": 705,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:21.496Z"
+    },
+    "gaviti": {
+      "source": "google-favicon",
+      "filename": "gaviti.png",
+      "fileSize": 1221,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:21.856Z"
+    },
+    "sylvera": {
+      "source": "google-favicon",
+      "filename": "sylvera.png",
+      "fileSize": 1199,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:22.198Z"
+    },
+    "briink": {
+      "source": "google-favicon",
+      "filename": "briink.png",
+      "fileSize": 568,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:22.665Z"
+    },
+    "zevero": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "treefera": {
+      "source": "google-favicon",
+      "filename": "treefera.png",
+      "fileSize": 1898,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:24.754Z"
+    },
+    "arabesque": {
+      "source": "google-favicon",
+      "filename": "arabesque.png",
+      "fileSize": 1379,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:25.404Z"
+    },
+    "clarity-ai": {
+      "source": "google-favicon",
+      "filename": "clarity-ai.png",
+      "fileSize": 2034,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:25.745Z"
+    },
+    "persefoni": {
+      "source": "google-favicon",
+      "filename": "persefoni.png",
+      "fileSize": 1754,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:26.085Z"
+    },
+    "watershed": {
+      "source": "google-favicon",
+      "filename": "watershed.png",
+      "fileSize": 2602,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:26.461Z"
+    },
+    "greenly": {
+      "source": "google-favicon",
+      "filename": "greenly.png",
+      "fileSize": 912,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:26.816Z"
+    },
+    "sweep": {
+      "source": "google-favicon",
+      "filename": "sweep.png",
+      "fileSize": 2796,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:27.302Z"
+    },
+    "plan-a": {
+      "source": "google-favicon",
+      "filename": "plan-a.png",
+      "fileSize": 2509,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:27.644Z"
+    },
+    "normative": {
+      "source": "google-favicon",
+      "filename": "normative.png",
+      "fileSize": 801,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:27.990Z"
+    },
+    "sust": {
+      "source": "google-favicon",
+      "filename": "sust.png",
+      "fileSize": 5934,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:28.487Z"
+    },
+    "carbon-bright": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "key-esg": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "sphera": {
+      "source": "google-favicon",
+      "filename": "sphera.png",
+      "fileSize": 1612,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:32.201Z"
+    },
+    "entelligent": {
+      "source": "google-favicon",
+      "filename": "entelligent.png",
+      "fileSize": 1562,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:32.748Z"
+    },
+    "aiprise": {
+      "source": "google-favicon",
+      "filename": "aiprise.png",
+      "fileSize": 1411,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:33.092Z"
+    },
+    "notabene": {
+      "source": "google-favicon",
+      "filename": "notabene.png",
+      "fileSize": 748,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:33.482Z"
+    },
+    "regula": {
+      "source": "google-favicon",
+      "filename": "regula.png",
+      "fileSize": 1303,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:33.853Z"
+    },
+    "ekata": {
+      "source": "google-favicon",
+      "filename": "ekata.png",
+      "fileSize": 839,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:34.245Z"
+    },
+    "mitek": {
+      "source": "google-favicon",
+      "filename": "mitek.png",
+      "fileSize": 1054,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:34.590Z"
+    },
+    "idnow": {
+      "source": "google-favicon",
+      "filename": "idnow.png",
+      "fileSize": 1081,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:34.931Z"
+    },
+    "iproov": {
+      "source": "google-favicon",
+      "filename": "iproov.png",
+      "fileSize": 1056,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:35.272Z"
+    },
+    "trulioo": {
+      "source": "google-favicon",
+      "filename": "trulioo.png",
+      "fileSize": 2073,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:35.612Z"
+    },
+    "gbg": {
+      "source": "google-favicon",
+      "filename": "gbg.png",
+      "fileSize": 1047,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:35.954Z"
+    },
+    "lexisnexis-risk-solutions": {
+      "source": "google-favicon",
+      "filename": "lexisnexis-risk-solutions.png",
+      "fileSize": 2065,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:36.296Z"
+    },
+    "equifax-workforce-solutions": {
+      "source": "google-favicon",
+      "filename": "equifax-workforce-solutions.png",
+      "fileSize": 1006,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:36.653Z"
+    },
+    "gtreasury": {
+      "source": "google-favicon",
+      "filename": "gtreasury.png",
+      "fileSize": 3241,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:36.993Z"
+    },
+    "nomentia": {
+      "source": "google-favicon",
+      "filename": "nomentia.png",
+      "fileSize": 2019,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:37.334Z"
+    },
+    "embat": {
+      "source": "google-favicon",
+      "filename": "embat.png",
+      "fileSize": 1459,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:37.727Z"
+    },
+    "nilus": {
+      "source": "google-favicon",
+      "filename": "nilus.png",
+      "fileSize": 1980,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:38.536Z"
+    },
+    "cashforce": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "tis-treasury-intelligence": {
+      "source": "google-favicon",
+      "filename": "tis-treasury-intelligence.png",
+      "fileSize": 1645,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:40.956Z"
+    },
+    "serrala": {
+      "source": "google-favicon",
+      "filename": "serrala.png",
+      "fileSize": 1411,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:41.316Z"
+    },
+    "refinitiv-eikon": {
+      "source": "google-favicon",
+      "filename": "refinitiv-eikon.png",
+      "fileSize": 401,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:41.642Z"
+    },
+    "bloomberg-treasury": {
+      "source": "google-favicon",
+      "filename": "bloomberg-treasury.png",
+      "fileSize": 2412,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:42.028Z"
+    },
+    "hazeltree": {
+      "source": "google-favicon",
+      "filename": "hazeltree.png",
+      "fileSize": 684,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:42.396Z"
+    },
+    "adenza": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "finbar": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "keye": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "trata": {
+      "source": "google-favicon",
+      "filename": "trata.png",
+      "fileSize": 2664,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:47.711Z"
+    },
+    "fundguard": {
+      "source": "google-favicon",
+      "filename": "fundguard.png",
+      "fileSize": 1451,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:48.116Z"
+    },
+    "orbital-insight": {
+      "source": "google-favicon",
+      "filename": "orbital-insight.png",
+      "fileSize": 4051,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:48.552Z"
+    },
+    "quiver-quantitative": {
+      "source": "google-favicon",
+      "filename": "quiver-quantitative.png",
+      "fileSize": 2537,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:48.877Z"
+    },
+    "atom-finance": {
+      "source": "google-favicon",
+      "filename": "atom-finance.png",
+      "fileSize": 4356,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:49.217Z"
+    },
+    "factset": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "sp-capital-iq": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "rippling": {
+      "source": "google-favicon",
+      "filename": "rippling.png",
+      "fileSize": 2436,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:50.278Z"
+    },
+    "kaito-ai": {
+      "source": "google-favicon",
+      "filename": "kaito-ai.png",
+      "fileSize": 468,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:50.700Z"
+    },
+    "modulus-labs": {
+      "source": "google-favicon",
+      "filename": "modulus-labs.png",
+      "fileSize": 1648,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:51.272Z"
+    },
+    "eqty-lab": {
+      "source": "google-favicon",
+      "filename": "eqty-lab.png",
+      "fileSize": 1765,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:51.644Z"
+    },
+    "vana": {
+      "source": "google-favicon",
+      "filename": "vana.png",
+      "fileSize": 1194,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:51.999Z"
+    },
+    "gensyn": {
+      "source": "google-favicon",
+      "filename": "gensyn.png",
+      "fileSize": 2490,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:52.357Z"
+    },
+    "together-ai": {
+      "source": "google-favicon",
+      "filename": "together-ai.png",
+      "fileSize": 1967,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:52.712Z"
+    },
+    "prime-intellect": {
+      "source": "google-favicon",
+      "filename": "prime-intellect.png",
+      "fileSize": 1229,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:53.073Z"
+    },
+    "grass": {
+      "source": "google-favicon",
+      "filename": "grass.png",
+      "fileSize": 2267,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:53.413Z"
+    },
+    "ionet": {
+      "source": "google-favicon",
+      "filename": "ionet.png",
+      "fileSize": 947,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:53.755Z"
+    },
+    "morpheus-mor": {
+      "source": "google-favicon",
+      "filename": "morpheus-mor.png",
+      "fileSize": 706,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:54.254Z"
+    },
+    "masa": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "ritual": {
+      "source": "google-favicon",
+      "filename": "ritual.png",
+      "fileSize": 2898,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:56.196Z"
+    },
+    "pond": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "allora": {
+      "source": "google-favicon",
+      "filename": "allora.png",
+      "fileSize": 2291,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:58.146Z"
+    },
+    "0g-labs": {
+      "source": "google-favicon",
+      "filename": "0g-labs.png",
+      "fileSize": 898,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:58.561Z"
+    },
+    "sahara-ai": {
+      "source": "google-favicon",
+      "filename": "sahara-ai.png",
+      "fileSize": 809,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:58.963Z"
+    },
+    "aligned-layer": {
+      "source": "google-favicon",
+      "filename": "aligned-layer.png",
+      "fileSize": 1511,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:59.397Z"
+    },
+    "hey-anon": {
+      "source": "google-favicon",
+      "filename": "hey-anon.png",
+      "fileSize": 1371,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:58:59.859Z"
+    },
+    "bankr": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "hotkeyswap": {
+      "source": "google-favicon",
+      "filename": "hotkeyswap.png",
+      "fileSize": 4257,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:02.068Z"
+    },
+    "orbit": {
+      "source": "google-favicon",
+      "filename": "orbit.png",
+      "fileSize": 3020,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:02.609Z"
+    },
+    "neur": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "heyelsa": {
+      "source": "google-favicon",
+      "filename": "heyelsa.png",
+      "fileSize": 1561,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:04.650Z"
+    },
+    "cod3x": {
+      "source": "google-favicon",
+      "filename": "cod3x.png",
+      "fileSize": 1736,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:05.289Z"
+    },
+    "project-plutus": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "aipump": {
+      "source": "google-favicon",
+      "filename": "aipump.png",
+      "fileSize": 519,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:07.262Z"
+    },
+    "taocat": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "swarmnodeai": {
+      "source": "google-favicon",
+      "filename": "swarmnodeai.png",
+      "fileSize": 1985,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:09.194Z"
+    },
+    "mode-network": {
+      "source": "google-favicon",
+      "filename": "mode-network.png",
+      "fileSize": 1095,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:09.564Z"
+    },
+    "layer-ai": {
+      "source": "google-favicon",
+      "filename": "layer-ai.png",
+      "fileSize": 7091,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:09.984Z"
+    },
+    "ark-defai": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "hapi-protocol": {
+      "source": "google-favicon",
+      "filename": "hapi-protocol.png",
+      "fileSize": 950,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:12.013Z"
+    },
+    "anti-rug-agent": {
+      "source": "google-favicon",
+      "filename": "anti-rug-agent.png",
+      "fileSize": 4717,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:12.464Z"
+    },
+    "soul-scanner": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "moby-ai": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "slate": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "agentfunai": {
+      "source": "google-favicon",
+      "filename": "agentfunai.png",
+      "fileSize": 2323,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:17.761Z"
+    },
+    "chutes": {
+      "source": "google-favicon",
+      "filename": "chutes.png",
+      "fileSize": 938,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:18.145Z"
+    },
+    "hermes-subquery": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "phala-network": {
+      "source": "google-favicon",
+      "filename": "phala-network.png",
+      "fileSize": 1190,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:20.062Z"
+    },
+    "dolion-bully": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "delysium": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "griffin-ai-gain": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "flockio": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "gigabrain": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "elfa-ai": {
+      "source": "google-favicon",
+      "filename": "elfa-ai.png",
+      "fileSize": 1810,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:26.098Z"
+    },
+    "lunarcrush": {
+      "source": "google-favicon",
+      "filename": "lunarcrush.png",
+      "fileSize": 1782,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:26.498Z"
+    },
+    "giza-arma-giza-tech-arma": {
+      "source": "google-favicon",
+      "filename": "giza-arma-giza-tech-arma.png",
+      "fileSize": 2077,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:27.103Z"
+    },
+    "truenorth": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "zyfai": {
+      "source": "google-favicon",
+      "filename": "zyfai.png",
+      "fileSize": 2149,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:29.268Z"
+    },
+    "almanak": {
+      "source": "google-favicon",
+      "filename": "almanak.png",
+      "fileSize": 3774,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:29.685Z"
+    },
+    "wayfinder": {
+      "source": "google-favicon",
+      "filename": "wayfinder.png",
+      "fileSize": 922,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:30.072Z"
+    },
+    "velvet-capital": {
+      "source": "google-favicon",
+      "filename": "velvet-capital.png",
+      "fileSize": 1710,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:30.626Z"
+    },
+    "billybets": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "symphony-symphonyio": {
+      "source": "google-favicon",
+      "filename": "symphony-symphonyio.png",
+      "fileSize": 1815,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:32.608Z"
+    },
+    "shekel-agentic": {
+      "source": "google-favicon",
+      "filename": "shekel-agentic.png",
+      "fileSize": 1539,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:33.013Z"
+    },
+    "edwin-edwinfinance": {
+      "source": "google-favicon",
+      "filename": "edwin-edwinfinance.png",
+      "fileSize": 8371,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:33.523Z"
+    },
+    "kvants-ai": {
+      "source": "google-favicon",
+      "filename": "kvants-ai.png",
+      "fileSize": 3089,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:33.927Z"
+    },
+    "arkham": {
+      "source": "google-favicon",
+      "filename": "arkham.png",
+      "fileSize": 1666,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:34.255Z"
+    },
+    "cambrian-network": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "iaesir-fund": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "mamo-lending-agent": {
+      "source": "google-favicon",
+      "filename": "mamo-lending-agent.png",
+      "fileSize": 3855,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:37.923Z"
+    },
+    "axal": {
+      "source": "google-favicon",
+      "filename": "axal.png",
+      "fileSize": 2175,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:38.433Z"
+    },
+    "defi-saver": {
+      "source": "google-favicon",
+      "filename": "defi-saver.png",
+      "fileSize": 1648,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:38.808Z"
+    },
+    "sail-ai-agents": {
+      "source": "google-favicon",
+      "filename": "sail-ai-agents.png",
+      "fileSize": 926,
+      "contentType": "image/jpeg",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:39.383Z"
+    },
+    "lulo": {
+      "source": "google-favicon",
+      "filename": "lulo.png",
+      "fileSize": 735,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:39.852Z"
+    },
+    "askjimmy": {
+      "source": null,
+      "status": "failed",
+      "error": "All sources failed",
+      "attempts": [
+        "google-favicon:failed"
+      ]
+    },
+    "uv": {
+      "source": "google-favicon",
+      "filename": "uv.png",
+      "fileSize": 1980,
+      "contentType": "image/png",
+      "status": "success",
+      "downloadedAt": "2026-01-26T16:59:41.781Z"
+    }
+  }
+}

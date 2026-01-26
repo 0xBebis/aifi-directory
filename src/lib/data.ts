@@ -1,4 +1,9 @@
-import { Project, Segment, Layer, STAGE_LABELS, Stage, AIType, AI_TYPE_LABELS, AI_TYPE_COLORS } from '@/types';
+import {
+  Project, Segment, Layer, STAGE_LABELS, Stage, AIType,
+  AI_TYPE_LABELS, AI_TYPE_COLORS, AI_TYPE_DESCRIPTIONS,
+  CompanyType, COMPANY_TYPE_LABELS, FundingStage, FUNDING_STAGE_LABELS,
+  Region, REGION_LABELS, EMPLOYEE_RANGE_LABELS, EmployeeRange,
+} from '@/types';
 import projectsData from '@/data/projects.json';
 import segmentsData from '@/data/segments.json';
 import layersData from '@/data/layers.json';
@@ -281,4 +286,56 @@ export const aiTypes: AIType[] = [
   'infrastructure',
 ];
 
-export { AI_TYPE_LABELS, AI_TYPE_COLORS };
+export {
+  AI_TYPE_LABELS, AI_TYPE_COLORS, AI_TYPE_DESCRIPTIONS,
+  COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, REGION_LABELS, EMPLOYEE_RANGE_LABELS,
+};
+
+// Project page helpers
+
+export function formatValuation(amount: number): string {
+  return formatFunding(amount);
+}
+
+export function formatRevenue(amount: number): string {
+  return formatFunding(amount);
+}
+
+export function getCountryFlag(code: string): string {
+  const flags: Record<string, string> = {
+    US: '🇺🇸', GB: '🇬🇧', CA: '🇨🇦', FR: '🇫🇷', DE: '🇩🇪', SG: '🇸🇬',
+    JP: '🇯🇵', AU: '🇦🇺', NL: '🇳🇱', CH: '🇨🇭', IL: '🇮🇱', IN: '🇮🇳',
+    BR: '🇧🇷', KR: '🇰🇷', CN: '🇨🇳', HK: '🇭🇰', SE: '🇸🇪', IE: '🇮🇪',
+    ES: '🇪🇸', IT: '🇮🇹', PT: '🇵🇹', AE: '🇦🇪', CZ: '🇨🇿', EE: '🇪🇪',
+    FI: '🇫🇮', NO: '🇳🇴', DK: '🇩🇰', PL: '🇵🇱', AT: '🇦🇹', BE: '🇧🇪',
+    NZ: '🇳🇿', MX: '🇲🇽', AR: '🇦🇷', CO: '🇨🇴', CL: '🇨🇱', TW: '🇹🇼',
+    ID: '🇮🇩', MY: '🇲🇾', TH: '🇹🇭', PH: '🇵🇭', ZA: '🇿🇦', UA: '🇺🇦',
+    IS: '🇮🇸', LT: '🇱🇹', LV: '🇱🇻', RO: '🇷🇴', GR: '🇬🇷', GE: '🇬🇪',
+    HR: '🇭🇷', HU: '🇭🇺', LU: '🇱🇺', VN: '🇻🇳', SI: '🇸🇮',
+  };
+  return flags[code] || '';
+}
+
+export function getCompanyTypeColor(type: CompanyType): string {
+  const colors: Record<CompanyType, string> = {
+    private: '#3b82f6',
+    public: '#22c55e',
+    acquired: '#f59e0b',
+    token: '#a855f7',
+  };
+  return colors[type] || '#71717a';
+}
+
+export function getFundingStageColor(stage: FundingStage): string {
+  const colors: Record<FundingStage, string> = {
+    'pre-seed': '#94a3b8',
+    'seed': '#60a5fa',
+    'early': '#34d399',
+    'growth': '#fbbf24',
+    'late': '#f97316',
+    'public': '#22c55e',
+    'fair-launch': '#a855f7',
+    'undisclosed': '#71717a',
+  };
+  return colors[stage] || '#71717a';
+}
