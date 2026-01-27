@@ -163,6 +163,12 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
           <h2 className="text-lg font-semibold text-text-primary">
             {funded.length > 0 ? 'Top Companies by Funding' : 'All Companies'}
           </h2>
+          <Link
+            href={`/directory?aiType=${aiType}`}
+            className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
+          >
+            View in directory <ChevronRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {(funded.length > 0 ? funded : typeProjects).slice(0, 18).map(p => (
@@ -186,7 +192,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
         </div>
         {typeProjects.length > 18 && (
           <div className="mt-4 text-center">
-            <Link href="/directory" className="text-sm text-accent hover:text-accent-hover transition-colors">
+            <Link href={`/directory?aiType=${aiType}`} className="text-sm text-accent hover:text-accent-hover transition-colors">
               View all {typeProjects.length} companies →
             </Link>
           </div>

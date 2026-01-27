@@ -1,12 +1,21 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
 
 export default function Nav() {
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
   const isDirectory = pathname === '/directory' || pathname?.startsWith('/p/');
   const isAgents = pathname === '/agents' || pathname?.startsWith('/agents/');
+
+  const navLinks = [
+    { href: '/directory', label: 'Directory', active: isDirectory },
+    { href: '/agents', label: 'Agents', active: isAgents },
+    { href: '/about', label: 'Thesis', active: pathname === '/about' },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/30 bg-background/95 backdrop-blur-xl">
@@ -25,38 +34,21 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Navigation */}
-          <nav className="flex items-center gap-1">
-            <Link
-              href="/directory"
-              className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
-                isDirectory
-                  ? 'text-accent bg-accent/10'
-                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-              }`}
-            >
-              Directory
-            </Link>
-            <Link
-              href="/agents"
-              className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
-                isAgents
-                  ? 'text-accent bg-accent/10'
-                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-              }`}
-            >
-              Agents
-            </Link>
-            <Link
-              href="/about"
-              className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
-                pathname === '/about'
-                  ? 'text-accent bg-accent/10'
-                  : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-              }`}
-            >
-              Thesis
-            </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
+                  link.active
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
               href="/submit"
               className={`ml-3 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 border ${
@@ -68,8 +60,50 @@ export default function Nav() {
               Submit
             </Link>
           </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl">
+          <div className="px-8 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  link.active
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/submit"
+              onClick={() => setMobileOpen(false)}
+              className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-colors border ${
+                pathname === '/submit'
+                  ? 'text-accent border-accent/30 bg-accent/10'
+                  : 'text-accent border-accent/20 bg-accent/5'
+              }`}
+            >
+              Submit a Company
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

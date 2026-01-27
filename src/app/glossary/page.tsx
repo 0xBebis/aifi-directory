@@ -82,6 +82,20 @@ const glossaryEntries: GlossaryEntry[] = [
     category: 'ai-technology',
     link: '/ai-types/agentic',
   },
+  {
+    term: 'Data Platform',
+    slug: 'data-platform',
+    definition: 'Platforms that aggregate, clean, enrich, and deliver financial data with minimal machine learning. In finance, data platforms provide alternative data feeds, market data aggregation, entity resolution, and data infrastructure that other AI systems consume. They form the foundation layer that enables more sophisticated AI applications like predictive models and LLM-powered analysis.',
+    category: 'ai-technology',
+    link: '/ai-types/data-platform',
+  },
+  {
+    term: 'AI Infrastructure',
+    slug: 'ai-infrastructure',
+    definition: 'The compute, tooling, and platform layer that enables AI/ML development and deployment. In financial services, AI infrastructure includes GPU compute networks, model training platforms, MLOps tooling, feature stores, and deployment pipelines. These companies provide the foundational technology that financial AI applications are built on.',
+    category: 'ai-technology',
+    link: '/ai-types/infrastructure',
+  },
   // Protocols
   {
     term: 'EIP-8004',

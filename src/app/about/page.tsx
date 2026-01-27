@@ -340,17 +340,56 @@ export default function ThesisPage() {
         </ol>
       </aside>
 
-      {/* Footer CTA */}
+      {/* Where to Go Next */}
       <div className="mt-14 pt-8 border-t border-border/30">
-        <p className="text-text-muted text-sm mb-5">
-          Explore the companies building this future.
+        <p className="label-refined text-accent mb-3">Where to Go Next</p>
+        <p className="text-text-muted text-sm mb-6">
+          Explore the companies, technologies, and data behind this thesis.
         </p>
-        <Link
-          href="/directory"
-          className="inline-flex items-center px-6 py-3 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-muted transition-all duration-200"
-        >
-          Browse the Directory
-        </Link>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link
+            href="/directory"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">Browse the Directory</p>
+            <p className="text-xs text-text-muted">All companies in the AI + Finance landscape</p>
+          </Link>
+          <Link
+            href="/segments/trading"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">Trading Companies</p>
+            <p className="text-xs text-text-muted">AI-powered trading and market-making</p>
+          </Link>
+          <Link
+            href="/ai-types/llm"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">LLM Companies</p>
+            <p className="text-xs text-text-muted">How large language models are used in finance</p>
+          </Link>
+          <Link
+            href="/ai-types/agentic"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">Agentic AI</p>
+            <p className="text-xs text-text-muted">Autonomous agents in financial services</p>
+          </Link>
+          <Link
+            href="/stats"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">Market Statistics</p>
+            <p className="text-xs text-text-muted">Funding, segments, AI types, and regions</p>
+          </Link>
+          <Link
+            href="/glossary"
+            className="group bg-surface border border-border rounded-xl p-5 hover:border-accent/30 transition-all"
+          >
+            <p className="text-sm font-semibold text-text-primary group-hover:text-accent transition-colors mb-1">Glossary</p>
+            <p className="text-xs text-text-muted">Key terms in AI and financial technology</p>
+          </Link>
+        </div>
       </div>
     </div>
     </>

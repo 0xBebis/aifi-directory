@@ -7,9 +7,18 @@ import {
   getTotalFunding,
   getActiveAgents,
   getTotalAgentCapabilities,
+  getTopCompanies,
+  getSegmentStats,
+  getLayerCounts,
+  getSegment,
+  getLayer,
 } from '@/lib/data';
 import LandingHero from '@/components/home/LandingHero';
 import SiteNav from '@/components/home/SiteNav';
+import SegmentShowcase from '@/components/home/SegmentShowcase';
+import FeaturedCompanies from '@/components/home/FeaturedCompanies';
+import TechStack from '@/components/home/TechStack';
+import CallToAction from '@/components/home/CallToAction';
 
 export const metadata: Metadata = {
   title: 'AIFI — The Financial AI Landscape',
@@ -37,6 +46,9 @@ export default function Home() {
   const agentCount = agents.length;
   const activeAgentCount = getActiveAgents().length;
   const totalCapabilities = getTotalAgentCapabilities();
+  const topCompanies = getTopCompanies(9);
+  const segmentStats = getSegmentStats();
+  const layerCounts = getLayerCounts();
 
   return (
     <main className="min-h-screen">
@@ -50,6 +62,14 @@ export default function Home() {
         activeAgentCount={activeAgentCount}
         totalCapabilities={totalCapabilities}
       />
+      <SegmentShowcase segmentStats={segmentStats} />
+      <FeaturedCompanies
+        companies={topCompanies}
+        getSegment={getSegment}
+        getLayer={getLayer}
+      />
+      <TechStack layers={layers} layerCounts={layerCounts} />
+      <CallToAction />
     </main>
   );
 }

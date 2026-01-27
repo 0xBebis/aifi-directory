@@ -143,9 +143,18 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
       <h1 className="headline-display mb-4">
         Submit a Company
       </h1>
-      <p className="text-lg text-text-muted mb-10 leading-relaxed">
+      <p className="text-lg text-text-muted mb-6 leading-relaxed">
         Know a company building AI + Finance products? Help us grow the directory by submitting it here.
       </p>
+
+      <div className="mb-10 p-4 rounded-lg border border-accent/20 bg-accent/5">
+        <p className="text-sm text-text-secondary">
+          <span className="font-semibold text-accent">Note:</span> Submissions are processed via GitHub. You&apos;ll need a{' '}
+          <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GitHub account</a>{' '}
+          to complete this form. No GitHub?{' '}
+          <a href="mailto:submit@aifimap.com?subject=AIFI%20Company%20Submission" className="text-accent hover:underline">Email us instead</a>.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Basic Info */}

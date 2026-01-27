@@ -81,9 +81,9 @@ export default function SiteNav({
             </div>
 
             <p className="text-sm text-text-secondary leading-relaxed mb-6">
-              Live financial AI agents registered on the EIP-8004 Trustless
-              Agent Registry. Verified identities, declared capabilities,
-              open communication protocols.
+              Autonomous AI agents operating in financial services.
+              Verified capabilities, live activity tracking, and open
+              communication protocols.
             </p>
 
             {/* Stats */}

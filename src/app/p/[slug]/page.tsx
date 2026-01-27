@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  ArrowLeft, Globe, Twitter, Linkedin, Pencil,
+  Globe, Twitter, Linkedin, Pencil,
   Building2, Calendar, MapPin, Users, DollarSign, TrendingUp,
   Briefcase, Cpu, Award, ExternalLink, ChevronRight,
 } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 import {
   projects,
   getProject,
@@ -172,13 +173,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       {/* Back Link */}
-      <Link
-        href="/directory"
-        className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm tracking-wide"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Back to Directory
-      </Link>
+      <BackButton fallbackHref="/directory" fallbackLabel="Back to Directory" />
 
       {/* ── Hero Header ── */}
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
@@ -626,6 +621,55 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       )}
+
+      {/* ── Explore More ── */}
+      <div className="mt-8 pt-8 border-t border-border/30">
+        <h2 className="text-lg font-medium text-text-primary mb-4">Explore More</h2>
+        <div className="flex flex-wrap gap-2">
+          {primarySegment && (
+            <Link
+              href={`/segments/${primarySegment.slug}`}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+            >
+              <span className="w-2 h-2 rounded-full" style={{ background: primarySegment.color }} />
+              <span className="text-text-secondary">{primarySegment.name} Segment</span>
+            </Link>
+          )}
+          {primaryLayer && (
+            <Link
+              href={`/layers/${primaryLayer.slug}`}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+            >
+              <span className="w-2 h-2 rounded-full" style={{ background: primaryLayer.color }} />
+              <span className="text-text-secondary">{primaryLayer.name} Layer</span>
+            </Link>
+          )}
+          {project.ai_types?.map(t => (
+            <Link
+              key={t}
+              href={`/ai-types/${t}`}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+            >
+              <span className="w-2 h-2 rounded-full" style={{ background: AI_TYPE_COLORS[t] }} />
+              <span className="text-text-secondary">{AI_TYPE_LABELS[t]}</span>
+            </Link>
+          ))}
+          {project.region && (
+            <Link
+              href={`/regions/${project.region}`}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm text-text-secondary"
+            >
+              {REGION_LABELS[project.region]}
+            </Link>
+          )}
+          <Link
+            href="/stats"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm text-text-secondary"
+          >
+            Statistics
+          </Link>
+        </div>
+      </div>
     </div>
     </>
   );

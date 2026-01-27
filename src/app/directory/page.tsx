@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import {
   projects,
@@ -79,11 +80,13 @@ export default function DirectoryPage() {
             </p>
           </div>
 
-          <DirectoryBrowser
-            projects={projects}
-            segments={segments}
-            layers={layers}
-          />
+          <Suspense fallback={null}>
+            <DirectoryBrowser
+              projects={projects}
+              segments={segments}
+              layers={layers}
+            />
+          </Suspense>
 
           {/* Freshness signal */}
           <p className="text-xs text-text-faint mt-8 text-right">
