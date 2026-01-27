@@ -2,10 +2,28 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
 import Nav from '@/components/Nav';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'AIFI - AI Finance Index',
-  description: 'The directory of companies building at the intersection of AI and Finance',
+  metadataBase: new URL('https://aifimap.com'),
+  title: 'AIFI — The Financial AI Landscape',
+  description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
+  openGraph: {
+    siteName: 'AIFI',
+    type: 'website',
+    images: [{ url: '/og/default.png', width: 1200, height: 630, alt: 'AIFI — The Financial AI Landscape' }],
+  },
+  alternates: {
+    canonical: './',
+  },
+  // Search engine verification — replace with actual codes after registering
+  verification: {
+    google: 'GOOGLE_SITE_VERIFICATION_CODE',
+    yandex: 'YANDEX_VERIFICATION_CODE',
+    other: {
+      'msvalidate.01': 'BING_SITE_VERIFICATION_CODE',
+    },
+  },
 };
 
 export default function RootLayout({
@@ -16,13 +34,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-background text-text-primary flex flex-col">
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'AIFI',
+          url: 'https://aifimap.com',
+          description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
+          sameAs: ['https://github.com/0xBebis/aifi-directory'],
+        }} />
         <Nav />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-border/30 mt-auto">
           <div className="max-w-7xl mx-auto px-8 py-12">
-            <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {/* Brand */}
-              <div>
+              <div className="col-span-2 sm:col-span-1">
                 <Link href="/" className="flex items-center gap-3 mb-3 group">
                   <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center group-hover:bg-accent/25 transition-colors">
                     <span className="text-accent font-bold text-xs">AI</span>
@@ -34,28 +60,35 @@ export default function RootLayout({
                 </p>
               </div>
 
-              {/* Links */}
-              <div className="flex items-center gap-8 text-sm">
-                <Link
-                  href="/about"
-                  className="text-text-muted hover:text-text-primary transition-colors tracking-wide"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/submit"
-                  className="text-text-muted hover:text-text-primary transition-colors tracking-wide"
-                >
-                  Submit
-                </Link>
-                <a
-                  href="https://github.com/0xBebis/aifi-directory"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-muted hover:text-text-primary transition-colors tracking-wide"
-                >
-                  GitHub
-                </a>
+              {/* Explore */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-3">Explore</p>
+                <div className="flex flex-col gap-2 text-sm">
+                  <Link href="/directory" className="text-text-muted hover:text-text-primary transition-colors">Directory</Link>
+                  <Link href="/agents" className="text-text-muted hover:text-text-primary transition-colors">Agents</Link>
+                  <Link href="/stats" className="text-text-muted hover:text-text-primary transition-colors">Statistics</Link>
+                  <Link href="/recent" className="text-text-muted hover:text-text-primary transition-colors">Recently Funded</Link>
+                </div>
+              </div>
+
+              {/* Learn */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-3">Learn</p>
+                <div className="flex flex-col gap-2 text-sm">
+                  <Link href="/about" className="text-text-muted hover:text-text-primary transition-colors">Thesis</Link>
+                  <Link href="/glossary" className="text-text-muted hover:text-text-primary transition-colors">Glossary</Link>
+                  <Link href="/segments/trading" className="text-text-muted hover:text-text-primary transition-colors">Segments</Link>
+                  <Link href="/ai-types/llm" className="text-text-muted hover:text-text-primary transition-colors">AI Types</Link>
+                </div>
+              </div>
+
+              {/* Community */}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-3">Community</p>
+                <div className="flex flex-col gap-2 text-sm">
+                  <Link href="/submit" className="text-text-muted hover:text-text-primary transition-colors">Submit a Company</Link>
+                  <a href="https://github.com/0xBebis/aifi-directory" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-text-primary transition-colors">GitHub</a>
+                </div>
               </div>
             </div>
 

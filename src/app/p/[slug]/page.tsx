@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -17,6 +18,7 @@ import {
   getCountryFlag,
   getCompanyTypeColor,
   getFundingStageColor,
+  generateSeoDescription,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
@@ -27,11 +29,50 @@ import {
 } from '@/lib/data';
 import { CompanyType, FundingStage, EmployeeRange, AIType } from '@/types';
 import CompanyLogo from '@/components/CompanyLogo';
+import JsonLd from '@/components/JsonLd';
 
 export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const project = getProject(params.slug);
+  if (!project) return { title: 'Company Not Found | AIFI' };
+
+  const description = generateSeoDescription(project);
+
+  return {
+    title: `${project.name} — ${project.tagline} | AIFI`,
+    description,
+    openGraph: {
+      title: `${project.name} — ${project.tagline}`,
+      description,
+      type: 'website',
+      siteName: 'AIFI',
+      images: [{ url: `/og/p/${params.slug}.png`, width: 1200, height: 630, alt: `${project.name} — ${project.tagline}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.name} — ${project.tagline}`,
+      description,
+      images: [`/og/p/${params.slug}.png`],
+    },
+  };
+}
+
+function parseEmployeeRange(range: string): { minValue: number; maxValue?: number } {
+  const map: Record<string, { minValue: number; maxValue?: number }> = {
+    '1-10': { minValue: 1, maxValue: 10 },
+    '11-50': { minValue: 11, maxValue: 50 },
+    '51-200': { minValue: 51, maxValue: 200 },
+    '201-500': { minValue: 201, maxValue: 500 },
+    '501-1000': { minValue: 501, maxValue: 1000 },
+    '1001-5000': { minValue: 1001, maxValue: 5000 },
+    '5000+': { minValue: 5000 },
+  };
+  return map[range] || { minValue: 0 };
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -80,7 +121,55 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     metrics.push({ label: 'Revenue', value: formatFunding(project.revenue), icon: <Award className="w-3.5 h-3.5" /> });
   }
 
+  // JSON-LD structured data
+  const sameAs: string[] = [];
+  if (project.twitter) sameAs.push(project.twitter);
+  if (project.linkedin) sameAs.push(project.linkedin);
+
+  const organizationJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: project.name,
+    description: project.summary || project.tagline,
+    ...(project.website && { url: project.website }),
+    ...(project.founded && { foundingDate: String(project.founded) }),
+    ...(project.hq_city && project.hq_country && {
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: project.hq_city,
+        addressCountry: project.hq_country,
+      },
+    }),
+    ...(project.employees && {
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        ...parseEmployeeRange(project.employees),
+      },
+    }),
+    ...(project.founders && project.founders.length > 0 && {
+      founder: project.founders.map(f => ({
+        '@type': 'Person',
+        name: f.name,
+        ...(f.title && { jobTitle: f.title }),
+      })),
+    }),
+    ...(sameAs.length > 0 && { sameAs }),
+  };
+
+  const breadcrumbJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
+      { '@type': 'ListItem', position: 3, name: project.name },
+    ],
+  };
+
   return (
+    <>
+    <JsonLd data={organizationJsonLd} />
+    <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       {/* Back Link */}
       <Link
@@ -538,5 +627,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       )}
     </div>
+    </>
   );
 }

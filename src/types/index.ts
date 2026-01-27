@@ -36,6 +36,7 @@ export interface Project {
   acquirer?: string; // Name of acquiring company (if acquired)
   acquired_date?: string; // Year or YYYY-MM of acquisition
   job_openings?: number; // Current open positions
+  seo_description?: string; // 150-160 char SEO-optimized meta description
 }
 
 export interface TeamMember {
@@ -73,6 +74,7 @@ export interface Segment {
   slug: string;
   name: string;
   description: string;
+  long_description?: string;
   icon?: string;
   color: string;
 }

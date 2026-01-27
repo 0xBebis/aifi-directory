@@ -301,6 +301,32 @@ export {
   PROTOCOL_LABELS, PROTOCOL_COLORS,
 };
 
+// Taxonomy page helpers
+
+export function getProjectsByAIType(aiType: AIType): Project[] {
+  return projects.filter(p => p.ai_types?.includes(aiType));
+}
+
+export function getProjectsByRegion(region: Region): Project[] {
+  return projects.filter(p => p.region === region);
+}
+
+export function getProjectsByFundingStage(stage: FundingStage): Project[] {
+  return projects.filter(p => p.funding_stage === stage);
+}
+
+export function getCountryDistribution(projectList: Project[]): Array<{ country: string; name: string; count: number }> {
+  const counts: Record<string, number> = {};
+  for (const p of projectList) {
+    if (p.hq_country) {
+      counts[p.hq_country] = (counts[p.hq_country] || 0) + 1;
+    }
+  }
+  return Object.entries(counts)
+    .map(([country, count]) => ({ country, name: getCountryName(country), count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 // Directory page helpers
 
 export function getAITypeStats(): Array<{
@@ -325,6 +351,111 @@ export function getAITypeStats(): Array<{
         .slice(0, 3),
     };
   }).filter(s => s.count > 0);
+}
+
+// Freshness signal — build date for "Last updated" display
+export const BUILD_DATE = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+export const BUILD_DATE_ISO = new Date().toISOString().split('T')[0];
+
+// SEO helpers
+
+export function generateSeoDescription(project: Project): string {
+  if (project.seo_description) return project.seo_description;
+
+  const parts: string[] = [];
+  const stageLabel = project.funding_stage ? FUNDING_STAGE_LABELS[project.funding_stage as FundingStage] : null;
+  const typeLabel = project.company_type ? COMPANY_TYPE_LABELS[project.company_type as CompanyType] : null;
+
+  // Entity-first opening: "{Name} is a {stage} {type} company {tagline}."
+  let opener = project.name;
+  if (stageLabel && stageLabel !== 'Undisclosed') {
+    opener += ` is a ${stageLabel.toLowerCase()}`;
+  } else {
+    opener += ' is a';
+  }
+  if (typeLabel && typeLabel !== 'Private') {
+    opener += ` ${typeLabel.toLowerCase()}`;
+  }
+  opener += ` company: ${project.tagline}`;
+  parts.push(opener);
+
+  if (project.founded && project.hq_city && project.hq_country) {
+    parts.push(`Founded ${project.founded} in ${project.hq_city}, ${getCountryName(project.hq_country)}.`);
+  } else if (project.founded) {
+    parts.push(`Founded ${project.founded}.`);
+  } else if (project.hq_city && project.hq_country) {
+    parts.push(`Based in ${project.hq_city}, ${getCountryName(project.hq_country)}.`);
+  }
+
+  if (project.funding) {
+    parts.push(`Raised ${formatFunding(project.funding)}.`);
+  }
+
+  return parts.join(' ').slice(0, 160);
+}
+
+export function getRecentlyFunded(limit: number = 30): Project[] {
+  return [...projects]
+    .filter(p => p.last_funding_date)
+    .sort((a, b) => {
+      // Sort by last_funding_date descending (string comparison works for YYYY or YYYY-MM)
+      const dateA = a.last_funding_date || '';
+      const dateB = b.last_funding_date || '';
+      return dateB.localeCompare(dateA);
+    })
+    .slice(0, limit);
+}
+
+export function getProjectsBySegmentAndAIType(segmentSlug: string, aiType: AIType): Project[] {
+  return projects.filter(p => {
+    const matchesSegment = p.segment === segmentSlug || p.segments?.includes(segmentSlug);
+    const matchesAiType = p.ai_types?.includes(aiType);
+    return matchesSegment && matchesAiType;
+  });
+}
+
+export function getCrossDimensionalPages(): Array<{
+  segmentSlug: string;
+  segmentName: string;
+  segmentColor: string;
+  aiType: AIType;
+  aiTypeLabel: string;
+  aiTypeColor: string;
+  count: number;
+}> {
+  const pages: Array<{
+    segmentSlug: string;
+    segmentName: string;
+    segmentColor: string;
+    aiType: AIType;
+    aiTypeLabel: string;
+    aiTypeColor: string;
+    count: number;
+  }> = [];
+
+  for (const segment of segments) {
+    for (const aiType of aiTypes) {
+      const matching = getProjectsBySegmentAndAIType(segment.slug, aiType);
+      if (matching.length >= 3) {
+        pages.push({
+          segmentSlug: segment.slug,
+          segmentName: segment.name,
+          segmentColor: segment.color,
+          aiType,
+          aiTypeLabel: AI_TYPE_LABELS[aiType],
+          aiTypeColor: AI_TYPE_COLORS[aiType],
+          count: matching.length,
+        });
+      }
+    }
+  }
+
+  return pages;
 }
 
 // Project page helpers

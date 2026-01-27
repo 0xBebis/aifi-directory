@@ -15,7 +15,10 @@
       "WebFetch(domain:thegraph.com)",
       "WebFetch(domain:sdk.ag0.xyz)",
       "WebFetch(domain:api.github.com)",
-      "Bash(npm run validate:*)"
+      "Bash(npm run validate:*)",
+      "Bash(dir /s \"C:\\\\Users\\\\Ethan\\\\claude-mode\\\\aifi\\\\src\")",
+      "WebFetch(domain:lookup.icann.org)",
+      "WebFetch(domain:who.is)"
     ]
   }
 }

@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-og-images.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "validate": "node scripts/validate-data.js"
+    "validate": "node scripts/validate-data.js",
+    "validate:seo": "node scripts/validate-structured-data.js"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",
@@ -17,11 +19,13 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
+    "satori": "^0.19.1",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3"
   }

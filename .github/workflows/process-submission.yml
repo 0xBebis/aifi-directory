@@ -323,7 +323,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              body: `Could not find a project with slug \`${{ steps.extract.outputs.slug }}\` in the directory.\n\nIf you're trying to add a new company, please use the [submission form](https://aifi.directory/submit) instead.`
+              body: `Could not find a project with slug \`${{ steps.extract.outputs.slug }}\` in the directory.\n\nIf you're trying to add a new company, please use the [submission form](https://aifimap.com/submit) instead.`
             });
 
             await github.rest.issues.addLabels({

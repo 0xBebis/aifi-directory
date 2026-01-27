@@ -5,22 +5,52 @@ import {
   layers,
   getTotalFunding,
   getAITypeStats,
+  BUILD_DATE,
 } from '@/lib/data';
 import DirectoryHero from '@/components/directory/DirectoryHero';
 import AITypeShowcase from '@/components/directory/AITypeShowcase';
 import DirectoryBrowser from '@/components/DirectoryBrowser';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Directory | AIFI',
-  description: 'Browse the comprehensive directory of AI + Finance companies across segments, layers, and AI types.',
+  title: 'AI Finance Company Directory | AIFI',
+  description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types. Interactive market map and full search.',
+  openGraph: {
+    title: 'AI Finance Company Directory',
+    description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types.',
+    type: 'website',
+    siteName: 'AIFI',
+    images: [{ url: '/og/default.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Finance Company Directory',
+    description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types.',
+    images: ['/og/default.png'],
+  },
 };
 
 export default function DirectoryPage() {
   const totalFunding = getTotalFunding();
   const aiTypeStats = getAITypeStats();
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AI Finance Companies Directory',
+    description: `Comprehensive directory of ${projects.length} companies building at the intersection of artificial intelligence and financial services.`,
+    numberOfItems: projects.length,
+    itemListElement: projects.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://aifimap.com/p/${p.slug}`,
+      name: p.name,
+    })),
+  };
+
   return (
     <main className="min-h-screen">
+      <JsonLd data={itemListJsonLd} />
       {/* Hero */}
       <DirectoryHero
         companyCount={projects.length}
@@ -54,6 +84,11 @@ export default function DirectoryPage() {
             segments={segments}
             layers={layers}
           />
+
+          {/* Freshness signal */}
+          <p className="text-xs text-text-faint mt-8 text-right">
+            Last updated: {BUILD_DATE}
+          </p>
         </div>
       </section>
     </main>

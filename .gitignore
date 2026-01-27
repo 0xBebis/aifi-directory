@@ -59,3 +59,7 @@ nul
 
 # Script output artifacts
 scripts/*/results.json
+
+# Generated build assets
+public/sitemap.xml
+public/og/

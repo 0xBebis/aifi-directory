@@ -26,6 +26,7 @@ import ProtocolBadge from '@/components/ProtocolBadge';
 import AgentCard from '@/components/AgentCard';
 import EndpointList from '@/components/EndpointList';
 import CapabilitySection from '@/components/CapabilitySection';
+import JsonLd from '@/components/JsonLd';
 
 const EXPLORER_BASE = 'https://sepolia.etherscan.io';
 const REGISTRY_ADDRESS = '0x8004A818BFB912233c491871b3d84c89A494BD9e';
@@ -40,9 +41,23 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   const agent = getAgent(agentIdFromSlug(params.id));
   if (!agent) return { title: 'Agent Not Found | AIFI' };
   const categoryLabel = FINANCE_CATEGORY_LABELS[agent.financeCategory] || 'Finance';
+  const description = agent.description?.slice(0, 160) || `${agent.name} is a financial AI agent registered on EIP-8004.`;
   return {
     title: `${agent.name} — ${categoryLabel} Agent | AIFI`,
-    description: agent.description?.slice(0, 160) || `${agent.name} is a financial AI agent registered on EIP-8004.`,
+    description,
+    openGraph: {
+      title: `${agent.name} — ${categoryLabel} Agent`,
+      description,
+      type: 'website',
+      siteName: 'AIFI',
+      images: [{ url: `/og/agents/${params.id}.png`, width: 1200, height: 630, alt: `${agent.name} — ${categoryLabel} Agent` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${agent.name} — ${categoryLabel} Agent`,
+      description,
+      images: [`/og/agents/${params.id}.png`],
+    },
   };
 }
 
@@ -92,7 +107,36 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
   const totalCapabilities = agent.mcpTools.length + agent.mcpPrompts.length + agent.mcpResources.length
     + agent.a2aSkills.length + agent.oasfSkills.length + agent.oasfDomains.length;
 
+  // JSON-LD structured data
+  const softwareJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: agent.name,
+    description: agent.description || `${agent.name} is a financial AI agent registered on EIP-8004.`,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    ...(agent.webEndpoint && { url: agent.webEndpoint }),
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
+  const breadcrumbJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 2, name: 'Agent Registry', item: 'https://aifimap.com/agents' },
+      { '@type': 'ListItem', position: 3, name: agent.name },
+    ],
+  };
+
   return (
+    <>
+    <JsonLd data={softwareJsonLd} />
+    <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       {/* Back Link */}
       <Link
@@ -439,5 +483,6 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
         </div>
       )}
     </div>
+    </>
   );
 }

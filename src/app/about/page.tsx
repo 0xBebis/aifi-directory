@@ -1,4 +1,25 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
+import { BUILD_DATE_ISO } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'The Future of Financial AI — Thesis | AIFI',
+  description: 'From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services. Covering 5 eras from 1982 to 2026.',
+  openGraph: {
+    title: 'The Future of Financial AI — Thesis',
+    description: 'From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services.',
+    type: 'article',
+    siteName: 'AIFI',
+    images: [{ url: '/og/default.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Future of Financial AI — Thesis',
+    description: 'From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services.',
+    images: ['/og/default.png'],
+  },
+};
 
 // Era definitions
 const eras = [
@@ -59,7 +80,22 @@ const milestones = [
 ];
 
 export default function ThesisPage() {
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The Future of Financial AI',
+    description: 'From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services. Covering 5 eras from 1982 to 2026.',
+    author: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
+    publisher: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
+    datePublished: '2025-01-01',
+    dateModified: BUILD_DATE_ISO,
+    articleSection: 'Thesis',
+    mainEntityOfPage: 'https://aifimap.com/about',
+  };
+
   return (
+    <>
+    <JsonLd data={articleJsonLd} />
     <div className="max-w-4xl mx-auto px-8 py-14">
       {/* Timeline Section */}
       <section className="mb-20">
@@ -317,5 +353,6 @@ export default function ThesisPage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }
