@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ShareButtons from '@/components/ShareButtons';
+import ReadingProgress from '@/components/ReadingProgress';
 import { BUILD_DATE_ISO } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -96,7 +99,18 @@ export default function ThesisPage() {
   return (
     <>
     <JsonLd data={articleJsonLd} />
+    <ReadingProgress />
     <div className="max-w-4xl mx-auto px-8 py-14">
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[
+        { label: 'Thesis' },
+      ]} />
+
+      {/* Share (top) */}
+      <div className="mb-8">
+        <ShareButtons url="/about" title="The Future of Financial AI" description="From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services." />
+      </div>
+
       {/* Timeline Section */}
       <section className="mb-20">
         <p className="label-refined mb-4 text-accent">
@@ -339,6 +353,11 @@ export default function ThesisPage() {
           </li>
         </ol>
       </aside>
+
+      {/* Share (bottom) */}
+      <div className="mt-10 flex justify-center">
+        <ShareButtons url="/about" title="The Future of Financial AI" description="From statistical arbitrage to autonomous agents: a history and thesis on how AI is transforming financial services." />
+      </div>
 
       {/* Where to Go Next */}
       <div className="mt-14 pt-8 border-t border-border/30">

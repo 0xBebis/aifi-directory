@@ -6,13 +6,15 @@ import {
   Building2, Calendar, MapPin, Users, DollarSign, TrendingUp,
   Briefcase, Cpu, Award, ExternalLink, ChevronRight,
 } from 'lucide-react';
-import BackButton from '@/components/BackButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ShareButtons from '@/components/ShareButtons';
 import {
   projects,
   getProject,
   getSegment,
   getLayer,
   getSimilarProjects,
+  getCompaniesAtSameFundingStage,
   formatFunding,
   formatStage,
   getCountryName,
@@ -88,6 +90,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const allLayers = [primaryLayer, ...(project.layers?.map(getLayer) || [])].filter(Boolean);
   const allSegments = [primarySegment, ...(project.segments?.map(getSegment) || [])].filter(Boolean);
   const similarProjects = getSimilarProjects(project, 6);
+  const fundingStagePeers = getCompaniesAtSameFundingStage(project, 4);
 
   const companyTypeColor = project.company_type ? getCompanyTypeColor(project.company_type as CompanyType) : null;
   const fundingStageColor = project.funding_stage ? getFundingStageColor(project.funding_stage as FundingStage) : null;
@@ -172,8 +175,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <JsonLd data={organizationJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
-      {/* Back Link */}
-      <BackButton fallbackHref="/directory" fallbackLabel="Back to Directory" />
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[
+        { label: 'Directory', href: '/directory' },
+        { label: project.name },
+      ]} />
 
       {/* ── Hero Header ── */}
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
@@ -221,35 +227,38 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-2 shrink-0">
-                  {project.website && (
-                    <a
-                      href={project.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary text-sm gap-1.5"
+                <div className="flex flex-col gap-2 shrink-0 items-end">
+                  <div className="flex gap-2">
+                    {project.website && (
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary text-sm gap-1.5"
+                      >
+                        <Globe className="w-3.5 h-3.5" />
+                        Website
+                      </a>
+                    )}
+                    <Link
+                      href={`/submit/update/${project.slug}`}
+                      className="btn-secondary text-sm gap-1.5"
                     >
-                      <Globe className="w-3.5 h-3.5" />
-                      Website
-                    </a>
-                  )}
-                  <Link
-                    href={`/submit/update/${project.slug}`}
-                    className="btn-secondary text-sm gap-1.5"
-                  >
-                    <Pencil className="w-3.5 h-3.5" />
-                    Update
-                  </Link>
-                  {project.twitter && (
-                    <a href={project.twitter} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
-                      <Twitter className="w-4 h-4" />
-                    </a>
-                  )}
-                  {project.linkedin && (
-                    <a href={project.linkedin} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                  )}
+                      <Pencil className="w-3.5 h-3.5" />
+                      Update
+                    </Link>
+                    {project.twitter && (
+                      <a href={project.twitter} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
+                        <Twitter className="w-4 h-4" />
+                      </a>
+                    )}
+                    {project.linkedin && (
+                      <a href={project.linkedin} target="_blank" rel="noopener noreferrer" className="btn-ghost w-9 h-9 p-0">
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+                  <ShareButtons url={`/p/${project.slug}`} title={project.name} description={project.tagline} />
                 </div>
               </div>
 
@@ -618,6 +627,45 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      )}
+
+      {/* ── Funding Stage Peers ── */}
+      {project.funding_stage && fundingStagePeers.length > 0 && (
+        <div className="mt-8 pt-8 border-t border-border/30">
+          <div className="flex items-baseline justify-between mb-5">
+            <h2 className="text-lg font-medium text-text-primary">
+              Other {FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]} Companies
+            </h2>
+            <Link
+              href={`/directory?stage=${project.funding_stage}`}
+              className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
+            >
+              View all
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {fundingStagePeers.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/p/${p.slug}`}
+                className="group bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-all hover:shadow-soft"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <CompanyLogo project={p} size="sm" />
+                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                    {p.name}
+                  </p>
+                </div>
+                {p.funding && p.funding > 0 && (
+                  <span className="text-xs text-text-muted tabular-nums">
+                    {formatFunding(p.funding)}
+                  </span>
+                )}
+              </Link>
+            ))}
           </div>
         </div>
       )}

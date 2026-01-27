@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import {
   layers,
   segments,
@@ -110,9 +111,10 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
     <JsonLd data={faqJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
-      <Link href="/directory" className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm tracking-wide">
-        <ArrowLeft className="w-4 h-4" /> Back to Directory
-      </Link>
+      <Breadcrumbs items={[
+        { label: 'Directory', href: '/directory' },
+        { label: layer.name },
+      ]} />
 
       {/* Hero */}
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-8">

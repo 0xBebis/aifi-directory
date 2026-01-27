@@ -21,6 +21,7 @@ import {
 } from '@/lib/data';
 import { AIType, Region, FundingStage } from '@/types';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Financial AI Statistics & Market Data | AIFI',
@@ -104,6 +105,9 @@ export default function StatsPage() {
     <>
     <JsonLd data={faqJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
+      <Breadcrumbs items={[
+        { label: 'Statistics' },
+      ]} />
       <p className="label-refined mb-2 text-accent">Market Data</p>
       <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary mb-3">
         Financial AI Statistics

@@ -12,9 +12,13 @@ import {
   getLayerCounts,
   getSegment,
   getLayer,
+  getRecentlyFunded,
+  formatFunding,
+  BUILD_DATE,
 } from '@/lib/data';
 import LandingHero from '@/components/home/LandingHero';
 import SiteNav from '@/components/home/SiteNav';
+import RecentActivity from '@/components/home/RecentActivity';
 import SegmentShowcase from '@/components/home/SegmentShowcase';
 import FeaturedCompanies from '@/components/home/FeaturedCompanies';
 import TechStack from '@/components/home/TechStack';
@@ -50,9 +54,23 @@ export default function Home() {
   const segmentStats = getSegmentStats();
   const layerCounts = getLayerCounts();
 
+  const recentlyFunded = getRecentlyFunded(4);
+  const recentCompanies = recentlyFunded.map(p => ({
+    name: p.name,
+    slug: p.slug,
+    fundingDisplay: p.funding ? formatFunding(p.funding) : '',
+  }));
+  const recentActivityCompanies = recentlyFunded.map(p => ({
+    name: p.name,
+    slug: p.slug,
+    logo: p.logo,
+    fundingDisplay: p.funding ? formatFunding(p.funding) : '',
+    fundingDate: p.last_funding_date || '',
+  }));
+
   return (
     <main className="min-h-screen">
-      <LandingHero />
+      <LandingHero companyCount={companyCount} recentCompanies={recentCompanies} />
       <SiteNav
         companyCount={companyCount}
         segmentCount={segmentCount}
@@ -62,6 +80,7 @@ export default function Home() {
         activeAgentCount={activeAgentCount}
         totalCapabilities={totalCapabilities}
       />
+      <RecentActivity companies={recentActivityCompanies} buildDate={BUILD_DATE} />
       <SegmentShowcase segmentStats={segmentStats} />
       <FeaturedCompanies
         companies={topCompanies}

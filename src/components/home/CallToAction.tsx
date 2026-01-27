@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Plus, ArrowRight } from 'lucide-react';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export default function CallToAction() {
   return (
@@ -36,6 +37,12 @@ export default function CallToAction() {
               >
                 Learn More
               </Link>
+            </div>
+
+            {/* Newsletter */}
+            <div className="mt-10 pt-8 border-t border-border/30">
+              <p className="text-sm text-text-muted mb-4">Or get weekly updates delivered to your inbox</p>
+              <NewsletterForm variant="stacked" />
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import {
   Star, MessageSquare, ShieldCheck, Calendar, Clock,
   Cpu, Zap, Link2,
 } from 'lucide-react';
-import BackButton from '@/components/BackButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import {
   agents,
   getAgent,
@@ -139,8 +139,11 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
     <JsonLd data={softwareJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
-      {/* Back Link */}
-      <BackButton fallbackHref="/agents" fallbackLabel="Back to Registry" />
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[
+        { label: 'Agents', href: '/agents' },
+        { label: agent.name },
+      ]} />
 
       {/* ── Hero Header ── */}
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">

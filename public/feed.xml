@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AIFI — The Financial AI Landscape</title>
+    <link>https://aifimap.com</link>
+    <description>Recently funded companies at the intersection of AI and financial services.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jan 2026 21:22:44 GMT</lastBuildDate>
+    <atom:link href="https://aifimap.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ramp</title>
+      <link>https://aifimap.com/p/ramp</link>
+      <guid>https://aifimap.com/p/ramp</guid>
+      <description>AI-powered corporate cards and spend management</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Feedzai</title>
+      <link>https://aifimap.com/p/feedzai</link>
+      <guid>https://aifimap.com/p/feedzai</guid>
+      <description>AI-native fraud and financial crime prevention platform for major banks</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Resistant AI</title>
+      <link>https://aifimap.com/p/resistant-ai</link>
+      <guid>https://aifimap.com/p/resistant-ai</guid>
+      <description>AI models for document fraud and financial crime prevention</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Greenlite</title>
+      <link>https://aifimap.com/p/greenlite</link>
+      <guid>https://aifimap.com/p/greenlite</guid>
+      <description>AI agents that accelerate AML reviews</description>
+      <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hawk AI</title>
+      <link>https://aifimap.com/p/hawk-ai</link>
+      <guid>https://aifimap.com/p/hawk-ai</guid>
+      <description>AI-powered AML and fraud detection for banks and fintechs</description>
+      <pubDate>Tue, 01 Apr 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Flagright</title>
+      <link>https://aifimap.com/p/flagright</link>
+      <guid>https://aifimap.com/p/flagright</guid>
+      <description>AI-native transaction monitoring and AML compliance</description>
+      <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>iDenfy</title>
+      <link>https://aifimap.com/p/idenfy</link>
+      <guid>https://aifimap.com/p/idenfy</guid>
+      <description>AI-driven identity verification with 4D biometric detection</description>
+      <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Brex</title>
+      <link>https://aifimap.com/p/brex</link>
+      <guid>https://aifimap.com/p/brex</guid>
+      <description>AI corporate card and financial stack for startups</description>
+      <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Sardine</title>
+      <link>https://aifimap.com/p/sardine</link>
+      <guid>https://aifimap.com/p/sardine</guid>
+      <description>AI risk platform for fraud, credit, and compliance</description>
+      <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Zest AI</title>
+      <link>https://aifimap.com/p/zest-ai</link>
+      <guid>https://aifimap.com/p/zest-ai</guid>
+      <description>AI-automated underwriting for credit unions and banks</description>
+      <pubDate>Sun, 01 Dec 2024 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Tookitaki</title>
+      <link>https://aifimap.com/p/tookitaki</link>
+      <guid>https://aifimap.com/p/tookitaki</guid>
+      <description>AI with community-driven intelligence for AML and fraud</description>
+      <pubDate>Tue, 01 Oct 2024 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Scienaptic AI</title>
+      <link>https://aifimap.com/p/scienaptic-ai</link>
+      <guid>https://aifimap.com/p/scienaptic-ai</guid>
+      <description>AI credit decisioning platform for financial institutions</description>
+      <pubDate>Sun, 01 Sep 2024 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Monzo</title>
+      <link>https://aifimap.com/p/monzo</link>
+      <guid>https://aifimap.com/p/monzo</guid>
+      <description>AI fraud detection and budgeting</description>
+      <pubDate>Mon, 01 Jan 2024 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Unit21</title>
+      <link>https://aifimap.com/p/unit21</link>
+      <guid>https://aifimap.com/p/unit21</guid>
+      <description>AI-powered fraud and AML platform</description>
+      <pubDate>Thu, 01 Jun 2023 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Darwinium</title>
+      <link>https://aifimap.com/p/darwinium</link>
+      <guid>https://aifimap.com/p/darwinium</guid>
+      <description>Real-time fraud detection across digital interactions</description>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Lendbuzz</title>
+      <link>https://aifimap.com/p/lendbuzz</link>
+      <guid>https://aifimap.com/p/lendbuzz</guid>
+      <description>AI auto financing for underserved populations</description>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Stripe</title>
+      <link>https://aifimap.com/p/stripe</link>
+      <guid>https://aifimap.com/p/stripe</guid>
+      <description>AI-powered payments platform with fraud detection</description>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>TRM Labs</title>
+      <link>https://aifimap.com/p/trm-labs</link>
+      <guid>https://aifimap.com/p/trm-labs</guid>
+      <description>Blockchain analytics for crypto fraud/AML</description>
+      <pubDate>Tue, 01 Nov 2022 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Alloy</title>
+      <link>https://aifimap.com/p/alloy</link>
+      <guid>https://aifimap.com/p/alloy</guid>
+      <description>Identity decisioning platform with 160+ data sources</description>
+      <pubDate>Thu, 01 Sep 2022 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Chainalysis</title>
+      <link>https://aifimap.com/p/chainalysis</link>
+      <guid>https://aifimap.com/p/chainalysis</guid>
+      <description>Blockchain analysis and crypto compliance</description>
+      <pubDate>Sun, 01 May 2022 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Socure</title>
+      <link>https://aifimap.com/p/socure</link>
+      <guid>https://aifimap.com/p/socure</guid>
+      <description>Digital identity verification and fraud prevention</description>
+      <pubDate>Mon, 01 Nov 2021 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ocrolus</title>
+      <link>https://aifimap.com/p/ocrolus</link>
+      <guid>https://aifimap.com/p/ocrolus</guid>
+      <description>AI document automation for lending decisions</description>
+      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Betterment</title>
+      <link>https://aifimap.com/p/betterment</link>
+      <guid>https://aifimap.com/p/betterment</guid>
+      <description>Pioneer robo-advisor with AI portfolio management</description>
+      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Wealthfront</title>
+      <link>https://aifimap.com/p/wealthfront</link>
+      <guid>https://aifimap.com/p/wealthfront</guid>
+      <description>Automated investment platform with tax optimization</description>
+      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>MX</title>
+      <link>https://aifimap.com/p/mx</link>
+      <guid>https://aifimap.com/p/mx</guid>
+      <description>AI-powered financial data enhancement</description>
+      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

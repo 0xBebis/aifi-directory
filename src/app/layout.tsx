@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import './globals.css';
 import Nav from '@/components/Nav';
 import JsonLd from '@/components/JsonLd';
+import GlobalSearch from '@/components/GlobalSearch';
+import ScrollToTop from '@/components/ScrollToTop';
+import NewsletterForm from '@/components/NewsletterForm';
+import { getSearchableItems } from '@/lib/data';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aifimap.com'),
@@ -15,6 +20,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: './',
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
   },
   // Search engine verification — replace with actual codes after registering
   verification: {
@@ -43,6 +51,7 @@ export default function RootLayout({
           sameAs: ['https://github.com/0xBebis/aifi-directory'],
         }} />
         <Nav />
+        <GlobalSearch items={getSearchableItems()} />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-border/30 mt-auto">
           <div className="max-w-7xl mx-auto px-8 py-12">
@@ -88,12 +97,26 @@ export default function RootLayout({
                 <div className="flex flex-col gap-2 text-sm">
                   <Link href="/submit" className="text-text-muted hover:text-text-primary transition-colors">Submit a Company</Link>
                   <a href="https://github.com/0xBebis/aifi-directory" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-text-primary transition-colors">GitHub</a>
+                  <Link href="/feed.xml" className="text-text-muted hover:text-text-primary transition-colors">RSS Feed</Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="mt-8 pt-8 border-t border-border/20">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold text-text-primary">Stay Updated</p>
+                  <p className="text-xs text-text-muted mt-0.5">Weekly digest of AI + Finance</p>
+                </div>
+                <div className="sm:max-w-sm w-full">
+                  <NewsletterForm variant="inline" />
                 </div>
               </div>
             </div>
 
             {/* Bottom bar */}
-            <div className="mt-10 pt-6 border-t border-border/20 flex items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-border/20 flex items-center justify-between">
               <span className="text-xs text-text-faint">
                 2025 AIFI. All rights reserved.
               </span>
@@ -103,6 +126,13 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <ScrollToTop />
+        <Script
+          defer
+          data-domain="aifimap.com"
+          src="https://plausible.io/js/script.outbound-links.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

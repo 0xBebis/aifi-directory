@@ -644,3 +644,77 @@ export function getSimilarAgents(agent: Agent, limit: number = 3): Agent[] {
     })
     .slice(0, limit);
 }
+
+// ── Global Search ──
+
+export interface SearchableItem {
+  name: string;
+  description: string;
+  href: string;
+  category: 'Company' | 'Segment' | 'Layer' | 'AI Type' | 'Page';
+}
+
+export function getSearchableItems(): SearchableItem[] {
+  const items: SearchableItem[] = [];
+
+  for (const p of projects) {
+    items.push({
+      name: p.name,
+      description: p.tagline,
+      href: `/p/${p.slug}`,
+      category: 'Company',
+    });
+  }
+
+  for (const s of segments) {
+    items.push({
+      name: s.name,
+      description: s.description,
+      href: `/segments/${s.slug}`,
+      category: 'Segment',
+    });
+  }
+
+  for (const l of layers) {
+    items.push({
+      name: l.name,
+      description: l.description,
+      href: `/layers/${l.slug}`,
+      category: 'Layer',
+    });
+  }
+
+  for (const t of aiTypes) {
+    items.push({
+      name: AI_TYPE_LABELS[t],
+      description: AI_TYPE_DESCRIPTIONS[t],
+      href: `/ai-types/${t}`,
+      category: 'AI Type',
+    });
+  }
+
+  const pages = [
+    { name: 'Company Directory', description: 'Browse all AI + Finance companies', href: '/directory' },
+    { name: 'AI Agent Registry', description: 'Autonomous agents in financial services', href: '/agents' },
+    { name: 'Thesis', description: 'The history and future of financial AI', href: '/about' },
+    { name: 'Statistics', description: 'Funding, segments, and AI type breakdowns', href: '/stats' },
+    { name: 'Recently Funded', description: 'Latest funding rounds in financial AI', href: '/recent' },
+    { name: 'Glossary', description: 'Key terms and definitions for financial AI', href: '/glossary' },
+    { name: 'Submit a Company', description: 'Suggest a company for the AIFI directory', href: '/submit' },
+  ];
+  for (const page of pages) {
+    items.push({ ...page, category: 'Page' });
+  }
+
+  return items;
+}
+
+// ── Funding Stage Peers ──
+
+export function getCompaniesAtSameFundingStage(project: Project, limit: number = 4): Project[] {
+  if (!project.funding_stage || project.funding_stage === 'undisclosed') return [];
+  return projects
+    .filter(p => p.slug !== project.slug && p.funding_stage === project.funding_stage)
+    .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+    .slice(0, limit);
+}

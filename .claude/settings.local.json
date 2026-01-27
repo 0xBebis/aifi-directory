@@ -18,7 +18,9 @@
       "Bash(npm run validate:*)",
       "Bash(dir /s \"C:\\\\Users\\\\Ethan\\\\claude-mode\\\\aifi\\\\src\")",
       "WebFetch(domain:lookup.icann.org)",
-      "WebFetch(domain:who.is)"
+      "WebFetch(domain:who.is)",
+      "WebFetch(domain:www.brex.com)",
+      "WebFetch(domain:www.sardine.ai)"
     ]
   }
 }

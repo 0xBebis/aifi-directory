@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -49,6 +49,16 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-search'))}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors"
+              aria-label="Search"
+            >
+              <Search className="w-4 h-4" />
+              <kbd className="hidden lg:inline-flex px-1.5 py-0.5 text-2xs text-text-faint bg-surface-2 border border-border rounded font-mono">
+                Ctrl K
+              </kbd>
+            </button>
             <Link
               href="/submit"
               className={`ml-3 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 border ${
@@ -76,6 +86,16 @@ export default function Nav() {
       {mobileOpen && (
         <div className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl">
           <div className="px-8 py-4 space-y-1">
+            <button
+              onClick={() => {
+                setMobileOpen(false);
+                window.dispatchEvent(new Event('open-search'));
+              }}
+              className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors"
+            >
+              <Search className="w-4 h-4" />
+              Search
+            </button>
             {navLinks.map((link) => (
               <Link
                 key={link.href}

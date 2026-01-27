@@ -11,6 +11,7 @@ import {
 } from '@/lib/data';
 import { AIType } from '@/types';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Financial AI Glossary — Key Terms & Definitions | AIFI',
@@ -256,6 +257,9 @@ export default function GlossaryPage() {
     <JsonLd data={faqJsonLd} />
     <JsonLd data={definedTermJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
+      <Breadcrumbs items={[
+        { label: 'Glossary' },
+      ]} />
       <p className="label-refined mb-2 text-accent">Reference</p>
       <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary mb-3">
         Financial AI Glossary

@@ -13,6 +13,7 @@ import {
 import { FundingStage } from '@/types';
 import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Recently Funded AI Finance Companies | AIFI',
@@ -77,6 +78,9 @@ export default function RecentPage() {
     <JsonLd data={faqJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
+      <Breadcrumbs items={[
+        { label: 'Recently Funded' },
+      ]} />
       <p className="label-refined mb-2 text-accent">Funding Activity</p>
       <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary mb-3">
         Recently Funded Companies

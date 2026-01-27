@@ -51,6 +51,7 @@
   {
     "slug": "sardine",
     "name": "Sardine",
+    "logo": "/logos/sardine.png",
     "tagline": "AI risk platform for fraud, credit, and compliance",
     "segment": "risk",
     "layer": "models",
@@ -1111,6 +1112,7 @@
   {
     "slug": "brex",
     "name": "Brex",
+    "logo": "/logos/brex.png",
     "tagline": "AI corporate card and financial stack for startups",
     "segment": "banking",
     "layer": "applications",

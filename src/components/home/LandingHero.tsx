@@ -1,8 +1,21 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { Search } from 'lucide-react';
 
-export default function LandingHero() {
+interface RecentCompany {
+  name: string;
+  slug: string;
+  fundingDisplay: string;
+}
+
+interface LandingHeroProps {
+  companyCount: number;
+  recentCompanies: RecentCompany[];
+}
+
+export default function LandingHero({ companyCount, recentCompanies }: LandingHeroProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -42,13 +55,62 @@ export default function LandingHero() {
 
           {/* Subheadline */}
           <p
-            className={`text-lg sm:text-xl text-text-muted max-w-2xl leading-relaxed mb-4 transition-all duration-1000 delay-100 ease-out ${
+            className={`text-lg sm:text-xl text-text-muted max-w-2xl leading-relaxed mb-8 transition-all duration-1000 delay-100 ease-out ${
               mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            A curated index of companies and autonomous agents building
+            A curated index of {companyCount} companies and autonomous agents building
             the future of finance with artificial intelligence.
           </p>
+
+          {/* Search bar button */}
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-search'))}
+            className={`w-full max-w-md flex items-center gap-3 px-4 py-3 rounded-xl bg-surface border border-border hover:border-accent/30 cursor-text group mb-8 transition-all duration-1000 delay-200 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <Search className="w-5 h-5 text-text-muted group-hover:text-accent transition-colors" />
+            <span className="flex-1 text-left text-sm text-text-faint">Search companies, segments, pages...</span>
+            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-1 text-2xs text-text-faint bg-surface-2 border border-border rounded-md font-mono">
+              Ctrl K
+            </kbd>
+          </button>
+
+          {/* Recently funded strip */}
+          {recentCompanies.length > 0 && (
+            <div
+              className={`flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm transition-all duration-1000 delay-300 ease-out ${
+                mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
+              <span className="text-text-faint font-medium">Recently Funded</span>
+              <span className="text-border">|</span>
+              {recentCompanies.map((c, i) => (
+                <span key={c.slug} className="inline-flex items-center">
+                  <Link
+                    href={`/p/${c.slug}`}
+                    className="text-text-muted hover:text-accent transition-colors"
+                  >
+                    {c.name}
+                    {c.fundingDisplay && (
+                      <span className="text-text-faint ml-1">({c.fundingDisplay})</span>
+                    )}
+                  </Link>
+                  {i < recentCompanies.length - 1 && (
+                    <span className="text-border mx-1.5">&middot;</span>
+                  )}
+                </span>
+              ))}
+              <span className="text-border ml-0.5">|</span>
+              <Link
+                href="/recent"
+                className="text-accent hover:text-accent-hover transition-colors font-medium"
+              >
+                See all &rarr;
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>
