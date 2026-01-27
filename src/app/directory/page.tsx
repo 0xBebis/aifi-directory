@@ -1,79 +1,61 @@
-'use client';
+import { Metadata } from 'next';
+import {
+  projects,
+  segments,
+  layers,
+  getTotalFunding,
+  getAITypeStats,
+} from '@/lib/data';
+import DirectoryHero from '@/components/directory/DirectoryHero';
+import AITypeShowcase from '@/components/directory/AITypeShowcase';
+import DirectoryBrowser from '@/components/DirectoryBrowser';
 
-import { useState, useMemo } from 'react';
-import { projects, segments, layers } from '@/lib/data';
-import MarketMatrix from '@/components/MarketMatrix';
-import ProjectTable from '@/components/ProjectTable';
-import { AIType } from '@/types';
+export const metadata: Metadata = {
+  title: 'Directory | AIFI',
+  description: 'Browse the comprehensive directory of AI + Finance companies across segments, layers, and AI types.',
+};
 
 export default function DirectoryPage() {
-  const [segmentFilters, setSegmentFilters] = useState<string[]>([]);
-  const [layerFilters, setLayerFilters] = useState<string[]>([]);
-  const [aiTypeFilters, setAiTypeFilters] = useState<AIType[]>([]);
-
-  // Filter projects based on selections
-  const filteredProjects = useMemo(() => {
-    let result = projects;
-
-    // Filter by AI types
-    if (aiTypeFilters.length > 0) {
-      result = result.filter(p => p.ai_types?.some(t => aiTypeFilters.includes(t)));
-    }
-
-    return result;
-  }, [aiTypeFilters]);
-
-  const handleMatrixFilterChange = (segs: string[], lays: string[], ais: AIType[]) => {
-    setSegmentFilters(segs);
-    setLayerFilters(lays);
-    setAiTypeFilters(ais);
-  };
-
-  // For ProjectTable compatibility (single segment/layer filter)
-  const segmentFilter = segmentFilters.length === 1 ? segmentFilters[0] : segmentFilters.length > 0 ? segmentFilters[0] : null;
-  const layerFilter = layerFilters.length === 1 ? layerFilters[0] : layerFilters.length > 0 ? layerFilters[0] : null;
-
-  const handleTableFilterChange = (segment: string | null, layer: string | null) => {
-    setSegmentFilters(segment ? [segment] : []);
-    setLayerFilters(layer ? [layer] : []);
-  };
+  const totalFunding = getTotalFunding();
+  const aiTypeStats = getAITypeStats();
 
   return (
-    <div className="max-w-7xl mx-auto px-8 py-10">
-      {/* Editorial Header */}
-      <div className="mb-8">
-        <p className="label-refined mb-3 text-accent">
-          The Index
-        </p>
-        <h1 className="headline-display mb-4">
-          AIFi Directory
-        </h1>
-        <p className="text-lg text-text-secondary max-w-xl leading-relaxed">
-          Tracking {projects.length} companies building at the intersection of
-          artificial intelligence and financial services.
-        </p>
-      </div>
-
-      {/* Market Matrix */}
-      <div className="mb-10">
-        <MarketMatrix
-          projects={filteredProjects}
-          onFilterChange={handleMatrixFilterChange}
-          activeSegments={segmentFilters}
-          activeLayers={layerFilters}
-          activeAiTypes={aiTypeFilters}
-        />
-      </div>
-
-      {/* Project Table */}
-      <ProjectTable
-        projects={filteredProjects}
-        segments={segments}
-        layers={layers}
-        segmentFilter={segmentFilter}
-        layerFilter={layerFilter}
-        onFilterChange={handleTableFilterChange}
+    <main className="min-h-screen">
+      {/* Hero */}
+      <DirectoryHero
+        companyCount={projects.length}
+        segmentCount={segments.length}
+        layerCount={layers.length}
+        totalFunding={totalFunding}
       />
-    </div>
+
+      {/* AI Type Showcase */}
+      <AITypeShowcase aiTypeStats={aiTypeStats} />
+
+      {/* Browse Section */}
+      <section id="browse" className="py-16 px-8 scroll-mt-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Section divider */}
+          <div className="border-t border-border/30 mb-12" />
+
+          <div className="mb-8">
+            <p className="label-refined text-accent mb-3">Explore</p>
+            <h2 className="headline-section mb-3">
+              Market Map
+            </h2>
+            <p className="text-text-muted text-[0.9375rem] leading-relaxed max-w-2xl">
+              Interactive market matrix and full company directory.
+              {projects.length > 0 && ` ${projects.length} companies across ${segments.length} segments and ${layers.length} layers.`}
+            </p>
+          </div>
+
+          <DirectoryBrowser
+            projects={projects}
+            segments={segments}
+            layers={layers}
+          />
+        </div>
+      </section>
+    </main>
   );
 }

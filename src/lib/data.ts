@@ -301,6 +301,32 @@ export {
   PROTOCOL_LABELS, PROTOCOL_COLORS,
 };
 
+// Directory page helpers
+
+export function getAITypeStats(): Array<{
+  type: AIType;
+  label: string;
+  color: string;
+  description: string;
+  count: number;
+  topCompanies: Project[];
+}> {
+  return aiTypes.map(type => {
+    const matching = projects.filter(p => p.ai_types?.includes(type));
+    return {
+      type,
+      label: AI_TYPE_LABELS[type],
+      color: AI_TYPE_COLORS[type],
+      description: AI_TYPE_DESCRIPTIONS[type],
+      count: matching.length,
+      topCompanies: matching
+        .filter(p => p.funding && p.funding > 0)
+        .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+        .slice(0, 3),
+    };
+  }).filter(s => s.count > 0);
+}
+
 // Project page helpers
 
 export function formatValuation(amount: number): string {

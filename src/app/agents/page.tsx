@@ -8,7 +8,6 @@ import {
 } from '@/lib/data';
 import AgentHero from '@/components/agents/AgentHero';
 import ProtocolShowcase from '@/components/agents/ProtocolShowcase';
-import FeaturedAgent from '@/components/agents/FeaturedAgent';
 import AgentFilters from '@/components/AgentFilters';
 
 export const metadata: Metadata = {
@@ -21,12 +20,6 @@ export default function AgentsPage() {
   const protocolStats = getAgentProtocolStats();
   const uniqueProtocols = new Set(agents.flatMap(a => a.protocols));
   const totalCapabilities = getTotalAgentCapabilities();
-
-  // Sort agents for featured section: active first, then by last activity
-  const featuredAgents = [...agents].sort((a, b) => {
-    if (a.active !== b.active) return a.active ? -1 : 1;
-    return b.lastActivity - a.lastActivity;
-  });
 
   return (
     <main className="min-h-screen">
@@ -43,28 +36,6 @@ export default function AgentsPage() {
         protocolStats={protocolStats}
         protocolDescriptions={PROTOCOL_DESCRIPTIONS}
       />
-
-      {/* Featured Agents */}
-      <section className="py-16 px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="label-refined text-accent mb-4">Featured Agents</p>
-            <h2 className="headline-section mb-4">
-              Meet the Agents
-            </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              Financial AI agents with verified on-chain identities, declared capabilities,
-              and open communication protocols.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {featuredAgents.map((agent, i) => (
-              <FeaturedAgent key={agent.id} agent={agent} index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Browse All Section */}
       <section id="browse" className="py-16 px-8 scroll-mt-8">
