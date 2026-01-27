@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { segments, layers } from '@/lib/data';
-import { COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, CompanyType, FundingStage, Project } from '@/types';
+import { COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, AI_TYPE_LABELS, REGION_LABELS, EMPLOYEE_RANGE_LABELS, CompanyType, FundingStage, AIType, Region, EmployeeRange, Project } from '@/types';
 
 const GITHUB_REPO = '0xBebis/aifi-directory';
 
@@ -26,6 +26,9 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     hq_country: project.hq_country || '',
     hq_city: project.hq_city || '',
     crypto: project.crypto || false,
+    ai_types: (project.ai_types || []) as AIType[],
+    region: (project.region || '') as Region | '',
+    employees: (project.employees || '') as EmployeeRange | '',
     twitter: project.twitter || '',
     linkedin: project.linkedin || '',
     updateReason: '',
@@ -41,6 +44,15 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+    }));
+  };
+
+  const toggleAiType = (type: AIType) => {
+    setFormData(prev => ({
+      ...prev,
+      ai_types: prev.ai_types.includes(type)
+        ? prev.ai_types.filter(t => t !== type)
+        : [...prev.ai_types, type]
     }));
   };
 
@@ -82,8 +94,20 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     checkField('hq_country', project.hq_country, formData.hq_country);
     checkField('hq_city', project.hq_city, formData.hq_city);
     checkField('crypto', project.crypto, formData.crypto || null);
+    checkField('region', project.region, formData.region);
+    checkField('employees', project.employees, formData.employees);
     checkField('twitter', project.twitter, formData.twitter.replace(/^@/, '') || null);
     checkField('linkedin', project.linkedin, formData.linkedin);
+
+    // ai_types requires array comparison
+    const origTypes = JSON.stringify((project.ai_types || []).sort());
+    const newTypes = JSON.stringify([...formData.ai_types].sort());
+    if (origTypes !== newTypes) {
+      changes['ai_types'] = { from: project.ai_types || [], to: formData.ai_types };
+    }
+    if (formData.ai_types.length > 0) {
+      updatedProject.ai_types = formData.ai_types;
+    }
 
     // Ensure required fields are in the updated project
     updatedProject.tagline = formData.tagline;
@@ -221,6 +245,21 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
           </div>
 
           <div>
+            <label htmlFor="description" className={labelStyles}>
+              Description
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              rows={3}
+              value={formData.description}
+              onChange={handleChange}
+              className={inputStyles}
+              placeholder="A detailed description of what the company does..."
+            />
+          </div>
+
+          <div>
             <label htmlFor="summary" className={labelStyles}>
               Summary
             </label>
@@ -282,6 +321,29 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
                 ))}
               </select>
             </div>
+          </div>
+
+          <div>
+            <label className={labelStyles}>
+              AI Technologies
+            </label>
+            <div className="flex flex-wrap gap-2 mt-1">
+              {(Object.entries(AI_TYPE_LABELS) as [AIType, string][]).map(([value, label]) => (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => toggleAiType(value)}
+                  className={`px-3 py-1.5 rounded-md text-sm border transition-colors ${
+                    formData.ai_types.includes(value)
+                      ? 'bg-accent/15 border-accent/40 text-accent'
+                      : 'bg-surface-2 border-border text-text-muted hover:border-border-muted'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-text-faint mt-1.5">Select all AI/ML technologies that apply</p>
           </div>
 
           <div className="flex items-center gap-3">
@@ -393,6 +455,48 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
                 className={inputStyles}
                 placeholder="San Francisco"
               />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="region" className={labelStyles}>
+                Region
+              </label>
+              <select
+                id="region"
+                name="region"
+                value={formData.region}
+                onChange={handleChange}
+                className={selectStyles}
+              >
+                <option value="">Select...</option>
+                {Object.entries(REGION_LABELS).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="employees" className={labelStyles}>
+                Employees
+              </label>
+              <select
+                id="employees"
+                name="employees"
+                value={formData.employees}
+                onChange={handleChange}
+                className={selectStyles}
+              >
+                <option value="">Select...</option>
+                {Object.entries(EMPLOYEE_RANGE_LABELS).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
