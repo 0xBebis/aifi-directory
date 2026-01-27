@@ -1,6 +1,14 @@
 import { Metadata } from 'next';
-import { Bot, Activity, Star, Network } from 'lucide-react';
-import { agents, getActiveAgents, formatReputationScore } from '@/lib/data';
+import {
+  agents,
+  getActiveAgents,
+  getAgentProtocolStats,
+  getTotalAgentCapabilities,
+  PROTOCOL_DESCRIPTIONS,
+} from '@/lib/data';
+import AgentHero from '@/components/agents/AgentHero';
+import ProtocolShowcase from '@/components/agents/ProtocolShowcase';
+import FeaturedAgent from '@/components/agents/FeaturedAgent';
 import AgentFilters from '@/components/AgentFilters';
 
 export const metadata: Metadata = {
@@ -10,67 +18,74 @@ export const metadata: Metadata = {
 
 export default function AgentsPage() {
   const activeCount = getActiveAgents().length;
-  const agentsWithRep = agents.filter(a => a.reputationScore !== null);
-  const avgRep = agentsWithRep.length > 0
-    ? agentsWithRep.reduce((sum, a) => sum + (a.reputationScore || 0), 0) / agentsWithRep.length
-    : null;
+  const protocolStats = getAgentProtocolStats();
   const uniqueProtocols = new Set(agents.flatMap(a => a.protocols));
+  const totalCapabilities = getTotalAgentCapabilities();
 
-  const stats = [
-    { label: 'Agents', value: agents.length.toString(), icon: Bot },
-    { label: 'Active', value: activeCount.toString(), icon: Activity },
-    { label: 'Avg Reputation', value: formatReputationScore(avgRep), icon: Star },
-    { label: 'Protocols', value: uniqueProtocols.size.toString(), icon: Network },
-  ];
+  // Sort agents for featured section: active first, then by last activity
+  const featuredAgents = [...agents].sort((a, b) => {
+    if (a.active !== b.active) return a.active ? -1 : 1;
+    return b.lastActivity - a.lastActivity;
+  });
 
   return (
-    <div className="max-w-7xl mx-auto px-8 py-10">
-      {/* Header */}
-      <div className="mb-8">
-        <p className="label-refined mb-2">The Registry</p>
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary mb-3">
-          Live Agents
-        </h1>
-        <p className="text-text-muted text-[0.9375rem] leading-relaxed max-w-2xl">
-          {agents.length > 0 ? (
-            <>
-              Browse {agents.length} financial AI agent{agents.length !== 1 ? 's' : ''} registered on the{' '}
-            </>
-          ) : (
-            <>
-              Discover financial AI agents registered on the{' '}
-            </>
-          )}
-          <a
-            href="https://eips.ethereum.org/EIPS/eip-8004"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            EIP-8004
-          </a>{' '}
-          Trustless Agent Registry. Filtered to agents relevant to finance, trading, risk, DeFi, and payments.
-        </p>
-      </div>
+    <main className="min-h-screen">
+      {/* Hero */}
+      <AgentHero
+        agentCount={agents.length}
+        activeCount={activeCount}
+        protocolCount={uniqueProtocols.size}
+        capabilityCount={totalCapabilities}
+      />
 
-      {/* Stats strip */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border rounded-xl overflow-hidden mb-8">
-        {stats.map((stat) => {
-          const Icon = stat.icon;
-          return (
-            <div key={stat.label} className="bg-surface p-4 sm:p-5 flex flex-col items-center text-center">
-              <Icon size={16} className="text-text-faint mb-2" />
-              <span className="text-2xl font-extrabold tracking-tight text-text-primary">
-                {stat.value}
-              </span>
-              <span className="text-xs text-text-faint mt-0.5">{stat.label}</span>
-            </div>
-          );
-        })}
-      </div>
+      {/* Protocol Showcase */}
+      <ProtocolShowcase
+        protocolStats={protocolStats}
+        protocolDescriptions={PROTOCOL_DESCRIPTIONS}
+      />
 
-      {/* Filters + Grid */}
-      <AgentFilters agents={agents} />
-    </div>
+      {/* Featured Agents */}
+      <section className="py-16 px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="label-refined text-accent mb-4">Featured Agents</p>
+            <h2 className="headline-section mb-4">
+              Meet the Agents
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              Financial AI agents with verified on-chain identities, declared capabilities,
+              and open communication protocols.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {featuredAgents.map((agent, i) => (
+              <FeaturedAgent key={agent.id} agent={agent} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Browse All Section */}
+      <section id="browse" className="py-16 px-8 scroll-mt-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Section divider */}
+          <div className="border-t border-border/30 mb-12" />
+
+          <div className="mb-8">
+            <p className="label-refined text-accent mb-3">Browse</p>
+            <h2 className="headline-section mb-3">
+              All Agents
+            </h2>
+            <p className="text-text-muted text-[0.9375rem] leading-relaxed max-w-2xl">
+              Search, filter, and sort across the full registry.
+              {agents.length > 0 && ` ${agents.length} agent${agents.length !== 1 ? 's' : ''} registered.`}
+            </p>
+          </div>
+
+          <AgentFilters agents={agents} />
+        </div>
+      </section>
+    </main>
   );
 }

@@ -100,14 +100,14 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
         className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm tracking-wide"
       >
         <ArrowLeft className="w-4 h-4" />
-        Back to Agents
+        Back to Registry
       </Link>
 
       {/* ── Hero Header ── */}
       <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
         {/* Accent gradient bar at top */}
         <div
-          className="h-1"
+          className="h-1.5"
           style={{
             background: `linear-gradient(90deg, ${categoryColor}, ${categoryColor}66, transparent)`,
           }}
@@ -120,7 +120,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-semibold text-text-primary tracking-tight">
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">
                     {agent.name}
                   </h1>
                   <p className="text-text-secondary mt-1.5 text-base leading-relaxed max-w-2xl line-clamp-3">
@@ -422,7 +422,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
       {similarAgents.length > 0 && (
         <div className="mt-8 pt-8 border-t border-border/30">
           <div className="flex items-baseline justify-between mb-5">
-            <h2 className="text-lg font-medium text-text-primary">Related Agents</h2>
+            <h2 className="text-lg font-semibold text-text-primary">Related Agents</h2>
             <Link
               href={`/agents?category=${agent.financeCategory}`}
               className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"

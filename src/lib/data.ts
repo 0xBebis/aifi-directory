@@ -460,6 +460,20 @@ export function getAgentEndpoints(agent: Agent): Array<{ label: string; url: str
   return endpoints;
 }
 
+export const PROTOCOL_DESCRIPTIONS: Record<AgentProtocol, string> = {
+  mcp: 'Structured tool, prompt, and resource interface for AI models',
+  a2a: 'Peer-to-peer agent communication with skill declarations',
+  oasf: 'Domain and skill taxonomy for agent discovery',
+  web: 'Standard HTTP/HTTPS web endpoints',
+  email: 'Email-based agent communication',
+};
+
+export function getTotalAgentCapabilities(): number {
+  return agents.reduce((sum, a) =>
+    sum + a.mcpTools.length + a.mcpPrompts.length + a.mcpResources.length
+    + a.a2aSkills.length + a.oasfSkills.length + a.oasfDomains.length, 0);
+}
+
 export function getSimilarAgents(agent: Agent, limit: number = 3): Agent[] {
   return agents
     .filter(a => a.id !== agent.id && a.financeCategory === agent.financeCategory)
