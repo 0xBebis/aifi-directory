@@ -721,7 +721,8 @@ export function getSearchableItems(): SearchableItem[] {
   const pages = [
     { name: 'Company Directory', description: 'Browse all AI + Finance companies', href: '/directory' },
     { name: 'AI Agent Registry', description: 'Autonomous agents in financial services', href: '/agents' },
-    { name: 'Thesis', description: 'The history and future of financial AI', href: '/about' },
+    { name: 'Thesis', description: 'The future of financial AI', href: '/about' },
+    { name: 'History', description: 'A brief history of financial AI', href: '/about/history' },
     { name: 'Statistics', description: 'Funding, segments, and AI type breakdowns', href: '/stats' },
     { name: 'Recently Funded', description: 'Latest funding rounds in financial AI', href: '/recent' },
     { name: 'Glossary', description: 'Key terms and definitions for financial AI', href: '/glossary' },

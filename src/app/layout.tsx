@@ -77,6 +77,7 @@ export default function RootLayout({
                 <p className="text-xs font-semibold uppercase tracking-wider text-text-faint mb-3">Learn</p>
                 <div className="flex flex-col gap-2 text-sm">
                   <Link href="/about" className="text-text-muted hover:text-text-primary transition-colors">Thesis</Link>
+                  <Link href="/about/history" className="text-text-muted hover:text-text-primary transition-colors">History</Link>
                   <Link href="/glossary" className="text-text-muted hover:text-text-primary transition-colors">Glossary</Link>
                   <Link href="/segments/trading" className="text-text-muted hover:text-text-primary transition-colors">Segments</Link>
                   <Link href="/ai-types/llm" className="text-text-muted hover:text-text-primary transition-colors">AI Types</Link>

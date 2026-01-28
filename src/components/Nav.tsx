@@ -10,11 +10,13 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isDirectory = pathname === '/directory' || pathname?.startsWith('/p/');
   const isAgents = pathname === '/agents' || pathname?.startsWith('/agents/');
+  const isAbout = pathname === '/about' || pathname?.startsWith('/about/');
 
   const navLinks = [
     { href: '/directory', label: 'Directory', active: isDirectory },
     { href: '/agents', label: 'Agents', active: isAgents },
     { href: '/about', label: 'Thesis', active: pathname === '/about' },
+    { href: '/about/history', label: 'History', active: pathname === '/about/history' },
   ];
 
   return (

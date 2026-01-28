@@ -5,13 +5,12 @@ import {
   segments,
   layers,
   getTotalFunding,
-  getAITypeStats,
+  formatFunding,
   BUILD_DATE,
 } from '@/lib/data';
-import DirectoryHero from '@/components/directory/DirectoryHero';
-import AITypeShowcase from '@/components/directory/AITypeShowcase';
 import DirectoryBrowser from '@/components/DirectoryBrowser';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI Finance Company Directory | AIFI',
@@ -33,7 +32,6 @@ export const metadata: Metadata = {
 
 export default function DirectoryPage() {
   const totalFunding = getTotalFunding();
-  const aiTypeStats = getAITypeStats();
 
   const itemListJsonLd = {
     '@context': 'https://schema.org',
@@ -52,48 +50,62 @@ export default function DirectoryPage() {
   return (
     <main className="min-h-screen">
       <JsonLd data={itemListJsonLd} />
-      {/* Hero */}
-      <DirectoryHero
-        companyCount={projects.length}
-        segmentCount={segments.length}
-        layerCount={layers.length}
-        totalFunding={totalFunding}
-      />
 
-      {/* AI Type Showcase */}
-      <AITypeShowcase aiTypeStats={aiTypeStats} />
+      {/* Page header */}
+      <div className="relative overflow-hidden border-b border-border">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
+        {/* Accent glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent/15 via-accent/5 to-transparent blur-[100px]" />
+        </div>
 
-      {/* Browse Section */}
-      <section id="browse" className="py-16 px-8 scroll-mt-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Section divider */}
-          <div className="border-t border-border/30 mb-12" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 pt-6 pb-8">
+        <Breadcrumbs items={[{ label: 'Directory' }]} />
 
-          <div className="mb-8">
-            <p className="label-refined text-accent mb-3">Explore</p>
-            <h2 className="headline-section mb-3">
-              Market Map
-            </h2>
-            <p className="text-text-muted text-[0.9375rem] leading-relaxed max-w-2xl">
-              Interactive market matrix and full company directory.
-              {projects.length > 0 && ` ${projects.length} companies across ${segments.length} segments and ${layers.length} layers.`}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary">
+              AI Finance Directory
+            </h1>
+            <p className="text-text-muted text-[0.9375rem] leading-relaxed mt-2 max-w-xl">
+              Interactive market map and full company directory.
             </p>
           </div>
 
-          <Suspense fallback={null}>
-            <DirectoryBrowser
-              projects={projects}
-              segments={segments}
-              layers={layers}
-            />
-          </Suspense>
-
-          {/* Freshness signal */}
-          <p className="text-xs text-text-faint mt-8 text-right">
-            Last updated: {BUILD_DATE}
-          </p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-text-muted flex-shrink-0">
+            <span>
+              <span className="font-semibold text-text-primary tabular-nums">{projects.length}</span> companies
+            </span>
+            <span className="text-border">&middot;</span>
+            <span>
+              <span className="font-semibold text-text-primary tabular-nums">{segments.length}</span> segments
+            </span>
+            <span className="text-border">&middot;</span>
+            <span>
+              <span className="font-semibold text-text-primary tabular-nums">{layers.length}</span> layers
+            </span>
+            <span className="text-border">&middot;</span>
+            <span>
+              <span className="font-semibold text-accent tabular-nums">{formatFunding(totalFunding)}</span> raised
+            </span>
+            <span className="text-border">&middot;</span>
+            <span className="text-text-faint text-xs">Updated {BUILD_DATE}</span>
+          </div>
         </div>
-      </section>
+        </div>
+      </div>
+
+      {/* Directory browser */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-8">
+        <Suspense fallback={null}>
+          <DirectoryBrowser
+            projects={projects}
+            segments={segments}
+            layers={layers}
+          />
+        </Suspense>
+      </div>
     </main>
   );
 }

@@ -7,7 +7,8 @@ const popularPages = [
   { href: '/recent', label: 'Recently Funded', description: 'Latest funding rounds', icon: Clock },
   { href: '/agents', label: 'AI Agents', description: 'Autonomous agents in financial services', icon: Bot },
   { href: '/glossary', label: 'Glossary', description: 'Key terms and definitions', icon: BookOpen },
-  { href: '/about', label: 'Thesis', description: 'The history and future of financial AI', icon: FileText },
+  { href: '/about', label: 'Thesis', description: 'The future of financial AI', icon: FileText },
+  { href: '/about/history', label: 'History', description: 'A brief history of financial AI', icon: Clock },
 ];
 
 export default function NotFound() {

@@ -26,7 +26,10 @@
       "WebFetch(domain:data.sec.gov)",
       "WebFetch(domain:blog.greenflux.us)",
       "WebFetch(domain:www.crunchbase.com)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:www.adenza.com)",
+      "Bash(ls:*)"
     ]
   }
 }

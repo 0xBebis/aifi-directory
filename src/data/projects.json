@@ -858,6 +858,7 @@
   {
     "slug": "kaaj",
     "name": "Kaaj",
+    "logo": "/logos/kaaj.jpg",
     "tagline": "Agentic AI for small-business lending automation",
     "segment": "lending",
     "layer": "applications",
@@ -1167,6 +1168,7 @@
   {
     "slug": "natural",
     "name": "Natural",
+    "logo": "/logos/natural.jpg",
     "tagline": "Payments infrastructure for AI agent transactions",
     "segment": "banking",
     "layer": "infrastructure",
@@ -1267,6 +1269,7 @@
   {
     "slug": "wealthfront",
     "name": "Wealthfront",
+    "logo": "/logos/wealthfront.png",
     "tagline": "Automated investment platform with tax optimization",
     "segment": "wealth",
     "layer": "applications",
@@ -1598,6 +1601,7 @@
   {
     "slug": "tickeron",
     "name": "Tickeron",
+    "logo": "/logos/tickeron.png",
     "tagline": "AI pattern recognition for trading",
     "segment": "trading",
     "layer": "applications",
@@ -1800,6 +1804,7 @@
   {
     "slug": "corvus-travelers",
     "name": "Corvus (Travelers)",
+    "logo": "/logos/corvus.jpg",
     "tagline": "AI-driven cyber insurance",
     "segment": "insurance",
     "layer": "models",
@@ -2058,6 +2063,7 @@
   {
     "slug": "corgi-insurance",
     "name": "Corgi Insurance",
+    "logo": "/logos/corgi-insurance.jpg",
     "tagline": "AI-native full-stack carrier for startups",
     "segment": "insurance",
     "layer": "applications",
@@ -2828,6 +2834,7 @@
   {
     "slug": "vaderai",
     "name": "VaderAI",
+    "logo": "/logos/vader-ai.png",
     "tagline": "AI agent in Virtuals ecosystem",
     "segment": "crypto",
     "layer": "automation",
@@ -2881,6 +2888,7 @@
   {
     "slug": "bittensor-tao",
     "name": "Bittensor (TAO)",
+    "logo": "/logos/bittensor.png",
     "tagline": "Decentralized AI network with subnet economy",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -2970,31 +2978,6 @@
     "last_funding_date": "2025-03"
   },
   {
-    "slug": "general-tao-ventures",
-    "name": "General TAO Ventures",
-    "tagline": "Subnet incubation and Project Rubicon bridge",
-    "segment": "wealth",
-    "layer": "applications",
-    "website": "https://generaltao.xyz",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "fair-launch",
-    "region": "americas",
-    "summary": "General TAO Ventures is a Bittensor subnet incubator founded Jan 2024 by Contango Digital team. Launched Project Rubicon (Nov 2025) with Chainlink CCIP to bridge subnet tokens to Base L2. Initial cohort: 17 subnets with ~$300K liquidity each. Partners: Chainlink, Base, Aerodrome. Endorsed by Bittensor founder Jacob Steeves. Vertically integrated: subnet incubation, validation, and mining.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "General TAO Team",
-        "title": "Community-led"
-      }
-    ],
-    "ai_types": [
-      "infrastructure"
-    ],
-    "last_funding_date": "2024-02"
-  },
-  {
     "slug": "yuma",
     "name": "Yuma",
     "tagline": "Subnet accelerator, Barry Silbert backed",
@@ -3023,7 +3006,7 @@
   },
   {
     "slug": "ai16zelizaos",
-    "name": "ai16z/ElizaOS",
+    "name": "ElizaOS",
     "tagline": "AI-managed investment DAO on Solana",
     "segment": "wealth",
     "layer": "automation",
@@ -3033,7 +3016,7 @@
     "company_type": "token",
     "funding_stage": "fair-launch",
     "region": "americas",
-    "summary": "ai16z/ElizaOS is a decentralized DAO on Solana managed by an AI agent named 'Marc AIndreessen.' Founded by Shaw Walters in October 2024, it grew to $2.5B market cap within months. Rebranded to ElizaOS in January 2025 after a16z requested the name change. The ElizaOS framework enables autonomous AI agents with multi-platform support (Discord, Twitter, DEXs) and is now used across dozens of crypto projects.",
+    "summary": "ElizaOS is a decentralized DAO on Solana managed by an AI agent named 'Marc AIndreessen.' Founded by Shaw Walters in October 2024, it grew to $2.5B market cap within months. Rebranded to ElizaOS in January 2025 after a16z requested the name change. The ElizaOS framework enables autonomous AI agents with multi-platform support (Discord, Twitter, DEXs) and is now used across dozens of crypto projects.",
     "crypto": true,
     "employees": "1-10",
     "founders": [
@@ -3045,32 +3028,6 @@
     "logo": "/logos/ai16zelizaos.png",
     "ai_types": [
       "agentic"
-    ],
-    "last_funding_date": "2024-10"
-  },
-  {
-    "slug": "eliza-framework",
-    "name": "Eliza Framework",
-    "tagline": "Open-source multi-agent simulation platform",
-    "segment": "crypto",
-    "layer": "infrastructure",
-    "website": "https://github.com/elizaos/eliza",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "fair-launch",
-    "region": "americas",
-    "summary": "Eliza Framework (ElizaOS) is an open-source TypeScript framework for creating multi-agent AI systems on blockchains. Reached #1 GitHub trending, surpassing Google Gemini and Uniswap interface. Agents maintain consistent personalities across Discord, X, and on-chain apps. Partnered with Stanford's Future of Digital Currency Initiative. Integrated with Chainlink CCIP (Nov 2025) for cross-chain operation on Ethereum, Base, BNB Chain, and Solana.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Shaw Walters",
-        "title": "Creator"
-      }
-    ],
-    "logo": "/logos/eliza-framework.png",
-    "ai_types": [
-      "infrastructure"
     ],
     "last_funding_date": "2024-10"
   },
@@ -3676,6 +3633,7 @@
   {
     "slug": "harvey",
     "name": "Harvey",
+    "logo": "/logos/harvey.webp",
     "tagline": "AI for legal and financial document analysis",
     "segment": "research",
     "layer": "applications",
@@ -3715,6 +3673,7 @@
   {
     "slug": "hebbia",
     "name": "Hebbia",
+    "logo": "/logos/hebbia.jpg",
     "tagline": "AI for financial document analysis",
     "segment": "research",
     "layer": "applications",
@@ -3787,6 +3746,7 @@
   {
     "slug": "fira",
     "name": "Fira",
+    "logo": "/logos/fira.jpg",
     "tagline": "AI financial research for analysts",
     "segment": "research",
     "layer": "applications",
@@ -3993,6 +3953,7 @@
   {
     "slug": "campfire",
     "name": "Campfire",
+    "logo": "/logos/campfire.jpg",
     "tagline": "AI-powered ERP replacement",
     "segment": "enterprise",
     "layer": "applications",
@@ -4410,6 +4371,7 @@
   {
     "slug": "citadel-securities",
     "name": "Citadel Securities",
+    "logo": "/logos/citadel-securities.webp",
     "tagline": "AI-powered market making",
     "segment": "trading",
     "layer": "automation",
@@ -4472,6 +4434,7 @@
   {
     "slug": "de-shaw",
     "name": "D.E. Shaw",
+    "logo": "/logos/d-e-shaw.jpg",
     "tagline": "AI quantitative strategies",
     "segment": "trading",
     "layer": "models",
@@ -4591,41 +4554,6 @@
       "predictive-ml"
     ],
     "last_funding_date": "1975"
-  },
-  {
-    "slug": "man-ahl",
-    "name": "Man AHL",
-    "tagline": "AI systematic strategies",
-    "segment": "trading",
-    "layer": "models",
-    "stage": "growth",
-    "website": "https://www.man.com/ahl",
-    "hq_country": "GB",
-    "hq_city": "London",
-    "company_type": "private",
-    "funding_stage": "late",
-    "region": "emea",
-    "summary": "Man AHL is the systematic trading arm of Man Group, the world's largest publicly traded hedge fund ($214B AUM as of late 2024). AHL manages $60B, running 100% systematic strategies across 500+ markets. Founded 1987 as one of the first quantitative CTAs. Adds 25-50 new markets annually, expanding into OTC instruments for diversification. ML algorithms helped avoid losses during China's 2015 market crash.",
-    "employees": "1001-5000",
-    "founders": [
-      {
-        "name": "Michael Adam",
-        "title": "Co-founder (AHL)"
-      },
-      {
-        "name": "David Harding",
-        "title": "Co-founder (AHL)"
-      },
-      {
-        "name": "Martin Lueck",
-        "title": "Co-founder (AHL)"
-      }
-    ],
-    "logo": "/logos/man-ahl.png",
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "1987"
   },
   {
     "slug": "worldquant",
@@ -4757,6 +4685,7 @@
   {
     "slug": "jumio",
     "name": "Jumio",
+    "logo": "/logos/jumio.png",
     "tagline": "AI-powered identity proofing",
     "segment": "risk",
     "layer": "models",
@@ -4797,6 +4726,7 @@
   {
     "slug": "persona",
     "name": "Persona",
+    "logo": "/logos/persona.avif",
     "tagline": "AI identity infrastructure platform",
     "segment": "risk",
     "layer": "models",
@@ -5037,6 +4967,7 @@
   {
     "slug": "c3ai",
     "name": "C3.ai",
+    "logo": "/logos/c3-ai.png",
     "tagline": "AI applications for enterprises",
     "segment": "research",
     "layer": "applications",
@@ -5070,6 +5001,7 @@
   {
     "slug": "palantir",
     "name": "Palantir",
+    "logo": "/logos/palantir.png",
     "tagline": "AI data platform for finance",
     "segment": "research",
     "layer": "data",
@@ -5251,6 +5183,7 @@
   {
     "slug": "gauntlet",
     "name": "Gauntlet",
+    "logo": "/logos/gauntlet.jpg",
     "tagline": "AI risk management for DeFi",
     "segment": "risk",
     "layer": "models",
@@ -5344,34 +5277,6 @@
     "last_funding_date": "2021-04"
   },
   {
-    "slug": "credora",
-    "name": "Credora",
-    "tagline": "AI credit assessment for crypto",
-    "segment": "lending",
-    "layer": "models",
-    "stage": "series_b",
-    "funding": 16000000,
-    "website": "https://credora.io",
-    "founded": 2019,
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "early",
-    "region": "americas",
-    "summary": "Credora (formerly X-Margin) provides privacy-preserving credit assessments for crypto markets. Backed by S&P Global and Coinbase Ventures ($14M+ raised). Monitors $4B+ in borrower assets across CeFi venues and 14 EVM chains plus Solana. Produced 200+ credit assessments that facilitated $1.5B in loans. Partnered with Clearpool, Obligate, and Flow. Founded 2019.",
-    "crypto": true,
-    "employees": "11-50",
-    "founders": [
-      {
-        "name": "Nuo Wang",
-        "title": "Founder & CEO"
-      }
-    ],
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "2023-04"
-  },
-  {
     "slug": "goldfinch",
     "name": "Goldfinch",
     "tagline": "AI credit scoring for emerging markets",
@@ -5407,6 +5312,7 @@
   {
     "slug": "arturo",
     "name": "Arturo",
+    "logo": "/logos/artuto.png",
     "tagline": "AI property intelligence for insurance",
     "segment": "insurance",
     "layer": "data",
@@ -5662,6 +5568,7 @@
   {
     "slug": "finn-ai-glia",
     "name": "Finn AI (Glia)",
+    "logo": "/logos/finn-ai.webp",
     "tagline": "AI chatbot for banking",
     "segment": "banking",
     "layer": "automation",
@@ -5749,40 +5656,9 @@
     "last_funding_date": "2025-11"
   },
   {
-    "slug": "quantopian-closed",
-    "name": "Quantopian (Closed)",
-    "tagline": "Crowdsourced quant platform",
-    "segment": "trading",
-    "layer": "applications",
-    "website": "https://www.quantopian.com",
-    "founded": 2011,
-    "hq_country": "US",
-    "hq_city": "Boston",
-    "company_type": "acquired",
-    "funding_stage": "growth",
-    "region": "americas",
-    "summary": "Quantopian was a crowdsourced quant platform that shut down in November 2020 after 9 years. Raised $48.8M from Spark, Khosla, Bessemer, a16z. Had 300K+ users and $250M from Steven Cohen's Point72. Failed because crowdsourced IP protection prevented quality control—couldn't review source code. Founded 2011 in Boston by John Fawcett and Jean Bredeche. Co-founders and team joined Robinhood. Open-sourced Zipline backtester lives on.",
-    "funding": 48800000,
-    "employees": "51-200",
-    "founders": [
-      {
-        "name": "John Fawcett",
-        "title": "Co-founder & CEO"
-      },
-      {
-        "name": "Jean Bredeche",
-        "title": "Co-founder & CTO"
-      }
-    ],
-    "defunct": true,
-    "ai_types": [
-      "reinforcement-learning"
-    ],
-    "last_funding_date": "2020-10"
-  },
-  {
     "slug": "sigfig",
     "name": "SigFig",
+    "logo": "/logos/sigfig.png",
     "tagline": "White-label robo-advisor",
     "segment": "wealth",
     "layer": "models",
@@ -5950,6 +5826,7 @@
   {
     "slug": "fundbox",
     "name": "Fundbox",
+    "logo": "/logos/fundbox.png",
     "tagline": "AI-powered B2B payments and credit",
     "segment": "lending",
     "layer": "applications",
@@ -6143,31 +6020,6 @@
     "last_funding_date": "2025-01"
   },
   {
-    "slug": "zerebro",
-    "name": "Zerebro",
-    "tagline": "Autonomous AI agent creating tokens",
-    "segment": "crypto",
-    "layer": "automation",
-    "website": "https://www.zerebro.xyz",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "fair-launch",
-    "region": "americas",
-    "summary": "Zerebro is an autonomous AI agent creating content, music, NFTs, and tokens. Hit $800M market cap at peak late 2024. Created by 22-year-old Jeffy Yu. Uses RAG to avoid 'model collapse.' Token on Solana, art on Polygon, inscriptions on Bitcoin. Open-sourced ZerePy Python framework for no-code AI agents. DWF Labs and whales accumulated tokens. Binance Futures launched up to 75x leverage contracts.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Jeffy Yu",
-        "title": "Creator"
-      }
-    ],
-    "ai_types": [
-      "llm"
-    ],
-    "last_funding_date": "2024-11"
-  },
-  {
     "slug": "cookie-dao",
     "name": "Cookie DAO",
     "tagline": "AI agent analytics and tracking",
@@ -6219,58 +6071,6 @@
       "llm"
     ],
     "last_funding_date": "2024-12"
-  },
-  {
-    "slug": "griffain",
-    "name": "Griffain",
-    "tagline": "Solana AI agent project",
-    "segment": "crypto",
-    "layer": "automation",
-    "website": "https://www.griffain.com",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "fair-launch",
-    "region": "americas",
-    "summary": "Griffain is an AI agent launchpad on Solana, 2nd largest by market cap. Backed by Solana, peaked at $625M market cap and $0.64 ATH (Jan 2025). Processed 1M+ automated transactions. Users mint personal AI agents as soulbound NFTs. Specialized agents: Baxus (whiskey), GM (NFTs), Sniper (trading). Launched Nov 2024 from Solana AI hackathon. Currently ~$20M market cap after 93% drawdown.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Griffain Team",
-        "title": "Pseudonymous team"
-      }
-    ],
-    "ai_types": [
-      "agentic"
-    ],
-    "last_funding_date": "2024-11"
-  },
-  {
-    "slug": "murphy-debt",
-    "name": "Murphy (Debt)",
-    "tagline": "AI agents for debt recovery",
-    "segment": "lending",
-    "layer": "applications",
-    "stage": "seed",
-    "website": "https://www.murphyai.com",
-    "hq_country": "ES",
-    "hq_city": "Barcelona",
-    "company_type": "private",
-    "funding_stage": "seed",
-    "region": "emea",
-    "summary": "Murphy is a Barcelona-based AI debt collection platform replacing call centers with autonomous agents. Raised $15M ($13M seed + $2M pre-seed) led by Northzone with ElevenLabs, Lakestar, Seedcamp. Supports 100+ languages. Claims 40% higher recovery rates, 75% faster collection. Customers include major banks, telcos, utilities. Managing hundreds of millions in debt. Founded 2024 by Borja Sole and Marc Sanchez.",
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Murphy Team",
-        "title": "Early stage"
-      }
-    ],
-    "logo": "/logos/murphy-debt.png",
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "2025-07"
   },
   {
     "slug": "motive-formerly-keeptruckin",
@@ -6380,6 +6180,7 @@
   {
     "slug": "blooom",
     "name": "Blooom",
+    "logo": "/logos/blooom.png",
     "tagline": "AI-powered 401k optimization and management",
     "segment": "wealth",
     "layer": "applications",
@@ -6628,6 +6429,7 @@
   {
     "slug": "trullion",
     "name": "Trullion",
+    "logo": "/logos/trullion.png",
     "tagline": "AI-powered auditing and accounting platform",
     "segment": "enterprise",
     "layer": "automation",
@@ -6930,6 +6732,7 @@
   {
     "slug": "cr-software",
     "name": "C&R Software",
+    "logo": "/logos/cr-software.jpg",
     "tagline": "AI collections managing $8T+ in accounts globally",
     "segment": "lending",
     "layer": "automation",
@@ -7580,6 +7383,7 @@
   {
     "slug": "singularitydao-sdao",
     "name": "SingularityDAO (SDAO)",
+    "logo": "/logos/singularity-dao.jpg",
     "tagline": "AI-managed crypto portfolios (Dynasets)",
     "segment": "wealth",
     "layer": "automation",
@@ -7607,6 +7411,7 @@
   {
     "slug": "oraichain",
     "name": "Oraichain",
+    "logo": "/logos/oraichain.png",
     "tagline": "First blockchain-powered AI oracle",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -7661,6 +7466,7 @@
   {
     "slug": "qubic",
     "name": "Qubic",
+    "logo": "/logos/quibic.png",
     "tagline": "Decentralized AI compute infrastructure",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -7713,6 +7519,7 @@
   {
     "slug": "peratera",
     "name": "Peratera",
+    "logo": "/logos/peratera.jpg",
     "tagline": "GenAI-driven cross-border banking",
     "segment": "banking",
     "layer": "applications",
@@ -7900,6 +7707,7 @@
   {
     "slug": "visible-alpha",
     "name": "Visible Alpha (S&P Global)",
+    "logo": "/logos/visible-alpha.jpg",
     "tagline": "AI-powered consensus and estimates",
     "segment": "research",
     "layer": "data",
@@ -8219,6 +8027,7 @@
   {
     "slug": "vicarious",
     "name": "Vicarious",
+    "logo": "/logos/vicarious.jpg",
     "tagline": "AI-powered music royalty financing",
     "segment": "lending",
     "layer": "applications",
@@ -8709,6 +8518,7 @@
   {
     "slug": "flow-traders",
     "name": "Flow Traders",
+    "logo": "/logos/flow-traders.png",
     "tagline": "AI-driven ETF market maker",
     "segment": "trading",
     "layer": "automation",
@@ -8740,6 +8550,7 @@
   {
     "slug": "aqr-capital",
     "name": "AQR Capital",
+    "logo": "/logos/aqr-capital.png",
     "tagline": "Quantitative investment management",
     "segment": "trading",
     "layer": "models",
@@ -9022,6 +8833,7 @@
   {
     "slug": "ethic",
     "name": "Ethic",
+    "logo": "/logos/ethic.png",
     "tagline": "AI-powered sustainable investing",
     "segment": "wealth",
     "layer": "applications",
@@ -9079,6 +8891,7 @@
   {
     "slug": "tifin",
     "name": "TIFIN",
+    "logo": "/logos/tifin.webp",
     "tagline": "AI-powered wealth management solutions",
     "segment": "wealth",
     "layer": "applications",
@@ -9142,6 +8955,7 @@
   {
     "slug": "finny-ai",
     "name": "FINNY AI",
+    "logo": "/logos/finny-ai.jpg",
     "tagline": "AI prospecting for financial advisors",
     "segment": "wealth",
     "layer": "automation",
@@ -9593,6 +9407,7 @@
   {
     "slug": "heard-technologies",
     "name": "Heard Technologies",
+    "logo": "/logos/heard-technologies.jpg",
     "tagline": "AI bookkeeping and tax prep for therapists",
     "segment": "enterprise",
     "layer": "applications",
@@ -9924,6 +9739,7 @@
   {
     "slug": "mindee",
     "name": "Mindee",
+    "logo": "/logos/mindee.webp",
     "tagline": "AI document parsing with open-source docTR",
     "segment": "enterprise",
     "layer": "automation",
@@ -9983,6 +9799,7 @@
   {
     "slug": "hyperscience",
     "name": "Hyperscience",
+    "logo": "/logos/hyperscience.jpg",
     "tagline": "AI-powered document processing platform",
     "segment": "enterprise",
     "layer": "data",
@@ -10011,6 +9828,7 @@
   {
     "slug": "eigen-technologies",
     "name": "Eigen Technologies (Sirion)",
+    "logo": "/logos/eigen-technologies.avif",
     "tagline": "AI for complex financial document extraction",
     "segment": "enterprise",
     "layer": "data",
@@ -10157,32 +9975,6 @@
       "llm"
     ],
     "last_funding_date": "2025-03"
-  },
-  {
-    "slug": "idaciti",
-    "name": "idaciti",
-    "tagline": "AI for SEC filing extraction and analysis",
-    "segment": "enterprise",
-    "layer": "applications",
-    "website": "https://idaciti.com",
-    "hq_country": "US",
-    "hq_city": "Seattle",
-    "company_type": "private",
-    "funding_stage": "seed",
-    "region": "americas",
-    "summary": "idaciti is an AI platform for SEC filing extraction and analysis. Founded 2014. Acquired by FactSet. $1.1M revenue (2021), 20K customers. Transforms complex financial/ESG disclosures into structured data via AI/ML. Extracts fundamentals, footnotes, climate, DEI data from public filings. CEO Emily Huang. 13 employees.",
-    "funding": 2050000,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Lutfey Siddiqi",
-        "title": "Founder"
-      }
-    ],
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "2019-03"
   },
   {
     "slug": "tidalwave",
@@ -10441,34 +10233,9 @@
     ]
   },
   {
-    "slug": "constructify",
-    "name": "Constructify",
-    "tagline": "AI-powered construction project management",
-    "segment": "lending",
-    "layer": "applications",
-    "stage": "series_c_plus",
-    "funding": 70000000,
-    "website": "https://constructify.ai",
-    "hq_country": "US",
-    "company_type": "private",
-    "funding_stage": "growth",
-    "region": "americas",
-    "summary": "Constructify is an AI-native autonomous facilities and building management platform. Founded Q1 2024 in UK. Completed Digital Catapult Innovate UK BridgeAI accelerator. Presented at Plug and Play. Uses AI, IoT sensors, predictive analytics to enable buildings that 'think, act, and run themselves.' Early-stage with accelerator backing rather than major VC funding.",
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Constructify Team",
-        "title": "ConTech"
-      }
-    ],
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "2024-01"
-  },
-  {
     "slug": "rentlytics",
     "name": "Rentlytics (RealPage)",
+    "logo": "/logos/rentlytics.jpg",
     "tagline": "AI analytics for multifamily real estate",
     "segment": "lending",
     "layer": "data",
@@ -10599,6 +10366,7 @@
   {
     "slug": "collectwise",
     "name": "CollectWise",
+    "logo": "/logos/collect-wise.jpg",
     "tagline": "AI consumer debt collection automation",
     "segment": "lending",
     "layer": "automation",
@@ -10790,6 +10558,7 @@
   {
     "slug": "esker",
     "name": "Esker",
+    "logo": "/logos/esker.jpg",
     "tagline": "AI document automation for AR/AP",
     "segment": "enterprise",
     "layer": "applications",
@@ -10938,6 +10707,7 @@
   {
     "slug": "zevero",
     "name": "Zevero",
+    "logo": "/logos/zevero.jpg",
     "tagline": "AI ESG disclosure and carbon accounting",
     "segment": "risk",
     "layer": "applications",
@@ -11239,35 +11009,9 @@
     "last_funding_date": "2024-07"
   },
   {
-    "slug": "sust",
-    "name": "Sust",
-    "tagline": "AI climate risk analytics for supply chains",
-    "segment": "risk",
-    "layer": "models",
-    "stage": "series_a",
-    "website": "https://www.sust.com",
-    "hq_country": "US",
-    "company_type": "private",
-    "funding_stage": "early",
-    "region": "americas",
-    "summary": "Sust Global is a geospatial AI climate risk platform. SF-based, founded 2019 by Gopal Erinjippurath and Josh Gilbert. Raised $4.71M total. Acquired by ISS STOXX (Aug 2025). Deep learning on satellite + climate data for physical risk. ESA-funded research featured at NeurIPS and AGU. Serves real estate, banking, supply chain analysis.",
-    "funding": 4700000,
-    "employees": "11-50",
-    "founders": [
-      {
-        "name": "Sust Team",
-        "title": "ESG data"
-      }
-    ],
-    "logo": "/logos/sust.png",
-    "ai_types": [
-      "predictive-ml"
-    ],
-    "last_funding_date": "2023-06"
-  },
-  {
     "slug": "carbon-bright",
     "name": "Carbon Bright",
+    "logo": "/logos/carbon-bright.jpg",
     "tagline": "AI product lifecycle analysis",
     "segment": "risk",
     "layer": "applications",
@@ -11293,6 +11037,7 @@
   {
     "slug": "key-esg",
     "name": "KEY ESG",
+    "logo": "/logos/key-esg.jpg",
     "tagline": "AI-driven ESG management platform",
     "segment": "risk",
     "layer": "applications",
@@ -11821,6 +11566,7 @@
   {
     "slug": "cashforce",
     "name": "Cashforce",
+    "logo": "/logos/cashforce.avif",
     "tagline": "AI cash flow forecasting and working capital",
     "segment": "enterprise",
     "layer": "applications",
@@ -11991,6 +11737,7 @@
   {
     "slug": "adenza",
     "name": "Adenza",
+    "logo": "/logos/adenza.png",
     "tagline": "AI risk and trading platform",
     "segment": "risk",
     "layer": "applications",
@@ -12018,6 +11765,7 @@
   {
     "slug": "finbar",
     "name": "Finbar",
+    "logo": "/logos/finbar.png",
     "tagline": "AI investment analyst for hedge funds",
     "segment": "research",
     "layer": "applications",
@@ -12042,6 +11790,7 @@
   {
     "slug": "keye",
     "name": "Keye",
+    "logo": "/logos/keye.jpg",
     "tagline": "AI for private equity due diligence",
     "segment": "research",
     "layer": "applications",
@@ -12214,6 +11963,7 @@
   {
     "slug": "factset",
     "name": "FactSet",
+    "logo": "/logos/factset.jpg",
     "tagline": "AI-enhanced financial data and analytics",
     "segment": "research",
     "layer": "data",
@@ -12250,6 +12000,7 @@
   {
     "slug": "sp-capital-iq",
     "name": "S&P Capital IQ",
+    "logo": "/logos/sp-capital-iq.png",
     "tagline": "AI financial intelligence platform",
     "segment": "research",
     "layer": "data",
@@ -12604,6 +12355,7 @@
   {
     "slug": "masa",
     "name": "Masa",
+    "logo": "/logos/masa.png",
     "tagline": "Decentralized AI data network",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -12667,6 +12419,7 @@
   {
     "slug": "pond",
     "name": "Pond",
+    "logo": "/logos/pond.png",
     "tagline": "Crypto prediction with GNNs",
     "segment": "trading",
     "layer": "automation",
@@ -12837,6 +12590,7 @@
   {
     "slug": "bankr",
     "name": "Bankr",
+    "logo": "/logos/bankr.png",
     "tagline": "AI crypto asset management via messaging on Discord, Telegram, X",
     "segment": "wealth",
     "layer": "applications",
@@ -12918,6 +12672,7 @@
   {
     "slug": "neur",
     "name": "Neur",
+    "logo": "/logos/neur.png",
     "tagline": "Open-source Solana DeFAI with Claude/GPT-4 integration",
     "segment": "trading",
     "layer": "applications",
@@ -13000,6 +12755,7 @@
   {
     "slug": "project-plutus",
     "name": "Project Plutus",
+    "logo": "/logos/project-plutus.png",
     "tagline": "AI-driven smart trading and portfolio optimization",
     "segment": "trading",
     "layer": "automation",
@@ -13047,31 +12803,6 @@
     "logo": "/logos/aipump.png",
     "ai_types": [
       "infrastructure"
-    ]
-  },
-  {
-    "slug": "taocat",
-    "name": "TAOCat",
-    "tagline": "Self-improving AI agent on Bittensor by Masa team",
-    "segment": "crypto",
-    "layer": "automation",
-    "stage": "series_b",
-    "website": "https://taocat.io",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "early",
-    "region": "americas",
-    "summary": "TAOCat is the first self-improving AI agent on Bittensor, built by Masa on Virtuals Protocol. Launched Dec 19, 2024 on Base chain. Uses Bittensor Subnet 19 (LLM) + Masa Subnet 42 (real-time data) + Agent Arena Subnet 59 (competitions). DWF Labs invested $20M via AI agent fund. Listed on KuCoin, Gate.io, MEXC. Market cap surged to $50M+ within 10 days of launch. Endorsed by Delphi Labs.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "TAOCat Team",
-        "title": "Bittensor"
-      }
-    ],
-    "ai_types": [
-      "llm"
     ]
   },
   {
@@ -13157,6 +12888,7 @@
   {
     "slug": "ark-defai",
     "name": "ARK DeFAI",
+    "logo": "/logos/ark-defai.png",
     "tagline": "AI-governed DeFi protocol with DAO consensus",
     "segment": "trading",
     "layer": "automation",
@@ -13236,6 +12968,7 @@
   {
     "slug": "soul-scanner",
     "name": "Soul Scanner",
+    "logo": "/logos/soul-scanner.jpg",
     "tagline": "Telegram bot for smart contract vulnerability analysis",
     "segment": "risk",
     "layer": "models",
@@ -13261,6 +12994,7 @@
   {
     "slug": "moby-ai",
     "name": "Moby AI",
+    "logo": "/logos/moby-ai.avif",
     "tagline": "AssetDash-powered crypto trading/portfolio AI",
     "segment": "trading",
     "layer": "applications",
@@ -13287,6 +13021,7 @@
   {
     "slug": "slate",
     "name": "Slate",
+    "logo": "/logos/slate.webp",
     "tagline": "Universal AI agent for natural language on-chain ops",
     "segment": "trading",
     "layer": "automation",
@@ -13367,6 +13102,7 @@
   {
     "slug": "hermes-subquery",
     "name": "Hermes (SubQuery)",
+    "logo": "/logos/hermes-subquery.jpg",
     "tagline": "AI-powered blockchain data indexing subnet",
     "segment": "research",
     "layer": "data",
@@ -13419,33 +13155,9 @@
     "last_funding_date": "2020-09"
   },
   {
-    "slug": "dolion-bully",
-    "name": "Dolion (BULLY)",
-    "tagline": "AI trading agent platform with 4x returns claimed",
-    "segment": "crypto",
-    "layer": "infrastructure",
-    "stage": "series_b",
-    "website": "https://dolion.io",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "early",
-    "region": "americas",
-    "summary": "Dolion is a no-code, one-click framework for deploying cross-platform AI agents powered by Llama or Anthropic LLMs, with Primis Protocol handling compute. Built by the Dolos Diary team, whose AI bot achieved viral status with its trollish persona on Twitter. BULLY tokens are burned to launch agents based on complexity. Part of the AI agent wave that drove the sector from $4.8B to $15.5B market cap in Q4 2024. Integrated LI.FI for agent swap capabilities.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "Dolion Team",
-        "title": "Meme agent"
-      }
-    ],
-    "ai_types": [
-      "agentic"
-    ]
-  },
-  {
     "slug": "delysium",
     "name": "Delysium",
+    "logo": "/logos/delysium.jpg",
     "tagline": "AI agent communication and blockchain layer platform",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -13473,6 +13185,7 @@
   {
     "slug": "griffin-ai-gain",
     "name": "Griffin AI (GAIN)",
+    "logo": "/logos/griffin-ai.jpg",
     "tagline": "No-code agent builder for DeFi; on-chain execution + multi-agent workflows",
     "segment": "trading",
     "layer": "applications",
@@ -13496,7 +13209,8 @@
   },
   {
     "slug": "flockio",
-    "name": "FLock.io",
+    "name": "Flock",
+    "logo": "/logos/flock.png",
     "tagline": "Federated learning + blockchain verification platform (not finance-first)",
     "segment": "crypto",
     "layer": "infrastructure",
@@ -13524,6 +13238,7 @@
   {
     "slug": "gigabrain",
     "name": "GigaBrain",
+    "logo": "/logos/gigabrain.png",
     "tagline": "“AI-powered” trading intelligence/terminal + structured insights",
     "segment": "trading",
     "layer": "applications",
@@ -13636,6 +13351,7 @@
   {
     "slug": "truenorth",
     "name": "TrueNorth",
+    "logo": "/logos/truenorth.jpg",
     "tagline": "Finance-focused AI agents “modeled after top traders”; named backers shown on site + press",
     "segment": "trading",
     "layer": "automation",
@@ -13770,6 +13486,7 @@
   {
     "slug": "billybets",
     "name": "BillyBets",
+    "logo": "/logos/billybets.png",
     "tagline": "Autonomous AI agent for sports betting + on-chain execution (prediction/betting)",
     "segment": "trading",
     "layer": "automation",
@@ -13924,6 +13641,7 @@
   {
     "slug": "cambrian-network",
     "name": "Cambrian Network",
+    "logo": "/logos/cambrian-network.jpg",
     "tagline": "Onchain/offchain data for automated financial decision-making; API for agents",
     "segment": "research",
     "layer": "infrastructure",
@@ -13946,30 +13664,6 @@
       "infrastructure"
     ],
     "last_funding_date": "2025-03"
-  },
-  {
-    "slug": "iaesir-fund",
-    "name": "IAESIR Fund",
-    "tagline": "“AI-powered crypto hedge fund” marketing + tokenomics",
-    "segment": "wealth",
-    "layer": "automation",
-    "website": "https://iaesir.fund",
-    "hq_country": "US",
-    "company_type": "token",
-    "funding_stage": "fair-launch",
-    "region": "americas",
-    "summary": "IAESIR Fund positions itself as an AI-powered crypto hedge fund with tokenized access. Limited public information available on team, specific strategies, or verifiable track record. Part of the wave of AI-branded crypto investment vehicles launched during the 2024-2025 AI agent boom. Users should conduct due diligence given the proliferation of AI marketing claims in the crypto hedge fund space.",
-    "crypto": true,
-    "employees": "1-10",
-    "founders": [
-      {
-        "name": "IAESIR Team",
-        "title": "AI fund"
-      }
-    ],
-    "ai_types": [
-      "llm"
-    ]
   },
   {
     "slug": "mamo-lending-agent",
@@ -14104,6 +13798,7 @@
   {
     "slug": "askjimmy",
     "name": "AskJimmy",
+    "logo": "/logos/ask-jimmy.png",
     "tagline": "Chat voice/text advisor tied to market data",
     "segment": "trading",
     "layer": "applications",
@@ -14128,6 +13823,7 @@
   {
     "slug": "uv",
     "name": "UV",
+    "logo": "/logos/uv.jpg",
     "tagline": "Frontier Intelligence for Financial Markets",
     "segment": "research",
     "layer": "data",
@@ -14154,7 +13850,6 @@
         "title": "Research agent"
       }
     ],
-    "logo": "/logos/uv.png",
     "ai_types": [
       "llm"
     ],

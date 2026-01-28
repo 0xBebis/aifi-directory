@@ -23,6 +23,7 @@ import {
   X,
 } from 'lucide-react';
 import Fuse from 'fuse.js';
+import CompanyLogo from '@/components/CompanyLogo';
 
 interface ProjectTableProps {
   projects: Project[];
@@ -372,14 +373,17 @@ export default function ProjectTable({
                     <td className="px-5 py-4">
                       <Link
                         href={`/p/${project.slug}`}
-                        className="group block"
+                        className="group flex items-center gap-3"
                       >
-                        <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
-                          {project.name}
-                        </span>
-                        <p className="text-sm text-text-muted mt-0.5 line-clamp-1 max-w-xs">
-                          {project.tagline}
-                        </p>
+                        <CompanyLogo project={project} size="sm" />
+                        <div>
+                          <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
+                            {project.name}
+                          </span>
+                          <p className="text-sm text-text-muted mt-0.5 line-clamp-1 max-w-xs">
+                            {project.tagline}
+                          </p>
+                        </div>
                       </Link>
                     </td>
                     <td className="px-5 py-4">
@@ -468,16 +472,34 @@ export default function ProjectTable({
                     </td>
                     <td className="px-5 py-4">
                       {project.ai_types && project.ai_types.length > 0 ? (
-                        <span className="inline-flex flex-wrap gap-1">
-                          {project.ai_types.map(t => (
-                            <CategoryBadge
-                              key={t}
-                              label={AI_TYPE_LABELS[t]}
-                              color={AI_TYPE_COLORS[t]}
-                              onClick={() => setAiTypeFilter(aiTypeFilter === t ? null : t)}
-                              isActive={aiTypeFilter === t}
-                            />
-                          ))}
+                        <span className="inline-flex items-center gap-2">
+                          <CategoryBadge
+                            label={AI_TYPE_LABELS[project.ai_types[0]]}
+                            color={AI_TYPE_COLORS[project.ai_types[0]]}
+                            onClick={() => setAiTypeFilter(aiTypeFilter === project.ai_types![0] ? null : project.ai_types![0])}
+                            isActive={aiTypeFilter === project.ai_types[0]}
+                          />
+                          {project.ai_types.length > 1 && (
+                            <Tooltip
+                              content={
+                                <>
+                                  {project.ai_types.slice(1).map(t => (
+                                    <CategoryBadge
+                                      key={t}
+                                      label={AI_TYPE_LABELS[t]}
+                                      color={AI_TYPE_COLORS[t]}
+                                      onClick={() => setAiTypeFilter(aiTypeFilter === t ? null : t)}
+                                      isActive={aiTypeFilter === t}
+                                    />
+                                  ))}
+                                </>
+                              }
+                            >
+                              <span className="text-2xs px-1.5 py-0.5 rounded-md bg-surface-3 text-text-faint cursor-help">
+                                +{project.ai_types.length - 1}
+                              </span>
+                            </Tooltip>
+                          )}
                         </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>
