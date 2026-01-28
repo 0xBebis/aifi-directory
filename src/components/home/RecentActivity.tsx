@@ -41,7 +41,7 @@ export default function RecentActivity({ companies, buildDate }: RecentActivityP
               className="group flex items-center gap-3 px-4 py-3 bg-surface border border-border rounded-xl hover:border-accent/30 transition-all"
             >
               {c.logo ? (
-                <img src={c.logo} alt="" className="w-8 h-8 rounded-lg object-contain bg-white/5" />
+                <img src={c.logo} alt="" className="w-8 h-8 rounded-lg object-contain bg-white p-0.5" />
               ) : (
                 <div className="w-8 h-8 rounded-lg bg-surface-2 flex items-center justify-center text-text-faint text-xs font-bold">
                   {c.name.charAt(0)}

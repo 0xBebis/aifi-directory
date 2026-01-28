@@ -31,6 +31,9 @@ export default function SubmitPage() {
     hq_country: '',
     hq_city: '',
     crypto: false,
+    funding: '',
+    last_funding_date: '',
+    valuation: '',
     twitter: '',
     linkedin: '',
     email: '',
@@ -84,6 +87,9 @@ export default function SubmitPage() {
     if (formData.hq_country) project.hq_country = formData.hq_country;
     if (formData.hq_city) project.hq_city = formData.hq_city;
     if (formData.crypto) project.crypto = true;
+    if (formData.funding) project.funding = parseInt(formData.funding);
+    if (formData.last_funding_date) project.last_funding_date = formData.last_funding_date;
+    if (formData.valuation) project.valuation = parseInt(formData.valuation);
     if (formData.twitter) project.twitter = formData.twitter.replace(/^@/, '');
     if (formData.linkedin) project.linkedin = formData.linkedin;
 
@@ -100,7 +106,7 @@ export default function SubmitPage() {
 **Website:** ${formData.website || 'Not provided'}
 **Segment:** ${segmentName}
 **Layer:** ${layerName}
-${formData.ai_types.length > 0 ? `**AI Types:** ${formData.ai_types.map(t => AI_TYPE_LABELS[t]).join(', ')}\n` : ''}${formData.crypto ? '**Type:** Web3/Crypto\n' : ''}${formData.company_type ? `**Company Type:** ${COMPANY_TYPE_LABELS[formData.company_type]}\n` : ''}${formData.funding_stage ? `**Funding Stage:** ${FUNDING_STAGE_LABELS[formData.funding_stage]}\n` : ''}${formData.region ? `**Region:** ${REGION_LABELS[formData.region]}\n` : ''}${formData.employees ? `**Employees:** ${EMPLOYEE_RANGE_LABELS[formData.employees as EmployeeRange]}\n` : ''}${formData.founded ? `**Founded:** ${formData.founded}\n` : ''}${formData.hq_country ? `**Location:** ${formData.hq_city ? formData.hq_city + ', ' : ''}${formData.hq_country}\n` : ''}
+${formData.ai_types.length > 0 ? `**AI Types:** ${formData.ai_types.map(t => AI_TYPE_LABELS[t]).join(', ')}\n` : ''}${formData.crypto ? '**Type:** Web3/Crypto\n' : ''}${formData.company_type ? `**Company Type:** ${COMPANY_TYPE_LABELS[formData.company_type]}\n` : ''}${formData.funding_stage ? `**Funding Stage:** ${FUNDING_STAGE_LABELS[formData.funding_stage]}\n` : ''}${formData.region ? `**Region:** ${REGION_LABELS[formData.region]}\n` : ''}${formData.employees ? `**Employees:** ${EMPLOYEE_RANGE_LABELS[formData.employees as EmployeeRange]}\n` : ''}${formData.funding ? `**Total Funding:** $${Number(formData.funding).toLocaleString()}\n` : ''}${formData.valuation ? `**Valuation:** $${Number(formData.valuation).toLocaleString()}\n` : ''}${formData.last_funding_date ? `**Last Funded:** ${formData.last_funding_date}\n` : ''}${formData.founded ? `**Founded:** ${formData.founded}\n` : ''}${formData.hq_country ? `**Location:** ${formData.hq_city ? formData.hq_city + ', ' : ''}${formData.hq_country}\n` : ''}
 ### Description
 ${formData.tagline}
 ${formData.description ? `\n${formData.description}` : ''}
@@ -468,6 +474,65 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
                 ))}
               </select>
             </div>
+          </div>
+        </div>
+
+        {/* Financial */}
+        <div className="space-y-6">
+          <h2 className="text-lg font-semibold text-text-primary border-b border-border/50 pb-2">
+            Financial Information
+          </h2>
+
+          <div className="grid grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="funding" className={labelStyles}>
+                Total Funding (USD)
+              </label>
+              <input
+                type="number"
+                id="funding"
+                name="funding"
+                min="0"
+                value={formData.funding}
+                onChange={handleChange}
+                className={inputStyles}
+                placeholder="50000000"
+              />
+              <p className="text-xs text-text-faint mt-1">Raw number, e.g. 50000000 for $50M</p>
+            </div>
+
+            <div>
+              <label htmlFor="valuation" className={labelStyles}>
+                Valuation (USD)
+              </label>
+              <input
+                type="number"
+                id="valuation"
+                name="valuation"
+                min="0"
+                value={formData.valuation}
+                onChange={handleChange}
+                className={inputStyles}
+                placeholder="500000000"
+              />
+              <p className="text-xs text-text-faint mt-1">Latest known valuation</p>
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="last_funding_date" className={labelStyles}>
+              Last Funding Date
+            </label>
+            <input
+              type="text"
+              id="last_funding_date"
+              name="last_funding_date"
+              value={formData.last_funding_date}
+              onChange={handleChange}
+              className={inputStyles}
+              placeholder="2025-03"
+            />
+            <p className="text-xs text-text-faint mt-1">Format: YYYY or YYYY-MM</p>
           </div>
         </div>
 

@@ -2,12 +2,12 @@ name: Process Company Submission
 
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 
 jobs:
   process-new-submission:
-    # Only run when "submission" label is added
-    if: github.event.label.name == 'submission'
+    # Run when issue title starts with [Submission]
+    if: startsWith(github.event.issue.title, '[Submission]')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,6 +15,17 @@ jobs:
       issues: write
 
     steps:
+      - name: Label issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['submission']
+            });
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -170,8 +181,8 @@ jobs:
             });
 
   process-update-request:
-    # Only run when "update-request" label is added
-    if: github.event.label.name == 'update-request'
+    # Run when issue title starts with [Update]
+    if: startsWith(github.event.issue.title, '[Update]')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -179,6 +190,17 @@ jobs:
       issues: write
 
     steps:
+      - name: Label issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['update-request']
+            });
+
       - name: Checkout repository
         uses: actions/checkout@v4
 

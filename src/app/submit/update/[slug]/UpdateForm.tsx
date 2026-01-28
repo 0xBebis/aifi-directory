@@ -29,6 +29,10 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     ai_types: (project.ai_types || []) as AIType[],
     region: (project.region || '') as Region | '',
     employees: (project.employees || '') as EmployeeRange | '',
+    funding: project.funding?.toString() || '',
+    last_funding_date: project.last_funding_date || '',
+    valuation: project.valuation?.toString() || '',
+    defunct: project.defunct || false,
     twitter: project.twitter || '',
     linkedin: project.linkedin || '',
     updateReason: '',
@@ -96,6 +100,10 @@ export default function UpdateForm({ project }: UpdateFormProps) {
     checkField('crypto', project.crypto, formData.crypto || null);
     checkField('region', project.region, formData.region);
     checkField('employees', project.employees, formData.employees);
+    checkField('funding', project.funding, formData.funding ? parseInt(formData.funding) : null);
+    checkField('last_funding_date', project.last_funding_date, formData.last_funding_date);
+    checkField('valuation', project.valuation, formData.valuation ? parseInt(formData.valuation) : null);
+    checkField('defunct', project.defunct, formData.defunct || null);
     checkField('twitter', project.twitter, formData.twitter.replace(/^@/, '') || null);
     checkField('linkedin', project.linkedin, formData.linkedin);
 
@@ -498,6 +506,79 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
                 ))}
               </select>
             </div>
+          </div>
+        </div>
+
+        {/* Financial */}
+        <div className="space-y-6">
+          <h2 className="text-lg font-semibold text-text-primary border-b border-border/50 pb-2">
+            Financial Information
+          </h2>
+
+          <div className="grid grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="funding" className={labelStyles}>
+                Total Funding (USD)
+              </label>
+              <input
+                type="number"
+                id="funding"
+                name="funding"
+                min="0"
+                value={formData.funding}
+                onChange={handleChange}
+                className={inputStyles}
+                placeholder="50000000"
+              />
+              <p className="text-xs text-text-faint mt-1">Raw number, e.g. 50000000 for $50M</p>
+            </div>
+
+            <div>
+              <label htmlFor="valuation" className={labelStyles}>
+                Valuation (USD)
+              </label>
+              <input
+                type="number"
+                id="valuation"
+                name="valuation"
+                min="0"
+                value={formData.valuation}
+                onChange={handleChange}
+                className={inputStyles}
+                placeholder="500000000"
+              />
+              <p className="text-xs text-text-faint mt-1">Latest known valuation</p>
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="last_funding_date" className={labelStyles}>
+              Last Funding Date
+            </label>
+            <input
+              type="text"
+              id="last_funding_date"
+              name="last_funding_date"
+              value={formData.last_funding_date}
+              onChange={handleChange}
+              className={inputStyles}
+              placeholder="2025-03"
+            />
+            <p className="text-xs text-text-faint mt-1">Format: YYYY or YYYY-MM</p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              id="defunct"
+              name="defunct"
+              checked={formData.defunct}
+              onChange={handleChange}
+              className="w-5 h-5 rounded border-border bg-surface-2 text-accent focus:ring-accent/30 cursor-pointer"
+            />
+            <label htmlFor="defunct" className="text-sm text-text-secondary cursor-pointer">
+              This company is no longer operating
+            </label>
           </div>
         </div>
 
