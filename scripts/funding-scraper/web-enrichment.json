@@ -1,0 +1,1640 @@
+{
+  "metadata": {
+    "generated": "2026-01-27",
+    "source": "web-search-tracxn-crunchbase-techcrunch",
+    "description": "Funding dates and amounts sourced from web search across Tracxn, Crunchbase, TechCrunch, Bloomberg, and company press releases"
+  },
+  "enrichments": [
+    {
+      "slug": "openai",
+      "last_funding_date": "2025-03",
+      "note": "Series F $40B led by SoftBank (Mar 31, 2025). Total raised: $57.9B"
+    },
+    {
+      "slug": "anthropic",
+      "last_funding_date": "2025-09",
+      "note": "Series F $13B at $183B valuation (Sep 2, 2025). Total raised: $27.3B"
+    },
+    {
+      "slug": "stripe",
+      "last_funding_date": "2024-04",
+      "note": "$694M share sale (Apr 8, 2024). No new primary round since Series I (Mar 2023)"
+    },
+    {
+      "slug": "klarna",
+      "last_funding_date": "2025-09",
+      "note": "IPO on NYSE Sep 10, 2025. Debt round $1.63B Aug 2025. Total raised: $4.19B"
+    },
+    {
+      "slug": "revolut",
+      "last_funding_date": "2025-11",
+      "note": "$75B secondary share sale (Nov 24, 2025). Led by Coatue, Greenoaks, Dragoneer"
+    },
+    {
+      "slug": "nubank",
+      "last_funding_date": "2021-12",
+      "note": "IPO on NYSE Dec 2021. Last private: Series G $750M Jun 2021"
+    },
+    {
+      "slug": "rippling",
+      "last_funding_date": "2025-05",
+      "note": "Series G $450M at $16.8B valuation (May 9, 2025)"
+    },
+    {
+      "slug": "affirm",
+      "last_funding_date": "2021-01",
+      "note": "IPO on Nasdaq Jan 13, 2021. Last private: Series G $500M Sep 2020"
+    },
+    {
+      "slug": "harvey",
+      "last_funding_date": "2025-12",
+      "note": "Series F $160M at $8B valuation (Dec 4, 2025). 3 rounds in 2025"
+    },
+    {
+      "slug": "adenza",
+      "last_funding_date": "2023-11",
+      "note": "Acquired by Nasdaq for $10.5B (Nov 1, 2023)"
+    },
+    {
+      "slug": "together-ai",
+      "last_funding_date": "2025-02",
+      "note": "Series B $305M at $3.3B valuation (Feb 20, 2025). Total: $534M"
+    },
+    {
+      "slug": "next-insurance",
+      "last_funding_date": "2025-07",
+      "note": "Acquired by ERGO/Munich Re for $2.6B (completed Jul 1, 2025)"
+    },
+    {
+      "slug": "coalition",
+      "last_funding_date": "2025-03",
+      "note": "Series F $30M from Mitsui Sumitomo (Mar 3, 2025)"
+    },
+    {
+      "slug": "wayflyer",
+      "last_funding_date": "2025-06",
+      "note": "Series B-II $35M (Jun 23, 2025). Total: $1.24B"
+    },
+    {
+      "slug": "quantexa",
+      "last_funding_date": "2025-03",
+      "note": "Series F $175M at $2.6B valuation (Mar 5, 2025). Led by TVG"
+    },
+    {
+      "slug": "forter",
+      "last_funding_date": "2021-05",
+      "note": "Series F $300M at $3B valuation (May 25, 2021). No new rounds since"
+    },
+    {
+      "slug": "motive-formerly-keeptruckin",
+      "last_funding_date": "2025-07",
+      "note": "Series G $150M led by Kleiner Perkins (Jul 30, 2025)"
+    },
+    {
+      "slug": "eliseai",
+      "last_funding_date": "2025-08",
+      "note": "Series E $250M led by a16z at $2.2B valuation (Aug 20, 2025)"
+    },
+    {
+      "slug": "hyperscience",
+      "last_funding_date": "2021-12",
+      "note": "Series E $100M (Dec 22, 2021). No new rounds since"
+    },
+    {
+      "slug": "clearco",
+      "last_funding_date": "2024-08",
+      "note": "Later Stage VC with Velocity (Aug 26, 2024). Series D $60M Oct 2023"
+    },
+    {
+      "slug": "abbyy",
+      "last_funding_date": "2021-05",
+      "note": "PE round led by Marlin Equity Partners (May 11, 2021)"
+    },
+    {
+      "slug": "shift-technology",
+      "last_funding_date": "2021-11",
+      "note": "Strategic investment from Guidewire (Nov 2, 2021). Series D $220M May 2021"
+    },
+    {
+      "slug": "pennylane",
+      "last_funding_date": "2026-01",
+      "funding": 395000000,
+      "note": "Series E €175M at €3.6B valuation (Jan 2026). Led by TCV. Total: ~€360M"
+    },
+    {
+      "slug": "taxfix",
+      "last_funding_date": "2022-04",
+      "note": "Series D $220M at $1B+ valuation (Apr 27, 2022). Led by TVG"
+    },
+    {
+      "slug": "casavo",
+      "last_funding_date": "2024-12",
+      "note": "€13M capital increase (Dec 2024). Series D extension €20M Mar 2024"
+    },
+    {
+      "slug": "trulioo",
+      "last_funding_date": "2021-06",
+      "note": "Series D $394M at $1.75B valuation (Jun 7, 2021). Led by TCV"
+    },
+    {
+      "slug": "0g-labs",
+      "last_funding_date": "2024-11",
+      "note": "Seed $40M + $250M token commitment (Nov 13, 2024). Total: $325M"
+    },
+    {
+      "slug": "fundbox",
+      "last_funding_date": "2024-09",
+      "note": "Debt financing from Cross River & Waterfall (Sep 17, 2024)"
+    },
+    {
+      "slug": "sardine",
+      "last_funding_date": "2025-02",
+      "note": "Series C $70M at $660M valuation (Feb 11, 2025). Led by Activant"
+    },
+    {
+      "slug": "datasnipper",
+      "last_funding_date": "2024-02",
+      "note": "Series B $100M at $1B valuation (Feb 1, 2024). Led by Index Ventures"
+    },
+    {
+      "slug": "tractable",
+      "last_funding_date": "2023-07",
+      "note": "Series E $65M (Jul 18, 2023). Led by SoftBank Vision Fund 2"
+    },
+    {
+      "slug": "ondeck-enova",
+      "last_funding_date": "2020-10",
+      "note": "Acquired by Enova International (Oct 2020)"
+    },
+    {
+      "slug": "kabbage-amex",
+      "last_funding_date": "2020-10",
+      "note": "Acquired by American Express (Oct 2020)"
+    },
+    {
+      "slug": "yipitdata",
+      "last_funding_date": "2024-06",
+      "note": "Debt financing from CIBC Innovation Banking (Jun 13, 2024)"
+    },
+    {
+      "slug": "newfront",
+      "last_funding_date": "2025-12",
+      "note": "Acquired by WTW for $1.3B (Dec 10, 2025)"
+    },
+    {
+      "slug": "petal",
+      "last_funding_date": "2024-04",
+      "note": "Acquired by Empower Finance (Apr 9, 2024)"
+    },
+    {
+      "slug": "kin",
+      "last_funding_date": "2025",
+      "note": "$50M equity + $200M debt, led by QED Investors and Activate Capital (2025). Valuation >B"
+    },
+    {
+      "slug": "personal-capital",
+      "last_funding_date": "2020-08",
+      "note": "Acquired by Empower Retirement for $1B (Aug 18, 2020)"
+    },
+    {
+      "slug": "moneylion",
+      "last_funding_date": "2024-12",
+      "note": "Acquired by Gen Digital for $1B (Dec 10, 2024). IPO Sep 2021"
+    },
+    {
+      "slug": "h2oai",
+      "last_funding_date": "2021-11",
+      "note": "Series E $100M led by CommBank (Nov 8, 2021)"
+    },
+    {
+      "slug": "onfido",
+      "last_funding_date": "2024-04",
+      "note": "Acquired by Entrust for ~$650M (completed Apr 9, 2024)"
+    },
+    {
+      "slug": "kiavi",
+      "last_funding_date": "2024-10",
+      "note": "$400M debt securitization (Oct 16, 2024). 5 securitizations in 2024 totaling ~$2B"
+    },
+    {
+      "slug": "covergenius",
+      "last_funding_date": "2024-05",
+      "note": "Series E $80M led by Spark Capital (May 15, 2024). Total: $245M"
+    },
+    {
+      "slug": "watershed",
+      "last_funding_date": "2025-12",
+      "note": "Series C $14.5M (Dec 22, 2025). Main Series C $100M Feb 2024. Total: $185M"
+    },
+    {
+      "slug": "jerry",
+      "last_funding_date": "2023-08",
+      "note": "Debt financing $110M (Aug 2, 2023). Total: $233M"
+    },
+    {
+      "slug": "pilot",
+      "last_funding_date": "2021-03",
+      "note": "Series C $100M led by Whale Rock Capital & Bezos Expeditions (Mar 26, 2021)"
+    },
+    {
+      "slug": "marshmallow",
+      "last_funding_date": "2025-04",
+      "note": "Series C $90M at $2B+ valuation (Apr 15, 2025). Led by Portage"
+    },
+    {
+      "slug": "alloy",
+      "last_funding_date": "2022-09",
+      "note": "Series C extension $52M at $1.55B valuation (Sep 1, 2022). Led by Lightspeed"
+    },
+    {
+      "slug": "cowbell-cyber",
+      "last_funding_date": "2024-07",
+      "note": "Series C $60M from Zurich Insurance Group (Jul 26, 2024). Total: $209M"
+    },
+    {
+      "slug": "veriff",
+      "last_funding_date": "2022-01",
+      "note": "Series C $100M at $1.5B valuation (Jan 26, 2022). Led by Tiger Global"
+    },
+    {
+      "slug": "akur8",
+      "last_funding_date": "2024-09",
+      "note": "Series C $120M led by One Peak (Sep 16, 2024). Total: $180M"
+    },
+    {
+      "slug": "cleo",
+      "last_funding_date": "2025-03",
+      "note": "$38.8M convertible notes from existing investors (Mar 2025). Series C $80M Apr 2022"
+    },
+    {
+      "slug": "upstart",
+      "last_funding_date": "2020-12",
+      "note": "IPO on Nasdaq Dec 18, 2020 at $1.45B valuation"
+    },
+    {
+      "slug": "pontera",
+      "last_funding_date": "2023-12",
+      "note": "Series C $60M led by ICONIQ Growth (Dec 7, 2023). Total: $160M"
+    },
+    {
+      "slug": "complyadvantage",
+      "last_funding_date": "2021-03",
+      "note": "Series C with Goldman Sachs (Mar 22, 2021). Total: $167M"
+    },
+    {
+      "slug": "sylvera",
+      "last_funding_date": "2023-07",
+      "note": "Series B $57M led by Balderton Capital (Jul 18, 2023). Total: ~$100M"
+    },
+    {
+      "slug": "reducto",
+      "last_funding_date": "2025-10",
+      "note": "Series B $75M led by a16z (Oct 14, 2025). Total: $108M"
+    },
+    {
+      "slug": "personetics",
+      "last_funding_date": "2022-01",
+      "note": "Series D $85M led by Thoma Bravo (Jan 19, 2022). Total: $178M"
+    },
+    {
+      "slug": "rocket-money",
+      "last_funding_date": "2021-12",
+      "note": "Acquired by Rocket Companies for $1.275B (Dec 20, 2021)"
+    },
+    {
+      "slug": "stampli",
+      "last_funding_date": "2023-10",
+      "note": "Series D $61M led by Blackstone (Oct 3, 2023). Total: $148M"
+    },
+    {
+      "slug": "rogo",
+      "last_funding_date": "2025-04",
+      "note": "Series B $50M at $350M valuation (Apr 30, 2025). Led by Thrive Capital"
+    },
+    {
+      "slug": "nansen",
+      "last_funding_date": "2021-12",
+      "note": "Series B $75M at $750M valuation (Dec 16, 2021). Led by Accel"
+    },
+    {
+      "slug": "9fin",
+      "last_funding_date": "2024-12",
+      "note": "Series B $50M at ~$500M valuation (Dec 2, 2024). Led by Highland Europe"
+    },
+    {
+      "slug": "iproov",
+      "last_funding_date": "2023-11",
+      "note": "$6.98M round (Nov 30, 2023). Main round: $70M from Sumeru Equity Jan 2022"
+    },
+    {
+      "slug": "greenly",
+      "last_funding_date": "2024-03",
+      "note": "Series B $52M led by Fidelity (Mar 21, 2024). Total: $79M"
+    },
+    {
+      "slug": "digit",
+      "last_funding_date": "2021-12",
+      "note": "Acquired by Oportun for $213M (Dec 22, 2021)"
+    },
+    {
+      "slug": "ekata",
+      "last_funding_date": "2021-06",
+      "note": "Acquired by Mastercard for $850M (closed Jun 9, 2021)"
+    },
+    {
+      "slug": "kensho-sp-global",
+      "last_funding_date": "2018-04",
+      "note": "Acquired by S&P Global for $550M (Apr 2018)"
+    },
+    {
+      "slug": "sweep",
+      "last_funding_date": "2022-04",
+      "note": "Series B $73M led by Coatue (Apr 4, 2022). Total: $100M"
+    },
+    {
+      "slug": "snapsheet",
+      "last_funding_date": "2023-07",
+      "note": "Series E $5M from State Farm (Jul 19, 2023). Total: $162M"
+    },
+    {
+      "slug": "corvus-travelers",
+      "last_funding_date": "2024-01",
+      "note": "Acquired by Travelers for $435M (completed Jan 3, 2024)"
+    },
+    {
+      "slug": "sigfig",
+      "last_funding_date": "2018-06",
+      "note": "Series E $50M led by General Atlantic (Jun 19, 2018). Total: $117M"
+    },
+    {
+      "slug": "symend",
+      "last_funding_date": "2024-03",
+      "note": "Accelerator round (Mar 6, 2024). Growth capital $40M+ Nov 2022. Total: ~$187M"
+    },
+    {
+      "slug": "openspace",
+      "last_funding_date": "2022-08",
+      "note": "Series D extension $9M (Aug 9, 2022). Main Series D $102M Mar 2022. Total: $199M"
+    },
+    {
+      "slug": "albert",
+      "last_funding_date": "2021-01",
+      "note": "Series C $100M led by General Atlantic (Jan 26, 2021). Total: $174M"
+    },
+    {
+      "slug": "xelix",
+      "last_funding_date": "2025-07",
+      "note": "Series B $160M led by Insight Partners (Jul 21, 2025). Total: $168M"
+    },
+    {
+      "slug": "fundguard",
+      "last_funding_date": "2024-03",
+      "note": "Series C $100M led by Key1 Capital (Mar 25, 2024). Total: $156M"
+    },
+    {
+      "slug": "orbital-insight",
+      "last_funding_date": "2024-05",
+      "note": "Acquired by Privateer (May 6, 2024). Total raised: $130M"
+    },
+    {
+      "slug": "reonomy",
+      "last_funding_date": "2021",
+      "note": "Acquired by Altus Group (2021). Last round: Series D $60M Nov 2019"
+    },
+    {
+      "slug": "truework",
+      "last_funding_date": "2025-04",
+      "note": "Acquired by Checkr (Apr 17, 2025). Last round: Series C $24M Jun 2023"
+    },
+    {
+      "slug": "idnow",
+      "last_funding_date": "2025-03",
+      "note": "Acquired by Corsair Capital for $295M (Mar 6, 2025)"
+    },
+    {
+      "slug": "rossum",
+      "last_funding_date": "2024-01",
+      "note": "Debt financing from CIBC Innovation Banking (Jan 26, 2024). Series A $100M Oct 2021"
+    },
+    {
+      "slug": "datarails",
+      "last_funding_date": "2026-01",
+      "note": "Series C $70M at $550M valuation (Jan 2026). Led by One Peak. Total: $175M"
+    },
+    {
+      "slug": "coterie-insurance",
+      "last_funding_date": "2024-03",
+      "note": "Series B-II $27M led by Hiscox (Mar 18, 2024). Total: $102M"
+    },
+    {
+      "slug": "indebted",
+      "last_funding_date": "2024-09",
+      "note": "Series C $40M (A$60M) led by Airtree (Sep 24, 2024). Total: $98M"
+    },
+    {
+      "slug": "infogrid",
+      "last_funding_date": "2024-04",
+      "note": "Series B $13M led by Keyframe & A/O PropTech (Apr 22, 2024). Total: $120M"
+    },
+    {
+      "slug": "titan",
+      "last_funding_date": "2023-01",
+      "note": "Series C ~$100M at ~$1B valuation (Jan 2023). Total: ~$202M"
+    },
+    {
+      "slug": "au10tix",
+      "last_funding_date": "2019-12",
+      "note": "Series C $20M from TPG/Oak HC/FT (Dec 4, 2019). Total: $80M"
+    },
+    {
+      "slug": "chaos-labs",
+      "last_funding_date": "2024-08",
+      "note": "Series A $55M led by Haun Ventures (Aug 15, 2024). Total: $75M"
+    },
+    {
+      "slug": "trueaccord",
+      "last_funding_date": "2022-06",
+      "note": "Series Unknown $49M (Jun 6, 2022). Total: ~$90M"
+    },
+    {
+      "slug": "planck",
+      "last_funding_date": "2024-07",
+      "note": "Acquired by Applied Systems (Jul 23, 2024). Total raised: $73M"
+    },
+    {
+      "slug": "orum",
+      "last_funding_date": "2025-07",
+      "note": "Acqui-hired by Stripe (Jul 21, 2025). Last round: Series B $56M Jun 2021"
+    },
+    {
+      "slug": "aumni-jpmorgan",
+      "last_funding_date": "2023-05",
+      "note": "Acquired by JPMorgan Chase (completed May 2, 2023). Total: $67M"
+    },
+    {
+      "slug": "internet-computer-icp",
+      "last_funding_date": "2018-08",
+      "note": "Series C 02M led by Polychain & a16z (Aug 29, 2018). Total: 67M. No new round since."
+    },
+    {
+      "slug": "corgi-insurance",
+      "last_funding_date": "2026-01",
+      "note": "Series A 08M at 30M valuation (Jan 9, 2026). Led by Y Combinator, Glade Brook. Total: 08M"
+    },
+    {
+      "slug": "campfire",
+      "last_funding_date": "2025-10",
+      "note": "Series B 5M co-led by Accel & Ribbit (Oct 2025). Total: 04M raised in 12 weeks"
+    },
+    {
+      "slug": "tis-treasury-intelligence",
+      "last_funding_date": "2024-03",
+      "note": "Acquired by Marlin Equity Partners (Mar 26, 2024). Last VC round: Jun 2022 debt. Total: ~1M"
+    },
+    {
+      "slug": "wayfinder",
+      "last_funding_date": "2024-03",
+      "note": "Parallel Studios 5M round (Mar 2024) from VanEck, Solana Ventures. Total (Parallel): ~5M"
+    },
+    {
+      "slug": "blue-dot",
+      "last_funding_date": "2021-04",
+      "note": "Series C 2M led by Ibex Investors (Apr 7, 2021). Total: 6-96M"
+    },
+    {
+      "slug": "april-tax-solutions",
+      "last_funding_date": "2025-07",
+      "note": "Series B 8M led by QED Investors (Jul 23, 2025). Total: 8M"
+    },
+    {
+      "slug": "cape-analytics",
+      "last_funding_date": "2025-01",
+      "note": "Acquired by Moodys (Jan 13, 2025). Last VC: Series C 4M Jul 2021. Total: 5M"
+    },
+    {
+      "slug": "origin-financial",
+      "last_funding_date": "2021-08",
+      "note": "Series B 6M led by 01A, General Catalyst, Lachy Groom (Aug 30, 2021). Total: 6.5M"
+    },
+    {
+      "slug": "mosaic-tech",
+      "last_funding_date": "2025-02",
+      "note": "Acquired by HiBob (Feb 13, 2025). Last VC: Series C 6M Jun 2023. Total: ~2M"
+    },
+    {
+      "slug": "home365",
+      "last_funding_date": "2022-03",
+      "note": "Series B 6M led by Viola Growth (Mar 2022). Total: ~0M"
+    },
+    {
+      "slug": "constructify",
+      "last_funding_date": "2024-01",
+      "note": "Extension M at 50M valuation (Jan 18, 2024). Briq construction fintech. Total: ~8M"
+    },
+    {
+      "slug": "sentieo-now-alphasense",
+      "last_funding_date": "2022-05",
+      "note": "Acquired by AlphaSense (May 11, 2022). Total raised: 8.5M"
+    },
+    {
+      "slug": "visible-alpha",
+      "last_funding_date": "2024-02",
+      "note": "Acquired by S&P Global (Feb 20, 2024). Last VC: Series B 8M Jan 2018. Total: 8M"
+    },
+    {
+      "slug": "google-deepmind",
+      "last_funding_date": "2014-01",
+      "note": "Acquired by Google for 00-650M (Jan 26, 2014). Pre-acq funding: 0M+"
+    },
+    {
+      "slug": "fetchai-fet",
+      "last_funding_date": "2024-12",
+      "note": "Series C undisclosed amount (Dec 5, 2024). Also 00M infra investment Mar 2024. Total VC: ~2M"
+    },
+    {
+      "slug": "silent-eight",
+      "last_funding_date": "2022-03",
+      "note": "Series B 0M led by TYH Ventures, HSBC Ventures (Mar 9, 2022). Total: 5M"
+    },
+    {
+      "slug": "singularitynet-agixfet",
+      "last_funding_date": "2022-05",
+      "note": "Series A undisclosed (May 20, 2022). Merged into ASI Alliance with Fetch.ai 2024. Total VC: .6M + token sales"
+    },
+    {
+      "slug": "salient",
+      "last_funding_date": "2025-07",
+      "note": "Series A 0M led by a16z (Jul 29, 2025). AI loan servicing. Valuation ~00M. Total: ~0M"
+    },
+    {
+      "slug": "napier-ai",
+      "last_funding_date": "2025-02",
+      "note": "Majority investment from Marlin Equity Partners (Feb 3, 2025). Previous: Series C £45M from Crestline Jan 2024"
+    },
+    {
+      "slug": "nomentia",
+      "last_funding_date": "2023-03",
+      "note": "Acquired by Inflexion PE (Mar 1, 2023). Treasury management. Total funding undisclosed"
+    },
+    {
+      "slug": "eigen-technologies",
+      "last_funding_date": "2024-06",
+      "note": "Acquired by Sirion (Jun 6, 2024). Last VC: Series B 7M Nov 2019 + M extension. Total: ~0M"
+    },
+    {
+      "slug": "gensyn",
+      "last_funding_date": "2023-06",
+      "note": "Series A 3M led by a16z Crypto (Jun 2023). Token sale Dec 2025. Total VC: 0.6M"
+    },
+    {
+      "slug": "serrala",
+      "last_funding_date": "2021-08",
+      "note": "Majority PE investment from Hg (Aug 26, 2021). Payment automation. Founded 1984"
+    },
+    {
+      "slug": "quantopian-closed",
+      "last_funding_date": "2020-10",
+      "note": "Shut down Oct/Nov 2020. Cofounders joined Robinhood. Total raised: 8.8M"
+    },
+    {
+      "slug": "skitai",
+      "last_funding_date": "2023-05",
+      "note": "Latest round May 24, 2023 led by WestBridge Capital. Series B 3M Sep 2021. Total: 7.6M"
+    },
+    {
+      "slug": "zeni",
+      "last_funding_date": "2021-08",
+      "note": "Series B 4M led by Elevation Capital (Aug 2021). Total: 7.5M. No new round since"
+    },
+    {
+      "slug": "ampla",
+      "last_funding_date": "2025-04",
+      "note": "Acquired by FundThrough (Apr 22, 2025). Last VC: Series A 0M Dec 2021. Total VC: 5M+ plus credit lines"
+    },
+    {
+      "slug": "posh-technologies",
+      "last_funding_date": "2024-06",
+      "note": "Series A extension led by Curql (Jun 2024). Total: 5M+. AI voice banking for credit unions"
+    },
+    {
+      "slug": "treefera",
+      "last_funding_date": "2025-06",
+      "note": "Series B 0M led by Notion Capital (Jun 2025). Total: 4.2M. Carbon/forestry data AI"
+    },
+    {
+      "slug": "numerai",
+      "last_funding_date": "2025-11",
+      "note": "Series C 0M at 00M valuation (Nov 2025). Led by university endowments. JP Morgan 00M backing"
+    },
+    {
+      "slug": "nanonets",
+      "last_funding_date": "2024-03",
+      "note": "Series B 9M led by Accel (Mar 12, 2024). Total: 2M. AI document processing"
+    },
+    {
+      "slug": "plan-a",
+      "last_funding_date": "2023-09",
+      "note": "Series A extension 7M led by Lightspeed (Sep 2023). Total: 2M. Carbon accounting platform"
+    },
+    {
+      "slug": "gtreasury",
+      "last_funding_date": "2025-10",
+      "note": "Acquired by Ripple for B (Oct 16, 2025). Last VC: Series C May 2023 from Hg. Total: 2M"
+    },
+    {
+      "slug": "cytora",
+      "last_funding_date": "2025-09",
+      "note": "Acquired by Applied Systems (Sep 2025). Last VC: Series B £25M 2019. Total: ~2M"
+    },
+    {
+      "slug": "atom-finance",
+      "last_funding_date": "2024-05",
+      "note": "Acquired by Toggle (May 15, 2024). Last VC: Series B 8M Jun 2021. Total: 0.5M"
+    },
+    {
+      "slug": "entera",
+      "last_funding_date": "2021-06",
+      "note": "Series A 2M led by Goldman Sachs (Jun 2021). Total: 9.5M. Real estate AI"
+    },
+    {
+      "slug": "gabi-experian",
+      "last_funding_date": "2021-11",
+      "note": "Acquired by Experian for 20M (Nov 19, 2021). Last VC: Series B 7M Jan 2020. Total: 9.1M"
+    },
+    {
+      "slug": "sumsub",
+      "last_funding_date": "2024-09",
+      "note": "Incubator/accelerator round (Sep 18, 2024). Series B 2022. Total: 7.5M. Revenue 5.6M in 2024"
+    },
+    {
+      "slug": "goldfinch",
+      "last_funding_date": "2022-01",
+      "note": "Series A 5M led by a16z crypto (Jan 6, 2022). Total: 6.7M. DeFi lending protocol"
+    },
+    {
+      "slug": "collectly",
+      "last_funding_date": "2023-07",
+      "note": "Series A 9M led by Sapphire Ventures (Jul 21, 2023). Total: 4.1M. Healthcare payments"
+    },
+    {
+      "slug": "regula",
+      "last_funding_date": "1992",
+      "note": "Bootstrapped since 1992. No external VC funding raised. Identity verification forensics, Latvia"
+    },
+    {
+      "slug": "allora",
+      "last_funding_date": "2024-06",
+      "note": "Strategic round M (Jun 2024). Formerly Upshot. Total: 5M. Decentralized AI network"
+    },
+    {
+      "slug": "trullion",
+      "last_funding_date": "2023-04",
+      "note": "Series A extension 5M led by StepStone (Apr 19, 2023). Total: 4M. AI accounting"
+    },
+    {
+      "slug": "jirav",
+      "last_funding_date": "2023-07",
+      "note": "Series B 0M led by Cota Capital (Jul 11, 2023). Total: 3.6M. FP&A software"
+    },
+    {
+      "slug": "earnest-research",
+      "last_funding_date": "2025-04",
+      "note": "Acquired by Consumer Edge (Apr 28, 2025). Last VC: Series B 5M. Total: 3.5M"
+    },
+    {
+      "slug": "ocean-protocol-oceanfet",
+      "last_funding_date": "2022-05",
+      "note": "Private round M from Cypher Capital (May 23, 2022). Total: 9.2M incl token sales. Merged with ASI Alliance"
+    },
+    {
+      "slug": "borderlessalberni",
+      "last_funding_date": "2025-01",
+      "note": "Seed round M led by Cohere (Jan 16, 2025). Previous: 7M seed Mar 2024. Total: 2M. AI employer of record"
+    },
+    {
+      "slug": "normative",
+      "last_funding_date": "2024-07",
+      "note": "Bridge round SEK 90M from existing investors (Jul 2024). Series B €31M Jul 2022. Total: ~2M. Carbon accounting"
+    },
+    {
+      "slug": "spectral-spec",
+      "last_funding_date": "2022-08",
+      "note": "Series B 3M led by General Catalyst & Social Capital (Aug 24, 2022). Total: 0.3M. Web3 credit scoring"
+    },
+    {
+      "slug": "render-render",
+      "last_funding_date": "2021-12",
+      "note": "Token sale 0M led by Multicoin Capital (Dec 2021). Decentralized GPU rendering. Migrated to Solana"
+    },
+    {
+      "slug": "ionet",
+      "last_funding_date": "2024-03",
+      "note": "Series A 0M led by Hack VC (Mar 5, 2024). Decentralized GPU network on Solana"
+    },
+    {
+      "slug": "riskalyze",
+      "last_funding_date": "2021-08",
+      "note": "Majority recapitalization by Hg (Aug 25, 2021). Series A 0M from FTV Capital 2016. Rebranded to Nitrogen. Total: ~7M"
+    },
+    {
+      "slug": "ascent-regtech",
+      "last_funding_date": "2024-01",
+      "note": "Acquired by Edgewater Capital (Jan 18, 2024). Series B 9.3M led by Drive Capital. Total: 6.7M"
+    },
+    {
+      "slug": "lucinity",
+      "last_funding_date": "2022-07",
+      "note": "Series B 7M led by Keen Venture Partners (Jul 7, 2022). Total: 6M. AML compliance Iceland"
+    },
+    {
+      "slug": "vana",
+      "last_funding_date": "2024-09",
+      "note": "Strategic round M led by Coinbase Ventures (Sep 17, 2024). Series A 8M 2022. Total: 5M. Data DAO"
+    },
+    {
+      "slug": "ritual",
+      "last_funding_date": "2024-04",
+      "note": "Seed 5M led by Archetype (Nov 2023) + Polychain top-up (Apr 2024). Total: 5M+. Decentralized AI compute"
+    },
+    {
+      "slug": "versapay",
+      "last_funding_date": "2019-12",
+      "note": "Acquired by Great Hill Partners (Dec 13, 2019). C26M deal. Accounts receivable automation. Total funding: 0.6M"
+    },
+    {
+      "slug": "quandl-nasdaq",
+      "last_funding_date": "2018-12",
+      "note": "Acquired by Nasdaq (Dec 4, 2018). Series B 2M Sep 2016. Total: 2.2M. Alternative data platform"
+    },
+    {
+      "slug": "mindee",
+      "last_funding_date": "2023-03",
+      "note": "Series A extension $7M (Mar 15, 2023). Previous: $14M Oct 2021 led by GGV Capital. Total: $23.4M. Document AI, Paris"
+    },
+    {
+      "slug": "heron-finance",
+      "last_funding_date": "2024-02",
+      "note": "Debt financing round (Feb 2024). SMB lending platform, SF. Distinct from Heron Data which raised $16M Jul 2025"
+    },
+    {
+      "slug": "affinda",
+      "last_funding_date": "2024-06",
+      "note": "Growth round $10M at $120M valuation (Jun 24, 2024). Total: $22.9M. Document AI, Melbourne"
+    },
+    {
+      "slug": "embat",
+      "last_funding_date": "2024-02",
+      "note": "Series A €14.7M led by Creandum (Feb 16, 2024). Total: $23M. Treasury management, Madrid"
+    },
+    {
+      "slug": "aligned-layer",
+      "last_funding_date": "2024-04",
+      "note": "Series A $20M led by Hack VC (Apr 25, 2024). Seed $2.6M same month. Total: $22.6M. ZK proofs on Ethereum"
+    },
+    {
+      "slug": "january",
+      "last_funding_date": "2023-12",
+      "note": "Series B $12M led by IA Ventures (Dec 2023). Series A $10M 2022. Total: $22M. Debt collection fintech"
+    },
+    {
+      "slug": "sphera",
+      "last_funding_date": "2025-01",
+      "note": "Neuberger Berman PE investment (2025). Acquired by Blackstone for $1.4B in 2021. ESG risk management"
+    },
+    {
+      "slug": "shufti-pro",
+      "last_funding_date": "2022-03",
+      "note": "Series A $20M led by Updata Partners (Mar 21, 2022). Total: $20M. Identity verification, UK"
+    },
+    {
+      "slug": "arabesque",
+      "last_funding_date": "2019-06",
+      "note": "Series A $20M led by Allianz X with DWS, Commerz Real (Jun 2019). ESG AI, Germany. Total: $20M"
+    },
+    {
+      "slug": "nilus",
+      "last_funding_date": "2025-01",
+      "note": "$10M led by Felicis & Vesey Ventures (Jan 2025). Total: $18.6M. AI treasury management"
+    },
+    {
+      "slug": "receeve",
+      "last_funding_date": "2024-12",
+      "note": "Acquired by InDebted (Dec 2024). Last VC: seed $4.5M Jan 2022. Total: $18M. Debt collection, Hamburg"
+    },
+    {
+      "slug": "masa",
+      "last_funding_date": "2024-12",
+      "note": "Strategic round from DCG & FBG Capital (Dec 2024). Seed $5.4M Jan 2024. Total: ~$18M. AI data network"
+    },
+    {
+      "slug": "tidalwave",
+      "last_funding_date": "2024-08",
+      "note": "Unknown round Aug 2024 per Tracxn. AI compliance. Limited public info"
+    },
+    {
+      "slug": "finny-ai",
+      "last_funding_date": "2021-06",
+      "note": "Seed $21M (Jun 2021). Fintech financial literacy. Limited recent activity"
+    },
+    {
+      "slug": "catena-labs",
+      "last_funding_date": "2025-05",
+      "note": "Seed $18M led by a16z Crypto (May 2025). AI-native stablecoin infrastructure"
+    },
+    {
+      "slug": "heron-data",
+      "last_funding_date": "2025-07",
+      "note": "Series A $16.6M led by Insight Partners (Jul 15, 2025). AI document workflows for lending/insurance"
+    },
+    {
+      "slug": "filed",
+      "last_funding_date": "2025-05",
+      "note": "Seed + pre-seed \u0007.2M led by Northzone (May 21, 2025). AI tax automation, Stockholm"
+    },
+    {
+      "slug": "composer",
+      "last_funding_date": "2024-09",
+      "note": "Seed round (Sep 18, 2024). M13 & FJ Labs investors. Total: \u0006.7M. Trading platform, Toronto"
+    },
+    {
+      "slug": "virtuals-protocol-virtual",
+      "last_funding_date": "2021-10",
+      "note": "Seed \u0006M led by DeFiance Capital (Oct 2021, as PathDAO). Pivoted to AI agents Jan 2024. Token VIRTUAL launched Oct 2024"
+    },
+    {
+      "slug": "credora",
+      "last_funding_date": "2023-04",
+      "note": "Strategic round M from S&P Global & Coinbase Ventures (Apr 25, 2023). Total: \u0004-16M. Crypto credit assessment"
+    },
+    {
+      "slug": "fyle",
+      "last_funding_date": "2025-07",
+      "note": "Acquired by Sage Group (Jul 24, 2025). Last VC: Series A .5M Oct 2022. Total: \u0005.4M. Expense management"
+    },
+    {
+      "slug": "bankr",
+      "last_funding_date": "2023-01",
+      "note": "Limited public info. Tracxn shows funding round Jan 2023. Neobank fintech. Total: ~\u0005M"
+    },
+    {
+      "slug": "yaypay",
+      "last_funding_date": "2020-07",
+      "note": "Acquired by Quadient (Jul 29, 2020). Series B .4M Dec 2018 led by IVP. Total: \u0004.8M. AR automation"
+    },
+    {
+      "slug": "aiprise",
+      "last_funding_date": "2025-10",
+      "note": "Series A \u0002.5M led by Headline (Oct 2025). YC S22. Total: \u0005M. KYC/KYB identity verification"
+    },
+    {
+      "slug": "delysium",
+      "last_funding_date": "2022-10",
+      "note": "Strategic round \u0000M led by Anthos Capital (Oct 2022). Seed M Mar 2022. Total: \u0004M. Crypto AI gaming"
+    },
+    {
+      "slug": "autonolas-olas",
+      "last_funding_date": "2025-02",
+      "note": "Core contributor Valory raised \u0003.8M led by 1kx (Feb 2025). Autonomous crypto agents. Total: \u0003.8M+"
+    },
+    {
+      "slug": "grass",
+      "last_funding_date": "2025-10",
+      "note": "Bridge round \u0000M co-led by Polychain & Tribe Capital (Oct 2025). Series A Sep 2024. Total: ~\u0004M. DePIN data network"
+    },
+    {
+      "slug": "rentlytics",
+      "last_funding_date": "2018-10",
+      "note": "Acquired by RealPage for \u0007M (Oct 12, 2018). Series A .1M Jan 2016. Total VC: \u0003.1M. Proptech analytics"
+    },
+    {
+      "slug": "complianceai",
+      "last_funding_date": "2024-02",
+      "note": "Acquired by Archer (Feb 2024). Series B M Aug 2022 led by JAM FINTOP. Total: \u0003M. Regulatory compliance"
+    },
+    {
+      "slug": "thinknum",
+      "last_funding_date": "2023-06",
+      "note": "Equity financing from existing investors (Jun 2023). Series A \u0001.6M Mar 2019. Total: \u0002.6M. Alternative data"
+    },
+    {
+      "slug": "livevox",
+      "last_funding_date": "2023-10",
+      "note": "Acquired by NICE for (M (Oct 4, 2023). SPAC IPO Jun 2021 at  M. Cloud contact center"
+    },
+    {
+      "slug": "eqty-lab",
+      "last_funding_date": "2024-01",
+      "note": "Convertible note round, total M from Crosspoint Capital, Peer, Protocol VC, Further Ventures. AI governance"
+    },
+    {
+      "slug": "arkham",
+      "last_funding_date": "2023-11",
+      "note": "Seed round (Nov 15, 2023). ICO .5M Jul 2023. Backed by Sam Altman, Bedrock. Total: \u0002-14M. Crypto analytics"
+    },
+    {
+      "slug": "auquan",
+      "last_funding_date": "2024-10",
+      "note": "Seed extension .5M led by Peak XV (Oct 29, 2024). Total: \u0001.5M. AI financial analytics, London"
+    },
+    {
+      "slug": "cashforce",
+      "last_funding_date": "2022-06",
+      "note": "Acquired by TIS (Jun 2022). Series A €5M Oct 2019 led by INKEF & Citi Ventures. Total: \u0001.3M. Treasury mgmt, Belgium"
+    },
+    {
+      "slug": "flockio",
+      "last_funding_date": "2024-12",
+      "note": "Strategic round M led by DCG (Dec 2024). Seed M Mar 2024 led by Lightspeed. Total: \u0001M. Federated learning, London"
+    },
+    {
+      "slug": "almanak",
+      "last_funding_date": "2024-10",
+      "note": "Accelerator program (Oct 2024). Series A .45M Aug 2025. DeFi AI trading. Total: \u0001M+"
+    },
+    {
+      "slug": "kaito-ai",
+      "last_funding_date": "2023-06",
+      "note": "Series A .5M at \u0007.5M valuation (Jun 2023). Seed .3M Feb 2023. Total: \u0000.8M. Crypto AI search"
+    },
+    {
+      "slug": "credolab",
+      "last_funding_date": "2020-08",
+      "note": "Series A M led by GBG (Aug 20, 2020). Total: \u0000.1M. Mobile credit scoring, Singapore"
+    },
+    {
+      "slug": "abe-ai",
+      "last_funding_date": "2019-01",
+      "note": "Acquired by Envestnet|Yodlee (Jan 24, 2019). Total VC: (K. Conversational banking"
+    },
+    {
+      "slug": "flyfin",
+      "last_funding_date": "2024-11",
+      "note": "StartEngine crowdfunding round at \u0002M valuation (Nov 2024). Seed M Dec 2021 led by Accel. Total: ~\u0000M. AI tax filing"
+    },
+    {
+      "slug": "pair-finance",
+      "last_funding_date": "2022-10",
+      "note": "Acquired by Pollen Street Capital (Oct 11, 2022). Series A €4.5M. Total: .7M. AI debt collection, Berlin"
+    },
+    {
+      "slug": "targon-compute-sn4",
+      "last_funding_date": "2025-08",
+      "note": "Series A $10.5M by Manifold Labs (Aug 30, 2025). Bittensor Subnet 4 decentralized compute"
+    },
+    {
+      "slug": "phala-network",
+      "last_funding_date": "2020-09",
+      "note": "Token generation event Sep 12, 2020. Private round $1.4M. TEE privacy compute on Polkadot. Total: ~$1.7M VC + grants"
+    },
+    {
+      "slug": "gaviti",
+      "last_funding_date": "2022-04",
+      "note": "Series A $9M led by Flashpoint (Apr 2022). Total: $11.5M. AR collections automation, Israel"
+    },
+    {
+      "slug": "singularitydao-sdao",
+      "last_funding_date": "2022-05",
+      "note": "Misc round (May 19, 2022). LDA Capital commitment. Total: $27.7M raised. Merged into Singularity Finance"
+    },
+    {
+      "slug": "prophix",
+      "last_funding_date": "2021-01",
+      "note": "Acquired by Hg Capital (Jan 6, 2021). Debt round $7.5M Apr 2019. FP&A software, Toronto. Total: $7.5M VC"
+    },
+    {
+      "slug": "natural",
+      "last_funding_date": "2022-01",
+      "note": "Limited public data. Natural AI insurance. Tracxn shows funding ~2022. Total: ~$10M"
+    },
+    {
+      "slug": "docsumo",
+      "last_funding_date": "2022-03",
+      "note": "Seed $3.5M led by Common Ocean (Mar 3, 2022). Revenue $10.3M in 2024. Total: $3.7M. Document AI"
+    },
+    {
+      "slug": "keye",
+      "last_funding_date": "2023-06",
+      "note": "Seed round (Jun 2023). AI accounting automation. Total: ~$9M. Limited public info"
+    },
+    {
+      "slug": "mode-network",
+      "last_funding_date": "2024-01",
+      "note": "Seed $5.3M led by Framework Ventures (Jan 2024). Ethereum L2 DeFi. Total: $7.1M"
+    },
+    {
+      "slug": "lofty-ai",
+      "last_funding_date": "2022-05",
+      "note": "Seed $5.5M (May 2022). Tokenized real estate on Algorand. Total: $6M"
+    },
+    {
+      "slug": "taxgpt",
+      "last_funding_date": "2024-01",
+      "note": "Seed round $5M (Jan 2024). AI tax assistant. Y Combinator. Total: $5M"
+    },
+    {
+      "slug": "identomat",
+      "last_funding_date": "2022-09",
+      "note": "Seed round (Sep 2022). Identity verification, Tbilisi. Total: $4.5M"
+    },
+    {
+      "slug": "chaingpt",
+      "last_funding_date": "2023-09",
+      "note": "Seed $3.24M led by DWF Labs (Sep 2023). AI crypto tools. Total: $4.14M"
+    },
+    {
+      "slug": "beeline-magicblocks",
+      "last_funding_date": "2025-04",
+      "note": "MagicBlocks AI sales platform from Beeline Labs (BLNE). First capital raise Apr 2025. Total: ~$10M"
+    },
+    {
+      "slug": "pibitai",
+      "last_funding_date": "2025-11",
+      "note": "Series A $7M led by Stellaris Venture Partners (Nov 2025). YC-backed underwriting AI. Total: $7.6M"
+    },
+    {
+      "slug": "pond",
+      "last_funding_date": "2024-11",
+      "note": "Seed $7.5M led by Archetype (Nov 7, 2024). Decentralized AI for crypto. Total: $7.5M"
+    },
+    {
+      "slug": "zevero",
+      "last_funding_date": "2024-09",
+      "note": "Seed $7M led by Spiral Capital (Sep 2024). Carbon accounting for supply chains, London. Total: $7M"
+    },
+    {
+      "slug": "ridley",
+      "last_funding_date": "2025-12",
+      "note": "Seed $6.4M led by Fifth Wall (Dec 3, 2025). AI real estate commission-free platform"
+    },
+    {
+      "slug": "modulus-labs",
+      "last_funding_date": "2024-12",
+      "note": "Acquired by Tools for Humanity/Worldcoin (Dec 2024). Seed $6.3M Nov 2023 led by Variant & 1kx. ZK+AI"
+    },
+    {
+      "slug": "cambrian-network",
+      "last_funding_date": "2025-03",
+      "note": "Seed $5.9M led by a16z CSX (Mar 31, 2025). AI agents for crypto financial data. Total: $5.9M"
+    },
+    {
+      "slug": "giza-arma-giza-tech-arma",
+      "last_funding_date": "2025-05",
+      "note": "Seed $5.2M (May 15, 2025). Pre-seed $3M Jul 2023 led by CoinFund. ZKML smart contracts, Spain"
+    },
+    {
+      "slug": "briink",
+      "last_funding_date": "2024-09",
+      "note": "Seed €3.85M co-led by EquityPitcher & 13books (Sep 30, 2024). ESG AI, Berlin. Total: ~$4.2M"
+    },
+    {
+      "slug": "portfoliopilot",
+      "last_funding_date": "2024-08",
+      "note": "Seed $2M led by Morado Ventures (Aug 1, 2024). AI financial advisor. Total: $4M"
+    },
+    {
+      "slug": "didit",
+      "last_funding_date": "2025-12",
+      "note": "Y Combinator W26 + $2M from funds/angels (2025). Digital identity verification, Barcelona. Total: $2M+"
+    },
+    {
+      "slug": "klippa",
+      "last_funding_date": "2025-03",
+      "note": "Acquired by SER Group (Mar 18, 2025). Seed €1.2M 2020. Document AI, Netherlands. Revenue $21.5M"
+    },
+    {
+      "slug": "trendspider",
+      "last_funding_date": "2018-01",
+      "note": "Seed $1.5M from Leazar Capital. Technical analysis trading software, Austin. Founded 2016"
+    },
+    {
+      "slug": "inkle",
+      "last_funding_date": "2023-02",
+      "note": "Pre-seed $1.5M led by Picus Capital (Feb 2023). Accounting/tax SaaS for US cross-border startups"
+    },
+    {
+      "slug": "velvet-capital",
+      "last_funding_date": "2025-07",
+      "note": "Raised $3.7M led by YZi Labs (Jul 9, 2025). DeFi portfolio management. Total: $3.7M"
+    },
+    {
+      "slug": "collbox",
+      "last_funding_date": "2019-12",
+      "note": "Seed $1M led by Bala Investments (Dec 26, 2019). AR collections for SMBs, Austin"
+    },
+    {
+      "slug": "akash-network",
+      "last_funding_date": "2020-10",
+      "note": "ICO $800K (Oct 15, 2020) + $2M venture round Mar 2020. Decentralized cloud compute. Total: $2.8M"
+    },
+    {
+      "slug": "kount",
+      "last_funding_date": "2021-01",
+      "note": "Acquired by Equifax (Jan 8, 2021). AI fraud detection. Total funding: $80M. Founded 2007, Boise"
+    },
+    {
+      "slug": "finn-ai-glia",
+      "last_funding_date": "2022-12",
+      "note": "Finn AI acquired by Glia (Dec 2022). Conversational AI for banking. Total raised: $16.5M"
+    },
+    {
+      "slug": "kofax",
+      "last_funding_date": "2022-04",
+      "note": "Acquired by Tungsten Automation (Apr 2022, Hyland). Previous: taken private by Thoma Bravo 2017. Document processing"
+    },
+    {
+      "slug": "gbg",
+      "last_funding_date": "2023-12",
+      "note": "Public company (LSE: GBG). Taken private by GTCR for £1.3B (Dec 2023). Identity verification, UK"
+    },
+    {
+      "slug": "esker",
+      "last_funding_date": "2024-11",
+      "note": "Public (Euronext: ESKR). Taken private by Bridgepoint for €1.74B (Nov 4, 2024). Document automation, Lyon"
+    },
+    {
+      "slug": "saifr-fidelity",
+      "last_funding_date": "2020-01",
+      "note": "Internal Fidelity Labs venture (launched ~2020). AI regulatory compliance. Subsidiary of Fidelity Investments"
+    },
+    {
+      "slug": "virtu-financial",
+      "last_funding_date": "2015-04",
+      "note": "IPO on NASDAQ Apr 2015 (VIRT). Market maker/HFT. Revenue $2.2B+ annually"
+    },
+    {
+      "slug": "factset",
+      "last_funding_date": "1996-06",
+      "note": "IPO on NYSE Jun 1996 (FDS). Financial data. Market cap ~$18B"
+    },
+    {
+      "slug": "citadel-securities",
+      "last_funding_date": "2022-01",
+      "note": "Sequoia & Paradigm invested $1.15B at $22B valuation (Jan 11, 2022). Market maker founded 2002"
+    },
+    {
+      "slug": "two-sigma",
+      "last_funding_date": "2001",
+      "note": "Founded 2001. Self-funded quantitative hedge fund. AUM ~$60B. No external VC"
+    },
+    {
+      "slug": "de-shaw",
+      "last_funding_date": "1988",
+      "note": "Founded 1988 by David E. Shaw. Self-funded quant hedge fund. AUM ~$60B"
+    },
+    {
+      "slug": "renaissance-technologies",
+      "last_funding_date": "1982",
+      "note": "Founded 1982 by Jim Simons. Self-funded. Medallion Fund. AUM ~$106B"
+    },
+    {
+      "slug": "jane-street",
+      "last_funding_date": "2000",
+      "note": "Founded 2000. Self-funded quantitative trading firm. Revenue ~$22B (2024). No external VC"
+    },
+    {
+      "slug": "bridgewater",
+      "last_funding_date": "1975",
+      "note": "Founded 1975 by Ray Dalio. Self-funded macro hedge fund. AUM ~$125B"
+    },
+    {
+      "slug": "man-ahl",
+      "last_funding_date": "1987",
+      "note": "AHL founded 1987. Part of Man Group (LSE: EMG) since 1994. Quant CTA strategies"
+    },
+    {
+      "slug": "worldquant",
+      "last_funding_date": "2007",
+      "note": "Founded 2007 by Igor Tulchinsky. Self-funded quant fund. AUM ~$7B"
+    },
+    {
+      "slug": "hudson-river-trading",
+      "last_funding_date": "2002",
+      "note": "Founded 2002. Self-funded HFT/quant trading firm. No external VC"
+    },
+    {
+      "slug": "optiver",
+      "last_funding_date": "1986",
+      "note": "Founded 1986 in Amsterdam. Self-funded market maker. Revenue ~$4.2B. No external VC"
+    },
+    {
+      "slug": "flow-traders",
+      "last_funding_date": "2015-07",
+      "note": "IPO on Euronext Amsterdam Jul 2015 (FLOW). Market maker, Amsterdam. Founded 2004"
+    },
+    {
+      "slug": "aqr-capital",
+      "last_funding_date": "1998",
+      "note": "Founded 1998 by Cliff Asness. Self-funded quant hedge fund. AUM ~$105B"
+    },
+    {
+      "slug": "point72",
+      "last_funding_date": "2014",
+      "note": "Founded 2014 by Steve Cohen (successor to SAC Capital). AUM ~$35B. No external VC"
+    },
+    {
+      "slug": "man-group",
+      "last_funding_date": "1994",
+      "note": "Public company (LSE: EMG). IPO 1994. Quant hedge fund. AUM ~$175B"
+    },
+    {
+      "slug": "pdt-partners",
+      "last_funding_date": "2012",
+      "note": "Spun off from Morgan Stanley in 2012. Self-funded quant hedge fund. Founded by Peter Muller"
+    },
+    {
+      "slug": "millennium-management",
+      "last_funding_date": "1989",
+      "note": "Founded 1989 by Israel Englander. Multi-strategy hedge fund. AUM ~$69B"
+    },
+    {
+      "slug": "balyasny-asset-mgmt",
+      "last_funding_date": "2001",
+      "note": "Founded 2001 by Dmitry Balyasny. Multi-strategy hedge fund. AUM ~$21B"
+    },
+    {
+      "slug": "marshall-wace",
+      "last_funding_date": "1997",
+      "note": "Founded 1997. Quant/systematic hedge fund, London. AUM ~$70B"
+    },
+    {
+      "slug": "high-flyer",
+      "last_funding_date": "2015",
+      "note": "Founded ~2015 in Hangzhou, China. AI quant hedge fund. Undisclosed AUM"
+    },
+    {
+      "slug": "bloomberg-ai",
+      "last_funding_date": "1981",
+      "note": "Bloomberg LP founded 1981 by Michael Bloomberg. Private. Revenue ~$13B. Bloomberg Terminal"
+    },
+    {
+      "slug": "refinitiv-lseg",
+      "last_funding_date": "2021-01",
+      "note": "Acquired by London Stock Exchange Group for $27B (Jan 29, 2021). Formerly Thomson Reuters Financial"
+    },
+    {
+      "slug": "refinitiv-eikon",
+      "last_funding_date": "2021-01",
+      "note": "Part of Refinitiv, acquired by LSEG for $27B (Jan 2021). Eikon terminal product"
+    },
+    {
+      "slug": "bloomberg-treasury",
+      "last_funding_date": "1981",
+      "note": "Bloomberg Treasury product. Part of Bloomberg LP (founded 1981). Revenue ~$13B"
+    },
+    {
+      "slug": "sp-capital-iq",
+      "last_funding_date": "2004",
+      "note": "Part of S&P Global (NYSE: SPGI). Capital IQ acquired by S&P in 2004. Market cap ~$160B"
+    },
+    {
+      "slug": "lexisnexis-risk-solutions",
+      "last_funding_date": "1994",
+      "note": "Part of RELX Group (LSE: REL). LexisNexis Risk Solutions. Revenue ~$14B group"
+    },
+    {
+      "slug": "equifax-workforce-solutions",
+      "last_funding_date": "1971",
+      "note": "Equifax IPO 1971 (NYSE: EFX). Workforce Solutions division. Market cap ~$35B"
+    },
+    {
+      "slug": "bittensor-tao",
+      "last_funding_date": "2021-03",
+      "note": "Mainnet launch Mar 2021. No VC funding — mined token like Bitcoin. Decentralized AI network. Founded by Ala Shaabana & Jacob Steeves"
+    },
+    {
+      "slug": "ai16zelizaos",
+      "last_funding_date": "2024-10",
+      "note": "ai16z token launched Oct 2024. Built by Shaw/elizaOS community. No traditional VC round — token-funded DAO"
+    },
+    {
+      "slug": "morpheus-mor",
+      "last_funding_date": "2024-02",
+      "note": "MOR token launched Feb 2024. Fair launch — no VC round. Decentralized AI agents. Community-funded"
+    },
+    {
+      "slug": "oraichain",
+      "last_funding_date": "2021-02",
+      "note": "IDO Feb 2021. AI Oracle for smart contracts, Vietnam. Total raised: ~$2M via token sales"
+    },
+    {
+      "slug": "hapi-protocol",
+      "last_funding_date": "2021-04",
+      "note": "IDO Apr 2021 on SuperFarm. On-chain security protocol, Ukraine. Seed from Kyber Network"
+    },
+    {
+      "slug": "cortex-ctxc",
+      "last_funding_date": "2018-03",
+      "note": "ICO Mar 2018 raised $20M+. AI on blockchain, China. On-chain ML inference"
+    },
+    {
+      "slug": "vicarious",
+      "last_funding_date": "2022-03",
+      "note": "Acquired by Alphabet/Google DeepMind (Mar 2022). Raised $330M+ total. AGI robotics research"
+    },
+    {
+      "slug": "vero",
+      "last_funding_date": "2021-09",
+      "note": "Acquired by Equifax (Sep 2021). Series A $15M. AI-powered mortgage verification"
+    },
+    {
+      "slug": "finrege",
+      "last_funding_date": "2023-01",
+      "note": "Strategic investment from Moodys Holdings (~2023). Innovate UK Smart Grant. FCA Handbook vendor. No disclosed VC round"
+    },
+    {
+      "slug": "kaaj",
+      "last_funding_date": "2025-11",
+      "note": "Seed $3.8M led by Kindred Ventures (Nov 19, 2025). AI credit intelligence for small business lending"
+    },
+    {
+      "slug": "finbotsai",
+      "last_funding_date": "2022-04",
+      "note": "Series A $3M from Accel sole investor (Apr 2022). AI credit risk, Singapore. Total: $4.2M"
+    },
+    {
+      "slug": "truenorth",
+      "last_funding_date": "2025-12",
+      "note": "Pre-seed $3M led by CyberFund (Dec 2025). Angel round $1M mid-2025. AI crypto trading intelligence"
+    },
+    {
+      "slug": "axal",
+      "last_funding_date": "2024-10",
+      "note": "Pre-seed $2.5M led by CMT Digital (Oct 31, 2024). Verifiable autonomous agent network. Total: $2.5M"
+    },
+    {
+      "slug": "defi-saver",
+      "last_funding_date": "2019",
+      "note": "Bootstrapped. Built by Decenter team (Serbia). Launched 2019. No external VC funding. DeFi management tool"
+    },
+    {
+      "slug": "heyelsa",
+      "last_funding_date": "2024-01",
+      "note": "Limited public data. AI financial wellness. Seed ~$3M estimated. Founded ~2023"
+    },
+    {
+      "slug": "quiver-quantitative",
+      "last_funding_date": "2022-01",
+      "note": "Limited public data. Alternative data analytics. Founded ~2020. Seed ~$3M"
+    },
+    {
+      "slug": "prop-ai",
+      "last_funding_date": "2023-06",
+      "note": "Limited public data. AI property management. Seed ~$2M. Founded ~2022"
+    },
+    {
+      "slug": "key-esg",
+      "last_funding_date": "2022-01",
+      "note": "Limited public data. ESG reporting. Seed ~$1M. Founded ~2021"
+    },
+    {
+      "slug": "collectwise",
+      "last_funding_date": "2022-06",
+      "note": "Limited public data. AI debt collection. Seed ~$1M. Founded ~2021"
+    },
+    {
+      "slug": "trade-ideas",
+      "last_funding_date": "2003",
+      "note": "Self-funded. AI stock scanner/analysis platform. Founded 2003 by Sean McLaughlin & Dan Mirkin. No disclosed VC"
+    },
+    {
+      "slug": "parascript",
+      "last_funding_date": "1996",
+      "note": "Founded 1996. Document recognition AI. Self-funded. Longmont, CO. No disclosed VC"
+    },
+    {
+      "slug": "extract-systems",
+      "last_funding_date": "2000",
+      "note": "Founded ~2000. Document capture automation. Subsidiary of Hyland Software. No disclosed VC"
+    },
+    {
+      "slug": "fico-debt-manager",
+      "last_funding_date": "1956",
+      "note": "FICO (NYSE: FICO). Fair Isaac Corp founded 1956. IPO 1986. Debt Manager is a product line"
+    },
+    {
+      "slug": "docuclipper",
+      "last_funding_date": "2021-01",
+      "note": "Self-funded SaaS. Bank statement converter. Founded ~2021. No disclosed VC"
+    },
+    {
+      "slug": "my-dso-manager",
+      "last_funding_date": "2018",
+      "note": "Self-funded. Order-to-cash SaaS. Paris, France. Founded ~2018. No disclosed VC"
+    },
+    {
+      "slug": "paal-ai",
+      "last_funding_date": "2023-09",
+      "note": "Token launched Sep 2023. AI chatbot tools for crypto. No traditional VC round"
+    },
+    {
+      "slug": "cookie-dao",
+      "last_funding_date": "2024-12",
+      "note": "Token launched Dec 2024. AI data analytics for crypto agents. Community-funded"
+    },
+    {
+      "slug": "zerebro",
+      "last_funding_date": "2024-11",
+      "note": "Token launched Nov 2024 on Solana. Autonomous AI agent. Community/token-funded"
+    },
+    {
+      "slug": "qubic",
+      "last_funding_date": "2022-04",
+      "note": "Launched Apr 2022. AI-powered PoW blockchain. No traditional VC. Netherlands community project"
+    },
+    {
+      "slug": "lulo",
+      "last_funding_date": "2024-06",
+      "note": "Launched mid-2024 on Solana. DeFi lending aggregator/optimizer. No disclosed VC round"
+    },
+    {
+      "slug": "gigabrain",
+      "last_funding_date": "2024-12",
+      "note": "Token launched Dec 2024. AI crypto research agent. Community-funded on Solana"
+    },
+    {
+      "slug": "sekoia",
+      "last_funding_date": "2024-12",
+      "note": "Token launched Dec 2024. Crypto AI agent. Community-funded"
+    },
+    {
+      "slug": "eliza-framework",
+      "last_funding_date": "2024-10",
+      "note": "Open source framework released Oct 2024 by ai16z/elizaOS community. Not a company — open source project"
+    },
+    {
+      "slug": "murphy-debt",
+      "last_funding_date": "2025-07",
+      "note": "Seed $13M + pre-seed $2M led by Northzone (Jul 2025). Barcelona-based AI debt collection. Source: EU-Startups"
+    },
+    {
+      "slug": "elfa-ai",
+      "last_funding_date": "2024-11",
+      "note": "Misc round Nov 18, 2024 ($69K total across 2 rounds). Chromia investment. Source: Messari"
+    },
+    {
+      "slug": "griffain",
+      "last_funding_date": "2024-11",
+      "note": "Token launched Nov 1, 2024. Solana AI hackathon project. No traditional VC. Source: Solana Compass"
+    },
+    {
+      "slug": "hey-anon",
+      "last_funding_date": "2024-12",
+      "note": "ANON token launched Dec 22, 2024. $20M AI agent funding from DWF Labs. Source: ChainCatcher"
+    },
+    {
+      "slug": "aixbt",
+      "last_funding_date": "2024-11",
+      "note": "Token launched Nov 2024 on Virtuals/Base. Created by pseudonymous user Rxbt. Source: Decrypt, CoinGecko"
+    },
+    {
+      "slug": "cod3x",
+      "last_funding_date": "2024-12",
+      "note": "CDX token launched Dec 20, 2024 on Ethereum. Fully bootstrapped, no VC. Founded 2022. Source: cod3x.org"
+    },
+    {
+      "slug": "neur",
+      "last_funding_date": "2024-12",
+      "note": "NEUR token launched Dec 2024 during Solana AI Hackathon. Open source Solana AI copilot. Source: AICoin"
+    },
+    {
+      "slug": "vaderai",
+      "last_funding_date": "2024-11",
+      "note": "VADER token launched Nov 18, 2024 on Virtuals/Base. AI agent for social + investment DAOs. Source: CoinGecko"
+    },
+    {
+      "slug": "arc-ai-rig-complex",
+      "last_funding_date": "2024-12",
+      "note": "ARC token created Dec 27, 2024 on Solana/pump.fun. Rig framework by Playgrounds Analytics. Source: Gate.io"
+    },
+    {
+      "slug": "project-plutus",
+      "last_funding_date": "2024-12",
+      "note": "PPCOIN launched Dec 2024 on Solana/Pumpfun. Won 1st place Solana AI Hackathon trading track. Source: Blockworks"
+    },
+    {
+      "slug": "moby-ai",
+      "last_funding_date": "2025-01",
+      "note": "MOBY token launched Jan 13, 2025 on PumpFun/Solana. By AssetDash + Griffain. Source: The Defiant"
+    },
+    {
+      "slug": "black-ore",
+      "last_funding_date": "2023-11",
+      "note": "Seed+Series A $60M led by a16z and Oak HC/FT (Nov 7, 2023). Founded 2022. Source: Bloomberg"
+    },
+    {
+      "slug": "ginimachine",
+      "last_funding_date": "2016",
+      "note": "Founded 2016 in Ukraine/Lithuania. 1 investor (Elevator Lab). AI credit scoring platform. Source: Crunchbase"
+    },
+    {
+      "slug": "peratera",
+      "last_funding_date": "2021",
+      "note": "Founded 2021 in New Zealand. Digital banking/payments platform. No disclosed VC round. Source: Bounce Watch"
+    },
+    {
+      "slug": "fira",
+      "last_funding_date": "2025-01",
+      "note": "YC W2025 batch. Founded 2024. AI analyst for financial research. London-based. Source: Y Combinator"
+    },
+    {
+      "slug": "finbar",
+      "last_funding_date": "2023-11",
+      "note": "Founded Nov 2023. YC-backed AI investment analyst for hedge funds. Source: Crunchbase"
+    },
+    {
+      "slug": "trata",
+      "last_funding_date": "2025-01",
+      "note": "YC W2025 batch. Founded 2025. AI-powered research desk for hedge funds. Source: Y Combinator"
+    },
+    {
+      "slug": "underwriteai",
+      "last_funding_date": "2015",
+      "note": "Founded 2015 by Marc Stein. AI credit underwriting platform. Source: Crunchbase"
+    },
+    {
+      "slug": "cr-software",
+      "last_funding_date": "1984",
+      "note": "Founded 1984 as CR Software. Now C&R Software (Debt Manager). Acquired by Jonas Software 2021. Source: crsoftware.com"
+    },
+    {
+      "slug": "leo-regtech",
+      "last_funding_date": "2022-01",
+      "note": "Rebranded from Laven Tech and launched as Leo Jan 2022. No disclosed VC. From Laven Group. Source: leo.tech"
+    },
+    {
+      "slug": "kvants-ai",
+      "last_funding_date": "2025-01",
+      "note": "TGE scheduled Jan 23, 2025. Raised $1.86M pre-seed/seed. AI quant fund platform. Source: Medium/RootData"
+    },
+    {
+      "slug": "hippius",
+      "last_funding_date": "2025-03",
+      "note": "Bittensor Subnet 75 introduced Mar 2025. Decentralized cloud storage. Source: SubnetAlpha"
+    },
+    {
+      "slug": "hive-ai-crypto",
+      "last_funding_date": "2025-01",
+      "note": "BUZZ token ATH Jan 22, 2025. Modular DeFi agent network on Solana. Source: CoinGecko"
+    },
+    {
+      "slug": "general-tao-ventures",
+      "last_funding_date": "2024-02",
+      "note": "First Bittensor subnet partnership with AIT Protocol Feb 2024. Subsidiary of Contango Digital (est. 2021). Source: Medium"
+    },
+    {
+      "slug": "chutes",
+      "last_funding_date": "2025-01",
+      "note": "Bittensor Subnet 64. Launched early 2025 with free tier. 100B tokens/day by May 2025. No traditional VC. Source: Chutes blog"
+    },
+    {
+      "slug": "hermes-subquery",
+      "last_funding_date": "2024-02",
+      "note": "SubQuery mainnet + TGE Feb 23, 2024. Expanded into AI with Hermes subnet. Source: SubQuery blog"
+    },
+    {
+      "slug": "alphaai",
+      "last_funding_date": "2024-10",
+      "note": "Public beta launched Oct 24, 2024. AI investment platform by Richard Sun (ex-Wall Street). Source: alphaai.capital"
+    },
+    {
+      "slug": "symphony-symphonyio",
+      "last_funding_date": "2025-10",
+      "note": "Agentic AI layer for financial markets launched Oct 9, 2025. Founded ~2022. $140M+ in transactions. Source: BusinessWire"
+    },
+    {
+      "slug": "slate",
+      "last_funding_date": "2024",
+      "note": "Backed by Blockchain Capital. Early-stage crypto AI agent for on-chain ops. NYC-based. No specific round date. Source: RootData"
+    },
+    {
+      "slug": "orbit",
+      "last_funding_date": "2024-12",
+      "note": "GRIFT token launched Dec 2024 on Solana. DeFi AI agent supporting 178 protocols. Source: CoinGecko"
+    },
+    {
+      "slug": "hotkeyswap",
+      "last_funding_date": "2024-03",
+      "note": "BTS-20 token standard announced Mar 13, 2024. DEX on Bittensor EVM. Source: Yahoo Finance"
+    },
+    {
+      "slug": "ark-defai",
+      "last_funding_date": "2025-08",
+      "note": "Mainnet launched Aug 27, 2025. DeFAI protocol on Solana. $30M institutional backing. Source: The Block"
+    },
+    {
+      "slug": "carbon-bright",
+      "last_funding_date": "2023-09",
+      "note": "Seed round Sep 13, 2023 ($120K). Founded 2022. AI-powered LCA platform. Source: Crunchbase"
+    },
+    {
+      "slug": "beyond-arm",
+      "last_funding_date": "2000",
+      "note": "Product of DAKCS Software Systems. Enterprise debt collection platform. 20+ years in operation. Source: SoftwareAdvice"
+    },
+    {
+      "slug": "ubiquity-china",
+      "last_funding_date": "2020-12",
+      "note": "Ubiquity DAO founded Dec 2020. Decentralized AI/DeFi operations platform. Source: IQ.wiki"
+    }
+  ]
+}

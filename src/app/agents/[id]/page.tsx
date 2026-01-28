@@ -130,7 +130,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Agent Registry', item: 'https://aifimap.com/agents' },
-      { '@type': 'ListItem', position: 3, name: agent.name },
+      { '@type': 'ListItem', position: 3, name: agent.name, item: `https://aifimap.com/agents/${agentSlug(agent.id)}` },
     ],
   };
 

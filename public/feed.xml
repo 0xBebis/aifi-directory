@@ -5,13 +5,132 @@
     <link>https://aifimap.com</link>
     <description>Recently funded companies at the intersection of AI and financial services.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jan 2026 21:22:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jan 2026 16:51:56 GMT</lastBuildDate>
     <atom:link href="https://aifimap.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Corgi Insurance</title>
+      <link>https://aifimap.com/p/corgi-insurance</link>
+      <guid>https://aifimap.com/p/corgi-insurance</guid>
+      <description>AI-native full-stack carrier for startups</description>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Pennylane</title>
+      <link>https://aifimap.com/p/pennylane</link>
+      <guid>https://aifimap.com/p/pennylane</guid>
+      <description>AI accounting for French market</description>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cube</title>
+      <link>https://aifimap.com/p/cube</link>
+      <guid>https://aifimap.com/p/cube</guid>
+      <description>AI-powered FP&amp;A and budgeting platform</description>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Datarails</title>
+      <link>https://aifimap.com/p/datarails</link>
+      <guid>https://aifimap.com/p/datarails</guid>
+      <description>Conversational AI for FP&amp;A</description>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Prime Intellect</title>
+      <link>https://aifimap.com/p/prime-intellect</link>
+      <guid>https://aifimap.com/p/prime-intellect</guid>
+      <description>Distributed AI training network</description>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Harvey</title>
+      <link>https://aifimap.com/p/harvey</link>
+      <guid>https://aifimap.com/p/harvey</guid>
+      <description>AI for legal and financial document analysis</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Databricks</title>
+      <link>https://aifimap.com/p/databricks</link>
+      <guid>https://aifimap.com/p/databricks</guid>
+      <description>Unified data and AI platform</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Didit</title>
+      <link>https://aifimap.com/p/didit</link>
+      <guid>https://aifimap.com/p/didit</guid>
+      <description>AI-native identity verification with free tier</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Newfront</title>
+      <link>https://aifimap.com/p/newfront</link>
+      <guid>https://aifimap.com/p/newfront</guid>
+      <description>AI-powered commercial insurance brokerage</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ridley</title>
+      <link>https://aifimap.com/p/ridley</link>
+      <guid>https://aifimap.com/p/ridley</guid>
+      <description>AI platform for selling homes without commission</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Watershed</title>
+      <link>https://aifimap.com/p/watershed</link>
+      <guid>https://aifimap.com/p/watershed</guid>
+      <description>AI enterprise climate platform</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>TrueNorth</title>
+      <link>https://aifimap.com/p/truenorth</link>
+      <guid>https://aifimap.com/p/truenorth</guid>
+      <description>Finance-focused AI agents “modeled after top traders”; named backers shown on site + press</description>
+      <pubDate>Mon, 01 Dec 2025 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kaaj</title>
+      <link>https://aifimap.com/p/kaaj</link>
+      <guid>https://aifimap.com/p/kaaj</guid>
+      <description>Agentic AI for small-business lending automation</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Ramp</title>
       <link>https://aifimap.com/p/ramp</link>
       <guid>https://aifimap.com/p/ramp</guid>
       <description>AI-powered corporate cards and spend management</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Pibit.ai</title>
+      <link>https://aifimap.com/p/pibitai</link>
+      <guid>https://aifimap.com/p/pibitai</guid>
+      <description>Agentic underwriting platform for carriers</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Revolut</title>
+      <link>https://aifimap.com/p/revolut</link>
+      <guid>https://aifimap.com/p/revolut</guid>
+      <description>AI-powered financial super app</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Numerai</title>
+      <link>https://aifimap.com/p/numerai</link>
+      <guid>https://aifimap.com/p/numerai</guid>
+      <description>AI-powered crowdsourced hedge fund</description>
+      <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Entelligent</title>
+      <link>https://aifimap.com/p/entelligent</link>
+      <guid>https://aifimap.com/p/entelligent</guid>
+      <description>AI climate risk for investors</description>
       <pubDate>Sat, 01 Nov 2025 07:00:00 GMT</pubDate>
     </item>
     <item>
@@ -29,6 +148,202 @@
       <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>Campfire</title>
+      <link>https://aifimap.com/p/campfire</link>
+      <guid>https://aifimap.com/p/campfire</guid>
+      <description>AI-powered ERP replacement</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Daloopa</title>
+      <link>https://aifimap.com/p/daloopa</link>
+      <guid>https://aifimap.com/p/daloopa</guid>
+      <description>AI-driven financial data extraction</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Clearcover</title>
+      <link>https://aifimap.com/p/clearcover</link>
+      <guid>https://aifimap.com/p/clearcover</guid>
+      <description>AI-first auto insurance</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reducto</title>
+      <link>https://aifimap.com/p/reducto</link>
+      <guid>https://aifimap.com/p/reducto</guid>
+      <description>AI document parsing with agentic OCR for finance</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AiPrise</title>
+      <link>https://aifimap.com/p/aiprise</link>
+      <guid>https://aifimap.com/p/aiprise</guid>
+      <description>AI-powered KYB compliance</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>GTreasury</title>
+      <link>https://aifimap.com/p/gtreasury</link>
+      <guid>https://aifimap.com/p/gtreasury</guid>
+      <description>AI-enhanced treasury management system</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Grass</title>
+      <link>https://aifimap.com/p/grass</link>
+      <guid>https://aifimap.com/p/grass</guid>
+      <description>Distributed data scraping network</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Symphony (symphony.io)</title>
+      <link>https://aifimap.com/p/symphony-symphonyio</link>
+      <guid>https://aifimap.com/p/symphony-symphonyio</guid>
+      <description>Institutional-grade APIs for perps/prediction/yield/spot + “Symphony AI”</description>
+      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>https://aifimap.com/p/anthropic</link>
+      <guid>https://aifimap.com/p/anthropic</guid>
+      <description>Claude used in finance applications</description>
+      <pubDate>Mon, 01 Sep 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Klarna</title>
+      <link>https://aifimap.com/p/klarna</link>
+      <guid>https://aifimap.com/p/klarna</guid>
+      <description>AI-powered BNPL with agent features</description>
+      <pubDate>Mon, 01 Sep 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Persona</title>
+      <link>https://aifimap.com/p/persona</link>
+      <guid>https://aifimap.com/p/persona</guid>
+      <description>AI identity infrastructure platform</description>
+      <pubDate>Mon, 01 Sep 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cytora (Applied)</title>
+      <link>https://aifimap.com/p/cytora</link>
+      <guid>https://aifimap.com/p/cytora</guid>
+      <description>AI for commercial insurance underwriting</description>
+      <pubDate>Mon, 01 Sep 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Targon Compute (SN4)</title>
+      <link>https://aifimap.com/p/targon-compute-sn4</link>
+      <guid>https://aifimap.com/p/targon-compute-sn4</guid>
+      <description>Confidential compute and AI verification</description>
+      <pubDate>Fri, 01 Aug 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>EliseAI</title>
+      <link>https://aifimap.com/p/eliseai</link>
+      <guid>https://aifimap.com/p/eliseai</guid>
+      <description>Conversational AI for multifamily operations</description>
+      <pubDate>Fri, 01 Aug 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ARK DeFAI</title>
+      <link>https://aifimap.com/p/ark-defai</link>
+      <guid>https://aifimap.com/p/ark-defai</guid>
+      <description>AI-governed DeFi protocol with DAO consensus</description>
+      <pubDate>Fri, 01 Aug 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NEXT Insurance (ERGO)</title>
+      <link>https://aifimap.com/p/next-insurance</link>
+      <guid>https://aifimap.com/p/next-insurance</guid>
+      <description>AI-powered small business insurance</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Xelix</title>
+      <link>https://aifimap.com/p/xelix</link>
+      <guid>https://aifimap.com/p/xelix</guid>
+      <description>AI agents for fraud/overpayment prevention</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Niural</title>
+      <link>https://aifimap.com/p/niural</link>
+      <guid>https://aifimap.com/p/niural</guid>
+      <description>EMMA AI agent runs payroll across 150 countries</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Murphy (Debt)</title>
+      <link>https://aifimap.com/p/murphy-debt</link>
+      <guid>https://aifimap.com/p/murphy-debt</guid>
+      <description>AI agents for debt recovery</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Motive (Formerly KeepTruckin)</title>
+      <link>https://aifimap.com/p/motive-formerly-keeptruckin</link>
+      <guid>https://aifimap.com/p/motive-formerly-keeptruckin</guid>
+      <description>AI fleet finance and management</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Salient</title>
+      <link>https://aifimap.com/p/salient</link>
+      <guid>https://aifimap.com/p/salient</guid>
+      <description>AI agents for auto loan collections and servicing</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Orum (Stripe)</title>
+      <link>https://aifimap.com/p/orum</link>
+      <guid>https://aifimap.com/p/orum</guid>
+      <description>AI-optimized instant money movement</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Fyle (Sage)</title>
+      <link>https://aifimap.com/p/fyle</link>
+      <guid>https://aifimap.com/p/fyle</guid>
+      <description>AI-powered expense management and GST compliance</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>April Tax Solutions</title>
+      <link>https://aifimap.com/p/april-tax-solutions</link>
+      <guid>https://aifimap.com/p/april-tax-solutions</guid>
+      <description>AI-powered embedded tax engine for fintech platforms</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Heron Data</title>
+      <link>https://aifimap.com/p/heron-data</link>
+      <guid>https://aifimap.com/p/heron-data</guid>
+      <description>AI document intake for lending and insurance</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Velvet Capital</title>
+      <link>https://aifimap.com/p/velvet-capital</link>
+      <guid>https://aifimap.com/p/velvet-capital</guid>
+      <description>Intent-based DeFi trading &amp; portfolio OS + “multi-agent AI” framework</description>
+      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Wayflyer</title>
+      <link>https://aifimap.com/p/wayflyer</link>
+      <guid>https://aifimap.com/p/wayflyer</guid>
+      <description>Revenue-based financing for ecommerce</description>
+      <pubDate>Sun, 01 Jun 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Treefera</title>
+      <link>https://aifimap.com/p/treefera</link>
+      <guid>https://aifimap.com/p/treefera</guid>
+      <description>AI for forest carbon verification</description>
+      <pubDate>Sun, 01 Jun 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Greenlite</title>
       <link>https://aifimap.com/p/greenlite</link>
       <guid>https://aifimap.com/p/greenlite</guid>
@@ -36,151 +351,11 @@
       <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Hawk AI</title>
-      <link>https://aifimap.com/p/hawk-ai</link>
-      <guid>https://aifimap.com/p/hawk-ai</guid>
-      <description>AI-powered AML and fraud detection for banks and fintechs</description>
-      <pubDate>Tue, 01 Apr 2025 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Flagright</title>
-      <link>https://aifimap.com/p/flagright</link>
-      <guid>https://aifimap.com/p/flagright</guid>
-      <description>AI-native transaction monitoring and AML compliance</description>
-      <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>iDenfy</title>
-      <link>https://aifimap.com/p/idenfy</link>
-      <guid>https://aifimap.com/p/idenfy</guid>
-      <description>AI-driven identity verification with 4D biometric detection</description>
-      <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Brex</title>
-      <link>https://aifimap.com/p/brex</link>
-      <guid>https://aifimap.com/p/brex</guid>
-      <description>AI corporate card and financial stack for startups</description>
-      <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Sardine</title>
-      <link>https://aifimap.com/p/sardine</link>
-      <guid>https://aifimap.com/p/sardine</guid>
-      <description>AI risk platform for fraud, credit, and compliance</description>
-      <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Zest AI</title>
-      <link>https://aifimap.com/p/zest-ai</link>
-      <guid>https://aifimap.com/p/zest-ai</guid>
-      <description>AI-automated underwriting for credit unions and banks</description>
-      <pubDate>Sun, 01 Dec 2024 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Tookitaki</title>
-      <link>https://aifimap.com/p/tookitaki</link>
-      <guid>https://aifimap.com/p/tookitaki</guid>
-      <description>AI with community-driven intelligence for AML and fraud</description>
-      <pubDate>Tue, 01 Oct 2024 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Scienaptic AI</title>
-      <link>https://aifimap.com/p/scienaptic-ai</link>
-      <guid>https://aifimap.com/p/scienaptic-ai</guid>
-      <description>AI credit decisioning platform for financial institutions</description>
-      <pubDate>Sun, 01 Sep 2024 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Monzo</title>
-      <link>https://aifimap.com/p/monzo</link>
-      <guid>https://aifimap.com/p/monzo</guid>
-      <description>AI fraud detection and budgeting</description>
-      <pubDate>Mon, 01 Jan 2024 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Unit21</title>
-      <link>https://aifimap.com/p/unit21</link>
-      <guid>https://aifimap.com/p/unit21</guid>
-      <description>AI-powered fraud and AML platform</description>
-      <pubDate>Thu, 01 Jun 2023 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Darwinium</title>
-      <link>https://aifimap.com/p/darwinium</link>
-      <guid>https://aifimap.com/p/darwinium</guid>
-      <description>Real-time fraud detection across digital interactions</description>
-      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Lendbuzz</title>
-      <link>https://aifimap.com/p/lendbuzz</link>
-      <guid>https://aifimap.com/p/lendbuzz</guid>
-      <description>AI auto financing for underserved populations</description>
-      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Stripe</title>
-      <link>https://aifimap.com/p/stripe</link>
-      <guid>https://aifimap.com/p/stripe</guid>
-      <description>AI-powered payments platform with fraud detection</description>
-      <pubDate>Sun, 01 Jan 2023 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>TRM Labs</title>
-      <link>https://aifimap.com/p/trm-labs</link>
-      <guid>https://aifimap.com/p/trm-labs</guid>
-      <description>Blockchain analytics for crypto fraud/AML</description>
-      <pubDate>Tue, 01 Nov 2022 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Alloy</title>
-      <link>https://aifimap.com/p/alloy</link>
-      <guid>https://aifimap.com/p/alloy</guid>
-      <description>Identity decisioning platform with 160+ data sources</description>
-      <pubDate>Thu, 01 Sep 2022 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Chainalysis</title>
-      <link>https://aifimap.com/p/chainalysis</link>
-      <guid>https://aifimap.com/p/chainalysis</guid>
-      <description>Blockchain analysis and crypto compliance</description>
-      <pubDate>Sun, 01 May 2022 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Socure</title>
-      <link>https://aifimap.com/p/socure</link>
-      <guid>https://aifimap.com/p/socure</guid>
-      <description>Digital identity verification and fraud prevention</description>
-      <pubDate>Mon, 01 Nov 2021 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Ocrolus</title>
-      <link>https://aifimap.com/p/ocrolus</link>
-      <guid>https://aifimap.com/p/ocrolus</guid>
-      <description>AI document automation for lending decisions</description>
-      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Betterment</title>
-      <link>https://aifimap.com/p/betterment</link>
-      <guid>https://aifimap.com/p/betterment</guid>
-      <description>Pioneer robo-advisor with AI portfolio management</description>
-      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Wealthfront</title>
-      <link>https://aifimap.com/p/wealthfront</link>
-      <guid>https://aifimap.com/p/wealthfront</guid>
-      <description>Automated investment platform with tax optimization</description>
-      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>MX</title>
-      <link>https://aifimap.com/p/mx</link>
-      <guid>https://aifimap.com/p/mx</guid>
-      <description>AI-powered financial data enhancement</description>
-      <pubDate>Fri, 01 Jan 2021 08:00:00 GMT</pubDate>
+      <title>Catena Labs</title>
+      <link>https://aifimap.com/p/catena-labs</link>
+      <guid>https://aifimap.com/p/catena-labs</guid>
+      <description>Building payment rails for AI agents</description>
+      <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

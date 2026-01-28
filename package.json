@@ -9,7 +9,18 @@
     "start": "next start",
     "lint": "next lint",
     "validate": "node scripts/validate-data.js",
-    "validate:seo": "node scripts/validate-structured-data.js"
+    "validate:seo": "node scripts/validate-structured-data.js",
+    "scrape:weekly": "node scripts/weekly-scrape.js",
+    "scrape:agents": "node scripts/weekly-scrape.js agents",
+    "scrape:edgar": "node scripts/weekly-scrape.js edgar",
+    "scrape:classify": "node scripts/weekly-scrape.js classify",
+    "scrape:logos": "node scripts/logo-downloader/download-logos.js",
+    "edgar:search": "node scripts/funding-scraper/edgar-scraper.js search",
+    "edgar:fetch": "node scripts/funding-scraper/edgar-scraper.js fetch",
+    "edgar:status": "node scripts/funding-scraper/edgar-scraper.js status",
+    "edgar:apply-dates": "node scripts/funding-scraper/edgar-scraper.js apply-dates",
+    "funding:gaps": "node scripts/funding-scraper/enrich-gaps.js report",
+    "funding:gaps-csv": "node scripts/funding-scraper/enrich-gaps.js export"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",

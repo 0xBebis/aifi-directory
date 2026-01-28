@@ -20,7 +20,13 @@
       "WebFetch(domain:lookup.icann.org)",
       "WebFetch(domain:who.is)",
       "WebFetch(domain:www.brex.com)",
-      "WebFetch(domain:www.sardine.ai)"
+      "WebFetch(domain:www.sardine.ai)",
+      "WebFetch(domain:efts.sec.gov)",
+      "WebFetch(domain:www.sec.gov)",
+      "WebFetch(domain:data.sec.gov)",
+      "WebFetch(domain:blog.greenflux.us)",
+      "WebFetch(domain:www.crunchbase.com)",
+      "Bash(cat:*)"
     ]
   }
 }

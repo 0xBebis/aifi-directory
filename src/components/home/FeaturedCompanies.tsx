@@ -77,9 +77,10 @@ interface FeaturedCompaniesProps {
   companies: Project[];
   getSegment: (slug: string) => Segment | undefined;
   getLayer: (slug: string) => Layer | undefined;
+  totalCount: number;
 }
 
-export default function FeaturedCompanies({ companies, getSegment, getLayer }: FeaturedCompaniesProps) {
+export default function FeaturedCompanies({ companies, getSegment, getLayer, totalCount }: FeaturedCompaniesProps) {
   return (
     <section className="py-24 px-8 bg-surface-2/30">
       <div className="max-w-6xl mx-auto">
@@ -111,7 +112,7 @@ export default function FeaturedCompanies({ companies, getSegment, getLayer }: F
             href="/directory"
             className="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border text-text-primary font-medium rounded-lg hover:bg-surface-2 transition-colors"
           >
-            Browse all {companies.length > 9 ? '447+' : companies.length} companies
+            Browse all {totalCount}+ companies
           </Link>
         </div>
       </div>

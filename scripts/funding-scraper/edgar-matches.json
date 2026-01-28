@@ -1,0 +1,3843 @@
+{
+  "metadata": {
+    "searched": 336,
+    "matched": 150,
+    "unmatched": 186,
+    "last_run": "2026-01-27T22:04:12.001Z"
+  },
+  "matches": {
+    "alloy": {
+      "entity_name": "Alloy Therapeutics, Inc.",
+      "cik": "0001851943",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001851943-22-000001",
+          "date": "2022-10-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001851943-21-000001",
+          "date": "2021-04-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:29.927Z",
+      "validated": "rejected"
+    },
+    "unit21": {
+      "entity_name": "Gaingels Unit21 LLC",
+      "cik": "0001932032",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001932032-22-000001",
+          "date": "2022-06-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:30.378Z",
+      "validated": "rejected"
+    },
+    "chainalysis": {
+      "entity_name": "Chainalysis Inc.",
+      "cik": "0001666923",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001231919-21-000037",
+          "date": "2021-04-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-21-000036",
+          "date": "2021-04-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-16-000038",
+          "date": "2016-02-24",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:31.374Z",
+      "validated": "approved"
+    },
+    "socure": {
+      "entity_name": "Socure Inc.",
+      "cik": "0001566310",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001231919-21-000083",
+          "date": "2021-11-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-21-000031",
+          "date": "2021-03-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-19-000005",
+          "date": "2019-02-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-17-000032",
+          "date": "2017-08-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001566310-15-000001",
+          "date": "2015-07-27",
+          "form": "D"
+        },
+        {
+          "accession": "0001566310-14-000001",
+          "date": "2014-08-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000898432-14-000394",
+          "date": "2014-03-06",
+          "form": "D"
+        },
+        {
+          "accession": "0000898432-13-001251",
+          "date": "2013-09-23",
+          "form": "D"
+        },
+        {
+          "accession": "0000898432-13-001219",
+          "date": "2013-09-10",
+          "form": "D"
+        },
+        {
+          "accession": "0000898432-13-001114",
+          "date": "2013-08-08",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:31.925Z",
+      "validated": "approved"
+    },
+    "darwinium": {
+      "entity_name": "Darwinium Holdings, Inc.",
+      "cik": "0001907538",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001907538-23-000001",
+          "date": "2023-10-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001907538-22-000004",
+          "date": "2022-11-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001907538-22-000003",
+          "date": "2022-09-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001907538-22-000002",
+          "date": "2022-02-14",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:32.384Z",
+      "validated": "approved"
+    },
+    "greenlite": {
+      "entity_name": "GREENLITE INC.",
+      "cik": "0001698363",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001698363-17-000001",
+          "date": "2017-02-16",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:32.955Z",
+      "validated": "approved"
+    },
+    "upstart": {
+      "entity_name": "Upstart Power Holdings, Inc.",
+      "cik": "0001725995",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001725995-24-000003",
+          "date": "2024-12-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-24-000002",
+          "date": "2024-07-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-22-000001",
+          "date": "2022-11-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-20-000001",
+          "date": "2020-12-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-19-000002",
+          "date": "2019-09-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-19-000001",
+          "date": "2019-08-01",
+          "form": "D"
+        },
+        {
+          "accession": "0001725995-18-000001",
+          "date": "2018-01-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:33.490Z",
+      "validated": "rejected"
+    },
+    "pagaya": {
+      "entity_name": "Pagaya Technologies Ltd.",
+      "cik": "0001883085",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001883085-23-000063",
+          "date": "2023-06-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001883085-23-000019",
+          "date": "2023-01-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001883085-22-000001",
+          "date": "2022-08-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000950172-22-000107",
+          "date": "2022-07-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:34.467Z",
+      "validated": "approved"
+    },
+    "lendbuzz": {
+      "entity_name": "Lendbuzz Inc.",
+      "cik": "0001736734",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001178913-23-002513",
+          "date": "2023-07-21",
+          "form": "D"
+        },
+        {
+          "accession": "0001178913-22-003672",
+          "date": "2022-10-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001178913-22-002969",
+          "date": "2022-08-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001178913-21-002162",
+          "date": "2021-06-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001178913-20-003137",
+          "date": "2020-11-12",
+          "form": "D"
+        },
+        {
+          "accession": "0001736734-18-000001",
+          "date": "2018-06-05",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:36.159Z",
+      "validated": "approved"
+    },
+    "ocrolus": {
+      "entity_name": "Ocrolus Inc.",
+      "cik": "0001732451",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001732451-23-000001",
+          "date": "2023-02-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001732451-21-000001",
+          "date": "2021-06-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001732451-20-000003",
+          "date": "2020-11-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001732451-20-000001",
+          "date": "2020-08-27",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-19-000024",
+          "date": "2019-05-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-19-000003",
+          "date": "2019-02-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:36.558Z",
+      "validated": "approved"
+    },
+    "stripe": {
+      "entity_name": "Stripe Milton LLC",
+      "cik": "0002000934",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002000934-23-000001",
+          "date": "2023-11-17",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:37.211Z",
+      "validated": "rejected"
+    },
+    "ramp": {
+      "entity_name": "RAMp Sports LLC",
+      "cik": "0001467048",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001467048-12-000001",
+          "date": "2012-01-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001467048-10-000001",
+          "date": "2010-04-30",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:37.661Z",
+      "validated": "rejected"
+    },
+    "brex": {
+      "entity_name": "BREX Briggs MF DST",
+      "cik": "0002083653",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002083653-25-000009",
+          "date": "2025-12-30",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000008",
+          "date": "2025-12-18",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000007",
+          "date": "2025-12-05",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000006",
+          "date": "2025-11-24",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000005",
+          "date": "2025-10-29",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000004",
+          "date": "2025-10-09",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000003",
+          "date": "2025-09-26",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000002",
+          "date": "2025-09-12",
+          "form": "D"
+        },
+        {
+          "accession": "0002083653-25-000001",
+          "date": "2025-08-28",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:38.107Z",
+      "validated": "rejected"
+    },
+    "natural": {
+      "entity_name": "Natural Systems Utilities, LLC",
+      "cik": "0001538700",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001538700-15-000002",
+          "date": "2015-07-24",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:38.603Z",
+      "validated": "rejected"
+    },
+    "betterment": {
+      "entity_name": "Betterment Holdings, Inc.",
+      "cik": "0001508388",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001508388-21-000001",
+          "date": "2021-10-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001508388-17-000001",
+          "date": "2017-09-01",
+          "form": "D"
+        },
+        {
+          "accession": "0001508388-16-000001",
+          "date": "2016-04-12",
+          "form": "D"
+        },
+        {
+          "accession": "0000905718-15-000271",
+          "date": "2015-02-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001140361-14-016865",
+          "date": "2014-04-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001140361-10-050504",
+          "date": "2010-12-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:39.772Z",
+      "validated": "approved"
+    },
+    "wealthfront": {
+      "entity_name": "WEALTHFRONT INC",
+      "cik": "0001524566",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001524566-14-000003",
+          "date": "2014-11-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001524566-14-000002",
+          "date": "2014-04-04",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:40.242Z",
+      "validated": "approved"
+    },
+    "quantconnect": {
+      "entity_name": "QuantConnect Corp",
+      "cik": "0001666598",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001666598-23-000004",
+          "date": "2023-01-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001666598-16-000008",
+          "date": "2016-02-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001666598-16-000006",
+          "date": "2016-02-10",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:40.687Z",
+      "validated": "approved"
+    },
+    "tegus": {
+      "entity_name": "Tegus, Inc.",
+      "cik": "0001716057",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-22-017892",
+          "date": "2022-09-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-22-016363",
+          "date": "2022-08-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-21-021196",
+          "date": "2021-11-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000905718-17-000821",
+          "date": "2017-09-01",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:42.062Z",
+      "validated": "approved"
+    },
+    "alphasense": {
+      "entity_name": "AlphaSense, LLC",
+      "cik": "0001656191",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001656191-15-000001",
+          "date": "2015-10-23",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:42.518Z",
+      "validated": "approved"
+    },
+    "trumid": {
+      "entity_name": "TruMid Holdings LLC",
+      "cik": "0001634665",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-20-020951",
+          "date": "2020-12-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-20-014688",
+          "date": "2020-08-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-20-013307",
+          "date": "2020-07-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-19-000001",
+          "date": "2019-05-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-18-000004",
+          "date": "2018-12-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-18-000003",
+          "date": "2018-09-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-18-000002",
+          "date": "2018-06-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-17-000001",
+          "date": "2017-01-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-16-000004",
+          "date": "2016-06-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001634665-16-000003",
+          "date": "2016-03-04",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:43.476Z",
+      "validated": "approved"
+    },
+    "tickeron": {
+      "entity_name": "Tickeron, Inc.",
+      "cik": "0001564929",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001564929-14-000002",
+          "date": "2014-08-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001564929-12-000001",
+          "date": "2012-12-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:43.864Z",
+      "validated": "approved"
+    },
+    "alphaai": {
+      "entity_name": "alphaAI Capital Management Inc.",
+      "cik": "0002104025",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002104025-26-000001",
+          "date": "2026-01-12",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:44.728Z",
+      "validated": "rejected"
+    },
+    "lemonade": {
+      "entity_name": "Lemonade Technology Inc.",
+      "cik": "0001990137",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001990137-24-000001",
+          "date": "2024-10-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001990137-23-000003",
+          "date": "2023-08-17",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:45.179Z",
+      "validated": "approved"
+    },
+    "coalition": {
+      "entity_name": "Coalition POW, LLC",
+      "cik": "0001914590",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001914590-22-000001",
+          "date": "2022-03-03",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:46.984Z",
+      "validated": "rejected"
+    },
+    "hippo": {
+      "entity_name": "Hippo Holdings Inc.",
+      "cik": "0001828105",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-21-017129",
+          "date": "2021-09-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:47.514Z",
+      "validated": "approved"
+    },
+    "bestow": {
+      "entity_name": "Bestow Inc.",
+      "cik": "0001711914",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001711914-21-000001",
+          "date": "2021-01-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001711914-20-000001",
+          "date": "2020-05-01",
+          "form": "D"
+        },
+        {
+          "accession": "0001711914-18-000001",
+          "date": "2018-06-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001711914-17-000002",
+          "date": "2017-07-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001711914-17-000001",
+          "date": "2017-07-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:47.955Z",
+      "validated": "approved"
+    },
+    "sixfold": {
+      "entity_name": "Sixfold AI, Inc.",
+      "cik": "0001977724",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001977724-24-000001",
+          "date": "2024-04-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001977724-23-000001",
+          "date": "2023-05-24",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:49.193Z",
+      "validated": "approved"
+    },
+    "puzzle": {
+      "entity_name": "Puzzle Solutions Holdings LLC",
+      "cik": "0001972239",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000911420-25-000021",
+          "date": "2025-01-28",
+          "form": "D"
+        },
+        {
+          "accession": "0000911420-24-000016",
+          "date": "2024-01-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-23-006182",
+          "date": "2023-05-23",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:49.602Z",
+      "validated": "approved"
+    },
+    "pilot": {
+      "entity_name": "Pilot Parent Holdings, L.P.",
+      "cik": "0002101927",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002101927-25-000001",
+          "date": "2025-12-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:50.153Z",
+      "validated": "rejected"
+    },
+    "uplinq": {
+      "entity_name": "Uplinq, Inc.",
+      "cik": "0001888049",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001888049-25-000002",
+          "date": "2025-05-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001888049-24-000003",
+          "date": "2024-03-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001888049-22-000001",
+          "date": "2022-08-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001888049-21-000001",
+          "date": "2021-10-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:51.404Z",
+      "validated": "approved"
+    },
+    "ayasdi": {
+      "entity_name": "Ayasdi, Inc.",
+      "cik": "0001501037",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001501037-15-000002",
+          "date": "2015-04-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001501037-13-000003",
+          "date": "2013-07-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001501037-12-000004",
+          "date": "2012-06-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001501037-12-000003",
+          "date": "2012-05-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001501037-10-000001",
+          "date": "2010-09-10",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:53.052Z",
+      "validated": "approved"
+    },
+    "kasisto": {
+      "entity_name": "Kasisto, Inc.",
+      "cik": "0001618258",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001231919-24-000081",
+          "date": "2024-09-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-21-000069",
+          "date": "2021-08-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-20-000007",
+          "date": "2020-02-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-19-000046",
+          "date": "2019-08-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-17-000059",
+          "date": "2017-12-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001231919-17-000002",
+          "date": "2017-01-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001618258-14-000001",
+          "date": "2014-09-11",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:53.507Z",
+      "validated": "approved"
+    },
+    "mx": {
+      "entity_name": "MX Orthopedics, Corp.",
+      "cik": "0001533910",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001533910-15-000001",
+          "date": "2015-04-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001533910-13-000001",
+          "date": "2013-09-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001533910-11-000001",
+          "date": "2011-10-31",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:54.020Z",
+      "validated": "rejected"
+    },
+    "yuma": {
+      "entity_name": "YUMA AI Inc.",
+      "cik": "0002004844",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002004844-25-000002",
+          "date": "2025-02-14",
+          "form": "D"
+        },
+        {
+          "accession": "0002004844-25-000001",
+          "date": "2025-02-14",
+          "form": "D"
+        },
+        {
+          "accession": "0002004844-24-000001",
+          "date": "2024-01-04",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:01:57.453Z",
+      "validated": "approved"
+    },
+    "openai": {
+      "entity_name": "OPENAI - FUTURUM A SERIES OF MASTER FUND I LLC",
+      "cik": "0002041780",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002041780-25-000005",
+          "date": "2025-11-18",
+          "form": "D"
+        },
+        {
+          "accession": "0002041780-25-000003",
+          "date": "2025-02-18",
+          "form": "D"
+        },
+        {
+          "accession": "0002041780-25-000002",
+          "date": "2025-02-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:00.139Z",
+      "validated": "rejected"
+    },
+    "anthropic": {
+      "entity_name": "Anthropic Capital Fund, LP",
+      "cik": "0001931731",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001931731-25-000003",
+          "date": "2025-12-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001931731-25-000001",
+          "date": "2025-01-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001931731-24-000001",
+          "date": "2024-01-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001931731-23-000001",
+          "date": "2023-01-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:00.707Z",
+      "validated": "rejected"
+    },
+    "affirm": {
+      "entity_name": "Affirm Logic Corp",
+      "cik": "0001813743",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001813743-20-000001",
+          "date": "2020-06-05",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:01.671Z",
+      "validated": "rejected"
+    },
+    "harvey": {
+      "entity_name": "Harvey SPV1 LLC",
+      "cik": "0001528314",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001528314-11-000001",
+          "date": "2011-08-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:02.187Z",
+      "validated": "rejected"
+    },
+    "hebbia": {
+      "entity_name": "Hebbia Inc.",
+      "cik": "0001932477",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001932477-24-000001",
+          "date": "2024-05-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001932477-22-000002",
+          "date": "2022-07-01",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:02.642Z",
+      "validated": "approved"
+    },
+    "highradius": {
+      "entity_name": "HighRadius Corp",
+      "cik": "0001799665",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001792948-20-000003",
+          "date": "2020-02-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001792948-20-000002",
+          "date": "2020-02-03",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:03.956Z",
+      "validated": "approved"
+    },
+    "kyriba": {
+      "entity_name": "Kyriba Corp.",
+      "cik": "0001467117",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001467117-17-000002",
+          "date": "2017-09-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001467117-16-000002",
+          "date": "2016-08-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001467117-15-000001",
+          "date": "2015-06-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001467117-13-000003",
+          "date": "2013-08-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001467117-12-000003",
+          "date": "2012-06-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001467117-10-000001",
+          "date": "2010-10-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:04.447Z",
+      "validated": "approved"
+    },
+    "trovata": {
+      "entity_name": "TROVATA, INC.",
+      "cik": "0001775154",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001775154-19-000001",
+          "date": "2019-04-30",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:04.908Z",
+      "validated": "approved"
+    },
+    "tesorio": {
+      "entity_name": "Tesorio, Inc.",
+      "cik": "0001751129",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000905718-19-000751",
+          "date": "2019-09-05",
+          "form": "D"
+        },
+        {
+          "accession": "0000905718-18-000766",
+          "date": "2018-08-27",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:05.301Z",
+      "validated": "approved"
+    },
+    "campfire": {
+      "entity_name": "Campfire Fund LLC",
+      "cik": "0001934566",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001934566-23-000001",
+          "date": "2023-10-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001934566-22-000002",
+          "date": "2022-08-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001934566-22-000001",
+          "date": "2022-06-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:05.716Z",
+      "validated": "rejected"
+    },
+    "niural": {
+      "entity_name": "Niural, Inc.",
+      "cik": "0002076036",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002076036-25-000001",
+          "date": "2025-07-07",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:06.670Z",
+      "validated": "approved"
+    },
+    "albert": {
+      "entity_name": "Albert Investment Associates, L.P.",
+      "cik": "0001458756",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001458756-13-000001",
+          "date": "2013-03-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001458756-12-000001",
+          "date": "2012-03-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001053513-11-000005",
+          "date": "2011-03-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001458756-10-000001",
+          "date": "2010-03-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:07.103Z",
+      "validated": "rejected"
+    },
+    "copilot-money": {
+      "entity_name": "Copilot Money, Inc.",
+      "cik": "0002014352",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002014352-24-000001",
+          "date": "2024-03-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:07.638Z",
+      "validated": "approved"
+    },
+    "ribbon-home": {
+      "entity_name": "Ribbon Home, Inc.",
+      "cik": "0001731654",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000905718-21-000902",
+          "date": "2021-07-12",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:09.516Z",
+      "validated": "approved"
+    },
+    "citadel-securities": {
+      "entity_name": "CITADEL SECURITIES SWAP DEALER",
+      "cik": "0001947163",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001947163-23-000004",
+          "date": "2023-08-07",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:10.410Z",
+      "validated": "rejected"
+    },
+    "two-sigma": {
+      "entity_name": "Two Sigma Hamilton Fund, LLC",
+      "cik": "0001596835",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000919574-15-005001",
+          "date": "2015-06-19",
+          "form": "D"
+        },
+        {
+          "accession": "0000919574-15-000294",
+          "date": "2015-01-13",
+          "form": "D"
+        },
+        {
+          "accession": "0000919574-14-000290",
+          "date": "2014-01-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:11.103Z",
+      "validated": "rejected"
+    },
+    "renaissance-technologies": {
+      "entity_name": "Renaissance Kaleidoscope RF Fund LLC",
+      "cik": "0001549430",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001549430-16-000002",
+          "date": "2016-10-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001549430-15-000001",
+          "date": "2015-10-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001549430-14-000001",
+          "date": "2014-05-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001549430-13-000001",
+          "date": "2013-05-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001549430-12-000001",
+          "date": "2012-05-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:12.174Z",
+      "validated": "rejected"
+    },
+    "bridgewater": {
+      "entity_name": "Bridgewater All Weather Portfolio III, Ltd.",
+      "cik": "0001536998",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001536979-23-000011",
+          "date": "2023-10-27",
+          "form": "D"
+        },
+        {
+          "accession": "0001626310-22-000012",
+          "date": "2022-02-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001536998-12-000001",
+          "date": "2012-12-13",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:13.387Z",
+      "validated": "rejected"
+    },
+    "worldquant": {
+      "entity_name": "WorldQuant Millennium WMQS GEAE Onshore Fund (iCapital), L.P.",
+      "cik": "0001740089",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002071737-25-000002",
+          "date": "2025-08-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-24-000002",
+          "date": "2024-08-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-23-000001",
+          "date": "2023-07-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-22-000002",
+          "date": "2022-07-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-20-000001",
+          "date": "2020-06-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-19-000001",
+          "date": "2019-06-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001740089-18-000001",
+          "date": "2018-05-16",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:13.882Z",
+      "validated": "rejected"
+    },
+    "jumio": {
+      "entity_name": "Jumio Inc.",
+      "cik": "0001501860",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001501860-12-000002",
+          "date": "2012-05-01",
+          "form": "D"
+        },
+        {
+          "accession": "0001501860-12-000001",
+          "date": "2012-01-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001501860-11-000003",
+          "date": "2011-03-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001501860-11-000002",
+          "date": "2011-03-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001501860-11-000001",
+          "date": "2011-03-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001501860-10-000001",
+          "date": "2010-09-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:14.255Z",
+      "validated": "approved"
+    },
+    "persona": {
+      "entity_name": "Persona AE, Inc.",
+      "cik": "0001995133",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001995133-25-000002",
+          "date": "2025-09-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001995133-23-000001",
+          "date": "2023-09-29",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:14.775Z",
+      "validated": "approved"
+    },
+    "datarobot": {
+      "entity_name": "DataRobot, Inc.",
+      "cik": "0001573348",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001573348-21-000004",
+          "date": "2021-08-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-21-000001",
+          "date": "2021-08-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-21-000002",
+          "date": "2021-08-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-20-000001",
+          "date": "2020-12-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-18-000001",
+          "date": "2018-11-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-17-000003",
+          "date": "2017-11-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-17-000002",
+          "date": "2017-07-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-16-000005",
+          "date": "2016-02-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-15-000001",
+          "date": "2015-10-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001573348-14-000002",
+          "date": "2014-08-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:15.669Z",
+      "validated": "approved"
+    },
+    "c3ai": {
+      "entity_name": "C3.ai, Inc.",
+      "cik": "0001577526",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001243233-20-000005",
+          "date": "2020-09-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001243233-20-000006",
+          "date": "2020-09-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001243233-20-000007",
+          "date": "2020-09-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:16.629Z",
+      "validated": "approved"
+    },
+    "palantir": {
+      "entity_name": "Palantir Technologies Inc.",
+      "cik": "0001321655",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001321655-20-000001",
+          "date": "2020-07-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-16-000005",
+          "date": "2016-11-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-15-000004",
+          "date": "2015-12-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-15-000003",
+          "date": "2015-12-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-15-000002",
+          "date": "2015-10-21",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-15-000001",
+          "date": "2015-07-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-14-000005",
+          "date": "2014-12-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-14-000004",
+          "date": "2014-11-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-14-000003",
+          "date": "2014-09-12",
+          "form": "D"
+        },
+        {
+          "accession": "0001321655-14-000001",
+          "date": "2014-02-14",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:17.205Z",
+      "validated": "approved"
+    },
+    "snowflake": {
+      "entity_name": "Snowflake Inc.",
+      "cik": "0001640147",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001640147-22-000027",
+          "date": "2022-04-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-20-000005",
+          "date": "2020-05-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-20-000006",
+          "date": "2020-05-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-20-000004",
+          "date": "2020-02-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-18-000003",
+          "date": "2018-10-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-18-000002",
+          "date": "2018-01-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-17-000008",
+          "date": "2017-04-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-17-000005",
+          "date": "2017-04-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-17-000007",
+          "date": "2017-04-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001640147-17-000006",
+          "date": "2017-04-11",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:17.618Z",
+      "validated": "approved"
+    },
+    "databricks": {
+      "entity_name": "Databricks, Inc.",
+      "cik": "0001587468",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001587468-25-000009",
+          "date": "2025-12-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-25-000010",
+          "date": "2025-12-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-25-000008",
+          "date": "2025-09-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-25-000007",
+          "date": "2025-09-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-25-000001",
+          "date": "2025-01-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-25-000002",
+          "date": "2025-01-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-23-000003",
+          "date": "2023-11-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-23-000002",
+          "date": "2023-09-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-23-000001",
+          "date": "2023-09-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001587468-21-000002",
+          "date": "2021-09-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:18.197Z",
+      "validated": "approved"
+    },
+    "gauntlet": {
+      "entity_name": "Gauntlet Networks, Inc.",
+      "cik": "0001758938",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001758938-22-000002",
+          "date": "2022-03-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001758938-21-000001",
+          "date": "2021-06-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001758938-20-000001",
+          "date": "2020-09-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001758938-18-000002",
+          "date": "2018-11-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001758938-18-000001",
+          "date": "2018-11-13",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:18.654Z",
+      "validated": "approved"
+    },
+    "chaos-labs": {
+      "entity_name": "ACI's Weebs Chaos Labs Ltd",
+      "cik": "0002031229",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0002031229-24-000001",
+          "date": "2024-07-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:19.130Z",
+      "validated": "rejected"
+    },
+    "risk-harbor": {
+      "entity_name": "Risk Harbor, Inc.",
+      "cik": "0001858373",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001858373-21-000002",
+          "date": "2021-04-29",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:19.529Z",
+      "validated": "approved"
+    },
+    "goldfinch": {
+      "entity_name": "Goldfinch BioPharma, Inc.",
+      "cik": "0001693198",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001693198-20-000001",
+          "date": "2020-07-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001693198-17-000001",
+          "date": "2017-01-23",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:20.464Z",
+      "validated": "rejected"
+    },
+    "arturo": {
+      "entity_name": "Arturo Intelligence, Inc.",
+      "cik": "0001801813",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001801813-23-000003",
+          "date": "2023-09-13",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:20.957Z",
+      "validated": "approved"
+    },
+    "ccc-intelligent": {
+      "entity_name": "CCC Intelligent Solutions Holdings Inc.",
+      "cik": "0001818201",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001818201-25-000004",
+          "date": "2025-01-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:21.767Z",
+      "validated": "approved"
+    },
+    "glia": {
+      "entity_name": "Glia Intelligence Inc.",
+      "cik": "0001759362",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001759362-19-000001",
+          "date": "2019-03-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001759362-18-000001",
+          "date": "2018-11-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:23.114Z",
+      "validated": "approved"
+    },
+    "numerai": {
+      "entity_name": "Numerai Supreme LP",
+      "cik": "0001932978",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001932978-25-000001",
+          "date": "2025-06-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001932978-24-000001",
+          "date": "2024-06-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001932978-23-000001",
+          "date": "2023-06-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001932978-22-000001",
+          "date": "2022-06-10",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:24.086Z",
+      "validated": "rejected"
+    },
+    "fundbox": {
+      "entity_name": "Gaingels Fundbox LLC",
+      "cik": "0001916329",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001910399-22-000001",
+          "date": "2022-03-16",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:27.024Z",
+      "validated": "rejected"
+    },
+    "argyle": {
+      "entity_name": "Argyle Systems Inc.",
+      "cik": "0001784141",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001493152-22-012656",
+          "date": "2022-05-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001784141-19-000002",
+          "date": "2019-08-16",
+          "form": "D"
+        },
+        {
+          "accession": "0001784141-19-000001",
+          "date": "2019-08-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:28.041Z",
+      "validated": "approved"
+    },
+    "magnifi": {
+      "entity_name": "Magnifi Holdings Inc.",
+      "cik": "0001996817",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001996817-24-000001",
+          "date": "2024-08-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001996817-23-000001",
+          "date": "2023-10-17",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:31.672Z",
+      "validated": "approved"
+    },
+    "blooom": {
+      "entity_name": "Blooom, Inc.",
+      "cik": "0001655156",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001655156-17-000001",
+          "date": "2017-02-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001655156-16-000002",
+          "date": "2016-11-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001655156-15-000001",
+          "date": "2015-10-13",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:32.531Z",
+      "validated": "approved"
+    },
+    "titan": {
+      "entity_name": "TITAN INTERNATIONAL INC",
+      "cik": "0000899751",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001209191-19-013550",
+          "date": "2019-02-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:33.056Z",
+      "validated": "rejected"
+    },
+    "salient": {
+      "entity_name": "SALIENT SURGICAL TECHNOLOGIES, INC.",
+      "cik": "0001125490",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001136056-11-000109",
+          "date": "2011-05-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001125490-10-000001",
+          "date": "2010-01-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:36.490Z",
+      "validated": "rejected"
+    },
+    "january": {
+      "entity_name": "January Therapeutics, Inc.",
+      "cik": "0001708145",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001708145-19-000002",
+          "date": "2019-02-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001708145-19-000001",
+          "date": "2019-01-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001708145-17-000001",
+          "date": "2017-06-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:36.997Z",
+      "validated": "rejected"
+    },
+    "trueaccord": {
+      "entity_name": "TRUEACCORD SPV 2021 A SERIES OF PARTY ROUND LLC",
+      "cik": "0001858913",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001858913-21-000001",
+          "date": "2021-04-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:37.890Z",
+      "validated": "rejected"
+    },
+    "attunely": {
+      "entity_name": "Attunely Inc.",
+      "cik": "0001824000",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001824000-20-000003",
+          "date": "2020-11-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001824000-20-000001",
+          "date": "2020-09-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:38.809Z",
+      "validated": "approved"
+    },
+    "metropolis": {
+      "entity_name": "Metropolis Technologies, Inc.",
+      "cik": "0001780095",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001780095-24-000001",
+          "date": "2024-06-21",
+          "form": "D"
+        },
+        {
+          "accession": "0001780095-22-000001",
+          "date": "2022-09-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001780095-21-000003",
+          "date": "2021-02-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001780095-19-000001",
+          "date": "2019-06-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:40.680Z",
+      "validated": "approved"
+    },
+    "keyway": {
+      "entity_name": "Keyway Capital, LLC",
+      "cik": "0001607596",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001607596-14-000002",
+          "date": "2014-06-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001607596-14-000001",
+          "date": "2014-05-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:41.626Z",
+      "validated": "approved"
+    },
+    "entera": {
+      "entity_name": "Entera Bio Ltd.",
+      "cik": "0001638097",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001178913-24-000023",
+          "date": "2024-01-02",
+          "form": "D"
+        },
+        {
+          "accession": "0000950103-19-017690",
+          "date": "2019-12-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000950103-17-010087",
+          "date": "2017-10-19",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:42.542Z",
+      "validated": "rejected"
+    },
+    "compstak": {
+      "entity_name": "CompStak, Inc.",
+      "cik": "0001574132",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001574132-14-000001",
+          "date": "2014-11-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001574132-13-000001",
+          "date": "2013-04-12",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:43.010Z",
+      "validated": "approved"
+    },
+    "mapped": {
+      "entity_name": "Mapped Inc.",
+      "cik": "0001802002",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001802002-24-000001",
+          "date": "2024-12-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001802002-23-000001",
+          "date": "2023-04-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001802002-21-000002",
+          "date": "2021-06-17",
+          "form": "D"
+        },
+        {
+          "accession": "0001802002-20-000001",
+          "date": "2020-02-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:43.403Z",
+      "validated": "approved"
+    },
+    "incode": {
+      "entity_name": "Incode Technologies, Inc.",
+      "cik": "0001853685",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001853685-21-000003",
+          "date": "2021-12-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001853685-21-000002",
+          "date": "2021-12-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001853685-21-000001",
+          "date": "2021-03-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:45.212Z",
+      "validated": "approved"
+    },
+    "near-protocol": {
+      "entity_name": "Near Inc",
+      "cik": "0001778561",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001778561-19-000002",
+          "date": "2019-07-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001778561-19-000003",
+          "date": "2019-07-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001778561-19-000001",
+          "date": "2019-07-10",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:45.636Z",
+      "validated": "approved"
+    },
+    "finpilot": {
+      "entity_name": "Finpilot Inc.",
+      "cik": "0002007589",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002011129-24-000001",
+          "date": "2024-02-23",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:47.291Z",
+      "validated": "approved"
+    },
+    "rogo": {
+      "entity_name": "Rogo Series A ScOp SPV Jul 2024 a Series of CGF2021 LLC",
+      "cik": "0002031715",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002031715-24-000001",
+          "date": "2024-07-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:47.737Z",
+      "validated": "rejected"
+    },
+    "daloopa": {
+      "entity_name": "Daloopa, Inc.",
+      "cik": "0001859624",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001859624-25-000006",
+          "date": "2025-10-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001859624-25-000003",
+          "date": "2025-07-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001859624-24-000001",
+          "date": "2024-05-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001859624-21-000001",
+          "date": "2021-04-30",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:48.199Z",
+      "validated": "approved"
+    },
+    "dataminr": {
+      "entity_name": "DATAMINR, INC.",
+      "cik": "0001475357",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001475357-21-000001",
+          "date": "2021-04-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001475357-18-000002",
+          "date": "2018-06-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001475357-18-000001",
+          "date": "2018-06-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001475357-15-000001",
+          "date": "2015-03-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001475357-13-000004",
+          "date": "2013-08-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001475357-13-000003",
+          "date": "2013-06-24",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:48.674Z",
+      "validated": "approved"
+    },
+    "koyfin": {
+      "entity_name": "Koyfin Inc.",
+      "cik": "0001692919",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001692919-21-000001",
+          "date": "2021-01-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001692919-19-000002",
+          "date": "2019-08-15",
+          "form": "D"
+        },
+        {
+          "accession": "0001692919-19-000001",
+          "date": "2019-03-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001692919-18-000001",
+          "date": "2018-08-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001692919-16-000001",
+          "date": "2016-12-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:49.888Z",
+      "validated": "approved"
+    },
+    "tabs": {
+      "entity_name": "Tabs Platform, Inc.",
+      "cik": "0002039407",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002039407-24-000001",
+          "date": "2024-10-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:50.363Z",
+      "validated": "approved"
+    },
+    "cube": {
+      "entity_name": "Cube Security Inc.",
+      "cik": "0001934798",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001934798-26-000001",
+          "date": "2026-01-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-24-000001",
+          "date": "2024-06-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-23-000003",
+          "date": "2023-06-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-22-000004",
+          "date": "2022-12-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-22-000003",
+          "date": "2022-09-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-22-000002",
+          "date": "2022-09-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001934798-22-000001",
+          "date": "2022-06-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:50.880Z",
+      "validated": "approved"
+    },
+    "jirav": {
+      "entity_name": "AVSF - Jirav 2023, LLC",
+      "cik": "0001981641",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0001981641-23-000001",
+          "date": "2023-06-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:52.194Z",
+      "validated": "rejected"
+    },
+    "vicarious": {
+      "entity_name": "Vicarious FPC, Inc.",
+      "cik": "0001555530",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001555530-16-000002",
+          "date": "2016-05-13",
+          "form": "D"
+        },
+        {
+          "accession": "0000950103-14-007810",
+          "date": "2014-11-04",
+          "form": "D"
+        },
+        {
+          "accession": "0000950103-14-002018",
+          "date": "2014-03-21",
+          "form": "D"
+        },
+        {
+          "accession": "0000950103-12-004285",
+          "date": "2012-08-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:53.592Z",
+      "validated": "rejected"
+    },
+    "jerry": {
+      "entity_name": "JERRY JERRY Ltd LIABILITY Co",
+      "cik": "0001732253",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001732253-18-000001",
+          "date": "2018-03-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:54.532Z",
+      "validated": "rejected"
+    },
+    "ethos": {
+      "entity_name": "Ethos Technologies Inc.",
+      "cik": "0001788451",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001788451-22-000002",
+          "date": "2022-01-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001788451-21-000001",
+          "date": "2021-08-09",
+          "form": "D"
+        },
+        {
+          "accession": "0001664658-21-000001",
+          "date": "2021-05-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001788451-19-000002",
+          "date": "2019-09-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001788451-19-000001",
+          "date": "2019-09-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:55.053Z",
+      "validated": "approved"
+    },
+    "at-bay": {
+      "entity_name": "At-Bay, Inc.",
+      "cik": "0001944584",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001944584-22-000001",
+          "date": "2022-09-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:56.025Z",
+      "validated": "approved"
+    },
+    "kin": {
+      "entity_name": "KINETIC TECHNOLOGIES",
+      "cik": "0001450879",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001450879-22-000003",
+          "date": "2022-05-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001450879-11-000004",
+          "date": "2011-10-11",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:56.480Z",
+      "validated": "rejected"
+    },
+    "clearcover": {
+      "entity_name": "Clearcover, Inc.",
+      "cik": "0001690073",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001690073-25-000004",
+          "date": "2025-10-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-25-000001",
+          "date": "2025-01-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-24-000002",
+          "date": "2024-11-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-24-000001",
+          "date": "2024-04-11",
+          "form": "D"
+        },
+        {
+          "accession": "0001213900-22-075051",
+          "date": "2022-11-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-21-000001",
+          "date": "2021-04-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-20-000001",
+          "date": "2020-01-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-19-000001",
+          "date": "2019-01-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-17-000001",
+          "date": "2017-05-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001690073-16-000001",
+          "date": "2016-11-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:56.888Z",
+      "validated": "approved"
+    },
+    "openly": {
+      "entity_name": "Openly inc.",
+      "cik": "0001777940",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001777940-20-000003",
+          "date": "2020-12-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001777940-20-000002",
+          "date": "2020-06-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001777940-19-000001",
+          "date": "2019-05-28",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:57.350Z",
+      "validated": "approved"
+    },
+    "aqr-capital": {
+      "entity_name": "AQR DELTA XN Fund, L.P.",
+      "cik": "0001574323",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001574323-14-000001",
+          "date": "2014-06-24",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:02:59.605Z",
+      "validated": "rejected"
+    },
+    "point72": {
+      "entity_name": "Point72 Capital, L.P.",
+      "cik": "0001461642",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001461642-26-000001",
+          "date": "2026-01-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-25-000082",
+          "date": "2025-01-24",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-24-000070",
+          "date": "2024-01-26",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-23-000060",
+          "date": "2023-01-27",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-22-000101",
+          "date": "2022-01-28",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-21-000107",
+          "date": "2021-01-29",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-20-000060",
+          "date": "2020-01-31",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-19-000048",
+          "date": "2019-01-31",
+          "form": "D"
+        },
+        {
+          "accession": "0000899140-18-000064",
+          "date": "2018-01-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001630566-15-000002",
+          "date": "2015-05-05",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:00.138Z",
+      "validated": "rejected"
+    },
+    "pdt-partners": {
+      "entity_name": "PDT Partners Fund, LLC",
+      "cik": "0001552208",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001564702-25-000011",
+          "date": "2025-05-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-24-000001",
+          "date": "2024-05-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-23-000001",
+          "date": "2023-05-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-22-000001",
+          "date": "2022-05-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-21-000001",
+          "date": "2021-06-01",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-20-000001",
+          "date": "2020-06-12",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-19-000001",
+          "date": "2019-06-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-18-000001",
+          "date": "2018-06-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-17-000001",
+          "date": "2017-06-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001552208-16-000002",
+          "date": "2016-06-17",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:00.602Z",
+      "validated": "rejected"
+    },
+    "millennium-management": {
+      "entity_name": "MILLENNIUM STRATEGIC CAPITAL LP",
+      "cik": "0001524728",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0000902664-16-007658",
+          "date": "2016-07-20",
+          "form": "D"
+        },
+        {
+          "accession": "0000902664-15-003121",
+          "date": "2015-07-20",
+          "form": "D"
+        },
+        {
+          "accession": "0000902664-14-003194",
+          "date": "2014-07-18",
+          "form": "D"
+        },
+        {
+          "accession": "0000902664-13-002665",
+          "date": "2013-07-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001140361-12-033380",
+          "date": "2012-07-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001140361-11-037149",
+          "date": "2011-07-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:01.113Z",
+      "validated": "rejected"
+    },
+    "addepar": {
+      "entity_name": "Addepar, Inc.",
+      "cik": "0001524365",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001524365-21-000004",
+          "date": "2021-06-25",
+          "form": "D"
+        },
+        {
+          "accession": "0001532099-11-000002",
+          "date": "2011-10-12",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:02.952Z",
+      "validated": "approved"
+    },
+    "ethic": {
+      "entity_name": "Ethic Inc.",
+      "cik": "0001780570",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001780570-25-000004",
+          "date": "2025-05-22",
+          "form": "D"
+        },
+        {
+          "accession": "0001739074-22-000006",
+          "date": "2022-09-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001739074-21-000005",
+          "date": "2021-03-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001739074-19-000005",
+          "date": "2019-06-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:03.454Z",
+      "validated": "approved"
+    },
+    "snappy-kraken": {
+      "entity_name": "Snappy Kraken, Inc.",
+      "cik": "0002005537",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002005537-23-000001",
+          "date": "2023-12-27",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:03.848Z",
+      "validated": "approved"
+    },
+    "tifin": {
+      "entity_name": "TIFIN AG Inc.",
+      "cik": "0002015104",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002015104-24-000002",
+          "date": "2024-04-03",
+          "form": "D"
+        },
+        {
+          "accession": "0002015104-24-000001",
+          "date": "2024-03-13",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:04.364Z",
+      "validated": "approved"
+    },
+    "hummingbird": {
+      "entity_name": "Hummingbird Regtech, Inc.",
+      "cik": "0001745689",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001745689-21-000002",
+          "date": "2021-11-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001745689-20-000001",
+          "date": "2020-05-19",
+          "form": "D"
+        },
+        {
+          "accession": "0001745689-18-000001",
+          "date": "2018-07-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:05.733Z",
+      "validated": "approved"
+    },
+    "riskified": {
+      "entity_name": "Riskified Ltd.",
+      "cik": "0001851112",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-21-006294",
+          "date": "2021-03-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:06.525Z",
+      "validated": "approved"
+    },
+    "instead": {
+      "entity_name": "Instead Tax Services, LLC",
+      "cik": "0002070615",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002070533-25-000004",
+          "date": "2025-05-30",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:07.928Z",
+      "validated": "approved"
+    },
+    "heard-technologies": {
+      "entity_name": "Heard Technologies, Inc.",
+      "cik": "0001811474",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001811474-22-000001",
+          "date": "2022-04-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001811474-21-000001",
+          "date": "2021-04-01",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:16.419Z",
+      "validated": "approved"
+    },
+    "instabase": {
+      "entity_name": "Instabase, Inc.",
+      "cik": "0001651900",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001651900-17-000001",
+          "date": "2017-05-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001651900-15-000001",
+          "date": "2015-09-01",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:18.087Z",
+      "validated": "approved"
+    },
+    "veryfi": {
+      "entity_name": "Veryfi, Inc.",
+      "cik": "0001855354",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001855354-21-000001",
+          "date": "2021-04-07",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:18.877Z",
+      "validated": "approved"
+    },
+    "hyperscience": {
+      "entity_name": "Gaingels Hyperscience 2021 LLC",
+      "cik": "0001899723",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0001899723-22-000001",
+          "date": "2022-01-11",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:20.586Z",
+      "validated": "rejected"
+    },
+    "workfusion": {
+      "entity_name": "WorkFusion, Inc.",
+      "cik": "0001608200",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001608200-25-000002",
+          "date": "2025-03-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001608200-22-000001",
+          "date": "2022-10-04",
+          "form": "D"
+        },
+        {
+          "accession": "0001608200-21-000003",
+          "date": "2021-02-16",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:22.252Z",
+      "validated": "approved"
+    },
+    "idaciti": {
+      "entity_name": "idaciti, Inc.",
+      "cik": "0001656226",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001656226-19-000001",
+          "date": "2019-03-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001656226-18-000002",
+          "date": "2018-12-27",
+          "form": "D"
+        },
+        {
+          "accession": "0001656226-15-000001",
+          "date": "2015-10-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:22.732Z",
+      "validated": "approved"
+    },
+    "ridley": {
+      "entity_name": "Ridley Apartments, LLC",
+      "cik": "0002020733",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002020733-24-000001",
+          "date": "2024-07-03",
+          "form": "D"
+        },
+        {
+          "accession": "0002020719-24-000004",
+          "date": "2024-05-03",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:23.630Z",
+      "validated": "rejected"
+    },
+    "openspace": {
+      "entity_name": "Openspace Ventures IV, L.P.",
+      "cik": "0001982352",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000945621-24-000553",
+          "date": "2024-06-21",
+          "form": "D"
+        },
+        {
+          "accession": "0000945621-23-000327",
+          "date": "2023-06-28",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:24.035Z",
+      "validated": "rejected"
+    },
+    "ojo-labs": {
+      "entity_name": "Ojo Labs Inc.",
+      "cik": "0001664618",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001522456-18-000003",
+          "date": "2018-05-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001664618-16-000004",
+          "date": "2016-01-28",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:24.928Z",
+      "validated": "approved"
+    },
+    "vero": {
+      "entity_name": "Vero Biotech Inc.",
+      "cik": "0001359620",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001359620-21-000005",
+          "date": "2021-12-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:25.438Z",
+      "validated": "rejected"
+    },
+    "cherre": {
+      "entity_name": "Cherre, Inc.",
+      "cik": "0001754384",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-21-008772",
+          "date": "2021-04-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-19-019346",
+          "date": "2019-10-08",
+          "form": "D"
+        },
+        {
+          "accession": "0001567619-18-003419",
+          "date": "2018-10-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:28.186Z",
+      "validated": "approved"
+    },
+    "clarity-ai": {
+      "entity_name": "Clarity AI, Inc.",
+      "cik": "0001827329",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001827329-21-000002",
+          "date": "2021-12-14",
+          "form": "D"
+        },
+        {
+          "accession": "0001827329-21-000001",
+          "date": "2021-02-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001827329-20-000001",
+          "date": "2020-10-09",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:31.786Z",
+      "validated": "approved"
+    },
+    "persefoni": {
+      "entity_name": "Persefoni AI Inc.",
+      "cik": "0001858523",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001567619-23-007401",
+          "date": "2023-10-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001858523-21-000002",
+          "date": "2021-04-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:32.169Z",
+      "validated": "approved"
+    },
+    "watershed": {
+      "entity_name": "Watershed Capital Partners (Offshore), Ltd.",
+      "cik": "0001183194",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001183194-15-000001",
+          "date": "2015-03-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001183194-14-000001",
+          "date": "2014-03-06",
+          "form": "D"
+        },
+        {
+          "accession": "0001183194-13-000001",
+          "date": "2013-03-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001183194-12-000001",
+          "date": "2012-03-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001183194-11-000001",
+          "date": "2011-03-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001183194-10-000001",
+          "date": "2010-01-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:32.630Z",
+      "validated": "rejected"
+    },
+    "sust": {
+      "entity_name": "Sust Inc.",
+      "cik": "0001888854",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001888854-23-000005",
+          "date": "2023-06-02",
+          "form": "D"
+        },
+        {
+          "accession": "0001888854-21-000001",
+          "date": "2021-10-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:33.255Z",
+      "validated": "approved"
+    },
+    "sphera": {
+      "entity_name": "Sphera Small Cap Fund L.P.",
+      "cik": "0001680017",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001680017-16-000001",
+          "date": "2016-08-01",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:34.496Z",
+      "validated": "rejected"
+    },
+    "entelligent": {
+      "entity_name": "Entelligent Inc.",
+      "cik": "0001864625",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001864625-25-000006",
+          "date": "2025-11-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001864625-23-000002",
+          "date": "2023-08-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001864625-23-000001",
+          "date": "2023-05-05",
+          "form": "D"
+        },
+        {
+          "accession": "0001864625-22-000002",
+          "date": "2022-01-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001864625-22-000001",
+          "date": "2022-01-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:34.973Z",
+      "validated": "approved"
+    },
+    "notabene": {
+      "entity_name": "Notabene, Inc.",
+      "cik": "0001880160",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001880160-21-000002",
+          "date": "2021-08-26",
+          "form": "D"
+        },
+        {
+          "accession": "0001880160-21-000001",
+          "date": "2021-08-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:35.889Z",
+      "validated": "approved"
+    },
+    "mitek": {
+      "entity_name": "MITEK SYSTEMS INC",
+      "cik": "0000807863",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0000807863-18-000033",
+          "date": "2018-06-06",
+          "form": "D"
+        },
+        {
+          "accession": "0000807863-11-000009",
+          "date": "2011-05-20",
+          "form": "D"
+        },
+        {
+          "accession": "0000807863-10-000019",
+          "date": "2010-10-06",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:37.107Z",
+      "validated": "approved"
+    },
+    "nilus": {
+      "entity_name": "NI-1215 Fund I, a series of Nilus SPV, LP",
+      "cik": "0001967410",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0001967410-23-000002",
+          "date": "2023-02-28",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:39.017Z",
+      "validated": "rejected"
+    },
+    "hazeltree": {
+      "entity_name": "HazelTree Fund Services, Inc.",
+      "cik": "0001476951",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001476951-24-000001",
+          "date": "2024-12-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001476951-22-000005",
+          "date": "2022-10-20",
+          "form": "D"
+        },
+        {
+          "accession": "0001476951-12-000001",
+          "date": "2012-05-03",
+          "form": "D"
+        },
+        {
+          "accession": "0001140361-11-009797",
+          "date": "2011-02-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:39.917Z",
+      "validated": "approved"
+    },
+    "orbital-insight": {
+      "entity_name": "IBD Ventures LLC - Orbital Insight Series F",
+      "cik": "0001874326",
+      "confidence": "low",
+      "filings": [
+        {
+          "accession": "0001874326-22-000001",
+          "date": "2022-03-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001874326-21-000001",
+          "date": "2021-12-07",
+          "form": "D"
+        },
+        {
+          "accession": "0001493152-21-017528",
+          "date": "2021-07-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:42.094Z",
+      "validated": "rejected"
+    },
+    "vana": {
+      "entity_name": "Vana & Sons, LLC",
+      "cik": "0001683563",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001683563-16-000001",
+          "date": "2016-08-31",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:46.013Z",
+      "validated": "rejected"
+    },
+    "together-ai": {
+      "entity_name": "Get Together AI, Inc.",
+      "cik": "0002019331",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002019331-24-000001",
+          "date": "2024-04-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:46.483Z",
+      "validated": "rejected"
+    },
+    "prime-intellect": {
+      "entity_name": "Prime Intellect, Inc.",
+      "cik": "0002103990",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002103990-26-000001",
+          "date": "2026-01-15",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:46.904Z",
+      "validated": "approved"
+    },
+    "grass": {
+      "entity_name": "Grass Queen, Inc.",
+      "cik": "0001938575",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001938575-23-000001",
+          "date": "2023-08-24",
+          "form": "D"
+        },
+        {
+          "accession": "0001938575-22-000001",
+          "date": "2022-07-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:47.452Z",
+      "validated": "rejected"
+    },
+    "ionet": {
+      "entity_name": "io.net Series of the Kairos Venture Series, LLC",
+      "cik": "0002016140",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002016140-24-000001",
+          "date": "2024-03-21",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:47.849Z",
+      "validated": "rejected"
+    },
+    "masa": {
+      "entity_name": "Masa Seed a series of Sharding Holdings Management LLC",
+      "cik": "0001959543",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001959543-22-000001",
+          "date": "2022-12-22",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:48.817Z",
+      "validated": "rejected"
+    },
+    "ritual": {
+      "entity_name": "Ritual Capital I, L.P.",
+      "cik": "0001968493",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001968493-23-000002",
+          "date": "2023-06-27",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:49.206Z",
+      "validated": "rejected"
+    },
+    "pond": {
+      "entity_name": "Center Pond Partners, L.P.",
+      "cik": "0001639749",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001639749-16-000002",
+          "date": "2016-04-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:49.746Z",
+      "validated": "rejected"
+    },
+    "allora": {
+      "entity_name": "Allora Health Inc.",
+      "cik": "0001876548",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001876548-25-000001",
+          "date": "2025-03-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001876548-23-000001",
+          "date": "2023-08-31",
+          "form": "D"
+        },
+        {
+          "accession": "0001876548-21-000001",
+          "date": "2021-08-03",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:50.131Z",
+      "validated": "rejected"
+    },
+    "sahara-ai": {
+      "entity_name": "Sahara AI Ltd.",
+      "cik": "0002030935",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0002030935-24-000001",
+          "date": "2024-07-30",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:51.004Z",
+      "validated": "approved"
+    },
+    "orbit": {
+      "entity_name": "Orbit Fund, L.P.",
+      "cik": "0001931160",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001931160-24-000001",
+          "date": "2024-01-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001931160-23-000001",
+          "date": "2023-01-26",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:52.879Z",
+      "validated": "rejected"
+    },
+    "slate": {
+      "entity_name": "Slate Pharmaceuticals, Inc.",
+      "cik": "0001469231",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001469231-10-000002",
+          "date": "2010-09-27",
+          "form": "D"
+        },
+        {
+          "accession": "0001469231-10-000001",
+          "date": "2010-01-29",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:03:59.206Z",
+      "validated": "rejected"
+    },
+    "lunarcrush": {
+      "entity_name": "Lunarcrush SPV LLC",
+      "cik": "0001941690",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001941690-25-000003",
+          "date": "2025-01-29",
+          "form": "D"
+        },
+        {
+          "accession": "0001941690-22-000001",
+          "date": "2022-12-16",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:03.360Z",
+      "validated": "approved"
+    },
+    "truenorth": {
+      "entity_name": "TrueNorth Lifesciences SPV-1 LLC",
+      "cik": "0001863141",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0001863141-21-000001",
+          "date": "2021-05-20",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:03.800Z",
+      "validated": "rejected"
+    },
+    "wayfinder": {
+      "entity_name": "Wayfinder Ventures, L.P.",
+      "cik": "0001808124",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001808124-20-000001",
+          "date": "2020-05-11",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:05.237Z",
+      "validated": "rejected"
+    },
+    "axal": {
+      "entity_name": "CC Axal Ltd",
+      "cik": "0002042261",
+      "confidence": "medium",
+      "filings": [
+        {
+          "accession": "0002042265-24-000001",
+          "date": "2024-10-25",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:09.985Z",
+      "validated": "rejected"
+    },
+    "lulo": {
+      "entity_name": "Lulo Ventures Inc.",
+      "cik": "0001510429",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001510429-11-000004",
+          "date": "2011-06-10",
+          "form": "D"
+        },
+        {
+          "accession": "0001510429-11-000003",
+          "date": "2011-01-18",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:10.858Z",
+      "validated": "rejected"
+    },
+    "uv": {
+      "entity_name": "UV Partners, Inc.",
+      "cik": "0001553173",
+      "confidence": "high",
+      "filings": [
+        {
+          "accession": "0001553173-22-000001",
+          "date": "2022-01-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001553173-20-000001",
+          "date": "2020-01-30",
+          "form": "D"
+        },
+        {
+          "accession": "0001553173-18-000001",
+          "date": "2018-06-13",
+          "form": "D"
+        },
+        {
+          "accession": "0001653528-16-000017",
+          "date": "2016-04-28",
+          "form": "D"
+        },
+        {
+          "accession": "0001553173-15-000003",
+          "date": "2015-09-18",
+          "form": "D"
+        },
+        {
+          "accession": "0001553173-15-000002",
+          "date": "2015-03-23",
+          "form": "D"
+        },
+        {
+          "accession": "0001553173-12-000001",
+          "date": "2012-07-02",
+          "form": "D"
+        }
+      ],
+      "searched_at": "2026-01-27T22:04:11.789Z",
+      "validated": "approved"
+    }
+  },
+  "unmatched": [
+    "sardine",
+    "trm-labs",
+    "zest-ai",
+    "scienaptic-ai",
+    "underwriteai",
+    "kaaj",
+    "catena-labs",
+    "trade-ideas",
+    "portfoliopilot",
+    "sentieo-now-alphasense",
+    "trendspider",
+    "corvus-travelers",
+    "next-insurance",
+    "coterie-insurance",
+    "pibitai",
+    "corgi-insurance",
+    "zeni",
+    "taxgpt",
+    "complianceai",
+    "saifr-fidelity",
+    "ascent-regtech",
+    "aixbt",
+    "vaderai",
+    "spectral-spec",
+    "bittensor-tao",
+    "targon-compute-sn4",
+    "hippius",
+    "general-tao-ventures",
+    "ai16zelizaos",
+    "eliza-framework",
+    "render-render",
+    "paal-ai",
+    "arc-ai-rig-complex",
+    "bloomberg-ai",
+    "fira",
+    "aumni-jpmorgan",
+    "borderlessalberni",
+    "earnest-research",
+    "thinknum",
+    "yipitdata",
+    "cape-analytics",
+    "de-shaw",
+    "jane-street",
+    "kensho-sp-global",
+    "h2oai",
+    "credora",
+    "snapsheet",
+    "personetics",
+    "posh-technologies",
+    "abe-ai",
+    "quantopian-closed",
+    "sigfig",
+    "riskalyze",
+    "kabbage-amex",
+    "ondeck-enova",
+    "petal",
+    "truework",
+    "hive-ai-crypto",
+    "zerebro",
+    "cookie-dao",
+    "sekoia",
+    "griffain",
+    "motive-formerly-keeptruckin",
+    "personal-capital",
+    "black-ore",
+    "filed",
+    "flyfin",
+    "inkle",
+    "stampli",
+    "trullion",
+    "skitai",
+    "collbox",
+    "cr-software",
+    "kiavi",
+    "beeline-magicblocks",
+    "eliseai",
+    "home365",
+    "rocket-money",
+    "origin-financial",
+    "digit",
+    "akash-network",
+    "ginimachine",
+    "peratera",
+    "visible-alpha",
+    "datarails",
+    "mosaic-tech",
+    "orum",
+    "ampla",
+    "gabi-experian",
+    "newfront",
+    "cowbell-cyber",
+    "planck",
+    "virtu-financial",
+    "hudson-river-trading",
+    "balyasny-asset-mgmt",
+    "moneylion",
+    "pontera",
+    "finny-ai",
+    "kount",
+    "forter",
+    "heron-finance",
+    "fyle",
+    "april-tax-solutions",
+    "reducto",
+    "docsumo",
+    "nanonets",
+    "docuclipper",
+    "heron-data",
+    "abbyy",
+    "kofax",
+    "extract-systems",
+    "parascript",
+    "tidalwave",
+    "lofty-ai",
+    "prop-ai",
+    "leaseai",
+    "constructify",
+    "rentlytics",
+    "reonomy",
+    "collectwise",
+    "collectly",
+    "livevox",
+    "fico-debt-manager",
+    "beyond-arm",
+    "yaypay",
+    "treefera",
+    "carbon-bright",
+    "key-esg",
+    "aiprise",
+    "regula",
+    "ekata",
+    "lexisnexis-risk-solutions",
+    "equifax-workforce-solutions",
+    "gtreasury",
+    "bloomberg-treasury",
+    "finbar",
+    "keye",
+    "trata",
+    "fundguard",
+    "quiver-quantitative",
+    "atom-finance",
+    "factset",
+    "sp-capital-iq",
+    "rippling",
+    "kaito-ai",
+    "modulus-labs",
+    "eqty-lab",
+    "morpheus-mor",
+    "0g-labs",
+    "hey-anon",
+    "bankr",
+    "hotkeyswap",
+    "neur",
+    "heyelsa",
+    "cod3x",
+    "project-plutus",
+    "aipump",
+    "taocat",
+    "swarmnodeai",
+    "mode-network",
+    "layer-ai",
+    "ark-defai",
+    "anti-rug-agent",
+    "soul-scanner",
+    "moby-ai",
+    "agentfunai",
+    "chutes",
+    "phala-network",
+    "dolion-bully",
+    "delysium",
+    "griffin-ai-gain",
+    "gigabrain",
+    "elfa-ai",
+    "zyfai",
+    "almanak",
+    "billybets",
+    "symphony-symphonyio",
+    "shekel-agentic",
+    "edwin-edwinfinance",
+    "kvants-ai",
+    "arkham",
+    "cambrian-network",
+    "iaesir-fund",
+    "mamo-lending-agent",
+    "sail-ai-agents",
+    "askjimmy"
+  ]
+}

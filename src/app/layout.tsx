@@ -24,14 +24,6 @@ export const metadata: Metadata = {
       'application/rss+xml': '/feed.xml',
     },
   },
-  // Search engine verification — replace with actual codes after registering
-  verification: {
-    google: 'GOOGLE_SITE_VERIFICATION_CODE',
-    yandex: 'YANDEX_VERIFICATION_CODE',
-    other: {
-      'msvalidate.01': 'BING_SITE_VERIFICATION_CODE',
-    },
-  },
 };
 
 export default function RootLayout({
@@ -118,7 +110,7 @@ export default function RootLayout({
             {/* Bottom bar */}
             <div className="mt-8 pt-6 border-t border-border/20 flex items-center justify-between">
               <span className="text-xs text-text-faint">
-                2025 AIFI. All rights reserved.
+                {new Date().getFullYear()} AIFI. All rights reserved.
               </span>
               <span className="text-xs text-text-faint">
                 Built for the AI + Finance ecosystem

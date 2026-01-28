@@ -77,6 +77,31 @@ export function formatFunding(amount: number): string {
   return `$${amount}`;
 }
 
+/**
+ * Format a funding date string (YYYY, YYYY-MM, or YYYY-MM-DD) into human-readable form.
+ * Examples:
+ *   "2025-03" -> "Mar 2025"
+ *   "2025" -> "2025"
+ *   "2024-12-15" -> "Dec 2024"
+ */
+export function formatFundingDate(date: string): string {
+  if (!date) return '';
+
+  // Handle YYYY-MM or YYYY-MM-DD format
+  const parts = date.split('-');
+  if (parts.length >= 2) {
+    const year = parts[0];
+    const month = parseInt(parts[1], 10);
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    if (month >= 1 && month <= 12) {
+      return `${monthNames[month - 1]} ${year}`;
+    }
+  }
+
+  // Handle YYYY format or fallback
+  return date;
+}
+
 export function formatStage(stage: Stage): string {
   return STAGE_LABELS[stage] || stage;
 }

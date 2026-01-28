@@ -86,6 +86,7 @@ export default function Home() {
         companies={topCompanies}
         getSegment={getSegment}
         getLayer={getLayer}
+        totalCount={companyCount}
       />
       <TechStack layers={layers} layerCounts={layerCounts} />
       <CallToAction />

@@ -1,0 +1,422 @@
+slug,name,country,segment,funding_stage,has_funding,has_date,gap_type,edgar_confidence,tracxn_url,dealroom_url
+pagaya,"Pagaya",US,lending,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Pagaya,https://app.dealroom.co/companies?q=Pagaya
+underwriteai,"Underwrite.ai",US,lending,bootstrapped,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Underwrite.ai,https://app.dealroom.co/companies?q=Underwrite.ai
+trade-ideas,"Trade Ideas",US,trading,bootstrapped,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Trade%20Ideas,https://app.dealroom.co/companies?q=Trade%20Ideas
+alphaai,"alphaAI",US,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=alphaAI,https://app.dealroom.co/companies?q=alphaAI
+saifr-fidelity,"SAIFR (Fidelity)",US,risk,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=SAIFR%20(Fidelity),https://app.dealroom.co/companies?q=SAIFR%20(Fidelity)
+aixbt,"AIXBT",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=AIXBT,https://app.dealroom.co/companies?q=AIXBT
+vaderai,"VaderAI",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=VaderAI,https://app.dealroom.co/companies?q=VaderAI
+bittensor-tao,"Bittensor (TAO)",US,crypto,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Bittensor%20(TAO),https://app.dealroom.co/companies?q=Bittensor%20(TAO)
+hippius,"Hippius",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Hippius,https://app.dealroom.co/companies?q=Hippius
+general-tao-ventures,"General TAO Ventures",US,wealth,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=General%20TAO%20Ventures,https://app.dealroom.co/companies?q=General%20TAO%20Ventures
+ai16zelizaos,"ai16z/ElizaOS",US,wealth,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=ai16z%2FElizaOS,https://app.dealroom.co/companies?q=ai16z%2FElizaOS
+eliza-framework,"Eliza Framework",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Eliza%20Framework,https://app.dealroom.co/companies?q=Eliza%20Framework
+paal-ai,"PAAL AI",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=PAAL%20AI,https://app.dealroom.co/companies?q=PAAL%20AI
+arc-ai-rig-complex,"ARC (AI Rig Complex)",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=ARC%20(AI%20Rig%20Complex),https://app.dealroom.co/companies?q=ARC%20(AI%20Rig%20Complex)
+bloomberg-ai,"Bloomberg AI",US,research,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Bloomberg%20AI,https://app.dealroom.co/companies?q=Bloomberg%20AI
+refinitiv-lseg,"Refinitiv (LSEG)",GB,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Refinitiv%20(LSEG),https://app.dealroom.co/companies?q=Refinitiv%20(LSEG)
+fira,"Fira",US,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Fira,https://app.dealroom.co/companies?q=Fira
+citadel-securities,"Citadel Securities",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Citadel%20Securities,https://app.dealroom.co/companies?q=Citadel%20Securities
+two-sigma,"Two Sigma",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Two%20Sigma,https://app.dealroom.co/companies?q=Two%20Sigma
+de-shaw,"D.E. Shaw",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=D.E.%20Shaw,https://app.dealroom.co/companies?q=D.E.%20Shaw
+renaissance-technologies,"Renaissance Technologies",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Renaissance%20Technologies,https://app.dealroom.co/companies?q=Renaissance%20Technologies
+jane-street,"Jane Street",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Jane%20Street,https://app.dealroom.co/companies?q=Jane%20Street
+bridgewater,"Bridgewater",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Bridgewater,https://app.dealroom.co/companies?q=Bridgewater
+man-ahl,"Man AHL",GB,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Man%20AHL,https://app.dealroom.co/companies?q=Man%20AHL
+worldquant,"WorldQuant",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=WorldQuant,https://app.dealroom.co/companies?q=WorldQuant
+high-flyer,"High-Flyer",CN,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=High-Flyer,https://app.dealroom.co/companies?q=High-Flyer
+ubiquity-china,"Ubiquity (China)",CN,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Ubiquity%20(China),https://app.dealroom.co/companies?q=Ubiquity%20(China)
+snowflake,"Snowflake",US,research,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Snowflake,https://app.dealroom.co/companies?q=Snowflake
+ccc-intelligent,"CCC Intelligent",US,insurance,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=CCC%20Intelligent,https://app.dealroom.co/companies?q=CCC%20Intelligent
+finn-ai-glia,"Finn AI (Glia)",CA,banking,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Finn%20AI%20(Glia),https://app.dealroom.co/companies?q=Finn%20AI%20(Glia)
+hive-ai-crypto,"Hive AI (Crypto)",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Hive%20AI%20(Crypto),https://app.dealroom.co/companies?q=Hive%20AI%20(Crypto)
+zerebro,"Zerebro",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Zerebro,https://app.dealroom.co/companies?q=Zerebro
+cookie-dao,"Cookie DAO",US,research,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Cookie%20DAO,https://app.dealroom.co/companies?q=Cookie%20DAO
+sekoia,"Sekoia",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Sekoia,https://app.dealroom.co/companies?q=Sekoia
+griffain,"Griffain",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Griffain,https://app.dealroom.co/companies?q=Griffain
+murphy-debt,"Murphy (Debt)",ES,lending,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Murphy%20(Debt),https://app.dealroom.co/companies?q=Murphy%20(Debt)
+magnifi,"Magnifi",US,wealth,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Magnifi,https://app.dealroom.co/companies?q=Magnifi
+black-ore,"Black Ore",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Black%20Ore,https://app.dealroom.co/companies?q=Black%20Ore
+cr-software,"C&R Software",US,lending,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=C%26R%20Software,https://app.dealroom.co/companies?q=C%26R%20Software
+oraichain,"Oraichain",VN,crypto,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Oraichain,https://app.dealroom.co/companies?q=Oraichain
+cortex-ctxc,"Cortex (CTXC)",CN,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Cortex%20(CTXC),https://app.dealroom.co/companies?q=Cortex%20(CTXC)
+qubic,"Qubic",NL,crypto,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Qubic,https://app.dealroom.co/companies?q=Qubic
+ginimachine,"GiniMachine",US,lending,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=GiniMachine,https://app.dealroom.co/companies?q=GiniMachine
+peratera,"Peratera",US,banking,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Peratera,https://app.dealroom.co/companies?q=Peratera
+vicarious,"Vicarious",US,lending,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Vicarious,https://app.dealroom.co/companies?q=Vicarious
+virtu-financial,"Virtu Financial",US,trading,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Virtu%20Financial,https://app.dealroom.co/companies?q=Virtu%20Financial
+hudson-river-trading,"Hudson River Trading",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Hudson%20River%20Trading,https://app.dealroom.co/companies?q=Hudson%20River%20Trading
+optiver,"Optiver",NL,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Optiver,https://app.dealroom.co/companies?q=Optiver
+flow-traders,"Flow Traders",NL,trading,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Flow%20Traders,https://app.dealroom.co/companies?q=Flow%20Traders
+aqr-capital,"AQR Capital",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=AQR%20Capital,https://app.dealroom.co/companies?q=AQR%20Capital
+point72,"Point72",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Point72,https://app.dealroom.co/companies?q=Point72
+man-group,"Man Group",GB,trading,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Man%20Group,https://app.dealroom.co/companies?q=Man%20Group
+pdt-partners,"PDT Partners",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=PDT%20Partners,https://app.dealroom.co/companies?q=PDT%20Partners
+millennium-management,"Millennium Management",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Millennium%20Management,https://app.dealroom.co/companies?q=Millennium%20Management
+balyasny-asset-mgmt,"Balyasny Asset Mgmt",US,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Balyasny%20Asset%20Mgmt,https://app.dealroom.co/companies?q=Balyasny%20Asset%20Mgmt
+marshall-wace,"Marshall Wace",GB,trading,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Marshall%20Wace,https://app.dealroom.co/companies?q=Marshall%20Wace
+kount,"Kount (Equifax)",US,risk,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Kount%20(Equifax),https://app.dealroom.co/companies?q=Kount%20(Equifax)
+riskified,"Riskified",US,risk,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Riskified,https://app.dealroom.co/companies?q=Riskified
+instead,"Instead",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Instead,https://app.dealroom.co/companies?q=Instead
+docuclipper,"DocuClipper",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=DocuClipper,https://app.dealroom.co/companies?q=DocuClipper
+kofax,"Kofax (Tungsten)",US,enterprise,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Kofax%20(Tungsten),https://app.dealroom.co/companies?q=Kofax%20(Tungsten)
+extract-systems,"Extract Systems",US,enterprise,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Extract%20Systems,https://app.dealroom.co/companies?q=Extract%20Systems
+parascript,"Parascript",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Parascript,https://app.dealroom.co/companies?q=Parascript
+vero,"Vero",US,lending,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Vero,https://app.dealroom.co/companies?q=Vero
+fico-debt-manager,"FICO Debt Manager",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=FICO%20Debt%20Manager,https://app.dealroom.co/companies?q=FICO%20Debt%20Manager
+beyond-arm,"Beyond ARM",US,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Beyond%20ARM,https://app.dealroom.co/companies?q=Beyond%20ARM
+my-dso-manager,"My DSO Manager",FR,enterprise,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=My%20DSO%20Manager,https://app.dealroom.co/companies?q=My%20DSO%20Manager
+esker,"Esker",FR,enterprise,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Esker,https://app.dealroom.co/companies?q=Esker
+carbon-bright,"Carbon Bright",US,risk,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Carbon%20Bright,https://app.dealroom.co/companies?q=Carbon%20Bright
+entelligent,"Entelligent",US,research,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Entelligent,https://app.dealroom.co/companies?q=Entelligent
+mitek,"Mitek",US,risk,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Mitek,https://app.dealroom.co/companies?q=Mitek
+gbg,"GBG",GB,risk,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=GBG,https://app.dealroom.co/companies?q=GBG
+lexisnexis-risk-solutions,"LexisNexis Risk Solutions",US,risk,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=LexisNexis%20Risk%20Solutions,https://app.dealroom.co/companies?q=LexisNexis%20Risk%20Solutions
+equifax-workforce-solutions,"Equifax Workforce Solutions",US,risk,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Equifax%20Workforce%20Solutions,https://app.dealroom.co/companies?q=Equifax%20Workforce%20Solutions
+refinitiv-eikon,"Refinitiv Eikon",GB,research,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Refinitiv%20Eikon,https://app.dealroom.co/companies?q=Refinitiv%20Eikon
+bloomberg-treasury,"Bloomberg Treasury",US,enterprise,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Bloomberg%20Treasury,https://app.dealroom.co/companies?q=Bloomberg%20Treasury
+finbar,"Finbar",US,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Finbar,https://app.dealroom.co/companies?q=Finbar
+trata,"Trata",US,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Trata,https://app.dealroom.co/companies?q=Trata
+factset,"FactSet",US,research,public,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=FactSet,https://app.dealroom.co/companies?q=FactSet
+sp-capital-iq,"S&P Capital IQ",US,research,late,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=S%26P%20Capital%20IQ,https://app.dealroom.co/companies?q=S%26P%20Capital%20IQ
+morpheus-mor,"Morpheus (MOR)",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Morpheus%20(MOR),https://app.dealroom.co/companies?q=Morpheus%20(MOR)
+hey-anon,"Hey Anon",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Hey%20Anon,https://app.dealroom.co/companies?q=Hey%20Anon
+hotkeyswap,"HotKeySwap",US,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=HotKeySwap,https://app.dealroom.co/companies?q=HotKeySwap
+orbit,"Orbit",US,trading,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Orbit,https://app.dealroom.co/companies?q=Orbit
+neur,"Neur",US,trading,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Neur,https://app.dealroom.co/companies?q=Neur
+cod3x,"Cod3x",US,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Cod3x,https://app.dealroom.co/companies?q=Cod3x
+project-plutus,"Project Plutus",US,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Project%20Plutus,https://app.dealroom.co/companies?q=Project%20Plutus
+aipump,"aiPump",US,crypto,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=aiPump,https://app.dealroom.co/companies?q=aiPump
+taocat,"TAOCat",US,crypto,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=TAOCat,https://app.dealroom.co/companies?q=TAOCat
+swarmnodeai,"SwarmNode.ai",US,crypto,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=SwarmNode.ai,https://app.dealroom.co/companies?q=SwarmNode.ai
+layer-ai,"Layer AI",US,crypto,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Layer%20AI,https://app.dealroom.co/companies?q=Layer%20AI
+ark-defai,"ARK DeFAI",US,trading,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=ARK%20DeFAI,https://app.dealroom.co/companies?q=ARK%20DeFAI
+hapi-protocol,"HAPI Protocol",UA,risk,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=HAPI%20Protocol,https://app.dealroom.co/companies?q=HAPI%20Protocol
+anti-rug-agent,"Anti Rug Agent",US,risk,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Anti%20Rug%20Agent,https://app.dealroom.co/companies?q=Anti%20Rug%20Agent
+soul-scanner,"Soul Scanner",US,risk,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Soul%20Scanner,https://app.dealroom.co/companies?q=Soul%20Scanner
+moby-ai,"Moby AI",US,trading,growth,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Moby%20AI,https://app.dealroom.co/companies?q=Moby%20AI
+agentfunai,"AgentFun.AI",US,trading,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=AgentFun.AI,https://app.dealroom.co/companies?q=AgentFun.AI
+chutes,"Chutes",US,crypto,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Chutes,https://app.dealroom.co/companies?q=Chutes
+hermes-subquery,"Hermes (SubQuery)",AU,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Hermes%20(SubQuery),https://app.dealroom.co/companies?q=Hermes%20(SubQuery)
+dolion-bully,"Dolion (BULLY)",US,crypto,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Dolion%20(BULLY),https://app.dealroom.co/companies?q=Dolion%20(BULLY)
+griffin-ai-gain,"Griffin AI (GAIN)",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Griffin%20AI%20(GAIN),https://app.dealroom.co/companies?q=Griffin%20AI%20(GAIN)
+gigabrain,"GigaBrain",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=GigaBrain,https://app.dealroom.co/companies?q=GigaBrain
+zyfai,"ZyfAI",US,wealth,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=ZyfAI,https://app.dealroom.co/companies?q=ZyfAI
+billybets,"BillyBets",US,trading,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=BillyBets,https://app.dealroom.co/companies?q=BillyBets
+symphony-symphonyio,"Symphony (symphony.io)",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Symphony%20(symphony.io),https://app.dealroom.co/companies?q=Symphony%20(symphony.io)
+shekel-agentic,"Shekel Agentic",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Shekel%20Agentic,https://app.dealroom.co/companies?q=Shekel%20Agentic
+edwin-edwinfinance,"Edwin (edwin.finance)",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Edwin%20(edwin.finance),https://app.dealroom.co/companies?q=Edwin%20(edwin.finance)
+kvants-ai,"Kvants AI",US,wealth,early,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Kvants%20AI,https://app.dealroom.co/companies?q=Kvants%20AI
+iaesir-fund,"IAESIR Fund",US,wealth,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=IAESIR%20Fund,https://app.dealroom.co/companies?q=IAESIR%20Fund
+mamo-lending-agent,"Mamo Lending Agent",US,lending,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Mamo%20Lending%20Agent,https://app.dealroom.co/companies?q=Mamo%20Lending%20Agent
+defi-saver,"DeFi Saver",HR,lending,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=DeFi%20Saver,https://app.dealroom.co/companies?q=DeFi%20Saver
+sail-ai-agents,"Sail AI Agents",US,crypto,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Sail%20AI%20Agents,https://app.dealroom.co/companies?q=Sail%20AI%20Agents
+lulo,"Lulo",US,lending,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=Lulo,https://app.dealroom.co/companies?q=Lulo
+askjimmy,"AskJimmy",US,trading,fair-launch,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=AskJimmy,https://app.dealroom.co/companies?q=AskJimmy
+uv,"UV",US,research,seed,no,no,no_funding,none,https://tracxn.com/d/companies/__search?q=UV,https://app.dealroom.co/companies?q=UV
+upstart,"Upstart",US,lending,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Upstart,https://app.dealroom.co/companies?q=Upstart
+finbotsai,"FinbotsAI",SG,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FinbotsAI,https://app.dealroom.co/companies?q=FinbotsAI
+kaaj,"Kaaj",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kaaj,https://app.dealroom.co/companies?q=Kaaj
+credolab,"CredoLab",SG,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CredoLab,https://app.dealroom.co/companies?q=CredoLab
+natural,"Natural",US,banking,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Natural,https://app.dealroom.co/companies?q=Natural
+catena-labs,"Catena Labs",US,banking,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Catena%20Labs,https://app.dealroom.co/companies?q=Catena%20Labs
+quantconnect,"QuantConnect",US,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=QuantConnect,https://app.dealroom.co/companies?q=QuantConnect
+composer,"Composer",CA,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Composer,https://app.dealroom.co/companies?q=Composer
+portfoliopilot,"PortfolioPilot",US,wealth,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=PortfolioPilot,https://app.dealroom.co/companies?q=PortfolioPilot
+tegus,"Tegus",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tegus,https://app.dealroom.co/companies?q=Tegus
+alphasense,"AlphaSense",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=AlphaSense,https://app.dealroom.co/companies?q=AlphaSense
+sentieo-now-alphasense,"Sentieo (Now AlphaSense)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sentieo%20(Now%20AlphaSense),https://app.dealroom.co/companies?q=Sentieo%20(Now%20AlphaSense)
+trumid,"Trumid",US,trading,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Trumid,https://app.dealroom.co/companies?q=Trumid
+tickeron,"Tickeron",US,trading,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tickeron,https://app.dealroom.co/companies?q=Tickeron
+trendspider,"TrendSpider",US,trading,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TrendSpider,https://app.dealroom.co/companies?q=TrendSpider
+lemonade,"Lemonade",US,insurance,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Lemonade,https://app.dealroom.co/companies?q=Lemonade
+shift-technology,"Shift Technology",FR,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Shift%20Technology,https://app.dealroom.co/companies?q=Shift%20Technology
+akur8,"Akur8",FR,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Akur8,https://app.dealroom.co/companies?q=Akur8
+corvus-travelers,"Corvus (Travelers)",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Corvus%20(Travelers),https://app.dealroom.co/companies?q=Corvus%20(Travelers)
+next-insurance,"NEXT Insurance (ERGO)",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=NEXT%20Insurance%20(ERGO),https://app.dealroom.co/companies?q=NEXT%20Insurance%20(ERGO)
+coterie-insurance,"Coterie Insurance",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Coterie%20Insurance,https://app.dealroom.co/companies?q=Coterie%20Insurance
+coalition,"Coalition",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Coalition,https://app.dealroom.co/companies?q=Coalition
+hippo,"Hippo",US,insurance,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Hippo,https://app.dealroom.co/companies?q=Hippo
+bestow,"Bestow",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Bestow,https://app.dealroom.co/companies?q=Bestow
+marshmallow,"Marshmallow",GB,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Marshmallow,https://app.dealroom.co/companies?q=Marshmallow
+pibitai,"Pibit.ai",US,insurance,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Pibit.ai,https://app.dealroom.co/companies?q=Pibit.ai
+corgi-insurance,"Corgi Insurance",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Corgi%20Insurance,https://app.dealroom.co/companies?q=Corgi%20Insurance
+sixfold,"Sixfold",US,insurance,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sixfold,https://app.dealroom.co/companies?q=Sixfold
+puzzle,"Puzzle",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Puzzle,https://app.dealroom.co/companies?q=Puzzle
+pilot,"Pilot",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Pilot,https://app.dealroom.co/companies?q=Pilot
+zeni,"Zeni",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Zeni,https://app.dealroom.co/companies?q=Zeni
+taxfix,"Taxfix",DE,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Taxfix,https://app.dealroom.co/companies?q=Taxfix
+pennylane,"Pennylane",FR,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Pennylane,https://app.dealroom.co/companies?q=Pennylane
+blue-dot,"Blue Dot",IL,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Blue%20Dot,https://app.dealroom.co/companies?q=Blue%20Dot
+taxgpt,"TaxGPT",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TaxGPT,https://app.dealroom.co/companies?q=TaxGPT
+uplinq,"Uplinq",US,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Uplinq,https://app.dealroom.co/companies?q=Uplinq
+complianceai,"Compliance.ai (Archer)",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Compliance.ai%20(Archer),https://app.dealroom.co/companies?q=Compliance.ai%20(Archer)
+finrege,"FinregE",GB,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FinregE,https://app.dealroom.co/companies?q=FinregE
+leo-regtech,"Leo RegTech",GB,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Leo%20RegTech,https://app.dealroom.co/companies?q=Leo%20RegTech
+ascent-regtech,"Ascent RegTech",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ascent%20RegTech,https://app.dealroom.co/companies?q=Ascent%20RegTech
+ayasdi,"Ayasdi",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ayasdi,https://app.dealroom.co/companies?q=Ayasdi
+revolut,"Revolut",GB,banking,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Revolut,https://app.dealroom.co/companies?q=Revolut
+nubank,"Nubank",BR,banking,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nubank,https://app.dealroom.co/companies?q=Nubank
+kasisto,"Kasisto",US,banking,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kasisto,https://app.dealroom.co/companies?q=Kasisto
+virtuals-protocol-virtual,"Virtuals Protocol (VIRTUAL)",SG,crypto,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Virtuals%20Protocol%20(VIRTUAL),https://app.dealroom.co/companies?q=Virtuals%20Protocol%20(VIRTUAL)
+spectral-spec,"Spectral (SPEC)",US,trading,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Spectral%20(SPEC),https://app.dealroom.co/companies?q=Spectral%20(SPEC)
+targon-compute-sn4,"Targon Compute (SN4)",US,crypto,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Targon%20Compute%20(SN4),https://app.dealroom.co/companies?q=Targon%20Compute%20(SN4)
+yuma,"Yuma",US,crypto,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Yuma,https://app.dealroom.co/companies?q=Yuma
+fetchai-fet,"Fetch.ai (FET)",GB,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Fetch.ai%20(FET),https://app.dealroom.co/companies?q=Fetch.ai%20(FET)
+singularitynet-agixfet,"SingularityNET (AGIX/FET)",NL,crypto,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=SingularityNET%20(AGIX%2FFET),https://app.dealroom.co/companies?q=SingularityNET%20(AGIX%2FFET)
+ocean-protocol-oceanfet,"Ocean Protocol (OCEAN/FET)",SG,research,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ocean%20Protocol%20(OCEAN%2FFET),https://app.dealroom.co/companies?q=Ocean%20Protocol%20(OCEAN%2FFET)
+render-render,"Render (RENDER)",US,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Render%20(RENDER),https://app.dealroom.co/companies?q=Render%20(RENDER)
+autonolas-olas,"Autonolas (OLAS)",GB,crypto,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Autonolas%20(OLAS),https://app.dealroom.co/companies?q=Autonolas%20(OLAS)
+chaingpt,"ChainGPT",AE,crypto,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=ChainGPT,https://app.dealroom.co/companies?q=ChainGPT
+openai,"OpenAI",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=OpenAI,https://app.dealroom.co/companies?q=OpenAI
+anthropic,"Anthropic",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Anthropic,https://app.dealroom.co/companies?q=Anthropic
+google-deepmind,"Google DeepMind",GB,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Google%20DeepMind,https://app.dealroom.co/companies?q=Google%20DeepMind
+affirm,"Affirm",US,lending,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Affirm,https://app.dealroom.co/companies?q=Affirm
+klarna,"Klarna",SE,banking,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Klarna,https://app.dealroom.co/companies?q=Klarna
+harvey,"Harvey",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Harvey,https://app.dealroom.co/companies?q=Harvey
+hebbia,"Hebbia",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Hebbia,https://app.dealroom.co/companies?q=Hebbia
+auquan,"Auquan",GB,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Auquan,https://app.dealroom.co/companies?q=Auquan
+aumni-jpmorgan,"Aumni (JPMorgan)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Aumni%20(JPMorgan),https://app.dealroom.co/companies?q=Aumni%20(JPMorgan)
+highradius,"Highradius",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Highradius,https://app.dealroom.co/companies?q=Highradius
+kyriba,"Kyriba",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kyriba,https://app.dealroom.co/companies?q=Kyriba
+trovata,"Trovata",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Trovata,https://app.dealroom.co/companies?q=Trovata
+tesorio,"Tesorio",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tesorio,https://app.dealroom.co/companies?q=Tesorio
+campfire,"Campfire",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Campfire,https://app.dealroom.co/companies?q=Campfire
+xelix,"Xelix",GB,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Xelix,https://app.dealroom.co/companies?q=Xelix
+borderlessalberni,"Borderless/Alberni",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Borderless%2FAlberni,https://app.dealroom.co/companies?q=Borderless%2FAlberni
+niural,"Niural",US,banking,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Niural,https://app.dealroom.co/companies?q=Niural
+cleo,"Cleo",GB,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cleo,https://app.dealroom.co/companies?q=Cleo
+albert,"Albert",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Albert,https://app.dealroom.co/companies?q=Albert
+copilot-money,"Copilot Money",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Copilot%20Money,https://app.dealroom.co/companies?q=Copilot%20Money
+earnest-research,"Earnest Analytics (Consumer Edge)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Earnest%20Analytics%20(Consumer%20Edge),https://app.dealroom.co/companies?q=Earnest%20Analytics%20(Consumer%20Edge)
+thinknum,"Thinknum",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Thinknum,https://app.dealroom.co/companies?q=Thinknum
+yipitdata,"Yipitdata",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Yipitdata,https://app.dealroom.co/companies?q=Yipitdata
+quandl-nasdaq,"Quandl (Nasdaq)",CA,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Quandl%20(Nasdaq),https://app.dealroom.co/companies?q=Quandl%20(Nasdaq)
+ribbon-home,"Ribbon Home",US,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ribbon%20Home,https://app.dealroom.co/companies?q=Ribbon%20Home
+cape-analytics,"CAPE Analytics",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CAPE%20Analytics,https://app.dealroom.co/companies?q=CAPE%20Analytics
+onfido,"Onfido (Entrust)",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Onfido%20(Entrust),https://app.dealroom.co/companies?q=Onfido%20(Entrust)
+jumio,"Jumio",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Jumio,https://app.dealroom.co/companies?q=Jumio
+persona,"Persona",US,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Persona,https://app.dealroom.co/companies?q=Persona
+veriff,"Veriff",EE,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Veriff,https://app.dealroom.co/companies?q=Veriff
+sumsub,"Sumsub",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sumsub,https://app.dealroom.co/companies?q=Sumsub
+kensho-sp-global,"Kensho (S&P Global)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kensho%20(S%26P%20Global),https://app.dealroom.co/companies?q=Kensho%20(S%26P%20Global)
+datarobot,"DataRobot",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=DataRobot,https://app.dealroom.co/companies?q=DataRobot
+h2oai,"H2O.ai",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=H2O.ai,https://app.dealroom.co/companies?q=H2O.ai
+c3ai,"C3.ai",US,research,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=C3.ai,https://app.dealroom.co/companies?q=C3.ai
+palantir,"Palantir",US,research,public,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Palantir,https://app.dealroom.co/companies?q=Palantir
+databricks,"Databricks",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Databricks,https://app.dealroom.co/companies?q=Databricks
+gauntlet,"Gauntlet",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Gauntlet,https://app.dealroom.co/companies?q=Gauntlet
+chaos-labs,"Chaos Labs",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Chaos%20Labs,https://app.dealroom.co/companies?q=Chaos%20Labs
+risk-harbor,"Risk Harbor",US,insurance,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Risk%20Harbor,https://app.dealroom.co/companies?q=Risk%20Harbor
+credora,"Credora",US,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Credora,https://app.dealroom.co/companies?q=Credora
+goldfinch,"Goldfinch",US,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Goldfinch,https://app.dealroom.co/companies?q=Goldfinch
+arturo,"Arturo",US,insurance,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Arturo,https://app.dealroom.co/companies?q=Arturo
+tractable,"Tractable",GB,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tractable,https://app.dealroom.co/companies?q=Tractable
+snapsheet,"Snapsheet",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Snapsheet,https://app.dealroom.co/companies?q=Snapsheet
+personetics,"Personetics",US,banking,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Personetics,https://app.dealroom.co/companies?q=Personetics
+posh-technologies,"Posh Technologies",US,banking,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Posh%20Technologies,https://app.dealroom.co/companies?q=Posh%20Technologies
+glia,"Glia",US,banking,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Glia,https://app.dealroom.co/companies?q=Glia
+abe-ai,"Abe AI",US,banking,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Abe%20AI,https://app.dealroom.co/companies?q=Abe%20AI
+numerai,"Numerai",US,trading,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Numerai,https://app.dealroom.co/companies?q=Numerai
+quantopian-closed,"Quantopian (Closed)",US,trading,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Quantopian%20(Closed),https://app.dealroom.co/companies?q=Quantopian%20(Closed)
+sigfig,"SigFig",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=SigFig,https://app.dealroom.co/companies?q=SigFig
+riskalyze,"Nitrogen (fka Riskalyze)",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nitrogen%20(fka%20Riskalyze),https://app.dealroom.co/companies?q=Nitrogen%20(fka%20Riskalyze)
+nansen,"Nansen",SG,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nansen,https://app.dealroom.co/companies?q=Nansen
+kabbage-amex,"Kabbage (Amex)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kabbage%20(Amex),https://app.dealroom.co/companies?q=Kabbage%20(Amex)
+ondeck-enova,"OnDeck (Enova)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=OnDeck%20(Enova),https://app.dealroom.co/companies?q=OnDeck%20(Enova)
+fundbox,"Fundbox",US,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Fundbox,https://app.dealroom.co/companies?q=Fundbox
+clearco,"Clearco",CA,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Clearco,https://app.dealroom.co/companies?q=Clearco
+petal,"Petal (Empower)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Petal%20(Empower),https://app.dealroom.co/companies?q=Petal%20(Empower)
+argyle,"Argyle",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Argyle,https://app.dealroom.co/companies?q=Argyle
+truework,"Truework (Checkr)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Truework%20(Checkr),https://app.dealroom.co/companies?q=Truework%20(Checkr)
+motive-formerly-keeptruckin,"Motive (Formerly KeepTruckin)",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Motive%20(Formerly%20KeepTruckin),https://app.dealroom.co/companies?q=Motive%20(Formerly%20KeepTruckin)
+personal-capital,"Personal Capital (Empower)",US,wealth,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Personal%20Capital%20(Empower),https://app.dealroom.co/companies?q=Personal%20Capital%20(Empower)
+blooom,"Blooom",US,wealth,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Blooom,https://app.dealroom.co/companies?q=Blooom
+titan,"Titan",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Titan,https://app.dealroom.co/companies?q=Titan
+filed,"Filed",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Filed,https://app.dealroom.co/companies?q=Filed
+flyfin,"FlyFin",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FlyFin,https://app.dealroom.co/companies?q=FlyFin
+inkle,"Inkle",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Inkle,https://app.dealroom.co/companies?q=Inkle
+datasnipper,"DataSnipper",NL,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=DataSnipper,https://app.dealroom.co/companies?q=DataSnipper
+stampli,"Stampli",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Stampli,https://app.dealroom.co/companies?q=Stampli
+trullion,"Trullion",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Trullion,https://app.dealroom.co/companies?q=Trullion
+salient,"Salient",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Salient,https://app.dealroom.co/companies?q=Salient
+january,"January",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=January,https://app.dealroom.co/companies?q=January
+skitai,"Skit.ai",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Skit.ai,https://app.dealroom.co/companies?q=Skit.ai
+pair-finance,"PAIR Finance",DE,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=PAIR%20Finance,https://app.dealroom.co/companies?q=PAIR%20Finance
+trueaccord,"TrueAccord",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TrueAccord,https://app.dealroom.co/companies?q=TrueAccord
+symend,"Symend",CA,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Symend,https://app.dealroom.co/companies?q=Symend
+indebted,"InDebted",AU,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=InDebted,https://app.dealroom.co/companies?q=InDebted
+collbox,"CollBox",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CollBox,https://app.dealroom.co/companies?q=CollBox
+attunely,"Attunely",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Attunely,https://app.dealroom.co/companies?q=Attunely
+kiavi,"Kiavi",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kiavi,https://app.dealroom.co/companies?q=Kiavi
+beeline-magicblocks,"Beeline (MagicBlocks)",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Beeline%20(MagicBlocks),https://app.dealroom.co/companies?q=Beeline%20(MagicBlocks)
+metropolis,"Metropolis",US,banking,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Metropolis,https://app.dealroom.co/companies?q=Metropolis
+eliseai,"EliseAI",US,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=EliseAI,https://app.dealroom.co/companies?q=EliseAI
+keyway,"Keyway",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Keyway,https://app.dealroom.co/companies?q=Keyway
+home365,"Home365",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Home365,https://app.dealroom.co/companies?q=Home365
+casavo,"Casavo",IT,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Casavo,https://app.dealroom.co/companies?q=Casavo
+entera,"Entera",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Entera,https://app.dealroom.co/companies?q=Entera
+compstak,"CompStak",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CompStak,https://app.dealroom.co/companies?q=CompStak
+mapped,"Mapped",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Mapped,https://app.dealroom.co/companies?q=Mapped
+rocket-money,"Rocket Money (Rocket Companies)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Rocket%20Money%20(Rocket%20Companies),https://app.dealroom.co/companies?q=Rocket%20Money%20(Rocket%20Companies)
+origin-financial,"Origin Financial",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Origin%20Financial,https://app.dealroom.co/companies?q=Origin%20Financial
+digit,"Digit (Oportun)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Digit%20(Oportun),https://app.dealroom.co/companies?q=Digit%20(Oportun)
+au10tix,"AU10TIX",IL,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=AU10TIX,https://app.dealroom.co/companies?q=AU10TIX
+incode,"Incode",US,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Incode,https://app.dealroom.co/companies?q=Incode
+shufti-pro,"Shufti Pro",GB,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Shufti%20Pro,https://app.dealroom.co/companies?q=Shufti%20Pro
+didit,"Didit",ES,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Didit,https://app.dealroom.co/companies?q=Didit
+identomat,"Identomat",GE,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Identomat,https://app.dealroom.co/companies?q=Identomat
+near-protocol,"NEAR Protocol",US,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=NEAR%20Protocol,https://app.dealroom.co/companies?q=NEAR%20Protocol
+internet-computer-icp,"Internet Computer (ICP)",CH,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Internet%20Computer%20(ICP),https://app.dealroom.co/companies?q=Internet%20Computer%20(ICP)
+akash-network,"Akash Network",US,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Akash%20Network,https://app.dealroom.co/companies?q=Akash%20Network
+singularitydao-sdao,"SingularityDAO (SDAO)",NL,wealth,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=SingularityDAO%20(SDAO),https://app.dealroom.co/companies?q=SingularityDAO%20(SDAO)
+finpilot,"Finpilot",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Finpilot,https://app.dealroom.co/companies?q=Finpilot
+9fin,"9fin",GB,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=9fin,https://app.dealroom.co/companies?q=9fin
+rogo,"Rogo",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Rogo,https://app.dealroom.co/companies?q=Rogo
+daloopa,"Daloopa",US,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Daloopa,https://app.dealroom.co/companies?q=Daloopa
+dataminr,"Dataminr",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Dataminr,https://app.dealroom.co/companies?q=Dataminr
+visible-alpha,"Visible Alpha (S&P Global)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Visible%20Alpha%20(S%26P%20Global),https://app.dealroom.co/companies?q=Visible%20Alpha%20(S%26P%20Global)
+koyfin,"Koyfin",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Koyfin,https://app.dealroom.co/companies?q=Koyfin
+tabs,"Tabs",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tabs,https://app.dealroom.co/companies?q=Tabs
+cube,"Cube",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cube,https://app.dealroom.co/companies?q=Cube
+datarails,"Datarails",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Datarails,https://app.dealroom.co/companies?q=Datarails
+mosaic-tech,"Mosaic Tech",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Mosaic%20Tech,https://app.dealroom.co/companies?q=Mosaic%20Tech
+jirav,"Jirav",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Jirav,https://app.dealroom.co/companies?q=Jirav
+prophix,"Prophix",CA,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Prophix,https://app.dealroom.co/companies?q=Prophix
+orum,"Orum (Stripe)",US,banking,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Orum%20(Stripe),https://app.dealroom.co/companies?q=Orum%20(Stripe)
+ampla,"Ampla (FundThrough)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ampla%20(FundThrough),https://app.dealroom.co/companies?q=Ampla%20(FundThrough)
+wayflyer,"Wayflyer",IE,lending,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Wayflyer,https://app.dealroom.co/companies?q=Wayflyer
+gabi-experian,"Gabi (Experian)",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Gabi%20(Experian),https://app.dealroom.co/companies?q=Gabi%20(Experian)
+jerry,"Jerry",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Jerry,https://app.dealroom.co/companies?q=Jerry
+ethos,"Ethos",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ethos,https://app.dealroom.co/companies?q=Ethos
+newfront,"Newfront",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Newfront,https://app.dealroom.co/companies?q=Newfront
+at-bay,"At-Bay",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=At-Bay,https://app.dealroom.co/companies?q=At-Bay
+kin,"Kin",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kin,https://app.dealroom.co/companies?q=Kin
+clearcover,"Clearcover",US,insurance,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Clearcover,https://app.dealroom.co/companies?q=Clearcover
+openly,"Openly",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Openly,https://app.dealroom.co/companies?q=Openly
+cowbell-cyber,"Cowbell Cyber",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cowbell%20Cyber,https://app.dealroom.co/companies?q=Cowbell%20Cyber
+covergenius,"CoverGenius",AU,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CoverGenius,https://app.dealroom.co/companies?q=CoverGenius
+cytora,"Cytora (Applied)",GB,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cytora%20(Applied),https://app.dealroom.co/companies?q=Cytora%20(Applied)
+planck,"Planck (Applied)",US,insurance,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Planck%20(Applied),https://app.dealroom.co/companies?q=Planck%20(Applied)
+moneylion,"MoneyLion (Gen Digital)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=MoneyLion%20(Gen%20Digital),https://app.dealroom.co/companies?q=MoneyLion%20(Gen%20Digital)
+addepar,"Addepar",US,wealth,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Addepar,https://app.dealroom.co/companies?q=Addepar
+ethic,"Ethic",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ethic,https://app.dealroom.co/companies?q=Ethic
+snappy-kraken,"Snappy Kraken",US,wealth,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Snappy%20Kraken,https://app.dealroom.co/companies?q=Snappy%20Kraken
+tifin,"TIFIN",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TIFIN,https://app.dealroom.co/companies?q=TIFIN
+pontera,"Pontera",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Pontera,https://app.dealroom.co/companies?q=Pontera
+finny-ai,"FINNY AI",US,wealth,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FINNY%20AI,https://app.dealroom.co/companies?q=FINNY%20AI
+hummingbird,"Hummingbird",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Hummingbird,https://app.dealroom.co/companies?q=Hummingbird
+lucinity,"Lucinity",IS,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Lucinity,https://app.dealroom.co/companies?q=Lucinity
+quantexa,"Quantexa",GB,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Quantexa,https://app.dealroom.co/companies?q=Quantexa
+complyadvantage,"ComplyAdvantage",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=ComplyAdvantage,https://app.dealroom.co/companies?q=ComplyAdvantage
+napier-ai,"Napier AI",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Napier%20AI,https://app.dealroom.co/companies?q=Napier%20AI
+silent-eight,"Silent Eight",SG,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Silent%20Eight,https://app.dealroom.co/companies?q=Silent%20Eight
+forter,"Forter",US,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Forter,https://app.dealroom.co/companies?q=Forter
+heron-finance,"Heron Finance",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Heron%20Finance,https://app.dealroom.co/companies?q=Heron%20Finance
+fyle,"Fyle (Sage)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Fyle%20(Sage),https://app.dealroom.co/companies?q=Fyle%20(Sage)
+april-tax-solutions,"April Tax Solutions",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=April%20Tax%20Solutions,https://app.dealroom.co/companies?q=April%20Tax%20Solutions
+heard-technologies,"Heard Technologies",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Heard%20Technologies,https://app.dealroom.co/companies?q=Heard%20Technologies
+reducto,"Reducto",US,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Reducto,https://app.dealroom.co/companies?q=Reducto
+affinda,"Affinda",AU,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Affinda,https://app.dealroom.co/companies?q=Affinda
+klippa,"Klippa (SER Group)",NL,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Klippa%20(SER%20Group),https://app.dealroom.co/companies?q=Klippa%20(SER%20Group)
+docsumo,"Docsumo",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Docsumo,https://app.dealroom.co/companies?q=Docsumo
+rossum,"Rossum",CZ,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Rossum,https://app.dealroom.co/companies?q=Rossum
+instabase,"Instabase",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Instabase,https://app.dealroom.co/companies?q=Instabase
+nanonets,"Nanonets",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nanonets,https://app.dealroom.co/companies?q=Nanonets
+veryfi,"Veryfi",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Veryfi,https://app.dealroom.co/companies?q=Veryfi
+heron-data,"Heron Data",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Heron%20Data,https://app.dealroom.co/companies?q=Heron%20Data
+mindee,"Mindee",FR,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Mindee,https://app.dealroom.co/companies?q=Mindee
+abbyy,"ABBYY",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=ABBYY,https://app.dealroom.co/companies?q=ABBYY
+hyperscience,"Hyperscience",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Hyperscience,https://app.dealroom.co/companies?q=Hyperscience
+eigen-technologies,"Eigen Technologies (Sirion)",GB,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Eigen%20Technologies%20(Sirion),https://app.dealroom.co/companies?q=Eigen%20Technologies%20(Sirion)
+workfusion,"WorkFusion",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=WorkFusion,https://app.dealroom.co/companies?q=WorkFusion
+idaciti,"idaciti",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=idaciti,https://app.dealroom.co/companies?q=idaciti
+tidalwave,"Tidalwave",US,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Tidalwave,https://app.dealroom.co/companies?q=Tidalwave
+ridley,"Ridley",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ridley,https://app.dealroom.co/companies?q=Ridley
+openspace,"OpenSpace",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=OpenSpace,https://app.dealroom.co/companies?q=OpenSpace
+infogrid,"Infogrid",GB,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Infogrid,https://app.dealroom.co/companies?q=Infogrid
+lofty-ai,"Lofty AI",US,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Lofty%20AI,https://app.dealroom.co/companies?q=Lofty%20AI
+ojo-labs,"OJO Labs",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=OJO%20Labs,https://app.dealroom.co/companies?q=OJO%20Labs
+prop-ai,"Prop-AI",US,lending,pre-seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Prop-AI,https://app.dealroom.co/companies?q=Prop-AI
+leaseai,"LeaseAI",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=LeaseAI,https://app.dealroom.co/companies?q=LeaseAI
+constructify,"Constructify",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Constructify,https://app.dealroom.co/companies?q=Constructify
+rentlytics,"Rentlytics (RealPage)",US,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Rentlytics%20(RealPage),https://app.dealroom.co/companies?q=Rentlytics%20(RealPage)
+reonomy,"Reonomy (Altus Group)",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Reonomy%20(Altus%20Group),https://app.dealroom.co/companies?q=Reonomy%20(Altus%20Group)
+cherre,"Cherre",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cherre,https://app.dealroom.co/companies?q=Cherre
+receeve,"Receeve (InDebted)",DE,lending,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Receeve%20(InDebted),https://app.dealroom.co/companies?q=Receeve%20(InDebted)
+collectwise,"CollectWise",US,lending,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=CollectWise,https://app.dealroom.co/companies?q=CollectWise
+collectly,"Collectly",US,lending,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Collectly,https://app.dealroom.co/companies?q=Collectly
+livevox,"LiveVox (NICE)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=LiveVox%20(NICE),https://app.dealroom.co/companies?q=LiveVox%20(NICE)
+yaypay,"YayPay (Quadient)",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=YayPay%20(Quadient),https://app.dealroom.co/companies?q=YayPay%20(Quadient)
+versapay,"Versapay",CA,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Versapay,https://app.dealroom.co/companies?q=Versapay
+gaviti,"Gaviti",IL,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Gaviti,https://app.dealroom.co/companies?q=Gaviti
+sylvera,"Sylvera",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sylvera,https://app.dealroom.co/companies?q=Sylvera
+briink,"Briink",NL,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Briink,https://app.dealroom.co/companies?q=Briink
+zevero,"Zevero",GB,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Zevero,https://app.dealroom.co/companies?q=Zevero
+treefera,"Treefera",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Treefera,https://app.dealroom.co/companies?q=Treefera
+arabesque,"Arabesque",DE,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Arabesque,https://app.dealroom.co/companies?q=Arabesque
+clarity-ai,"Clarity AI",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Clarity%20AI,https://app.dealroom.co/companies?q=Clarity%20AI
+persefoni,"Persefoni",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Persefoni,https://app.dealroom.co/companies?q=Persefoni
+watershed,"Watershed",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Watershed,https://app.dealroom.co/companies?q=Watershed
+greenly,"Greenly",FR,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Greenly,https://app.dealroom.co/companies?q=Greenly
+sweep,"Sweep",FR,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sweep,https://app.dealroom.co/companies?q=Sweep
+plan-a,"Plan A",DE,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Plan%20A,https://app.dealroom.co/companies?q=Plan%20A
+normative,"Normative",SE,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Normative,https://app.dealroom.co/companies?q=Normative
+sust,"Sust",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sust,https://app.dealroom.co/companies?q=Sust
+key-esg,"KEY ESG",US,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=KEY%20ESG,https://app.dealroom.co/companies?q=KEY%20ESG
+sphera,"Sphera",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sphera,https://app.dealroom.co/companies?q=Sphera
+aiprise,"AiPrise",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=AiPrise,https://app.dealroom.co/companies?q=AiPrise
+notabene,"Notabene",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Notabene,https://app.dealroom.co/companies?q=Notabene
+regula,"Regula",US,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Regula,https://app.dealroom.co/companies?q=Regula
+ekata,"Ekata",US,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ekata,https://app.dealroom.co/companies?q=Ekata
+idnow,"IDnow",DE,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=IDnow,https://app.dealroom.co/companies?q=IDnow
+iproov,"iProov",GB,risk,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=iProov,https://app.dealroom.co/companies?q=iProov
+trulioo,"Trulioo",CA,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Trulioo,https://app.dealroom.co/companies?q=Trulioo
+gtreasury,"GTreasury",US,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=GTreasury,https://app.dealroom.co/companies?q=GTreasury
+nomentia,"Nomentia",FI,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nomentia,https://app.dealroom.co/companies?q=Nomentia
+embat,"Embat",ES,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Embat,https://app.dealroom.co/companies?q=Embat
+nilus,"Nilus",US,enterprise,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Nilus,https://app.dealroom.co/companies?q=Nilus
+cashforce,"Cashforce",BE,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cashforce,https://app.dealroom.co/companies?q=Cashforce
+tis-treasury-intelligence,"TIS (Treasury Intelligence)",DE,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TIS%20(Treasury%20Intelligence),https://app.dealroom.co/companies?q=TIS%20(Treasury%20Intelligence)
+serrala,"Serrala",DE,enterprise,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Serrala,https://app.dealroom.co/companies?q=Serrala
+hazeltree,"Hazeltree",US,enterprise,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Hazeltree,https://app.dealroom.co/companies?q=Hazeltree
+adenza,"Adenza",GB,risk,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Adenza,https://app.dealroom.co/companies?q=Adenza
+keye,"Keye",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Keye,https://app.dealroom.co/companies?q=Keye
+fundguard,"FundGuard",US,wealth,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FundGuard,https://app.dealroom.co/companies?q=FundGuard
+orbital-insight,"Orbital Insight",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Orbital%20Insight,https://app.dealroom.co/companies?q=Orbital%20Insight
+quiver-quantitative,"Quiver Quantitative",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Quiver%20Quantitative,https://app.dealroom.co/companies?q=Quiver%20Quantitative
+atom-finance,"Atom Finance",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Atom%20Finance,https://app.dealroom.co/companies?q=Atom%20Finance
+rippling,"Rippling",US,enterprise,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Rippling,https://app.dealroom.co/companies?q=Rippling
+kaito-ai,"Kaito AI",US,research,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Kaito%20AI,https://app.dealroom.co/companies?q=Kaito%20AI
+modulus-labs,"Modulus Labs",US,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Modulus%20Labs,https://app.dealroom.co/companies?q=Modulus%20Labs
+eqty-lab,"EQTY Lab",US,risk,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=EQTY%20Lab,https://app.dealroom.co/companies?q=EQTY%20Lab
+vana,"Vana",US,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Vana,https://app.dealroom.co/companies?q=Vana
+gensyn,"Gensyn",GB,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Gensyn,https://app.dealroom.co/companies?q=Gensyn
+together-ai,"Together AI",US,research,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Together%20AI,https://app.dealroom.co/companies?q=Together%20AI
+prime-intellect,"Prime Intellect",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Prime%20Intellect,https://app.dealroom.co/companies?q=Prime%20Intellect
+grass,"Grass",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Grass,https://app.dealroom.co/companies?q=Grass
+ionet,"io.net",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=io.net,https://app.dealroom.co/companies?q=io.net
+masa,"Masa",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Masa,https://app.dealroom.co/companies?q=Masa
+ritual,"Ritual",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Ritual,https://app.dealroom.co/companies?q=Ritual
+pond,"Pond",US,trading,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Pond,https://app.dealroom.co/companies?q=Pond
+allora,"Allora",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Allora,https://app.dealroom.co/companies?q=Allora
+0g-labs,"0G Labs",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=0G%20Labs,https://app.dealroom.co/companies?q=0G%20Labs
+sahara-ai,"Sahara AI",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Sahara%20AI,https://app.dealroom.co/companies?q=Sahara%20AI
+aligned-layer,"Aligned Layer",AR,risk,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Aligned%20Layer,https://app.dealroom.co/companies?q=Aligned%20Layer
+bankr,"Bankr",US,wealth,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Bankr,https://app.dealroom.co/companies?q=Bankr
+heyelsa,"HeyElsa",US,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=HeyElsa,https://app.dealroom.co/companies?q=HeyElsa
+mode-network,"Mode Network",US,crypto,late,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Mode%20Network,https://app.dealroom.co/companies?q=Mode%20Network
+slate,"Slate",US,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Slate,https://app.dealroom.co/companies?q=Slate
+phala-network,"Phala Network",US,crypto,growth,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Phala%20Network,https://app.dealroom.co/companies?q=Phala%20Network
+delysium,"Delysium",US,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Delysium,https://app.dealroom.co/companies?q=Delysium
+flockio,"FLock.io",GB,crypto,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=FLock.io,https://app.dealroom.co/companies?q=FLock.io
+elfa-ai,"Elfa AI",US,research,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Elfa%20AI,https://app.dealroom.co/companies?q=Elfa%20AI
+lunarcrush,"LunarCrush",US,research,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=LunarCrush,https://app.dealroom.co/companies?q=LunarCrush
+giza-arma-giza-tech-arma,"GIZA / ARMA (Giza Tech + Arma)",ES,wealth,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=GIZA%20%2F%20ARMA%20(Giza%20Tech%20%2B%20Arma),https://app.dealroom.co/companies?q=GIZA%20%2F%20ARMA%20(Giza%20Tech%20%2B%20Arma)
+truenorth,"TrueNorth",US,trading,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=TrueNorth,https://app.dealroom.co/companies?q=TrueNorth
+almanak,"Almanak",US,trading,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Almanak,https://app.dealroom.co/companies?q=Almanak
+wayfinder,"Wayfinder",US,trading,fair-launch,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Wayfinder,https://app.dealroom.co/companies?q=Wayfinder
+velvet-capital,"Velvet Capital",SG,wealth,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Velvet%20Capital,https://app.dealroom.co/companies?q=Velvet%20Capital
+arkham,"Arkham",US,research,early,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Arkham,https://app.dealroom.co/companies?q=Arkham
+cambrian-network,"Cambrian Network",US,research,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Cambrian%20Network,https://app.dealroom.co/companies?q=Cambrian%20Network
+axal,"Axal",US,trading,seed,yes,no,no_date,none,https://tracxn.com/d/companies/__search?q=Axal,https://app.dealroom.co/companies?q=Axal

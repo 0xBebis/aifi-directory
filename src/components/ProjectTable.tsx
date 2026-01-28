@@ -12,7 +12,7 @@ import {
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
 } from '@/types';
-import { formatFunding } from '@/lib/data';
+import { formatFunding, formatFundingDate } from '@/lib/data';
 import { Tooltip, CategoryBadge } from '@/components/ui';
 import {
   Search,
@@ -33,7 +33,7 @@ interface ProjectTableProps {
   onFilterChange?: (segment: string | null, layer: string | null) => void;
 }
 
-type SortKey = 'name' | 'segment' | 'layer' | 'ai_type' | 'funding' | 'region';
+type SortKey = 'name' | 'segment' | 'layer' | 'ai_type' | 'funding' | 'last_funded' | 'region';
 type SortDir = 'asc' | 'desc';
 
 const regions: Region[] = ['americas', 'emea', 'apac'];
@@ -123,6 +123,11 @@ export default function ProjectTable({
           const aFunding = a.funding || 0;
           const bFunding = b.funding || 0;
           comparison = bFunding - aFunding;
+          break;
+        case 'last_funded':
+          const aDate = a.last_funding_date || '';
+          const bDate = b.last_funding_date || '';
+          comparison = bDate.localeCompare(aDate); // Descending by default (most recent first)
           break;
         case 'region':
           const aRegion = regions.indexOf(a.region as Region);
@@ -302,10 +307,19 @@ export default function ProjectTable({
               <th className="text-left px-5 py-4">
                 <button
                   onClick={() => handleSort('funding')}
-                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors mx-auto"
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
                   Raised
                   <SortIcon column="funding" />
+                </button>
+              </th>
+              <th className="text-left px-5 py-4">
+                <button
+                  onClick={() => handleSort('last_funded')}
+                  className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
+                >
+                  Last Funded
+                  <SortIcon column="last_funded" />
                 </button>
               </th>
               <th className="text-left px-5 py-4">
@@ -327,7 +341,7 @@ export default function ProjectTable({
           <tbody className="divide-y divide-border/30">
             {filteredProjects.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-5 py-16 text-center">
+                <td colSpan={8} className="px-5 py-16 text-center">
                   <p className="text-text-secondary text-lg">No companies found</p>
                   <p className="text-sm text-text-muted mt-2">Try adjusting your filters</p>
                 </td>
@@ -473,6 +487,15 @@ export default function ProjectTable({
                       {project.funding ? (
                         <span className="text-sm font-medium text-accent tabular-nums">
                           {formatFunding(project.funding)}
+                        </span>
+                      ) : (
+                        <span className="text-sm text-text-faint">—</span>
+                      )}
+                    </td>
+                    <td className="px-5 py-4">
+                      {project.last_funding_date ? (
+                        <span className="text-sm text-text-secondary tabular-nums">
+                          {formatFundingDate(project.last_funding_date)}
                         </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>

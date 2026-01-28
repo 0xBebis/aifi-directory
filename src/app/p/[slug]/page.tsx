@@ -16,6 +16,7 @@ import {
   getSimilarProjects,
   getCompaniesAtSameFundingStage,
   formatFunding,
+  formatFundingDate,
   formatStage,
   getCountryName,
   getCountryFlag,
@@ -118,6 +119,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (project.funding) {
     metrics.push({ label: 'Total Raised', value: formatFunding(project.funding), icon: <DollarSign className="w-3.5 h-3.5" /> });
   }
+  if (project.last_funding_date) {
+    metrics.push({ label: 'Last Funded', value: formatFundingDate(project.last_funding_date), icon: <Calendar className="w-3.5 h-3.5" /> });
+  }
   if (project.valuation) {
     metrics.push({ label: 'Valuation', value: formatFunding(project.valuation), icon: <TrendingUp className="w-3.5 h-3.5" /> });
   }
@@ -166,7 +170,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
-      { '@type': 'ListItem', position: 3, name: project.name },
+      { '@type': 'ListItem', position: 3, name: project.name, item: `https://aifimap.com/p/${project.slug}` },
     ],
   };
 
@@ -510,7 +514,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               {project.last_funding_date && (
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-text-muted">Last Funding</span>
-                  <span className="text-text-primary font-medium tabular-nums">{project.last_funding_date}</span>
+                  <span className="text-text-primary font-medium tabular-nums">{formatFundingDate(project.last_funding_date)}</span>
                 </div>
               )}
               {project.stage && (

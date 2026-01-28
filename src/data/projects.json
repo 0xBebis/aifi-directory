@@ -97,7 +97,7 @@
       "Visa",
       "Experian"
     ],
-    "last_funding_date": "2025",
+    "last_funding_date": "2025-02",
     "ai_types": [
       "predictive-ml"
     ]
@@ -301,11 +301,11 @@
       "Earnest",
       "Mountain America CU"
     ],
-    "last_funding_date": "2022-09",
     "logo": "/logos/alloy.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-09"
   },
   {
     "slug": "unit21",
@@ -576,7 +576,7 @@
         "title": "Co-founder & VP Engineering"
       }
     ],
-    "last_funding_date": "2023",
+    "last_funding_date": "2023-10",
     "logo": "/logos/darwinium.png",
     "ai_types": [
       "predictive-ml"
@@ -663,7 +663,8 @@
     "logo": "/logos/upstart.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-12"
   },
   {
     "slug": "zest-ai",
@@ -757,7 +758,9 @@
     "logo": "/logos/pagaya.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-06",
+    "funding": 75000000
   },
   {
     "slug": "scienaptic-ai",
@@ -821,7 +824,8 @@
     "logo": "/logos/underwriteai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2015"
   },
   {
     "slug": "finbotsai",
@@ -848,7 +852,8 @@
     "logo": "/logos/finbotsai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "kaaj",
@@ -875,7 +880,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-11"
   },
   {
     "slug": "lendbuzz",
@@ -910,7 +916,7 @@
       "Group 1001",
       "83North"
     ],
-    "last_funding_date": "2023",
+    "last_funding_date": "2023-07",
     "logo": "/logos/lendbuzz.png",
     "ai_types": [
       "predictive-ml"
@@ -954,7 +960,8 @@
     "logo": "/logos/credolab.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-08"
   },
   {
     "slug": "ocrolus",
@@ -1007,7 +1014,7 @@
       "CrossCountry Mortgage",
       "LendSaaS"
     ],
-    "last_funding_date": "2021",
+    "last_funding_date": "2023-02",
     "logo": "/logos/ocrolus.png",
     "ai_types": [
       "computer-vision"
@@ -1048,11 +1055,11 @@
         "title": "Co-founder & President"
       }
     ],
-    "last_funding_date": "2023",
     "logo": "/logos/stripe.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "ramp",
@@ -1185,7 +1192,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "catena-labs",
@@ -1212,7 +1220,8 @@
     "logo": "/logos/catena-labs.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "betterment",
@@ -1249,7 +1258,7 @@
         "title": "Co-founder"
       }
     ],
-    "last_funding_date": "2021",
+    "last_funding_date": "2021-10",
     "logo": "/logos/betterment.png",
     "ai_types": [
       "predictive-ml"
@@ -1332,7 +1341,8 @@
     "logo": "/logos/quantconnect.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2023-01"
   },
   {
     "slug": "composer",
@@ -1371,7 +1381,8 @@
     "logo": "/logos/composer.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "trade-ideas",
@@ -1401,7 +1412,8 @@
     "logo": "/logos/trade-ideas.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2003"
   },
   {
     "slug": "portfoliopilot",
@@ -1428,7 +1440,8 @@
     "logo": "/logos/portfoliopilot.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-08"
   },
   {
     "slug": "tegus",
@@ -1465,7 +1478,8 @@
     "logo": "/logos/tegus.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-09"
   },
   {
     "slug": "alphasense",
@@ -1514,7 +1528,8 @@
     "logo": "/logos/alphasense.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2015-10"
   },
   {
     "slug": "sentieo-now-alphasense",
@@ -1544,7 +1559,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "trumid",
@@ -1576,7 +1592,8 @@
     "logo": "/logos/trumid.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2020-12"
   },
   {
     "slug": "tickeron",
@@ -1600,7 +1617,8 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2014-08"
   },
   {
     "slug": "trendspider",
@@ -1625,7 +1643,8 @@
     "logo": "/logos/trendspider.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2018-01"
   },
   {
     "slug": "alphaai",
@@ -1650,7 +1669,8 @@
     "logo": "/logos/alphaai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "lemonade",
@@ -1687,7 +1707,8 @@
     "logo": "/logos/lemonade.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "shift-technology",
@@ -1735,7 +1756,8 @@
     "logo": "/logos/shift-technology.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-11"
   },
   {
     "slug": "akur8",
@@ -1772,7 +1794,8 @@
     "logo": "/logos/akur8.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "corvus-travelers",
@@ -1799,7 +1822,8 @@
     "acquirer": "Travelers",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "next-insurance",
@@ -1836,7 +1860,8 @@
     "logo": "/logos/next-insurance.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "coterie-insurance",
@@ -1864,7 +1889,8 @@
     "logo": "/logos/coterie-insurance.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "coalition",
@@ -1900,7 +1926,8 @@
     "logo": "/logos/coalition.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "hippo",
@@ -1932,7 +1959,8 @@
     "logo": "/logos/hippo.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-09"
   },
   {
     "slug": "bestow",
@@ -1964,7 +1992,8 @@
     "logo": "/logos/bestow.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "marshmallow",
@@ -1996,7 +2025,8 @@
     "logo": "/logos/marshmallow.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "pibitai",
@@ -2022,7 +2052,8 @@
     "logo": "/logos/pibitai.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2025-11"
   },
   {
     "slug": "corgi-insurance",
@@ -2047,7 +2078,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "sixfold",
@@ -2078,7 +2110,8 @@
     "logo": "/logos/sixfold.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "puzzle",
@@ -2106,7 +2139,8 @@
     "logo": "/logos/puzzle.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "pilot",
@@ -2146,7 +2180,8 @@
     "logo": "/logos/pilot.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-03"
   },
   {
     "slug": "zeni",
@@ -2178,7 +2213,8 @@
     "logo": "/logos/zeni.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "taxfix",
@@ -2210,7 +2246,8 @@
     "logo": "/logos/taxfix.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "pennylane",
@@ -2219,7 +2256,7 @@
     "segment": "enterprise",
     "layer": "applications",
     "stage": "series_c_plus",
-    "funding": 350000000,
+    "funding": 395000000,
     "website": "https://www.pennylane.com",
     "founded": 2020,
     "hq_country": "FR",
@@ -2242,7 +2279,8 @@
     "logo": "/logos/pennylane.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "blue-dot",
@@ -2270,7 +2308,8 @@
     "logo": "/logos/blue-dot.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "taxgpt",
@@ -2295,7 +2334,8 @@
     "logo": "/logos/taxgpt.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "uplinq",
@@ -2323,7 +2363,8 @@
     "logo": "/logos/uplinq.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "complianceai",
@@ -2349,7 +2390,8 @@
     "logo": "/logos/complianceai.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "finrege",
@@ -2376,7 +2418,8 @@
     "logo": "/logos/finrege.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2023-01"
   },
   {
     "slug": "leo-regtech",
@@ -2403,7 +2446,8 @@
     "logo": "/logos/leo-regtech.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "saifr-fidelity",
@@ -2428,7 +2472,8 @@
     "logo": "/logos/saifr-fidelity.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-01"
   },
   {
     "slug": "ascent-regtech",
@@ -2455,7 +2500,8 @@
     "logo": "/logos/ascent-regtech.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "ayasdi",
@@ -2486,7 +2532,8 @@
     "logo": "/logos/ayasdi.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2015-04"
   },
   {
     "slug": "revolut",
@@ -2528,7 +2575,8 @@
     "logo": "/logos/revolut.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-11"
   },
   {
     "slug": "nubank",
@@ -2573,7 +2621,8 @@
     "logo": "/logos/nubank.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "monzo",
@@ -2675,7 +2724,8 @@
     "logo": "/logos/kasisto.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "mx",
@@ -2745,7 +2795,8 @@
     "logo": "/logos/virtuals-protocol-virtual.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2021-10"
   },
   {
     "slug": "aixbt",
@@ -2771,7 +2822,8 @@
     "logo": "/logos/aixbt.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "vaderai",
@@ -2795,7 +2847,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "spectral-spec",
@@ -2822,7 +2875,8 @@
     "logo": "/logos/spectral-spec.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2022-08"
   },
   {
     "slug": "bittensor-tao",
@@ -2858,7 +2912,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2021-03"
   },
   {
     "slug": "targon-compute-sn4",
@@ -2885,7 +2940,8 @@
     "logo": "/logos/targon-compute-sn4.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-08"
   },
   {
     "slug": "hippius",
@@ -2910,7 +2966,8 @@
     "logo": "/logos/hippius.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "general-tao-ventures",
@@ -2934,7 +2991,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "yuma",
@@ -2960,7 +3018,8 @@
     "logo": "/logos/yuma.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "ai16zelizaos",
@@ -2986,7 +3045,8 @@
     "logo": "/logos/ai16zelizaos.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "eliza-framework",
@@ -3011,7 +3071,8 @@
     "logo": "/logos/eliza-framework.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "fetchai-fet",
@@ -3056,7 +3117,8 @@
     "logo": "/logos/fetchai-fet.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "singularitynet-agixfet",
@@ -3094,7 +3156,8 @@
     "logo": "/logos/singularitynet-agixfet.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "ocean-protocol-oceanfet",
@@ -3131,7 +3194,8 @@
     "logo": "/logos/ocean-protocol-oceanfet.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "render-render",
@@ -3166,7 +3230,8 @@
     "logo": "/logos/render-render.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "autonolas-olas",
@@ -3194,7 +3259,8 @@
     "logo": "/logos/autonolas-olas.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "chaingpt",
@@ -3221,7 +3287,8 @@
     "logo": "/logos/chaingpt.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2023-09"
   },
   {
     "slug": "paal-ai",
@@ -3247,7 +3314,8 @@
     "logo": "/logos/paal-ai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-09"
   },
   {
     "slug": "arc-ai-rig-complex",
@@ -3273,7 +3341,8 @@
     "logo": "/logos/arc-ai-rig-complex.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "openai",
@@ -3327,7 +3396,8 @@
       "llm",
       "computer-vision",
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "anthropic",
@@ -3387,7 +3457,8 @@
     "logo": "/logos/anthropic.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "google-deepmind",
@@ -3437,7 +3508,8 @@
     "ai_types": [
       "llm",
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2014-01"
   },
   {
     "slug": "bloomberg-ai",
@@ -3471,7 +3543,8 @@
     "logo": "/logos/bloomberg-ai.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "1981"
   },
   {
     "slug": "refinitiv-lseg",
@@ -3505,7 +3578,8 @@
     "logo": "/logos/refinitiv-lseg.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "affirm",
@@ -3552,7 +3626,8 @@
     "logo": "/logos/affirm.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "klarna",
@@ -3595,7 +3670,8 @@
     "logo": "/logos/klarna.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "harvey",
@@ -3633,7 +3709,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "hebbia",
@@ -3672,7 +3749,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-05"
   },
   {
     "slug": "auquan",
@@ -3703,7 +3781,8 @@
     "logo": "/logos/auquan.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "fira",
@@ -3726,7 +3805,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "aumni-jpmorgan",
@@ -3759,7 +3839,8 @@
     "logo": "/logos/aumni-jpmorgan.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2023-05"
   },
   {
     "slug": "highradius",
@@ -3799,7 +3880,8 @@
     "logo": "/logos/highradius.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2020-02"
   },
   {
     "slug": "kyriba",
@@ -3838,7 +3920,8 @@
     "logo": "/logos/kyriba.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2017-09"
   },
   {
     "slug": "trovata",
@@ -3873,7 +3956,8 @@
     "logo": "/logos/trovata.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019-04"
   },
   {
     "slug": "tesorio",
@@ -3903,7 +3987,8 @@
     "logo": "/logos/tesorio.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019-09"
   },
   {
     "slug": "campfire",
@@ -3927,7 +4012,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "xelix",
@@ -3958,7 +4044,8 @@
     "logo": "/logos/xelix.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "borderlessalberni",
@@ -3983,7 +4070,8 @@
     "logo": "/logos/borderlessalberni.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "niural",
@@ -4009,7 +4097,8 @@
     "logo": "/logos/niural.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "cleo",
@@ -4037,7 +4126,8 @@
     "logo": "/logos/cleo.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "albert",
@@ -4068,7 +4158,8 @@
     "logo": "/logos/albert.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "copilot-money",
@@ -4095,7 +4186,8 @@
     "logo": "/logos/copilot-money.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "earnest-research",
@@ -4130,7 +4222,8 @@
     "logo": "/logos/earnest-research.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "thinknum",
@@ -4168,7 +4261,8 @@
     "logo": "/logos/thinknum.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "yipitdata",
@@ -4206,7 +4300,8 @@
     "logo": "/logos/yipitdata.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "quandl-nasdaq",
@@ -4239,7 +4334,8 @@
     "logo": "/logos/quandl-nasdaq.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2018-12"
   },
   {
     "slug": "ribbon-home",
@@ -4270,7 +4366,8 @@
     "logo": "/logos/ribbon-home.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-07"
   },
   {
     "slug": "cape-analytics",
@@ -4307,7 +4404,8 @@
     "logo": "/logos/cape-analytics.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "citadel-securities",
@@ -4332,7 +4430,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "two-sigma",
@@ -4367,7 +4466,8 @@
     "logo": "/logos/two-sigma.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2001"
   },
   {
     "slug": "de-shaw",
@@ -4393,7 +4493,8 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "1988"
   },
   {
     "slug": "renaissance-technologies",
@@ -4420,7 +4521,8 @@
     "logo": "/logos/renaissance-technologies.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1982"
   },
   {
     "slug": "jane-street",
@@ -4459,7 +4561,8 @@
     "logo": "/logos/jane-street.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2000"
   },
   {
     "slug": "bridgewater",
@@ -4486,7 +4589,8 @@
     "logo": "/logos/bridgewater.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1975"
   },
   {
     "slug": "man-ahl",
@@ -4520,7 +4624,8 @@
     "logo": "/logos/man-ahl.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1987"
   },
   {
     "slug": "worldquant",
@@ -4547,7 +4652,8 @@
     "logo": "/logos/worldquant.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2007"
   },
   {
     "slug": "high-flyer",
@@ -4573,7 +4679,8 @@
     "logo": "/logos/high-flyer.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2015"
   },
   {
     "slug": "ubiquity-china",
@@ -4598,7 +4705,8 @@
     "logo": "/logos/ubiquity-china.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-12"
   },
   {
     "slug": "onfido",
@@ -4643,7 +4751,8 @@
     "logo": "/logos/onfido.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "jumio",
@@ -4682,7 +4791,8 @@
     ],
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2012-05"
   },
   {
     "slug": "persona",
@@ -4725,7 +4835,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "veriff",
@@ -4765,7 +4876,8 @@
     "logo": "/logos/veriff.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "sumsub",
@@ -4813,7 +4925,8 @@
     "logo": "/logos/sumsub.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "kensho-sp-global",
@@ -4848,7 +4961,8 @@
     "logo": "/logos/kensho-sp-global.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2018-04"
   },
   {
     "slug": "datarobot",
@@ -4884,7 +4998,8 @@
     "logo": "/logos/datarobot.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "h2oai",
@@ -4916,7 +5031,8 @@
     "logo": "/logos/h2oai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-11"
   },
   {
     "slug": "c3ai",
@@ -4948,7 +5064,8 @@
     "ai_types": [
       "predictive-ml",
       "llm"
-    ]
+    ],
+    "last_funding_date": "2020-09"
   },
   {
     "slug": "palantir",
@@ -5002,7 +5119,8 @@
     "ai_types": [
       "data-platform",
       "llm"
-    ]
+    ],
+    "last_funding_date": "2020-07"
   },
   {
     "slug": "snowflake",
@@ -5051,7 +5169,9 @@
     "logo": "/logos/snowflake.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2022-04",
+    "funding": 621456438
   },
   {
     "slug": "databricks",
@@ -5125,7 +5245,8 @@
     "ai_types": [
       "data-platform",
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "gauntlet",
@@ -5157,7 +5278,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "chaos-labs",
@@ -5190,7 +5312,8 @@
     "logo": "/logos/chaos-labs.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-08"
   },
   {
     "slug": "risk-harbor",
@@ -5217,7 +5340,8 @@
     "logo": "/logos/risk-harbor.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "credora",
@@ -5244,7 +5368,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-04"
   },
   {
     "slug": "goldfinch",
@@ -5276,7 +5401,8 @@
     "logo": "/logos/goldfinch.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "arturo",
@@ -5306,7 +5432,8 @@
     ],
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2023-09"
   },
   {
     "slug": "tractable",
@@ -5353,7 +5480,8 @@
     "logo": "/logos/tractable.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2023-07"
   },
   {
     "slug": "snapsheet",
@@ -5388,7 +5516,8 @@
     "logo": "/logos/snapsheet.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-07"
   },
   {
     "slug": "ccc-intelligent",
@@ -5419,7 +5548,9 @@
     "logo": "/logos/ccc-intelligent.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01",
+    "funding": 295650000
   },
   {
     "slug": "personetics",
@@ -5456,7 +5587,8 @@
     "logo": "/logos/personetics.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "posh-technologies",
@@ -5487,7 +5619,8 @@
     "logo": "/logos/posh-technologies.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "glia",
@@ -5523,7 +5656,8 @@
     "logo": "/logos/glia.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2019-03"
   },
   {
     "slug": "finn-ai-glia",
@@ -5554,7 +5688,8 @@
     "acquirer": "Glia",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-12"
   },
   {
     "slug": "abe-ai",
@@ -5581,7 +5716,8 @@
     "logo": "/logos/abe-ai.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2019-01"
   },
   {
     "slug": "numerai",
@@ -5609,7 +5745,8 @@
     "logo": "/logos/numerai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-11"
   },
   {
     "slug": "quantopian-closed",
@@ -5640,7 +5777,8 @@
     "defunct": true,
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2020-10"
   },
   {
     "slug": "sigfig",
@@ -5671,7 +5809,8 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2018-06"
   },
   {
     "slug": "riskalyze",
@@ -5699,7 +5838,8 @@
     "logo": "/logos/riskalyze.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "nansen",
@@ -5736,7 +5876,8 @@
     "logo": "/logos/nansen.png",
     "ai_types": [
       "graph-analytics"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "kabbage-amex",
@@ -5773,7 +5914,8 @@
     "logo": "/logos/kabbage-amex.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-10"
   },
   {
     "slug": "ondeck-enova",
@@ -5802,7 +5944,8 @@
     "logo": "/logos/ondeck-enova.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-10"
   },
   {
     "slug": "fundbox",
@@ -5833,7 +5976,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "clearco",
@@ -5865,7 +6009,8 @@
     "logo": "/logos/clearco.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-08"
   },
   {
     "slug": "petal",
@@ -5901,7 +6046,8 @@
     "logo": "/logos/petal.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "argyle",
@@ -5933,7 +6079,8 @@
     "logo": "/logos/argyle.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "truework",
@@ -5966,7 +6113,8 @@
     "logo": "/logos/truework.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "hive-ai-crypto",
@@ -5991,7 +6139,8 @@
     "logo": "/logos/hive-ai-crypto.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "zerebro",
@@ -6015,7 +6164,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "cookie-dao",
@@ -6041,7 +6191,8 @@
     "logo": "/logos/cookie-dao.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "sekoia",
@@ -6066,7 +6217,8 @@
     "logo": "/logos/sekoia.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "griffain",
@@ -6090,7 +6242,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "murphy-debt",
@@ -6116,7 +6269,8 @@
     "logo": "/logos/murphy-debt.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "motive-formerly-keeptruckin",
@@ -6148,7 +6302,8 @@
     "logo": "/logos/motive-formerly-keeptruckin.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "magnifi",
@@ -6173,7 +6328,9 @@
     "logo": "/logos/magnifi.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-08",
+    "funding": 21123975
   },
   {
     "slug": "personal-capital",
@@ -6217,7 +6374,8 @@
     "logo": "/logos/personal-capital.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-08"
   },
   {
     "slug": "blooom",
@@ -6252,7 +6410,8 @@
     "defunct": true,
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2017-02"
   },
   {
     "slug": "titan",
@@ -6283,7 +6442,8 @@
     "logo": "/logos/titan.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-01"
   },
   {
     "slug": "black-ore",
@@ -6308,7 +6468,8 @@
     "logo": "/logos/black-ore.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "filed",
@@ -6333,7 +6494,8 @@
     "logo": "/logos/filed.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "flyfin",
@@ -6359,7 +6521,8 @@
     "logo": "/logos/flyfin.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "inkle",
@@ -6385,7 +6548,8 @@
     "logo": "/logos/inkle.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-02"
   },
   {
     "slug": "datasnipper",
@@ -6426,7 +6590,8 @@
     "logo": "/logos/datasnipper.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "stampli",
@@ -6457,7 +6622,8 @@
     "logo": "/logos/stampli.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2023-10"
   },
   {
     "slug": "trullion",
@@ -6487,7 +6653,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2023-04"
   },
   {
     "slug": "salient",
@@ -6514,7 +6681,8 @@
     "logo": "/logos/salient.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "january",
@@ -6543,7 +6711,8 @@
     "logo": "/logos/january.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-12"
   },
   {
     "slug": "skitai",
@@ -6572,7 +6741,8 @@
     "logo": "/logos/skitai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-05"
   },
   {
     "slug": "pair-finance",
@@ -6602,7 +6772,8 @@
     "logo": "/logos/pair-finance.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-10"
   },
   {
     "slug": "trueaccord",
@@ -6634,7 +6805,8 @@
     "logo": "/logos/trueaccord.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-06"
   },
   {
     "slug": "symend",
@@ -6666,7 +6838,8 @@
     "logo": "/logos/symend.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "indebted",
@@ -6697,7 +6870,8 @@
     "logo": "/logos/indebted.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "collbox",
@@ -6723,7 +6897,8 @@
     "logo": "/logos/collbox.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019-12"
   },
   {
     "slug": "attunely",
@@ -6749,7 +6924,8 @@
     "logo": "/logos/attunely.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-11"
   },
   {
     "slug": "cr-software",
@@ -6772,7 +6948,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1984"
   },
   {
     "slug": "kiavi",
@@ -6799,7 +6976,8 @@
     "logo": "/logos/kiavi.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "beeline-magicblocks",
@@ -6825,7 +7003,8 @@
     "logo": "/logos/beeline-magicblocks.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "metropolis",
@@ -6852,7 +7031,8 @@
     "logo": "/logos/metropolis.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "eliseai",
@@ -6879,7 +7059,8 @@
     "logo": "/logos/eliseai.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-08"
   },
   {
     "slug": "keyway",
@@ -6905,7 +7086,8 @@
     "logo": "/logos/keyway.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2014-06"
   },
   {
     "slug": "home365",
@@ -6930,7 +7112,8 @@
     "logo": "/logos/home365.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "casavo",
@@ -6957,7 +7140,8 @@
     "logo": "/logos/casavo.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "entera",
@@ -6983,7 +7167,8 @@
     "logo": "/logos/entera.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-06"
   },
   {
     "slug": "compstak",
@@ -7016,7 +7201,8 @@
     "logo": "/logos/compstak.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2014-11"
   },
   {
     "slug": "mapped",
@@ -7042,7 +7228,8 @@
     "logo": "/logos/mapped.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "rocket-money",
@@ -7074,7 +7261,8 @@
     "logo": "/logos/rocket-money.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "origin-financial",
@@ -7100,7 +7288,8 @@
     "logo": "/logos/origin-financial.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "digit",
@@ -7129,7 +7318,8 @@
     "logo": "/logos/digit.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "au10tix",
@@ -7163,7 +7353,8 @@
     "logo": "/logos/au10tix.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2019-12"
   },
   {
     "slug": "incode",
@@ -7202,7 +7393,8 @@
     "logo": "/logos/incode.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "shufti-pro",
@@ -7229,7 +7421,8 @@
     "logo": "/logos/shufti-pro.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "didit",
@@ -7255,7 +7448,8 @@
     "logo": "/logos/didit.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "identomat",
@@ -7281,7 +7475,8 @@
     "logo": "/logos/identomat.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2022-09"
   },
   {
     "slug": "near-protocol",
@@ -7312,7 +7507,8 @@
     "logo": "/logos/near-protocol.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2019-07"
   },
   {
     "slug": "internet-computer-icp",
@@ -7340,7 +7536,8 @@
     "logo": "/logos/internet-computer-icp.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2018-08"
   },
   {
     "slug": "akash-network",
@@ -7377,7 +7574,8 @@
     "logo": "/logos/akash-network.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2020-10"
   },
   {
     "slug": "singularitydao-sdao",
@@ -7403,7 +7601,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "oraichain",
@@ -7429,7 +7628,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2021-02"
   },
   {
     "slug": "cortex-ctxc",
@@ -7455,7 +7655,8 @@
     "logo": "/logos/cortex-ctxc.png",
     "ai_types": [
       "graph-analytics"
-    ]
+    ],
+    "last_funding_date": "2018-03"
   },
   {
     "slug": "qubic",
@@ -7480,7 +7681,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "ginimachine",
@@ -7505,7 +7707,8 @@
     "logo": "/logos/ginimachine.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2016"
   },
   {
     "slug": "peratera",
@@ -7529,7 +7732,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021"
   },
   {
     "slug": "finpilot",
@@ -7554,7 +7758,8 @@
     "logo": "/logos/finpilot.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "9fin",
@@ -7589,7 +7794,8 @@
     "logo": "/logos/9fin.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "rogo",
@@ -7616,7 +7822,8 @@
     "logo": "/logos/rogo.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "daloopa",
@@ -7643,7 +7850,8 @@
     "logo": "/logos/daloopa.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "dataminr",
@@ -7686,7 +7894,8 @@
     "logo": "/logos/dataminr.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "visible-alpha",
@@ -7713,7 +7922,8 @@
     "acquirer": "S&P Global",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "koyfin",
@@ -7739,7 +7949,8 @@
     "logo": "/logos/koyfin.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "tabs",
@@ -7765,7 +7976,8 @@
     "logo": "/logos/tabs.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "cube",
@@ -7792,7 +8004,8 @@
     "logo": "/logos/cube.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "datarails",
@@ -7822,7 +8035,8 @@
     "logo": "/logos/datarails.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "mosaic-tech",
@@ -7853,7 +8067,8 @@
     "logo": "/logos/mosaic-tech.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "jirav",
@@ -7879,7 +8094,8 @@
     "logo": "/logos/jirav.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-07"
   },
   {
     "slug": "prophix",
@@ -7906,7 +8122,8 @@
     "logo": "/logos/prophix.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "orum",
@@ -7934,7 +8151,8 @@
     "logo": "/logos/orum.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "ampla",
@@ -7962,7 +8180,8 @@
     "logo": "/logos/ampla.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "wayflyer",
@@ -7994,7 +8213,8 @@
     "logo": "/logos/wayflyer.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-06"
   },
   {
     "slug": "vicarious",
@@ -8017,7 +8237,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "gabi-experian",
@@ -8044,7 +8265,8 @@
     "logo": "/logos/gabi-experian.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-11"
   },
   {
     "slug": "jerry",
@@ -8072,7 +8294,8 @@
     "logo": "/logos/jerry.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-08"
   },
   {
     "slug": "ethos",
@@ -8104,7 +8327,8 @@
     "logo": "/logos/ethos.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "newfront",
@@ -8135,7 +8359,8 @@
     "logo": "/logos/newfront.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "at-bay",
@@ -8167,7 +8392,8 @@
     "logo": "/logos/at-bay.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-09"
   },
   {
     "slug": "kin",
@@ -8199,7 +8425,8 @@
     "logo": "/logos/kin.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025"
   },
   {
     "slug": "clearcover",
@@ -8231,7 +8458,8 @@
     "logo": "/logos/clearcover.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "openly",
@@ -8258,7 +8486,8 @@
     "logo": "/logos/openly.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-12"
   },
   {
     "slug": "cowbell-cyber",
@@ -8285,7 +8514,8 @@
     "logo": "/logos/cowbell-cyber.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-07"
   },
   {
     "slug": "covergenius",
@@ -8321,7 +8551,8 @@
     "logo": "/logos/covergenius.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-05"
   },
   {
     "slug": "cytora",
@@ -8353,7 +8584,8 @@
     "logo": "/logos/cytora.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "planck",
@@ -8389,7 +8621,8 @@
     "logo": "/logos/planck.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-07"
   },
   {
     "slug": "virtu-financial",
@@ -8416,7 +8649,8 @@
     "logo": "/logos/virtu-financial.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2015-04"
   },
   {
     "slug": "hudson-river-trading",
@@ -8442,7 +8676,8 @@
     "logo": "/logos/hudson-river-trading.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2002"
   },
   {
     "slug": "optiver",
@@ -8468,7 +8703,8 @@
     "logo": "/logos/optiver.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "1986"
   },
   {
     "slug": "flow-traders",
@@ -8498,7 +8734,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2015-07"
   },
   {
     "slug": "aqr-capital",
@@ -8536,7 +8773,8 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "1998"
   },
   {
     "slug": "point72",
@@ -8563,7 +8801,8 @@
     "logo": "/logos/point72.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2014"
   },
   {
     "slug": "man-group",
@@ -8590,7 +8829,8 @@
     "logo": "/logos/man-group.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "1994"
   },
   {
     "slug": "pdt-partners",
@@ -8616,7 +8856,8 @@
     "logo": "/logos/pdt-partners.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2012"
   },
   {
     "slug": "millennium-management",
@@ -8643,7 +8884,8 @@
     "logo": "/logos/millennium-management.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1989"
   },
   {
     "slug": "balyasny-asset-mgmt",
@@ -8669,7 +8911,8 @@
     "logo": "/logos/balyasny-asset-mgmt.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2001"
   },
   {
     "slug": "marshall-wace",
@@ -8699,7 +8942,8 @@
     "logo": "/logos/marshall-wace.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1997"
   },
   {
     "slug": "moneylion",
@@ -8735,7 +8979,8 @@
     "logo": "/logos/moneylion.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "addepar",
@@ -8771,7 +9016,8 @@
     "logo": "/logos/addepar.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-06"
   },
   {
     "slug": "ethic",
@@ -8801,7 +9047,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "snappy-kraken",
@@ -8826,7 +9073,8 @@
     "logo": "/logos/snappy-kraken.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2023-12"
   },
   {
     "slug": "tifin",
@@ -8856,7 +9104,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "pontera",
@@ -8887,7 +9136,8 @@
     "logo": "/logos/pontera.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-12"
   },
   {
     "slug": "finny-ai",
@@ -8912,7 +9162,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2021-06"
   },
   {
     "slug": "hummingbird",
@@ -8943,7 +9194,8 @@
     "logo": "/logos/hummingbird.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-11"
   },
   {
     "slug": "lucinity",
@@ -8970,7 +9222,8 @@
     "logo": "/logos/lucinity.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-07"
   },
   {
     "slug": "quantexa",
@@ -9010,7 +9263,8 @@
     "logo": "/logos/quantexa.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "complyadvantage",
@@ -9051,7 +9305,8 @@
     "logo": "/logos/complyadvantage.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-03"
   },
   {
     "slug": "napier-ai",
@@ -9078,7 +9333,8 @@
     "logo": "/logos/napier-ai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "silent-eight",
@@ -9113,7 +9369,8 @@
     "logo": "/logos/silent-eight.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "kount",
@@ -9140,7 +9397,8 @@
     "logo": "/logos/kount.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "riskified",
@@ -9175,7 +9433,9 @@
     "logo": "/logos/riskified.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-03",
+    "funding": 3366803
   },
   {
     "slug": "forter",
@@ -9215,7 +9475,8 @@
     "logo": "/logos/forter.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-05"
   },
   {
     "slug": "heron-finance",
@@ -9240,7 +9501,8 @@
     "logo": "/logos/heron-finance.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "instead",
@@ -9264,7 +9526,9 @@
     "logo": "/logos/instead.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-05",
+    "funding": 5000000
   },
   {
     "slug": "fyle",
@@ -9296,7 +9560,8 @@
     "logo": "/logos/fyle.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "april-tax-solutions",
@@ -9322,7 +9587,8 @@
     "logo": "/logos/april-tax-solutions.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "heard-technologies",
@@ -9347,7 +9613,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "reducto",
@@ -9382,7 +9649,8 @@
     "logo": "/logos/reducto.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "affinda",
@@ -9409,7 +9677,8 @@
     "logo": "/logos/affinda.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "klippa",
@@ -9437,7 +9706,8 @@
     "logo": "/logos/klippa.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "docsumo",
@@ -9468,7 +9738,8 @@
     "logo": "/logos/docsumo.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-03"
   },
   {
     "slug": "rossum",
@@ -9500,7 +9771,8 @@
     "logo": "/logos/rossum.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "instabase",
@@ -9528,7 +9800,8 @@
     "logo": "/logos/instabase.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2017-05"
   },
   {
     "slug": "nanonets",
@@ -9563,7 +9836,8 @@
     "logo": "/logos/nanonets.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "veryfi",
@@ -9590,7 +9864,8 @@
     "logo": "/logos/veryfi.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "docuclipper",
@@ -9615,7 +9890,8 @@
     "logo": "/logos/docuclipper.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "heron-data",
@@ -9642,7 +9918,8 @@
     "logo": "/logos/heron-data.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "mindee",
@@ -9672,7 +9949,8 @@
     ],
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2023-03"
   },
   {
     "slug": "abbyy",
@@ -9699,7 +9977,8 @@
     "logo": "/logos/abbyy.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2021-05"
   },
   {
     "slug": "hyperscience",
@@ -9726,7 +10005,8 @@
     ],
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "eigen-technologies",
@@ -9757,7 +10037,8 @@
     "acquirer": "Sirion",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "kofax",
@@ -9784,7 +10065,8 @@
     "logo": "/logos/kofax.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "extract-systems",
@@ -9810,7 +10092,8 @@
     "logo": "/logos/extract-systems.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2000"
   },
   {
     "slug": "parascript",
@@ -9835,7 +10118,8 @@
     "logo": "/logos/parascript.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "1996"
   },
   {
     "slug": "workfusion",
@@ -9871,7 +10155,8 @@
     "logo": "/logos/workfusion.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "idaciti",
@@ -9896,7 +10181,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019-03"
   },
   {
     "slug": "tidalwave",
@@ -9922,7 +10208,8 @@
     "logo": "/logos/tidalwave.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-08"
   },
   {
     "slug": "ridley",
@@ -9948,7 +10235,8 @@
     "logo": "/logos/ridley.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "openspace",
@@ -9979,7 +10267,8 @@
     "logo": "/logos/openspace.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2022-08"
   },
   {
     "slug": "infogrid",
@@ -10006,7 +10295,8 @@
     "logo": "/logos/infogrid.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "lofty-ai",
@@ -10036,7 +10326,8 @@
     "logo": "/logos/lofty-ai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-05"
   },
   {
     "slug": "ojo-labs",
@@ -10067,7 +10358,8 @@
     "logo": "/logos/ojo-labs.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2018-05"
   },
   {
     "slug": "vero",
@@ -10092,7 +10384,8 @@
     "logo": "/logos/vero.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-09"
   },
   {
     "slug": "prop-ai",
@@ -10118,7 +10411,8 @@
     "logo": "/logos/prop-ai.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "leaseai",
@@ -10169,7 +10463,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "rentlytics",
@@ -10195,7 +10490,8 @@
     "acquirer": "RealPage",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2018-10"
   },
   {
     "slug": "reonomy",
@@ -10229,7 +10525,8 @@
     "logo": "/logos/reonomy.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021"
   },
   {
     "slug": "cherre",
@@ -10267,7 +10564,8 @@
     "logo": "/logos/cherre.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "receeve",
@@ -10295,7 +10593,8 @@
     "logo": "/logos/receeve.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "collectwise",
@@ -10319,7 +10618,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-06"
   },
   {
     "slug": "collectly",
@@ -10345,7 +10645,8 @@
     "logo": "/logos/collectly.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-07"
   },
   {
     "slug": "livevox",
@@ -10373,7 +10674,8 @@
     "logo": "/logos/livevox.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-10"
   },
   {
     "slug": "fico-debt-manager",
@@ -10402,7 +10704,8 @@
     "logo": "/logos/fico-debt-manager.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1956"
   },
   {
     "slug": "beyond-arm",
@@ -10426,7 +10729,8 @@
     "logo": "/logos/beyond-arm.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2000"
   },
   {
     "slug": "my-dso-manager",
@@ -10451,7 +10755,8 @@
     "logo": "/logos/my-dso-manager.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2018"
   },
   {
     "slug": "yaypay",
@@ -10479,7 +10784,8 @@
     "logo": "/logos/yaypay.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2020-07"
   },
   {
     "slug": "esker",
@@ -10505,7 +10811,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "versapay",
@@ -10532,7 +10839,8 @@
     "logo": "/logos/versapay.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019-12"
   },
   {
     "slug": "gaviti",
@@ -10559,7 +10867,8 @@
     "logo": "/logos/gaviti.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "sylvera",
@@ -10595,7 +10904,8 @@
     "logo": "/logos/sylvera.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-07"
   },
   {
     "slug": "briink",
@@ -10622,7 +10932,8 @@
     "logo": "/logos/briink.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "zevero",
@@ -10648,7 +10959,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "treefera",
@@ -10674,7 +10986,8 @@
     "logo": "/logos/treefera.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-06"
   },
   {
     "slug": "arabesque",
@@ -10700,7 +11013,8 @@
     "logo": "/logos/arabesque.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2019-06"
   },
   {
     "slug": "clarity-ai",
@@ -10732,7 +11046,8 @@
     "logo": "/logos/clarity-ai.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "persefoni",
@@ -10764,7 +11079,8 @@
     "logo": "/logos/persefoni.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-10"
   },
   {
     "slug": "watershed",
@@ -10801,7 +11117,8 @@
     "logo": "/logos/watershed.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "greenly",
@@ -10829,7 +11146,8 @@
     "logo": "/logos/greenly.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "sweep",
@@ -10861,7 +11179,8 @@
     "logo": "/logos/sweep.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-04"
   },
   {
     "slug": "plan-a",
@@ -10888,7 +11207,8 @@
     "logo": "/logos/plan-a.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-09"
   },
   {
     "slug": "normative",
@@ -10915,7 +11235,8 @@
     "logo": "/logos/normative.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-07"
   },
   {
     "slug": "sust",
@@ -10941,7 +11262,8 @@
     "logo": "/logos/sust.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "carbon-bright",
@@ -10965,7 +11287,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-09"
   },
   {
     "slug": "key-esg",
@@ -10990,7 +11313,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "sphera",
@@ -11016,7 +11340,8 @@
     "logo": "/logos/sphera.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "entelligent",
@@ -11042,7 +11367,9 @@
     "logo": "/logos/entelligent.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-11",
+    "funding": 10253639
   },
   {
     "slug": "aiprise",
@@ -11068,7 +11395,8 @@
     "logo": "/logos/aiprise.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "notabene",
@@ -11103,7 +11431,8 @@
     "logo": "/logos/notabene.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "regula",
@@ -11129,7 +11458,8 @@
     "logo": "/logos/regula.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "1992"
   },
   {
     "slug": "ekata",
@@ -11157,7 +11487,8 @@
     "logo": "/logos/ekata.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2021-06"
   },
   {
     "slug": "mitek",
@@ -11188,7 +11519,9 @@
     "logo": "/logos/mitek.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2018-06",
+    "funding": 201946
   },
   {
     "slug": "idnow",
@@ -11219,7 +11552,8 @@
     "logo": "/logos/idnow.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "iproov",
@@ -11250,7 +11584,8 @@
     "logo": "/logos/iproov.png",
     "ai_types": [
       "computer-vision"
-    ]
+    ],
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "trulioo",
@@ -11282,7 +11617,8 @@
     "logo": "/logos/trulioo.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2021-06"
   },
   {
     "slug": "gbg",
@@ -11312,7 +11648,8 @@
     "logo": "/logos/gbg.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-12"
   },
   {
     "slug": "lexisnexis-risk-solutions",
@@ -11341,7 +11678,8 @@
     "logo": "/logos/lexisnexis-risk-solutions.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "1994"
   },
   {
     "slug": "equifax-workforce-solutions",
@@ -11366,7 +11704,8 @@
     "logo": "/logos/equifax-workforce-solutions.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "1971"
   },
   {
     "slug": "gtreasury",
@@ -11393,7 +11732,8 @@
     "logo": "/logos/gtreasury.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "nomentia",
@@ -11420,7 +11760,8 @@
     "logo": "/logos/nomentia.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-03"
   },
   {
     "slug": "embat",
@@ -11447,7 +11788,8 @@
     "logo": "/logos/embat.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "nilus",
@@ -11473,7 +11815,8 @@
     "logo": "/logos/nilus.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "cashforce",
@@ -11499,7 +11842,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2022-06"
   },
   {
     "slug": "tis-treasury-intelligence",
@@ -11526,7 +11870,8 @@
     "logo": "/logos/tis-treasury-intelligence.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "serrala",
@@ -11553,7 +11898,8 @@
     "logo": "/logos/serrala.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2021-08"
   },
   {
     "slug": "refinitiv-eikon",
@@ -11585,7 +11931,8 @@
     "logo": "/logos/refinitiv-eikon.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2021-01"
   },
   {
     "slug": "bloomberg-treasury",
@@ -11610,7 +11957,8 @@
     "logo": "/logos/bloomberg-treasury.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "1981"
   },
   {
     "slug": "hazeltree",
@@ -11637,7 +11985,8 @@
     "logo": "/logos/hazeltree.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "adenza",
@@ -11663,7 +12012,8 @@
     "acquirer": "Nasdaq",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "finbar",
@@ -11686,7 +12036,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "keye",
@@ -11710,7 +12061,8 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "trata",
@@ -11734,7 +12086,8 @@
     "logo": "/logos/trata.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "fundguard",
@@ -11765,7 +12118,8 @@
     "logo": "/logos/fundguard.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "orbital-insight",
@@ -11799,7 +12153,8 @@
     "logo": "/logos/orbital-insight.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-05"
   },
   {
     "slug": "quiver-quantitative",
@@ -11825,7 +12180,8 @@
     "logo": "/logos/quiver-quantitative.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   },
   {
     "slug": "atom-finance",
@@ -11852,7 +12208,8 @@
     "logo": "/logos/atom-finance.png",
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2024-05"
   },
   {
     "slug": "factset",
@@ -11887,7 +12244,8 @@
     ],
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "1996-06"
   },
   {
     "slug": "sp-capital-iq",
@@ -11915,7 +12273,8 @@
     ],
     "ai_types": [
       "data-platform"
-    ]
+    ],
+    "last_funding_date": "2004"
   },
   {
     "slug": "rippling",
@@ -11947,7 +12306,8 @@
     "logo": "/logos/rippling.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "kaito-ai",
@@ -11974,7 +12334,8 @@
     "logo": "/logos/kaito-ai.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "modulus-labs",
@@ -12005,7 +12366,8 @@
     "logo": "/logos/modulus-labs.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "eqty-lab",
@@ -12032,7 +12394,8 @@
     "logo": "/logos/eqty-lab.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "vana",
@@ -12059,7 +12422,8 @@
     "logo": "/logos/vana.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "gensyn",
@@ -12091,7 +12455,8 @@
     "logo": "/logos/gensyn.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "together-ai",
@@ -12122,7 +12487,8 @@
     "logo": "/logos/together-ai.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "prime-intellect",
@@ -12149,7 +12515,8 @@
     "logo": "/logos/prime-intellect.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "grass",
@@ -12176,7 +12543,8 @@
     "logo": "/logos/grass.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "ionet",
@@ -12203,7 +12571,8 @@
     "logo": "/logos/ionet.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "morpheus-mor",
@@ -12229,7 +12598,8 @@
     "logo": "/logos/morpheus-mor.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "masa",
@@ -12259,7 +12629,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "ritual",
@@ -12290,7 +12661,8 @@
     "logo": "/logos/ritual.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "pond",
@@ -12316,7 +12688,8 @@
     ],
     "ai_types": [
       "graph-analytics"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "allora",
@@ -12343,7 +12716,8 @@
     "logo": "/logos/allora.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "0g-labs",
@@ -12370,7 +12744,8 @@
     "logo": "/logos/0g-labs.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "sahara-ai",
@@ -12401,7 +12776,8 @@
     "logo": "/logos/sahara-ai.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-07"
   },
   {
     "slug": "aligned-layer",
@@ -12428,7 +12804,8 @@
     "logo": "/logos/aligned-layer.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-04"
   },
   {
     "slug": "hey-anon",
@@ -12454,7 +12831,8 @@
     "logo": "/logos/hey-anon.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "bankr",
@@ -12480,7 +12858,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2023-01"
   },
   {
     "slug": "hotkeyswap",
@@ -12506,7 +12885,8 @@
     "logo": "/logos/hotkeyswap.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "orbit",
@@ -12532,7 +12912,8 @@
     "logo": "/logos/orbit.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "neur",
@@ -12557,7 +12938,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "heyelsa",
@@ -12584,7 +12966,8 @@
     "logo": "/logos/heyelsa.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "cod3x",
@@ -12611,7 +12994,8 @@
     "logo": "/logos/cod3x.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "project-plutus",
@@ -12636,7 +13020,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "aipump",
@@ -12740,7 +13125,8 @@
     "logo": "/logos/mode-network.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "layer-ai",
@@ -12791,7 +13177,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-08"
   },
   {
     "slug": "hapi-protocol",
@@ -12817,7 +13204,8 @@
     "logo": "/logos/hapi-protocol.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2021-04"
   },
   {
     "slug": "anti-rug-agent",
@@ -12893,7 +13281,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "slate",
@@ -12919,7 +13308,8 @@
     ],
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024"
   },
   {
     "slug": "agentfunai",
@@ -12971,7 +13361,8 @@
     "logo": "/logos/chutes.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "hermes-subquery",
@@ -12996,7 +13387,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-02"
   },
   {
     "slug": "phala-network",
@@ -13023,7 +13415,8 @@
     "logo": "/logos/phala-network.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2020-09"
   },
   {
     "slug": "dolion-bully",
@@ -13074,7 +13467,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2022-10"
   },
   {
     "slug": "griffin-ai-gain",
@@ -13124,7 +13518,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "gigabrain",
@@ -13148,7 +13543,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "elfa-ai",
@@ -13174,7 +13570,8 @@
     "logo": "/logos/elfa-ai.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "lunarcrush",
@@ -13200,7 +13597,8 @@
     "logo": "/logos/lunarcrush.png",
     "ai_types": [
       "graph-analytics"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "giza-arma-giza-tech-arma",
@@ -13232,7 +13630,8 @@
     "logo": "/logos/giza-arma-giza-tech-arma.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "truenorth",
@@ -13258,7 +13657,8 @@
     ],
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "zyfai",
@@ -13309,7 +13709,8 @@
     "logo": "/logos/almanak.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "wayfinder",
@@ -13335,7 +13736,8 @@
     "logo": "/logos/wayfinder.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "velvet-capital",
@@ -13362,7 +13764,8 @@
     "logo": "/logos/velvet-capital.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "billybets",
@@ -13411,7 +13814,8 @@
     "logo": "/logos/symphony-symphonyio.png",
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-10"
   },
   {
     "slug": "shekel-agentic",
@@ -13486,7 +13890,8 @@
     "logo": "/logos/kvants-ai.png",
     "ai_types": [
       "reinforcement-learning"
-    ]
+    ],
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "arkham",
@@ -13513,7 +13918,8 @@
     "logo": "/logos/arkham.png",
     "ai_types": [
       "graph-analytics"
-    ]
+    ],
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "cambrian-network",
@@ -13538,7 +13944,8 @@
     ],
     "ai_types": [
       "infrastructure"
-    ]
+    ],
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "iaesir-fund",
@@ -13613,7 +14020,8 @@
     "logo": "/logos/axal.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "defi-saver",
@@ -13639,7 +14047,8 @@
     "logo": "/logos/defi-saver.png",
     "ai_types": [
       "predictive-ml"
-    ]
+    ],
+    "last_funding_date": "2019"
   },
   {
     "slug": "sail-ai-agents",
@@ -13689,7 +14098,8 @@
     "logo": "/logos/lulo.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "askjimmy",
@@ -13736,7 +14146,7 @@
       "infrastructure"
     ],
     "summary": "UV is the missing data layer for financial AI: post-training decision sequences with human feedback. UV provides a harness, environment, and dataset that allows AI labs to teach their models how to use financial tools, make good financial decisions, and even generate alpha. If you believe that AI will need to handle money in the future, then you believe in a future where UV data is vital.",
-    "funding": 0,
+    "funding": 9182000,
     "employees": "1-10",
     "founders": [
       {
@@ -13747,6 +14157,7 @@
     "logo": "/logos/uv.png",
     "ai_types": [
       "llm"
-    ]
+    ],
+    "last_funding_date": "2022-01"
   }
 ]
