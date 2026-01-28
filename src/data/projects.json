@@ -12727,7 +12727,7 @@
   {
     "slug": "cod3x",
     "name": "Cod3x",
-    "tagline": "No-code DeFi strategy automation, BigTony trading agent",
+    "tagline": "Build and automate trading strategies for crypto and equities in minutes.",
     "segment": "trading",
     "layer": "automation",
     "stage": "seed",
@@ -12737,7 +12737,7 @@
     "company_type": "token",
     "funding_stage": "seed",
     "region": "americas",
-    "summary": "Cod3x is a no-code platform for creating AI trading agents, built by ByteMasons (Fantom, Optimism protocols). Flagship agent BigTony launched Nov 2024 turned $500 into $50K trading BTC/ETH on Base. Integrated with Allora Network, achieved 2.54% avg profit per trade and 21.7% outperformance vs holding BTC (Dec 2024-Jan 2025). Evolutionary algorithm uses JSON genomes for agent configuration. 70% compute cost reduction via event-driven architecture.",
+    "summary": "Cod3x, a no-code platform for building autonomous AI trading agents. Define goals in natural language, set algorithmic triggers, and let AI handle multi-step execution. 24/7 monitoring, technical analysis, and adaptive trade decisions based on real-time conditions. Full transparency into every step so you can see exactly why trades happen.",
     "crypto": true,
     "employees": "1-10",
     "founders": [
@@ -12750,7 +12750,8 @@
     "ai_types": [
       "agentic"
     ],
-    "last_funding_date": "2024-12"
+    "last_funding_date": "2024-12",
+    "twitter": "Cod3xOrg"
   },
   {
     "slug": "project-plutus",
