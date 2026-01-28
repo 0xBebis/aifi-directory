@@ -16,13 +16,13 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Recently Funded AI Finance Companies | AIFI',
+  title: 'Recently Funded AI Finance Companies | AIFI Map',
   description: 'The latest AI finance funding rounds. See which companies building AI for financial services have recently raised capital, sorted by most recent funding date.',
   openGraph: {
     title: 'Recently Funded AI Finance Companies',
     description: 'The latest AI finance funding rounds. See which companies building AI for financial services have recently raised capital.',
     type: 'website',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -45,7 +45,7 @@ export default function RecentPage() {
     },
     {
       q: 'How much has been invested in AI finance companies?',
-      a: `Companies tracked in the AIFI directory with recent funding dates have raised a combined ${formatFunding(totalRecent)}. The most funded companies overall include ${topFunded.slice(0, 3).map(p => `${p.name} (${formatFunding(p.funding || 0)})`).join(', ')}.`,
+      a: `Companies tracked in the AIFI Map directory with recent funding dates have raised a combined ${formatFunding(totalRecent)}. The most funded companies overall include ${topFunded.slice(0, 3).map(p => `${p.name} (${formatFunding(p.funding || 0)})`).join(', ')}.`,
     },
     {
       q: 'What are the latest AI fintech funding rounds?',
@@ -67,7 +67,7 @@ export default function RecentPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: 'Recently Funded' },
     ],

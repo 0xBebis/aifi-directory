@@ -22,17 +22,17 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const segment = getSegment(params.slug);
-  if (!segment) return { title: 'Segment Not Found | AIFI' };
+  if (!segment) return { title: 'Segment Not Found | AIFI Map' };
   const segProjects = getProjectsBySegment(segment.slug);
   const description = `Explore ${segProjects.length} AI-powered ${segment.name.toLowerCase()} companies. ${segment.description} Browse the full directory of companies building AI for ${segment.name.toLowerCase()}.`;
   return {
-    title: `${segment.name}: AI Companies & Platforms | AIFI`,
+    title: `${segment.name}: AI Companies & Platforms | AIFI Map`,
     description: description.slice(0, 160),
     openGraph: {
       title: `${segment.name}: AI Companies & Platforms`,
       description: description.slice(0, 160),
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: '/og/default.png', width: 1200, height: 630 }],
     },
     twitter: {
@@ -76,11 +76,11 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
   const faqs = [
     {
       q: `What is AI ${segment.name.toLowerCase()}?`,
-      a: `AI ${segment.name.toLowerCase()} refers to the use of artificial intelligence and machine learning technologies in the ${segment.name.toLowerCase()} sector. ${segment.description} The AIFI directory tracks ${segProjects.length} companies building AI-powered solutions in this space.`,
+      a: `AI ${segment.name.toLowerCase()} refers to the use of artificial intelligence and machine learning technologies in the ${segment.name.toLowerCase()} sector. ${segment.description} The AIFI Map directory tracks ${segProjects.length} companies building AI-powered solutions in this space.`,
     },
     {
       q: `How many AI ${segment.name.toLowerCase()} companies are there?`,
-      a: `The AIFI directory tracks ${segProjects.length} companies focused on AI-powered ${segment.name.toLowerCase()}. Together, these companies have raised ${formatFunding(totalFunding)} in funding.`,
+      a: `The AIFI Map directory tracks ${segProjects.length} companies focused on AI-powered ${segment.name.toLowerCase()}. Together, these companies have raised ${formatFunding(totalFunding)} in funding.`,
     },
     {
       q: `What AI technologies are used in ${segment.name.toLowerCase()}?`,
@@ -88,7 +88,7 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
     },
     ...(topCompany ? [{
       q: `What is the most funded AI ${segment.name.toLowerCase()} company?`,
-      a: `${topCompany.name} is the most funded AI ${segment.name.toLowerCase()} company tracked by AIFI${topCompany.funding ? `, having raised ${formatFunding(topCompany.funding)}` : ''}. ${topCompany.tagline}`,
+      a: `${topCompany.name} is the most funded AI ${segment.name.toLowerCase()} company tracked by AIFI Map${topCompany.funding ? `, having raised ${formatFunding(topCompany.funding)}` : ''}. ${topCompany.tagline}`,
     }] : []),
   ];
 
@@ -106,7 +106,7 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: segment.name },
     ],

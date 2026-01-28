@@ -124,7 +124,7 @@ ${jsonStr}
 
 ---
 ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
-*Submitted via AIFI directory form*`;
+*Submitted via AIFI Map directory form*`;
 
     // Build GitHub issue URL
     const issueTitle = encodeURIComponent(`[Submission] ${formData.name}`);
@@ -158,7 +158,7 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
           <span className="font-semibold text-accent">Note:</span> Submissions are processed via GitHub. You&apos;ll need a{' '}
           <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GitHub account</a>{' '}
           to complete this form. No GitHub?{' '}
-          <a href="mailto:submit@aifimap.com?subject=AIFI%20Company%20Submission" className="text-accent hover:underline">Email us instead</a>.
+          <a href="mailto:submit@aifimap.com?subject=AIFI%20Map%20Company%20Submission" className="text-accent hover:underline">Email us instead</a>.
         </p>
       </div>
 

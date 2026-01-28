@@ -16,8 +16,8 @@ export default function NewsletterForm({ variant = 'inline' }: NewsletterFormPro
 
   if (submitted) {
     return (
-      <div className={`flex items-center gap-2 ${variant === 'stacked' ? 'justify-center' : ''}`}>
-        <Check className="w-4 h-4 text-positive" />
+      <div className={`flex items-center gap-2 ${variant === 'stacked' ? 'justify-center' : ''}`} role="status" aria-live="polite">
+        <Check className="w-4 h-4 text-positive" aria-hidden="true" />
         <span className="text-sm text-text-secondary">Check your email to confirm!</span>
       </div>
     );
@@ -32,8 +32,10 @@ export default function NewsletterForm({ variant = 'inline' }: NewsletterFormPro
       className={variant === 'stacked' ? 'flex flex-col gap-3 max-w-sm mx-auto' : 'flex gap-2'}
     >
       <div className="relative flex-1">
-        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" aria-hidden="true" />
+        <label htmlFor="newsletter-email" className="sr-only">Email address</label>
         <input
+          id="newsletter-email"
           type="email"
           name="email"
           required

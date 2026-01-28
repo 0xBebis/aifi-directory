@@ -30,19 +30,19 @@ export function generateMetadata({ params }: { params: { slug: string; aiType: s
   const segment = getSegment(params.slug);
   const aiType = params.aiType as AIType;
   const label = AI_TYPE_LABELS[aiType];
-  if (!segment || !label) return { title: 'Not Found | AIFI' };
+  if (!segment || !label) return { title: 'Not Found | AIFI Map' };
 
   const matching = getProjectsBySegmentAndAIType(params.slug, aiType);
   const description = `${matching.length} companies using ${label} in ${segment.name.toLowerCase()}. Explore AI-powered ${segment.name.toLowerCase()} companies that leverage ${label} technology.`;
 
   return {
-    title: `${label} in ${segment.name} — AI Companies | AIFI`,
+    title: `${label} in ${segment.name} — AI Companies | AIFI Map`,
     description: description.slice(0, 160),
     openGraph: {
       title: `${label} in ${segment.name} — AI Companies`,
       description: description.slice(0, 160),
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: '/og/default.png', width: 1200, height: 630 }],
     },
     twitter: {
@@ -86,7 +86,7 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
   const faqs = [
     {
       q: `How is ${label} used in ${segment.name.toLowerCase()}?`,
-      a: `${aiDescription} In the ${segment.name.toLowerCase()} sector, ${label} is applied by ${matching.length} companies tracked in the AIFI directory. ${segment.description}. ${funded.slice(0, 3).map(p => `${p.name}: ${p.tagline}`).join('. ')}.`,
+      a: `${aiDescription} In the ${segment.name.toLowerCase()} sector, ${label} is applied by ${matching.length} companies tracked in the AIFI Map directory. ${segment.description}. ${funded.slice(0, 3).map(p => `${p.name}: ${p.tagline}`).join('. ')}.`,
     },
     {
       q: `Which ${segment.name.toLowerCase()} companies use ${label}?`,
@@ -112,7 +112,7 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: segment.name, item: `https://aifimap.com/segments/${segment.slug}` },
       { '@type': 'ListItem', position: 3, name: label },
     ],

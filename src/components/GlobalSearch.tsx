@@ -152,8 +152,10 @@ export default function GlobalSearch({ items }: GlobalSearchProps) {
         <div className="bg-surface border border-border rounded-xl shadow-2xl overflow-hidden">
           {/* Search input */}
           <div className="flex items-center gap-3 px-4 border-b border-border">
-            <Search className="w-5 h-5 text-text-muted shrink-0" />
+            <Search className="w-5 h-5 text-text-muted shrink-0" aria-hidden="true" />
+            <label htmlFor="global-search" className="sr-only">Search companies, segments, and pages</label>
             <input
+              id="global-search"
               ref={inputRef}
               type="text"
               value={query}
@@ -170,7 +172,7 @@ export default function GlobalSearch({ items }: GlobalSearchProps) {
           <div ref={resultsRef} className="max-h-[50vh] overflow-y-auto">
             {query.length === 0 ? (
               <div className="px-4 py-8 text-center">
-                <p className="text-sm text-text-muted">Start typing to search across the AIFI directory</p>
+                <p className="text-sm text-text-muted">Start typing to search across the AIFI Map directory</p>
               </div>
             ) : renderOrder.length === 0 ? (
               <div className="px-4 py-8 text-center">

@@ -7,13 +7,13 @@ import ReadingProgress from '@/components/ReadingProgress';
 import { BUILD_DATE_ISO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'A Brief History of Financial AI | AIFI',
+  title: 'A Brief History of Financial AI | AIFI Map',
   description: 'From statistical arbitrage to autonomous agents: the 5 eras of AI in financial services, from 1982 to 2026. Timeline of key milestones.',
   openGraph: {
     title: 'A Brief History of Financial AI',
     description: 'From statistical arbitrage to autonomous agents: the 5 eras of AI in financial services, from 1982 to 2026.',
     type: 'article',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -88,8 +88,8 @@ export default function HistoryPage() {
     '@type': 'Article',
     headline: 'A Brief History of Financial AI',
     description: 'From statistical arbitrage to autonomous agents: the 5 eras of AI in financial services, from 1982 to 2026.',
-    author: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
-    publisher: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
+    author: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
+    publisher: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
     datePublished: '2025-01-01',
     dateModified: BUILD_DATE_ISO,
     articleSection: 'History',

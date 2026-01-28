@@ -180,57 +180,73 @@ export default function ProjectTable({
       <div className="p-5 border-b border-border/50">
         <div className="flex flex-wrap items-center gap-4">
           {/* Filters */}
-          <select
-            value={segmentFilter || ''}
-            onChange={(e) => onFilterChange?.(e.target.value || null, layerFilter || null)}
-            className={selectStyles}
-          >
-            <option value="">All Segments</option>
-            {segments.map((s) => (
-              <option key={s.slug} value={s.slug}>
-                {s.name}
-              </option>
-            ))}
-          </select>
+          <div>
+            <label htmlFor="filter-segment" className="sr-only">Filter by segment</label>
+            <select
+              id="filter-segment"
+              value={segmentFilter || ''}
+              onChange={(e) => onFilterChange?.(e.target.value || null, layerFilter || null)}
+              className={selectStyles}
+            >
+              <option value="">All Segments</option>
+              {segments.map((s) => (
+                <option key={s.slug} value={s.slug}>
+                  {s.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            value={layerFilter || ''}
-            onChange={(e) => onFilterChange?.(segmentFilter || null, e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All Layers</option>
-            {layers.map((l) => (
-              <option key={l.slug} value={l.slug}>
-                {l.name}
-              </option>
-            ))}
-          </select>
+          <div>
+            <label htmlFor="filter-layer" className="sr-only">Filter by layer</label>
+            <select
+              id="filter-layer"
+              value={layerFilter || ''}
+              onChange={(e) => onFilterChange?.(segmentFilter || null, e.target.value || null)}
+              className={selectStyles}
+            >
+              <option value="">All Layers</option>
+              {layers.map((l) => (
+                <option key={l.slug} value={l.slug}>
+                  {l.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            value={aiTypeFilter || ''}
-            onChange={(e) => setAiTypeFilter(e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All AI Types</option>
-            {aiTypes.map((t) => (
-              <option key={t} value={t}>
-                {AI_TYPE_LABELS[t]}
-              </option>
-            ))}
-          </select>
+          <div>
+            <label htmlFor="filter-ai-type" className="sr-only">Filter by AI type</label>
+            <select
+              id="filter-ai-type"
+              value={aiTypeFilter || ''}
+              onChange={(e) => setAiTypeFilter(e.target.value || null)}
+              className={selectStyles}
+            >
+              <option value="">All AI Types</option>
+              {aiTypes.map((t) => (
+                <option key={t} value={t}>
+                  {AI_TYPE_LABELS[t]}
+                </option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            value={regionFilter || ''}
-            onChange={(e) => setRegionFilter(e.target.value || null)}
-            className={selectStyles}
-          >
-            <option value="">All Regions</option>
-            {regions.map((r) => (
-              <option key={r} value={r}>
-                {REGION_LABELS[r]}
-              </option>
-            ))}
-          </select>
+          <div>
+            <label htmlFor="filter-region" className="sr-only">Filter by region</label>
+            <select
+              id="filter-region"
+              value={regionFilter || ''}
+              onChange={(e) => setRegionFilter(e.target.value || null)}
+              className={selectStyles}
+            >
+              <option value="">All Regions</option>
+              {regions.map((r) => (
+                <option key={r} value={r}>
+                  {REGION_LABELS[r]}
+                </option>
+              ))}
+            </select>
+          </div>
 
           {/* Clear */}
           {hasFilters && (
@@ -245,8 +261,10 @@ export default function ProjectTable({
 
           {/* Search - right aligned */}
           <div className="relative flex-1 min-w-[280px]">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" aria-hidden="true" />
+            <label htmlFor="company-search" className="sr-only">Search companies</label>
             <input
+              id="company-search"
               type="text"
               placeholder="Search companies..."
               value={search}
@@ -257,7 +275,7 @@ export default function ProjectTable({
         </div>
 
         {/* Result count */}
-        <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/30">
+        <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/30" aria-live="polite" aria-atomic="true">
           <span className="meta-text">
             Showing <span className="text-text-primary font-medium">{filteredProjects.length}</span> of {projects.length} companies
           </span>
@@ -267,9 +285,10 @@ export default function ProjectTable({
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full">
+          <caption className="sr-only">AI and Finance companies directory, sortable by column</caption>
           <thead>
             <tr className="border-b border-border bg-surface-2/30">
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'name' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('name')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -278,7 +297,7 @@ export default function ProjectTable({
                   <SortIcon column="name" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'segment' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('segment')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -287,7 +306,7 @@ export default function ProjectTable({
                   <SortIcon column="segment" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'layer' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('layer')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -296,7 +315,7 @@ export default function ProjectTable({
                   <SortIcon column="layer" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'ai_type' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('ai_type')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -305,7 +324,7 @@ export default function ProjectTable({
                   <SortIcon column="ai_type" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'funding' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('funding')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -314,7 +333,7 @@ export default function ProjectTable({
                   <SortIcon column="funding" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'last_funded' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('last_funded')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -323,7 +342,7 @@ export default function ProjectTable({
                   <SortIcon column="last_funded" />
                 </button>
               </th>
-              <th className="text-left px-5 py-4">
+              <th className="text-left px-5 py-4" aria-sort={sortKey === 'region' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}>
                 <button
                   onClick={() => handleSort('region')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
@@ -377,7 +396,7 @@ export default function ProjectTable({
                       >
                         <CompanyLogo project={project} size="sm" />
                         <div>
-                          <span className="font-medium text-text-primary group-hover:text-accent transition-colors">
+                          <span className="font-medium text-text-primary group-hover:text-accent transition-colors" translate="no">
                             {project.name}
                           </span>
                           <p className="text-sm text-text-muted mt-0.5 line-clamp-1 max-w-xs">

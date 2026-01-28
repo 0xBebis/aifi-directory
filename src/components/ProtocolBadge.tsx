@@ -17,6 +17,7 @@ export default function ProtocolBadge({ protocol, className = '' }: ProtocolBadg
         color: color,
         border: `1px solid ${color}25`,
       }}
+      translate="no"
     >
       {label}
     </span>

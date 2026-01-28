@@ -13,13 +13,13 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'AI Finance Company Directory | AIFI',
+  title: 'AI Finance Company Directory | AIFI Map',
   description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types. Interactive market map and full search.',
   openGraph: {
     title: 'AI Finance Company Directory',
     description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types.',
     type: 'website',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {

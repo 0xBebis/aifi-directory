@@ -24,13 +24,13 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Financial AI Statistics & Market Data | AIFI',
+  title: 'Financial AI Statistics & Market Data | AIFI Map',
   description: 'Key statistics on the financial AI landscape. Company counts, funding totals, market segment breakdowns, AI technology adoption, and geographic distribution.',
   openGraph: {
     title: 'Financial AI Statistics & Market Data',
     description: 'Key statistics on the financial AI landscape. Company counts, funding totals, market segment breakdowns, and more.',
     type: 'website',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -79,15 +79,15 @@ export default function StatsPage() {
     },
     {
       q: 'How much funding has AI fintech raised?',
-      a: `Companies in the AIFI directory have raised a combined ${formatFunding(totalFunding)} in funding. The top 10 most funded companies account for ${formatFunding(topCompanies.reduce((s, p) => s + (p.funding || 0), 0))} of that total.`,
+      a: `Companies in the AIFI Map directory have raised a combined ${formatFunding(totalFunding)} in funding. The top 10 most funded companies account for ${formatFunding(topCompanies.reduce((s, p) => s + (p.funding || 0), 0))} of that total.`,
     },
     {
       q: 'What percentage of AI finance companies use LLMs?',
-      a: `${aiTypeCounts.find(t => t.type === 'llm')?.count || 0} out of ${projects.length} companies (${Math.round(((aiTypeCounts.find(t => t.type === 'llm')?.count || 0) / projects.length) * 100)}%) in the AIFI directory use Large Language Models (LLMs) or NLP technologies.`,
+      a: `${aiTypeCounts.find(t => t.type === 'llm')?.count || 0} out of ${projects.length} companies (${Math.round(((aiTypeCounts.find(t => t.type === 'llm')?.count || 0) / projects.length) * 100)}%) in the AIFI Map directory use Large Language Models (LLMs) or NLP technologies.`,
     },
     {
       q: 'Which country has the most AI finance companies?',
-      a: `The United States leads with the most financial AI companies in the AIFI directory, followed by companies in the EMEA and APAC regions. ${Object.entries(regionDist).sort((a, b) => b[1] - a[1]).map(([r, c]) => `${REGION_LABELS[r as Region]}: ${c}`).join(', ')}.`,
+      a: `The United States leads with the most financial AI companies in the AIFI Map directory, followed by companies in the EMEA and APAC regions. ${Object.entries(regionDist).sort((a, b) => b[1] - a[1]).map(([r, c]) => `${REGION_LABELS[r as Region]}: ${c}`).join(', ')}.`,
     },
   ];
 
@@ -113,7 +113,7 @@ export default function StatsPage() {
         Financial AI Statistics
       </h1>
       <p className="text-text-secondary text-[0.9375rem] leading-relaxed max-w-3xl mb-2">
-        Key metrics on the AI + Finance landscape tracked by the AIFI directory. {projects.length} companies, {agents.length} autonomous agents, {segments.length} market segments.
+        Key metrics on the AI + Finance landscape tracked by the AIFI Map directory. {projects.length} companies, {agents.length} autonomous agents, {segments.length} market segments.
       </p>
       <p className="text-xs text-text-faint mb-10">Last updated: {BUILD_DATE}</p>
 

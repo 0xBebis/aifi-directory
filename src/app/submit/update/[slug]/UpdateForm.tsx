@@ -154,7 +154,7 @@ ${jsonStr}
 
 ---
 ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
-*Submitted via AIFI directory update form*`;
+*Submitted via AIFI Map directory update form*`;
 
     // Build GitHub issue URL
     const issueTitle = encodeURIComponent(`[Update] ${project.name}`);

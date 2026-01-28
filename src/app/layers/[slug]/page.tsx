@@ -19,17 +19,17 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const layer = getLayer(params.slug);
-  if (!layer) return { title: 'Layer Not Found | AIFI' };
+  if (!layer) return { title: 'Layer Not Found | AIFI Map' };
   const layerProjects = getProjectsByLayer(layer.slug);
   const description = `${layerProjects.length} financial AI companies at the ${layer.name} layer. ${layer.description} Explore the companies building ${layer.name.toLowerCase()} for financial services.`;
   return {
-    title: `${layer.name} Layer: Financial AI Companies | AIFI`,
+    title: `${layer.name} Layer: Financial AI Companies | AIFI Map`,
     description: description.slice(0, 160),
     openGraph: {
       title: `${layer.name} Layer: Financial AI Companies`,
       description: description.slice(0, 160),
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: '/og/default.png', width: 1200, height: 630 }],
     },
     twitter: {
@@ -70,7 +70,7 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
   const faqs = [
     {
       q: `What is the ${layer.name} layer in financial AI?`,
-      a: `${layer.description} The ${layer.name} layer sits at position ${layer.position} in the financial AI technology stack${layerAbove ? `, below ${layerAbove.name}` : ''}${layerBelow ? ` and above ${layerBelow.name}` : ''}. ${layerProjects.length} companies in the AIFI directory operate at this layer.`,
+      a: `${layer.description} The ${layer.name} layer sits at position ${layer.position} in the financial AI technology stack${layerAbove ? `, below ${layerAbove.name}` : ''}${layerBelow ? ` and above ${layerBelow.name}` : ''}. ${layerProjects.length} companies in the AIFI Map directory operate at this layer.`,
     },
     {
       q: `Which companies operate at the ${layer.name} layer?`,
@@ -100,7 +100,7 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: `${layer.name} Layer` },
     ],

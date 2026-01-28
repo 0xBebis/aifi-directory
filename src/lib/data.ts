@@ -90,11 +90,10 @@ export function formatFundingDate(date: string): string {
   // Handle YYYY-MM or YYYY-MM-DD format
   const parts = date.split('-');
   if (parts.length >= 2) {
-    const year = parts[0];
+    const year = parseInt(parts[0], 10);
     const month = parseInt(parts[1], 10);
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     if (month >= 1 && month <= 12) {
-      return `${monthNames[month - 1]} ${year}`;
+      return new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'short' }).format(new Date(year, month - 1));
     }
   }
 
@@ -379,11 +378,11 @@ export function getAITypeStats(): Array<{
 }
 
 // Freshness signal — build date for "Last updated" display
-export const BUILD_DATE = new Date().toLocaleDateString('en-US', {
+export const BUILD_DATE = new Intl.DateTimeFormat(undefined, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
-});
+}).format(new Date());
 
 export const BUILD_DATE_ISO = new Date().toISOString().split('T')[0];
 
@@ -568,11 +567,11 @@ export function formatReputationScore(score: number | null): string {
 }
 
 export function formatTimestamp(unix: number): string {
-  return new Date(unix * 1000).toLocaleDateString('en-US', {
+  return new Intl.DateTimeFormat(undefined, {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-  });
+  }).format(new Date(unix * 1000));
 }
 
 export function formatRelativeTime(unix: number): string {
@@ -726,7 +725,7 @@ export function getSearchableItems(): SearchableItem[] {
     { name: 'Statistics', description: 'Funding, segments, and AI type breakdowns', href: '/stats' },
     { name: 'Recently Funded', description: 'Latest funding rounds in financial AI', href: '/recent' },
     { name: 'Glossary', description: 'Key terms and definitions for financial AI', href: '/glossary' },
-    { name: 'Submit a Company', description: 'Suggest a company for the AIFI directory', href: '/submit' },
+    { name: 'Submit a Company', description: 'Suggest a company for the AIFI Map directory', href: '/submit' },
   ];
   for (const page of pages) {
     items.push({ ...page, category: 'Page' });

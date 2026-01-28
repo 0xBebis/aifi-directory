@@ -43,18 +43,18 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const project = getProject(params.slug);
-  if (!project) return { title: 'Company Not Found | AIFI' };
+  if (!project) return { title: 'Company Not Found | AIFI Map' };
 
   const description = generateSeoDescription(project);
 
   return {
-    title: `${project.name} — ${project.tagline} | AIFI`,
+    title: `${project.name} — ${project.tagline} | AIFI Map`,
     description,
     openGraph: {
       title: `${project.name} — ${project.tagline}`,
       description,
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: `/og/p/${params.slug}.png`, width: 1200, height: 630, alt: `${project.name} — ${project.tagline}` }],
     },
     twitter: {
@@ -168,7 +168,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: project.name, item: `https://aifimap.com/p/${project.slug}` },
     ],
@@ -222,7 +222,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-semibold text-text-primary tracking-tight">
+                  <h1 className="text-2xl sm:text-3xl font-semibold text-text-primary tracking-tight" translate="no">
                     {project.name}
                   </h1>
                   <p className="text-text-secondary mt-1.5 text-base leading-relaxed max-w-2xl">
@@ -600,7 +600,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <div className="flex items-start gap-3">
                     <CompanyLogo project={p} size="sm" />
                     <div className="min-w-0 flex-1">
-                      <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                      <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate" translate="no">
                         {p.name}
                       </p>
                       <p className="text-xs text-text-muted mt-0.5 line-clamp-2 leading-relaxed">
@@ -659,7 +659,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               >
                 <div className="flex items-center gap-3 mb-2">
                   <CompanyLogo project={p} size="sm" />
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">
+                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate" translate="no">
                     {p.name}
                   </p>
                 </div>

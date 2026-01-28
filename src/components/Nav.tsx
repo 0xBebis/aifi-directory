@@ -27,12 +27,16 @@ export default function Nav() {
           <Link
             href="/"
             className="flex items-center gap-3 group"
+            aria-label="AIFI Map Home"
           >
-            <div className="w-9 h-9 rounded-lg bg-accent/15 flex items-center justify-center group-hover:bg-accent/25 group-hover:shadow-glow transition-all duration-200">
-              <span className="text-accent font-bold text-sm tracking-tight">AI</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt=""
+              className="h-8 w-auto group-hover:opacity-80 transition-opacity duration-200"
+            />
             <span className="text-xl font-bold tracking-tight text-text-primary">
-              AIFI
+              AIFI Map
             </span>
           </Link>
 
@@ -57,7 +61,7 @@ export default function Nav() {
               aria-label="Search"
             >
               <Search className="w-4 h-4" />
-              <kbd className="hidden lg:inline-flex px-1.5 py-0.5 text-2xs text-text-faint bg-surface-2 border border-border rounded font-mono">
+              <kbd className="hidden lg:inline-flex px-1.5 py-0.5 text-2xs text-text-faint bg-surface-2 border border-border rounded font-mono" translate="no">
                 Ctrl K
               </kbd>
             </button>
@@ -86,7 +90,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl">
+        <nav className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl" aria-label="Mobile navigation">
           <div className="px-8 py-4 space-y-1">
             <button
               onClick={() => {
@@ -124,7 +128,7 @@ export default function Nav() {
               Submit a Company
             </Link>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

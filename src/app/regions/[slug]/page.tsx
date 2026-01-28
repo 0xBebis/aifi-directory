@@ -29,17 +29,17 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const region = params.slug as Region;
   const label = REGION_LABELS[region];
-  if (!label) return { title: 'Region Not Found | AIFI' };
+  if (!label) return { title: 'Region Not Found | AIFI Map' };
   const regionProjects = getProjectsByRegion(region);
   const description = `${regionProjects.length} financial AI companies in ${label}. ${REGION_DESCRIPTIONS[region].slice(0, 80)} Explore companies building AI for finance in this region.`;
   return {
-    title: `Financial AI Companies in ${label} | AIFI`,
+    title: `Financial AI Companies in ${label} | AIFI Map`,
     description: description.slice(0, 160),
     openGraph: {
       title: `Financial AI Companies in ${label}`,
       description: description.slice(0, 160),
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: '/og/default.png', width: 1200, height: 630 }],
     },
     twitter: {
@@ -69,15 +69,15 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
   const faqs = [
     {
       q: `Which ${label} companies are building financial AI?`,
-      a: `The AIFI directory tracks ${regionProjects.length} financial AI companies in ${label}. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
+      a: `The AIFI Map directory tracks ${regionProjects.length} financial AI companies in ${label}. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
     },
     {
       q: `How many financial AI companies are in ${label}?`,
-      a: `${regionProjects.length} companies in the AIFI directory are based in ${label}, with a combined ${formatFunding(totalFunding)} in funding. ${countries.length > 0 ? `The top countries are ${countries.slice(0, 3).map(c => `${c.name} (${c.count})`).join(', ')}.` : ''}`,
+      a: `${regionProjects.length} companies in the AIFI Map directory are based in ${label}, with a combined ${formatFunding(totalFunding)} in funding. ${countries.length > 0 ? `The top countries are ${countries.slice(0, 3).map(c => `${c.name} (${c.count})`).join(', ')}.` : ''}`,
     },
     ...(topCompany ? [{
       q: `What is the most funded financial AI company in ${label}?`,
-      a: `${topCompany.name} is the most funded financial AI company in ${label} tracked by AIFI${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
+      a: `${topCompany.name} is the most funded financial AI company in ${label} tracked by AIFI Map${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
     }] : []),
   ];
 
@@ -95,7 +95,7 @@ export default function RegionPage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: label },
     ],

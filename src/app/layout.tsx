@@ -11,12 +11,16 @@ import { getSearchableItems } from '@/lib/data';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aifimap.com'),
-  title: 'AIFI — The Financial AI Landscape',
+  title: 'AIFI Map — The Financial AI Landscape',
   description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
   openGraph: {
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     type: 'website',
-    images: [{ url: '/og/default.png', width: 1200, height: 630, alt: 'AIFI — The Financial AI Landscape' }],
+    images: [{ url: '/og/default.png', width: 1200, height: 630, alt: 'AIFI Map — The Financial AI Landscape' }],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   alternates: {
     canonical: './',
@@ -34,17 +38,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-background text-text-primary flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium"
+        >
+          Skip to main content
+        </a>
         <JsonLd data={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'AIFI',
+          name: 'AIFI Map',
           url: 'https://aifimap.com',
           description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
           sameAs: ['https://github.com/0xBebis/aifi-directory'],
         }} />
         <Nav />
         <GlobalSearch items={getSearchableItems()} />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <footer className="border-t border-border/30 mt-auto">
           <div className="max-w-7xl mx-auto px-8 py-12">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
@@ -54,7 +64,7 @@ export default function RootLayout({
                   <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center group-hover:bg-accent/25 transition-colors">
                     <span className="text-accent font-bold text-xs">AI</span>
                   </div>
-                  <span className="font-semibold text-text-primary">AIFI</span>
+                  <span className="font-semibold text-text-primary">AIFI Map</span>
                 </Link>
                 <p className="text-sm text-text-muted max-w-xs leading-relaxed">
                   The definitive index of companies building at the intersection of AI and Finance.
@@ -111,7 +121,7 @@ export default function RootLayout({
             {/* Bottom bar */}
             <div className="mt-8 pt-6 border-t border-border/20 flex items-center justify-between">
               <span className="text-xs text-text-faint">
-                {new Date().getFullYear()} AIFI. All rights reserved.
+                {new Date().getFullYear()} AIFI Map. All rights reserved.
               </span>
               <span className="text-xs text-text-faint">
                 Built for the AI + Finance ecosystem

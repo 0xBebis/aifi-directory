@@ -25,17 +25,17 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const aiType = params.slug as AIType;
   const label = AI_TYPE_LABELS[aiType];
-  if (!label) return { title: 'AI Type Not Found | AIFI' };
+  if (!label) return { title: 'AI Type Not Found | AIFI Map' };
   const typeProjects = getProjectsByAIType(aiType);
   const description = `${typeProjects.length} financial companies using ${label}. ${AI_TYPE_DESCRIPTIONS[aiType]} Explore which companies apply ${label} to finance.`;
   return {
-    title: `${label} in Finance — AI Companies | AIFI`,
+    title: `${label} in Finance — AI Companies | AIFI Map`,
     description: description.slice(0, 160),
     openGraph: {
       title: `${label} in Finance — AI Companies`,
       description: description.slice(0, 160),
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: '/og/default.png', width: 1200, height: 630 }],
     },
     twitter: {
@@ -74,19 +74,19 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
   const faqs = [
     {
       q: `How is ${label} used in finance?`,
-      a: `${description} In the financial sector, ${label} is applied across ${segCounts.length} market segments including ${segCounts.slice(0, 3).map(s => s.name.toLowerCase()).join(', ')}. The AIFI directory tracks ${typeProjects.length} companies using ${label} in financial services.`,
+      a: `${description} In the financial sector, ${label} is applied across ${segCounts.length} market segments including ${segCounts.slice(0, 3).map(s => s.name.toLowerCase()).join(', ')}. The AIFI Map directory tracks ${typeProjects.length} companies using ${label} in financial services.`,
     },
     {
       q: `Which financial companies use ${label}?`,
-      a: `${typeProjects.length} companies in the AIFI directory use ${label}. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
+      a: `${typeProjects.length} companies in the AIFI Map directory use ${label}. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
     },
     {
       q: `How many companies use ${label} in finance?`,
-      a: `The AIFI directory tracks ${typeProjects.length} financial companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding raised.`,
+      a: `The AIFI Map directory tracks ${typeProjects.length} financial companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding raised.`,
     },
     ...(topCompany ? [{
       q: `What is the most funded ${label} finance company?`,
-      a: `${topCompany.name} is the most funded ${label} company in the AIFI directory${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
+      a: `${topCompany.name} is the most funded ${label} company in the AIFI Map directory${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
     }] : []),
   ];
 
@@ -104,7 +104,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
       { '@type': 'ListItem', position: 3, name: label },
     ],

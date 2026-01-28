@@ -40,17 +40,17 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { id: string } }) {
   const agent = getAgent(agentIdFromSlug(params.id));
-  if (!agent) return { title: 'Agent Not Found | AIFI' };
+  if (!agent) return { title: 'Agent Not Found | AIFI Map' };
   const categoryLabel = FINANCE_CATEGORY_LABELS[agent.financeCategory] || 'Finance';
   const description = agent.description?.slice(0, 160) || `${agent.name} is a financial AI agent registered on EIP-8004.`;
   return {
-    title: `${agent.name} — ${categoryLabel} Agent | AIFI`,
+    title: `${agent.name} — ${categoryLabel} Agent | AIFI Map`,
     description,
     openGraph: {
       title: `${agent.name} — ${categoryLabel} Agent`,
       description,
       type: 'website',
-      siteName: 'AIFI',
+      siteName: 'AIFI Map',
       images: [{ url: `/og/agents/${params.id}.png`, width: 1200, height: 630, alt: `${agent.name} — ${categoryLabel} Agent` }],
     },
     twitter: {
@@ -128,7 +128,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'AIFI', item: 'https://aifimap.com' },
+      { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Agent Registry', item: 'https://aifimap.com/agents' },
       { '@type': 'ListItem', position: 3, name: agent.name, item: `https://aifimap.com/agents/${agentSlug(agent.id)}` },
     ],
@@ -162,7 +162,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight" translate="no">
                     {agent.name}
                   </h1>
                   <p className="text-text-secondary mt-1.5 text-base leading-relaxed max-w-2xl line-clamp-3">

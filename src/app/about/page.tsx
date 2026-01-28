@@ -7,13 +7,13 @@ import ReadingProgress from '@/components/ReadingProgress';
 import { BUILD_DATE_ISO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'The Future of Financial AI — Thesis | AIFI',
+  title: 'The Future of Financial AI — Thesis | AIFI Map',
   description: 'Why AI will reshape financial services: from LLMs to autonomous agents. A thesis on how AI replaces human judgment in lending, trading, and risk management.',
   openGraph: {
     title: 'The Future of Financial AI — Thesis',
     description: 'Why AI will reshape financial services: from LLMs to autonomous agents.',
     type: 'article',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -30,8 +30,8 @@ export default function ThesisPage() {
     '@type': 'Article',
     headline: 'The Future of Financial AI',
     description: 'Why AI will reshape financial services: from LLMs to autonomous agents. A thesis on how AI replaces human judgment in lending, trading, and risk management.',
-    author: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
-    publisher: { '@type': 'Organization', name: 'AIFI', url: 'https://aifimap.com' },
+    author: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
+    publisher: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
     datePublished: '2025-01-01',
     dateModified: BUILD_DATE_ISO,
     articleSection: 'Thesis',

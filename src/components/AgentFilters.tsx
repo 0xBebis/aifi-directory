@@ -143,8 +143,10 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
         {/* Search + Sort row */}
         <div className="flex items-center gap-3 mb-4">
           <div className="relative flex-1">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" aria-hidden="true" />
+            <label htmlFor="agent-search" className="sr-only">Search agents</label>
             <input
+              id="agent-search"
               type="text"
               placeholder="Search agents, tools, skills..."
               value={search}
@@ -161,8 +163,10 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
             )}
           </div>
           <div className="flex items-center gap-2">
-            <SlidersHorizontal size={14} className="text-text-faint" />
+            <SlidersHorizontal size={14} className="text-text-faint" aria-hidden="true" />
+            <label htmlFor="agent-sort" className="sr-only">Sort agents by</label>
             <select
+              id="agent-sort"
               value={sortBy}
               onChange={e => setSortBy(e.target.value as SortKey)}
               className="bg-surface-2/50 border border-border/50 rounded-lg px-3 py-2.5 text-sm text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent/20 cursor-pointer"
@@ -184,6 +188,7 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
               <button
                 key={cat}
                 onClick={() => toggleCategory(cat)}
+                aria-pressed={isActive}
                 className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all ${
                   isActive ? 'ring-1 ring-offset-1 ring-offset-surface' : 'hover:scale-105'
                 }`}
@@ -211,6 +216,7 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
               <button
                 key={proto}
                 onClick={() => toggleProtocol(proto)}
+                aria-pressed={isActive}
                 className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all ${
                   isActive ? 'ring-1 ring-offset-1 ring-offset-surface' : 'hover:scale-105'
                 }`}
@@ -229,6 +235,7 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
           <span className="text-border mx-1">|</span>
           <button
             onClick={() => setActiveOnly(!activeOnly)}
+            aria-pressed={activeOnly}
             className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-medium transition-all border ${
               activeOnly
                 ? 'bg-positive/15 text-positive border-positive/40'
@@ -254,7 +261,7 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
       </div>
 
       {/* Results count */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4" aria-live="polite" aria-atomic="true">
         <p className="text-sm text-text-faint">
           {filtered.length === agents.length
             ? `${agents.length} agents`

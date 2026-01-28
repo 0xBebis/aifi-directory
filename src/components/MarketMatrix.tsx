@@ -258,6 +258,8 @@ export default function MarketMatrix({
         <div className="flex-1 p-3 overflow-x-auto">
           <div
             className="grid gap-1"
+            role="grid"
+            aria-label="Market matrix showing company counts by segment and technology layer"
             style={{
               gridTemplateColumns: `80px repeat(${segments.length}, minmax(55px, 1fr))`,
               gridTemplateRows: `28px repeat(${layers.length}, 40px)`,
@@ -334,6 +336,7 @@ export default function MarketMatrix({
                         onMouseEnter={() => setHoveredCell(key)}
                         onMouseLeave={() => setHoveredCell(null)}
                         disabled={count === 0}
+                        aria-label={`${segment.name} and ${layer.name}: ${count} ${count === 1 ? 'company' : 'companies'}`}
                         className={`rounded-md transition-all duration-200 flex items-center justify-center text-sm font-bold ${
                           count === 0 ? 'cursor-default' : 'cursor-pointer'
                         } ${isSelected ? 'ring-2 ring-accent ring-offset-1 ring-offset-background z-10' : ''}`}

@@ -14,13 +14,13 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Financial AI Glossary — Key Terms & Definitions | AIFI',
+  title: 'Financial AI Glossary — Key Terms & Definitions | AIFI Map',
   description: 'Glossary of financial AI terms: LLMs, agentic AI, EIP-8004, MCP, predictive ML, and more. Definitions for AI technologies, market segments, and protocols used in finance.',
   openGraph: {
     title: 'Financial AI Glossary — Key Terms & Definitions',
     description: 'Glossary of financial AI terms: LLMs, agentic AI, EIP-8004, MCP, and more.',
     type: 'website',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -44,7 +44,7 @@ const glossaryEntries: GlossaryEntry[] = [
   {
     term: 'Large Language Model (LLM)',
     slug: 'llm',
-    definition: 'A type of artificial intelligence trained on vast text corpora that can understand and generate human language. In finance, LLMs power document analysis, sentiment extraction from earnings calls, conversational banking, automated report writing, and financial research copilots. LLMs are the most widely adopted AI technology in the AIFI directory.',
+    definition: 'A type of artificial intelligence trained on vast text corpora that can understand and generate human language. In finance, LLMs power document analysis, sentiment extraction from earnings calls, conversational banking, automated report writing, and financial research copilots. LLMs are the most widely adopted AI technology in the AIFI Map directory.',
     category: 'ai-technology',
     link: '/ai-types/llm',
   },
@@ -101,7 +101,7 @@ const glossaryEntries: GlossaryEntry[] = [
   {
     term: 'EIP-8004',
     slug: 'eip-8004',
-    definition: 'Ethereum Improvement Proposal 8004 defines a standard for on-chain AI agent registration. It provides a decentralized registry where AI agents declare their capabilities, protocols, and endpoints, enabling discovery and interoperability. The AIFI Agent Registry uses EIP-8004 to catalog financial AI agents.',
+    definition: 'Ethereum Improvement Proposal 8004 defines a standard for on-chain AI agent registration. It provides a decentralized registry where AI agents declare their capabilities, protocols, and endpoints, enabling discovery and interoperability. The AIFI Map Agent Registry uses EIP-8004 to catalog financial AI agents.',
     category: 'protocol',
     link: '/agents',
   },
@@ -186,7 +186,7 @@ const glossaryEntries: GlossaryEntry[] = [
   ...segments.map(s => ({
     term: s.name,
     slug: `segment-${s.slug}`,
-    definition: `${s.description}. ${s.long_description ? s.long_description.split('\n\n')[0] : `One of the nine market segments tracked in the AIFI directory of AI + finance companies.`}`,
+    definition: `${s.description}. ${s.long_description ? s.long_description.split('\n\n')[0] : `One of the nine market segments tracked in the AIFI Map directory of AI + finance companies.`}`,
     category: 'market-segment' as const,
     link: `/segments/${s.slug}`,
   })),
@@ -267,7 +267,7 @@ export default function GlossaryPage() {
       <p className="text-text-secondary text-[0.9375rem] leading-relaxed max-w-3xl mb-6">
         Definitions of key terms in AI-powered financial services. Covers AI technologies, market segments,
         infrastructure layers, agent protocols, and industry concepts tracked across the {projects.length} companies
-        and {agents.length} agents in the AIFI directory.
+        and {agents.length} agents in the AIFI Map directory.
       </p>
 
       {/* Letter navigation */}

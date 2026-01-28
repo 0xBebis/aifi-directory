@@ -46,6 +46,7 @@ export function CategoryBadge({
         border: `1px solid ${isActive ? color : `${color}30`}`,
         ['--tw-ring-color' as string]: isActive ? color : undefined,
       }}
+      translate="no"
     >
       {label}
     </span>

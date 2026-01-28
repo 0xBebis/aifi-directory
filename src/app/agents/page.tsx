@@ -10,13 +10,13 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Registry — EIP-8004 | AIFI',
+  title: 'AI Agent Registry — EIP-8004 | AIFI Map',
   description: 'Browse live financial AI agents registered on the EIP-8004 Trustless Agent Registry. Verified identities, declared capabilities, and open communication protocols.',
   openGraph: {
     title: 'AI Agent Registry — EIP-8004',
     description: 'Browse live financial AI agents registered on the EIP-8004 Trustless Agent Registry. Verified identities, declared capabilities, and open communication protocols.',
     type: 'website',
-    siteName: 'AIFI',
+    siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {

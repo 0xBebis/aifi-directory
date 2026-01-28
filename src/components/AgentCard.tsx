@@ -37,7 +37,7 @@ export default function AgentCard({ agent, index = 0 }: AgentCardProps) {
         <AgentImage agent={agent} size="md" />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
-            <h3 className="text-sm font-semibold text-text-primary truncate group-hover:text-accent transition-colors">
+            <h3 className="text-sm font-semibold text-text-primary truncate group-hover:text-accent transition-colors" translate="no">
               {agent.name}
             </h3>
           </div>
