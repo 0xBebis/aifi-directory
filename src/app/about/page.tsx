@@ -231,7 +231,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          The first wave of financial AI proved both the promise and the limits. Machine learning now dominates credit underwriting. AI-native lenders like Upstart approve 27% more borrowers at 16% lower rates.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-1">1</a></sup> Neural networks run fraud detection. PayPal cut fraud below 0.3%.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-2">2</a></sup> Algorithmic trading accounts for 60-75% of US equity volume.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-3">3</a></sup> The automation is real, and it works.
+          The first wave of financial AI proved both the promise and the limits. Machine learning now dominates credit underwriting. AI-native lenders like Upstart approve 27% more borrowers at 16% lower rates.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-1">1</a></sup> Neural networks run fraud detection. PayPal cut fraud below 0.3%.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-2">2</a></sup> Algorithmic trading accounts for 60-75% of US equity volume.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-3">3</a></sup>.
         </p>
 
         <p>
