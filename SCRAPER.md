@@ -268,7 +268,7 @@ SEC allows 10 req/sec. Scripts use 5 req/sec (200ms delay). If blocked:
 
 ### The Graph Errors
 - Check subgraph health: https://thegraph.com/explorer
-- Verify API key in `config.js`
+- Verify `GRAPH_API_KEY` env var is set (or pass `--key` on CLI)
 
 ### Missing Company Data
 1. Check if company is in EDGAR (US-only): `node edgar-scraper.js search --only company-slug`
@@ -323,11 +323,18 @@ public/logos/{slug}.png    # Company logos
 
 ## API Keys & Credentials
 
-| Service | Required | Location |
-|---------|----------|----------|
+| Service | Required | How to Set |
+|---------|----------|------------|
 | SEC EDGAR | No (public API) | User-Agent in script |
-| The Graph | Optional | `scripts/agent-pipeline/config.js` |
+| The Graph | No (has public default) | `GRAPH_API_KEY` env var or `--key` CLI arg |
 | Logo.dev | Optional | CLI arg `--key pk_XXX` |
+
+**The Graph API key**: Uses the public agent0-ts SDK key by default. To use your own:
+```bash
+export GRAPH_API_KEY=your_key_here
+# or pass directly:
+node scripts/agent-pipeline/fetch-agents.js --key your_key_here
+```
 
 ---
 

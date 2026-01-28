@@ -5,7 +5,7 @@
     <link>https://aifimap.com</link>
     <description>Recently funded companies at the intersection of AI and financial services.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jan 2026 18:26:46 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jan 2026 21:20:33 GMT</lastBuildDate>
     <atom:link href="https://aifimap.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Corgi Insurance</title>
@@ -274,13 +274,6 @@
       <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Murphy (Debt)</title>
-      <link>https://aifimap.com/p/murphy-debt</link>
-      <guid>https://aifimap.com/p/murphy-debt</guid>
-      <description>AI agents for debt recovery</description>
-      <pubDate>Tue, 01 Jul 2025 07:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Motive (Formerly KeepTruckin)</title>
       <link>https://aifimap.com/p/motive-formerly-keeptruckin</link>
       <guid>https://aifimap.com/p/motive-formerly-keeptruckin</guid>
@@ -355,6 +348,13 @@
       <link>https://aifimap.com/p/catena-labs</link>
       <guid>https://aifimap.com/p/catena-labs</guid>
       <description>Building payment rails for AI agents</description>
+      <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Uplinq</title>
+      <link>https://aifimap.com/p/uplinq</link>
+      <guid>https://aifimap.com/p/uplinq</guid>
+      <description>AI bookkeeping and tax for SMBs</description>
       <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
     </item>
   </channel>

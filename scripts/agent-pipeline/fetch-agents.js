@@ -43,10 +43,11 @@ const args = process.argv.slice(2);
 const verbose = args.includes('--verbose');
 const includeAll = args.includes('--include-all');
 
-// API key: --key <value>, GRAPH_API_KEY env var, or default from agent0-ts SDK
+// API key: --key <value>, GRAPH_API_KEY env var, or the public agent0-ts SDK default.
+// The default key is a free, publicly distributed key from the agent0-ts SDK — not a secret.
 const keyIdx = args.indexOf('--key');
-const DEFAULT_KEY = '00a452ad3cd1900273ea62c1bf283f93'; // agent0-ts SDK public key
-const API_KEY = keyIdx !== -1 ? args[keyIdx + 1] : (process.env.GRAPH_API_KEY || DEFAULT_KEY);
+const API_KEY = keyIdx !== -1 ? args[keyIdx + 1]
+  : (process.env.GRAPH_API_KEY || '00a452ad3cd1900273ea62c1bf283f93');
 
 const SUBGRAPH_URL = `${GRAPH_GATEWAY}/${API_KEY}/subgraphs/id/${SUBGRAPH_ID}`;
 

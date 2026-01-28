@@ -50,6 +50,20 @@ next-env.d.ts
 coverage
 .nyc_output
 
+# Secrets & credentials (defensive — prevent accidental commits)
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.keystore
+*.jks
+credentials.json
+secrets.json
+token.json
+*.secret
+
 # Misc
 *.bak
 *.tmp
@@ -59,6 +73,7 @@ nul
 
 # Script output artifacts
 scripts/*/results.json
+scripts/funding-scraper/edgar-errors.log
 
 # Generated build assets
 public/sitemap.xml
