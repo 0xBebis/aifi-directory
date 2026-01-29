@@ -47,7 +47,7 @@ const includeAll = args.includes('--include-all');
 // The default key is a free, publicly distributed key from the agent0-ts SDK — not a secret.
 const keyIdx = args.indexOf('--key');
 const API_KEY = keyIdx !== -1 ? args[keyIdx + 1]
-  : (process.env.GRAPH_API_KEY || '00a452ad3cd1900273ea62c1bf283f93');
+  : (process.env.GRAPH_API_KEY || '7fd2e7d89ce3ef24cd0d4590298f0b2c');
 
 const SUBGRAPH_URL = `${GRAPH_GATEWAY}/${API_KEY}/subgraphs/id/${SUBGRAPH_ID}`;
 
@@ -131,12 +131,12 @@ function querySubgraph(query, variables = {}) {
 // ── Queries ──
 
 const AGENTS_QUERY = `
-  query FetchAgents($skip: Int!, $first: Int!) {
+  query FetchAgents($first: Int!, $lastCreatedAt: BigInt) {
     agents(
       first: $first
-      skip: $skip
       orderBy: createdAt
       orderDirection: desc
+      where: { createdAt_lt: $lastCreatedAt }
     ) {
       id
       chainId
@@ -212,24 +212,30 @@ const FEEDBACK_QUERY = `
 
 async function fetchAllAgents() {
   const allAgents = [];
-  let skip = 0;
+  // Use cursor-based pagination (createdAt_lt) to avoid The Graph's skip limit of 5000.
+  // Start with a far-future timestamp so the first query returns everything.
+  let lastCreatedAt = '99999999999';
   let hasMore = true;
+  let batchNum = 0;
 
   console.log('Fetching agents from subgraph...');
 
   while (hasMore) {
-    const data = await querySubgraph(AGENTS_QUERY, { skip, first: BATCH_SIZE });
+    const variables = { first: BATCH_SIZE, lastCreatedAt };
+    const data = await querySubgraph(AGENTS_QUERY, variables);
     const batch = data.agents || [];
     allAgents.push(...batch);
 
     if (verbose) {
-      console.log(`  Batch: skip=${skip}, got ${batch.length} agents`);
+      console.log(`  Batch ${batchNum}: got ${batch.length} agents (cursor: ${lastCreatedAt || 'start'})`);
     }
 
     if (batch.length < BATCH_SIZE) {
       hasMore = false;
     } else {
-      skip += BATCH_SIZE;
+      // Use the last agent's createdAt as cursor for the next page
+      lastCreatedAt = batch[batch.length - 1].createdAt;
+      batchNum++;
       await sleep(RATE_LIMIT_MS);
     }
   }

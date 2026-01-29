@@ -3,21 +3,59 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
+
+const directLinks = [
+  { href: '/directory', label: 'Directory' },
+  { href: '/agents', label: 'Agents' },
+];
+
+const exploreLinks = [
+  { href: '/stats', label: 'Statistics' },
+  { href: '/recent', label: 'Recently Funded' },
+  { href: '/glossary', label: 'Glossary' },
+  { href: '/segments/trading', label: 'Segments' },
+  { href: '/ai-types/llm', label: 'AI Types' },
+];
+
+const aboutLinks = [
+  { href: '/about', label: 'Thesis' },
+  { href: '/about/history', label: 'History' },
+];
 
 export default function Nav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isDirectory = pathname === '/directory' || pathname?.startsWith('/p/');
-  const isAgents = pathname === '/agents' || pathname?.startsWith('/agents/');
-  const isAbout = pathname === '/about' || pathname?.startsWith('/about/');
 
-  const navLinks = [
-    { href: '/directory', label: 'Directory', active: isDirectory },
-    { href: '/agents', label: 'Agents', active: isAgents },
-    { href: '/about', label: 'Thesis', active: pathname === '/about' },
-    { href: '/about/history', label: 'History', active: pathname === '/about/history' },
-  ];
+  const isDirectActive = (href: string) => {
+    if (href === '/directory') return pathname === '/directory' || pathname?.startsWith('/p/');
+    if (href === '/agents') return pathname === '/agents' || pathname?.startsWith('/agents/');
+    return pathname === href;
+  };
+
+  const isExploreActive =
+    pathname === '/stats' ||
+    pathname === '/recent' ||
+    pathname === '/glossary' ||
+    pathname?.startsWith('/segments/') ||
+    pathname?.startsWith('/ai-types/') ||
+    pathname?.startsWith('/layers/');
+
+  const isAboutActive = pathname === '/about' || pathname?.startsWith('/about/');
+
+  const linkClass = (active: boolean) =>
+    `px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
+      active
+        ? 'text-accent bg-accent/10'
+        : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+    }`;
+
+  const dropdownLinkClass = (active: boolean) =>
+    `block px-4 py-2.5 rounded-lg text-sm transition-colors ${
+      active
+        ? 'text-accent bg-accent/10'
+        : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+    }`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/30 bg-background/95 backdrop-blur-xl">
@@ -42,19 +80,64 @@ export default function Nav() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+            {/* Direct links */}
+            {directLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-5 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
-                  link.active
-                    ? 'text-accent bg-accent/10'
-                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-                }`}
+                className={linkClass(isDirectActive(link.href))}
               >
                 {link.label}
               </Link>
             ))}
+
+            {/* Explore dropdown */}
+            <div className="relative group/explore">
+              <button
+                className={`flex items-center gap-1.5 ${linkClass(isExploreActive)}`}
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Explore
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/explore:rotate-180" />
+              </button>
+              <div className="invisible opacity-0 group-hover/explore:visible group-hover/explore:opacity-100 group-focus-within/explore:visible group-focus-within/explore:opacity-100 transition-all duration-200 absolute top-full left-0 mt-1 min-w-[200px] py-2 bg-surface-3 border border-border rounded-xl shadow-elevated z-50">
+                {exploreLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={dropdownLinkClass(pathname === link.href || (link.href !== '/stats' && link.href !== '/recent' && link.href !== '/glossary' && pathname?.startsWith(link.href.split('/').slice(0, 2).join('/') + '/')))}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* About dropdown */}
+            <div className="relative group/about">
+              <button
+                className={`flex items-center gap-1.5 ${linkClass(isAboutActive)}`}
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                About
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/about:rotate-180" />
+              </button>
+              <div className="invisible opacity-0 group-hover/about:visible group-hover/about:opacity-100 group-focus-within/about:visible group-focus-within/about:opacity-100 transition-all duration-200 absolute top-full left-0 mt-1 min-w-[180px] py-2 bg-surface-3 border border-border rounded-xl shadow-elevated z-50">
+                {aboutLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={dropdownLinkClass(pathname === link.href)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Search */}
             <button
               onClick={() => window.dispatchEvent(new Event('open-search'))}
               className="flex items-center gap-2 px-3 py-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors"
@@ -65,6 +148,8 @@ export default function Nav() {
                 Ctrl K
               </kbd>
             </button>
+
+            {/* Submit CTA */}
             <Link
               href="/submit"
               className={`ml-3 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 border ${
@@ -92,6 +177,7 @@ export default function Nav() {
       {mobileOpen && (
         <nav className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl" aria-label="Mobile navigation">
           <div className="px-8 py-4 space-y-1">
+            {/* Search */}
             <button
               onClick={() => {
                 setMobileOpen(false);
@@ -102,13 +188,15 @@ export default function Nav() {
               <Search className="w-4 h-4" />
               Search
             </button>
-            {navLinks.map((link) => (
+
+            {/* Direct links */}
+            {directLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  link.active
+                  isDirectActive(link.href)
                     ? 'text-accent bg-accent/10'
                     : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
                 }`}
@@ -116,6 +204,42 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Explore section */}
+            <p className="px-4 pt-3 pb-1 text-2xs font-semibold uppercase tracking-wider text-text-faint">Explore</p>
+            {exploreLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  pathname === link.href || pathname?.startsWith(link.href.split('/').slice(0, 2).join('/') + '/')
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* About section */}
+            <p className="px-4 pt-3 pb-1 text-2xs font-semibold uppercase tracking-wider text-text-faint">About</p>
+            {aboutLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  pathname === link.href
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* Submit */}
             <Link
               href="/submit"
               onClick={() => setMobileOpen(false)}

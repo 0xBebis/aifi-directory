@@ -734,6 +734,49 @@ export function getSearchableItems(): SearchableItem[] {
   return items;
 }
 
+// ── Stats Page Helpers ──
+
+export function getSegmentFunding(): Record<string, number> {
+  const funding: Record<string, number> = {};
+  segments.forEach(s => {
+    funding[s.slug] = getProjectsBySegment(s.slug)
+      .reduce((sum, p) => sum + (p.funding || 0), 0);
+  });
+  return funding;
+}
+
+export function getLayerFunding(): Record<string, number> {
+  const funding: Record<string, number> = {};
+  layers.forEach(l => {
+    funding[l.slug] = getProjectsByLayer(l.slug)
+      .reduce((sum, p) => sum + (p.funding || 0), 0);
+  });
+  return funding;
+}
+
+export function getRegionFunding(): Record<string, number> {
+  const funding: Record<string, number> = {};
+  projects.forEach(p => {
+    if (p.region) {
+      funding[p.region] = (funding[p.region] || 0) + (p.funding || 0);
+    }
+  });
+  return funding;
+}
+
+export function getFundingStageFunding(): Record<string, number> {
+  const funding: Record<string, number> = {};
+  projects.forEach(p => {
+    const stage = p.funding_stage || 'undisclosed';
+    funding[stage] = (funding[stage] || 0) + (p.funding || 0);
+  });
+  return funding;
+}
+
+export function getUniqueCountryCount(): number {
+  return new Set(projects.map(p => p.hq_country).filter(Boolean)).size;
+}
+
 // ── Funding Stage Peers ──
 
 export function getCompaniesAtSameFundingStage(project: Project, limit: number = 4): Project[] {

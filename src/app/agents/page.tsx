@@ -104,6 +104,17 @@ export default function AgentsPage() {
         </div>
       </div>
 
+      {/* Disclaimer */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 pt-6">
+        <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-warning/5 border border-warning/20 text-sm">
+          <span className="text-warning shrink-0 mt-0.5" aria-hidden="true">&#9888;</span>
+          <p className="text-text-secondary leading-relaxed">
+            <span className="font-semibold text-warning">Disclaimer:</span>{' '}
+            These agents are indexed from the public EIP-8004 on-chain registry. AIFI does not verify, endorse, or audit any agent listed here. Please perform your own due diligence before interacting with or relying on any agent.
+          </p>
+        </div>
+      </div>
+
       {/* Agent filters + grid */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-8">
         <AgentFilters agents={agents} />

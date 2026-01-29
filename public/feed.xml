@@ -5,7 +5,7 @@
     <link>https://aifimap.com</link>
     <description>Recently funded companies at the intersection of AI and financial services.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jan 2026 23:17:28 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 18:01:25 GMT</lastBuildDate>
     <atom:link href="https://aifimap.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Corgi Insurance</title>
@@ -197,13 +197,6 @@
       <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Symphony (symphony.io)</title>
-      <link>https://aifimap.com/p/symphony-symphonyio</link>
-      <guid>https://aifimap.com/p/symphony-symphonyio</guid>
-      <description>Institutional-grade APIs for perps/prediction/yield/spot + “Symphony AI”</description>
-      <pubDate>Wed, 01 Oct 2025 07:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Anthropic</title>
       <link>https://aifimap.com/p/anthropic</link>
       <guid>https://aifimap.com/p/anthropic</guid>
@@ -355,6 +348,13 @@
       <link>https://aifimap.com/p/uplinq</link>
       <guid>https://aifimap.com/p/uplinq</guid>
       <description>AI bookkeeping and tax for SMBs</description>
+      <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Filed</title>
+      <link>https://aifimap.com/p/filed</link>
+      <guid>https://aifimap.com/p/filed</guid>
+      <description>AI automates tax prep within existing software</description>
       <pubDate>Thu, 01 May 2025 07:00:00 GMT</pubDate>
     </item>
   </channel>

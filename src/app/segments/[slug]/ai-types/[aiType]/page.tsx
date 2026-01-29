@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
 import {
   segments,
   getSegment,
@@ -15,6 +14,7 @@ import {
 import { AIType } from '@/types';
 import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const aiTypes: AIType[] = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'data-platform', 'infrastructure'];
 
@@ -123,17 +123,19 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
     <JsonLd data={faqJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
-      <Link href={`/segments/${segment.slug}`} className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-6 text-sm tracking-wide">
-        <ArrowLeft className="w-4 h-4" /> Back to {segment.name}
-      </Link>
+      <Breadcrumbs items={[
+        { label: 'Directory', href: '/directory' },
+        { label: segment.name, href: `/segments/${segment.slug}` },
+        { label: label },
+      ]} />
 
       {/* Hero */}
-      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-8">
+      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
         <div className="h-1.5" style={{ background: `linear-gradient(90deg, ${segment.color}, ${aiColor}, transparent)` }} />
         <div className="p-6 sm:p-8">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="label-refined" style={{ color: segment.color }}>{segment.name}</span>
-            <span className="text-text-faint text-xs">×</span>
+            <span className="text-text-faint text-xs">&times;</span>
             <span className="label-refined" style={{ color: aiColor }}>{label}</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-text-primary mb-3">
@@ -149,27 +151,63 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
         </div>
       </div>
 
+      {/* Segment Switcher Bar */}
+      <nav className="flex flex-wrap gap-2 mb-10" aria-label="Market segments">
+        {segments.map(s => {
+          const isActive = s.slug === segment.slug;
+          return (
+            <Link
+              key={s.slug}
+              href={`/segments/${s.slug}`}
+              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 border ${
+                isActive
+                  ? 'border-opacity-30 bg-opacity-15'
+                  : 'border-transparent text-text-muted hover:text-text-primary hover:bg-surface-2/50'
+              }`}
+              style={isActive ? {
+                backgroundColor: `${s.color}15`,
+                color: s.color,
+                borderColor: `${s.color}30`,
+              } : undefined}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: s.color }}
+              />
+              {s.name}
+            </Link>
+          );
+        })}
+      </nav>
+
       {/* Companies */}
       <section className="mb-10">
-        <h2 className="text-lg font-semibold text-text-primary mb-4">
-          {funded.length > 0 ? 'Companies by Funding' : 'All Companies'}
-        </h2>
+        <div className="mb-5">
+          <p className="label-refined text-accent mb-2">Directory</p>
+          <div className="flex items-center gap-6">
+            <h2 className="headline-sub whitespace-nowrap">
+              {funded.length > 0 ? 'Companies by Funding' : 'All Companies'}
+            </h2>
+            <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+          </div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {(funded.length > 0 ? funded : matching).map(p => (
             <Link
               key={p.slug}
               href={`/p/${p.slug}`}
-              className="group bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-all hover:shadow-soft"
+              className="group bg-surface border border-border/40 rounded-xl p-4 card-hover-glow transition-all"
             >
               <div className="flex items-start gap-3">
                 <CompanyLogo project={p} size="sm" />
                 <div className="min-w-0 flex-1">
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">{p.name}</p>
+                  <p className="font-semibold text-sm text-text-primary group-hover:text-accent transition-colors truncate">{p.name}</p>
                   <p className="text-xs text-text-muted mt-0.5 line-clamp-2 leading-relaxed">{p.tagline}</p>
                 </div>
               </div>
               {p.funding && p.funding > 0 && (
-                <div className="mt-3 text-xs text-text-faint tabular-nums">{formatFunding(p.funding)} raised</div>
+                <div className="mt-3 text-xs font-medium text-text-faint tabular-nums">{formatFunding(p.funding)} raised</div>
               )}
             </Link>
           ))}
@@ -179,17 +217,23 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
       {/* Related: Same Segment */}
       {relatedSameSegment.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-lg font-semibold text-text-primary mb-4">Other AI Technologies in {segment.name}</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="mb-5">
+            <p className="label-refined text-accent mb-2">Related</p>
+            <div className="flex items-center gap-6">
+              <h2 className="headline-sub whitespace-nowrap">Other AI Technologies in {segment.name}</h2>
+              <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2.5">
             {relatedSameSegment.map(r => (
               <Link
                 key={r.aiType}
                 href={`/segments/${segment.slug}/ai-types/${r.aiType}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface border border-border/40 card-hover-glow transition-all text-sm"
               >
                 <span className="w-2 h-2 rounded-full" style={{ background: r.aiTypeColor }} />
-                <span className="text-text-secondary">{r.aiTypeLabel}</span>
-                <span className="text-text-faint">{r.count}</span>
+                <span className="text-text-secondary font-medium">{r.aiTypeLabel}</span>
+                <span className="text-text-faint font-medium tabular-nums">{r.count}</span>
               </Link>
             ))}
           </div>
@@ -199,17 +243,23 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
       {/* Related: Same AI Type */}
       {relatedSameAIType.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-lg font-semibold text-text-primary mb-4">{label} in Other Segments</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="mb-5">
+            <p className="label-refined text-accent mb-2">Related</p>
+            <div className="flex items-center gap-6">
+              <h2 className="headline-sub whitespace-nowrap">{label} in Other Segments</h2>
+              <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2.5">
             {relatedSameAIType.map(r => (
               <Link
                 key={r.segmentSlug}
                 href={`/segments/${r.segmentSlug}/ai-types/${aiType}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface border border-border/40 card-hover-glow transition-all text-sm"
               >
                 <span className="w-2 h-2 rounded-full" style={{ background: r.segmentColor }} />
-                <span className="text-text-secondary">{r.segmentName}</span>
-                <span className="text-text-faint">{r.count}</span>
+                <span className="text-text-secondary font-medium">{r.segmentName}</span>
+                <span className="text-text-faint font-medium tabular-nums">{r.count}</span>
               </Link>
             ))}
           </div>
@@ -217,8 +267,11 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
       )}
 
       {/* FAQ */}
-      <section className="border-t border-border/30 pt-8">
-        <h2 className="text-lg font-semibold text-text-primary mb-6">Frequently Asked Questions</h2>
+      <section className="bg-surface/50 border border-border/30 rounded-xl p-8">
+        <div className="flex items-center gap-6 mb-6">
+          <h2 className="headline-sub whitespace-nowrap">Frequently Asked Questions</h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+        </div>
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>

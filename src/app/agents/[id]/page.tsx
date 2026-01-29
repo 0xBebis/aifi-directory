@@ -29,8 +29,8 @@ import EndpointList from '@/components/EndpointList';
 import CapabilitySection from '@/components/CapabilitySection';
 import JsonLd from '@/components/JsonLd';
 
-const EXPLORER_BASE = 'https://sepolia.etherscan.io';
-const REGISTRY_ADDRESS = '0x8004A818BFB912233c491871b3d84c89A494BD9e';
+const EXPLORER_BASE = 'https://etherscan.io';
+const REGISTRY_ADDRESS = '0x8004A169FB4a3325136EB29fA0ceB6D2e539a432';
 
 export function generateStaticParams() {
   return agents.map((agent) => ({
@@ -379,7 +379,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
             <div className="space-y-3">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Chain</span>
-                <span className="text-text-primary font-medium">Sepolia</span>
+                <span className="text-text-primary font-medium">Ethereum</span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Agent ID</span>

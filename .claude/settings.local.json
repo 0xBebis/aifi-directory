@@ -30,7 +30,9 @@
       "Bash(dir:*)",
       "WebFetch(domain:www.adenza.com)",
       "Bash(ls:*)",
-      "Bash(python -c:*)"
+      "Bash(python -c:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:etherscan.io)"
     ]
   }
 }

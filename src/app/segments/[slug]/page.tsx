@@ -1,19 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ChevronRight } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import SegmentFilteredContent from '@/components/SegmentFilteredContent';
 import {
   segments,
   getSegment,
   getProjectsBySegment,
   formatFunding,
-  getProjectsByAIType,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
 } from '@/lib/data';
 import { AIType } from '@/types';
-import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
 
 export function generateStaticParams() {
@@ -68,8 +66,18 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
   });
   aiTypeCounts.sort((a, b) => b.count - a.count);
 
-  // Related segments (others)
-  const relatedSegments = segments.filter(s => s.slug !== segment.slug).slice(0, 4);
+  // Prepare company data for client-side filtering
+  const companyItems = [...segProjects]
+    .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+    .map(p => ({
+      slug: p.slug,
+      name: p.name,
+      tagline: p.tagline,
+      logo: p.logo,
+      funding: p.funding || 0,
+      fundingFormatted: p.funding ? formatFunding(p.funding) : '',
+      aiTypes: (p.ai_types || []) as string[],
+    }));
 
   // FAQ content
   const topCompany = funded[0];
@@ -123,7 +131,7 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
       ]} />
 
       {/* Hero */}
-      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-8">
+      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
         <div className="h-1.5" style={{ background: `linear-gradient(90deg, ${segment.color}, ${segment.color}66, transparent)` }} />
         <div className="p-6 sm:p-8">
           <p className="label-refined mb-2" style={{ color: segment.color }}>Segment</p>
@@ -142,10 +150,54 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
+      {/* Segment Switcher Bar */}
+      <nav className="flex flex-wrap gap-2 mb-10" aria-label="Market segments">
+        {segments.map(s => {
+          const isActive = s.slug === segment.slug;
+          return (
+            <Link
+              key={s.slug}
+              href={`/segments/${s.slug}`}
+              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 border ${
+                isActive
+                  ? 'border-opacity-30 bg-opacity-15'
+                  : 'border-transparent text-text-muted hover:text-text-primary hover:bg-surface-2/50'
+              }`}
+              style={isActive ? {
+                backgroundColor: `${s.color}15`,
+                color: s.color,
+                borderColor: `${s.color}30`,
+              } : undefined}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: s.color }}
+              />
+              {s.name}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* AI Type Filter + Companies (client component) */}
+      <SegmentFilteredContent
+        companies={companyItems}
+        aiTypeCounts={aiTypeCounts}
+        segmentSlug={segment.slug}
+        totalCount={segProjects.length}
+      />
+
       {/* Editorial Content */}
       {segment.long_description && (
         <section className="mb-10">
-          <h2 className="text-lg font-semibold text-text-primary mb-4">About {segment.name}</h2>
+          <div className="mb-5">
+            <p className="label-refined text-accent mb-2">Overview</p>
+            <div className="flex items-center gap-6">
+              <h2 className="headline-sub whitespace-nowrap">About {segment.name}</h2>
+              <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+            </div>
+          </div>
           <div className="prose-custom space-y-4">
             {segment.long_description.split('\n\n').map((paragraph, i) => (
               <p key={i} className="text-sm text-text-secondary leading-relaxed">{paragraph}</p>
@@ -154,88 +206,12 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      {/* AI Type Breakdown */}
-      {aiTypeCounts.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-text-primary mb-4">AI Technologies Used</h2>
-          <div className="flex flex-wrap gap-2">
-            {aiTypeCounts.map(t => (
-              <Link
-                key={t.type}
-                href={`/ai-types/${t.type}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
-              >
-                <span className="w-2 h-2 rounded-full" style={{ background: t.color }} />
-                <span className="text-text-secondary">{t.label}</span>
-                <span className="text-text-faint">{t.count}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Companies */}
-      <section className="mb-10">
-        <div className="flex items-baseline justify-between mb-4">
-          <h2 className="text-lg font-semibold text-text-primary">
-            {funded.length > 0 ? 'Top Companies by Funding' : 'All Companies'}
-          </h2>
-          <Link
-            href={`/directory?segment=${segment.slug}`}
-            className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
-          >
-            View in directory <ChevronRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {(funded.length > 0 ? funded : segProjects).slice(0, 18).map(p => (
-            <Link
-              key={p.slug}
-              href={`/p/${p.slug}`}
-              className="group bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-all hover:shadow-soft"
-            >
-              <div className="flex items-start gap-3">
-                <CompanyLogo project={p} size="sm" />
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">{p.name}</p>
-                  <p className="text-xs text-text-muted mt-0.5 line-clamp-2 leading-relaxed">{p.tagline}</p>
-                </div>
-              </div>
-              {p.funding && p.funding > 0 && (
-                <div className="mt-3 text-xs text-text-faint tabular-nums">{formatFunding(p.funding)} raised</div>
-              )}
-            </Link>
-          ))}
-        </div>
-        {segProjects.length > 18 && (
-          <div className="mt-4 text-center">
-            <Link href={`/directory?segment=${segment.slug}`} className="text-sm text-accent hover:text-accent-hover transition-colors">
-              View all {segProjects.length} companies →
-            </Link>
-          </div>
-        )}
-      </section>
-
-      {/* Related Segments */}
-      <section className="mb-10">
-        <h2 className="text-lg font-semibold text-text-primary mb-4">Related Segments</h2>
-        <div className="flex flex-wrap gap-2">
-          {relatedSegments.map(s => (
-            <Link
-              key={s.slug}
-              href={`/segments/${s.slug}`}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
-            >
-              <span className="w-2 h-2 rounded-full" style={{ background: s.color }} />
-              <span className="text-text-secondary">{s.name}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="border-t border-border/30 pt-8">
-        <h2 className="text-lg font-semibold text-text-primary mb-6">Frequently Asked Questions</h2>
+      <section className="bg-surface/50 border border-border/30 rounded-xl p-8">
+        <div className="flex items-center gap-6 mb-6">
+          <h2 className="headline-sub whitespace-nowrap">Frequently Asked Questions</h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+        </div>
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>

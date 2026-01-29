@@ -12702,7 +12702,7 @@
     "tagline": "EVM/Solana/Berachain DeFAI with gasless transactions",
     "segment": "trading",
     "layer": "applications",
-    "stage": "series_b",
+    "stage": "seed",
     "website": "https://heyelsa.ai",
     "hq_country": "US",
     "company_type": "token",
@@ -12730,14 +12730,14 @@
     "tagline": "No-code DeFi strategy automation, BigTony trading agent",
     "segment": "trading",
     "layer": "automation",
-    "stage": "seed",
+    "stage": "bootstrapped",
     "funding": 0,
     "website": "https://cod3x.org",
     "hq_country": "US",
     "company_type": "token",
-    "funding_stage": "seed",
+    "funding_stage": "bootstrapped",
     "region": "americas",
-    "summary": "Cod3x is a no-code platform for creating AI trading agents, built by ByteMasons (Fantom, Optimism protocols). Flagship agent BigTony launched Nov 2024 turned $500 into $50K trading BTC/ETH on Base. Integrated with Allora Network, achieved 2.54% avg profit per trade and 21.7% outperformance vs holding BTC (Dec 2024-Jan 2025). Evolutionary algorithm uses JSON genomes for agent configuration. 70% compute cost reduction via event-driven architecture.",
+    "summary": "Cod3x is a trading terminal that allows users to create novel trading strategies in minutes with no code. They've created an entirely new trading paradigm, layering an agentic trading harness on top of a prop trading engine, using modern LLMs to improve the capabilities of traditional algorithmic trading techniques. Their users advertize high Sharpe ratios and consistent returns. One of the first companies to work on LLM-autmented financial agents as Moon in 2022.",
     "crypto": true,
     "employees": "1-10",
     "founders": [
@@ -13532,7 +13532,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2025-10"
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "shekel-agentic",
@@ -13824,14 +13824,14 @@
     "slug": "uv",
     "name": "UV",
     "logo": "/logos/uv.jpg",
-    "tagline": "Frontier Intelligence for Financial Markets",
+    "tagline": "RL environment & dataset for financial AI.",
     "segment": "research",
     "layer": "data",
-    "stage": "seed",
+    "stage": "pre_seed",
     "website": "https://www.uv.finance",
     "hq_country": "US",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "pre-seed",
     "region": "americas",
     "segments": [
       "trading",
@@ -13841,8 +13841,8 @@
       "models",
       "infrastructure"
     ],
-    "summary": "UV is the missing data layer for financial AI: post-training decision sequences with human feedback. UV provides a harness, environment, and dataset that allows AI labs to teach their models how to use financial tools, make good financial decisions, and even generate alpha. If you believe that AI will need to handle money in the future, then you believe in a future where UV data is vital.",
-    "funding": 9182000,
+    "summary": "UV creates post-training decision sequences with human feedback for research labs to post-train LLMs. UV provides a harness, environment, and dataset that allows AI teams to teach their models how to use financial tools, make good financial decisions, and generate alpha. They are currently training models for fintechs designed to utilize APIs more effectively & adhere to constraints and regulations.",
+    "funding": 100,
     "employees": "1-10",
     "founders": [
       {

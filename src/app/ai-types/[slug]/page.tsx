@@ -1,19 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ChevronRight } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import AITypeFilteredContent from '@/components/AITypeFilteredContent';
 import {
   segments,
   getProjectsByAIType,
-  getProjectsBySegment,
   formatFunding,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
 } from '@/lib/data';
 import { AIType } from '@/types';
-import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
 
 const aiTypes: AIType[] = ['llm', 'predictive-ml', 'computer-vision', 'graph-analytics', 'reinforcement-learning', 'agentic', 'data-platform', 'infrastructure'];
@@ -58,7 +56,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
   const funded = typeProjects.filter(p => p.funding && p.funding > 0).sort((a, b) => (b.funding || 0) - (a.funding || 0));
   const totalFunding = typeProjects.reduce((sum, p) => sum + (p.funding || 0), 0);
 
-  // Segment breakdown
+  // Segment breakdown for this AI type
   const segCounts: Array<{ slug: string; name: string; color: string; count: number }> = [];
   segments.forEach(s => {
     const count = typeProjects.filter(p => p.segment === s.slug || p.segments?.includes(s.slug)).length;
@@ -66,8 +64,20 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
   });
   segCounts.sort((a, b) => b.count - a.count);
 
-  // Related AI types
-  const relatedTypes = aiTypes.filter(t => t !== aiType).slice(0, 4);
+  // Prepare company data for client-side filtering
+  const companyItems = [...typeProjects]
+    .sort((a, b) => (b.funding || 0) - (a.funding || 0))
+    .map(p => ({
+      slug: p.slug,
+      name: p.name,
+      tagline: p.tagline,
+      logo: p.logo,
+      funding: p.funding || 0,
+      fundingFormatted: p.funding ? formatFunding(p.funding) : '',
+      aiTypes: (p.ai_types || []) as string[],
+      segment: p.segment,
+      segments: p.segments || [],
+    }));
 
   // FAQ content
   const topCompany = funded[0];
@@ -121,7 +131,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
       ]} />
 
       {/* Hero */}
-      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-8">
+      <div className="relative bg-surface border border-border rounded-2xl overflow-hidden mb-6">
         <div className="h-1.5" style={{ background: `linear-gradient(90deg, ${color}, ${color}66, transparent)` }} />
         <div className="p-6 sm:p-8">
           <p className="label-refined mb-2" style={{ color }}>AI Technology</p>
@@ -139,88 +149,51 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Segment Breakdown */}
-      {segCounts.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold text-text-primary mb-4">Market Segments Using {label}</h2>
-          <div className="flex flex-wrap gap-2">
-            {segCounts.map(s => (
-              <Link
-                key={s.slug}
-                href={`/segments/${s.slug}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
-              >
-                <span className="w-2 h-2 rounded-full" style={{ background: s.color }} />
-                <span className="text-text-secondary">{s.name}</span>
-                <span className="text-text-faint">{s.count}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Companies */}
-      <section className="mb-10">
-        <div className="flex items-baseline justify-between mb-4">
-          <h2 className="text-lg font-semibold text-text-primary">
-            {funded.length > 0 ? 'Top Companies by Funding' : 'All Companies'}
-          </h2>
-          <Link
-            href={`/directory?aiType=${aiType}`}
-            className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
-          >
-            View in directory <ChevronRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {(funded.length > 0 ? funded : typeProjects).slice(0, 18).map(p => (
-            <Link
-              key={p.slug}
-              href={`/p/${p.slug}`}
-              className="group bg-surface border border-border rounded-xl p-4 hover:border-accent/30 transition-all hover:shadow-soft"
-            >
-              <div className="flex items-start gap-3">
-                <CompanyLogo project={p} size="sm" />
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-sm text-text-primary group-hover:text-accent transition-colors truncate">{p.name}</p>
-                  <p className="text-xs text-text-muted mt-0.5 line-clamp-2 leading-relaxed">{p.tagline}</p>
-                </div>
-              </div>
-              {p.funding && p.funding > 0 && (
-                <div className="mt-3 text-xs text-text-faint tabular-nums">{formatFunding(p.funding)} raised</div>
-              )}
-            </Link>
-          ))}
-        </div>
-        {typeProjects.length > 18 && (
-          <div className="mt-4 text-center">
-            <Link href={`/directory?aiType=${aiType}`} className="text-sm text-accent hover:text-accent-hover transition-colors">
-              View all {typeProjects.length} companies →
-            </Link>
-          </div>
-        )}
-      </section>
-
-      {/* Related AI Types */}
-      <section className="mb-10">
-        <h2 className="text-lg font-semibold text-text-primary mb-4">Other AI Technologies</h2>
-        <div className="flex flex-wrap gap-2">
-          {relatedTypes.map(t => (
+      {/* AI Type Switcher Bar */}
+      <nav className="flex flex-wrap gap-2 mb-10" aria-label="AI technologies">
+        {aiTypes.map(t => {
+          const isActive = t === aiType;
+          const tColor = AI_TYPE_COLORS[t];
+          return (
             <Link
               key={t}
               href={`/ai-types/${t}`}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border hover:border-accent/30 transition-colors text-sm"
+              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 border ${
+                isActive
+                  ? 'border-opacity-30 bg-opacity-15'
+                  : 'border-transparent text-text-muted hover:text-text-primary hover:bg-surface-2/50'
+              }`}
+              style={isActive ? {
+                backgroundColor: `${tColor}15`,
+                color: tColor,
+                borderColor: `${tColor}30`,
+              } : undefined}
+              aria-current={isActive ? 'page' : undefined}
             >
-              <span className="w-2 h-2 rounded-full" style={{ background: AI_TYPE_COLORS[t] }} />
-              <span className="text-text-secondary">{AI_TYPE_LABELS[t]}</span>
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: tColor }}
+              />
+              {AI_TYPE_LABELS[t]}
             </Link>
-          ))}
-        </div>
-      </section>
+          );
+        })}
+      </nav>
+
+      {/* Segment Filter + Companies (client component) */}
+      <AITypeFilteredContent
+        companies={companyItems}
+        segmentCounts={segCounts}
+        aiTypeSlug={aiType}
+        totalCount={typeProjects.length}
+      />
 
       {/* FAQ */}
-      <section className="border-t border-border/30 pt-8">
-        <h2 className="text-lg font-semibold text-text-primary mb-6">Frequently Asked Questions</h2>
+      <section className="bg-surface/50 border border-border/30 rounded-xl p-8">
+        <div className="flex items-center gap-6 mb-6">
+          <h2 className="headline-sub whitespace-nowrap">Frequently Asked Questions</h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-border/50 to-transparent" />
+        </div>
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>

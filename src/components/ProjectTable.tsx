@@ -12,7 +12,7 @@ import {
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
 } from '@/types';
-import { formatFunding, formatFundingDate } from '@/lib/data';
+import { formatFunding, formatFundingDate, getCountryName } from '@/lib/data';
 import { Tooltip, CategoryBadge } from '@/components/ui';
 import {
   Search,
@@ -51,7 +51,7 @@ export default function ProjectTable({
   const [search, setSearch] = useState('');
   const [regionFilter, setRegionFilter] = useState<string | null>(null);
   const [aiTypeFilter, setAiTypeFilter] = useState<string | null>(null);
-  const [sortKey, setSortKey] = useState<SortKey>('name');
+  const [sortKey, setSortKey] = useState<SortKey>('last_funded');
   const [sortDir, setSortDir] = useState<SortDir>('asc');
 
   const fuse = useMemo(
@@ -347,7 +347,7 @@ export default function ProjectTable({
                   onClick={() => handleSort('region')}
                   className="flex items-center gap-2 label-refined hover:text-text-primary transition-colors"
                 >
-                  Region
+                  Location
                   <SortIcon column="region" />
                 </button>
               </th>
@@ -543,16 +543,16 @@ export default function ProjectTable({
                       )}
                     </td>
                     <td className="px-5 py-4">
-                      {project.region ? (
+                      {(project.hq_city || project.hq_country || project.region) ? (
                         <span
-                          className={`text-sm cursor-pointer transition-colors ${
-                            regionFilter === project.region
-                              ? 'text-accent font-medium'
-                              : 'text-text-muted hover:text-text-primary'
+                          className={`text-sm transition-colors ${
+                            project.region
+                              ? `cursor-pointer ${regionFilter === project.region ? 'text-accent font-medium' : 'text-text-muted hover:text-text-primary'}`
+                              : 'text-text-muted'
                           }`}
-                          onClick={() => setRegionFilter(regionFilter === project.region ? null : project.region!)}
+                          onClick={() => project.region && setRegionFilter(regionFilter === project.region ? null : project.region!)}
                         >
-                          {REGION_LABELS[project.region as Region]}
+                          {project.hq_city || (project.hq_country ? getCountryName(project.hq_country) : REGION_LABELS[project.region as Region])}
                         </span>
                       ) : (
                         <span className="text-sm text-text-faint">—</span>

@@ -3,19 +3,19 @@
 
 module.exports = {
   // ── Subgraph ──
-  SUBGRAPH_ID: '6wQRC7geo9XYAhckfmfo8kbMRLeWU8KQd3XsJqFKmZLT',
+  SUBGRAPH_ID: 'FV6RR6y13rsnCxBAicKuQEwDp8ioEGiNaWaZUmvr1F8k',
   GRAPH_GATEWAY: 'https://gateway.thegraph.com/api',
   BATCH_SIZE: 100,       // subgraph pagination limit
   RATE_LIMIT_MS: 200,    // delay between subgraph requests
 
-  // ── Contract Addresses (Ethereum Sepolia) ──
-  IDENTITY_REGISTRY: '0x8004A818BFB912233c491871b3d84c89A494BD9e',
-  REPUTATION_REGISTRY: '0x8004B663056A597Dffe9eCcC1965A193B7388713',
-  CHAIN_ID: 11155111,    // Sepolia
-  CHAIN_NAME: 'Sepolia',
+  // ── Contract Addresses (Ethereum Mainnet) ──
+  IDENTITY_REGISTRY: '0x8004A169FB4a3325136EB29fA0ceB6D2e539a432',
+  REPUTATION_REGISTRY: '0x8004BAa17C55a88189AE136b182e5fdA19dE9b63',
+  CHAIN_ID: 1,           // Ethereum Mainnet
+  CHAIN_NAME: 'Ethereum',
 
   // ── Finance Filtering ──
-  FINANCE_THRESHOLD: 0.25,  // agents scoring below this are excluded (0–1 scale)
+  FINANCE_THRESHOLD: 0.10,  // agents scoring below this are excluded (0–1 scale)
 
   // Signal weights
   WEIGHTS: {
