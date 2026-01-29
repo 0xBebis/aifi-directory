@@ -37,6 +37,7 @@ export interface Project {
   acquired_date?: string; // Year or YYYY-MM of acquisition
   job_openings?: number; // Current open positions
   seo_description?: string; // 150-160 char SEO-optimized meta description
+  pinned?: boolean; // Always show first in directory listing
 }
 
 export interface TeamMember {

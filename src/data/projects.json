@@ -5312,7 +5312,7 @@
   {
     "slug": "arturo",
     "name": "Arturo",
-    "logo": "/logos/artuto.png",
+    "logo": "/logos/arturo.png",
     "tagline": "AI property intelligence for insurance",
     "segment": "insurance",
     "layer": "data",
@@ -12726,6 +12726,7 @@
   },
   {
     "slug": "cod3x",
+    "pinned": true,
     "name": "Cod3x",
     "tagline": "No-code DeFi strategy automation, BigTony trading agent",
     "segment": "trading",
@@ -13798,7 +13799,7 @@
   {
     "slug": "askjimmy",
     "name": "AskJimmy",
-    "logo": "/logos/ask-jimmy.png",
+    "logo": "/logos/ask-jimmy.jpg",
     "tagline": "Chat voice/text advisor tied to market data",
     "segment": "trading",
     "layer": "applications",

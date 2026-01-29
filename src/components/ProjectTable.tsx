@@ -101,6 +101,10 @@ export default function ProjectTable({
     }
 
     result = [...result].sort((a, b) => {
+      // Pinned items always first
+      if (a.pinned && !b.pinned) return -1;
+      if (!a.pinned && b.pinned) return 1;
+
       let comparison = 0;
 
       switch (sortKey) {
