@@ -13855,5 +13855,28 @@
       "llm"
     ],
     "last_funding_date": "2022-01"
+  },
+  {
+    "slug": "clipur",
+    "name": "Clipur",
+    "tagline": "Infrastructure for coordinated short-form content distribution across creators, clippers, and brands.",
+    "segment": "crypto",
+    "layer": "applications",
+    "website": "https://www.clipur.com",
+    "description": "Clipur is a distribution infrastructure platform that helps brands and creators scale short-form content through coordinated clipping networks.\n\nInstead of relying on one creator or unpredictable virality, Clipur enables campaigns where a single piece of long-form content is systematically transformed into dozens or hundreds of short-form clips. These clips are distributed across social platforms by trained operators (“clippers”), creating consistent reach, repetition, and compounding visibility.\n\nThe platform aligns incentives across all participants — brands, creators, and clippers — using structured workflows, performance tracking, and payout coordination. Clipur replaces chaotic influencer marketing with a repeatable, infrastructure-driven distribution system designed for modern attention economics.",
+    "summary": "Clipur is building the infrastructure layer for short-form content distribution. By coordinating clipping networks around long-form content, it turns distribution into a repeatable system rather than a gamble.",
+    "ai_types": [
+      "infrastructure",
+      "data-platform"
+    ],
+    "company_type": "private",
+    "funding_stage": "pre-seed",
+    "region": "americas",
+    "employees": "1-10",
+    "founded": 2026,
+    "hq_country": "US",
+    "hq_city": "Los Angeles",
+    "crypto": true,
+    "funding": 0
   }
 ]
