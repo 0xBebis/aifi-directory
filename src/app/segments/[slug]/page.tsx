@@ -10,6 +10,7 @@ import {
   formatFunding,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
+  generateSegmentFAQs,
 } from '@/lib/data';
 import { AIType } from '@/types';
 import JsonLd from '@/components/JsonLd';
@@ -79,34 +80,16 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
       aiTypes: (p.ai_types || []) as string[],
     }));
 
-  // FAQ content
-  const topCompany = funded[0];
-  const faqs = [
-    {
-      q: `What is AI ${segment.name.toLowerCase()}?`,
-      a: `AI ${segment.name.toLowerCase()} refers to the use of artificial intelligence and machine learning technologies in the ${segment.name.toLowerCase()} sector. ${segment.description} The AIFI Map directory tracks ${segProjects.length} companies building AI-powered solutions in this space.`,
-    },
-    {
-      q: `How many AI ${segment.name.toLowerCase()} companies are there?`,
-      a: `The AIFI Map directory tracks ${segProjects.length} companies focused on AI-powered ${segment.name.toLowerCase()}. Together, these companies have raised ${formatFunding(totalFunding)} in funding.`,
-    },
-    {
-      q: `What AI technologies are used in ${segment.name.toLowerCase()}?`,
-      a: `The most common AI technologies in ${segment.name.toLowerCase()} include ${aiTypeCounts.slice(0, 4).map(t => `${t.label} (${t.count} companies)`).join(', ')}. Companies in this segment apply these technologies to ${segment.description.toLowerCase()}`,
-    },
-    ...(topCompany ? [{
-      q: `What is the most funded AI ${segment.name.toLowerCase()} company?`,
-      a: `${topCompany.name} is the most funded AI ${segment.name.toLowerCase()} company tracked by AIFI Map${topCompany.funding ? `, having raised ${formatFunding(topCompany.funding)}` : ''}. ${topCompany.tagline}`,
-    }] : []),
-  ];
+  // FAQ content (centralized)
+  const faqs = generateSegmentFAQs(segment);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
     })),
   };
 
@@ -235,8 +218,8 @@ export default function SegmentPage({ params }: { params: { slug: string } }) {
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>
-              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.q}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{f.a}</p>
+              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.question}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{f.answer}</p>
             </div>
           ))}
         </div>

@@ -800,71 +800,212 @@ export function generateCompanyFAQs(project: Project): FAQItem[] {
   const faqs: FAQItem[] = [];
 
   // Q1: Always — "What is {name}?"
-  const whatParts = [
-    `${project.name} is ${project.tagline.endsWith('.') ? project.tagline : project.tagline + '.'}`,
-    segment ? `The company operates in the ${segment.name} segment` : null,
-    layer ? `at the ${layer.name} layer of the financial AI stack.` : null,
-    project.founded ? `Founded in ${project.founded}` : null,
-    project.hq_city && project.hq_country
-      ? `${project.founded ? 'and headquartered' : 'Headquartered'} in ${project.hq_city}, ${getCountryName(project.hq_country)}.`
-      : project.founded ? '.' : null,
-  ].filter(Boolean).join(' ');
-  faqs.push({ question: `What is ${project.name}?`, answer: whatParts });
+  if (project.summary) {
+    let answer = project.summary;
+    if (!answer.endsWith('.')) answer += '.';
+    if (segment && layer) {
+      answer += ` ${project.name} is classified in the ${segment.name} segment at the ${layer.name} layer of the financial AI stack.`;
+    }
+    faqs.push({ question: `What is ${project.name}?`, answer });
+  } else {
+    const parts = [`${project.name} is ${project.tagline.endsWith('.') ? project.tagline : project.tagline + '.'}`];
+    if (segment && layer) {
+      parts.push(`The company operates in the ${segment.name} segment at the ${layer.name} layer.`);
+    }
+    if (project.founded && project.hq_city && project.hq_country) {
+      parts.push(`Founded in ${project.founded} in ${project.hq_city}, ${getCountryName(project.hq_country)}.`);
+    } else if (project.founded) {
+      parts.push(`Founded in ${project.founded}.`);
+    }
+    faqs.push({ question: `What is ${project.name}?`, answer: parts.join(' ') });
+  }
 
   // Q2: Conditional — "Who founded {name}?"
   if (project.founders && project.founders.length > 0) {
-    const founderList = project.founders.map(f => f.title ? `${f.name} (${f.title})` : f.name).join(', ');
-    faqs.push({
-      question: `Who founded ${project.name}?`,
-      answer: `${project.name} was founded by ${founderList}${project.founded ? ` in ${project.founded}` : ''}.`,
-    });
+    const founderList = project.founders.map(f => f.title ? `${f.name} (${f.title})` : f.name);
+    let founderText: string;
+    if (founderList.length === 1) {
+      founderText = founderList[0];
+    } else if (founderList.length === 2) {
+      founderText = `${founderList[0]} and ${founderList[1]}`;
+    } else {
+      founderText = `${founderList.slice(0, -1).join(', ')}, and ${founderList[founderList.length - 1]}`;
+    }
+    let answer = `${project.name} was founded by ${founderText}`;
+    if (project.founded) {
+      answer += ` in ${project.founded}`;
+      if (project.hq_city && project.hq_country) {
+        answer += ` in ${project.hq_city}, ${getCountryName(project.hq_country)}`;
+      }
+    }
+    answer += '.';
+    if (project.founded) {
+      const age = new Date().getFullYear() - project.founded;
+      if (age <= 2) {
+        answer += ` The company is an early-stage startup, ${age} year${age !== 1 ? 's' : ''} old.`;
+      } else if (age >= 10) {
+        answer += ` The company has been operating for ${age} years.`;
+      }
+    }
+    if (project.company_type === 'public') {
+      answer += ` ${project.name} is now a publicly traded company.`;
+    } else if (project.company_type === 'acquired' && project.acquirer) {
+      answer += ` The company was acquired by ${project.acquirer}${project.acquired_date ? ` in ${project.acquired_date}` : ''}.`;
+    }
+    faqs.push({ question: `Who founded ${project.name}?`, answer });
   }
 
   // Q3: Conditional — "How much funding has {name} raised?"
   if (project.funding) {
-    let a = `${project.name} has raised ${formatFunding(project.funding)} in total funding.`;
+    let answer = `${project.name} has raised ${formatFunding(project.funding)} in total funding`;
     if (project.funding_stage && project.funding_stage !== 'undisclosed') {
-      a += ` The company is at the ${FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]} stage.`;
+      answer += `, placing the company at the ${FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]} stage`;
     }
+    answer += '.';
     if (project.last_funding_date) {
-      a += ` The most recent funding round was in ${formatFundingDate(project.last_funding_date)}.`;
+      answer += ` The most recent round closed in ${formatFundingDate(project.last_funding_date)}.`;
     }
     if (project.valuation) {
-      a += ` The company is valued at ${formatFunding(project.valuation)}.`;
+      answer += ` The company is valued at approximately ${formatFunding(project.valuation)}.`;
     }
-    faqs.push({ question: `How much funding has ${project.name} raised?`, answer: a });
+    if (project.revenue) {
+      answer += ` ${project.name} generates approximately ${formatFunding(project.revenue)} in annual revenue.`;
+    }
+    if (segment) {
+      const segFunded = getProjectsBySegment(segment.slug)
+        .filter(p => p.funding && p.funding > 0)
+        .sort((a, b) => (b.funding || 0) - (a.funding || 0));
+      const rank = segFunded.findIndex(p => p.slug === project.slug) + 1;
+      if (rank === 1) {
+        answer += ` This makes ${project.name} the most-funded company in the ${segment.name} segment.`;
+      } else if (rank > 0 && rank <= 3) {
+        answer += ` This makes ${project.name} one of the top ${rank} most-funded companies in the ${segment.name} segment.`;
+      } else if (rank > 0 && segFunded.length > 5) {
+        answer += ` Among ${segFunded.length} funded ${segment.name} companies, ${project.name} ranks #${rank} by total capital raised.`;
+      }
+    }
+    faqs.push({ question: `How much funding has ${project.name} raised?`, answer });
   }
 
   // Q4: Conditional — "What AI technology does {name} use?"
   if (project.ai_types && project.ai_types.length > 0) {
-    const typeLabels = project.ai_types.map(t => AI_TYPE_LABELS[t]);
-    const descriptions = project.ai_types.map(t => `${AI_TYPE_LABELS[t]}: ${AI_TYPE_DESCRIPTIONS[t]}`);
-    faqs.push({
-      question: `What AI technology does ${project.name} use?`,
-      answer: `${project.name} uses ${typeLabels.join(', ')} technology. ${descriptions.join('. ')}.`,
-    });
+    let answer: string;
+    if (project.ai_types.length === 1) {
+      const t = project.ai_types[0];
+      answer = `${project.name} primarily leverages ${AI_TYPE_LABELS[t]} technology. ${AI_TYPE_DESCRIPTIONS[t]}.`;
+      if (segment) {
+        const sameTypeCount = getProjectsBySegment(segment.slug).filter(p => p.ai_types?.includes(t)).length;
+        answer += ` Within the ${segment.name} segment, ${sameTypeCount} companies use this technology.`;
+      }
+    } else {
+      const typeLabels = project.ai_types.map(t => AI_TYPE_LABELS[t]);
+      answer = `${project.name} combines multiple AI technologies: ${typeLabels.join(', ')}.`;
+      for (const t of project.ai_types) {
+        answer += ` ${AI_TYPE_LABELS[t]} provides ${AI_TYPE_DESCRIPTIONS[t].charAt(0).toLowerCase()}${AI_TYPE_DESCRIPTIONS[t].slice(1)}.`;
+      }
+    }
+    faqs.push({ question: `What AI technology does ${project.name} use?`, answer });
   }
 
   // Q5: Conditional — "What market segment does {name} operate in?"
   if (segment) {
     const additionalSegs = (project.segments || []).map(s => getSegment(s)).filter(Boolean);
     const allNames = [segment.name, ...additionalSegs.map(s => s!.name)];
-    faqs.push({
-      question: `What market segment does ${project.name} operate in?`,
-      answer: `${project.name} operates in the ${allNames.join(', ')} market segment${allNames.length > 1 ? 's' : ''}. ${segment.description}`,
-    });
+    let answer = `${project.name} operates in the ${allNames.join(' and ')} market segment${allNames.length > 1 ? 's' : ''}. `;
+    if (segment.long_description) {
+      const firstPara = segment.long_description.split('\n\n')[0];
+      const sentences = firstPara.match(/[^.!?]+[.!?]+/g) || [];
+      answer += sentences.slice(0, 2).join(' ').trim();
+    } else {
+      answer += segment.description;
+    }
+    if (additionalSegs.length > 0) {
+      answer += ` The company also has a footprint in ${additionalSegs.map(s => s!.name.toLowerCase()).join(' and ')}, reflecting its cross-functional approach to financial AI.`;
+    }
+    faqs.push({ question: `What market segment does ${project.name} operate in?`, answer });
   }
 
   // Q6: Conditional — "Where is {name} headquartered?"
   if (project.hq_city && project.hq_country) {
-    let a = `${project.name} is headquartered in ${project.hq_city}, ${getCountryName(project.hq_country)}.`;
-    if (project.employees) {
-      a += ` The company has ${EMPLOYEE_RANGE_LABELS[project.employees as EmployeeRange]} employees.`;
-    }
+    const countryName = getCountryName(project.hq_country);
+    let answer = `${project.name} is headquartered in ${project.hq_city}, ${countryName}.`;
     if (project.region) {
-      a += ` It operates in the ${REGION_LABELS[project.region]} region.`;
+      answer += ` The company operates in the ${REGION_LABELS[project.region]} region.`;
     }
-    faqs.push({ question: `Where is ${project.name} headquartered?`, answer: a });
+    if (project.employees) {
+      answer += ` The team consists of ${EMPLOYEE_RANGE_LABELS[project.employees as EmployeeRange]} employees.`;
+    }
+    const sameCountry = projects.filter(p => p.hq_country === project.hq_country).length;
+    if (sameCountry > 1) {
+      answer += ` ${countryName} is home to ${sameCountry} financial AI companies tracked by AIFI Map.`;
+    }
+    faqs.push({ question: `Where is ${project.name} headquartered?`, answer });
+  }
+
+  // Q7: Conditional — "Who are {name}'s competitors?"
+  const similar = getSimilarProjects(project, 5);
+  if (similar.length >= 2) {
+    const namedCompetitors = similar.map(p => {
+      let desc = p.name;
+      if (p.funding) desc += ` (${formatFunding(p.funding)} raised)`;
+      return desc;
+    });
+    let answer = `Companies similar to ${project.name} in the ${segment?.name || 'financial AI'} space include ${namedCompetitors.join(', ')}.`;
+    answer += ` These companies operate in related areas of financial AI:`;
+    for (const comp of similar.slice(0, 3)) {
+      answer += ` ${comp.name} focuses on ${comp.tagline.toLowerCase().replace(/\.$/, '')}.`;
+    }
+    faqs.push({ question: `Who are ${project.name}'s competitors?`, answer });
+  }
+
+  // Q8: Conditional — "What products does {name} offer?"
+  if (project.summary && project.ai_types && project.ai_types.length > 0) {
+    let answer = `${project.name} builds ${layer?.name.toLowerCase() || 'technology'}-layer solutions for the financial services industry. `;
+    answer += `The company's core offering: ${project.tagline}`;
+    if (!project.tagline.endsWith('.')) answer += '.';
+    const techNames = project.ai_types.map(t => AI_TYPE_LABELS[t]).join(', ');
+    answer += ` The platform is powered by ${techNames} technology.`;
+    if (project.customers && project.customers.length > 0) {
+      answer += ` Notable users include ${project.customers.slice(0, 4).join(', ')}.`;
+    }
+    faqs.push({ question: `What products does ${project.name} offer?`, answer });
+  }
+
+  // Q9: Conditional — "Is {name} publicly traded?" (only for non-private companies)
+  if (project.company_type && project.company_type !== 'private') {
+    let answer: string;
+    if (project.company_type === 'public') {
+      answer = `Yes, ${project.name} is a publicly traded company.`;
+      if (project.valuation) answer += ` The company has a market valuation of approximately ${formatFunding(project.valuation)}.`;
+      if (project.revenue) answer += ` Annual revenue is approximately ${formatFunding(project.revenue)}.`;
+    } else if (project.company_type === 'acquired') {
+      answer = `${project.name} is no longer independently traded. The company was acquired by ${project.acquirer || 'another company'}`;
+      if (project.acquired_date) answer += ` in ${project.acquired_date}`;
+      answer += '.';
+      if (project.funding) answer += ` Prior to the acquisition, ${project.name} had raised ${formatFunding(project.funding)} in venture funding.`;
+    } else if (project.company_type === 'token') {
+      answer = `${project.name} operates as a token-based project rather than a traditional equity-backed company.`;
+      if (project.crypto) answer += ` It is a Web3-native platform leveraging blockchain and decentralized finance.`;
+      if (project.funding_stage === 'fair-launch') answer += ` The project launched via a fair-launch model without traditional venture capital funding.`;
+    } else {
+      answer = `${project.name} is a privately held company.`;
+    }
+    faqs.push({ question: `Is ${project.name} publicly traded?`, answer });
+  }
+
+  // Q10: Conditional — "Does {name} use Web3 or blockchain technology?" (crypto companies)
+  if (project.crypto) {
+    let answer = `Yes, ${project.name} incorporates Web3 and blockchain technology. ${project.tagline}`;
+    if (!project.tagline.endsWith('.')) answer += '.';
+    if (project.company_type === 'token') {
+      answer += ` The project operates as a token-based platform.`;
+    }
+    if (project.segment === 'crypto' || project.segments?.includes('crypto')) {
+      answer += ` ${project.name} is part of the Crypto & Web3 segment in the AIFI directory.`;
+    } else {
+      answer += ` While not solely a crypto company, ${project.name} leverages blockchain alongside its primary focus in ${segment?.name?.toLowerCase() || 'financial services'}.`;
+    }
+    faqs.push({ question: `Does ${project.name} use Web3 or blockchain technology?`, answer });
   }
 
   return faqs;
@@ -915,6 +1056,40 @@ export function generateCitations(project: Project): Citation[] {
     if (project.acquired_date) t += ` in ${project.acquired_date}`;
     t += '.';
     citations.push({ id: idx++, label: 'Acquisition', text: t });
+  }
+
+  if (project.revenue) {
+    citations.push({ id: idx++, label: 'Revenue', text: `Annual revenue/ARR: approximately ${formatFunding(project.revenue)}.` });
+  }
+
+  if (project.company_type && project.company_type !== 'private') {
+    const typeLabel = COMPANY_TYPE_LABELS[project.company_type as CompanyType];
+    citations.push({ id: idx++, label: 'Company Type', text: `${typeLabel} company${project.company_type === 'token' ? ' (token-based project)' : ''}.` });
+  }
+
+  if (project.crypto) {
+    citations.push({ id: idx++, label: 'Web3', text: `Web3 and blockchain technology company.${project.company_type === 'token' ? ' Token-based project.' : ''}` });
+  }
+
+  if (project.website) {
+    const domain = project.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+    citations.push({ id: idx++, label: 'Website', text: `Official website: ${domain}.` });
+  }
+
+  if (project.ai_types && project.ai_types.length > 0) {
+    const labels = project.ai_types.map(t => AI_TYPE_LABELS[t]);
+    citations.push({ id: idx++, label: 'AI Technology', text: `Core AI/ML technologies: ${labels.join(', ')}.` });
+  }
+
+  if (project.region) {
+    let regionText = `Region: ${REGION_LABELS[project.region]}`;
+    if (project.hq_country) regionText += ` (${getCountryName(project.hq_country)})`;
+    regionText += '.';
+    citations.push({ id: idx++, label: 'Region', text: regionText });
+  }
+
+  if (project.defunct) {
+    citations.push({ id: idx++, label: 'Status', text: 'This company is no longer operating.' });
   }
 
   return citations;
@@ -968,4 +1143,293 @@ export function generateComparisonData(project: Project): ComparisonMetrics {
       funding: p.funding || null,
     })),
   };
+}
+
+// ── Taxonomy FAQ Generators ──
+
+export function generateSegmentFAQs(segment: Segment): FAQItem[] {
+  const segProjects = getProjectsBySegment(segment.slug);
+  const funded = segProjects.filter(p => p.funding && p.funding > 0).sort((a, b) => (b.funding || 0) - (a.funding || 0));
+  const totalFunding = segProjects.reduce((sum, p) => sum + (p.funding || 0), 0);
+
+  const aiTypeCounts: Record<string, number> = {};
+  segProjects.forEach(p => p.ai_types?.forEach(t => { aiTypeCounts[t] = (aiTypeCounts[t] || 0) + 1; }));
+  const topAiTypes = Object.entries(aiTypeCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 4)
+    .map(([type, count]) => ({ label: AI_TYPE_LABELS[type as AIType], count }));
+
+  const regionCounts: Record<string, number> = {};
+  segProjects.forEach(p => { if (p.region) regionCounts[p.region] = (regionCounts[p.region] || 0) + 1; });
+  const topRegion = Object.entries(regionCounts).sort(([, a], [, b]) => b - a)[0];
+
+  const stageCounts: Record<string, number> = {};
+  segProjects.forEach(p => {
+    const stage = p.funding_stage;
+    if (stage && stage !== 'undisclosed') stageCounts[stage] = (stageCounts[stage] || 0) + 1;
+  });
+  const topStage = Object.entries(stageCounts).sort(([, a], [, b]) => b - a)[0];
+
+  const faqs: FAQItem[] = [];
+
+  // Q1: "What is AI {segment}?"
+  if (segment.long_description) {
+    const firstPara = segment.long_description.split('\n\n')[0];
+    const sentences = firstPara.match(/[^.!?]+[.!?]+/g) || [firstPara];
+    let answer = sentences.slice(0, 3).join(' ').trim();
+    answer += ` The AIFI Map directory tracks ${segProjects.length} companies in this segment, with ${formatFunding(totalFunding)} in combined funding.`;
+    faqs.push({ question: `What is AI ${segment.name.toLowerCase()}?`, answer });
+  } else {
+    faqs.push({
+      question: `What is AI ${segment.name.toLowerCase()}?`,
+      answer: `AI ${segment.name.toLowerCase()} refers to the application of artificial intelligence in ${segment.description.toLowerCase()} The AIFI Map tracks ${segProjects.length} companies building AI-powered solutions in this space, with ${formatFunding(totalFunding)} in combined funding.`,
+    });
+  }
+
+  // Q2: "How many AI {segment} companies are there?"
+  let q2 = `The AIFI Map directory tracks ${segProjects.length} companies building AI for ${segment.name.toLowerCase()}, with ${formatFunding(totalFunding)} in combined funding raised.`;
+  if (topStage) {
+    q2 += ` The most common funding stage is ${FUNDING_STAGE_LABELS[topStage[0] as FundingStage]} (${topStage[1]} companies).`;
+  }
+  if (topRegion) {
+    q2 += ` The majority are based in the ${REGION_LABELS[topRegion[0] as Region]} region (${topRegion[1]} companies).`;
+  }
+  faqs.push({ question: `How many AI ${segment.name.toLowerCase()} companies are there?`, answer: q2 });
+
+  // Q3: "What AI technologies are used in {segment}?"
+  let q3 = `The most common AI technologies in ${segment.name.toLowerCase()} include ${topAiTypes.map(t => `${t.label} (${t.count} companies)`).join(', ')}.`;
+  if (segment.long_description) {
+    const keyApps = segment.long_description.split('\n\n').find(p => p.toLowerCase().startsWith('key application'));
+    if (keyApps) {
+      const sentences = keyApps.match(/[^.!?]+[.!?]+/g) || [];
+      q3 += ' ' + sentences.slice(0, 2).join(' ').trim();
+    }
+  }
+  faqs.push({ question: `What AI technologies are used in ${segment.name.toLowerCase()}?`, answer: q3 });
+
+  // Q4: "What is the most funded AI {segment} company?"
+  if (funded[0]) {
+    let q4 = `${funded[0].name} is the most funded AI ${segment.name.toLowerCase()} company tracked by AIFI Map`;
+    if (funded[0].funding) q4 += `, having raised ${formatFunding(funded[0].funding)}`;
+    q4 += `. ${funded[0].tagline}`;
+    if (!funded[0].tagline.endsWith('.')) q4 += '.';
+    if (funded[1]) {
+      q4 += ` The second-most-funded is ${funded[1].name}${funded[1].funding ? ` with ${formatFunding(funded[1].funding)}` : ''}.`;
+    }
+    faqs.push({ question: `What is the most funded AI ${segment.name.toLowerCase()} company?`, answer: q4 });
+  }
+
+  // Q5: Conditional — "What are the key trends in AI {segment}?"
+  if (segment.long_description) {
+    const trendsPara = segment.long_description.split('\n\n').find(p => p.toLowerCase().includes('notable trends') || p.toLowerCase().includes('key trends'));
+    if (trendsPara) {
+      const sentences = trendsPara.match(/[^.!?]+[.!?]+/g) || [];
+      faqs.push({
+        question: `What are the key trends in AI ${segment.name.toLowerCase()}?`,
+        answer: sentences.slice(0, 3).join(' ').trim(),
+      });
+    }
+  }
+
+  // Q6: Conditional — "Which companies use Web3/blockchain?"
+  const cryptoCompanies = segProjects.filter(p => p.crypto);
+  if (cryptoCompanies.length >= 2) {
+    const topCrypto = cryptoCompanies.sort((a, b) => (b.funding || 0) - (a.funding || 0)).slice(0, 5);
+    faqs.push({
+      question: `Which ${segment.name.toLowerCase()} companies use Web3 or blockchain?`,
+      answer: `${cryptoCompanies.length} companies in the ${segment.name} segment incorporate Web3 or blockchain technology. Leading examples include ${topCrypto.map(p => p.name).join(', ')}.`,
+    });
+  }
+
+  return faqs;
+}
+
+export function generateAITypeFAQs(aiType: AIType): FAQItem[] {
+  const label = AI_TYPE_LABELS[aiType];
+  const description = AI_TYPE_DESCRIPTIONS[aiType];
+  const typeProjects = getProjectsByAIType(aiType);
+  const funded = typeProjects.filter(p => p.funding && p.funding > 0).sort((a, b) => (b.funding || 0) - (a.funding || 0));
+  const totalFunding = typeProjects.reduce((sum, p) => sum + (p.funding || 0), 0);
+
+  const segCounts: Array<{ name: string; count: number }> = [];
+  segments.forEach(s => {
+    const count = typeProjects.filter(p => p.segment === s.slug || p.segments?.includes(s.slug)).length;
+    if (count > 0) segCounts.push({ name: s.name, count });
+  });
+  segCounts.sort((a, b) => b.count - a.count);
+
+  const layerCounts: Array<{ name: string; count: number }> = [];
+  layers.forEach(l => {
+    const count = typeProjects.filter(p => p.layer === l.slug || p.layers?.includes(l.slug)).length;
+    if (count > 0) layerCounts.push({ name: l.name, count });
+  });
+  layerCounts.sort((a, b) => b.count - a.count);
+
+  const faqs: FAQItem[] = [];
+
+  // Q1: "How is {label} used in finance?"
+  let q1 = `${description} In the financial sector, ${label} is applied across ${segCounts.length} market segments.`;
+  q1 += ` The most common are ${segCounts.slice(0, 3).map(s => `${s.name} (${s.count} companies)`).join(', ')}.`;
+  q1 += ` ${typeProjects.length} companies in the AIFI directory use ${label}, with ${formatFunding(totalFunding)} in combined funding.`;
+  faqs.push({ question: `How is ${label} used in finance?`, answer: q1 });
+
+  // Q2: "Which financial companies use {label}?"
+  let q2 = `${typeProjects.length} companies in the AIFI directory use ${label}. `;
+  q2 += funded.slice(0, 3).map(p => `${p.name}: ${p.tagline}`).join('. ');
+  if (funded.length > 3) q2 += `. And ${funded.length - 3} more.`;
+  faqs.push({ question: `Which financial companies use ${label}?`, answer: q2 });
+
+  // Q3: "How many companies use {label}?"
+  let q3 = `The AIFI directory tracks ${typeProjects.length} financial companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding raised.`;
+  if (layerCounts.length > 0) {
+    q3 += ` These companies span the technology stack: ${layerCounts.map(l => `${l.name} (${l.count})`).join(', ')}.`;
+  }
+  faqs.push({ question: `How many companies use ${label} in finance?`, answer: q3 });
+
+  // Q4: "Most funded {label} company?"
+  if (funded[0]) {
+    let q4 = `${funded[0].name} is the most funded ${label} company in the AIFI directory`;
+    if (funded[0].funding) q4 += `, with ${formatFunding(funded[0].funding)} raised`;
+    q4 += `. ${funded[0].tagline}`;
+    if (funded[1]) {
+      q4 += ` Other highly funded ${label} companies include ${funded.slice(1, 4).map(p => `${p.name}${p.funding ? ` (${formatFunding(p.funding)})` : ''}`).join(', ')}.`;
+    }
+    faqs.push({ question: `What is the most funded ${label} finance company?`, answer: q4 });
+  }
+
+  // Q5: "What market segments use {label}?"
+  if (segCounts.length > 1) {
+    let q5 = `${label} is used across ${segCounts.length} market segments in financial services. `;
+    q5 += segCounts.map(s => `${s.name}: ${s.count} companies`).join('. ') + '.';
+    faqs.push({ question: `What market segments use ${label}?`, answer: q5 });
+  }
+
+  return faqs;
+}
+
+export function generateLayerFAQs(layer: Layer): FAQItem[] {
+  const layerProjects = getProjectsByLayer(layer.slug);
+  const funded = layerProjects.filter(p => p.funding && p.funding > 0).sort((a, b) => (b.funding || 0) - (a.funding || 0));
+  const totalFunding = layerProjects.reduce((sum, p) => sum + (p.funding || 0), 0);
+
+  const layerIndex = layers.findIndex(l => l.slug === layer.slug);
+  const layerAbove = layerIndex > 0 ? layers[layerIndex - 1] : null;
+  const layerBelow = layerIndex < layers.length - 1 ? layers[layerIndex + 1] : null;
+
+  const segCounts: Array<{ name: string; count: number }> = [];
+  segments.forEach(s => {
+    const count = layerProjects.filter(p => p.segment === s.slug || p.segments?.includes(s.slug)).length;
+    if (count > 0) segCounts.push({ name: s.name, count });
+  });
+  segCounts.sort((a, b) => b.count - a.count);
+
+  const aiTypeCounts: Record<string, number> = {};
+  layerProjects.forEach(p => p.ai_types?.forEach(t => { aiTypeCounts[t] = (aiTypeCounts[t] || 0) + 1; }));
+  const topAiTypes = Object.entries(aiTypeCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 4)
+    .map(([type, count]) => ({ label: AI_TYPE_LABELS[type as AIType], count }));
+
+  const faqs: FAQItem[] = [];
+
+  // Q1: "What is the {layer} layer?"
+  let q1 = `${layer.description} The ${layer.name} layer sits at position ${layer.position} in the five-layer financial AI technology stack`;
+  if (layerAbove) q1 += `, below ${layerAbove.name}`;
+  if (layerBelow) q1 += ` and above ${layerBelow.name}`;
+  q1 += `. ${layerProjects.length} companies in the AIFI directory operate at this layer, with ${formatFunding(totalFunding)} in combined funding.`;
+  faqs.push({ question: `What is the ${layer.name} layer in financial AI?`, answer: q1 });
+
+  // Q2: "Which companies operate here?"
+  let q2 = `${layerProjects.length} companies operate at the ${layer.name} layer. `;
+  q2 += funded.slice(0, 3).map(p => `${p.name}: ${p.tagline}`).join('. ');
+  if (funded.length > 3) q2 += `. And ${funded.length - 3} more.`;
+  faqs.push({ question: `Which companies operate at the ${layer.name} layer?`, answer: q2 });
+
+  // Q3: "How does {layer} fit in the stack?"
+  let q3 = `The financial AI stack has 5 layers: ${layers.map(l => l.name).join(', ')} (ordered by position). ${layer.name} is at position ${layer.position}.`;
+  if (layerAbove) q3 += ` Above it, ${layerAbove.name}: ${layerAbove.description}`;
+  if (layerBelow) q3 += ` Below it, ${layerBelow.name}: ${layerBelow.description}`;
+  faqs.push({ question: `How does the ${layer.name} layer fit in the financial AI stack?`, answer: q3 });
+
+  // Q4: "Most funded company?"
+  if (funded[0]) {
+    let q4 = `${funded[0].name} is the most funded company at the ${layer.name} layer`;
+    if (funded[0].funding) q4 += `, with ${formatFunding(funded[0].funding)} raised`;
+    q4 += `. ${funded[0].tagline}`;
+    if (funded[1]) {
+      q4 += ` Followed by ${funded[1].name}${funded[1].funding ? ` (${formatFunding(funded[1].funding)})` : ''}.`;
+    }
+    faqs.push({ question: `What is the most funded ${layer.name} company?`, answer: q4 });
+  }
+
+  // Q5: "What AI technologies are used at this layer?"
+  if (topAiTypes.length > 0) {
+    faqs.push({
+      question: `What AI technologies are used at the ${layer.name} layer?`,
+      answer: `Companies at the ${layer.name} layer most commonly use ${topAiTypes.map(t => `${t.label} (${t.count} companies)`).join(', ')}.`,
+    });
+  }
+
+  // Q6: "Which market segments are represented?"
+  if (segCounts.length > 0) {
+    let q6 = `The ${layer.name} layer serves ${segCounts.length} market segments. `;
+    q6 += `The largest are ${segCounts.slice(0, 3).map(s => `${s.name} (${s.count} companies)`).join(', ')}.`;
+    faqs.push({ question: `Which market segments are represented at the ${layer.name} layer?`, answer: q6 });
+  }
+
+  return faqs;
+}
+
+export function generateCrossDimensionalFAQs(segmentSlug: string, aiType: AIType): FAQItem[] {
+  const segment = getSegment(segmentSlug);
+  const label = AI_TYPE_LABELS[aiType];
+  const description = AI_TYPE_DESCRIPTIONS[aiType];
+  if (!segment || !label) return [];
+
+  const matching = getProjectsBySegmentAndAIType(segmentSlug, aiType);
+  const funded = matching.filter(p => p.funding && p.funding > 0).sort((a, b) => (b.funding || 0) - (a.funding || 0));
+  const totalFunding = matching.reduce((sum, p) => sum + (p.funding || 0), 0);
+
+  const faqs: FAQItem[] = [];
+
+  // Q1: "How is {label} used in {segment}?"
+  let q1 = `${description} In the ${segment.name.toLowerCase()} sector, ${label} is applied by ${matching.length} companies tracked by AIFI Map, with ${formatFunding(totalFunding)} in combined funding.`;
+  if (funded.length > 0) {
+    q1 += ` Leading companies include ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('; ')}.`;
+  }
+  faqs.push({ question: `How is ${label} used in ${segment.name.toLowerCase()}?`, answer: q1 });
+
+  // Q2: "Which {segment} companies use {label}?"
+  let q2 = `The AIFI directory tracks ${matching.length} ${segment.name.toLowerCase()} companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding. `;
+  q2 += funded.slice(0, 5).map(p => p.name).join(', ');
+  if (funded.length > 5) q2 += `, and ${funded.length - 5} more`;
+  q2 += '.';
+  faqs.push({ question: `Which ${segment.name.toLowerCase()} companies use ${label}?`, answer: q2 });
+
+  // Q3: "Most funded?"
+  if (funded[0]) {
+    let q3 = `${funded[0].name} is the most funded company using ${label} in ${segment.name.toLowerCase()}`;
+    if (funded[0].funding) q3 += `, with ${formatFunding(funded[0].funding)} raised`;
+    q3 += `. ${funded[0].tagline}`;
+    if (funded[1]) {
+      q3 += ` Followed by ${funded[1].name}${funded[1].funding ? ` (${formatFunding(funded[1].funding)})` : ''}.`;
+    }
+    faqs.push({ question: `What is the most funded ${label} ${segment.name.toLowerCase()} company?`, answer: q3 });
+  }
+
+  // Q4: "How does {label} compare to other technologies in {segment}?"
+  const allTypes = new Set<AIType>();
+  getProjectsBySegment(segmentSlug).forEach(p => p.ai_types?.forEach(t => allTypes.add(t)));
+  const otherTypes = Array.from(allTypes)
+    .filter(t => t !== aiType)
+    .map(t => ({ label: AI_TYPE_LABELS[t], count: getProjectsBySegmentAndAIType(segmentSlug, t).length }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 3);
+  if (otherTypes.length > 0) {
+    let q4 = `In the ${segment.name} segment, ${label} is used by ${matching.length} companies. `;
+    q4 += `Other AI technologies applied in this segment include ${otherTypes.map(t => `${t.label} (${t.count} companies)`).join(', ')}.`;
+    faqs.push({ question: `How does ${label} compare to other AI technologies in ${segment.name.toLowerCase()}?`, answer: q4 });
+  }
+
+  return faqs;
 }

@@ -9,6 +9,7 @@ import {
   getLayer,
   getProjectsByLayer,
   formatFunding,
+  generateLayerFAQs,
 } from '@/lib/data';
 import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
@@ -57,42 +58,16 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
   });
   segCounts.sort((a, b) => b.count - a.count);
 
-  // Stack context
-  const layerIndex = layers.findIndex(l => l.slug === layer.slug);
-  const layerAbove = layerIndex > 0 ? layers[layerIndex - 1] : null;
-  const layerBelow = layerIndex < layers.length - 1 ? layers[layerIndex + 1] : null;
-
-  // Related layers
-  const relatedLayers = layers.filter(l => l.slug !== layer.slug);
-
-  // FAQ content
-  const topCompany = funded[0];
-  const faqs = [
-    {
-      q: `What is the ${layer.name} layer in financial AI?`,
-      a: `${layer.description} The ${layer.name} layer sits at position ${layer.position} in the financial AI technology stack${layerAbove ? `, below ${layerAbove.name}` : ''}${layerBelow ? ` and above ${layerBelow.name}` : ''}. ${layerProjects.length} companies in the AIFI Map directory operate at this layer.`,
-    },
-    {
-      q: `Which companies operate at the ${layer.name} layer?`,
-      a: `${layerProjects.length} companies operate at the ${layer.name} layer. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
-    },
-    {
-      q: `How does ${layer.name} fit in the financial AI stack?`,
-      a: `The financial AI stack has 5 layers: ${layers.map(l => l.name).join(', ')} (top to bottom). ${layer.name} is at position ${layer.position}${layerAbove ? `. Above it, ${layerAbove.name}: ${layerAbove.description}` : ''}${layerBelow ? `. Below it, ${layerBelow.name}: ${layerBelow.description}` : ''}.`,
-    },
-    ...(topCompany ? [{
-      q: `What is the most funded ${layer.name} company?`,
-      a: `${topCompany.name} is the most funded company at the ${layer.name} layer${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
-    }] : []),
-  ];
+  // FAQ content (centralized)
+  const faqs = generateLayerFAQs(layer);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
     })),
   };
 
@@ -245,8 +220,8 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>
-              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.q}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{f.a}</p>
+              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.question}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{f.answer}</p>
             </div>
           ))}
         </div>

@@ -10,6 +10,7 @@ import {
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
+  generateAITypeFAQs,
 } from '@/lib/data';
 import { AIType } from '@/types';
 import JsonLd from '@/components/JsonLd';
@@ -79,34 +80,16 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
       segments: p.segments || [],
     }));
 
-  // FAQ content
-  const topCompany = funded[0];
-  const faqs = [
-    {
-      q: `How is ${label} used in finance?`,
-      a: `${description} In the financial sector, ${label} is applied across ${segCounts.length} market segments including ${segCounts.slice(0, 3).map(s => s.name.toLowerCase()).join(', ')}. The AIFI Map directory tracks ${typeProjects.length} companies using ${label} in financial services.`,
-    },
-    {
-      q: `Which financial companies use ${label}?`,
-      a: `${typeProjects.length} companies in the AIFI Map directory use ${label}. ${funded.slice(0, 3).map(p => `${p.name} (${p.tagline})`).join('. ')}${funded.length > 3 ? `. And ${funded.length - 3} more.` : '.'}`,
-    },
-    {
-      q: `How many companies use ${label} in finance?`,
-      a: `The AIFI Map directory tracks ${typeProjects.length} financial companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding raised.`,
-    },
-    ...(topCompany ? [{
-      q: `What is the most funded ${label} finance company?`,
-      a: `${topCompany.name} is the most funded ${label} company in the AIFI Map directory${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
-    }] : []),
-  ];
+  // FAQ content (centralized)
+  const faqs = generateAITypeFAQs(aiType);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
     })),
   };
 
@@ -217,8 +200,8 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>
-              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.q}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{f.a}</p>
+              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.question}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{f.answer}</p>
             </div>
           ))}
         </div>

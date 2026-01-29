@@ -10,6 +10,7 @@ import {
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
+  generateCrossDimensionalFAQs,
 } from '@/lib/data';
 import { AIType } from '@/types';
 import CompanyLogo from '@/components/CompanyLogo';
@@ -81,30 +82,16 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
     .filter(p => p.aiType === aiType && p.segmentSlug !== segment.slug)
     .slice(0, 4);
 
-  // FAQ
-  const topCompany = funded[0];
-  const faqs = [
-    {
-      q: `How is ${label} used in ${segment.name.toLowerCase()}?`,
-      a: `${aiDescription} In the ${segment.name.toLowerCase()} sector, ${label} is applied by ${matching.length} companies tracked in the AIFI Map directory. ${segment.description}. ${funded.slice(0, 3).map(p => `${p.name}: ${p.tagline}`).join('. ')}.`,
-    },
-    {
-      q: `Which ${segment.name.toLowerCase()} companies use ${label}?`,
-      a: `The AIFI directory tracks ${matching.length} ${segment.name.toLowerCase()} companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding. ${funded.slice(0, 5).map(p => p.name).join(', ')}${funded.length > 5 ? `, and ${funded.length - 5} more` : ''}.`,
-    },
-    ...(topCompany ? [{
-      q: `What is the most funded ${label} ${segment.name.toLowerCase()} company?`,
-      a: `${topCompany.name} is the most funded company using ${label} in ${segment.name.toLowerCase()}${topCompany.funding ? `, with ${formatFunding(topCompany.funding)} raised` : ''}. ${topCompany.tagline}`,
-    }] : []),
-  ];
+  // FAQ (centralized)
+  const faqs = generateCrossDimensionalFAQs(segment.slug, aiType);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
     })),
   };
 
@@ -275,8 +262,8 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
         <div className="space-y-6">
           {faqs.map((f, i) => (
             <div key={i}>
-              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.q}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{f.a}</p>
+              <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.question}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{f.answer}</p>
             </div>
           ))}
         </div>
