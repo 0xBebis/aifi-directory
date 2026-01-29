@@ -23,6 +23,9 @@ import {
   getCompanyTypeColor,
   getFundingStageColor,
   generateSeoDescription,
+  generateCompanyFAQs,
+  generateCitations,
+  BUILD_DATE_ISO,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
@@ -103,6 +106,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const hasCustomers = project.customers && project.customers.length > 0;
   const isAcquired = project.company_type === 'acquired';
   const isDefunct = project.defunct;
+  const faqs = generateCompanyFAQs(project);
+  const citations = generateCitations(project);
 
   // Build metrics for the stats bar
   const metrics: Array<{ label: string; value: string; icon: React.ReactNode }> = [];
@@ -134,8 +139,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (project.twitter) sameAs.push(project.twitter);
   if (project.linkedin) sameAs.push(project.linkedin);
 
+  const allSegmentNames = [
+    primarySegment?.name,
+    ...(project.segments || []).map(s => getSegment(s)?.name),
+  ].filter(Boolean) as string[];
+
   const organizationJsonLd: Record<string, unknown> = {
-    '@context': 'https://schema.org',
     '@type': 'Organization',
     name: project.name,
     description: project.summary || project.tagline,
@@ -162,6 +171,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       })),
     }),
     ...(sameAs.length > 0 && { sameAs }),
+    industry: 'Financial Services',
+    additionalType: 'https://schema.org/FinancialService',
+    knowsAbout: [
+      ...(project.ai_types?.map(t => AI_TYPE_LABELS[t]) || []),
+      ...allSegmentNames,
+    ],
+    ...(project.region && {
+      areaServed: { '@type': 'Place', name: REGION_LABELS[project.region] },
+    }),
+    ...(primarySegment && {
+      memberOf: {
+        '@type': 'ProgramMembership',
+        name: `AIFI Map ${primarySegment.name} Directory`,
+        hostingOrganization: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
+      },
+    }),
   };
 
   const breadcrumbJsonLd: Record<string, unknown> = {
@@ -174,10 +199,35 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     ],
   };
 
+  const webPageJsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${project.name} — ${project.tagline}`,
+    description: generateSeoDescription(project),
+    url: `https://aifimap.com/p/${project.slug}`,
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+    mainEntity: organizationJsonLd,
+    dateModified: project.last_funding_date
+      ? (project.last_funding_date.length === 4 ? `${project.last_funding_date}-01-01` : `${project.last_funding_date}-01`)
+      : BUILD_DATE_ISO,
+    breadcrumb: breadcrumbJsonLd,
+  };
+
+  const faqJsonLd: Record<string, unknown> | null = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
+
   return (
     <>
-    <JsonLd data={organizationJsonLd} />
+    <JsonLd data={webPageJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
+    {faqJsonLd && <JsonLd data={faqJsonLd} />}
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       {/* Breadcrumbs */}
       <Breadcrumbs items={[
@@ -357,6 +407,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <p className="text-text-secondary leading-relaxed text-[0.9375rem]">
                 {project.summary}
               </p>
+              {citations.length > 0 && (
+                <div className="mt-4 pt-4 border-t border-border/30">
+                  <p className="text-[0.625rem] uppercase tracking-wider text-text-faint mb-2">Key Facts</p>
+                  <ol className="space-y-1">
+                    {citations.map(c => (
+                      <li key={c.id} className="text-xs text-text-muted leading-relaxed flex gap-2">
+                        <span className="text-text-faint shrink-0">[{c.id}]</span>
+                        <span><span className="font-medium text-text-secondary">{c.label}:</span> {c.text}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
           )}
 
@@ -669,6 +732,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </span>
                 )}
               </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── FAQ ── */}
+      {faqs.length > 0 && (
+        <div className="mt-8 pt-8 border-t border-border/30">
+          <h2 className="text-lg font-medium text-text-primary mb-5">Frequently Asked Questions</h2>
+          <div className="space-y-5">
+            {faqs.map((f, i) => (
+              <div key={i}>
+                <h3 className="text-[0.9375rem] font-semibold text-text-primary mb-2">{f.question}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{f.answer}</p>
+              </div>
             ))}
           </div>
         </div>

@@ -47,9 +47,20 @@ export default function DirectoryPage() {
     })),
   };
 
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'AI Finance Company Directory',
+    url: 'https://aifimap.com/directory',
+    description: `Browse ${projects.length} AI + Finance companies across ${segments.length} market segments and ${layers.length} technology layers. ${formatFunding(totalFunding)} in total funding tracked.`,
+    numberOfItems: projects.length,
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+    mainEntity: itemListJsonLd,
+  };
+
   return (
     <main className="min-h-screen">
-      <JsonLd data={itemListJsonLd} />
+      <JsonLd data={collectionJsonLd} />
 
       {/* Page header */}
       <div className="relative overflow-hidden border-b border-border">

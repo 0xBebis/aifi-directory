@@ -43,8 +43,23 @@ const urls = [
   url('/about', '0.9', 'monthly'),
   url('/submit', '0.5', 'monthly'),
 
-  // Company detail pages
-  ...projects.map(p => url(`/p/${p.slug}`, '0.8', 'monthly')),
+  // Company detail pages (with per-company lastmod from last_funding_date)
+  ...projects.map(p => {
+    let lastmod = today;
+    if (p.last_funding_date) {
+      if (/^\d{4}-\d{2}$/.test(p.last_funding_date)) {
+        lastmod = `${p.last_funding_date}-01`;
+      } else if (/^\d{4}$/.test(p.last_funding_date)) {
+        lastmod = `${p.last_funding_date}-01-01`;
+      }
+    }
+    // Companies funded within last 6 months get weekly changefreq
+    const fundingDate = new Date(lastmod);
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+    const changefreq = fundingDate >= sixMonthsAgo ? 'weekly' : 'monthly';
+    return url(`/p/${p.slug}`, '0.8', changefreq, lastmod);
+  }),
 
   // Agent detail pages
   ...agents.map(a => {

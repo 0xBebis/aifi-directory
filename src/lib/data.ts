@@ -786,3 +786,186 @@ export function getCompaniesAtSameFundingStage(project: Project, limit: number =
     .sort((a, b) => (b.funding || 0) - (a.funding || 0))
     .slice(0, limit);
 }
+
+// ── SEO / AEO Helpers ──
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export function generateCompanyFAQs(project: Project): FAQItem[] {
+  const segment = getSegment(project.segment);
+  const layer = getLayer(project.layer);
+  const faqs: FAQItem[] = [];
+
+  // Q1: Always — "What is {name}?"
+  const whatParts = [
+    `${project.name} is ${project.tagline.endsWith('.') ? project.tagline : project.tagline + '.'}`,
+    segment ? `The company operates in the ${segment.name} segment` : null,
+    layer ? `at the ${layer.name} layer of the financial AI stack.` : null,
+    project.founded ? `Founded in ${project.founded}` : null,
+    project.hq_city && project.hq_country
+      ? `${project.founded ? 'and headquartered' : 'Headquartered'} in ${project.hq_city}, ${getCountryName(project.hq_country)}.`
+      : project.founded ? '.' : null,
+  ].filter(Boolean).join(' ');
+  faqs.push({ question: `What is ${project.name}?`, answer: whatParts });
+
+  // Q2: Conditional — "Who founded {name}?"
+  if (project.founders && project.founders.length > 0) {
+    const founderList = project.founders.map(f => f.title ? `${f.name} (${f.title})` : f.name).join(', ');
+    faqs.push({
+      question: `Who founded ${project.name}?`,
+      answer: `${project.name} was founded by ${founderList}${project.founded ? ` in ${project.founded}` : ''}.`,
+    });
+  }
+
+  // Q3: Conditional — "How much funding has {name} raised?"
+  if (project.funding) {
+    let a = `${project.name} has raised ${formatFunding(project.funding)} in total funding.`;
+    if (project.funding_stage && project.funding_stage !== 'undisclosed') {
+      a += ` The company is at the ${FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]} stage.`;
+    }
+    if (project.last_funding_date) {
+      a += ` The most recent funding round was in ${formatFundingDate(project.last_funding_date)}.`;
+    }
+    if (project.valuation) {
+      a += ` The company is valued at ${formatFunding(project.valuation)}.`;
+    }
+    faqs.push({ question: `How much funding has ${project.name} raised?`, answer: a });
+  }
+
+  // Q4: Conditional — "What AI technology does {name} use?"
+  if (project.ai_types && project.ai_types.length > 0) {
+    const typeLabels = project.ai_types.map(t => AI_TYPE_LABELS[t]);
+    const descriptions = project.ai_types.map(t => `${AI_TYPE_LABELS[t]}: ${AI_TYPE_DESCRIPTIONS[t]}`);
+    faqs.push({
+      question: `What AI technology does ${project.name} use?`,
+      answer: `${project.name} uses ${typeLabels.join(', ')} technology. ${descriptions.join('. ')}.`,
+    });
+  }
+
+  // Q5: Conditional — "What market segment does {name} operate in?"
+  if (segment) {
+    const additionalSegs = (project.segments || []).map(s => getSegment(s)).filter(Boolean);
+    const allNames = [segment.name, ...additionalSegs.map(s => s!.name)];
+    faqs.push({
+      question: `What market segment does ${project.name} operate in?`,
+      answer: `${project.name} operates in the ${allNames.join(', ')} market segment${allNames.length > 1 ? 's' : ''}. ${segment.description}`,
+    });
+  }
+
+  // Q6: Conditional — "Where is {name} headquartered?"
+  if (project.hq_city && project.hq_country) {
+    let a = `${project.name} is headquartered in ${project.hq_city}, ${getCountryName(project.hq_country)}.`;
+    if (project.employees) {
+      a += ` The company has ${EMPLOYEE_RANGE_LABELS[project.employees as EmployeeRange]} employees.`;
+    }
+    if (project.region) {
+      a += ` It operates in the ${REGION_LABELS[project.region]} region.`;
+    }
+    faqs.push({ question: `Where is ${project.name} headquartered?`, answer: a });
+  }
+
+  return faqs;
+}
+
+export interface Citation {
+  id: number;
+  label: string;
+  text: string;
+}
+
+export function generateCitations(project: Project): Citation[] {
+  const citations: Citation[] = [];
+  let idx = 1;
+
+  if (project.founded) {
+    citations.push({
+      id: idx++,
+      label: 'Founded',
+      text: `Founded in ${project.founded}${project.hq_city && project.hq_country ? ` in ${project.hq_city}, ${getCountryName(project.hq_country)}` : ''}.`,
+    });
+  }
+
+  if (project.funding) {
+    let t = `Total funding: ${formatFunding(project.funding)}`;
+    if (project.last_funding_date) t += `. Last round: ${formatFundingDate(project.last_funding_date)}`;
+    if (project.funding_stage && project.funding_stage !== 'undisclosed') {
+      t += `. Stage: ${FUNDING_STAGE_LABELS[project.funding_stage as FundingStage]}`;
+    }
+    t += '.';
+    citations.push({ id: idx++, label: 'Funding', text: t });
+  }
+
+  if (project.valuation) {
+    citations.push({ id: idx++, label: 'Valuation', text: `Valued at ${formatFunding(project.valuation)}.` });
+  }
+
+  if (project.customers && project.customers.length > 0) {
+    citations.push({ id: idx++, label: 'Customers', text: `Key customers include ${project.customers.join(', ')}.` });
+  }
+
+  if (project.employees) {
+    citations.push({ id: idx++, label: 'Employees', text: `Employee count: ${EMPLOYEE_RANGE_LABELS[project.employees as EmployeeRange]}.` });
+  }
+
+  if (project.company_type === 'acquired' && project.acquirer) {
+    let t = `Acquired by ${project.acquirer}`;
+    if (project.acquired_date) t += ` in ${project.acquired_date}`;
+    t += '.';
+    citations.push({ id: idx++, label: 'Acquisition', text: t });
+  }
+
+  return citations;
+}
+
+export interface ComparisonMetrics {
+  name: string;
+  segment: string;
+  segmentName: string;
+  layer: string;
+  layerName: string;
+  aiTypes: string[];
+  funding: number | null;
+  fundingFormatted: string | null;
+  fundingStage: string | null;
+  founded: number | null;
+  employeeRange: string | null;
+  region: string | null;
+  hqCountry: string | null;
+  companyType: string | null;
+  valuation: number | null;
+  valuationFormatted: string | null;
+  competitors: Array<{ slug: string; name: string; funding: number | null }>;
+}
+
+export function generateComparisonData(project: Project): ComparisonMetrics {
+  const segment = getSegment(project.segment);
+  const layer = getLayer(project.layer);
+  const similar = getSimilarProjects(project, 5);
+
+  return {
+    name: project.name,
+    segment: project.segment,
+    segmentName: segment?.name || project.segment,
+    layer: project.layer,
+    layerName: layer?.name || project.layer,
+    aiTypes: project.ai_types?.map(t => AI_TYPE_LABELS[t]) || [],
+    funding: project.funding || null,
+    fundingFormatted: project.funding ? formatFunding(project.funding) : null,
+    fundingStage: project.funding_stage ? FUNDING_STAGE_LABELS[project.funding_stage as FundingStage] : null,
+    founded: project.founded || null,
+    employeeRange: project.employees || null,
+    region: project.region ? REGION_LABELS[project.region] : null,
+    hqCountry: project.hq_country ? getCountryName(project.hq_country) : null,
+    companyType: project.company_type ? COMPANY_TYPE_LABELS[project.company_type as CompanyType] : null,
+    valuation: project.valuation || null,
+    valuationFormatted: project.valuation ? formatFunding(project.valuation) : null,
+    competitors: similar.map(p => ({
+      slug: p.slug,
+      name: p.name,
+      funding: p.funding || null,
+    })),
+  };
+}

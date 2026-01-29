@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import GlobalSearch from '@/components/GlobalSearch';
 import ScrollToTop from '@/components/ScrollToTop';
 import NewsletterForm from '@/components/NewsletterForm';
-import { getSearchableItems } from '@/lib/data';
+import { getSearchableItems, projects, agents, segments, layers, BUILD_DATE_ISO } from '@/lib/data';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aifimap.com'),
@@ -51,6 +51,51 @@ export default function RootLayout({
           url: 'https://aifimap.com',
           description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
           sameAs: ['https://github.com/0xBebis/aifi-directory'],
+          knowsAbout: ['Artificial Intelligence', 'Financial Services', 'Financial Technology', ...segments.map(s => s.name)],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'editorial',
+            url: 'https://aifimap.com/submit',
+          },
+        }} />
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'AIFI Map',
+          url: 'https://aifimap.com',
+          description: 'The definitive directory of companies and autonomous AI agents building at the intersection of artificial intelligence and financial services.',
+          publisher: { '@type': 'Organization', name: 'AIFI Map' },
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: 'https://aifimap.com/directory?search={search_term_string}',
+            },
+            'query-input': 'required name=search_term_string',
+          },
+        }} />
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'DataCatalog',
+          name: 'AIFI Map — AI Finance Company Directory',
+          description: `Structured directory of ${projects.length} companies and ${agents.length} agents across ${segments.length} market segments and ${layers.length} technology layers.`,
+          url: 'https://aifimap.com/directory',
+          creator: { '@type': 'Organization', name: 'AIFI Map' },
+          dateModified: BUILD_DATE_ISO,
+          dataset: [
+            {
+              '@type': 'Dataset',
+              name: 'AI Finance Companies',
+              description: `${projects.length} companies building at the intersection of AI and financial services.`,
+              url: 'https://aifimap.com/directory',
+            },
+            {
+              '@type': 'Dataset',
+              name: 'Financial AI Agents',
+              description: `${agents.length} autonomous AI agents registered via EIP-8004 for financial services.`,
+              url: 'https://aifimap.com/agents',
+            },
+          ],
         }} />
         <Nav />
         <GlobalSearch items={getSearchableItems()} />

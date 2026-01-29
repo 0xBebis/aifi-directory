@@ -120,10 +120,30 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
     ],
   };
 
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${label} in Finance: AI Companies`,
+    url: `https://aifimap.com/ai-types/${aiType}`,
+    description: `${typeProjects.length} financial companies using ${label}. ${description}`,
+    numberOfItems: typeProjects.length,
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: funded.slice(0, 20).map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: p.name,
+        url: `https://aifimap.com/p/${p.slug}`,
+      })),
+    },
+  };
+
   return (
     <>
     <JsonLd data={faqJsonLd} />
     <JsonLd data={breadcrumbJsonLd} />
+    <JsonLd data={collectionJsonLd} />
     <div className="max-w-5xl mx-auto px-6 sm:px-8 py-8">
       <Breadcrumbs items={[
         { label: 'Directory', href: '/directory' },
