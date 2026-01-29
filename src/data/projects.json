@@ -13854,5 +13854,28 @@
       "llm"
     ],
     "last_funding_date": "2022-01"
+  },
+  {
+    "slug": "vinyl-ai",
+    "name": "Vinyl AI",
+    "tagline": "Powers AI Vinyls",
+    "segment": "risk",
+    "layer": "applications",
+    "website": "https://viny.net/",
+    "description": "AI Vinyls that spin by themselves and need no needle, AI music generated. ",
+    "summary": "AI Vinyls that spin by themselves and need no needle, AI music generated. ",
+    "ai_types": [
+      "predictive-ml",
+      "computer-vision"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "emea",
+    "employees": "1-10",
+    "founded": 2021,
+    "hq_country": "DE",
+    "hq_city": "Cologne",
+    "crypto": true,
+    "twitter": "Vinyl"
   }
 ]
