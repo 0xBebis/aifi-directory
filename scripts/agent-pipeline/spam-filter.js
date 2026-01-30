@@ -44,7 +44,16 @@ function isSpamDescription(description) {
     return { isSpam: true, reason: `description too short (${(description || '').trim().length} < ${MIN_DESCRIPTION_LENGTH} chars)` };
   }
 
-  const match = matchesAnyPattern(description.toLowerCase(), SPAM_DESC_PATTERNS);
+  // Strip technical tokens before pattern matching — URLs, hex addresses, and
+  // protocol URIs contain long non-space runs and consonant/digit sequences
+  // that trigger gibberish detectors as false positives.
+  const stripped = description
+    .replace(/https?:\/\/\S+/gi, ' ')       // URLs
+    .replace(/\S+:\/\/\S+/gi, ' ')          // other protocol URIs
+    .replace(/0x[0-9a-f]{10,}/gi, ' ')       // Ethereum hex addresses
+    .replace(/\S+\/\S+\/\S+/g, ' ');         // slash-separated paths (a/b/c)
+
+  const match = matchesAnyPattern(stripped.toLowerCase(), SPAM_DESC_PATTERNS);
   return match
     ? { isSpam: true, reason: `description ${match}` }
     : { isSpam: false, reason: null };

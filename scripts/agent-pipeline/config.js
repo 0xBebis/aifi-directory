@@ -136,7 +136,10 @@ module.exports = {
     /^an?\s+agent\s+created\s+by\s+the\s/i,   // "An agent created by the..."
     /^test\b/i,                                // description starts with "test"
     /^[^aeiou\s]{8,}/i,                        // gibberish: starts with consonant run
+    /[b-df-hj-np-tv-xz]{10,}/i,                // gibberish: 10+ consecutive consonant letters (ignores digits, symbols, punctuation)
     /(.{5,}?)\1{3,}/i,                         // repeated phrases 3+ times
+    /^\S{20,}$/,                               // entire description is one unbroken word (no spaces), 20+ chars
+    /\S{30,}/,                                 // any single token 30+ chars without spaces (embedded gibberish)
   ],
 };
 
