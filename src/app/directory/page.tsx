@@ -7,6 +7,7 @@ import {
   getTotalFunding,
   formatFunding,
   BUILD_DATE,
+  BUILD_DATE_ISO,
 } from '@/lib/data';
 import DirectoryBrowser from '@/components/DirectoryBrowser';
 import JsonLd from '@/components/JsonLd';
@@ -54,6 +55,7 @@ export default function DirectoryPage() {
     url: 'https://aifimap.com/directory',
     description: `Browse ${projects.length} AI + Finance companies across ${segments.length} market segments and ${layers.length} technology layers. ${formatFunding(totalFunding)} in total funding tracked.`,
     numberOfItems: projects.length,
+    dateModified: BUILD_DATE_ISO,
     isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
     mainEntity: itemListJsonLd,
   };

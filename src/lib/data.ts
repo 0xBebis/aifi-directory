@@ -794,6 +794,18 @@ export interface FAQItem {
   answer: string;
 }
 
+const FAQ_MAX_ANSWER_LENGTH = 5000;
+
+function validateFAQAnswers(faqs: FAQItem[], context: string): void {
+  for (const faq of faqs) {
+    if (faq.answer.length > FAQ_MAX_ANSWER_LENGTH) {
+      console.warn(
+        `[FAQ Warning] Answer exceeds ${FAQ_MAX_ANSWER_LENGTH} chars (${faq.answer.length}) in ${context}: "${faq.question.slice(0, 60)}"`
+      );
+    }
+  }
+}
+
 export function generateCompanyFAQs(project: Project): FAQItem[] {
   const segment = getSegment(project.segment);
   const layer = getLayer(project.layer);
@@ -884,6 +896,7 @@ export function generateCompanyFAQs(project: Project): FAQItem[] {
         answer += ` Among ${segFunded.length} funded ${segment.name} companies, ${project.name} ranks #${rank} by total capital raised.`;
       }
     }
+    answer += ` (Source: AIFI Map directory.)`;
     faqs.push({ question: `How much funding has ${project.name} raised?`, answer });
   }
 
@@ -955,6 +968,7 @@ export function generateCompanyFAQs(project: Project): FAQItem[] {
     for (const comp of similar.slice(0, 3)) {
       answer += ` ${comp.name} focuses on ${comp.tagline.toLowerCase().replace(/\.$/, '')}.`;
     }
+    answer += ` (Based on AIFI Map classification data.)`;
     faqs.push({ question: `Who are ${project.name}'s competitors?`, answer });
   }
 
@@ -1008,6 +1022,7 @@ export function generateCompanyFAQs(project: Project): FAQItem[] {
     faqs.push({ question: `Does ${project.name} use Web3 or blockchain technology?`, answer });
   }
 
+  validateFAQAnswers(faqs, `company/${project.slug}`);
   return faqs;
 }
 
@@ -1194,6 +1209,7 @@ export function generateSegmentFAQs(segment: Segment): FAQItem[] {
   if (topRegion) {
     q2 += ` The majority are based in the ${REGION_LABELS[topRegion[0] as Region]} region (${topRegion[1]} companies).`;
   }
+  q2 += ` (Source: AIFI Map directory.)`;
   faqs.push({ question: `How many AI ${segment.name.toLowerCase()} companies are there?`, answer: q2 });
 
   // Q3: "What AI technologies are used in {segment}?"
@@ -1241,6 +1257,7 @@ export function generateSegmentFAQs(segment: Segment): FAQItem[] {
     });
   }
 
+  validateFAQAnswers(faqs, `segment/${segment.slug}`);
   return faqs;
 }
 
@@ -1284,6 +1301,7 @@ export function generateAITypeFAQs(aiType: AIType): FAQItem[] {
   if (layerCounts.length > 0) {
     q3 += ` These companies span the technology stack: ${layerCounts.map(l => `${l.name} (${l.count})`).join(', ')}.`;
   }
+  q3 += ` (Source: AIFI Map directory.)`;
   faqs.push({ question: `How many companies use ${label} in finance?`, answer: q3 });
 
   // Q4: "Most funded {label} company?"
@@ -1304,6 +1322,7 @@ export function generateAITypeFAQs(aiType: AIType): FAQItem[] {
     faqs.push({ question: `What market segments use ${label}?`, answer: q5 });
   }
 
+  validateFAQAnswers(faqs, `ai-type/${aiType}`);
   return faqs;
 }
 
@@ -1377,6 +1396,7 @@ export function generateLayerFAQs(layer: Layer): FAQItem[] {
     faqs.push({ question: `Which market segments are represented at the ${layer.name} layer?`, answer: q6 });
   }
 
+  validateFAQAnswers(faqs, `layer/${layer.slug}`);
   return faqs;
 }
 
@@ -1403,7 +1423,7 @@ export function generateCrossDimensionalFAQs(segmentSlug: string, aiType: AIType
   let q2 = `The AIFI directory tracks ${matching.length} ${segment.name.toLowerCase()} companies using ${label}, with a combined ${formatFunding(totalFunding)} in funding. `;
   q2 += funded.slice(0, 5).map(p => p.name).join(', ');
   if (funded.length > 5) q2 += `, and ${funded.length - 5} more`;
-  q2 += '.';
+  q2 += '. (Source: AIFI Map directory.)';
   faqs.push({ question: `Which ${segment.name.toLowerCase()} companies use ${label}?`, answer: q2 });
 
   // Q3: "Most funded?"
@@ -1418,18 +1438,28 @@ export function generateCrossDimensionalFAQs(segmentSlug: string, aiType: AIType
   }
 
   // Q4: "How does {label} compare to other technologies in {segment}?"
+  const segProjects = getProjectsBySegment(segmentSlug);
   const allTypes = new Set<AIType>();
-  getProjectsBySegment(segmentSlug).forEach(p => p.ai_types?.forEach(t => allTypes.add(t)));
+  segProjects.forEach(p => p.ai_types?.forEach(t => allTypes.add(t)));
   const otherTypes = Array.from(allTypes)
     .filter(t => t !== aiType)
-    .map(t => ({ label: AI_TYPE_LABELS[t], count: getProjectsBySegmentAndAIType(segmentSlug, t).length }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 3);
+    .map(t => {
+      const tProjects = getProjectsBySegmentAndAIType(segmentSlug, t);
+      const tFunding = tProjects.reduce((sum, p) => sum + (p.funding || 0), 0);
+      return { type: t, label: AI_TYPE_LABELS[t], desc: AI_TYPE_DESCRIPTIONS[t], count: tProjects.length, funding: tFunding };
+    })
+    .sort((a, b) => b.count - a.count);
+  const allRanked = [{ type: aiType, label, count: matching.length, funding: totalFunding }, ...otherTypes].sort((a, b) => b.count - a.count);
+  const rank = allRanked.findIndex(t => t.type === aiType) + 1;
   if (otherTypes.length > 0) {
-    let q4 = `In the ${segment.name} segment, ${label} is used by ${matching.length} companies. `;
-    q4 += `Other AI technologies applied in this segment include ${otherTypes.map(t => `${t.label} (${t.count} companies)`).join(', ')}.`;
+    const top3 = otherTypes.slice(0, 3);
+    let q4 = `In the ${segment.name} segment, ${label} ranks #${rank} out of ${allRanked.length} AI technologies by adoption, with ${matching.length} companies and ${formatFunding(totalFunding)} in combined funding. `;
+    q4 += `The most widely adopted technologies in ${segment.name.toLowerCase()} are ${allRanked.slice(0, 3).map(t => `${t.label} (${t.count} companies, ${formatFunding(t.funding)} funded)`).join('; ')}. `;
+    q4 += `While ${label} focuses on ${description.split('.')[0].toLowerCase()}, `;
+    q4 += `alternative approaches include ${top3.slice(0, 2).map(t => `${t.label}, which ${t.desc.split('.')[0].toLowerCase()}`).join(', and ')}.`;
     faqs.push({ question: `How does ${label} compare to other AI technologies in ${segment.name.toLowerCase()}?`, answer: q4 });
   }
 
+  validateFAQAnswers(faqs, `cross/${segmentSlug}/${aiType}`);
   return faqs;
 }

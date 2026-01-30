@@ -15,7 +15,9 @@ import {
   getRecentlyFunded,
   formatFunding,
   BUILD_DATE,
+  BUILD_DATE_ISO,
 } from '@/lib/data';
+import JsonLd from '@/components/JsonLd';
 import LandingHero from '@/components/home/LandingHero';
 import SiteNav from '@/components/home/SiteNav';
 import RecentActivity from '@/components/home/RecentActivity';
@@ -68,7 +70,35 @@ export default function Home() {
     fundingDate: p.last_funding_date || '',
   }));
 
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'AIFI Map — The Financial AI Landscape',
+    description: `A curated directory of ${companyCount} companies and autonomous AI agents building the future of finance with artificial intelligence.`,
+    url: 'https://aifimap.com',
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+    dateModified: BUILD_DATE_ISO,
+    about: {
+      '@type': 'Thing',
+      name: 'Financial Artificial Intelligence',
+      description: `The intersection of AI and financial services, spanning ${segments.length} market segments and ${layers.length} technology layers.`,
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: 'Top Financial AI Companies by Funding',
+      numberOfItems: topCompanies.length,
+      itemListElement: topCompanies.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: p.name,
+        url: `https://aifimap.com/p/${p.slug}`,
+      })),
+    },
+  };
+
   return (
+    <>
+    <JsonLd data={webPageJsonLd} />
     <main className="min-h-screen">
       <LandingHero companyCount={companyCount} recentCompanies={recentCompanies} />
       <SiteNav
@@ -91,5 +121,6 @@ export default function Home() {
       <TechStack layers={layers} layerCounts={layerCounts} />
       <CallToAction />
     </main>
+    </>
   );
 }

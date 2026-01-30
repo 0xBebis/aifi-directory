@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   alternates: {
-    canonical: './',
+    canonical: 'https://aifimap.com',
     types: {
       'application/rss+xml': '/feed.xml',
     },

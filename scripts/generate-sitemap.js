@@ -86,6 +86,23 @@ const urls = [
   url('/glossary', '0.7', 'weekly'),
   url('/recent', '0.7', 'weekly'),
 
+  // Pillar content pages
+  url('/what-is-financial-ai', '0.9', 'monthly'),
+  url('/market-report', '0.9', 'weekly'),
+  url('/compare', '0.8', 'weekly'),
+
+  // Comparison pages (AI type vs AI type, both with >=5 companies)
+  ...(() => {
+    const viable = aiTypes.filter(t => projects.filter(p => p.ai_types && p.ai_types.includes(t)).length >= 5);
+    const pairs = [];
+    for (let i = 0; i < viable.length; i++) {
+      for (let j = i + 1; j < viable.length; j++) {
+        pairs.push(url(`/compare/${viable[i]}-vs-${viable[j]}`, '0.7', 'monthly'));
+      }
+    }
+    return pairs;
+  })(),
+
   // Cross-dimensional pages (segment × AI type, where 3+ companies)
   ...(() => {
     const crossPages = [];

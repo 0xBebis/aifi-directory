@@ -148,6 +148,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     '@type': 'Organization',
     name: project.name,
     description: project.summary || project.tagline,
+    ...(project.logo && { logo: `https://aifimap.com${project.logo}` }),
     ...(project.website && { url: project.website }),
     ...(project.founded && { foundingDate: String(project.founded) }),
     ...(project.hq_city && project.hq_country && {

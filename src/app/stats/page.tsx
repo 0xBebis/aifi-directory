@@ -293,8 +293,33 @@ export default function StatsPage() {
     buildDate: BUILD_DATE,
   };
 
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Financial AI Statistics & Market Data',
+    description: `Key statistics on the financial AI landscape: ${projects.length} companies, ${formatFunding(totalFunding)} in total funding, across ${segments.length} market segments.`,
+    url: 'https://aifimap.com/stats',
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+    dateModified: BUILD_DATE,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
+        { '@type': 'ListItem', position: 2, name: 'Statistics', item: 'https://aifimap.com/stats' },
+      ],
+    },
+    mainEntity: {
+      '@type': 'Dataset',
+      name: 'Financial AI Market Statistics',
+      description: `Market data for ${projects.length} AI finance companies spanning ${segments.length} segments, ${layers.length} layers, and ${countryCount} countries.`,
+      creator: { '@type': 'Organization', name: 'AIFI Map', url: 'https://aifimap.com' },
+      variableMeasured: ['Company Count', 'Total Funding', 'Market Segments', 'AI Technologies', 'Geographic Distribution'],
+    },
+  };
+
   return (
     <>
+      <JsonLd data={webPageJsonLd} />
       <JsonLd data={faqJsonLd} />
       {/* Hero header */}
       <div className="relative overflow-hidden border-b border-border/30">

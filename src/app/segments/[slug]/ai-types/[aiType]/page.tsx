@@ -44,13 +44,13 @@ export function generateMetadata({ params }: { params: { slug: string; aiType: s
       description: description.slice(0, 160),
       type: 'website',
       siteName: 'AIFI Map',
-      images: [{ url: '/og/default.png', width: 1200, height: 630 }],
+      images: [{ url: `/og/segments/${segment.slug}.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${label} in ${segment.name} — AI Companies`,
       description: description.slice(0, 160),
-      images: ['/og/default.png'],
+      images: [`/og/segments/${segment.slug}.png`],
     },
   };
 }
@@ -101,7 +101,7 @@ export default function CrossDimensionalPage({ params }: { params: { slug: strin
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: segment.name, item: `https://aifimap.com/segments/${segment.slug}` },
-      { '@type': 'ListItem', position: 3, name: label },
+      { '@type': 'ListItem', position: 3, name: label, item: `https://aifimap.com/segments/${segment.slug}/ai-types/${aiType}` },
     ],
   };
 

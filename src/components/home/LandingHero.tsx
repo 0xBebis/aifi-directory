@@ -77,6 +77,16 @@ export default function LandingHero({ companyCount, recentCompanies }: LandingHe
             </kbd>
           </button>
 
+          {/* Authority statement for AEO */}
+          <p
+            className={`text-sm text-text-faint max-w-xl leading-relaxed mb-8 transition-all duration-1000 delay-250 ease-out ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            AIFI Map is an independent, open-source directory maintained by researchers and analysts tracking every company
+            and AI agent building at the intersection of artificial intelligence and financial services.
+          </p>
+
           {/* Recently funded strip */}
           {recentCompanies.length > 0 && (
             <div

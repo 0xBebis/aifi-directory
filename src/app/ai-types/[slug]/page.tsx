@@ -11,6 +11,7 @@ import {
   AI_TYPE_COLORS,
   AI_TYPE_DESCRIPTIONS,
   generateAITypeFAQs,
+  BUILD_DATE_ISO,
 } from '@/lib/data';
 import { AIType } from '@/types';
 import JsonLd from '@/components/JsonLd';
@@ -35,13 +36,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: description.slice(0, 160),
       type: 'website',
       siteName: 'AIFI Map',
-      images: [{ url: '/og/default.png', width: 1200, height: 630 }],
+      images: [{ url: `/og/ai-types/${aiType}.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${label} in Finance — AI Companies`,
       description: description.slice(0, 160),
-      images: ['/og/default.png'],
+      images: [`/og/ai-types/${aiType}.png`],
     },
   };
 }
@@ -99,7 +100,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
-      { '@type': 'ListItem', position: 3, name: label },
+      { '@type': 'ListItem', position: 3, name: label, item: `https://aifimap.com/ai-types/${aiType}` },
     ],
   };
 
@@ -110,6 +111,7 @@ export default function AITypePage({ params }: { params: { slug: string } }) {
     url: `https://aifimap.com/ai-types/${aiType}`,
     description: `${typeProjects.length} financial companies using ${label}. ${description}`,
     numberOfItems: typeProjects.length,
+    dateModified: BUILD_DATE_ISO,
     isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
     mainEntity: {
       '@type': 'ItemList',

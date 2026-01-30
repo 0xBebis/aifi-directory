@@ -10,6 +10,7 @@ import {
   getProjectsByLayer,
   formatFunding,
   generateLayerFAQs,
+  BUILD_DATE_ISO,
 } from '@/lib/data';
 import CompanyLogo from '@/components/CompanyLogo';
 import JsonLd from '@/components/JsonLd';
@@ -31,13 +32,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: description.slice(0, 160),
       type: 'website',
       siteName: 'AIFI Map',
-      images: [{ url: '/og/default.png', width: 1200, height: 630 }],
+      images: [{ url: `/og/layers/${layer.slug}.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${layer.name} Layer: Financial AI Companies`,
       description: description.slice(0, 160),
-      images: ['/og/default.png'],
+      images: [`/og/layers/${layer.slug}.png`],
     },
   };
 }
@@ -77,7 +78,7 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'AIFI Map', item: 'https://aifimap.com' },
       { '@type': 'ListItem', position: 2, name: 'Directory', item: 'https://aifimap.com/directory' },
-      { '@type': 'ListItem', position: 3, name: `${layer.name} Layer` },
+      { '@type': 'ListItem', position: 3, name: `${layer.name} Layer`, item: `https://aifimap.com/layers/${layer.slug}` },
     ],
   };
 
@@ -88,6 +89,7 @@ export default function LayerPage({ params }: { params: { slug: string } }) {
     url: `https://aifimap.com/layers/${layer.slug}`,
     description: `${layerProjects.length} financial AI companies at the ${layer.name} layer. ${layer.description}`,
     numberOfItems: layerProjects.length,
+    dateModified: BUILD_DATE_ISO,
     isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
     mainEntity: {
       '@type': 'ItemList',

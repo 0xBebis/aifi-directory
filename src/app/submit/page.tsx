@@ -139,7 +139,21 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
 
   const isFormValid = formData.name && formData.tagline && formData.segment && formData.layer;
 
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Submit a Company — AIFI Map',
+    description: 'Submit a financial AI company to the AIFI Map directory. Help us track the companies building AI for financial services.',
+    url: 'https://aifimap.com/submit',
+    isPartOf: { '@type': 'WebSite', name: 'AIFI Map', url: 'https://aifimap.com' },
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+    />
     <div className="max-w-2xl mx-auto px-8 py-14">
       {/* Eyebrow */}
       <p className="label-refined mb-4 text-accent">
@@ -615,5 +629,6 @@ ${formData.email ? `\n**Submitter contact:** ${formData.email}` : ''}
         </div>
       </form>
     </div>
+    </>
   );
 }
