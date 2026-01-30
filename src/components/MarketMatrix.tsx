@@ -224,7 +224,7 @@ export default function MarketMatrix({
         <div className="flex items-center gap-3">
           <h2 className="text-sm font-semibold text-text-primary">Market Matrix</h2>
           {hasSelection && (
-            <span className="text-xs text-text-muted px-2 py-0.5 bg-surface-2/50 rounded">
+            <span className="hidden md:inline text-xs text-text-muted px-2 py-0.5 bg-surface-2/50 rounded">
               {displayedStats.label}
             </span>
           )}
@@ -244,10 +244,10 @@ export default function MarketMatrix({
           {hasSelection && (
             <button
               onClick={clearSelection}
-              className="flex items-center gap-1 px-2 py-1.5 text-xs text-text-muted hover:text-text-primary hover:bg-surface-2 rounded-lg transition-colors"
+              className="flex items-center gap-1 px-1.5 py-1.5 md:px-2 text-xs text-text-muted hover:text-text-primary hover:bg-surface-2 rounded-lg transition-colors"
             >
               <X className="w-3 h-3" />
-              Clear
+              <span className="hidden md:inline">Clear</span>
             </button>
           )}
         </div>
@@ -383,20 +383,22 @@ export default function MarketMatrix({
             })}
           </div>
 
-          {/* Cell Detail - below the matrix grid */}
+          {/* Cell Detail - below the matrix grid (hidden on mobile) */}
           {selectedCell && cellData[selectedCell] && (
-            <CellDetail
-              cell={cellData[selectedCell]}
-              onClose={() => {
-                setSelectedCell(null);
-                onFilterChange?.([], [], Array.from(selectedAiTypes));
-              }}
-            />
+            <div className="hidden md:block">
+              <CellDetail
+                cell={cellData[selectedCell]}
+                onClose={() => {
+                  setSelectedCell(null);
+                  onFilterChange?.([], [], Array.from(selectedAiTypes));
+                }}
+              />
+            </div>
           )}
         </div>
 
         {/* AI Type Filter Sidebar */}
-        <div className="w-40 border-l border-border/50 p-2 space-y-1 bg-surface-2/20">
+        <div className="hidden md:block w-40 border-l border-border/50 p-2 space-y-1 bg-surface-2/20">
           <div className="px-2 py-1.5 mb-1">
             <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">AI Type</span>
           </div>

@@ -67,6 +67,18 @@ export default function GlobalSearch({ items }: GlobalSearchProps) {
   }, []);
 
   const closeSearch = useCallback(() => {
+    // Blur input to dismiss mobile keyboard
+    inputRef.current?.blur();
+
+    // Force mobile browsers to reset zoom level after input focus.
+    // Temporarily constrain maximum-scale, then restore to keep pinch-to-zoom.
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      const original = viewport.getAttribute('content') || '';
+      viewport.setAttribute('content', original + ', maximum-scale=1');
+      setTimeout(() => viewport.setAttribute('content', original), 100);
+    }
+
     setOpen(false);
     setQuery('');
     setSelectedIndex(0);
