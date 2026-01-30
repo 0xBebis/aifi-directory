@@ -309,6 +309,71 @@ export interface Agent {
   lastActivity: number;
 }
 
+// ── Blog Types ──
+
+export type BlogCategory = 'analysis' | 'spotlight' | 'report' | 'news' | 'guest';
+
+export const BLOG_CATEGORY_LABELS: Record<BlogCategory, string> = {
+  'analysis': 'Analysis',
+  'spotlight': 'Company Spotlight',
+  'report': 'Market Report',
+  'news': 'News',
+  'guest': 'Guest Post',
+};
+
+export const BLOG_CATEGORY_COLORS: Record<BlogCategory, string> = {
+  'analysis': '#3b82f6',
+  'spotlight': '#8b5cf6',
+  'report': '#f59e0b',
+  'news': '#22c55e',
+  'guest': '#ec4899',
+};
+
+export const BLOG_CATEGORY_DESCRIPTIONS: Record<BlogCategory, string> = {
+  'analysis': 'In-depth analysis of trends, technologies, and market dynamics in financial AI',
+  'spotlight': 'Deep dives into specific companies and their approach to financial AI',
+  'report': 'Data-driven market reports covering funding, adoption, and industry benchmarks',
+  'news': 'Breaking news and updates from the financial AI ecosystem',
+  'guest': 'Guest perspectives from industry practitioners and thought leaders',
+};
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: string;
+  category: BlogCategory;
+  author_slug: string;
+  published_date: string;
+  updated_date?: string;
+  tags?: string[];
+  related_companies?: string[];
+  related_segments?: string[];
+  related_ai_types?: AIType[];
+  related_agents?: string[];
+  featured?: boolean;
+  draft?: boolean;
+  cover_image?: string;
+  reading_time?: number;
+  seo_title?: string;
+  seo_description?: string;
+  faqs?: { question: string; answer: string }[];
+}
+
+export interface BlogAuthor {
+  slug: string;
+  name: string;
+  title: string;
+  bio: string;
+  expertise?: string[];
+  avatar?: string;
+  twitter?: string;
+  linkedin?: string;
+  website?: string;
+  company?: string;
+  company_role?: string;
+}
+
 export const COUNTRY_TO_REGION: Record<string, Region> = {
   // Americas
   'US': 'americas', 'USA': 'americas', 'United States': 'americas',

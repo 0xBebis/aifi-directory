@@ -11,6 +11,7 @@ Architectural constraints, conventions, and reference for the AIFI codebase. All
 1. **Company Directory** — ~450 companies classified by market segment, tech layer, and AI type
 2. **Market Matrix** — Interactive heatmap showing company density at segment × layer intersections
 3. **Agent Registry** — EIP-8004 AI agents filtered by finance category and protocol
+4. **Blog** — Editorial content: analysis, company spotlights, market reports, and industry news
 
 ### Core Principles
 
@@ -30,6 +31,7 @@ Architectural constraints, conventions, and reference for the AIFI codebase. All
 | Framework | Next.js (App Router) | 14 | Static export, file-based routing |
 | Styling | Tailwind CSS | 3 | Utility-first, no CSS files to manage |
 | Search | Fuse.js | 7 | Client-side fuzzy search, no backend |
+| Markdown | marked | — | Blog post body rendering (markdown → HTML) |
 | Icons | Lucide React | 0.441 | Lightweight, tree-shakeable |
 | Types | TypeScript | 5 | Type safety, better DX |
 
@@ -61,23 +63,55 @@ src/
 ├── app/                              # Pages (minimal logic)
 │   ├── page.tsx                      # / — Homepage
 │   ├── layout.tsx                    # Root layout (Nav, footer)
-│   ├── globals.css                   # Tailwind imports + scrollbar
+│   ├── globals.css                   # Tailwind imports, :root tokens, scrollbar
 │   ├── not-found.tsx                 # 404 page
-│   ├── about/page.tsx                # /about — Thesis & methodology
+│   ├── about/
+│   │   ├── page.tsx                  # /about — Thesis & methodology
+│   │   └── history/page.tsx          # /about/history — History of financial AI
 │   ├── directory/page.tsx            # /directory — Company directory + market matrix
 │   ├── p/[slug]/page.tsx             # /p/:slug — Company detail
-│   ├── agents/page.tsx               # /agents — Agent registry
-│   ├── agents/[id]/page.tsx          # /agents/:id — Agent detail
-│   ├── submit/page.tsx               # /submit — Submit a new company
-│   └── submit/update/[slug]/
-│       ├── page.tsx                  # /submit/update/:slug — Update existing company
-│       └── UpdateForm.tsx            # Client component for update form
+│   ├── agents/
+│   │   ├── page.tsx                  # /agents — Agent registry
+│   │   └── [id]/page.tsx             # /agents/:id — Agent detail
+│   ├── blog/
+│   │   ├── page.tsx                  # /blog — Blog index
+│   │   ├── [slug]/page.tsx           # /blog/:slug — Article detail
+│   │   ├── category/[category]/page.tsx  # /blog/category/:cat — Category listing
+│   │   └── author/[slug]/page.tsx    # /blog/author/:slug — Author profile
+│   ├── segments/
+│   │   ├── [slug]/page.tsx           # /segments/:slug — Segment detail
+│   │   └── [slug]/ai-types/[aiType]/page.tsx  # Cross-dimensional page
+│   ├── layers/[slug]/page.tsx        # /layers/:slug — Layer detail
+│   ├── ai-types/[slug]/page.tsx      # /ai-types/:slug — AI type detail
+│   ├── regions/[slug]/page.tsx       # /regions/:slug — Region detail
+│   ├── compare/
+│   │   ├── page.tsx                  # /compare — Comparison hub
+│   │   └── [slug]/page.tsx           # /compare/:slug — AI type comparison
+│   ├── stats/page.tsx                # /stats — Statistics dashboard
+│   ├── recent/page.tsx               # /recent — Recently funded companies
+│   ├── glossary/page.tsx             # /glossary — Key terms
+│   ├── what-is-financial-ai/page.tsx # /what-is-financial-ai — Pillar content
+│   ├── market-report/page.tsx        # /market-report — Market report
+│   └── submit/
+│       ├── layout.tsx                # Submit layout
+│       ├── page.tsx                  # /submit — Submit company (server)
+│       ├── SubmitForm.tsx            # Client component for submit form
+│       ├── blog/page.tsx             # /submit/blog — Submit blog post
+│       └── update/[slug]/
+│           ├── page.tsx              # /submit/update/:slug — Update company
+│           └── UpdateForm.tsx        # Client component for update form
 │
 ├── components/                       # Reusable UI
-│   ├── Nav.tsx                       # Site navigation
+│   ├── Nav.tsx                       # Site navigation (desktop)
+│   ├── MobileNav.tsx                 # Mobile navigation overlay
+│   ├── GlobalSearch.tsx              # Fuzzy search overlay
 │   ├── ProjectTable.tsx              # Sortable/filterable company table
 │   ├── CompanyLogo.tsx               # Logo with fallback
+│   ├── DirectoryBrowser.tsx          # Directory page layout
 │   ├── MarketMatrix.tsx              # Interactive segment × layer heatmap
+│   ├── FilteredCompanyGrid.tsx       # Generic filtered company grid
+│   ├── SegmentFilteredContent.tsx    # Segment-specific filter wrapper
+│   ├── AITypeFilteredContent.tsx     # AI type-specific filter wrapper
 │   ├── AgentCard.tsx                 # Agent card for listing
 │   ├── AgentFilters.tsx              # Category/protocol filter bar
 │   ├── AgentImage.tsx                # Agent avatar with fallback
@@ -85,41 +119,71 @@ src/
 │   ├── CapabilitySection.tsx         # Collapsible tools/skills list
 │   ├── ReputationBadge.tsx           # Score display with color coding
 │   ├── EndpointList.tsx              # Agent endpoint URLs
+│   ├── BlogCard.tsx                  # Blog post card
+│   ├── BlogCategoryTabs.tsx          # Blog category filter tabs
+│   ├── AuthorByline.tsx              # Blog author byline
+│   ├── AuthorCard.tsx                # Blog author card
+│   ├── RelatedPosts.tsx              # Related blog posts grid
+│   ├── MarkdownRenderer.tsx          # Markdown → HTML (uses marked)
+│   ├── ReadingProgress.tsx           # Scroll progress bar
+│   ├── ShareButtons.tsx              # Social share buttons
+│   ├── Breadcrumbs.tsx               # Breadcrumb navigation
+│   ├── JsonLd.tsx                    # Structured data injection
+│   ├── BackButton.tsx                # Navigation back button
+│   ├── ErrorBoundary.tsx             # React error boundary
+│   ├── NewsletterForm.tsx            # Newsletter signup
+│   ├── ScrollToTop.tsx               # Scroll-to-top button
 │   ├── ui/index.tsx                  # Shared UI primitives
-│   └── home/                         # Homepage-specific components
-│       ├── Hero.tsx                  # Hero section with stats
-│       ├── SegmentShowcase.tsx       # Segment cards grid
-│       ├── TechStack.tsx             # Layer visualization
-│       ├── FeaturedCompanies.tsx     # Top-funded companies
-│       └── CallToAction.tsx          # CTA banner
+│   ├── home/                         # Homepage-specific
+│   │   ├── Hero.tsx                  # Hero section with stats
+│   │   ├── LandingHero.tsx           # Landing page hero variant
+│   │   ├── SegmentShowcase.tsx       # Segment cards grid
+│   │   ├── TechStack.tsx             # Layer visualization
+│   │   ├── FeaturedCompanies.tsx     # Top-funded companies
+│   │   ├── RecentActivity.tsx        # Recent activity feed
+│   │   ├── SiteNav.tsx               # Homepage navigation
+│   │   └── CallToAction.tsx          # CTA banner
+│   ├── agents/
+│   │   └── FeaturedAgent.tsx         # Featured agent spotlight
+│   ├── directory/
+│   │   └── TopCompanies.tsx          # Top companies ranking
+│   └── stats/                        # Stats page components
+│       ├── StatsDashboard.tsx        # Dashboard layout
+│       ├── HeroStats.tsx             # Hero stat counters
+│       ├── AnimatedCounter.tsx       # Animated number counter
+│       ├── FundingLandscape.tsx      # Funding visualization
+│       ├── MarketBreakdown.tsx       # Segment/layer breakdown
+│       ├── GeographicDistribution.tsx # Region distribution
+│       ├── FoundedTimeline.tsx       # Company founding timeline
+│       └── FAQAccordion.tsx          # Collapsible FAQ section
 │
 ├── data/                             # JSON data files (source of truth)
 │   ├── projects.json                 # ~450 companies
 │   ├── segments.json                 # 9 market segments
 │   ├── layers.json                   # 5 tech layers
-│   └── agents.json                   # EIP-8004 agents (from pipeline)
+│   ├── agents.json                   # EIP-8004 agents (from pipeline)
+│   ├── posts.json                    # Blog posts (body is markdown)
+│   ├── authors.json                  # Blog authors
+│   └── constants.json                # Shared constants (SITE_URL, labels, colors)
 │
 ├── lib/
-│   └── data.ts                       # All data loading, helpers, formatting
+│   └── data.ts                       # All data loading, helpers, formatting (~1,600 lines)
 │
 └── types/
     └── index.ts                      # All TypeScript interfaces and enums
 
 scripts/
+├── generate-sitemap.js               # Build-time sitemap.xml generator
+├── generate-og-images.js             # Build-time OG image generator
+├── generate-rss.js                   # Build-time RSS feed generator
 ├── validate-data.js                  # Data integrity validator
+├── validate-structured-data.js       # Structured data (JSON-LD) validator
+├── weekly-scrape.js                  # Weekly data refresh
 ├── funding-scraper/                  # One-off: scraped funding data
 │   ├── scraper.js                    # Main scraper
-│   ├── review.json                   # Manual review queue
-│   ├── show-updates.js               # Display pending updates
-│   ├── get-remaining.js              # Find unscraped projects
-│   ├── save-batch.js                 # Save scraper results
-│   ├── add-remaining.js              # Add new projects
-│   ├── update-projects.js            # Apply updates to projects.json
-│   └── classify-ai-type.js           # AI type classification
+│   └── (supporting scripts)          # review, classify, update scripts
 ├── logo-downloader/                  # One-off: downloaded company logos
-│   ├── download-logos.js             # Download logos to /public/logos/
-│   ├── update-projects.js            # Update logo paths in projects.json
-│   └── generate-review.js            # Generate review of downloads
+│   └── (supporting scripts)          # download, review, update scripts
 └── agent-pipeline/                   # Active: EIP-8004 agent ingestion
     ├── fetch-agents.js               # Fetch from The Graph subgraph
     ├── finance-classifier.js         # Score + categorize for finance relevance
@@ -176,7 +240,7 @@ interface Project {
   funding_stage?: FundingStage;  // pre-seed | seed | early | growth | late | public | fair-launch | undisclosed
   region?: Region;               // americas | emea | apac
   funding?: number;              // Total funding in USD (raw number)
-  stage?: Stage;                 // Legacy — deprecated in favor of funding_stage
+  stage?: Stage;                 // DEPRECATED — use funding_stage instead
   valuation?: number;            // Latest known valuation in USD
   revenue?: number;              // Annual revenue/ARR in USD
   last_funding_date?: string;    // Year or YYYY-MM
@@ -245,6 +309,55 @@ interface Agent {
 }
 ```
 
+### BlogPost
+
+Blog articles stored in `posts.json`. Body is markdown rendered via `marked`.
+
+```typescript
+interface BlogPost {
+  slug: string;                  // URL identifier
+  title: string;                 // Article title
+  excerpt: string;               // Short summary for cards
+  body: string;                  // Markdown content
+  category: BlogCategory;        // analysis | spotlight | report | news | guest
+  author_slug: string;           // References authors.json
+  published_date: string;        // YYYY-MM-DD
+  updated_date?: string;         // YYYY-MM-DD
+  tags?: string[];               // Freeform topic tags
+  related_companies?: string[];  // Project slugs
+  related_segments?: string[];   // Segment slugs
+  related_ai_types?: AIType[];   // AI type references
+  related_agents?: string[];     // Agent IDs
+  featured?: boolean;            // Show in featured section
+  draft?: boolean;               // Excluded from published list
+  cover_image?: string;          // Path to cover image
+  reading_time?: number;         // Override auto-calculated reading time
+  seo_title?: string;            // Override page title
+  seo_description?: string;      // Override meta description
+  faqs?: { question: string; answer: string }[];  // Article-specific FAQs
+}
+```
+
+### BlogAuthor
+
+Author profiles stored in `authors.json`.
+
+```typescript
+interface BlogAuthor {
+  slug: string;                  // URL identifier
+  name: string;                  // Display name
+  title: string;                 // Role/title
+  bio: string;                   // Author biography
+  expertise?: string[];          // Topic areas
+  avatar?: string;               // Path to avatar image
+  twitter?: string;              // Twitter handle
+  linkedin?: string;             // LinkedIn URL
+  website?: string;              // Personal website
+  company?: string;              // Employer name
+  company_role?: string;         // Role at employer
+}
+```
+
 ### Segment
 
 9 market segments defining where in finance a company operates.
@@ -289,6 +402,8 @@ interface Agent {
 
 **AgentProtocol** (5 values): `mcp`, `a2a`, `oasf`, `web`, `email`
 
+**BlogCategory** (5 values): `analysis`, `spotlight`, `report`, `news`, `guest`
+
 ### Validation Rules
 
 1. Every `slug` must be unique across all projects
@@ -296,6 +411,10 @@ interface Agent {
 3. `funding`, `valuation`, `revenue` are raw numbers (e.g. `170000000` not `"$170M"`)
 4. `founded` is a 4-digit year
 5. Agent `id` format: `{chainId}:{agentId}` (e.g. `11155111:462`)
+6. Blog post `category` must be a valid `BlogCategory` value
+7. Blog post `author_slug` must reference a valid author in `authors.json`
+8. Blog post `related_companies` must reference valid project slugs
+9. Blog posts with `draft: true` are excluded from the published feed
 
 ---
 
@@ -319,6 +438,8 @@ export default function AgentCard({ agent }: { agent: Agent }) {
 
 Only use `'use client'` when necessary (`useState`, `useEffect`, event handlers, browser APIs). Keep client components small and at the leaf level. Never make a page component a client component if avoidable.
 
+Submit pages use extracted client form components (`SubmitForm.tsx`, `UpdateForm.tsx`) so the page wrapper can remain a server component.
+
 ### Data loading
 
 All data is imported from JSON at build time via `src/lib/data.ts`. No runtime fetching. No loading states needed.
@@ -329,32 +450,96 @@ All data is imported from JSON at build time via `src/lib/data.ts`. No runtime f
 
 ### Design Tokens
 
-Use semantic token names from `tailwind.config.js`, never raw hex values.
+Use semantic token names from `tailwind.config.js`, never raw hex values. CSS custom properties are defined in `:root` in `globals.css` for use in non-Tailwind contexts (scrollbar, select glass).
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `background` | `#09090b` | Page background |
-| `surface` | `#111113` | Card background |
-| `surface-2` | `#18181b` | Hover/secondary surface |
-| `surface-3` | `#1f1f23` | Elevated surface |
-| `border` | `#27272a` | Borders |
-| `border-subtle` | `#1e1e21` | Subtle dividers |
-| `text-primary` | `#fafafa` | Main text |
-| `text-secondary` | `#d4d4d8` | Secondary text |
-| `text-muted` | `#a1a1aa` | Muted text |
-| `text-faint` | `#71717a` | Faintest text |
-| `accent` | `#0d9488` | Interactive elements (teal) |
-| `accent-hover` | `#14b8a6` | Hover state |
-| `positive` | `#22c55e` | Success/positive |
-| `negative` | `#ef4444` | Error/negative |
-| `warning` | `#f59e0b` | Warning |
+| Token | CSS Variable | Value | Usage |
+|-------|-------------|-------|-------|
+| `background` | `--color-bg` | `#09090b` | Page background |
+| `surface` | `--color-surface` | `#111113` | Card background |
+| `surface-2` | `--color-surface-2` | `#18181b` | Hover/secondary surface |
+| `surface-3` | `--color-surface-3` | `#1f1f23` | Elevated surface |
+| `border` | `--color-border` | `#27272a` | Borders |
+| `border-subtle` | `--color-border-subtle` | `#1e1e21` | Subtle dividers |
+| `text-primary` | `--color-text-primary` | `#fafafa` | Main text |
+| `text-secondary` | `--color-text-secondary` | `#d4d4d8` | Secondary text |
+| `text-muted` | `--color-text-muted` | `#a1a1aa` | Muted text |
+| `text-faint` | `--color-text-faint` | `#71717a` | Faintest text |
+| `accent` | `--color-accent` | `#0d9488` | Interactive elements (teal) |
+| `accent-hover` | `--color-accent-hover` | `#14b8a6` | Hover state |
+| `positive` | `--color-positive` | `#22c55e` | Success/positive |
+| `negative` | `--color-negative` | `#ef4444` | Error/negative |
+| `warning` | `--color-warning` | `#f59e0b` | Warning |
 
 ### Rules
 
 - Group Tailwind classes: layout > spacing > typography > colors > effects
 - Desktop-first; use `md:`, `lg:` responsive prefixes as needed
-- No `.module.css` files; `globals.css` is for fonts and scrollbar only
+- No `.module.css` files; `globals.css` is for fonts, `:root` tokens, and scrollbar only
 - Prefer semantic tokens (`bg-surface`) over raw values (`bg-[#111113]`)
+- Use `var(--color-*)` CSS custom properties in raw CSS contexts (scrollbar, select, keyframes)
+
+---
+
+## Build Pipeline
+
+### Prebuild Scripts
+
+The `npm run build` command runs prebuild scripts before `next build`:
+
+1. **`generate-sitemap.js`** — Produces `public/sitemap.xml` from projects, agents, segments, layers, AI types, regions, and comparison pages. Sets per-page `lastmod` from `last_funding_date`.
+2. **`generate-og-images.js`** — Produces `public/og/*.png` for every company, agent, taxonomy page, and the default OG image. Uses canvas rendering.
+3. **`generate-rss.js`** — Produces `public/feed.xml` RSS 2.0 feed of recently funded companies.
+
+All prebuild scripts read from `src/data/*.json`.
+
+### Running the pipeline
+
+```bash
+npm run build     # Runs prebuild + next build (static export to /out)
+npm run validate  # Data integrity checks only
+```
+
+---
+
+## Blog
+
+### How it works
+
+Blog posts are stored in `src/data/posts.json` as JSON objects with markdown `body` fields. Authors are in `authors.json`. All blog functions (queries, formatting, FAQ generation) live in `src/lib/data.ts`.
+
+### Routes
+
+| Route | Purpose |
+|-------|---------|
+| `/blog` | Blog index with category tabs |
+| `/blog/:slug` | Article detail with markdown rendering |
+| `/blog/category/:category` | Category listing |
+| `/blog/author/:slug` | Author profile with post list |
+| `/submit/blog` | Submit article via GitHub Issue |
+
+### Blog Categories
+
+| Slug | Label | Color |
+|------|-------|-------|
+| `analysis` | Analysis | `#3b82f6` |
+| `spotlight` | Company Spotlight | `#8b5cf6` |
+| `report` | Market Report | `#f59e0b` |
+| `news` | News | `#22c55e` |
+| `guest` | Guest Post | `#ec4899` |
+
+### Adding a Blog Post
+
+1. Add post object to `src/data/posts.json`
+2. Required fields: `slug`, `title`, `excerpt`, `body`, `category`, `author_slug`, `published_date`
+3. Ensure `author_slug` references a valid author in `authors.json`
+4. Set `draft: true` to exclude from published feed during development
+5. Run `npm run build`
+
+### Adding an Author
+
+1. Add author object to `src/data/authors.json`
+2. Required fields: `slug`, `name`, `title`, `bio`
+3. Run `npm run build`
 
 ---
 
@@ -392,7 +577,7 @@ This writes to `src/data/agents.json`. The output `results.json` is gitignored.
 
 ```bash
 npm run dev       # Development server (localhost:3000)
-npm run build     # Production build (static export to /out)
+npm run build     # Prebuild scripts + production build (static export to /out)
 npm run start     # Serve production build
 npm run lint      # ESLint
 npm run validate  # Data integrity checks (slugs, refs, required fields)
@@ -426,6 +611,32 @@ Before considering any change complete:
 
 ---
 
+## Technical Debt
+
+### Legacy `stage` Field
+
+The deprecated `stage` field (snake_case, e.g. `series_a`) coexists with its replacement `funding_stage` (kebab-case). ~346 projects still carry `stage`. The `funding_stage` field is preferred everywhere in the UI.
+
+**Migration mapping** (for future data cleanup):
+
+| Legacy `stage` | New `funding_stage` | Notes |
+|----------------|---------------------|-------|
+| `pre_seed` | `pre-seed` | |
+| `seed` | `seed` | |
+| `series_a` | `early` | |
+| `series_b` | `growth` | |
+| `series_c_plus` | `late` | |
+| `growth` | `growth` | |
+| `public` | `public` | |
+| `acquired` | — | Set `company_type: 'acquired'` instead |
+| `bootstrapped` | `undisclosed` | |
+
+### Constants Duplication
+
+`src/data/constants.json` was created as a single source of truth for shared constants (SITE_URL, label/color records) used by both CJS build scripts and the TypeScript app. Currently, the build scripts still use inline constants. A future cleanup can wire them to import from `constants.json`.
+
+---
+
 ## Key Files
 
 | File | Purpose |
@@ -434,9 +645,15 @@ Before considering any change complete:
 | `src/data/segments.json` | 9 market segments |
 | `src/data/layers.json` | 5 tech layers |
 | `src/data/agents.json` | EIP-8004 agents |
+| `src/data/posts.json` | Blog posts (markdown body) |
+| `src/data/authors.json` | Blog authors |
+| `src/data/constants.json` | Shared constants (SITE_URL, labels, colors) |
 | `src/types/index.ts` | All TypeScript interfaces and enums |
-| `src/lib/data.ts` | Data loading, helpers, formatting |
+| `src/lib/data.ts` | Data loading, helpers, formatting (~1,600 lines) |
 | `tailwind.config.js` | Design tokens and theme |
 | `next.config.js` | Static export config (`output: 'export'`) |
 | `scripts/validate-data.js` | Data integrity validator |
+| `scripts/generate-sitemap.js` | Build-time sitemap generator |
+| `scripts/generate-og-images.js` | Build-time OG image generator |
+| `scripts/generate-rss.js` | Build-time RSS feed generator |
 | `scripts/agent-pipeline/` | Agent ingestion pipeline |

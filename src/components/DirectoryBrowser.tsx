@@ -81,6 +81,8 @@ export default function DirectoryBrowser({ projects, segments, layers }: Directo
       <div className="mb-10">
         <MarketMatrix
           projects={filteredProjects}
+          segments={segments}
+          layers={layers}
           onFilterChange={handleMatrixFilterChange}
           activeSegments={segmentFilters}
           activeLayers={layerFilters}

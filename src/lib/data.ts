@@ -6,11 +6,15 @@ import {
   Agent, FinanceCategory, AgentProtocol,
   FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS,
   PROTOCOL_LABELS, PROTOCOL_COLORS,
+  BlogPost, BlogAuthor, BlogCategory,
+  BLOG_CATEGORY_LABELS, BLOG_CATEGORY_COLORS, BLOG_CATEGORY_DESCRIPTIONS,
 } from '@/types';
 import projectsData from '@/data/projects.json';
 import segmentsData from '@/data/segments.json';
 import layersData from '@/data/layers.json';
 import agentsData from '@/data/agents.json';
+import postsData from '@/data/posts.json';
+import authorsData from '@/data/authors.json';
 
 // Projects data - reload on JSON changes
 export const projects: Project[] = projectsData as Project[];
@@ -323,7 +327,13 @@ export {
   COMPANY_TYPE_LABELS, FUNDING_STAGE_LABELS, REGION_LABELS, EMPLOYEE_RANGE_LABELS,
   FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS,
   PROTOCOL_LABELS, PROTOCOL_COLORS,
+  BLOG_CATEGORY_LABELS, BLOG_CATEGORY_COLORS, BLOG_CATEGORY_DESCRIPTIONS,
 };
+
+// ── Blog Data ──
+
+export const posts: BlogPost[] = (postsData as BlogPost[]).filter(p => !p.draft);
+export const authors: BlogAuthor[] = authorsData as BlogAuthor[];
 
 // Taxonomy page helpers
 
@@ -1461,5 +1471,130 @@ export function generateCrossDimensionalFAQs(segmentSlug: string, aiType: AIType
   }
 
   validateFAQAnswers(faqs, `cross/${segmentSlug}/${aiType}`);
+  return faqs;
+}
+
+// ── Blog Helpers ──
+
+export function getPost(slug: string): BlogPost | undefined {
+  return posts.find(p => p.slug === slug);
+}
+
+export function getAuthor(slug: string): BlogAuthor | undefined {
+  return authors.find(a => a.slug === slug);
+}
+
+export function getPostsByCategory(category: BlogCategory): BlogPost[] {
+  return posts
+    .filter(p => p.category === category)
+    .sort((a, b) => b.published_date.localeCompare(a.published_date));
+}
+
+export function getPostsByAuthor(authorSlug: string): BlogPost[] {
+  return posts
+    .filter(p => p.author_slug === authorSlug)
+    .sort((a, b) => b.published_date.localeCompare(a.published_date));
+}
+
+export function getRecentPosts(limit: number = 10): BlogPost[] {
+  return [...posts]
+    .sort((a, b) => b.published_date.localeCompare(a.published_date))
+    .slice(0, limit);
+}
+
+export function getFeaturedPosts(limit: number = 3): BlogPost[] {
+  return posts
+    .filter(p => p.featured)
+    .sort((a, b) => b.published_date.localeCompare(a.published_date))
+    .slice(0, limit);
+}
+
+export function getPostsForCompany(projectSlug: string): BlogPost[] {
+  return posts.filter(p => p.related_companies?.includes(projectSlug));
+}
+
+export function getPostsForSegment(segmentSlug: string): BlogPost[] {
+  return posts.filter(p => p.related_segments?.includes(segmentSlug));
+}
+
+export function getPostsForAIType(aiType: AIType): BlogPost[] {
+  return posts.filter(p => p.related_ai_types?.includes(aiType));
+}
+
+export function getPostsForAgent(agentId: string): BlogPost[] {
+  return posts.filter(p => p.related_agents?.includes(agentId));
+}
+
+export function getRelatedPosts(post: BlogPost, limit: number = 3): BlogPost[] {
+  return posts
+    .filter(p => p.slug !== post.slug)
+    .map(p => {
+      let score = 0;
+      if (p.category === post.category) score += 2;
+      if (p.author_slug === post.author_slug) score += 1;
+      score += (p.related_companies?.filter(c => post.related_companies?.includes(c)).length || 0);
+      score += (p.related_segments?.filter(s => post.related_segments?.includes(s)).length || 0);
+      score += (p.related_ai_types?.filter(t => post.related_ai_types?.includes(t)).length || 0);
+      return { post: p, score };
+    })
+    .sort((a, b) => b.score - a.score || b.post.published_date.localeCompare(a.post.published_date))
+    .slice(0, limit)
+    .map(r => r.post);
+}
+
+export function calculateReadingTime(markdown: string): number {
+  const words = markdown.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 250));
+}
+
+export function formatPostDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+}
+
+export function getBlogCategoryStats(): Array<{
+  category: BlogCategory;
+  label: string;
+  color: string;
+  description: string;
+  count: number;
+}> {
+  const categories = Object.keys(BLOG_CATEGORY_LABELS) as BlogCategory[];
+  return categories
+    .map(cat => ({
+      category: cat,
+      label: BLOG_CATEGORY_LABELS[cat],
+      color: BLOG_CATEGORY_COLORS[cat],
+      description: BLOG_CATEGORY_DESCRIPTIONS[cat],
+      count: posts.filter(p => p.category === cat).length,
+    }))
+    .filter(c => c.count > 0);
+}
+
+export function generatePostFAQs(post: BlogPost): FAQItem[] {
+  const faqs: FAQItem[] = [];
+
+  if (post.faqs) {
+    faqs.push(...post.faqs);
+  }
+
+  if (post.related_companies && post.related_companies.length >= 2) {
+    const companies = post.related_companies
+      .map(slug => getProject(slug))
+      .filter(Boolean);
+    if (companies.length >= 2) {
+      const names = companies.map(c => c!.name).join(', ');
+      faqs.push({
+        question: 'Which companies are discussed in this article?',
+        answer: `This article covers ${names}. ${companies[0]!.name}: ${companies[0]!.tagline}`,
+      });
+    }
+  }
+
+  validateFAQAnswers(faqs, `post/${post.slug}`);
   return faqs;
 }

@@ -1,0 +1,54 @@
+{
+  "SITE_URL": "https://aifimap.com",
+  "AI_TYPE_LABELS": {
+    "llm": "LLM / NLP",
+    "predictive-ml": "Predictive ML",
+    "computer-vision": "Computer Vision",
+    "graph-analytics": "Graph Analytics",
+    "reinforcement-learning": "Reinforcement Learning",
+    "agentic": "Agentic AI",
+    "data-platform": "Data Platform",
+    "infrastructure": "Infrastructure"
+  },
+  "AI_TYPE_COLORS": {
+    "llm": "#8b5cf6",
+    "predictive-ml": "#3b82f6",
+    "computer-vision": "#06b6d4",
+    "graph-analytics": "#f97316",
+    "reinforcement-learning": "#ec4899",
+    "agentic": "#22c55e",
+    "data-platform": "#64748b",
+    "infrastructure": "#71717a"
+  },
+  "REGION_LABELS": {
+    "americas": "Americas",
+    "emea": "EMEA",
+    "apac": "APAC"
+  },
+  "BLOG_CATEGORY_LABELS": {
+    "analysis": "Analysis",
+    "spotlight": "Company Spotlight",
+    "report": "Market Report",
+    "news": "News",
+    "guest": "Guest Post"
+  },
+  "BLOG_CATEGORY_COLORS": {
+    "analysis": "#3b82f6",
+    "spotlight": "#8b5cf6",
+    "report": "#f59e0b",
+    "news": "#22c55e",
+    "guest": "#ec4899"
+  },
+  "VALID_BLOG_CATEGORIES": ["analysis", "spotlight", "report", "news", "guest"],
+  "DESIGN_TOKENS": {
+    "background": "#09090b",
+    "surface": "#111113",
+    "surface_2": "#18181b",
+    "border": "#27272a",
+    "text_primary": "#fafafa",
+    "text_muted": "#a1a1aa",
+    "accent": "#3b82f6",
+    "positive": "#22c55e",
+    "teal": "#14b8a6"
+  }
+}

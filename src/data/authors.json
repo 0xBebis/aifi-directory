@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "aifi-research",
+    "name": "AIFI Research",
+    "title": "Research Team",
+    "bio": "The AIFI research team covers the intersection of artificial intelligence and financial services, tracking funding trends, technology adoption, and market dynamics across the industry.",
+    "expertise": ["financial AI", "market analysis", "fintech", "machine learning"],
+    "website": "https://aifimap.com",
+    "company": "AIFI",
+    "company_role": "Research"
+  },
+  {
+    "slug": "maya-patel",
+    "name": "Maya Patel",
+    "title": "Senior Fintech Analyst",
+    "bio": "Maya covers AI adoption in banking, payments, and lending. Before joining AIFI as an analyst, she spent six years at a global consulting firm advising retail banks on technology strategy. She holds an MBA from Columbia Business School and writes about how machine learning changes the way money moves.",
+    "expertise": ["banking", "payments", "lending", "credit scoring", "regtech"],
+    "company": "AIFI",
+    "company_role": "Senior Analyst"
+  },
+  {
+    "slug": "daniel-krause",
+    "name": "Daniel Krause",
+    "title": "Quantitative Research Director",
+    "bio": "Daniel writes about quantitative finance, trading systems, and the ML models behind them. He previously led a quant research team at a mid-size systematic hedge fund and holds a PhD in applied mathematics from ETH Zurich. His work focuses on where academic ML research meets production trading systems.",
+    "expertise": ["quantitative finance", "trading systems", "reinforcement learning", "portfolio optimization", "alternative data"],
+    "company": "AIFI",
+    "company_role": "Research Director"
+  },
+  {
+    "slug": "sarah-okonkwo",
+    "name": "Sarah Okonkwo",
+    "title": "Risk & Compliance Editor",
+    "bio": "Sarah covers risk management, insurance, and compliance technology. She spent a decade in financial crime compliance at two tier-one banks before moving to research and writing. She brings an operator's perspective to how AI tools perform under real regulatory pressure and production workloads.",
+    "expertise": ["risk management", "AML/KYC", "insurance technology", "regulatory compliance", "financial crime"],
+    "company": "AIFI",
+    "company_role": "Editor, Risk & Compliance"
+  }
+]

@@ -9,6 +9,7 @@ import {
   BarChart3, TrendingUp, SlidersHorizontal, BookOpen, Clock, FileText,
   Grid3X3, Brain, Layers, Globe, Lightbulb,
 } from 'lucide-react';
+import MobileNav from '@/components/MobileNav';
 
 // ── Link definitions ──
 
@@ -22,6 +23,7 @@ interface NavLink {
 const directLinks = [
   { href: '/directory', label: 'Directory' },
   { href: '/agents', label: 'Agents' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 const insightLinks: NavLink[] = [
@@ -55,6 +57,7 @@ export default function Nav() {
   const isDirectActive = (href: string) => {
     if (href === '/directory') return pathname === '/directory' || pathname?.startsWith('/p/');
     if (href === '/agents') return pathname === '/agents' || pathname?.startsWith('/agents/');
+    if (href === '/blog') return pathname === '/blog' || pathname?.startsWith('/blog/');
     return pathname === href;
   };
 
@@ -226,91 +229,17 @@ export default function Nav() {
 
       {/* ── Mobile menu ── */}
       {mobileOpen && (
-        <nav className="md:hidden border-t border-border/30 bg-background/98 backdrop-blur-xl" aria-label="Mobile navigation">
-          <div className="px-6 py-4 space-y-1">
-            {/* Search */}
-            <button
-              onClick={() => {
-                setMobileOpen(false);
-                window.dispatchEvent(new Event('open-search'));
-              }}
-              className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors"
-            >
-              <Search className="w-4 h-4" />
-              Search
-            </button>
-
-            {/* Direct links */}
-            {directLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  isDirectActive(link.href)
-                    ? 'text-accent bg-accent/10'
-                    : 'text-text-muted hover:text-text-primary hover:bg-surface-2'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {/* Insights */}
-            <p className="px-3 pt-4 pb-1.5 text-2xs font-semibold uppercase tracking-wider text-text-faint">
-              Insights
-            </p>
-            {insightLinks.map((link) => (
-              <MobileItem
-                key={link.href}
-                link={link}
-                active={isInsightActive(link.href)}
-                onNavigate={() => setMobileOpen(false)}
-              />
-            ))}
-
-            {/* Browse */}
-            <p className="px-3 pt-4 pb-1.5 text-2xs font-semibold uppercase tracking-wider text-text-faint">
-              Browse
-            </p>
-            {browseLinks.map((link) => (
-              <MobileItem
-                key={link.href}
-                link={link}
-                active={isBrowseActive(link.href)}
-                onNavigate={() => setMobileOpen(false)}
-              />
-            ))}
-
-            {/* About */}
-            <p className="px-3 pt-4 pb-1.5 text-2xs font-semibold uppercase tracking-wider text-text-faint">
-              About
-            </p>
-            {aboutLinks.map((link) => (
-              <MobileItem
-                key={link.href}
-                link={link}
-                active={pathname === link.href}
-                onNavigate={() => setMobileOpen(false)}
-              />
-            ))}
-
-            {/* Submit */}
-            <div className="pt-3">
-              <Link
-                href="/submit"
-                onClick={() => setMobileOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-colors border ${
-                  pathname === '/submit'
-                    ? 'text-accent border-accent/30 bg-accent/10'
-                    : 'text-accent border-accent/20 bg-accent/5'
-                }`}
-              >
-                Submit a Company
-              </Link>
-            </div>
-          </div>
-        </nav>
+        <MobileNav
+          pathname={pathname}
+          directLinks={directLinks}
+          insightLinks={insightLinks}
+          browseLinks={browseLinks}
+          aboutLinks={aboutLinks}
+          isDirectActive={isDirectActive}
+          isInsightActive={isInsightActive}
+          isBrowseActive={isBrowseActive}
+          onClose={() => setMobileOpen(false)}
+        />
       )}
     </header>
   );
@@ -344,53 +273,6 @@ function DropdownItem({ link, active }: { link: NavLink; active: boolean }) {
             active
               ? 'text-accent'
               : 'text-text-primary group-hover/item:text-accent'
-          }`}
-        >
-          {link.label}
-        </div>
-        <div className="text-xs text-text-faint mt-0.5 leading-snug">
-          {link.description}
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-// ── Mobile menu item ──
-
-function MobileItem({
-  link,
-  active,
-  onNavigate,
-}: {
-  link: NavLink;
-  active: boolean;
-  onNavigate: () => void;
-}) {
-  const Icon = link.icon;
-  return (
-    <Link
-      href={link.href}
-      onClick={onNavigate}
-      className={`flex items-start gap-3 px-3 py-3 mx-1 rounded-lg transition-all duration-150 ${
-        active
-          ? 'bg-accent/[0.08]'
-          : 'hover:bg-surface-2'
-      }`}
-    >
-      <div
-        className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-lg transition-colors duration-150 ${
-          active
-            ? 'bg-accent/15 text-accent'
-            : 'bg-surface-2 text-text-muted'
-        }`}
-      >
-        <Icon className="w-4 h-4" />
-      </div>
-      <div className="min-w-0 pt-px">
-        <div
-          className={`text-sm font-medium leading-tight ${
-            active ? 'text-accent' : 'text-text-primary'
           }`}
         >
           {link.label}

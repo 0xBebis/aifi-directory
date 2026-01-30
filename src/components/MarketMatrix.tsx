@@ -3,18 +3,18 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  segments,
-  layers,
   formatFunding,
   aiTypes,
   AI_TYPE_LABELS,
   AI_TYPE_COLORS,
 } from '@/lib/data';
-import { AIType, Project } from '@/types';
+import { AIType, Project, Segment, Layer } from '@/types';
 import { X } from 'lucide-react';
 
 interface MarketMatrixProps {
   projects: Project[];
+  segments: Segment[];
+  layers: Layer[];
   onFilterChange?: (segments: string[], layers: string[], aiTypes: AIType[]) => void;
   activeSegments?: string[];
   activeLayers?: string[];
@@ -23,6 +23,8 @@ interface MarketMatrixProps {
 
 export default function MarketMatrix({
   projects,
+  segments,
+  layers,
   onFilterChange,
   activeSegments = [],
   activeLayers = [],
@@ -388,6 +390,8 @@ export default function MarketMatrix({
             <div className="hidden md:block">
               <CellDetail
                 cell={cellData[selectedCell]}
+                segments={segments}
+                layers={layers}
                 onClose={() => {
                   setSelectedCell(null);
                   onFilterChange?.([], [], Array.from(selectedAiTypes));
@@ -482,6 +486,8 @@ export default function MarketMatrix({
 
 function CellDetail({
   cell,
+  segments,
+  layers,
   onClose,
 }: {
   cell: {
@@ -490,6 +496,8 @@ function CellDetail({
     companies: Project[];
     totalFunding: number;
   };
+  segments: Segment[];
+  layers: Layer[];
   onClose: () => void;
 }) {
   const segment = segments.find(s => s.slug === cell.segment);

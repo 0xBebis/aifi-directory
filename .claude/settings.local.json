@@ -32,7 +32,14 @@
       "Bash(ls:*)",
       "Bash(python -c:*)",
       "Bash(curl:*)",
-      "WebFetch(domain:etherscan.io)"
+      "WebFetch(domain:etherscan.io)",
+      "Bash(git stash:*)",
+      "Bash(npx next build)",
+      "Bash(powershell -Command \"Rename-Item -Path ''src\\\\app\\\\blog'' -NewName ''blog_bak''\")",
+      "Bash(npx tsc --noEmit)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:walterwrites.ai)",
+      "WebFetch(domain:www.blakestockton.com)"
     ]
   }
 }
