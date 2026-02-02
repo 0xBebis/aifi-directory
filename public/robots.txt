@@ -4,29 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /submit/update/
+Crawl-delay: 1
 
 # Sitemap
 Sitemap: https://aifimap.com/sitemap.xml
-
-# AI crawlers — welcome to index our structured data
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-# Crawl-delay for politeness (optional, respected by some bots)
-User-agent: *
-Crawl-delay: 1
