@@ -13387,7 +13387,7 @@
     "hq_country": "US",
     "company_type": "token",
     "funding_stage": "fair-launch",
-    "region": "americas",
+    "region": "emea",
     "summary": "ZyfAI offers self-custodial DeFi yield optimization through customizable rule-based agents that rebalance capital across curated opportunities. Uses real-time data and smart account automation to maximize APY without manual rebalancing. ZFI token has 500M max supply (30% circulating), $2.75M market cap, reached ATH of $0.0611 (Aug 2025). Part of the broader DeFAI trend combining AI automation with decentralized finance.",
     "crypto": true,
     "employees": "1-10",
@@ -13400,7 +13400,11 @@
     "logo": "/logos/zyfai.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "description": "Zyfai is a DeFi Agent built to optimize DeFi yields with real-time data and automated on-chain actions. It rebalances your funds across Decentralized Finance protocols to earn the best yield possible.",
+    "funding": 3000000,
+    "twitter": "Zyfai_",
+    "linkedin": "https://www.linkedin.com/company/zyfai/?viewAsMember=true"
   },
   {
     "slug": "almanak",
