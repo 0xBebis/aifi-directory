@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Agent, FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS } from '@/types';
+import { Agent, FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS, CHAIN_LABELS, CHAIN_COLORS } from '@/types';
 import { formatRelativeTime, agentSlug } from '@/lib/data';
 import AgentImage from './AgentImage';
 import ProtocolBadge from './ProtocolBadge';
@@ -85,13 +85,18 @@ export default function AgentCard({ agent, index = 0 }: AgentCardProps) {
         </div>
       )}
 
-      {/* Footer: Status + Last activity */}
+      {/* Footer: Status + Chain + Last activity */}
       <div className="flex items-center justify-between pt-3 border-t border-border/50">
         <div className="flex items-center gap-2 text-xs text-text-faint">
           <span
             className={`w-1.5 h-1.5 rounded-full ${agent.active ? 'bg-positive' : 'bg-text-faint'}`}
           />
           <span>{agent.active ? 'Active' : 'Inactive'}</span>
+          <span className="text-border">·</span>
+          <span className="inline-flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: CHAIN_COLORS[agent.chainId] || '#627EEA' }} />
+            {CHAIN_LABELS[agent.chainId] || `Chain ${agent.chainId}`}
+          </span>
           <span className="text-border">·</span>
           <span>{formatRelativeTime(agent.lastActivity)}</span>
         </div>

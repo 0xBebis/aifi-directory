@@ -263,6 +263,23 @@ export const PROTOCOL_COLORS: Record<AgentProtocol, string> = {
   email: '#71717a',
 };
 
+// ── Chain Metadata ──
+
+export const CHAIN_LABELS: Record<number, string> = {
+  1: 'Ethereum',
+  137: 'Polygon',
+};
+
+export const CHAIN_COLORS: Record<number, string> = {
+  1: '#627EEA',
+  137: '#8247E5',
+};
+
+export const CHAIN_EXPLORERS: Record<number, string> = {
+  1: 'https://etherscan.io',
+  137: 'https://polygonscan.com',
+};
+
 export interface FeedbackEntry {
   score: number;
   tag1: string | null;

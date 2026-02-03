@@ -21,7 +21,7 @@ import {
   FINANCE_CATEGORY_LABELS,
   FINANCE_CATEGORY_COLORS,
 } from '@/lib/data';
-import { AgentProtocol } from '@/types';
+import { AgentProtocol, CHAIN_LABELS, CHAIN_COLORS, CHAIN_EXPLORERS } from '@/types';
 import AgentImage from '@/components/AgentImage';
 import ProtocolBadge from '@/components/ProtocolBadge';
 import AgentCard from '@/components/AgentCard';
@@ -29,7 +29,6 @@ import EndpointList from '@/components/EndpointList';
 import CapabilitySection from '@/components/CapabilitySection';
 import JsonLd from '@/components/JsonLd';
 
-const EXPLORER_BASE = 'https://etherscan.io';
 const REGISTRY_ADDRESS = '0x8004A169FB4a3325136EB29fA0ceB6D2e539a432';
 
 export function generateStaticParams() {
@@ -73,6 +72,9 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
   const categoryColor = FINANCE_CATEGORY_COLORS[agent.financeCategory] || '#64748b';
   const similarAgents = getSimilarAgents(agent, 3);
   const endpoints = getAgentEndpoints(agent);
+  const explorerBase = CHAIN_EXPLORERS[agent.chainId] || 'https://etherscan.io';
+  const chainLabel = CHAIN_LABELS[agent.chainId] || `Chain ${agent.chainId}`;
+  const chainColor = CHAIN_COLORS[agent.chainId] || '#627EEA';
 
   // Build metrics
   const metrics: Array<{ label: string; value: string; icon: React.ReactNode }> = [
@@ -184,7 +186,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
                     </a>
                   )}
                   <a
-                    href={`${EXPLORER_BASE}/token/${REGISTRY_ADDRESS}?a=${agent.agentId}`}
+                    href={`${explorerBase}/token/${REGISTRY_ADDRESS}?a=${agent.agentId}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary text-sm gap-1.5"
@@ -379,7 +381,10 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
             <div className="space-y-3">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Chain</span>
-                <span className="text-text-primary font-medium">Ethereum</span>
+                <span className="text-text-primary font-medium inline-flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full" style={{ background: chainColor }} />
+                  {chainLabel}
+                </span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Agent ID</span>
@@ -388,7 +393,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Owner</span>
                 <a
-                  href={`${EXPLORER_BASE}/address/${agent.owner}`}
+                  href={`${explorerBase}/address/${agent.owner}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent-hover transition-colors font-mono text-xs inline-flex items-center gap-1"
@@ -401,7 +406,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-text-muted">Wallet</span>
                   <a
-                    href={`${EXPLORER_BASE}/address/${agent.agentWallet}`}
+                    href={`${explorerBase}/address/${agent.agentWallet}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent hover:text-accent-hover transition-colors font-mono text-xs inline-flex items-center gap-1"
@@ -414,7 +419,7 @@ export default function AgentDetailPage({ params }: { params: { id: string } }) 
               <div className="flex items-center justify-between text-sm">
                 <span className="text-text-muted">Registry</span>
                 <a
-                  href={`${EXPLORER_BASE}/address/${REGISTRY_ADDRESS}`}
+                  href={`${explorerBase}/address/${REGISTRY_ADDRESS}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent-hover transition-colors font-mono text-xs inline-flex items-center gap-1"

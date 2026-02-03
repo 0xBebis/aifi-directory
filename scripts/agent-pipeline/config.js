@@ -3,16 +3,17 @@
 
 module.exports = {
   // ── Subgraph ──
-  SUBGRAPH_ID: 'FV6RR6y13rsnCxBAicKuQEwDp8ioEGiNaWaZUmvr1F8k',
+  CHAINS: [
+    { id: 1, name: 'Ethereum', subgraphId: 'FV6RR6y13rsnCxBAicKuQEwDp8ioEGiNaWaZUmvr1F8k' },
+    { id: 137, name: 'Polygon', subgraphId: '9q16PZv1JudvtnCAf44cBoxg82yK9SSsFvrjCY9xnneF' },
+  ],
   GRAPH_GATEWAY: 'https://gateway.thegraph.com/api',
   BATCH_SIZE: 100,       // subgraph pagination limit
   RATE_LIMIT_MS: 200,    // delay between subgraph requests
 
-  // ── Contract Addresses (Ethereum Mainnet) ──
+  // ── Contract Addresses (deterministic across chains) ──
   IDENTITY_REGISTRY: '0x8004A169FB4a3325136EB29fA0ceB6D2e539a432',
   REPUTATION_REGISTRY: '0x8004BAa17C55a88189AE136b182e5fdA19dE9b63',
-  CHAIN_ID: 1,           // Ethereum Mainnet
-  CHAIN_NAME: 'Ethereum',
 
   // ── Finance Filtering ──
   FINANCE_THRESHOLD: 0.10,  // agents scoring below this are excluded (0–1 scale)
@@ -120,6 +121,8 @@ module.exports = {
     /^[a-z]{1,5}$/i,               // very short names: "Bob", "test"
     /^[^aeiou\s]{4,}$/i,           // no vowels = keyboard mash: "asdcghj", "sfasfsd"
     /\.8004-agent\.eth$/i,          // .8004-agent.eth test entries
+    /^[a-z]+_[a-f0-9]+$/i,            // generated "Agent_339e", "NovaByte_6939", "PrimeMind_643", "UltraFlow_3" pattern
+    /^agents?\s+\d+$/i,              // "Agents 18598", "Agent 7"
   ],
 
   SPAM_DESC_PATTERNS: [

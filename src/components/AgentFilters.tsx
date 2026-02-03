@@ -7,6 +7,7 @@ import {
   Agent, FinanceCategory, AgentProtocol,
   FINANCE_CATEGORY_LABELS, FINANCE_CATEGORY_COLORS,
   PROTOCOL_LABELS, PROTOCOL_COLORS,
+  CHAIN_LABELS, CHAIN_COLORS,
 } from '@/types';
 import AgentCard from './AgentCard';
 
@@ -34,6 +35,7 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
   const [search, setSearch] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<Set<FinanceCategory>>(new Set());
   const [selectedProtocols, setSelectedProtocols] = useState<Set<AgentProtocol>>(new Set());
+  const [selectedChains, setSelectedChains] = useState<Set<number>>(new Set());
   const [activeOnly, setActiveOnly] = useState(false);
   const [sortBy, setSortBy] = useState<SortKey>('reputation');
 
@@ -58,6 +60,16 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
       .sort((a, b) => b[1] - a[1]);
   }, [agents]);
 
+  const chainStats = useMemo(() => {
+    const counts: Record<number, number> = {};
+    agents.forEach(a => {
+      counts[a.chainId] = (counts[a.chainId] || 0) + 1;
+    });
+    return Object.entries(counts)
+      .map(([id, count]) => [Number(id), count] as [number, number])
+      .sort((a, b) => b[1] - a[1]);
+  }, [agents]);
+
   // Filter + search + sort
   const filtered = useMemo(() => {
     let result = agents;
@@ -72,6 +84,11 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
       result = result.filter(a =>
         a.protocols.some(p => selectedProtocols.has(p))
       );
+    }
+
+    // Chain filter
+    if (selectedChains.size > 0) {
+      result = result.filter(a => selectedChains.has(a.chainId));
     }
 
     // Active only
@@ -107,14 +124,15 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
     }
 
     return result;
-  }, [agents, search, selectedCategories, selectedProtocols, activeOnly, sortBy]);
+  }, [agents, search, selectedCategories, selectedProtocols, selectedChains, activeOnly, sortBy]);
 
-  const hasFilters = search || selectedCategories.size > 0 || selectedProtocols.size > 0 || activeOnly;
+  const hasFilters = search || selectedCategories.size > 0 || selectedProtocols.size > 0 || selectedChains.size > 0 || activeOnly;
 
   function clearFilters() {
     setSearch('');
     setSelectedCategories(new Set());
     setSelectedProtocols(new Set());
+    setSelectedChains(new Set());
     setActiveOnly(false);
   }
 
@@ -132,6 +150,15 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
       const next = new Set(prev);
       if (next.has(proto)) next.delete(proto);
       else next.add(proto);
+      return next;
+    });
+  }
+
+  function toggleChain(chainId: number) {
+    setSelectedChains(prev => {
+      const next = new Set(prev);
+      if (next.has(chainId)) next.delete(chainId);
+      else next.add(chainId);
       return next;
     });
   }
@@ -206,8 +233,8 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
           })}
         </div>
 
-        {/* Protocol pills + Active toggle */}
-        <div className="flex items-center gap-2 flex-wrap">
+        {/* Protocol pills */}
+        <div className="flex items-center gap-2 flex-wrap mb-3">
           <span className="text-[10px] uppercase tracking-wider text-text-faint font-medium mr-1">Protocol</span>
           {protocolStats.map(([proto, count]) => {
             const isActive = selectedProtocols.has(proto);
@@ -228,6 +255,34 @@ export default function AgentFilters({ agents }: AgentFiltersProps) {
                 }}
               >
                 {PROTOCOL_LABELS[proto]}
+                <span className="opacity-60">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Chain pills + Active toggle */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-[10px] uppercase tracking-wider text-text-faint font-medium mr-1">Chain</span>
+          {chainStats.map(([chainId, count]) => {
+            const isActive = selectedChains.has(chainId);
+            const color = CHAIN_COLORS[chainId] || '#627EEA';
+            return (
+              <button
+                key={chainId}
+                onClick={() => toggleChain(chainId)}
+                aria-pressed={isActive}
+                className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all ${
+                  isActive ? 'ring-1 ring-offset-1 ring-offset-surface' : 'hover:scale-105'
+                }`}
+                style={{
+                  backgroundColor: isActive ? `${color}25` : `${color}10`,
+                  color: color,
+                  border: `1px solid ${isActive ? color : `${color}20`}`,
+                  ['--tw-ring-color' as string]: isActive ? color : undefined,
+                }}
+              >
+                {CHAIN_LABELS[chainId] || `Chain ${chainId}`}
                 <span className="opacity-60">{count}</span>
               </button>
             );

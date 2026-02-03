@@ -14,12 +14,11 @@ const path = require('path');
 const { URL } = require('url');
 
 const {
-  SUBGRAPH_ID,
+  CHAINS,
   GRAPH_GATEWAY,
   BATCH_SIZE,
   RATE_LIMIT_MS,
   MAX_RECENT_FEEDBACK,
-  CHAIN_ID,
 } = require('./config');
 
 const {
@@ -49,8 +48,6 @@ const keyIdx = args.indexOf('--key');
 const API_KEY = keyIdx !== -1 ? args[keyIdx + 1]
   : (process.env.GRAPH_API_KEY || '7fd2e7d89ce3ef24cd0d4590298f0b2c');
 
-const SUBGRAPH_URL = `${GRAPH_GATEWAY}/${API_KEY}/subgraphs/id/${SUBGRAPH_ID}`;
-
 // ── Helpers ──
 
 function sleep(ms) {
@@ -73,6 +70,11 @@ function getAgentName(reg, fallbackId) {
   return (reg && reg.name) || `Agent #${fallbackId}`;
 }
 
+/** Build subgraph URL for a chain. */
+function subgraphUrl(subgraphId) {
+  return `${GRAPH_GATEWAY}/${API_KEY}/subgraphs/id/${subgraphId}`;
+}
+
 /** Default reputation fields when data is unavailable. */
 const DEFAULT_REPUTATION = {
   reputationScore: null,
@@ -83,17 +85,17 @@ const DEFAULT_REPUTATION = {
 };
 
 /**
- * Execute a GraphQL query against the subgraph.
+ * Execute a GraphQL query against a subgraph URL.
  */
-function querySubgraph(query, variables = {}) {
+function querySubgraph(url, query, variables = {}) {
   return new Promise((resolve, reject) => {
-    const url = new URL(SUBGRAPH_URL);
+    const parsed = new URL(url);
     const body = JSON.stringify({ query, variables });
 
     const options = {
-      hostname: url.hostname,
+      hostname: parsed.hostname,
       port: 443,
-      path: url.pathname + url.search,
+      path: parsed.pathname + parsed.search,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -210,7 +212,7 @@ const FEEDBACK_QUERY = `
 
 // ── Main Pipeline ──
 
-async function fetchAllAgents() {
+async function fetchAllAgentsForChain(chainSubgraphUrl, chainName) {
   const allAgents = [];
   // Use cursor-based pagination (createdAt_lt) to avoid The Graph's skip limit of 5000.
   // Start with a far-future timestamp so the first query returns everything.
@@ -218,11 +220,11 @@ async function fetchAllAgents() {
   let hasMore = true;
   let batchNum = 0;
 
-  console.log('Fetching agents from subgraph...');
+  console.log(`Fetching agents from ${chainName} subgraph...`);
 
   while (hasMore) {
     const variables = { first: BATCH_SIZE, lastCreatedAt };
-    const data = await querySubgraph(AGENTS_QUERY, variables);
+    const data = await querySubgraph(chainSubgraphUrl, AGENTS_QUERY, variables);
     const batch = data.agents || [];
     allAgents.push(...batch);
 
@@ -240,15 +242,15 @@ async function fetchAllAgents() {
     }
   }
 
-  console.log(`Fetched ${allAgents.length} total agents from subgraph.`);
+  console.log(`Fetched ${allAgents.length} agents from ${chainName}.`);
   return allAgents;
 }
 
-async function fetchReputationData(agentSubgraphId) {
+async function fetchReputationData(chainSubgraphUrl, agentSubgraphId) {
   try {
     const [statsData, feedbackData] = await Promise.all([
-      querySubgraph(REPUTATION_QUERY, { agentId: agentSubgraphId }),
-      querySubgraph(FEEDBACK_QUERY, {
+      querySubgraph(chainSubgraphUrl, REPUTATION_QUERY, { agentId: agentSubgraphId }),
+      querySubgraph(chainSubgraphUrl, FEEDBACK_QUERY, {
         agentId: agentSubgraphId,
         first: MAX_RECENT_FEEDBACK,
       }),
@@ -339,8 +341,20 @@ async function main() {
   const includeSet = new Set(overrides.include || []);
   const excludeSet = new Set(overrides.exclude || []);
 
-  // Step 1: Fetch all agents
-  const rawAgents = await fetchAllAgents();
+  // Step 1: Fetch agents from all chains
+  const rawAgents = [];
+  const chainCounts = {};
+  // Map chainId → subgraph URL for reputation lookups later
+  const chainSubgraphUrls = {};
+
+  for (const chain of CHAINS) {
+    const url = subgraphUrl(chain.subgraphId);
+    chainSubgraphUrls[chain.id] = url;
+    const agents = await fetchAllAgentsForChain(url, chain.name);
+    chainCounts[chain.name] = agents.length;
+    rawAgents.push(...agents);
+  }
+  console.log(`Fetched ${rawAgents.length} total agents across ${CHAINS.length} chains.`);
 
   // Step 2: Filter to agents with registration files (name + description required)
   const withMetadata = rawAgents.filter(a => {
@@ -439,6 +453,17 @@ async function main() {
   }
   financeAgents = dedupedAgents;
 
+  // Step 3c: Remove agents with no interaction endpoints
+  const beforeEndpoint = financeAgents.length;
+  financeAgents = financeAgents.filter(({ raw }) => {
+    const reg = raw.registrationFile || {};
+    return reg.mcpEndpoint || reg.a2aEndpoint || reg.oasfEndpoint || reg.webEndpoint;
+  });
+  const endpointRemoved = beforeEndpoint - financeAgents.length;
+  if (endpointRemoved > 0) {
+    console.log(`Endpoint filter: ${beforeEndpoint} → ${financeAgents.length} (${endpointRemoved} agents with no endpoints removed).`);
+  }
+
   // Step 4: Fetch reputation data for each finance agent
   console.log('\nFetching reputation data...');
   const agentEntries = [];
@@ -446,10 +471,11 @@ async function main() {
   for (let i = 0; i < financeAgents.length; i++) {
     const { raw, score, category } = financeAgents[i];
     const subgraphId = raw.id;
+    const chainUrl = chainSubgraphUrls[toInt(raw.chainId)];
 
     process.stdout.write(`  [${i + 1}/${financeAgents.length}] ${getAgentName(raw.registrationFile, raw.agentId)} ... `);
 
-    const reputation = await fetchReputationData(subgraphId);
+    const reputation = await fetchReputationData(chainUrl, subgraphId);
     const entry = buildAgentEntry(raw, { score, category }, reputation);
     agentEntries.push(entry);
 
@@ -486,12 +512,14 @@ async function main() {
     meta: {
       fetchedAt: new Date().toISOString(),
       durationMs: Date.now() - startTime,
+      chains: chainCounts,
       totalInRegistry: rawAgents.length,
       withMetadata: withMetadata.length,
       spamRejected: spamRejected.length,
       passedSpamFilter: spamFiltered.length,
       passedFinanceFilter: scored.filter(s => s.score >= FINANCE_THRESHOLD || s.forceInclude).length,
       duplicatesRemoved: dupeRemoved.length,
+      noEndpointsRemoved: endpointRemoved,
       outputCount: agentEntries.length,
       threshold: FINANCE_THRESHOLD,
       includeAllMode: includeAll,
@@ -516,12 +544,16 @@ async function main() {
 
   // Summary
   console.log('\n=== Pipeline Summary ===');
+  for (const chain of CHAINS) {
+    console.log(`${chain.name} agents:  ${chainCounts[chain.name] || 0}`);
+  }
   console.log(`Total in registry:  ${rawAgents.length}`);
   console.log(`With metadata:      ${withMetadata.length}`);
   console.log(`Spam rejected:      ${spamRejected.length}`);
   console.log(`After spam filter:  ${spamFiltered.length}`);
-  console.log(`Passed finance:     ${financeAgents.length}`);
+  console.log(`Passed finance:     ${financeAgents.length + endpointRemoved}`);
   console.log(`Dupes removed:      ${dupeRemoved.length}`);
+  console.log(`No endpoints:       ${endpointRemoved}`);
   console.log(`Output agents:      ${agentEntries.length}`);
   console.log(`Duration:           ${((Date.now() - startTime) / 1000).toFixed(1)}s`);
 
@@ -536,6 +568,21 @@ async function main() {
       .sort((a, b) => b[1] - a[1])
       .forEach(([cat, count]) => {
         console.log(`  ${cat}: ${count}`);
+      });
+  }
+
+  // Chain breakdown
+  const chainBreakdown = {};
+  agentEntries.forEach(a => {
+    const name = CHAINS.find(c => c.id === a.chainId)?.name || `Chain ${a.chainId}`;
+    chainBreakdown[name] = (chainBreakdown[name] || 0) + 1;
+  });
+  if (Object.keys(chainBreakdown).length > 1) {
+    console.log('\nChain breakdown:');
+    Object.entries(chainBreakdown)
+      .sort((a, b) => b[1] - a[1])
+      .forEach(([chain, count]) => {
+        console.log(`  ${chain}: ${count}`);
       });
   }
 }
