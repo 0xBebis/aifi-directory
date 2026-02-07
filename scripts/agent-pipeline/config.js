@@ -5,6 +5,7 @@ module.exports = {
   // ── Subgraph ──
   CHAINS: [
     { id: 1, name: 'Ethereum', subgraphId: 'FV6RR6y13rsnCxBAicKuQEwDp8ioEGiNaWaZUmvr1F8k' },
+    { id: 11155111, name: 'Sepolia', subgraphId: '6wQRC7geo9XYAhckfmfo8kbMRLeWU8KQd3XsJqFKmZLT' },
     { id: 137, name: 'Polygon', subgraphId: '9q16PZv1JudvtnCAf44cBoxg82yK9SSsFvrjCY9xnneF' },
   ],
   GRAPH_GATEWAY: 'https://gateway.thegraph.com/api',

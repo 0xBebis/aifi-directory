@@ -564,9 +564,9 @@ This writes to `src/data/agents.json`. The output `results.json` is gitignored.
 
 ### Configuration
 
-- **Finance threshold**: 0.25 (agents scoring below are excluded)
+- **Finance threshold**: 0.10 (agents scoring below are excluded)
 - **Scoring weights**: name (0.20), description (0.30), domains (0.25), tools (0.15)
-- **Chain**: Ethereum Sepolia (chain ID 11155111) — only deployment as of now
+- **Chains**: Ethereum Mainnet (1), Ethereum Sepolia (11155111), Polygon (137)
 - **Manual overrides**: `overrides.json` can force-include or force-exclude agents
 
 ---
