@@ -90,8 +90,14 @@ function deduplicateAgents(agents) {
 
   for (const entry of agents) {
     const reg = entry.raw.registrationFile || {};
+    // Normalize name: strip trailing wallet addresses (0x...) and "for" prefix
+    // so "Zyfai Rebalancer Agent for 0xABC..." dedupes with "Zyfai Rebalancer Agent for 0xDEF..."
+    const normalizedName = (reg.name || '').trim().toLowerCase()
+      .replace(/\s+for\s+0x[0-9a-f]+$/i, '')
+      .replace(/\s+0x[0-9a-f]+$/i, '')
+      .trim();
     // Truncate description to 100 chars for dedup key — avoids false negatives from long unique suffixes
-    const key = `${(reg.name || '').trim().toLowerCase()}::${(reg.description || '').trim().toLowerCase().slice(0, 100)}`;
+    const key = `${normalizedName}::${(reg.description || '').trim().toLowerCase().slice(0, 100)}`;
 
     if (!groups.has(key)) {
       groups.set(key, []);

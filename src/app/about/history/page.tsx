@@ -30,7 +30,7 @@ const eras = [
   { id: 'deep-learning', label: 'Deep Learning', start: 2012, end: 2018, color: '#a78bfa', description: 'Neural networks transform credit and fraud' },
   { id: 'nlp', label: 'NLP Era', start: 2019, end: 2022, color: '#4ade80', description: 'Language models read financial text' },
   { id: 'foundation', label: 'Foundation Models', start: 2023, end: 2024, color: '#f59e0b', description: 'LLMs enter the enterprise' },
-  { id: 'emergence', label: 'Emergence', start: 2025, end: 2026, color: '#14b8a6', description: 'AI makes consequential decisions', featured: true },
+  { id: 'emergence', label: 'Emergence', start: 2025, end: 2026, color: '#14b8a6', description: 'AI is making consequential decisions', featured: true },
 ];
 
 // Milestones grouped by era - focused on AI + Finance intersection
@@ -74,8 +74,8 @@ const milestones = [
   },
   {
     year: 2026,
-    event: 'The race begins',
-    detail: 'AI systems start making consequential decisions across lending, trading, and risk management.',
+    event: 'The race is on',
+    detail: 'AI systems are making consequential decisions across lending, trading, and risk management.',
     era: 'emergence',
     tagline: 'The firms building now will shape capital flows for decades.',
     featured: true

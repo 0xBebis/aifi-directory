@@ -4,6 +4,7 @@ import {
   projects,
   segments,
   layers,
+  aiTypes,
   getTotalFunding,
   formatFunding,
   BUILD_DATE,
@@ -13,12 +14,14 @@ import DirectoryBrowser from '@/components/DirectoryBrowser';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
+const dirDescription = `Browse the comprehensive directory of AI + Finance companies across ${segments.length} market segments, ${layers.length} technology layers, and ${aiTypes.length} AI types. Interactive market map and full search.`;
+
 export const metadata: Metadata = {
   title: 'AI Finance Company Directory | AIFI Map',
-  description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types. Interactive market map and full search.',
+  description: dirDescription,
   openGraph: {
     title: 'AI Finance Company Directory',
-    description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types.',
+    description: dirDescription,
     type: 'website',
     siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Finance Company Directory',
-    description: 'Browse the comprehensive directory of AI + Finance companies across 9 market segments, 5 technology layers, and 8 AI types.',
+    description: dirDescription,
     images: ['/og/default.png'],
   },
 };

@@ -5,7 +5,8 @@ module.exports = {
   // ── Subgraph ──
   CHAINS: [
     { id: 1, name: 'Ethereum', subgraphId: 'FV6RR6y13rsnCxBAicKuQEwDp8ioEGiNaWaZUmvr1F8k' },
-    { id: 11155111, name: 'Sepolia', subgraphId: '6wQRC7geo9XYAhckfmfo8kbMRLeWU8KQd3XsJqFKmZLT' },
+    // Sepolia testnet removed — testnet agents are excluded from production output
+    // { id: 11155111, name: 'Sepolia', subgraphId: '6wQRC7geo9XYAhckfmfo8kbMRLeWU8KQd3XsJqFKmZLT' },
     { id: 137, name: 'Polygon', subgraphId: '9q16PZv1JudvtnCAf44cBoxg82yK9SSsFvrjCY9xnneF' },
   ],
   GRAPH_GATEWAY: 'https://gateway.thegraph.com/api',
@@ -17,7 +18,7 @@ module.exports = {
   REPUTATION_REGISTRY: '0x8004BAa17C55a88189AE136b182e5fdA19dE9b63',
 
   // ── Finance Filtering ──
-  FINANCE_THRESHOLD: 0.10,  // agents scoring below this are excluded (0–1 scale)
+  FINANCE_THRESHOLD: 0.15,  // agents scoring below this are excluded (0–1 scale)
 
   // Signal weights
   WEIGHTS: {
@@ -124,6 +125,11 @@ module.exports = {
     /\.8004-agent\.eth$/i,          // .8004-agent.eth test entries
     /^[a-z]+_[a-f0-9]+$/i,            // generated "Agent_339e", "NovaByte_6939", "PrimeMind_643", "UltraFlow_3" pattern
     /^agents?\s+\d+$/i,              // "Agents 18598", "Agent 7"
+    /^[A-Z0-9]{3,10}$/,            // all-caps gibberish: "DFVFVFE", "4TRFERFRF", "FEFVEV"
+    /\brug\b/i,                     // meme token spam: "RUG AVENGER"
+    /\bwarlord\b/i,                 // meme token spam: "ONCHAIN WARLORD"
+    /^onchain\s/i,                  // "ONCHAIN RUG AVENGER", "ONCHAIN WARLORD" etc.
+    /^my\s+erc-?\d/i,              // "My ERC-8004 Agent" test entries
   ],
 
   SPAM_DESC_PATTERNS: [
@@ -136,14 +142,20 @@ module.exports = {
     'example description',
     'lorem ipsum',
     'placeholder',
+    'no tax',
+    'no rug',
     /^an?\s+agent\s+(for|created)\s+test/i,   // "An agent for testing..."
     /^an?\s+agent\s+created\s+by\s+the\s/i,   // "An agent created by the..."
     /^test\b/i,                                // description starts with "test"
     /^[^aeiou\s]{8,}/i,                        // gibberish: starts with consonant run
-    /[b-df-hj-np-tv-xz]{10,}/i,                // gibberish: 10+ consecutive consonant letters (ignores digits, symbols, punctuation)
+    /[b-df-hj-np-tv-xz]{6,}/i,                 // gibberish: 6+ consecutive consonant letters (lowered from 10)
     /(.{5,}?)\1{3,}/i,                         // repeated phrases 3+ times
     /^\S{20,}$/,                               // entire description is one unbroken word (no spaces), 20+ chars
     /\S{30,}/,                                 // any single token 30+ chars without spaces (embedded gibberish)
+    /\bdawg\b/i,                               // informal meme agents: "your trusted agent dawg"
+    /\bsniper\b/i,                             // meme/bot spam: "owns the sniper game"
+    /digital\s+copy\s+of\b/i,                  // "a digital copy of X's consciousness"
+    /^yo\s+its?\s+me\b/i,                      // "Yo its me, your trusted agent"
   ],
 };
 

@@ -6,7 +6,7 @@
     "segment": "risk",
     "layer": "models",
     "stage": "series_c_plus",
-    "funding": 356000000,
+    "funding": 431000000,
     "website": "https://feedzai.com",
     "founded": 2011,
     "hq_country": "PT",
@@ -56,7 +56,7 @@
     "segment": "risk",
     "layer": "models",
     "stage": "series_c",
-    "funding": 145600000,
+    "funding": 170000000,
     "website": "https://www.sardine.ai",
     "founded": 2020,
     "hq_country": "US",
@@ -97,7 +97,7 @@
       "Visa",
       "Experian"
     ],
-    "last_funding_date": "2025-02",
+    "last_funding_date": "2026-05",
     "ai_types": [
       "predictive-ml"
     ]
@@ -109,13 +109,13 @@
     "segment": "risk",
     "layer": "models",
     "stage": "series_c",
-    "funding": 134000000,
+    "funding": 83000000,
     "website": "https://hawk.ai",
     "founded": 2018,
     "hq_country": "DE",
     "hq_city": "Munich",
     "company_type": "private",
-    "funding_stage": "growth",
+    "funding_stage": "late",
     "region": "emea",
     "summary": "Hawk builds AML transaction monitoring and fraud detection for banks and payment companies. Serves 80+ customers ranging from Tier 1 banks to fintechs, including Worldline, VakifBank, and Vodafone. Raised $134M+ total including $100M Series B expansion (June 2024) and $56M Series C (April 2025) from One Peak, BlackFin, Macquarie, and Rabobank. Product suite covers payment screening, transaction monitoring, and customer risk rating.",
     "employees": "201-500",
@@ -147,13 +147,13 @@
     "segment": "risk",
     "layer": "models",
     "stage": "series_b",
-    "funding": 55400000,
+    "funding": 55350000,
     "website": "https://resistant.ai",
     "founded": 2019,
     "hq_country": "CZ",
     "hq_city": "Prague",
     "company_type": "private",
-    "funding_stage": "early",
+    "funding_stage": "growth",
     "region": "emea",
     "summary": "Resistant AI detects forged and manipulated documents in financial onboarding and underwriting workflows. The platform analyzes how documents are constructed rather than their content, making it language-agnostic. Serves 100+ customers including Payoneer, Dun & Bradstreet, and AXA. Raised $25M Series B (Oct 2025) led by DTCP with Experian, GV, Notion Capital. Reached breakeven Sept 2025. Claims 10x ARR growth since Series A, with 150M+ documents verified.",
     "employees": "51-200",
@@ -263,7 +263,7 @@
     "segment": "risk",
     "layer": "models",
     "stage": "growth",
-    "funding": 211000000,
+    "funding": 295000000,
     "website": "https://www.alloy.com",
     "founded": 2015,
     "hq_country": "US",
@@ -305,7 +305,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2022-09"
+    "last_funding_date": "2022-10"
   },
   {
     "slug": "unit21",
@@ -364,7 +364,7 @@
     "segment": "risk",
     "layer": "models",
     "stage": "series_c_plus",
-    "funding": 150000000,
+    "funding": 220000000,
     "website": "https://www.trmlabs.com",
     "founded": 2018,
     "hq_country": "US",
@@ -377,7 +377,7 @@
       "automation"
     ],
     "company_type": "private",
-    "funding_stage": "growth",
+    "funding_stage": "late",
     "region": "americas",
     "summary": "TRM Labs provides blockchain intelligence for crypto compliance and investigations. Tracks 200M+ assets across 100 blockchains with 2.4B+ labeled addresses. Raised $150M from Thoma Bravo, Goldman Sachs, JPMorgan, Visa, Citi, PayPal, and Tiger Global. Revenue hit $11.3M in 2024. Customers include government agencies (HMRC, FCA, IRS), exchanges, and financial institutions. Competes with Chainalysis for enterprise blockchain analytics.",
     "employees": "51-200",
@@ -402,7 +402,7 @@
       "Citi",
       "PayPal"
     ],
-    "last_funding_date": "2022-11",
+    "last_funding_date": "2026-02",
     "logo": "/logos/trm-labs.png",
     "ai_types": [
       "graph-analytics"
@@ -664,7 +664,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2020-12"
+    "last_funding_date": "2024-12"
   },
   {
     "slug": "zest-ai",
@@ -686,7 +686,7 @@
       "data"
     ],
     "company_type": "private",
-    "funding_stage": "late",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Zest AI provides ML-based credit underwriting software for banks and credit unions. Raised $200M from Insight Partners in 2024; serves nearly 300 lenders including Citi, Truist, and First National Bank of Omaha. Has deployed 500+ proprietary credit models with 50+ patents. Claims 25% approval lift with no added risk and 20% default reduction. Forbes Fintech 50 (2024). Recent customer-led round included SchoolsFirst FCU and Citi Ventures.",
     "employees": "51-200",
@@ -1060,7 +1060,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2024-04"
+    "last_funding_date": "2023-03"
   },
   {
     "slug": "ramp",
@@ -1260,7 +1260,7 @@
         "title": "Co-founder"
       }
     ],
-    "last_funding_date": "2021-10",
+    "last_funding_date": "2021-09",
     "logo": "/logos/betterment.png",
     "ai_types": [
       "predictive-ml"
@@ -1303,7 +1303,7 @@
         "title": "Co-founder"
       }
     ],
-    "last_funding_date": "2021",
+    "last_funding_date": "2025-12",
     "ai_types": [
       "predictive-ml"
     ]
@@ -1385,7 +1385,7 @@
     "ai_types": [
       "reinforcement-learning"
     ],
-    "last_funding_date": "2024-09"
+    "last_funding_date": "2022-09"
   },
   {
     "slug": "trade-ideas",
@@ -1415,8 +1415,7 @@
     "logo": "/logos/trade-ideas.png",
     "ai_types": [
       "reinforcement-learning"
-    ],
-    "last_funding_date": "2003"
+    ]
   },
   {
     "slug": "portfoliopilot",
@@ -1482,7 +1481,9 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2022-09"
+    "last_funding_date": "2022-09",
+    "acquirer": "AlphaSense",
+    "acquired_date": "2024-07"
   },
   {
     "slug": "alphasense",
@@ -1491,7 +1492,7 @@
     "segment": "research",
     "layer": "applications",
     "stage": "growth",
-    "funding": 1397000000,
+    "funding": 1650000000,
     "website": "https://www.alpha-sense.com",
     "founded": 2011,
     "hq_country": "US",
@@ -1532,7 +1533,7 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2015-10"
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "sentieo-now-alphasense",
@@ -1674,7 +1675,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2024-10"
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "lemonade",
@@ -1770,13 +1771,13 @@
     "segment": "insurance",
     "layer": "models",
     "stage": "series_b",
-    "funding": 180000000,
+    "funding": 160000000,
     "website": "https://www.akur8.com",
     "founded": 2018,
     "hq_country": "FR",
     "hq_city": "Paris",
     "company_type": "private",
-    "funding_stage": "growth",
+    "funding_stage": "late",
     "region": "emea",
     "summary": "Akur8 provides ML-powered pricing and reserving tools for insurers. Raised $120M Series C in 2024 at $400M valuation from One Peak and Partners Group; $180M total funding. Hit $20.5M revenue in 2024 (doubled YoY). Serves 350 customers across 40+ countries including AXA, Generali, Munich Re, and Tokio Marine. 3,000+ actuaries use the platform daily. Acquired Milliman's Arius reserving platform.",
     "employees": "51-200",
@@ -1861,12 +1862,13 @@
         "title": "Co-founder & CDO"
       }
     ],
-    "acquirer": "ERGO",
+    "acquirer": "ERGO Group / Munich Re",
     "logo": "/logos/next-insurance.png",
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2025-07"
+    "last_funding_date": "2025-07",
+    "acquired_date": "2025-07"
   },
   {
     "slug": "coterie-insurance",
@@ -2187,7 +2189,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2021-03"
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "zeni",
@@ -2262,7 +2264,7 @@
     "segment": "enterprise",
     "layer": "applications",
     "stage": "series_c_plus",
-    "funding": 395000000,
+    "funding": 442000000,
     "website": "https://www.pennylane.com",
     "founded": 2020,
     "hq_country": "FR",
@@ -2341,7 +2343,8 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2024-01"
+    "last_funding_date": "2024-01",
+    "founded": 2023
   },
   {
     "slug": "uplinq",
@@ -2637,7 +2640,7 @@
     "segment": "banking",
     "layer": "applications",
     "stage": "growth",
-    "funding": 1900000000,
+    "funding": 1810000000,
     "website": "https://monzo.com",
     "founded": 2015,
     "hq_country": "GB",
@@ -3415,7 +3418,7 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2025-09"
+    "last_funding_date": "2025-12"
   },
   {
     "slug": "google-deepmind",
@@ -3718,7 +3721,7 @@
     "segment": "research",
     "layer": "models",
     "stage": "series_a",
-    "funding": 11500000,
+    "funding": 8000000,
     "website": "https://auquan.com",
     "hq_country": "GB",
     "hq_city": "London",
@@ -3881,7 +3884,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2017-09"
+    "last_funding_date": "2024-10",
+    "founded": 2000
   },
   {
     "slug": "trovata",
@@ -3917,7 +3921,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2019-04"
+    "last_funding_date": "2025-07"
   },
   {
     "slug": "tesorio",
@@ -3960,7 +3964,7 @@
     "website": "https://www.campfire.co",
     "hq_country": "US",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Campfire is an AI-native ERP replacing NetSuite for startups. Raised $100M+ total: $65M Series B (Oct 2025, Accel/Ribbit), $35M Series A (June 2025, Accel). 10x YTD revenue growth. Ember AI (Claude-powered) + L.A.M. (Large Accounting Model) achieves 95% reconciliation accuracy. Customers: Replit, PostHog, Decagon, Carbon Direct. 40 employees. Founded 2023, YC-backed.",
     "funding": 103500000,
@@ -3974,7 +3978,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2025-10"
+    "last_funding_date": "2025-10",
+    "founded": 2023
   },
   {
     "slug": "xelix",
@@ -4347,7 +4352,7 @@
     "layers": [
       "models"
     ],
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "growth",
     "region": "americas",
     "summary": "CAPE Analytics uses deep learning and geospatial imagery to provide instant property intelligence for insurers. Acquired by Moody's in Q1 2025. $61M raised, serving 50+ subscription customers including The Hartford, State Farm, Mercury Insurance, and Hippo. Covers 70M+ US single-family homes plus commercial properties. Founded 2014, backed by insurance strategic investors.",
@@ -4366,7 +4371,8 @@
     "ai_types": [
       "computer-vision"
     ],
-    "last_funding_date": "2025-01"
+    "last_funding_date": "2025-01",
+    "acquirer": "Moody's"
   },
   {
     "slug": "citadel-securities",
@@ -4393,7 +4399,7 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2022-01"
+    "last_funding_date": "2023-08"
   },
   {
     "slug": "two-sigma",
@@ -4429,7 +4435,7 @@
     "ai_types": [
       "reinforcement-learning"
     ],
-    "last_funding_date": "2001"
+    "last_funding_date": "2015-06"
   },
   {
     "slug": "de-shaw",
@@ -4456,8 +4462,7 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ],
-    "last_funding_date": "1988"
+    ]
   },
   {
     "slug": "renaissance-technologies",
@@ -4484,8 +4489,7 @@
     "logo": "/logos/renaissance-technologies.png",
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "1982"
+    ]
   },
   {
     "slug": "jane-street",
@@ -4497,8 +4501,8 @@
     "founded": 2000,
     "hq_country": "US",
     "hq_city": "New York",
-    "company_type": "private",
-    "funding_stage": "late",
+    "company_type": "public",
+    "funding_stage": "public",
     "region": "americas",
     "summary": "Jane Street is a quantitative trading firm that posted $20.5B net trading revenue in 2024 (nearly doubled YoY) and $13B net income—exceeding Citi and BofA trading desks. 10%+ of US equity market, 24% primary / 16% secondary US ETF market share. $707B monthly ETF trading volume. 8% of OCC options volume. Dwarfs competitors: Optiver ($3.8B), Virtu ($2.9B), Flow Traders ($530M).",
     "employees": "1001-5000",
@@ -4524,8 +4528,7 @@
     "logo": "/logos/jane-street.png",
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "2000"
+    ]
   },
   {
     "slug": "bridgewater",
@@ -4552,8 +4555,7 @@
     "logo": "/logos/bridgewater.png",
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "1975"
+    ]
   },
   {
     "slug": "worldquant",
@@ -4703,7 +4705,7 @@
     "layers": [
       "data"
     ],
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "growth",
     "region": "americas",
     "summary": "Jumio is an AI-powered identity verification platform processing 1M+ verifications daily, with 1B+ total verifications to date. $196M raised from Andreessen Horowitz, Citi, and Great Hill Partners. ~$100M ARR serving 1,000+ enterprise customers including HSBC, Coinbase, Airbnb, and United Airlines. Founded 2010, backed early by Facebook co-founder Eduardo Saverin. 2024 Globee Cybersecurity Award winner.",
@@ -4721,7 +4723,7 @@
     "ai_types": [
       "computer-vision"
     ],
-    "last_funding_date": "2012-05"
+    "last_funding_date": "2024-10"
   },
   {
     "slug": "persona",
@@ -4766,7 +4768,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2025-09"
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "veriff",
@@ -5348,7 +5350,7 @@
     "segment": "insurance",
     "layer": "models",
     "stage": "series_c_plus",
-    "funding": 184830000,
+    "funding": 185000000,
     "website": "https://www.tractable.ai",
     "founded": 2014,
     "hq_country": "GB",
@@ -5633,7 +5635,7 @@
     "segment": "trading",
     "layer": "models",
     "stage": "series_c_plus",
-    "funding": 42800000,
+    "funding": 51500000,
     "website": "https://numer.ai",
     "founded": 2015,
     "hq_country": "US",
@@ -5924,7 +5926,9 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2024-04"
+    "last_funding_date": "2024-04",
+    "acquirer": "Tilt",
+    "acquired_date": "2024-04"
   },
   {
     "slug": "argyle",
@@ -6079,7 +6083,7 @@
     "segment": "enterprise",
     "layer": "applications",
     "stage": "growth",
-    "funding": 717000000,
+    "funding": 867000000,
     "website": "https://gomotive.com",
     "founded": 2013,
     "hq_country": "US",
@@ -6189,7 +6193,7 @@
     "website": "https://www.blooom.com",
     "hq_country": "US",
     "hq_city": "Kansas City",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "early",
     "region": "americas",
     "summary": "Blooom was a 401(k) robo-advisor that shut down Nov 2022 and sold tech to Morgan Stanley. Had 29K clients with $5.6B in assets. Staff including CEO moved to Morgan Stanley. Raised $17.5M+ total. Founded in Overland Park, Kansas by Chris Costello and Randy AufDerHeide. Managed 401(k), 403(b), TSP, and IRA accounts. Former customers returned to recordkeepers after shutdown.",
@@ -6270,7 +6274,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2023-11"
+    "last_funding_date": "2023-11",
+    "funding": 60000000
   },
   {
     "slug": "filed",
@@ -6373,7 +6378,7 @@
       "models"
     ],
     "company_type": "private",
-    "funding_stage": "late",
+    "funding_stage": "growth",
     "region": "emea",
     "summary": "DataSnipper builds AI-powered audit automation that plugs into Excel, used by 400K+ auditors across 125 countries including all Big Four firms. Reached unicorn status in early 2024 with a $100M Series B from Index Ventures at $1B valuation. Revenue grew 150% in 2023 and was named the fastest-growing company in the Netherlands two years running. Delivered $1.4B in productivity savings in 2025. Partnered with Microsoft to launch AI agents for audit and finance.",
     "employees": "201-500",
@@ -6971,7 +6976,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2021-06"
+    "last_funding_date": "2024-01"
   },
   {
     "slug": "compstak",
@@ -7092,7 +7097,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2021-08"
+    "last_funding_date": "2021-08",
+    "founded": 2018
   },
   {
     "slug": "digit",
@@ -7639,7 +7645,7 @@
     "segment": "research",
     "layer": "data",
     "stage": "series_a",
-    "funding": 55900000,
+    "funding": 40000000,
     "website": "https://www.daloopa.com",
     "hq_country": "US",
     "hq_city": "New York",
@@ -7658,7 +7664,7 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2025-10"
+    "last_funding_date": "2024-05"
   },
   {
     "slug": "dataminr",
@@ -7702,7 +7708,7 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2021-04"
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "visible-alpha",
@@ -7730,8 +7736,7 @@
     "acquirer": "S&P Global",
     "ai_types": [
       "data-platform"
-    ],
-    "last_funding_date": "2024-02"
+    ]
   },
   {
     "slug": "koyfin",
@@ -7758,7 +7763,8 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2021-01"
+    "last_funding_date": "2021-01",
+    "founded": 2016
   },
   {
     "slug": "tabs",
@@ -7770,7 +7776,7 @@
     "hq_country": "US",
     "hq_city": "New York",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Tabs is an AI-powered B2B accounts receivable platform. Raised $91M+ total: $55M Series B (Lightspeed), $25M Series A (General Catalyst), $7M seed. 200+ customers with 5x ARR growth, $1B+ annual invoice volume automated. Customers include Cursor, Statsig, Findigs, Pinata. 40% reduction in collection time. Automates contract review, invoicing, payments, revenue recognition. Founded 2023 in NYC.",
     "funding": 91000000,
@@ -7785,7 +7791,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2024-10"
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "cube",
@@ -7813,7 +7819,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2026-01"
+    "last_funding_date": "2024-03"
   },
   {
     "slug": "datarails",
@@ -7825,10 +7831,10 @@
     "hq_country": "US",
     "hq_city": "New York",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "late",
     "region": "americas",
     "summary": "Datarails is an FP&A platform for Excel users. Raised $105M+ total: $55M Series A (Zeev Ventures) and $50M Series B (Qumra Capital, 2022). Launched FP&A Genius ChatGPT-style chatbot (Mar 2023) for conversational financial analysis. #92 on Deloitte Fast 500 2024. Also offers Cash Management solution. Founded 2015 in Tel Aviv by Didi Gurfinkel, Eyal Cohen, and Oded Har-Tal.",
-    "funding": 105000000,
+    "funding": 175000000,
     "employees": "201-500",
     "founders": [
       {
@@ -7857,7 +7863,7 @@
     "website": "https://www.mosaic.tech",
     "hq_country": "US",
     "hq_city": "San Francisco",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "early",
     "region": "americas",
     "summary": "Mosaic is a strategic finance platform for FP&A. Raised $72M+ total: $26M Series C (OMERS Ventures) and $25M Series B (Founders Fund, General Catalyst). #1 in G2's 50 Best Accounting & Finance 2024. Customers: Pipe, Fivetran, Drata, Sourcegraph, Kandji. AI features include automated forecasts and metric analysis. Founded 2019 by ex-Palantir finance leaders Bijan Moallemi, Brian Campbell, Joe Garafalo.",
@@ -7876,7 +7882,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2025-02"
+    "last_funding_date": "2025-02",
+    "acquirer": "HiBob"
   },
   {
     "slug": "jirav",
@@ -7888,7 +7895,7 @@
     "hq_country": "US",
     "hq_city": "San Francisco",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Jirav is an FP&A platform for SMBs and accounting firms. Raised $33M total including $20M Series B (Cota Capital, 2023). 4,000+ customers across SaaS, life sciences, CPG, e-commerce. 70 employees. Launched AI Forecasting product Sep 2024. New CEO Michael Morrison joined 2024. Competes with Cube. FP&A market expected to hit $16.9B by 2031. Founded 2015 in Austin.",
     "funding": 33600000,
@@ -8244,7 +8251,7 @@
     "segment": "insurance",
     "layer": "applications",
     "stage": "series_c_plus",
-    "funding": 432000000,
+    "funding": 635000000,
     "website": "https://clearcover.com",
     "founded": 2016,
     "hq_country": "US",
@@ -8389,7 +8396,7 @@
         "title": "Co-founder & CTO"
       }
     ],
-    "acquirer": "Applied",
+    "acquirer": "Applied Systems",
     "logo": "/logos/cytora.png",
     "ai_types": [
       "predictive-ml"
@@ -8426,7 +8433,7 @@
         "title": "Co-founder & COO"
       }
     ],
-    "acquirer": "Applied",
+    "acquirer": "Applied Systems",
     "logo": "/logos/planck.png",
     "ai_types": [
       "data-platform"
@@ -8485,8 +8492,7 @@
     "logo": "/logos/hudson-river-trading.png",
     "ai_types": [
       "llm"
-    ],
-    "last_funding_date": "2002"
+    ]
   },
   {
     "slug": "optiver",
@@ -8512,8 +8518,7 @@
     "logo": "/logos/optiver.png",
     "ai_types": [
       "llm"
-    ],
-    "last_funding_date": "1986"
+    ]
   },
   {
     "slug": "flow-traders",
@@ -8584,8 +8589,7 @@
     ],
     "ai_types": [
       "reinforcement-learning"
-    ],
-    "last_funding_date": "1998"
+    ]
   },
   {
     "slug": "point72",
@@ -8613,7 +8617,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2014"
+    "last_funding_date": "2026-01"
   },
   {
     "slug": "man-group",
@@ -8668,7 +8672,7 @@
     "ai_types": [
       "reinforcement-learning"
     ],
-    "last_funding_date": "2012"
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "millennium-management",
@@ -8791,7 +8795,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2024-12"
+    "last_funding_date": "2025-04"
   },
   {
     "slug": "addepar",
@@ -8828,7 +8832,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2021-06"
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "ethic",
@@ -9046,7 +9050,7 @@
     "segment": "risk",
     "layer": "data",
     "stage": "series_c_plus",
-    "funding": 546000000,
+    "funding": 543000000,
     "website": "https://www.quantexa.com",
     "founded": 2016,
     "hq_country": "GB",
@@ -9133,7 +9137,7 @@
     "website": "https://www.napier.ai",
     "hq_country": "GB",
     "hq_city": "London",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "growth",
     "region": "emea",
     "summary": "Napier AI is an AI-powered AML compliance platform. Founded 2015 in London. Raised $60M+ total: £45M from Crestline Investors (Feb 2024), majority investment from Marlin Equity Partners (Feb 2025). 30%+ YoY revenue growth since 2021. 100+ financial institution customers including HSBC, State Street. Napier Continuum platform for screening and monitoring.",
@@ -9429,7 +9433,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2022-04"
+    "last_funding_date": "2023-06"
   },
   {
     "slug": "reducto",
@@ -9568,7 +9572,7 @@
     "founded": 2017,
     "hq_country": "CZ",
     "hq_city": "Prague",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "growth",
     "region": "emea",
     "summary": "Rossum is an AI document processing platform serving 275+ enterprise businesses. Raised $109.5M total including $100M Series A from General Catalyst. Hit $44.9M revenue in 2024 with 167 employees. IDC MarketScape Leader 2023-2024. Coupa certified. Partners include KPMG Netherlands. Founded 2017 in Prague by PhD researchers.",
@@ -9587,7 +9591,8 @@
     "ai_types": [
       "computer-vision"
     ],
-    "last_funding_date": "2024-01"
+    "last_funding_date": "2024-01",
+    "acquirer": "Coupa Software"
   },
   {
     "slug": "instabase",
@@ -9602,7 +9607,7 @@
     "hq_country": "US",
     "hq_city": "San Francisco",
     "company_type": "private",
-    "funding_stage": "growth",
+    "funding_stage": "late",
     "region": "americas",
     "summary": "Instabase provides AI-powered unstructured document processing for banking, insurance, and healthcare. Raised $100M Series D (Jan 2025) from Qatar Investment Authority at $1.24B valuation. Revenue exceeded $50M in 2024. ~45 enterprise customers including Uber, NatWest, AXA, USPTO. Average contract value ~$1M. Founded 2015 by Anant Bhardwaj.",
     "employees": "201-500",
@@ -9616,7 +9621,7 @@
     "ai_types": [
       "computer-vision"
     ],
-    "last_funding_date": "2017-05"
+    "last_funding_date": "2025-01"
   },
   {
     "slug": "nanonets",
@@ -9638,7 +9643,7 @@
       "models"
     ],
     "company_type": "private",
-    "funding_stage": "early",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Nanonets is an AI OCR platform for finance document automation. Founded by IIT Gandhinagar alums (CEO Sarthak Jain). Raised $42M total ($29M Series B March 2024 led by Accel). 90% straight-through processing rate. 34%+ of Fortune 500 as customers. Users quadrupled in past year. Uses transformers over LLMs to avoid hallucinations. Angel investors include Ashton Kutcher.",
     "employees": "51-200",
@@ -9868,7 +9873,7 @@
     "website": "https://www.kofax.com",
     "hq_country": "US",
     "hq_city": "Irvine",
-    "company_type": "acquired",
+    "company_type": "private",
     "funding_stage": "growth",
     "region": "americas",
     "summary": "Kofax (now Tungsten Automation) is an intelligent automation platform for document processing. Irvine-based, founded 1985. Rebranded Jan 2024. Acquired by Clearlake Capital and TA Associates (2022) from Thoma Bravo. 2,200 employees, 32 countries, 25,000+ customers. Leader in 2025 Gartner Magic Quadrant for Intelligent Document Processing.",
@@ -9910,8 +9915,7 @@
     "logo": "/logos/extract-systems.png",
     "ai_types": [
       "data-platform"
-    ],
-    "last_funding_date": "2000"
+    ]
   },
   {
     "slug": "parascript",
@@ -9936,8 +9940,7 @@
     "logo": "/logos/parascript.png",
     "ai_types": [
       "llm"
-    ],
-    "last_funding_date": "1996"
+    ]
   },
   {
     "slug": "workfusion",
@@ -9946,7 +9949,7 @@
     "segment": "enterprise",
     "layer": "data",
     "stage": "series_c_plus",
-    "funding": 340000000,
+    "funding": 411000000,
     "website": "https://www.workfusion.com",
     "founded": 2010,
     "hq_country": "US",
@@ -9974,7 +9977,7 @@
     "ai_types": [
       "llm"
     ],
-    "last_funding_date": "2025-03"
+    "last_funding_date": "2025-09"
   },
   {
     "slug": "tidalwave",
@@ -10060,7 +10063,7 @@
     "ai_types": [
       "computer-vision"
     ],
-    "last_funding_date": "2022-08"
+    "last_funding_date": "2024-06"
   },
   {
     "slug": "infogrid",
@@ -10177,7 +10180,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2021-09"
+    "last_funding_date": "2021-12"
   },
   {
     "slug": "prop-ai",
@@ -10443,7 +10446,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2023-10"
+    "last_funding_date": "2023-12"
   },
   {
     "slug": "fico-debt-manager",
@@ -10455,7 +10458,7 @@
     "hq_country": "US",
     "hq_city": "Bozeman",
     "company_type": "private",
-    "funding_stage": "seed",
+    "funding_stage": "undisclosed",
     "region": "americas",
     "summary": "FICO Debt Manager is an enterprise AI collections optimization platform from FICO (NYSE: FICO). Customers include Cox Communications, Česká Spořitelna, EnterCard, Raiffeisen Bank, Valor Intelligence. Delivers 15% bad debt reduction, 50% collections cost reduction typical. Version 9.5 ensures regulatory compliance. Supports credit cards, mortgages, secured/unsecured loans.",
     "employees": "5000+",
@@ -10472,8 +10475,7 @@
     "logo": "/logos/fico-debt-manager.png",
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "1956"
+    ]
   },
   {
     "slug": "beyond-arm",
@@ -10497,8 +10499,7 @@
     "logo": "/logos/beyond-arm.png",
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "2000"
+    ]
   },
   {
     "slug": "my-dso-manager",
@@ -10523,8 +10524,7 @@
     "logo": "/logos/my-dso-manager.png",
     "ai_types": [
       "data-platform"
-    ],
-    "last_funding_date": "2018"
+    ]
   },
   {
     "slug": "yaypay",
@@ -10567,8 +10567,8 @@
     "founded": 1985,
     "hq_country": "FR",
     "hq_city": "Lyon",
-    "company_type": "public",
-    "funding_stage": "public",
+    "company_type": "acquired",
+    "funding_stage": "late",
     "region": "emea",
     "summary": "Esker provides AI-powered source-to-pay and order-to-cash automation. $235M revenue in 2024, up from $189M (2023). 6K customers including NVIDIA, Sony, Heineken. Only vendor in both Gartner Magic Quadrants for S2P and I2C (2024). Registered as official French e-invoicing partner (PDP). 1,000+ employees, founded 1985 in Lyon.",
     "employees": "1001-5000",
@@ -10580,8 +10580,7 @@
     ],
     "ai_types": [
       "predictive-ml"
-    ],
-    "last_funding_date": "2024-11"
+    ]
   },
   {
     "slug": "versapay",
@@ -11150,12 +11149,12 @@
     "segment": "risk",
     "layer": "data",
     "stage": "series_a",
-    "funding": 27100000,
+    "funding": 45100000,
     "website": "https://notabene.id",
     "hq_country": "US",
     "hq_city": "New York",
     "company_type": "private",
-    "funding_stage": "early",
+    "funding_stage": "growth",
     "region": "americas",
     "summary": "Notabene is a crypto travel rule compliance platform - 'SWIFT for crypto.' Brooklyn, NY-based, founded 2020. Raised $14.5M Series B (Nov 2024) led by DRW Venture Capital with Apollo, Wintermute. 165 companies using platform including OKX, Copper, Ramp. Global presence in US, Switzerland, Singapore, Germany, UK. YC-backed.",
     "employees": "51-200",
@@ -11177,7 +11176,7 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2021-08"
+    "last_funding_date": "2024-11"
   },
   {
     "slug": "regula",
@@ -11462,7 +11461,7 @@
     "website": "https://gtreasury.com",
     "hq_country": "US",
     "hq_city": "Chicago",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "growth",
     "region": "americas",
     "summary": "GTreasury is a treasury management platform. Chicago-based, founded 1986. Acquired by Ripple for $1B (Oct 2025) - first crypto company to acquire TMS vendor. Processes $12.5T in payment volume annually. Acquired CashAnalytics (Sept 2024), Solvexia (Jan 2026). Previously owned by HgCapital Trust.",
@@ -11478,7 +11477,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2025-10"
+    "last_funding_date": "2025-10",
+    "acquirer": "Ripple"
   },
   {
     "slug": "nomentia",
@@ -11519,10 +11519,10 @@
     "hq_country": "ES",
     "hq_city": "Madrid",
     "company_type": "private",
-    "funding_stage": "early",
+    "funding_stage": "growth",
     "region": "emea",
     "summary": "Embat is an AI-powered corporate treasury platform. Madrid-based, founded 2021 by ex-JP Morgan Antonio Berga and Carlos Serrano. Raised $23M total (€14.7M Series A Feb 2024 led by Creandum). 150+ enterprise clients including Playtomic, Cabify, Wallapop, Fever. Acquired Necto (2025). Uses Google Vertex AI. Saves 75% treasury time.",
-    "funding": 23000000,
+    "funding": 57000000,
     "employees": "11-50",
     "founders": [
       {
@@ -11534,7 +11534,7 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2024-02"
+    "last_funding_date": "2025-05"
   },
   {
     "slug": "nilus",
@@ -11575,7 +11575,7 @@
     "website": "https://www.cashforce.com",
     "hq_country": "BE",
     "hq_city": "Antwerp",
-    "company_type": "private",
+    "company_type": "acquired",
     "funding_stage": "early",
     "region": "emea",
     "summary": "Cashforce is an AI cash forecasting and working capital platform. Antwerp, Belgium-based. Raised $9.9M total (€5M Series A Oct 2019 led by INKEF Capital, Citi Ventures, BNP Paribas). Acquired by TIS (June 2022). Global presence: NYC, Antwerp, Amsterdam, Copenhagen, London. Serves multinationals in 120+ countries.",
@@ -11589,7 +11589,8 @@
     "ai_types": [
       "predictive-ml"
     ],
-    "last_funding_date": "2022-06"
+    "last_funding_date": "2022-06",
+    "acquirer": "TIS"
   },
   {
     "slug": "tis-treasury-intelligence",
@@ -11703,8 +11704,7 @@
     "logo": "/logos/bloomberg-treasury.png",
     "ai_types": [
       "data-platform"
-    ],
-    "last_funding_date": "1981"
+    ]
   },
   {
     "slug": "hazeltree",
@@ -11903,7 +11903,8 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2024-05"
+    "last_funding_date": "2024-05",
+    "acquirer": "Privateer"
   },
   {
     "slug": "quiver-quantitative",
@@ -11958,7 +11959,9 @@
     "ai_types": [
       "data-platform"
     ],
-    "last_funding_date": "2024-05"
+    "last_funding_date": "2024-05",
+    "acquirer": "Toggle AI",
+    "acquired_date": "2024-05"
   },
   {
     "slug": "factset",
@@ -11994,8 +11997,7 @@
     ],
     "ai_types": [
       "data-platform"
-    ],
-    "last_funding_date": "1996-06"
+    ]
   },
   {
     "slug": "sp-capital-iq",
@@ -12118,7 +12120,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2024-12"
+    "last_funding_date": "2023-11"
   },
   {
     "slug": "eqty-lab",
@@ -12248,7 +12250,7 @@
     "segment": "crypto",
     "layer": "infrastructure",
     "stage": "series_a",
-    "funding": 70400000,
+    "funding": 20500000,
     "website": "https://www.primeintellect.ai",
     "hq_country": "US",
     "company_type": "token",
@@ -12267,7 +12269,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2026-01"
+    "last_funding_date": "2025-02"
   },
   {
     "slug": "grass",
@@ -12283,7 +12285,7 @@
     "region": "americas",
     "summary": "Grass is a decentralized network for AI training data via user-contributed bandwidth. Built by Wynd Labs (Toronto, founded 2023). Raised $4.5M seed from Polychain Capital, Tribe Capital. Series A (Sept 2024) led by HackVC, Brevan Howard at ~$1B valuation. $10M bridge (Oct 2025). GRASS token airdrop Oct 2024. 2.5M+ active users by March 2025. Users monetize unused internet bandwidth for web scraping.",
     "crypto": true,
-    "funding": 13500000,
+    "funding": 14000000,
     "employees": "11-50",
     "founders": [
       {
@@ -12295,7 +12297,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2025-10"
+    "last_funding_date": "2024-09"
   },
   {
     "slug": "ionet",
@@ -12322,8 +12324,7 @@
     "logo": "/logos/ionet.png",
     "ai_types": [
       "infrastructure"
-    ],
-    "last_funding_date": "2024-03"
+    ]
   },
   {
     "slug": "morpheus-mor",
@@ -12470,7 +12471,7 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2024-06"
+    "last_funding_date": "2025-03"
   },
   {
     "slug": "0g-labs",
@@ -12479,7 +12480,7 @@
     "segment": "crypto",
     "layer": "infrastructure",
     "stage": "seed",
-    "funding": 325000000,
+    "funding": 75000000,
     "website": "https://0g.ai",
     "hq_country": "US",
     "company_type": "token",
@@ -12498,7 +12499,8 @@
     "ai_types": [
       "infrastructure"
     ],
-    "last_funding_date": "2024-11"
+    "last_funding_date": "2024-11",
+    "founded": 2023
   },
   {
     "slug": "sahara-ai",
@@ -13387,7 +13389,7 @@
     "hq_country": "US",
     "company_type": "token",
     "funding_stage": "fair-launch",
-    "region": "americas",
+    "region": "emea",
     "summary": "ZyfAI offers self-custodial DeFi yield optimization through customizable rule-based agents that rebalance capital across curated opportunities. Uses real-time data and smart account automation to maximize APY without manual rebalancing. ZFI token has 500M max supply (30% circulating), $2.75M market cap, reached ATH of $0.0611 (Aug 2025). Part of the broader DeFAI trend combining AI automation with decentralized finance.",
     "crypto": true,
     "employees": "1-10",
@@ -13400,7 +13402,11 @@
     "logo": "/logos/zyfai.png",
     "ai_types": [
       "agentic"
-    ]
+    ],
+    "description": "Zyfai is a DeFi Agent built to optimize DeFi yields with real-time data and automated on-chain actions. It rebalances your funds across Decentralized Finance protocols to earn the best yield possible.",
+    "funding": 3000000,
+    "twitter": "Zyfai_",
+    "linkedin": "https://www.linkedin.com/company/zyfai/"
   },
   {
     "slug": "almanak",
@@ -13715,8 +13721,7 @@
     "logo": "/logos/axal.png",
     "ai_types": [
       "agentic"
-    ],
-    "last_funding_date": "2024-10"
+    ]
   },
   {
     "slug": "defi-saver",
@@ -13823,27 +13828,27 @@
   },
   {
     "slug": "uv",
-    "name": "UV",
+    "name": "UV Labs",
     "logo": "/logos/uv.jpg",
-    "tagline": "RL environment & dataset for financial AI.",
-    "segment": "research",
-    "layer": "data",
+    "tagline": "Infrastructure for autonomous financial markets — decision data, agent orchestration, and trust tooling.",
+    "segment": "trading",
+    "layer": "infrastructure",
     "stage": "pre_seed",
-    "website": "https://www.uv.finance",
+    "website": "https://uvlabs.ai",
     "hq_country": "US",
     "company_type": "private",
     "funding_stage": "pre-seed",
     "region": "americas",
     "segments": [
-      "trading",
+      "research",
       "crypto"
     ],
     "layers": [
-      "models",
-      "infrastructure"
+      "data",
+      "models"
     ],
-    "summary": "UV creates post-training decision sequences with human feedback for research labs to post-train LLMs. UV provides a harness, environment, and dataset that allows AI teams to teach their models how to use financial tools, make good financial decisions, and generate alpha. They are currently training models for fintechs designed to utilize APIs more effectively & adhere to constraints and regulations.",
-    "funding": 100,
+    "summary": "UV Labs builds infrastructure for autonomous financial markets. Their platform generates reinforcement learning decision data from live trading with real capital, orchestrates multi-model agent systems at 99% lower inference cost, and provides compliance and audit tooling for safe AI deployment. With 750+ agents in production and $375M+ in transacted volume over 3 years of live operations, UV is one of the few companies with battle-tested autonomous trading infrastructure.",
+    "funding": 0,
     "employees": "1-10",
     "founders": [
       {
@@ -13852,8 +13857,35 @@
       }
     ],
     "ai_types": [
-      "llm"
+      "agentic",
+      "reinforcement-learning",
+      "llm",
+      "data-platform"
     ],
-    "last_funding_date": "2022-01"
+    "pinned": true,
+    "description": "UV Labs provides three core infrastructure layers for financial AI: Decision Data (complete trading episodes with reasoning traces, tool use, and verified outcomes for model post-training), Agent Infrastructure (multi-model orchestration that reduces inference costs by 99% while maintaining frontier performance on continuous financial data streams), and a Trust Layer (policy engines, compliance tooling, and audit trails for safe AI deployment in regulated environments). Their autonomous trading harness has been operating in live markets for over three years."
+  },
+  {
+    "slug": "planr",
+    "name": "Planr",
+    "tagline": "Portfolio monitoring for private equity, using AI to unify company data, KPIs, reporting, and forecasting.",
+    "segment": "enterprise",
+    "layer": "applications",
+    "website": "https://www.planr.com",
+    "description": "Planr is a portfolio monitoring and intelligence platform built for private equity firms. It helps investors, operating partners, and finance teams unify fragmented portfolio company data from spreadsheets, PDFs, board packs, ERP, CRM, finance systems, and other operating sources. Planr standardises KPIs, supports reporting and forecasting workflows, and gives firms a clearer view of portfolio company performance, value creation progress, and emerging risks across the portfolio.",
+    "summary": "Planr helps private equity firms move from fragmented reporting and manual portfolio data consolidation to a trusted data layer for monitoring, analytics, and forward-looking portfolio visibility.",
+    "ai_types": [
+      "llm",
+      "predictive-ml",
+      "data-platform"
+    ],
+    "company_type": "private",
+    "funding_stage": "growth",
+    "region": "emea",
+    "employees": "11-50",
+    "founded": 2024,
+    "hq_country": "IE",
+    "hq_city": "Cork",
+    "linkedin": "https://www.linkedin.com/company/planr-software/"
   }
 ]

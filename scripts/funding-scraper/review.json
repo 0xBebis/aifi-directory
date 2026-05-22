@@ -1,11 +1,11 @@
 {
-  "generated": "2026-01-27T22:14:21.784Z",
+  "generated": "2026-05-21T21:25:20.831Z",
   "summary": {
-    "total": 88,
-    "updates_suggested": 83,
-    "new_funding": 9,
-    "changed_funding": 74,
-    "no_change": 5
+    "total": 86,
+    "updates_suggested": 72,
+    "new_funding": 0,
+    "changed_funding": 72,
+    "no_change": 14
   },
   "companies": [
     {
@@ -19,7 +19,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $536M → $100M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "socure",
@@ -32,7 +32,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $650M → $150M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "darwinium",
@@ -45,7 +45,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $28M → $14M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "greenlite",
@@ -58,19 +58,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $20M → $20K",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "pagaya",
       "name": "Pagaya",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 75000000,
+      "current_formatted": "$75M",
       "found_funding": 75000000,
       "found_formatted": "$75M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -84,7 +84,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $310M → $24M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ocrolus",
@@ -97,7 +97,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $142M → $10M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "betterment",
@@ -110,7 +110,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $435M → $60M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "wealthfront",
@@ -123,7 +123,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $274M → $64M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "quantconnect",
@@ -136,7 +136,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $2M → $2M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "tegus",
@@ -162,7 +162,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $1.4B → $4M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "trumid",
@@ -175,7 +175,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $722M → $75M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "tickeron",
@@ -188,7 +188,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $10M → $8M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "lemonade",
@@ -201,7 +201,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $480M → $33M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "hippo",
@@ -214,7 +214,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $709M → $11M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "bestow",
@@ -227,7 +227,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $303M → $70M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "sixfold",
@@ -240,7 +240,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $22M → $12M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "puzzle",
@@ -253,7 +253,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $67M → $5M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "uplinq",
@@ -266,7 +266,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $18M → $10M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ayasdi",
@@ -279,7 +279,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $98M → $55M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "kasisto",
@@ -292,7 +292,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $90M → $9M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "yuma",
@@ -305,7 +305,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $10M → $250K",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "hebbia",
@@ -318,7 +318,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $161M → $93M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "highradius",
@@ -331,7 +331,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $484M → $75M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "kyriba",
@@ -344,7 +344,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $161M → $10M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "trovata",
@@ -357,7 +357,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $80M → $6M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "tesorio",
@@ -370,7 +370,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $38M → $11M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "niural",
@@ -409,7 +409,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $625M → $75M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "jumio",
@@ -422,7 +422,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $196M → $3M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "persona",
@@ -448,7 +448,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $1.0B → $35M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "c3ai",
@@ -461,7 +461,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $481M → $52M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "palantir",
@@ -474,19 +474,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $2.5B → $550M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "snowflake",
       "name": "Snowflake",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 621456438,
+      "current_formatted": "$621M",
       "found_funding": 621456438,
       "found_formatted": "$621M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -500,7 +500,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $14.0B → $23M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "gauntlet",
@@ -513,7 +513,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $45M → $24M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "risk-harbor",
@@ -526,7 +526,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $3M → $3M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "arturo",
@@ -539,19 +539,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $47M → $14M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ccc-intelligent",
       "name": "CCC Intelligent",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 295650000,
+      "current_formatted": "$296M",
       "found_funding": 295650000,
       "found_formatted": "$296M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -565,7 +565,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $150M → $266K",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "argyle",
@@ -578,19 +578,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $108M → $34M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "magnifi",
       "name": "Magnifi",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 21123975,
+      "current_formatted": "$21M",
       "found_funding": 21123975,
       "found_formatted": "$21M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -604,7 +604,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $13M → $9M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "attunely",
@@ -617,7 +617,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $13M → $9M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "metropolis",
@@ -630,7 +630,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $1.6B → $1.0B",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "keyway",
@@ -656,7 +656,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $82M → $4M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "mapped",
@@ -669,7 +669,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $40M → $25M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "incode",
@@ -682,7 +682,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $407M → $74M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "near-protocol",
@@ -695,7 +695,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $542M → $3M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "finpilot",
@@ -708,7 +708,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $5M → $4M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "daloopa",
@@ -721,7 +721,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $56M → $14M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "dataminr",
@@ -734,7 +734,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $1.2B → $396M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "koyfin",
@@ -747,7 +747,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $7M → $2M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "tabs",
@@ -760,7 +760,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $91M → $25M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "cube",
@@ -773,7 +773,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $64M → $5M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ethos",
@@ -786,7 +786,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $408M → $7M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "at-bay",
@@ -799,7 +799,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $292M → $4M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "clearcover",
@@ -812,7 +812,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $432M → $25M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "openly",
@@ -825,7 +825,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $368M → $36M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "addepar",
@@ -838,7 +838,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $759M → $166M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ethic",
@@ -851,7 +851,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $99M → $44M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "snappy-kraken",
@@ -864,7 +864,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $13M → $2M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "tifin",
@@ -877,7 +877,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $219M → $4M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "hummingbird",
@@ -890,32 +890,32 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $38M → $27M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "riskified",
       "name": "Riskified",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 3366803,
+      "current_formatted": "$3M",
       "found_funding": 3366803,
       "found_formatted": "$3M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
       "slug": "instead",
       "name": "Instead",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 5000000,
+      "current_formatted": "$5M",
       "found_funding": 5000000,
       "found_formatted": "$5M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -929,7 +929,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $26M → $10M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "instabase",
@@ -942,7 +942,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $322M → $23M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "veryfi",
@@ -955,7 +955,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $13M → $19M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "workfusion",
@@ -968,20 +968,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $340M → $15M",
-      "approved": false
-    },
-    {
-      "slug": "idaciti",
-      "name": "idaciti",
-      "current_funding": 2050000,
-      "current_formatted": "$2M",
-      "found_funding": 1574996,
-      "found_formatted": "$2M",
-      "source": "sec-edgar-form-d",
-      "confidence": "high",
-      "suggested_action": "update",
-      "reason": "Difference: $2M → $2M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "ojo-labs",
@@ -994,7 +981,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $134M → $21M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "cherre",
@@ -1007,7 +994,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $130M → $40M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "clarity-ai",
@@ -1020,7 +1007,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $117M → $57M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "persefoni",
@@ -1033,32 +1020,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $101M → $53M",
-      "approved": false
-    },
-    {
-      "slug": "sust",
-      "name": "Sust",
-      "current_funding": 4700000,
-      "current_formatted": "$5M",
-      "found_funding": 1510000,
-      "found_formatted": "$2M",
-      "source": "sec-edgar-form-d",
-      "confidence": "high",
-      "suggested_action": "update",
-      "reason": "Difference: $5M → $2M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "entelligent",
       "name": "Entelligent",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 10253639,
+      "current_formatted": "$10M",
       "found_funding": 10253639,
       "found_formatted": "$10M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -1072,19 +1046,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $27M → $9M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "mitek",
       "name": "Mitek",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 201946,
+      "current_formatted": "$202K",
       "found_funding": 201946,
       "found_formatted": "$202K",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     },
     {
@@ -1098,7 +1072,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $33M → $10M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "prime-intellect",
@@ -1111,7 +1085,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $70M → $50M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "sahara-ai",
@@ -1124,7 +1098,7 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $49M → $28M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "lunarcrush",
@@ -1137,19 +1111,19 @@
       "confidence": "high",
       "suggested_action": "update",
       "reason": "Difference: $7M → $1M",
-      "approved": false
+      "approved": null
     },
     {
       "slug": "uv",
       "name": "UV",
-      "current_funding": null,
-      "current_formatted": "N/A",
+      "current_funding": 9182000,
+      "current_formatted": "$9M",
       "found_funding": 9182000,
       "found_formatted": "$9M",
       "source": "sec-edgar-form-d",
       "confidence": "high",
-      "suggested_action": "add",
-      "reason": "New funding data found",
+      "suggested_action": "keep",
+      "reason": "Values match or within 10%",
       "approved": true
     }
   ]

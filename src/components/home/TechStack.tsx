@@ -25,7 +25,7 @@ export default function TechStack({ layers, layerCounts }: TechStackProps) {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="label-refined text-accent mb-4">Technology Stack</p>
-          <h2 className="headline-section mb-4">Built on Five Layers</h2>
+          <h2 className="headline-section mb-4">Built on {layers.length} Layers</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             From foundational infrastructure to end-user applications, understand how the AI finance ecosystem is structured
           </p>

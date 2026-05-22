@@ -85,7 +85,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          In 2026, production systems have largely solved problems like hallucination through context engineering, domain-specific fine-tuning, and multi-model consensus architectures.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-8">8</a></sup> Morgan Stanley deployed GPT-4 to 16,000 wealth advisors.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-9">9</a></sup> JPMorgan's LLM suite now serves 60,000+ employees.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-10">10</a></sup> Bloomberg built a 50-billion parameter model trained on 363 billion financial tokens.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-11">11</a></sup> Financial LLMs are quickly moving beyond experimentation.
+          Production systems have largely solved problems like hallucination through context engineering, domain-specific fine-tuning, and multi-model consensus architectures.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-8">8</a></sup> Morgan Stanley deployed GPT-4 to 16,000 wealth advisors.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-9">9</a></sup> JPMorgan's LLM suite now serves 60,000+ employees.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-10">10</a></sup> Bloomberg built a 50-billion parameter model trained on 363 billion financial tokens.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-11">11</a></sup> Financial LLMs are quickly moving beyond experimentation.
         </p>
 
         <p>
@@ -93,7 +93,7 @@ export default function ThesisPage() {
         </p>
 
         <p>
-          Agentic AI accelerates this further. Gartner predicts 15% of day-to-day work decisions will be made autonomously by AI agents by 2028, up from zero in 2024.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-12">12</a></sup> One financial services firm already runs 60 autonomous agents in production with plans for 200 more by 2026.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-13">13</a></sup> Citi Research predicts Agentic AI will have a bigger impact on finance than the internet.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-14">14</a></sup>
+          Agentic AI accelerates this further. Gartner predicts 15% of day-to-day work decisions will be made autonomously by AI agents by 2028, up from zero in 2024.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-12">12</a></sup> One financial services firm went from 60 autonomous agents in production to over 200 in under a year.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-13">13</a></sup> Citi Research predicts Agentic AI will have a bigger impact on finance than the internet.<sup className="text-accent cursor-pointer hover:text-accent-hover"><a href="#fn-14">14</a></sup>
         </p>
 
         <p>
@@ -147,7 +147,7 @@ export default function ThesisPage() {
           </li>
           <li id="fn-7" className="flex gap-2">
             <span className="text-accent font-medium">7.</span>
-            <span>LTCM's collapse required a $3.6B bailout coordinated by the Federal Reserve. <a href="https://en.wikipedia.org/wiki/Long-Term_Capital_Management" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
+            <span>LTCM lost $4.6B and its collapse required a $3.6B bailout coordinated by the Federal Reserve. <a href="https://en.wikipedia.org/wiki/Long-Term_Capital_Management" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Wikipedia</a></span>
           </li>
           <li id="fn-8" className="flex gap-2">
             <span className="text-accent font-medium">8.</span>
@@ -171,7 +171,7 @@ export default function ThesisPage() {
           </li>
           <li id="fn-13" className="flex gap-2">
             <span className="text-accent font-medium">13.</span>
-            <span>One financial firm has 60 AI agents in production, plans 200 more by 2026. <a href="https://www.jbs.cam.ac.uk/2025/from-automation-to-autonomy-the-agentic-ai-era-of-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Cambridge Judge Business School</a></span>
+            <span>One financial firm scaled from 60 to 200+ AI agents in production. <a href="https://www.jbs.cam.ac.uk/2025/from-automation-to-autonomy-the-agentic-ai-era-of-financial-services/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">Cambridge Judge Business School</a></span>
           </li>
           <li id="fn-14" className="flex gap-2">
             <span className="text-accent font-medium">14.</span>
