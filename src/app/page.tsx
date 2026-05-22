@@ -28,7 +28,7 @@ import CallToAction from '@/components/home/CallToAction';
 
 export const metadata: Metadata = {
   title: 'AIFI Map — The Financial AI Landscape',
-  description: `A curated directory of ${projects.length} companies and autonomous AI agents building the future of finance with artificial intelligence.`,
+  description: `Free interactive market map of ${projects.length} AI + finance companies across 9 segments and 5 technology layers, plus ${agents.length} ERC-8004 on-chain agents. Open-source financial AI directory.`,
   openGraph: {
     title: 'AIFI Map — The Financial AI Landscape',
     description: `A curated directory of ${projects.length} companies and AI agents building the future of finance with artificial intelligence.`,

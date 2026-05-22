@@ -10,19 +10,19 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Registry — EIP-8004 | AIFI Map',
-  description: 'Browse live financial AI agents registered on the EIP-8004 Trustless Agent Registry. Verified identities, declared capabilities, and open communication protocols.',
+  title: 'ERC-8004 Financial AI Agents Registry | AIFI Map',
+  description: 'Registry of financial AI agents on the ERC-8004 Trustless Agent Protocol. MCP, A2A, and OASF endpoints across DeFi, trading, risk, and payments. Live on-chain data from Ethereum and Polygon.',
   openGraph: {
-    title: 'AI Agent Registry — EIP-8004',
-    description: 'Browse live financial AI agents registered on the EIP-8004 Trustless Agent Registry. Verified identities, declared capabilities, and open communication protocols.',
+    title: 'ERC-8004 Financial AI Agents Registry',
+    description: 'Registry of financial AI agents on the ERC-8004 Trustless Agent Protocol. MCP, A2A, and OASF endpoints across DeFi, trading, risk, and payments.',
     type: 'website',
     siteName: 'AIFI Map',
     images: [{ url: '/og/default.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agent Registry — EIP-8004',
-    description: 'Browse live financial AI agents registered on the EIP-8004 Trustless Agent Registry.',
+    title: 'ERC-8004 Financial AI Agents Registry',
+    description: 'Registry of financial AI agents on the ERC-8004 Trustless Agent Protocol. Live on-chain data.',
     images: ['/og/default.png'],
   },
 };
