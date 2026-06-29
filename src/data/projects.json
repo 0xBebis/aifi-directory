@@ -13887,5 +13887,25 @@
     "hq_country": "IE",
     "hq_city": "Cork",
     "linkedin": "https://www.linkedin.com/company/planr-software/"
+  },
+  {
+    "slug": "nextvestment",
+    "name": "Nextvestment",
+    "tagline": "AI client engagement and advisor intelligence for regulated wealth managers",
+    "segment": "wealth",
+    "layer": "applications",
+    "website": "https://nextvestment.com",
+    "description": "Nextvestment is the AI engagement and intelligence layer for regulated wealth management — personalised to each client, scoped to the institution's house and approved sources, and on the record, without re-platforming. It spans the whole client relationship: Prospect Intelligence before the first meeting, Personalised Conversations during, and Advisor Intelligence throughout. It is compliant by architecture — every question is classified before it is answered, as factual, contextual, or a suitability gate, and is held or routed to an advisor whenever suitability matters, with every turn logged. Rather than replacing advisors, it scales them: every client is heard, and every advisor sees why.",
+    "summary": "Nextvestment builds a compliance-native AI engagement layer for regulated wealth institutions — banks, brokerages, and wealth platforms — spanning prospecting, client conversations, and advisor intelligence on the institution's existing stack. A three-tier classification framework (factual, contextual, suitability gate) keeps every interaction compliant and auditable. Live in production via an embedded copilot in an established Asian trading platform, reaching 33,000+ users in its first year with ~11% monthly trade conversion and 3+ minute average sessions, across three regulated markets in the US, APAC, and Europe. Recognised on WealthTech100 (2025, 2026); SC Ventures pitch winner (2026); MAS Pathfinder participant; NVIDIA Inception and Fintech Sandbox member. Founded 2024, headquartered in Singapore.",
+    "ai_types": [
+      "llm",
+      "agentic"
+    ],
+    "company_type": "private",
+    "funding_stage": "early",
+    "founded": 2024,
+    "hq_country": "Singapore",
+    "hq_city": "Singapore",
+    "linkedin": "https://www.linkedin.com/company/nextvestment/"
   }
 ]
