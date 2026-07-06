@@ -13887,5 +13887,26 @@
     "hq_country": "IE",
     "hq_city": "Cork",
     "linkedin": "https://www.linkedin.com/company/planr-software/"
+  },
+  {
+    "slug": "lionsgate-intelligence-network",
+    "name": "Lionsgate Intelligence Network",
+    "tagline": "Lionsgate Network is an AI-powered forensic intelligence platform that helps analyze blockchain activity.",
+    "segment": "research",
+    "layer": "data",
+    "website": "https://lionsgate.network/",
+    "description": "Lionsgate Network is an AI-powered forensic intelligence platform for blockchain analysis, wallet tracing, suspicious transaction detection, and digital asset investigation support.",
+    "ai_types": [
+      "computer-vision",
+      "predictive-ml",
+      "infrastructure"
+    ],
+    "company_type": "private",
+    "funding_stage": "public",
+    "region": "americas",
+    "employees": "11-50",
+    "founded": 2022,
+    "hq_country": "israel",
+    "hq_city": "Tel Aviv"
   }
 ]
