@@ -13887,5 +13887,30 @@
     "hq_country": "IE",
     "hq_city": "Cork",
     "linkedin": "https://www.linkedin.com/company/planr-software/"
+  },
+  {
+    "slug": "finnovus-consulting",
+    "name": "Finnovus Consulting",
+    "tagline": "CFO Services, AI Automation & Software Integrations",
+    "segment": "banking",
+    "layer": "automation",
+    "website": "https://www.finnovusconsulting.com/",
+    "description": "Finnovus Consulting is a boutique advisory and consulting firm headquartered in Karachi, Pakistan, at the National Aerospace Science and Technology Park (NASTP), Silicon 1. We help ambitious businesses achieve sustainable growth through strategic financial advisory, business process optimization, AI automation, and intelligent software integration.\n\nAs a trusted outsourcing and transformation partner, we work closely with organizations to improve financial performance, streamline operations, and accelerate digital transformation. Our multidisciplinary expertise combines CFO-level financial insight with modern technology solutions, enabling clients to make data-driven decisions, increase operational efficiency, and scale with confidence.\n\nFinnovus serves businesses across a range of industries by delivering commercially focused, technology-enabled solutions that create measurable business value and long-term competitive advantage.",
+    "summary": "Finnovus Consulting is a boutique advisory and technology consulting firm based in Karachi, Pakistan, delivering integrated financial and digital transformation solutions to businesses worldwide. The firm's expertise spans financial advisory, mergers and acquisitions, taxation and compliance, CFO outsourcing, AI automation, software integrations, ERP consulting, and business process optimization. Leveraging deep financial expertise and modern technologies, Finnovus helps organizations improve operational efficiency, automate workflows, enhance decision making, and achieve sustainable growth through commercially focused, technology-enabled solutions.",
+    "ai_types": [
+      "llm",
+      "predictive-ml",
+      "graph-analytics",
+      "agentic",
+      "data-platform"
+    ],
+    "company_type": "private",
+    "region": "apac",
+    "employees": "11-50",
+    "founded": 2025,
+    "hq_country": "Pakistan",
+    "hq_city": "Karachi",
+    "funding": 0,
+    "linkedin": "https://pk.linkedin.com/company/finnovus-consulting"
   }
 ]
