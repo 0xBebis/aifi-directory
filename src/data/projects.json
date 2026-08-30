@@ -13887,5 +13887,24 @@
     "hq_country": "IE",
     "hq_city": "Cork",
     "linkedin": "https://www.linkedin.com/company/planr-software/"
+  },
+  {
+    "slug": "carlo",
+    "name": "Carlo",
+    "tagline": "AI financial planner that helps households compare decisions and understand the math behind every answer.",
+    "segment": "wealth",
+    "layer": "applications",
+    "website": "https://carlo.finance",
+    "description": "Carlo is the ai that helps you retire earlier. It connects accounts, debts, equity, goals, and taxes into one household model; lets people ask questions on the web or by text; compares paths before they act; and exposes the assumptions and math behind every answer.",
+    "summary": "Carlo combines household accounts, debts, equity, goals, and taxes in one model with an AI interface across web and SMS.",
+    "ai_types": [
+      "llm",
+      "agentic"
+    ],
+    "company_type": "private",
+    "funding_stage": "undisclosed",
+    "region": "americas",
+    "employees": "1-10",
+    "hq_country": "US"
   }
 ]
